@@ -259,6 +259,11 @@ class ObjectSerializer
             // be interpreted as a missing field/value. Let's handle
             // this graceful.
             if (!empty($data)) {
+                //format with milliseconds. https://stackoverflow.com/questions/29843176
+                if(strlen($data) === 13)
+                {
+                    return \DateTime::createFromFormat('U.u', sprintf('%14.3f', $data / 1000));
+                }
                 return new \DateTime($data);
             } else {
                 return null;
