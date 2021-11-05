@@ -1,0 +1,11 @@
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "git@gitlab.wpify.io:wpify/client/carecloud/carecloud-api-spec.git"
+    }
+  ],
+  "require": {
+    "carecloud/api-spec": "dev-master"
+  }
+}

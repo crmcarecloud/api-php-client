@@ -1,0 +1,135 @@
+# CareCloud\UserRolesApi
+
+All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getUserRole**](UserRolesApi.md#getuserrole) | **GET** /user-roles/{user_role_id} | Get information about an user role
+[**getUserRoles**](UserRolesApi.md#getuserroles) | **GET** /user-roles | Get all user roles
+
+# **getUserRole**
+> \CareCloud\Model\InlineResponse200114 getUserRole($user_role_id, $accept_language)
+
+Get information about an user role
+
+Get information about a specific user role
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CareCloud\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CareCloud\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CareCloud\Api\UserRolesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_role_id = "user_role_id_example"; // string | The unique id of the user role
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $result = $apiInstance->getUserRole($user_role_id, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserRolesApi->getUserRole: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_role_id** | **string**| The unique id of the user role |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CareCloud\Model\InlineResponse200114**](../Model/InlineResponse200114.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getUserRoles**
+> \CareCloud\Model\InlineResponse200113 getUserRoles($accept_language, $count, $offset, $sort_field, $sort_direction)
+
+Get all user roles
+
+Get a list of all user roles in CareCloud
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CareCloud\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CareCloud\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CareCloud\Api\UserRolesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$count = 100; // int | The number of records to return.
+$offset = 0; // int | The number of records from a collection to skip.
+$sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
+$sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
+
+try {
+    $result = $apiInstance->getUserRoles($accept_language, $count, $offset, $sort_field, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserRolesApi->getUserRoles: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **count** | **int**| The number of records to return. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
+ **sort_direction** | **string**| Direction of sorting the response list. | [optional]
+
+### Return type
+
+[**\CareCloud\Model\InlineResponse200113**](../Model/InlineResponse200113.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+

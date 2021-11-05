@@ -1,0 +1,33 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ebd1cca0de6b8760dd50e845344c0101",
+    "packages": [
+        {
+            "name": "carecloud/api-spec",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.wpify.io:wpify/client/carecloud/carecloud-api-spec.git",
+                "reference": "293bfa24642fca0ed9a4b7079286d3d28a5ae7dd"
+            },
+            "default-branch": true,
+            "type": "library",
+            "time": "2021-09-14T10:22:50+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "carecloud/api-spec": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

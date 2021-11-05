@@ -1,0 +1,10 @@
+# InlineResponse20044Data
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**event_types** | [**\CareCloud\Model\EventType[]**](EventType.md) | List of all event types | [optional] 
+**total_items** | **int** | Count of all found event types | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+

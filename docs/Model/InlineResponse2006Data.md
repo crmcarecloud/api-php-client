@@ -1,0 +1,10 @@
+# InlineResponse2006Data
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**campaign_product_store_records** | [**\CareCloud\Model\CampaignProductStoreRecord[]**](CampaignProductStoreRecord.md) | List of the campaign product store records | [optional] 
+**total_items** | **int** | Count of all found campaign product store records | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+

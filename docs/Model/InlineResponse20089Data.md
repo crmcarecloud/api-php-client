@@ -1,0 +1,10 @@
+# InlineResponse20089Data
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**product_groups** | [**\CareCloud\Model\ProductGroup[]**](ProductGroup.md) | List of product groups tied to a reward | [optional] 
+**total_items** | **int** | Count of all found product groups | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+

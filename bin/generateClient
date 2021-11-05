@@ -1,0 +1,9 @@
+#!/bin/bash
+cd deps
+composer install --no-dev --optimize-autoloader --ignore-platform-reqs
+cd vendor/carecloud/api-spec
+swagger-cli bundle api.yaml --outfile _build/openapi.yaml --type yaml
+cd ../../../..
+swagger-codegen generate -i deps/vendor/carecloud/api-spec/_build/openapi.yaml -l php --c './client-config.json'
+sed -i '' 's/AnyOfEventData/\\CareCloud\\Model\\AnyOfEventData/g' lib/model/Event.php
+sed -i '' 's/AnyOfPropertyRecordPropertyValue/\\CareCloud\\Model\\AnyOfPropertyRecordPropertyValue/g' lib/model/PropertyRecord.php
