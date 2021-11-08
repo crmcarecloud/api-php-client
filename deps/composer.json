@@ -2,7 +2,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url":  "git@gitlab.wpify.io:wpify/client/carecloud/carecloud-api-spec.git"
+      "url":  "https://github.com/crmcarecloud/api-spec"
     }
   ],
   "require": {

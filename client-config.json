@@ -2,5 +2,5 @@
   "invokerPackage": "CareCloud",
   "packagePath": ".",
   "gitUserId":  "carecloud",
-  "gitRepoId":  "client-php"
+  "gitRepoId":  "api-php-client"
 }
