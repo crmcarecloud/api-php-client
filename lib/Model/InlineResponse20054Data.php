@@ -56,7 +56,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'partners' => '\CareCloud\Model\Partner[]',
+        'orders' => '\CareCloud\Model\Order[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'partners' => null,
+        'orders' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'partners' => 'partners',
+        'orders' => 'orders',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'partners' => 'setPartners',
+        'orders' => 'setOrders',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'partners' => 'getPartners',
+        'orders' => 'getOrders',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['partners'] = isset($data['partners']) ? $data['partners'] : null;
+        $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets partners
+     * Gets orders
      *
-     * @return \CareCloud\Model\Partner[]
+     * @return \CareCloud\Model\Order[]
      */
-    public function getPartners()
+    public function getOrders()
     {
-        return $this->container['partners'];
+        return $this->container['orders'];
     }
 
     /**
-     * Sets partners
+     * Sets orders
      *
-     * @param \CareCloud\Model\Partner[] $partners List of a partners
+     * @param \CareCloud\Model\Order[] $orders Collection of the customer orders
      *
      * @return $this
      */
-    public function setPartners($partners)
+    public function setOrders($orders)
     {
-        $this->container['partners'] = $partners;
+        $this->container['orders'] = $orders;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found partners
+     * @param int $total_items Count of all found customer orders
      *
      * @return $this
      */

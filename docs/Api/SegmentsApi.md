@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**postSegmentRemoveCustomer**](SegmentsApi.md#postsegmentremovecustomer) | **POST** /segments/{segment_id}/actions/remove-customer | Remove customer from a segment
 
 # **getSegment**
-> \CareCloud\Model\InlineResponse20094 getSegment($segment_id, $accept_language)
+> \CareCloud\Model\InlineResponse20096 getSegment($segment_id, $accept_language)
 
 Get a segment
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20094**](../Model/InlineResponse20094.md)
+[**\CareCloud\Model\InlineResponse20096**](../Model/InlineResponse20096.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegments**
-> \CareCloud\Model\InlineResponse20093 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse20095 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all segments
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20093**](../Model/InlineResponse20093.md)
+[**\CareCloud\Model\InlineResponse20095**](../Model/InlineResponse20095.md)
 
 ### Authorization
 

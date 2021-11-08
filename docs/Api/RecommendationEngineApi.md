@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**getRecommendationProductOrder**](RecommendationEngineApi.md#getrecommendationproductorder) | **GET** /recommendation-engine/product/actions/order | Order products for the best recommendation.
 
 # **getRecommendationCartCombined**
-> \CareCloud\Model\InlineResponse20084 getRecommendationCartCombined($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count)
+> \CareCloud\Model\InlineResponse20086 getRecommendationCartCombined($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count)
 
 Get the best recommendation for shopping cart
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20084**](../Model/InlineResponse20084.md)
+[**\CareCloud\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationCartEliminate**
-> \CareCloud\Model\InlineResponse20084 getRecommendationCartEliminate($customer_id, $accept_language, $cart_product_ids, $product_id_list)
+> \CareCloud\Model\InlineResponse20086 getRecommendationCartEliminate($customer_id, $accept_language, $cart_product_ids, $product_id_list)
 
 Get the best recommendation with elimination for shopping cart
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20084**](../Model/InlineResponse20084.md)
+[**\CareCloud\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationCartOrder**
-> \CareCloud\Model\InlineResponse20084 getRecommendationCartOrder($cart_product_ids, $accept_language, $product_id_list, $count)
+> \CareCloud\Model\InlineResponse20086 getRecommendationCartOrder($cart_product_ids, $accept_language, $product_id_list, $count)
 
 Order products for the best recommendation for a shopping cart
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20084**](../Model/InlineResponse20084.md)
+[**\CareCloud\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductCombined**
-> \CareCloud\Model\InlineResponse20083 getRecommendationProductCombined($customer_id, $accept_language, $product_id_list, $count)
+> \CareCloud\Model\InlineResponse20085 getRecommendationProductCombined($customer_id, $accept_language, $product_id_list, $count)
 
 Get the best recommendation
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
+[**\CareCloud\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductEliminate**
-> \CareCloud\Model\InlineResponse20083 getRecommendationProductEliminate($customer_id, $accept_language, $product_id_list)
+> \CareCloud\Model\InlineResponse20085 getRecommendationProductEliminate($customer_id, $accept_language, $product_id_list)
 
 Get the best recommendation with an elimination
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
+[**\CareCloud\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductOrder**
-> \CareCloud\Model\InlineResponse20083 getRecommendationProductOrder($customer_id, $accept_language, $product_id_list, $count)
+> \CareCloud\Model\InlineResponse20085 getRecommendationProductOrder($customer_id, $accept_language, $product_id_list, $count)
 
 Order products for the best recommendation.
 
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
+[**\CareCloud\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
 
 ### Authorization
 

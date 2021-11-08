@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postPointReservationRelease**](PointReservationApi.md#postpointreservationrelease) | **POST** /point-reservations/actions/free-points | Free points from reserevation
 
 # **getPointReservation**
-> \CareCloud\Model\InlineResponse20058 getPointReservation($point_reservation_id, $accept_language)
+> \CareCloud\Model\InlineResponse20060 getPointReservation($point_reservation_id, $accept_language)
 
 Get a point reservation
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\CareCloud\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPointReservations**
-> \CareCloud\Model\InlineResponse20057 getPointReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id)
+> \CareCloud\Model\InlineResponse20059 getPointReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id)
 
 Get all point reservations
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
+[**\CareCloud\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
 
 ### Authorization
 

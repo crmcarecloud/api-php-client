@@ -56,7 +56,7 @@ class InlineResponse20088 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\CareCloud\Model\InlineResponse20088Data'    ];
+        'data' => '\CareCloud\Model\Reward'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class InlineResponse20088 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \CareCloud\Model\InlineResponse20088Data
+     * @return \CareCloud\Model\Reward
      */
     public function getData()
     {
@@ -209,7 +209,7 @@ class InlineResponse20088 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \CareCloud\Model\InlineResponse20088Data $data data
+     * @param \CareCloud\Model\Reward $data data
      *
      * @return $this
      */

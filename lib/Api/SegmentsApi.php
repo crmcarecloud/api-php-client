@@ -96,7 +96,7 @@ class SegmentsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20094
+     * @return \CareCloud\Model\InlineResponse20096
      */
     public function getSegment($segment_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class SegmentsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20094, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20096, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSegmentWithHttpInfo($segment_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20094';
+        $returnType = '\CareCloud\Model\InlineResponse20096';
         $request = $this->getSegmentRequest($segment_id, $accept_language);
 
         try {
@@ -130,7 +130,7 @@ class SegmentsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -153,7 +153,7 @@ class SegmentsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -170,7 +170,7 @@ class SegmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20094',
+                        '\CareCloud\Model\InlineResponse20096',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class SegmentsApi
      */
     public function getSegmentAsyncWithHttpInfo($segment_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20094';
+        $returnType = '\CareCloud\Model\InlineResponse20096';
         $request = $this->getSegmentRequest($segment_id, $accept_language);
 
         return $this->client
@@ -265,7 +265,7 @@ class SegmentsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -418,7 +418,7 @@ class SegmentsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20093
+     * @return \CareCloud\Model\InlineResponse20095
      */
     public function getSegments($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -439,11 +439,11 @@ class SegmentsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20093, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20095, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSegmentsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20093';
+        $returnType = '\CareCloud\Model\InlineResponse20095';
         $request = $this->getSegmentsRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -455,7 +455,7 @@ class SegmentsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -478,7 +478,7 @@ class SegmentsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -495,7 +495,7 @@ class SegmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20093',
+                        '\CareCloud\Model\InlineResponse20095',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -585,7 +585,7 @@ class SegmentsApi
      */
     public function getSegmentsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20093';
+        $returnType = '\CareCloud\Model\InlineResponse20095';
         $request = $this->getSegmentsRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -596,7 +596,7 @@ class SegmentsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -785,7 +785,7 @@ class SegmentsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -808,7 +808,7 @@ class SegmentsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -920,7 +920,7 @@ class SegmentsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1105,7 +1105,7 @@ class SegmentsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1401,7 +1401,7 @@ class SegmentsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 

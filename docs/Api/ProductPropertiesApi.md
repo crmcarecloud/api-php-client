@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductProperty**](ProductPropertiesApi.md#getproductproperty) | **GET** /product-properties/{product_property_id} | Get a product property
 
 # **getProductProperties**
-> \CareCloud\Model\InlineResponse20067 getProductProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CareCloud\Model\InlineResponse20069 getProductProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all product properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
+[**\CareCloud\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
 
 ### Authorization
 

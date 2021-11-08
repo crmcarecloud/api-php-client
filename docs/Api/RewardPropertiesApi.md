@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRewardProperty**](RewardPropertiesApi.md#getrewardproperty) | **GET** /reward-properties/{reward_property_id} | Get a reward property
 
 # **getRewardProperties**
-> \CareCloud\Model\InlineResponse20092 getRewardProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CareCloud\Model\InlineResponse20094 getRewardProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all reward properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20092**](../Model/InlineResponse20092.md)
+[**\CareCloud\Model\InlineResponse20094**](../Model/InlineResponse20094.md)
 
 ### Authorization
 

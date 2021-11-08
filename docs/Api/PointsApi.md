@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**postPointsTransfer**](PointsApi.md#postpointstransfer) | **POST** /points/actions/transfer-points | Transfer points
 
 # **getPoint**
-> \CareCloud\Model\InlineResponse20056 getPoint($point_id, $accept_language)
+> \CareCloud\Model\InlineResponse20058 getPoint($point_id, $accept_language)
 
 Get a point record
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
+[**\CareCloud\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
 
 ### Authorization
 

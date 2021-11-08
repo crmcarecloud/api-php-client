@@ -56,7 +56,7 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'point_types' => '\CareCloud\Model\PointType[]',
+        'point_reservations' => '\CareCloud\Model\PointReservation[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'point_types' => null,
+        'point_reservations' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'point_types' => 'point_types',
+        'point_reservations' => 'point_reservations',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'point_types' => 'setPointTypes',
+        'point_reservations' => 'setPointReservations',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'point_types' => 'getPointTypes',
+        'point_reservations' => 'getPointReservations',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['point_types'] = isset($data['point_types']) ? $data['point_types'] : null;
+        $this->container['point_reservations'] = isset($data['point_reservations']) ? $data['point_reservations'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets point_types
+     * Gets point_reservations
      *
-     * @return \CareCloud\Model\PointType[]
+     * @return \CareCloud\Model\PointReservation[]
      */
-    public function getPointTypes()
+    public function getPointReservations()
     {
-        return $this->container['point_types'];
+        return $this->container['point_reservations'];
     }
 
     /**
-     * Sets point_types
+     * Sets point_reservations
      *
-     * @param \CareCloud\Model\PointType[] $point_types List of the point types
+     * @param \CareCloud\Model\PointReservation[] $point_reservations List of the point reservations
      *
      * @return $this
      */
-    public function setPointTypes($point_types)
+    public function setPointReservations($point_reservations)
     {
-        $this->container['point_types'] = $point_types;
+        $this->container['point_reservations'] = $point_reservations;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found point types
+     * @param int $total_items Count of all found point reservations
      *
      * @return $this
      */

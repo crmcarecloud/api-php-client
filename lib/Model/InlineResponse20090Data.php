@@ -56,7 +56,7 @@ class InlineResponse20090Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_brands' => '\CareCloud\Model\ProductBrand[]',
+        'products' => '\CareCloud\Model\Product[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20090Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'product_brands' => null,
+        'products' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20090Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_brands' => 'product_brands',
+        'products' => 'products',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20090Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_brands' => 'setProductBrands',
+        'products' => 'setProducts',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20090Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_brands' => 'getProductBrands',
+        'products' => 'getProducts',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20090Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_brands'] = isset($data['product_brands']) ? $data['product_brands'] : null;
+        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20090Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets product_brands
+     * Gets products
      *
-     * @return \CareCloud\Model\ProductBrand[]
+     * @return \CareCloud\Model\Product[]
      */
-    public function getProductBrands()
+    public function getProducts()
     {
-        return $this->container['product_brands'];
+        return $this->container['products'];
     }
 
     /**
-     * Sets product_brands
+     * Sets products
      *
-     * @param \CareCloud\Model\ProductBrand[] $product_brands List of product brands tied to a reward
+     * @param \CareCloud\Model\Product[] $products List of products tied to a reward
      *
      * @return $this
      */
-    public function setProductBrands($product_brands)
+    public function setProducts($products)
     {
-        $this->container['product_brands'] = $product_brands;
+        $this->container['products'] = $products;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20090Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found product brands
+     * @param int $total_items Count of all found products
      *
      * @return $this
      */

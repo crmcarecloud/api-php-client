@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductBrands**](ProductBrandsApi.md#getproductbrands) | **GET** /product-brands | Get all product brand
 
 # **getProductBrand**
-> \CareCloud\Model\InlineResponse20064 getProductBrand($product_brand_id, $accept_language)
+> \CareCloud\Model\InlineResponse20066 getProductBrand($product_brand_id, $accept_language)
 
 Get a product brand
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\CareCloud\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductBrands**
-> \CareCloud\Model\InlineResponse20063 getProductBrands($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CareCloud\Model\InlineResponse20065 getProductBrands($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all product brand
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
+[**\CareCloud\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
 
 ### Authorization
 

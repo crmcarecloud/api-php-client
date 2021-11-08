@@ -96,7 +96,7 @@ class PartnersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20055
+     * @return \CareCloud\Model\InlineResponse20057
      */
     public function getPartner($partner_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class PartnersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20055, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20057, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPartnerWithHttpInfo($partner_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20055';
+        $returnType = '\CareCloud\Model\InlineResponse20057';
         $request = $this->getPartnerRequest($partner_id, $accept_language);
 
         try {
@@ -130,7 +130,7 @@ class PartnersApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -153,7 +153,7 @@ class PartnersApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -170,7 +170,7 @@ class PartnersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20055',
+                        '\CareCloud\Model\InlineResponse20057',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class PartnersApi
      */
     public function getPartnerAsyncWithHttpInfo($partner_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20055';
+        $returnType = '\CareCloud\Model\InlineResponse20057';
         $request = $this->getPartnerRequest($partner_id, $accept_language);
 
         return $this->client
@@ -265,7 +265,7 @@ class PartnersApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -418,7 +418,7 @@ class PartnersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20054
+     * @return \CareCloud\Model\InlineResponse20056
      */
     public function getPartners($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -439,11 +439,11 @@ class PartnersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20054, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20056, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPartnersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20054';
+        $returnType = '\CareCloud\Model\InlineResponse20056';
         $request = $this->getPartnersRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -455,7 +455,7 @@ class PartnersApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -478,7 +478,7 @@ class PartnersApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -495,7 +495,7 @@ class PartnersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20054',
+                        '\CareCloud\Model\InlineResponse20056',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -585,7 +585,7 @@ class PartnersApi
      */
     public function getPartnersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20054';
+        $returnType = '\CareCloud\Model\InlineResponse20056';
         $request = $this->getPartnersRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -596,7 +596,7 @@ class PartnersApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }

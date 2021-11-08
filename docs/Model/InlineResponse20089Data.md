@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**product_groups** | [**\CareCloud\Model\ProductGroup[]**](ProductGroup.md) | List of product groups tied to a reward | [optional] 
-**total_items** | **int** | Count of all found product groups | [optional] 
+**vouchers** | [**\CareCloud\Model\Voucher[]**](Voucher.md) | List of vouchers tied to a reward | [optional] 
+**total_items** | **int** | Count of all found vouchers | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

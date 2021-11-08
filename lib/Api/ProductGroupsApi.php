@@ -96,7 +96,7 @@ class ProductGroupsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20066
+     * @return \CareCloud\Model\InlineResponse20068
      */
     public function getProductGroup($product_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class ProductGroupsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20066, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20068, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductGroupWithHttpInfo($product_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20066';
+        $returnType = '\CareCloud\Model\InlineResponse20068';
         $request = $this->getProductGroupRequest($product_group_id, $accept_language);
 
         try {
@@ -130,7 +130,7 @@ class ProductGroupsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -153,7 +153,7 @@ class ProductGroupsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -170,7 +170,7 @@ class ProductGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20066',
+                        '\CareCloud\Model\InlineResponse20068',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class ProductGroupsApi
      */
     public function getProductGroupAsyncWithHttpInfo($product_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20066';
+        $returnType = '\CareCloud\Model\InlineResponse20068';
         $request = $this->getProductGroupRequest($product_group_id, $accept_language);
 
         return $this->client
@@ -265,7 +265,7 @@ class ProductGroupsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -421,7 +421,7 @@ class ProductGroupsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20065
+     * @return \CareCloud\Model\InlineResponse20067
      */
     public function getProductGroups($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null)
     {
@@ -445,11 +445,11 @@ class ProductGroupsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20065, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20067, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductGroupsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20065';
+        $returnType = '\CareCloud\Model\InlineResponse20067';
         $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code);
 
         try {
@@ -461,7 +461,7 @@ class ProductGroupsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -484,7 +484,7 @@ class ProductGroupsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -501,7 +501,7 @@ class ProductGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20065',
+                        '\CareCloud\Model\InlineResponse20067',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -597,7 +597,7 @@ class ProductGroupsApi
      */
     public function getProductGroupsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20065';
+        $returnType = '\CareCloud\Model\InlineResponse20067';
         $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code);
 
         return $this->client
@@ -608,7 +608,7 @@ class ProductGroupsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }

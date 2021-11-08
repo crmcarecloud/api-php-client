@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**getWalletSalesTurnover**](WalletApi.md#getwalletsalesturnover) | **GET** /wallet/actions/sales-turnover | Get sales turnover
 
 # **getWalletCredits**
-> \CareCloud\Model\InlineResponse200118 getWalletCredits($customer_id, $accept_language, $date_from, $date_to)
+> \CareCloud\Model\InlineResponse200120 getWalletCredits($customer_id, $accept_language, $date_from, $date_to)
 
 Get credits overview
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200118**](../Model/InlineResponse200118.md)
+[**\CareCloud\Model\InlineResponse200120**](../Model/InlineResponse200120.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletCreditsExpiration**
-> \CareCloud\Model\InlineResponse200119 getWalletCreditsExpiration($customer_id, $accept_language)
+> \CareCloud\Model\InlineResponse200121 getWalletCreditsExpiration($customer_id, $accept_language)
 
 Get credits expiration overview
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200119**](../Model/InlineResponse200119.md)
+[**\CareCloud\Model\InlineResponse200121**](../Model/InlineResponse200121.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletPoints**
-> \CareCloud\Model\InlineResponse200117 getWalletPoints($customer_id, $accept_language, $date_from, $date_to)
+> \CareCloud\Model\InlineResponse200119 getWalletPoints($customer_id, $accept_language, $date_from, $date_to)
 
 Get points overview
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200117**](../Model/InlineResponse200117.md)
+[**\CareCloud\Model\InlineResponse200119**](../Model/InlineResponse200119.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletPointsExpiration**
-> \CareCloud\Model\InlineResponse200119 getWalletPointsExpiration($customer_id, $accept_language)
+> \CareCloud\Model\InlineResponse200121 getWalletPointsExpiration($customer_id, $accept_language)
 
 Get points expiration overview
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200119**](../Model/InlineResponse200119.md)
+[**\CareCloud\Model\InlineResponse200121**](../Model/InlineResponse200121.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletSalesTurnover**
-> \CareCloud\Model\InlineResponse200116 getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to)
+> \CareCloud\Model\InlineResponse200118 getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to)
 
 Get sales turnover
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200116**](../Model/InlineResponse200116.md)
+[**\CareCloud\Model\InlineResponse200118**](../Model/InlineResponse200118.md)
 
 ### Authorization
 

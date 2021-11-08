@@ -96,7 +96,7 @@ class ProductReservationsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20069
+     * @return \CareCloud\Model\InlineResponse20071
      */
     public function getProductReservation($product_reservation_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class ProductReservationsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20069, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20071, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductReservationWithHttpInfo($product_reservation_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20069';
+        $returnType = '\CareCloud\Model\InlineResponse20071';
         $request = $this->getProductReservationRequest($product_reservation_id, $accept_language);
 
         try {
@@ -130,7 +130,7 @@ class ProductReservationsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -153,7 +153,7 @@ class ProductReservationsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -170,7 +170,7 @@ class ProductReservationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20069',
+                        '\CareCloud\Model\InlineResponse20071',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class ProductReservationsApi
      */
     public function getProductReservationAsyncWithHttpInfo($product_reservation_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20069';
+        $returnType = '\CareCloud\Model\InlineResponse20071';
         $request = $this->getProductReservationRequest($product_reservation_id, $accept_language);
 
         return $this->client
@@ -265,7 +265,7 @@ class ProductReservationsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -422,7 +422,7 @@ class ProductReservationsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20068
+     * @return \CareCloud\Model\InlineResponse20070
      */
     public function getProductReservations($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservation_code = null, $customer_id = null, $store_id = null, $reservation_state = null)
     {
@@ -447,11 +447,11 @@ class ProductReservationsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20068, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20070, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductReservationsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservation_code = null, $customer_id = null, $store_id = null, $reservation_state = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20068';
+        $returnType = '\CareCloud\Model\InlineResponse20070';
         $request = $this->getProductReservationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state);
 
         try {
@@ -463,7 +463,7 @@ class ProductReservationsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -486,7 +486,7 @@ class ProductReservationsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -503,7 +503,7 @@ class ProductReservationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20068',
+                        '\CareCloud\Model\InlineResponse20070',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -601,7 +601,7 @@ class ProductReservationsApi
      */
     public function getProductReservationsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservation_code = null, $customer_id = null, $store_id = null, $reservation_state = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20068';
+        $returnType = '\CareCloud\Model\InlineResponse20070';
         $request = $this->getProductReservationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state);
 
         return $this->client
@@ -612,7 +612,7 @@ class ProductReservationsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -821,7 +821,7 @@ class ProductReservationsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -844,7 +844,7 @@ class ProductReservationsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -956,7 +956,7 @@ class ProductReservationsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1136,7 +1136,7 @@ class ProductReservationsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 

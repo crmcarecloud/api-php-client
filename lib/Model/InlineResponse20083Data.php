@@ -56,7 +56,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'recommended_products_list' => 'string[]',
+        'recommendations' => '\CareCloud\Model\Recommendation[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'recommended_products_list' => null,
+        'recommendations' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'recommended_products_list' => 'recommended_products_list',
+        'recommendations' => 'recommendations',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'recommended_products_list' => 'setRecommendedProductsList',
+        'recommendations' => 'setRecommendations',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'recommended_products_list' => 'getRecommendedProductsList',
+        'recommendations' => 'getRecommendations',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['recommended_products_list'] = isset($data['recommended_products_list']) ? $data['recommended_products_list'] : null;
+        $this->container['recommendations'] = isset($data['recommendations']) ? $data['recommendations'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets recommended_products_list
+     * Gets recommendations
      *
-     * @return string[]
+     * @return \CareCloud\Model\Recommendation[]
      */
-    public function getRecommendedProductsList()
+    public function getRecommendations()
     {
-        return $this->container['recommended_products_list'];
+        return $this->container['recommendations'];
     }
 
     /**
-     * Sets recommended_products_list
+     * Sets recommendations
      *
-     * @param string[] $recommended_products_list List of the recommended product ids.
+     * @param \CareCloud\Model\Recommendation[] $recommendations List of recommendations
      *
      * @return $this
      */
-    public function setRecommendedProductsList($recommended_products_list)
+    public function setRecommendations($recommendations)
     {
-        $this->container['recommended_products_list'] = $recommended_products_list;
+        $this->container['recommendations'] = $recommendations;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found product ids.
+     * @param int $total_items Count of all found recommendations
      *
      * @return $this
      */

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getStoreGroups**](StoreGroupsApi.md#getstoregroups) | **GET** /store-groups | Get all store groups
 
 # **getStoreGroup**
-> \CareCloud\Model\InlineResponse200105 getStoreGroup($store_group_id, $accept_language)
+> \CareCloud\Model\InlineResponse200107 getStoreGroup($store_group_id, $accept_language)
 
 Get a store group
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200105**](../Model/InlineResponse200105.md)
+[**\CareCloud\Model\InlineResponse200107**](../Model/InlineResponse200107.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreGroups**
-> \CareCloud\Model\InlineResponse200104 getStoreGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CareCloud\Model\InlineResponse200106 getStoreGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all store groups
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200104**](../Model/InlineResponse200104.md)
+[**\CareCloud\Model\InlineResponse200106**](../Model/InlineResponse200106.md)
 
 ### Authorization
 

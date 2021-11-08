@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductGroups**](ProductGroupsApi.md#getproductgroups) | **GET** /product-groups | Get all product groups
 
 # **getProductGroup**
-> \CareCloud\Model\InlineResponse20066 getProductGroup($product_group_id, $accept_language)
+> \CareCloud\Model\InlineResponse20068 getProductGroup($product_group_id, $accept_language)
 
 Get a product group
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
+[**\CareCloud\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductGroups**
-> \CareCloud\Model\InlineResponse20065 getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code)
+> \CareCloud\Model\InlineResponse20067 getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code)
 
 Get all product groups
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
+[**\CareCloud\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
 
 ### Authorization
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**recommended_best_rewards** | [**\CareCloud\Model\RecommendedReward[]**](RecommendedReward.md) | List of the best rewards for POS | [optional] 
-**total_items** | **int** | Count of all found rewards | [optional] 
+**purchase_items** | [**\CareCloud\Model\PurchaseItem[]**](PurchaseItem.md) | List of purchase items tied to a purchase | [optional] 
+**total_items** | **int** | Count of all found purchase items | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

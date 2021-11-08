@@ -56,7 +56,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'stores' => '\CareCloud\Model\Store[]',
+        'product_groups' => '\CareCloud\Model\ProductGroup[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'stores' => null,
+        'product_groups' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stores' => 'stores',
+        'product_groups' => 'product_groups',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stores' => 'setStores',
+        'product_groups' => 'setProductGroups',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stores' => 'getStores',
+        'product_groups' => 'getProductGroups',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
+        $this->container['product_groups'] = isset($data['product_groups']) ? $data['product_groups'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets stores
+     * Gets product_groups
      *
-     * @return \CareCloud\Model\Store[]
+     * @return \CareCloud\Model\ProductGroup[]
      */
-    public function getStores()
+    public function getProductGroups()
     {
-        return $this->container['stores'];
+        return $this->container['product_groups'];
     }
 
     /**
-     * Sets stores
+     * Sets product_groups
      *
-     * @param \CareCloud\Model\Store[] $stores List of the all stores where customer can apply reward
+     * @param \CareCloud\Model\ProductGroup[] $product_groups List of product groups tied to a reward
      *
      * @return $this
      */
-    public function setStores($stores)
+    public function setProductGroups($product_groups)
     {
-        $this->container['stores'] = $stores;
+        $this->container['product_groups'] = $product_groups;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found stores
+     * @param int $total_items Count of all found product groups
      *
      * @return $this
      */

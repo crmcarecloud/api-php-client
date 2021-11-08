@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**users** | [**\CareCloud\Model\User[]**](User.md) | Array of users | [optional] 
-**total_items** | **int** | Count of all found users | [optional] 
+**store_properties** | [**\CareCloud\Model\Property[]**](Property.md) | List of all store properties | [optional] 
+**total_items** | **int** | Count of all found store properties | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

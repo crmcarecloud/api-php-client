@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**putSkipass**](SkipassesApi.md#putskipass) | **PUT** /skipasses/{skipass_id} | Update a skipass
 
 # **getSkipass**
-> \CareCloud\Model\InlineResponse20096 getSkipass($skipass_id, $accept_language)
+> \CareCloud\Model\InlineResponse20098 getSkipass($skipass_id, $accept_language)
 
 Get a skipass
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20096**](../Model/InlineResponse20096.md)
+[**\CareCloud\Model\InlineResponse20098**](../Model/InlineResponse20098.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSkipasses**
-> \CareCloud\Model\InlineResponse20095 getSkipasses($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled)
+> \CareCloud\Model\InlineResponse20097 getSkipasses($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled)
 
 Get all skipasses
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20095**](../Model/InlineResponse20095.md)
+[**\CareCloud\Model\InlineResponse20097**](../Model/InlineResponse20097.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSkipassesOverview**
-> \CareCloud\Model\InlineResponse20097 getSkipassesOverview($accept_language, $valid_from, $valid_to)
+> \CareCloud\Model\InlineResponse20099 getSkipassesOverview($accept_language, $valid_from, $valid_to)
 
 Get skipasses overview
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20097**](../Model/InlineResponse20097.md)
+[**\CareCloud\Model\InlineResponse20099**](../Model/InlineResponse20099.md)
 
 ### Authorization
 

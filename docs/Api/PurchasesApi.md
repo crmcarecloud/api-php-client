@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**postPurchaseSend**](PurchasesApi.md#postpurchasesend) | **POST** /purchases/actions/send-purchase | Send purchase
 
 # **getPurchase**
-> \CareCloud\Model\InlineResponse20074 getPurchase($purchase_id, $accept_language)
+> \CareCloud\Model\InlineResponse20076 getPurchase($purchase_id, $accept_language)
 
 Get a purchase
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
+[**\CareCloud\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPurchasePaymentSummary**
-> \CareCloud\Model\InlineResponse20076 getPurchasePaymentSummary($purchase_id, $accept_language)
+> \CareCloud\Model\InlineResponse20078 getPurchasePaymentSummary($purchase_id, $accept_language)
 
 Return payment summary
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
+[**\CareCloud\Model\InlineResponse20078**](../Model/InlineResponse20078.md)
 
 ### Authorization
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubPurchaseItems**
-> \CareCloud\Model\InlineResponse20075 getSubPurchaseItems($purchase_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse20077 getSubPurchaseItems($purchase_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get purchase items tied to a purchase
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
+[**\CareCloud\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
 
 ### Authorization
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPurchaseAcceptPayment**
-> \CareCloud\Model\InlineResponse20078 postPurchaseAcceptPayment($body, $accept_language)
+> \CareCloud\Model\InlineResponse20080 postPurchaseAcceptPayment($body, $accept_language)
 
 Accept payment
 
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20078**](../Model/InlineResponse20078.md)
+[**\CareCloud\Model\InlineResponse20080**](../Model/InlineResponse20080.md)
 
 ### Authorization
 
@@ -537,7 +537,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPurchaseRecommendedRewards**
-> \CareCloud\Model\InlineResponse20077 postPurchaseRecommendedRewards($body, $accept_language)
+> \CareCloud\Model\InlineResponse20079 postPurchaseRecommendedRewards($body, $accept_language)
 
 Recommended best rewards
 
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
+[**\CareCloud\Model\InlineResponse20079**](../Model/InlineResponse20079.md)
 
 ### Authorization
 

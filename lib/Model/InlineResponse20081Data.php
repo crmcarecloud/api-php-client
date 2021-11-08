@@ -56,7 +56,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'recommendations' => '\CareCloud\Model\Recommendation[]',
+        'purchase_item_types' => '\CareCloud\Model\PurchaseItemType[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'recommendations' => null,
+        'purchase_item_types' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'recommendations' => 'recommendations',
+        'purchase_item_types' => 'purchase_item_types',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'recommendations' => 'setRecommendations',
+        'purchase_item_types' => 'setPurchaseItemTypes',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'recommendations' => 'getRecommendations',
+        'purchase_item_types' => 'getPurchaseItemTypes',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['recommendations'] = isset($data['recommendations']) ? $data['recommendations'] : null;
+        $this->container['purchase_item_types'] = isset($data['purchase_item_types']) ? $data['purchase_item_types'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets recommendations
+     * Gets purchase_item_types
      *
-     * @return \CareCloud\Model\Recommendation[]
+     * @return \CareCloud\Model\PurchaseItemType[]
      */
-    public function getRecommendations()
+    public function getPurchaseItemTypes()
     {
-        return $this->container['recommendations'];
+        return $this->container['purchase_item_types'];
     }
 
     /**
-     * Sets recommendations
+     * Sets purchase_item_types
      *
-     * @param \CareCloud\Model\Recommendation[] $recommendations List of recommendations
+     * @param \CareCloud\Model\PurchaseItemType[] $purchase_item_types List of the purchase item types
      *
      * @return $this
      */
-    public function setRecommendations($recommendations)
+    public function setPurchaseItemTypes($purchase_item_types)
     {
-        $this->container['recommendations'] = $recommendations;
+        $this->container['purchase_item_types'] = $purchase_item_types;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found recommendations
+     * @param int $total_items Count of all found purchase types
      *
      * @return $this
      */

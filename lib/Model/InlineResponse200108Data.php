@@ -56,7 +56,7 @@ class InlineResponse200108Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'users' => '\CareCloud\Model\User[]',
+        'store_properties' => '\CareCloud\Model\Property[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200108Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'users' => null,
+        'store_properties' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200108Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'users' => 'users',
+        'store_properties' => 'store_properties',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200108Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'users' => 'setUsers',
+        'store_properties' => 'setStoreProperties',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200108Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'users' => 'getUsers',
+        'store_properties' => 'getStoreProperties',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200108Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['store_properties'] = isset($data['store_properties']) ? $data['store_properties'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200108Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets users
+     * Gets store_properties
      *
-     * @return \CareCloud\Model\User[]
+     * @return \CareCloud\Model\Property[]
      */
-    public function getUsers()
+    public function getStoreProperties()
     {
-        return $this->container['users'];
+        return $this->container['store_properties'];
     }
 
     /**
-     * Sets users
+     * Sets store_properties
      *
-     * @param \CareCloud\Model\User[] $users Array of users
+     * @param \CareCloud\Model\Property[] $store_properties List of all store properties
      *
      * @return $this
      */
-    public function setUsers($users)
+    public function setStoreProperties($store_properties)
     {
-        $this->container['users'] = $users;
+        $this->container['store_properties'] = $store_properties;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200108Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found users
+     * @param int $total_items Count of all found store properties
      *
      * @return $this
      */

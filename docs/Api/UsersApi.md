@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**postUserVerifyAuthToken**](UsersApi.md#postuserverifyauthtoken) | **POST** /users/actions/verify-auth-token | Verify user auth token
 
 # **getUser**
-> \CareCloud\Model\InlineResponse200109 getUser($user_id, $accept_language)
+> \CareCloud\Model\InlineResponse200111 getUser($user_id, $accept_language)
 
 Get information about an user
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200109**](../Model/InlineResponse200109.md)
+[**\CareCloud\Model\InlineResponse200111**](../Model/InlineResponse200111.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsers**
-> \CareCloud\Model\InlineResponse200108 getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name)
+> \CareCloud\Model\InlineResponse200110 getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name)
 
 Get all users
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200108**](../Model/InlineResponse200108.md)
+[**\CareCloud\Model\InlineResponse200110**](../Model/InlineResponse200110.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserLogin**
-> \CareCloud\Model\InlineResponse200111 postUserLogin($body, $accept_language)
+> \CareCloud\Model\InlineResponse200113 postUserLogin($body, $accept_language)
 
 User login
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200111**](../Model/InlineResponse200111.md)
+[**\CareCloud\Model\InlineResponse200113**](../Model/InlineResponse200113.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserSsoLogin**
-> \CareCloud\Model\InlineResponse200112 postUserSsoLogin($body, $accept_language)
+> \CareCloud\Model\InlineResponse200114 postUserSsoLogin($body, $accept_language)
 
 User SSO login
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200112**](../Model/InlineResponse200112.md)
+[**\CareCloud\Model\InlineResponse200114**](../Model/InlineResponse200114.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserVerifyAuthToken**
-> \CareCloud\Model\InlineResponse200110 postUserVerifyAuthToken($body)
+> \CareCloud\Model\InlineResponse200112 postUserVerifyAuthToken($body)
 
 Verify user auth token
 
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200110**](../Model/InlineResponse200110.md)
+[**\CareCloud\Model\InlineResponse200112**](../Model/InlineResponse200112.md)
 
 ### Authorization
 

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getPurchaseItemTypes**](PurchaseItemTypesApi.md#getpurchaseitemtypes) | **GET** /purchase-item-types | Get all purchase item types
 
 # **getPurchaseItemTypes**
-> \CareCloud\Model\InlineResponse20079 getPurchaseItemTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse20081 getPurchaseItemTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all purchase item types
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20079**](../Model/InlineResponse20079.md)
+[**\CareCloud\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postProductReservationCancel**](ProductReservationsApi.md#postproductreservationcancel) | **POST** /product-reservations/{product_reservation_id}/actions/cancel-reservation | Cancel reservation
 
 # **getProductReservation**
-> \CareCloud\Model\InlineResponse20069 getProductReservation($product_reservation_id, $accept_language)
+> \CareCloud\Model\InlineResponse20071 getProductReservation($product_reservation_id, $accept_language)
 
 Get a product-reservation
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\CareCloud\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservations**
-> \CareCloud\Model\InlineResponse20068 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state)
+> \CareCloud\Model\InlineResponse20070 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state)
 
 Get all product reservations
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\CareCloud\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 

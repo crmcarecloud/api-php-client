@@ -98,7 +98,7 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200118
+     * @return \CareCloud\Model\InlineResponse200120
      */
     public function getWalletCredits($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -118,11 +118,11 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200120, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletCreditsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200118';
+        $returnType = '\CareCloud\Model\InlineResponse200120';
         $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -134,7 +134,7 @@ class WalletApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -157,7 +157,7 @@ class WalletApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -174,7 +174,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200118',
+                        '\CareCloud\Model\InlineResponse200120',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class WalletApi
      */
     public function getWalletCreditsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200118';
+        $returnType = '\CareCloud\Model\InlineResponse200120';
         $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client
@@ -273,7 +273,7 @@ class WalletApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -429,7 +429,7 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200119
+     * @return \CareCloud\Model\InlineResponse200121
      */
     public function getWalletCreditsExpiration($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -447,11 +447,11 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200119, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200121, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletCreditsExpirationWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200119';
+        $returnType = '\CareCloud\Model\InlineResponse200121';
         $request = $this->getWalletCreditsExpirationRequest($customer_id, $accept_language);
 
         try {
@@ -463,7 +463,7 @@ class WalletApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -486,7 +486,7 @@ class WalletApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -503,7 +503,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200119',
+                        '\CareCloud\Model\InlineResponse200121',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -587,7 +587,7 @@ class WalletApi
      */
     public function getWalletCreditsExpirationAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200119';
+        $returnType = '\CareCloud\Model\InlineResponse200121';
         $request = $this->getWalletCreditsExpirationRequest($customer_id, $accept_language);
 
         return $this->client
@@ -598,7 +598,7 @@ class WalletApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -746,7 +746,7 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200117
+     * @return \CareCloud\Model\InlineResponse200119
      */
     public function getWalletPoints($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -766,11 +766,11 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200117, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200119, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletPointsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200117';
+        $returnType = '\CareCloud\Model\InlineResponse200119';
         $request = $this->getWalletPointsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -782,7 +782,7 @@ class WalletApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -805,7 +805,7 @@ class WalletApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -822,7 +822,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200117',
+                        '\CareCloud\Model\InlineResponse200119',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -910,7 +910,7 @@ class WalletApi
      */
     public function getWalletPointsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200117';
+        $returnType = '\CareCloud\Model\InlineResponse200119';
         $request = $this->getWalletPointsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client
@@ -921,7 +921,7 @@ class WalletApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1077,7 +1077,7 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200119
+     * @return \CareCloud\Model\InlineResponse200121
      */
     public function getWalletPointsExpiration($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1095,11 +1095,11 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200119, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200121, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletPointsExpirationWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200119';
+        $returnType = '\CareCloud\Model\InlineResponse200121';
         $request = $this->getWalletPointsExpirationRequest($customer_id, $accept_language);
 
         try {
@@ -1111,7 +1111,7 @@ class WalletApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1134,7 +1134,7 @@ class WalletApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -1151,7 +1151,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200119',
+                        '\CareCloud\Model\InlineResponse200121',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1235,7 +1235,7 @@ class WalletApi
      */
     public function getWalletPointsExpirationAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200119';
+        $returnType = '\CareCloud\Model\InlineResponse200121';
         $request = $this->getWalletPointsExpirationRequest($customer_id, $accept_language);
 
         return $this->client
@@ -1246,7 +1246,7 @@ class WalletApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1394,7 +1394,7 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200116
+     * @return \CareCloud\Model\InlineResponse200118
      */
     public function getWalletSalesTurnover($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -1414,11 +1414,11 @@ class WalletApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200116, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletSalesTurnoverWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200116';
+        $returnType = '\CareCloud\Model\InlineResponse200118';
         $request = $this->getWalletSalesTurnoverRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -1430,7 +1430,7 @@ class WalletApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1453,7 +1453,7 @@ class WalletApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -1470,7 +1470,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200116',
+                        '\CareCloud\Model\InlineResponse200118',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1558,7 +1558,7 @@ class WalletApi
      */
     public function getWalletSalesTurnoverAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200116';
+        $returnType = '\CareCloud\Model\InlineResponse200118';
         $request = $this->getWalletSalesTurnoverRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client
@@ -1569,7 +1569,7 @@ class WalletApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getStoreProperty**](StorePropertiesApi.md#getstoreproperty) | **GET** /store-properties/{store_property_id} | Get a store property
 
 # **getStoreProperties**
-> \CareCloud\Model\InlineResponse200106 getStoreProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CareCloud\Model\InlineResponse200108 getStoreProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all store properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200106**](../Model/InlineResponse200106.md)
+[**\CareCloud\Model\InlineResponse200108**](../Model/InlineResponse200108.md)
 
 ### Authorization
 

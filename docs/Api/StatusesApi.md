@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getStatuses**](StatusesApi.md#getstatuses) | **GET** /statuses | Get all statuses
 
 # **getStatus**
-> \CareCloud\Model\InlineResponse20099 getStatus($status_id, $accept_language)
+> \CareCloud\Model\InlineResponse200101 getStatus($status_id, $accept_language)
 
 Get a status
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20099**](../Model/InlineResponse20099.md)
+[**\CareCloud\Model\InlineResponse200101**](../Model/InlineResponse200101.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStatuses**
-> \CareCloud\Model\InlineResponse20098 getStatuses($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse200100 getStatuses($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all statuses
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20098**](../Model/InlineResponse20098.md)
+[**\CareCloud\Model\InlineResponse200100**](../Model/InlineResponse200100.md)
 
 ### Authorization
 

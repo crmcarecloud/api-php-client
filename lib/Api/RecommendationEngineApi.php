@@ -99,7 +99,7 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20084
+     * @return \CareCloud\Model\InlineResponse20086
      */
     public function getRecommendationCartCombined($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null, $count = '100')
     {
@@ -120,11 +120,11 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20084, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20086, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecommendationCartCombinedWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null, $count = '100')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20084';
+        $returnType = '\CareCloud\Model\InlineResponse20086';
         $request = $this->getRecommendationCartCombinedRequest($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count);
 
         try {
@@ -136,7 +136,7 @@ class RecommendationEngineApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -159,7 +159,7 @@ class RecommendationEngineApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -176,7 +176,7 @@ class RecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20084',
+                        '\CareCloud\Model\InlineResponse20086',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -266,7 +266,7 @@ class RecommendationEngineApi
      */
     public function getRecommendationCartCombinedAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null, $count = '100')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20084';
+        $returnType = '\CareCloud\Model\InlineResponse20086';
         $request = $this->getRecommendationCartCombinedRequest($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count);
 
         return $this->client
@@ -277,7 +277,7 @@ class RecommendationEngineApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -446,7 +446,7 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20084
+     * @return \CareCloud\Model\InlineResponse20086
      */
     public function getRecommendationCartEliminate($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null)
     {
@@ -466,11 +466,11 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20084, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20086, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecommendationCartEliminateWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20084';
+        $returnType = '\CareCloud\Model\InlineResponse20086';
         $request = $this->getRecommendationCartEliminateRequest($customer_id, $accept_language, $cart_product_ids, $product_id_list);
 
         try {
@@ -482,7 +482,7 @@ class RecommendationEngineApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -505,7 +505,7 @@ class RecommendationEngineApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -522,7 +522,7 @@ class RecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20084',
+                        '\CareCloud\Model\InlineResponse20086',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -610,7 +610,7 @@ class RecommendationEngineApi
      */
     public function getRecommendationCartEliminateAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20084';
+        $returnType = '\CareCloud\Model\InlineResponse20086';
         $request = $this->getRecommendationCartEliminateRequest($customer_id, $accept_language, $cart_product_ids, $product_id_list);
 
         return $this->client
@@ -621,7 +621,7 @@ class RecommendationEngineApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -785,7 +785,7 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20084
+     * @return \CareCloud\Model\InlineResponse20086
      */
     public function getRecommendationCartOrder($cart_product_ids, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
     {
@@ -805,11 +805,11 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20084, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20086, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecommendationCartOrderWithHttpInfo($cart_product_ids, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20084';
+        $returnType = '\CareCloud\Model\InlineResponse20086';
         $request = $this->getRecommendationCartOrderRequest($cart_product_ids, $accept_language, $product_id_list, $count);
 
         try {
@@ -821,7 +821,7 @@ class RecommendationEngineApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -844,7 +844,7 @@ class RecommendationEngineApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -861,7 +861,7 @@ class RecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20084',
+                        '\CareCloud\Model\InlineResponse20086',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -949,7 +949,7 @@ class RecommendationEngineApi
      */
     public function getRecommendationCartOrderAsyncWithHttpInfo($cart_product_ids, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20084';
+        $returnType = '\CareCloud\Model\InlineResponse20086';
         $request = $this->getRecommendationCartOrderRequest($cart_product_ids, $accept_language, $product_id_list, $count);
 
         return $this->client
@@ -960,7 +960,7 @@ class RecommendationEngineApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1124,7 +1124,7 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20083
+     * @return \CareCloud\Model\InlineResponse20085
      */
     public function getRecommendationProductCombined($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
     {
@@ -1144,11 +1144,11 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20083, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20085, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecommendationProductCombinedWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20083';
+        $returnType = '\CareCloud\Model\InlineResponse20085';
         $request = $this->getRecommendationProductCombinedRequest($customer_id, $accept_language, $product_id_list, $count);
 
         try {
@@ -1160,7 +1160,7 @@ class RecommendationEngineApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1183,7 +1183,7 @@ class RecommendationEngineApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -1200,7 +1200,7 @@ class RecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20083',
+                        '\CareCloud\Model\InlineResponse20085',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1288,7 +1288,7 @@ class RecommendationEngineApi
      */
     public function getRecommendationProductCombinedAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20083';
+        $returnType = '\CareCloud\Model\InlineResponse20085';
         $request = $this->getRecommendationProductCombinedRequest($customer_id, $accept_language, $product_id_list, $count);
 
         return $this->client
@@ -1299,7 +1299,7 @@ class RecommendationEngineApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1459,7 +1459,7 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20083
+     * @return \CareCloud\Model\InlineResponse20085
      */
     public function getRecommendationProductEliminate($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null)
     {
@@ -1478,11 +1478,11 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20083, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20085, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecommendationProductEliminateWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20083';
+        $returnType = '\CareCloud\Model\InlineResponse20085';
         $request = $this->getRecommendationProductEliminateRequest($customer_id, $accept_language, $product_id_list);
 
         try {
@@ -1494,7 +1494,7 @@ class RecommendationEngineApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1517,7 +1517,7 @@ class RecommendationEngineApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -1534,7 +1534,7 @@ class RecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20083',
+                        '\CareCloud\Model\InlineResponse20085',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1620,7 +1620,7 @@ class RecommendationEngineApi
      */
     public function getRecommendationProductEliminateAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20083';
+        $returnType = '\CareCloud\Model\InlineResponse20085';
         $request = $this->getRecommendationProductEliminateRequest($customer_id, $accept_language, $product_id_list);
 
         return $this->client
@@ -1631,7 +1631,7 @@ class RecommendationEngineApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1787,7 +1787,7 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20083
+     * @return \CareCloud\Model\InlineResponse20085
      */
     public function getRecommendationProductOrder($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
     {
@@ -1807,11 +1807,11 @@ class RecommendationEngineApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20083, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20085, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecommendationProductOrderWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20083';
+        $returnType = '\CareCloud\Model\InlineResponse20085';
         $request = $this->getRecommendationProductOrderRequest($customer_id, $accept_language, $product_id_list, $count);
 
         try {
@@ -1823,7 +1823,7 @@ class RecommendationEngineApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1846,7 +1846,7 @@ class RecommendationEngineApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -1863,7 +1863,7 @@ class RecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20083',
+                        '\CareCloud\Model\InlineResponse20085',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1951,7 +1951,7 @@ class RecommendationEngineApi
      */
     public function getRecommendationProductOrderAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20083';
+        $returnType = '\CareCloud\Model\InlineResponse20085';
         $request = $this->getRecommendationProductOrderRequest($customer_id, $accept_language, $product_id_list, $count);
 
         return $this->client
@@ -1962,7 +1962,7 @@ class RecommendationEngineApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }

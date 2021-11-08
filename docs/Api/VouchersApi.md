@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postVoucherApply**](VouchersApi.md#postvoucherapply) | **POST** /vouchers/{voucher_id}/actions/apply-voucher | Application of a voucher
 
 # **getVoucher**
-> \CareCloud\Model\InlineResponse200115 getVoucher($voucher_id, $accept_language)
+> \CareCloud\Model\InlineResponse200117 getVoucher($voucher_id, $accept_language)
 
 Get a voucher
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200115**](../Model/InlineResponse200115.md)
+[**\CareCloud\Model\InlineResponse200117**](../Model/InlineResponse200117.md)
 
 ### Authorization
 

@@ -56,9 +56,9 @@ class InlineResponse200119Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'next_amount' => 'float',
-'next_date' => 'string',
-'current_month_amount' => 'float'    ];
+        'earned_points' => 'float',
+'redeemed_points' => 'float',
+'available_points' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +66,9 @@ class InlineResponse200119Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'next_amount' => 'float',
-'next_date' => null,
-'current_month_amount' => 'float'    ];
+        'earned_points' => 'float',
+'redeemed_points' => 'float',
+'available_points' => 'float'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +97,9 @@ class InlineResponse200119Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_amount' => 'next_amount',
-'next_date' => 'next_date',
-'current_month_amount' => 'current_month_amount'    ];
+        'earned_points' => 'earned_points',
+'redeemed_points' => 'redeemed_points',
+'available_points' => 'available_points'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +107,9 @@ class InlineResponse200119Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'next_amount' => 'setNextAmount',
-'next_date' => 'setNextDate',
-'current_month_amount' => 'setCurrentMonthAmount'    ];
+        'earned_points' => 'setEarnedPoints',
+'redeemed_points' => 'setRedeemedPoints',
+'available_points' => 'setAvailablePoints'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +117,9 @@ class InlineResponse200119Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'next_amount' => 'getNextAmount',
-'next_date' => 'getNextDate',
-'current_month_amount' => 'getCurrentMonthAmount'    ];
+        'earned_points' => 'getEarnedPoints',
+'redeemed_points' => 'getRedeemedPoints',
+'available_points' => 'getAvailablePoints'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +179,9 @@ class InlineResponse200119Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_amount'] = isset($data['next_amount']) ? $data['next_amount'] : null;
-        $this->container['next_date'] = isset($data['next_date']) ? $data['next_date'] : null;
-        $this->container['current_month_amount'] = isset($data['current_month_amount']) ? $data['current_month_amount'] : null;
+        $this->container['earned_points'] = isset($data['earned_points']) ? $data['earned_points'] : null;
+        $this->container['redeemed_points'] = isset($data['redeemed_points']) ? $data['redeemed_points'] : null;
+        $this->container['available_points'] = isset($data['available_points']) ? $data['available_points'] : null;
     }
 
     /**
@@ -209,73 +209,73 @@ class InlineResponse200119Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets next_amount
+     * Gets earned_points
      *
      * @return float
      */
-    public function getNextAmount()
+    public function getEarnedPoints()
     {
-        return $this->container['next_amount'];
+        return $this->container['earned_points'];
     }
 
     /**
-     * Sets next_amount
+     * Sets earned_points
      *
-     * @param float $next_amount Date (ISO 8601) when first points will expire
+     * @param float $earned_points Amount of earned points in time interval
      *
      * @return $this
      */
-    public function setNextAmount($next_amount)
+    public function setEarnedPoints($earned_points)
     {
-        $this->container['next_amount'] = $next_amount;
+        $this->container['earned_points'] = $earned_points;
 
         return $this;
     }
 
     /**
-     * Gets next_date
+     * Gets redeemed_points
      *
-     * @return string
+     * @return float
      */
-    public function getNextDate()
+    public function getRedeemedPoints()
     {
-        return $this->container['next_date'];
+        return $this->container['redeemed_points'];
     }
 
     /**
-     * Sets next_date
+     * Sets redeemed_points
      *
-     * @param string $next_date Amount of redeemed points in time interval *(YYYY-MM-DD)*
+     * @param float $redeemed_points Amount of redeemed points in time interval
      *
      * @return $this
      */
-    public function setNextDate($next_date)
+    public function setRedeemedPoints($redeemed_points)
     {
-        $this->container['next_date'] = $next_date;
+        $this->container['redeemed_points'] = $redeemed_points;
 
         return $this;
     }
 
     /**
-     * Gets current_month_amount
+     * Gets available_points
      *
      * @return float
      */
-    public function getCurrentMonthAmount()
+    public function getAvailablePoints()
     {
-        return $this->container['current_month_amount'];
+        return $this->container['available_points'];
     }
 
     /**
-     * Sets current_month_amount
+     * Sets available_points
      *
-     * @param float $current_month_amount Amount of points that will expire in current month
+     * @param float $available_points Amount of available points in the moment. Time interval has no influence to the result
      *
      * @return $this
      */
-    public function setCurrentMonthAmount($current_month_amount)
+    public function setAvailablePoints($available_points)
     {
-        $this->container['current_month_amount'] = $current_month_amount;
+        $this->container['available_points'] = $available_points;
 
         return $this;
     }

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vouchers** | [**\CareCloud\Model\Voucher[]**](Voucher.md) | List of vouchers tied to a reward | [optional] 
-**total_items** | **int** | Count of all found vouchers | [optional] 
+**rewards** | [**\CareCloud\Model\Reward[]**](Reward.md) | List of all rewards | [optional] 
+**total_items** | **int** | Count of all found rewards | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

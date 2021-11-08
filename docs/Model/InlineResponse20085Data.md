@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rewards** | [**\CareCloud\Model\Reward[]**](Reward.md) | List of all rewards | [optional] 
-**total_items** | **int** | Count of all found rewards | [optional] 
+**recommended_products_list** | **string[]** | List of the recommended product ids. | [optional] 
+**total_items** | **int** | Count of all found product ids. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

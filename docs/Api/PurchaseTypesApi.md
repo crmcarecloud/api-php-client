@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getPurchaseTypes**](PurchaseTypesApi.md#getpurchasetypes) | **GET** /purchase-types | Get all purchase types
 
 # **getPurchaseTypes**
-> \CareCloud\Model\InlineResponse20080 getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse20082 getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all purchase types
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20080**](../Model/InlineResponse20080.md)
+[**\CareCloud\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
 
 ### Authorization
 

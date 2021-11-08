@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getPointsTypes**](PointTypesApi.md#getpointstypes) | **GET** /point-types | Get all point types
 
 # **getPointType**
-> \CareCloud\Model\InlineResponse20060 getPointType($point_type_id, $accept_language)
+> \CareCloud\Model\InlineResponse20062 getPointType($point_type_id, $accept_language)
 
 Get a point type
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
+[**\CareCloud\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPointsTypes**
-> \CareCloud\Model\InlineResponse20059 getPointsTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse20061 getPointsTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all point types
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
+[**\CareCloud\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
 
 ### Authorization
 

@@ -56,7 +56,7 @@ class InlineResponse20092Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reward_properties' => '\CareCloud\Model\Property[]',
+        'product_brands' => '\CareCloud\Model\ProductBrand[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20092Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'reward_properties' => null,
+        'product_brands' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20092Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'reward_properties' => 'reward_properties',
+        'product_brands' => 'product_brands',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20092Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'reward_properties' => 'setRewardProperties',
+        'product_brands' => 'setProductBrands',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20092Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'reward_properties' => 'getRewardProperties',
+        'product_brands' => 'getProductBrands',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20092Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['reward_properties'] = isset($data['reward_properties']) ? $data['reward_properties'] : null;
+        $this->container['product_brands'] = isset($data['product_brands']) ? $data['product_brands'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20092Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets reward_properties
+     * Gets product_brands
      *
-     * @return \CareCloud\Model\Property[]
+     * @return \CareCloud\Model\ProductBrand[]
      */
-    public function getRewardProperties()
+    public function getProductBrands()
     {
-        return $this->container['reward_properties'];
+        return $this->container['product_brands'];
     }
 
     /**
-     * Sets reward_properties
+     * Sets product_brands
      *
-     * @param \CareCloud\Model\Property[] $reward_properties List of all reward properties
+     * @param \CareCloud\Model\ProductBrand[] $product_brands List of product brands tied to a reward
      *
      * @return $this
      */
-    public function setRewardProperties($reward_properties)
+    public function setProductBrands($product_brands)
     {
-        $this->container['reward_properties'] = $reward_properties;
+        $this->container['product_brands'] = $product_brands;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20092Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found reward properties
+     * @param int $total_items Count of all found product brands
      *
      * @return $this
      */

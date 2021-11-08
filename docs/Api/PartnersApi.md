@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getPartners**](PartnersApi.md#getpartners) | **GET** /partners | Get all partners
 
 # **getPartner**
-> \CareCloud\Model\InlineResponse20055 getPartner($partner_id, $accept_language)
+> \CareCloud\Model\InlineResponse20057 getPartner($partner_id, $accept_language)
 
 Get a partner
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
+[**\CareCloud\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPartners**
-> \CareCloud\Model\InlineResponse20054 getPartners($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse20056 getPartners($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all partners
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
+[**\CareCloud\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
 
 ### Authorization
 

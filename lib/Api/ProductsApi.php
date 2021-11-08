@@ -96,7 +96,7 @@ class ProductsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20062
+     * @return \CareCloud\Model\InlineResponse20064
      */
     public function getProduct($product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class ProductsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20062, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20064, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductWithHttpInfo($product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20062';
+        $returnType = '\CareCloud\Model\InlineResponse20064';
         $request = $this->getProductRequest($product_id, $accept_language);
 
         try {
@@ -130,7 +130,7 @@ class ProductsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -153,7 +153,7 @@ class ProductsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -170,7 +170,7 @@ class ProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20062',
+                        '\CareCloud\Model\InlineResponse20064',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class ProductsApi
      */
     public function getProductAsyncWithHttpInfo($product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20062';
+        $returnType = '\CareCloud\Model\InlineResponse20064';
         $request = $this->getProductRequest($product_id, $accept_language);
 
         return $this->client
@@ -265,7 +265,7 @@ class ProductsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -422,7 +422,7 @@ class ProductsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20061
+     * @return \CareCloud\Model\InlineResponse20063
      */
     public function getProducts($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = 'GLOBAL')
     {
@@ -447,11 +447,11 @@ class ProductsApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20061, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse20063, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = 'GLOBAL')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20061';
+        $returnType = '\CareCloud\Model\InlineResponse20063';
         $request = $this->getProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code);
 
         try {
@@ -463,7 +463,7 @@ class ProductsApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -486,7 +486,7 @@ class ProductsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -503,7 +503,7 @@ class ProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20061',
+                        '\CareCloud\Model\InlineResponse20063',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -601,7 +601,7 @@ class ProductsApi
      */
     public function getProductsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = 'GLOBAL')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20061';
+        $returnType = '\CareCloud\Model\InlineResponse20063';
         $request = $this->getProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code);
 
         return $this->client
@@ -612,7 +612,7 @@ class ProductsApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }

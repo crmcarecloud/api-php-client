@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRecommendations**](RecommendationsApi.md#getrecommendations) | **GET** /recommendations | Get all recommendations
 
 # **getRecommendation**
-> \CareCloud\Model\InlineResponse20082 getRecommendation($recommendation_id, $accept_language)
+> \CareCloud\Model\InlineResponse20084 getRecommendation($recommendation_id, $accept_language)
 
 Get a recommendation
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
+[**\CareCloud\Model\InlineResponse20084**](../Model/InlineResponse20084.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendations**
-> \CareCloud\Model\InlineResponse20081 getRecommendations($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CareCloud\Model\InlineResponse20083 getRecommendations($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all recommendations
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
+[**\CareCloud\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
 
 ### Authorization
 

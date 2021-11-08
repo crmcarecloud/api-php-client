@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProducts**](ProductsApi.md#getproducts) | **GET** /products | Collection of available products
 
 # **getProduct**
-> \CareCloud\Model\InlineResponse20062 getProduct($product_id, $accept_language)
+> \CareCloud\Model\InlineResponse20064 getProduct($product_id, $accept_language)
 
 Detail of a product
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
+[**\CareCloud\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProducts**
-> \CareCloud\Model\InlineResponse20061 getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code)
+> \CareCloud\Model\InlineResponse20063 getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code)
 
 Collection of available products
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
+[**\CareCloud\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
 
 ### Authorization
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**purchase_items** | [**\CareCloud\Model\PurchaseItem[]**](PurchaseItem.md) | List of purchase items tied to a purchase | [optional] 
-**total_items** | **int** | Count of all found purchase items | [optional] 
+**search_results** | [**\CareCloud\Model\SearchResult[]**](SearchResult.md) | List of the results | [optional] 
+**total_items** | **int** | Count of the results | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

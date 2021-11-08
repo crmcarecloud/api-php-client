@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**putToken**](TokensApi.md#puttoken) | **PUT** /tokens/{token_id} | Edit a push token
 
 # **getTokenAuthentication**
-> \CareCloud\Model\InlineResponse200107 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
+> \CareCloud\Model\InlineResponse200109 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
 
 Get authentication token
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200107**](../Model/InlineResponse200107.md)
+[**\CareCloud\Model\InlineResponse200109**](../Model/InlineResponse200109.md)
 
 ### Authorization
 

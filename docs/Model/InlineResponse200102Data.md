@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**property_records** | [**\CareCloud\Model\PropertyRecord[]**](PropertyRecord.md) | List of property records | [optional] 
-**total_items** | **int** | Count of all found store property records | [optional] 
+**stores** | [**\CareCloud\Model\Store[]**](Store.md) | List of all stores | [optional] 
+**total_items** | **int** | Count of all found stores | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

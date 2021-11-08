@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductReservationSources**](ProductReservationSourcesApi.md#getproductreservationsources) | **GET** /product-reservation-sources | Get all product reservation sources
 
 # **getProductReservationSource**
-> \CareCloud\Model\InlineResponse20071 getProductReservationSource($product_reservation_source_id, $accept_language)
+> \CareCloud\Model\InlineResponse20073 getProductReservationSource($product_reservation_source_id, $accept_language)
 
 Detail of an product reservation source
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
+[**\CareCloud\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservationSources**
-> \CareCloud\Model\InlineResponse20070 getProductReservationSources($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse20072 getProductReservationSources($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all product reservation sources
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
+[**\CareCloud\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
 
 ### Authorization
 

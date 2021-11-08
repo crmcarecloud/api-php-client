@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getUserRoles**](UserRolesApi.md#getuserroles) | **GET** /user-roles | Get all user roles
 
 # **getUserRole**
-> \CareCloud\Model\InlineResponse200114 getUserRole($user_role_id, $accept_language)
+> \CareCloud\Model\InlineResponse200116 getUserRole($user_role_id, $accept_language)
 
 Get information about an user role
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200114**](../Model/InlineResponse200114.md)
+[**\CareCloud\Model\InlineResponse200116**](../Model/InlineResponse200116.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserRoles**
-> \CareCloud\Model\InlineResponse200113 getUserRoles($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse200115 getUserRoles($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all user roles
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200113**](../Model/InlineResponse200113.md)
+[**\CareCloud\Model\InlineResponse200115**](../Model/InlineResponse200115.md)
 
 ### Authorization
 

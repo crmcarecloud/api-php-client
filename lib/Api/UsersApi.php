@@ -96,7 +96,7 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200109
+     * @return \CareCloud\Model\InlineResponse200111
      */
     public function getUser($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200109, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200111, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserWithHttpInfo($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200109';
+        $returnType = '\CareCloud\Model\InlineResponse200111';
         $request = $this->getUserRequest($user_id, $accept_language);
 
         try {
@@ -130,7 +130,7 @@ class UsersApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -153,7 +153,7 @@ class UsersApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -170,7 +170,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200109',
+                        '\CareCloud\Model\InlineResponse200111',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class UsersApi
      */
     public function getUserAsyncWithHttpInfo($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200109';
+        $returnType = '\CareCloud\Model\InlineResponse200111';
         $request = $this->getUserRequest($user_id, $accept_language);
 
         return $this->client
@@ -265,7 +265,7 @@ class UsersApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -423,7 +423,7 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200108
+     * @return \CareCloud\Model\InlineResponse200110
      */
     public function getUsers($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null)
     {
@@ -449,11 +449,11 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200108, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200110, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUsersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200108';
+        $returnType = '\CareCloud\Model\InlineResponse200110';
         $request = $this->getUsersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name);
 
         try {
@@ -465,7 +465,7 @@ class UsersApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -488,7 +488,7 @@ class UsersApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -505,7 +505,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200108',
+                        '\CareCloud\Model\InlineResponse200110',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -605,7 +605,7 @@ class UsersApi
      */
     public function getUsersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200108';
+        $returnType = '\CareCloud\Model\InlineResponse200110';
         $request = $this->getUsersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name);
 
         return $this->client
@@ -616,7 +616,7 @@ class UsersApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -796,7 +796,7 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200111
+     * @return \CareCloud\Model\InlineResponse200113
      */
     public function postUserLogin($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -814,11 +814,11 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200111, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200113, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserLoginWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200111';
+        $returnType = '\CareCloud\Model\InlineResponse200113';
         $request = $this->postUserLoginRequest($body, $accept_language);
 
         try {
@@ -830,7 +830,7 @@ class UsersApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -853,7 +853,7 @@ class UsersApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -870,7 +870,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200111',
+                        '\CareCloud\Model\InlineResponse200113',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -946,7 +946,7 @@ class UsersApi
      */
     public function postUserLoginAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200111';
+        $returnType = '\CareCloud\Model\InlineResponse200113';
         $request = $this->postUserLoginRequest($body, $accept_language);
 
         return $this->client
@@ -957,7 +957,7 @@ class UsersApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1127,7 +1127,7 @@ class UsersApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1371,7 +1371,7 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200112
+     * @return \CareCloud\Model\InlineResponse200114
      */
     public function postUserSsoLogin($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1389,11 +1389,11 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200112, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200114, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserSsoLoginWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200112';
+        $returnType = '\CareCloud\Model\InlineResponse200114';
         $request = $this->postUserSsoLoginRequest($body, $accept_language);
 
         try {
@@ -1405,7 +1405,7 @@ class UsersApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1428,7 +1428,7 @@ class UsersApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -1445,7 +1445,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200112',
+                        '\CareCloud\Model\InlineResponse200114',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1529,7 +1529,7 @@ class UsersApi
      */
     public function postUserSsoLoginAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200112';
+        $returnType = '\CareCloud\Model\InlineResponse200114';
         $request = $this->postUserSsoLoginRequest($body, $accept_language);
 
         return $this->client
@@ -1540,7 +1540,7 @@ class UsersApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }
@@ -1676,7 +1676,7 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200110
+     * @return \CareCloud\Model\InlineResponse200112
      */
     public function postUserVerifyAuthToken($body)
     {
@@ -1693,11 +1693,11 @@ class UsersApi
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200110, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CareCloud\Model\InlineResponse200112, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserVerifyAuthTokenWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200110';
+        $returnType = '\CareCloud\Model\InlineResponse200112';
         $request = $this->postUserVerifyAuthTokenRequest($body);
 
         try {
@@ -1709,7 +1709,7 @@ class UsersApi
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
                     $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
                 );
             }
 
@@ -1732,7 +1732,7 @@ class UsersApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
-                $content = $responseBody->getContents();
+                $content = (string) $responseBody;
                 if (!in_array($returnType, ['string','integer','bool'])) {
                     $content = json_decode($content);
                 }
@@ -1749,7 +1749,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200110',
+                        '\CareCloud\Model\InlineResponse200112',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1831,7 +1831,7 @@ class UsersApi
      */
     public function postUserVerifyAuthTokenAsyncWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200110';
+        $returnType = '\CareCloud\Model\InlineResponse200112';
         $request = $this->postUserVerifyAuthTokenRequest($body);
 
         return $this->client
@@ -1842,7 +1842,7 @@ class UsersApi
                     if ($returnType === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
-                        $content = $responseBody->getContents();
+                        $content = (string) $responseBody;
                         if ($returnType !== 'string') {
                             $content = json_decode($content);
                         }

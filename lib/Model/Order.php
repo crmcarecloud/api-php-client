@@ -67,6 +67,10 @@ class Order implements ModelInterface, ArrayAccess
 'invoicing_data' => '\CareCloud\Model\OrderInvoicing',
 'shipping_data' => '\CareCloud\Model\OrderShipping',
 'customer_note' => 'string',
+'order_status' => 'string',
+'shipping_date' => 'string',
+'program_ranking' => 'int',
+'payment_status' => 'string',
 'last_change' => 'string'    ];
 
     /**
@@ -85,6 +89,10 @@ class Order implements ModelInterface, ArrayAccess
 'invoicing_data' => null,
 'shipping_data' => null,
 'customer_note' => null,
+'order_status' => null,
+'shipping_date' => null,
+'program_ranking' => null,
+'payment_status' => null,
 'last_change' => null    ];
 
     /**
@@ -124,6 +132,10 @@ class Order implements ModelInterface, ArrayAccess
 'invoicing_data' => 'invoicing_data',
 'shipping_data' => 'shipping_data',
 'customer_note' => 'customer_note',
+'order_status' => 'order_status',
+'shipping_date' => 'shipping_date',
+'program_ranking' => 'program_ranking',
+'payment_status' => 'payment_status',
 'last_change' => 'last_change'    ];
 
     /**
@@ -142,6 +154,10 @@ class Order implements ModelInterface, ArrayAccess
 'invoicing_data' => 'setInvoicingData',
 'shipping_data' => 'setShippingData',
 'customer_note' => 'setCustomerNote',
+'order_status' => 'setOrderStatus',
+'shipping_date' => 'setShippingDate',
+'program_ranking' => 'setProgramRanking',
+'payment_status' => 'setPaymentStatus',
 'last_change' => 'setLastChange'    ];
 
     /**
@@ -160,6 +176,10 @@ class Order implements ModelInterface, ArrayAccess
 'invoicing_data' => 'getInvoicingData',
 'shipping_data' => 'getShippingData',
 'customer_note' => 'getCustomerNote',
+'order_status' => 'getOrderStatus',
+'shipping_date' => 'getShippingDate',
+'program_ranking' => 'getProgramRanking',
+'payment_status' => 'getPaymentStatus',
 'last_change' => 'getLastChange'    ];
 
     /**
@@ -230,6 +250,10 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['invoicing_data'] = isset($data['invoicing_data']) ? $data['invoicing_data'] : null;
         $this->container['shipping_data'] = isset($data['shipping_data']) ? $data['shipping_data'] : null;
         $this->container['customer_note'] = isset($data['customer_note']) ? $data['customer_note'] : null;
+        $this->container['order_status'] = isset($data['order_status']) ? $data['order_status'] : null;
+        $this->container['shipping_date'] = isset($data['shipping_date']) ? $data['shipping_date'] : null;
+        $this->container['program_ranking'] = isset($data['program_ranking']) ? $data['program_ranking'] : null;
+        $this->container['payment_status'] = isset($data['payment_status']) ? $data['payment_status'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
 
@@ -508,6 +532,102 @@ class Order implements ModelInterface, ArrayAccess
     public function setCustomerNote($customer_note)
     {
         $this->container['customer_note'] = $customer_note;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_status
+     *
+     * @return string
+     */
+    public function getOrderStatus()
+    {
+        return $this->container['order_status'];
+    }
+
+    /**
+     * Sets order_status
+     *
+     * @param string $order_status Text representation of the order status
+     *
+     * @return $this
+     */
+    public function setOrderStatus($order_status)
+    {
+        $this->container['order_status'] = $order_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipping_date
+     *
+     * @return string
+     */
+    public function getShippingDate()
+    {
+        return $this->container['shipping_date'];
+    }
+
+    /**
+     * Sets shipping_date
+     *
+     * @param string $shipping_date Date of the order shipping. If the date is in future, order should be shipped in this date
+     *
+     * @return $this
+     */
+    public function setShippingDate($shipping_date)
+    {
+        $this->container['shipping_date'] = $shipping_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets program_ranking
+     *
+     * @return int
+     */
+    public function getProgramRanking()
+    {
+        return $this->container['program_ranking'];
+    }
+
+    /**
+     * Sets program_ranking
+     *
+     * @param int $program_ranking Rank of order in case of the series of multiple orders
+     *
+     * @return $this
+     */
+    public function setProgramRanking($program_ranking)
+    {
+        $this->container['program_ranking'] = $program_ranking;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_status
+     *
+     * @return string
+     */
+    public function getPaymentStatus()
+    {
+        return $this->container['payment_status'];
+    }
+
+    /**
+     * Sets payment_status
+     *
+     * @param string $payment_status Text representation of the payment status
+     *
+     * @return $this
+     */
+    public function setPaymentStatus($payment_status)
+    {
+        $this->container['payment_status'] = $payment_status;
 
         return $this;
     }

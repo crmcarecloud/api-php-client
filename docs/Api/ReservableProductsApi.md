@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postReservableProductsSearch**](ReservableProductsApi.md#postreservableproductssearch) | **POST** /reservable-products/actions/search-reservable-products | Search reservable products
 
 # **getReservableProduct**
-> \CareCloud\Model\InlineResponse20062 getReservableProduct($reservable_product_id, $accept_language)
+> \CareCloud\Model\InlineResponse20064 getReservableProduct($reservable_product_id, $accept_language)
 
 Get a reservable product
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
+[**\CareCloud\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getReservableProducts**
-> \CareCloud\Model\InlineResponse20072 getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code)
+> \CareCloud\Model\InlineResponse20074 getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code)
 
 Get all reservable products
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
+[**\CareCloud\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postReservableProductsSearch**
-> \CareCloud\Model\InlineResponse20073 postReservableProductsSearch($body, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CareCloud\Model\InlineResponse20075 postReservableProductsSearch($body, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Search reservable products
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
+[**\CareCloud\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
 
 ### Authorization
 
