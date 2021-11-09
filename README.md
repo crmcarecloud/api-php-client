@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "http://.com/carecloud/api-php-client.git"
+      "url": "http://.com/crmcarecloud/api-php-client.git"
     }
   ],
   "require": {
-    "carecloud/api-php-client": "*@dev"
+    "crmcarecloud/api-php-client": "*@dev"
   }
 }
 ```

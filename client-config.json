@@ -1,6 +1,6 @@
 {
   "invokerPackage": "CareCloud",
   "packagePath": ".",
-  "gitUserId":  "carecloud",
+  "gitUserId":  "crmcarecloud",
   "gitRepoId":  "api-php-client"
 }

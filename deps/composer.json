@@ -6,6 +6,6 @@
     }
   ],
   "require": {
-    "carecloud/api-spec": "dev-master"
+    "crmcarecloud/api-spec": "dev-master"
   }
 }
