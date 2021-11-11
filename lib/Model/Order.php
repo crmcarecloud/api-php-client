@@ -71,6 +71,7 @@ class Order implements ModelInterface, ArrayAccess
 'shipping_date' => 'string',
 'program_ranking' => 'int',
 'payment_status' => 'string',
+'invoice_document_url' => 'string',
 'last_change' => 'string'    ];
 
     /**
@@ -93,6 +94,7 @@ class Order implements ModelInterface, ArrayAccess
 'shipping_date' => null,
 'program_ranking' => null,
 'payment_status' => null,
+'invoice_document_url' => null,
 'last_change' => null    ];
 
     /**
@@ -136,6 +138,7 @@ class Order implements ModelInterface, ArrayAccess
 'shipping_date' => 'shipping_date',
 'program_ranking' => 'program_ranking',
 'payment_status' => 'payment_status',
+'invoice_document_url' => 'invoice_document_url',
 'last_change' => 'last_change'    ];
 
     /**
@@ -158,6 +161,7 @@ class Order implements ModelInterface, ArrayAccess
 'shipping_date' => 'setShippingDate',
 'program_ranking' => 'setProgramRanking',
 'payment_status' => 'setPaymentStatus',
+'invoice_document_url' => 'setInvoiceDocumentUrl',
 'last_change' => 'setLastChange'    ];
 
     /**
@@ -180,6 +184,7 @@ class Order implements ModelInterface, ArrayAccess
 'shipping_date' => 'getShippingDate',
 'program_ranking' => 'getProgramRanking',
 'payment_status' => 'getPaymentStatus',
+'invoice_document_url' => 'getInvoiceDocumentUrl',
 'last_change' => 'getLastChange'    ];
 
     /**
@@ -254,6 +259,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['shipping_date'] = isset($data['shipping_date']) ? $data['shipping_date'] : null;
         $this->container['program_ranking'] = isset($data['program_ranking']) ? $data['program_ranking'] : null;
         $this->container['payment_status'] = isset($data['payment_status']) ? $data['payment_status'] : null;
+        $this->container['invoice_document_url'] = isset($data['invoice_document_url']) ? $data['invoice_document_url'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
 
@@ -628,6 +634,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setPaymentStatus($payment_status)
     {
         $this->container['payment_status'] = $payment_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets invoice_document_url
+     *
+     * @return string
+     */
+    public function getInvoiceDocumentUrl()
+    {
+        return $this->container['invoice_document_url'];
+    }
+
+    /**
+     * Sets invoice_document_url
+     *
+     * @param string $invoice_document_url URL address with the invoice PDF
+     *
+     * @return $this
+     */
+    public function setInvoiceDocumentUrl($invoice_document_url)
+    {
+        $this->container['invoice_document_url'] = $invoice_document_url;
 
         return $this;
     }

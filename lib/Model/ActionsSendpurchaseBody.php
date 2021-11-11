@@ -59,6 +59,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
         'store_id' => 'string',
 'cashdesk_number' => 'string',
 'card_number' => 'string',
+'customer_id' => 'string',
 'bill' => '\CareCloud\Model\FinalBill'    ];
 
     /**
@@ -70,6 +71,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
         'store_id' => null,
 'cashdesk_number' => null,
 'card_number' => null,
+'customer_id' => null,
 'bill' => null    ];
 
     /**
@@ -102,6 +104,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
         'store_id' => 'store_id',
 'cashdesk_number' => 'cashdesk_number',
 'card_number' => 'card_number',
+'customer_id' => 'customer_id',
 'bill' => 'bill'    ];
 
     /**
@@ -113,6 +116,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
         'store_id' => 'setStoreId',
 'cashdesk_number' => 'setCashdeskNumber',
 'card_number' => 'setCardNumber',
+'customer_id' => 'setCustomerId',
 'bill' => 'setBill'    ];
 
     /**
@@ -124,6 +128,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
         'store_id' => 'getStoreId',
 'cashdesk_number' => 'getCashdeskNumber',
 'card_number' => 'getCardNumber',
+'customer_id' => 'getCustomerId',
 'bill' => 'getBill'    ];
 
     /**
@@ -187,6 +192,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['cashdesk_number'] = isset($data['cashdesk_number']) ? $data['cashdesk_number'] : null;
         $this->container['card_number'] = isset($data['card_number']) ? $data['card_number'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
         $this->container['bill'] = isset($data['bill']) ? $data['bill'] : null;
     }
 
@@ -236,7 +242,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
     /**
      * Sets store_id
      *
-     * @param string $store_id Id of store
+     * @param string $store_id Id of the store
      *
      * @return $this
      */
@@ -284,13 +290,37 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
     /**
      * Sets card_number
      *
-     * @param string $card_number A customer's card number
+     * @param string $card_number The customer's card number
      *
      * @return $this
      */
     public function setCardNumber($card_number)
     {
         $this->container['card_number'] = $card_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_id
+     *
+     * @return string
+     */
+    public function getCustomerId()
+    {
+        return $this->container['customer_id'];
+    }
+
+    /**
+     * Sets customer_id
+     *
+     * @param string $customer_id Id of the customer that made the purchase. You can search customers by plenty parameter in resource customers
+     *
+     * @return $this
+     */
+    public function setCustomerId($customer_id)
+    {
+        $this->container['customer_id'] = $customer_id;
 
         return $this;
     }

@@ -91,7 +91,7 @@ class CustomersApi
      *
      * Delete an interest record on an account
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -109,7 +109,7 @@ class CustomersApi
      *
      * Delete an interest record on an account
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -204,7 +204,7 @@ class CustomersApi
      *
      * Delete an interest record on an account
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -226,7 +226,7 @@ class CustomersApi
      *
      * Delete an interest record on an account
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -264,7 +264,7 @@ class CustomersApi
     /**
      * Create request for operation 'deleteSubCustomerInterest'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -392,7 +392,7 @@ class CustomersApi
      *
      * Delete a property on an account
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -410,7 +410,7 @@ class CustomersApi
      *
      * Delete a property on an account
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -505,7 +505,7 @@ class CustomersApi
      *
      * Delete a property on an account
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -527,7 +527,7 @@ class CustomersApi
      *
      * Delete a property on an account
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -565,7 +565,7 @@ class CustomersApi
     /**
      * Create request for operation 'deleteSubCustomerProperty'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -693,7 +693,7 @@ class CustomersApi
      *
      * Get information about a customer
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -711,7 +711,7 @@ class CustomersApi
      *
      * Get information about a customer
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -827,7 +827,7 @@ class CustomersApi
      *
      * Get information about a customer
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -848,7 +848,7 @@ class CustomersApi
      *
      * Get information about a customer
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -899,7 +899,7 @@ class CustomersApi
     /**
      * Create request for operation 'getCustomer'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1403,7 +1403,7 @@ class CustomersApi
      * Get all customer cards
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
@@ -1428,7 +1428,7 @@ class CustomersApi
      * Get all customer cards
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
@@ -1551,7 +1551,7 @@ class CustomersApi
      * Get all customer cards
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
@@ -1579,7 +1579,7 @@ class CustomersApi
      * Get all customer cards
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
@@ -1637,7 +1637,7 @@ class CustomersApi
      * Create request for operation 'getSubCustomerCards'
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
@@ -1774,7 +1774,7 @@ class CustomersApi
      *
      * Get a collection of interest records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -1792,7 +1792,7 @@ class CustomersApi
      *
      * Get a collection of interest records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -1908,7 +1908,7 @@ class CustomersApi
      *
      * Get a collection of interest records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1929,7 +1929,7 @@ class CustomersApi
      *
      * Get a collection of interest records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1980,7 +1980,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerInterests'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1995,7 +1995,7 @@ class CustomersApi
             );
         }
 
-        $resourcePath = '/customers/{customer_id}/interest-records/';
+        $resourcePath = '/customers/{customer_id}/interest-records';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2093,7 +2093,7 @@ class CustomersApi
      *
      * Get all customer point records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -2116,7 +2116,7 @@ class CustomersApi
      *
      * Get all customer point records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -2237,7 +2237,7 @@ class CustomersApi
      *
      * Get all customer point records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -2263,7 +2263,7 @@ class CustomersApi
      *
      * Get all customer point records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -2319,7 +2319,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerPints'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -2457,7 +2457,7 @@ class CustomersApi
      *
      * Get a collection of properties
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -2475,7 +2475,7 @@ class CustomersApi
      *
      * Get a collection of properties
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -2591,7 +2591,7 @@ class CustomersApi
      *
      * Get a collection of properties
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -2612,7 +2612,7 @@ class CustomersApi
      *
      * Get a collection of properties
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -2663,7 +2663,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerProperties'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -2776,7 +2776,7 @@ class CustomersApi
      *
      * Get all customer purchases
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -2800,7 +2800,7 @@ class CustomersApi
      *
      * Get all customer purchases
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -2922,7 +2922,7 @@ class CustomersApi
      *
      * Get all customer purchases
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -2949,7 +2949,7 @@ class CustomersApi
      *
      * Get all customer purchases
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3006,7 +3006,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerPurchases'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3149,7 +3149,7 @@ class CustomersApi
      *
      * Get a collection of recommendation records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3172,7 +3172,7 @@ class CustomersApi
      *
      * Get a collection of recommendation records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3293,7 +3293,7 @@ class CustomersApi
      *
      * Get a collection of recommendation records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3319,7 +3319,7 @@ class CustomersApi
      *
      * Get a collection of recommendation records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3375,7 +3375,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerRecommendation'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3513,7 +3513,7 @@ class CustomersApi
      *
      * Get all customer rewards
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3545,7 +3545,7 @@ class CustomersApi
      *
      * Get all customer rewards
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3675,7 +3675,7 @@ class CustomersApi
      *
      * Get all customer rewards
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3710,7 +3710,7 @@ class CustomersApi
      *
      * Get all customer rewards
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3775,7 +3775,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerRewards'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -3961,7 +3961,7 @@ class CustomersApi
      *
      * Get a collection of segment records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -3979,7 +3979,7 @@ class CustomersApi
      *
      * Get a collection of segment records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -4095,7 +4095,7 @@ class CustomersApi
      *
      * Get a collection of segment records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -4116,7 +4116,7 @@ class CustomersApi
      *
      * Get a collection of segment records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -4167,7 +4167,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerSegments'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -4280,7 +4280,7 @@ class CustomersApi
      *
      * Get customer source records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4302,7 +4302,7 @@ class CustomersApi
      *
      * Get customer source records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4422,7 +4422,7 @@ class CustomersApi
      *
      * Get customer source records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4447,7 +4447,7 @@ class CustomersApi
      *
      * Get customer source records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4502,7 +4502,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerSource'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4635,7 +4635,7 @@ class CustomersApi
      *
      * Get a collection of status records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4658,7 +4658,7 @@ class CustomersApi
      *
      * Get a collection of status records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4779,7 +4779,7 @@ class CustomersApi
      *
      * Get a collection of status records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4805,7 +4805,7 @@ class CustomersApi
      *
      * Get a collection of status records
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4861,7 +4861,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerStatus'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -4999,7 +4999,7 @@ class CustomersApi
      *
      * Get all customer vouchers
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -5024,7 +5024,7 @@ class CustomersApi
      *
      * Get all customer vouchers
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -5147,7 +5147,7 @@ class CustomersApi
      *
      * Get all customer vouchers
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -5175,7 +5175,7 @@ class CustomersApi
      *
      * Get all customer vouchers
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -5233,7 +5233,7 @@ class CustomersApi
     /**
      * Create request for operation 'getSubCustomerVouchers'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -5696,7 +5696,7 @@ class CustomersApi
      * Add an interest record to a customer
      *
      * @param  \CareCloud\Model\CustomerIdInterestrecordsBody $body body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -5715,7 +5715,7 @@ class CustomersApi
      * Add an interest record to a customer
      *
      * @param  \CareCloud\Model\CustomerIdInterestrecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -5832,7 +5832,7 @@ class CustomersApi
      * Add an interest record to a customer
      *
      * @param  \CareCloud\Model\CustomerIdInterestrecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -5854,7 +5854,7 @@ class CustomersApi
      * Add an interest record to a customer
      *
      * @param  \CareCloud\Model\CustomerIdInterestrecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -5906,7 +5906,7 @@ class CustomersApi
      * Create request for operation 'postSubCustomerInterest'
      *
      * @param  \CareCloud\Model\CustomerIdInterestrecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -5927,7 +5927,7 @@ class CustomersApi
             );
         }
 
-        $resourcePath = '/customers/{customer_id}/interest-records/';
+        $resourcePath = '/customers/{customer_id}/interest-records';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6029,7 +6029,7 @@ class CustomersApi
      * Add a property to a customer
      *
      * @param  \CareCloud\Model\CustomerIdPropertyrecordsBody $body body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -6048,7 +6048,7 @@ class CustomersApi
      * Add a property to a customer
      *
      * @param  \CareCloud\Model\CustomerIdPropertyrecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -6165,7 +6165,7 @@ class CustomersApi
      * Add a property to a customer
      *
      * @param  \CareCloud\Model\CustomerIdPropertyrecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -6187,7 +6187,7 @@ class CustomersApi
      * Add a property to a customer
      *
      * @param  \CareCloud\Model\CustomerIdPropertyrecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -6239,7 +6239,7 @@ class CustomersApi
      * Create request for operation 'postSubCustomerProperties'
      *
      * @param  \CareCloud\Model\CustomerIdPropertyrecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -6362,7 +6362,7 @@ class CustomersApi
      * Add a source to a customer
      *
      * @param  \CareCloud\Model\CustomerIdCustomersourcerecordsBody $body body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -6381,7 +6381,7 @@ class CustomersApi
      * Add a source to a customer
      *
      * @param  \CareCloud\Model\CustomerIdCustomersourcerecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -6498,7 +6498,7 @@ class CustomersApi
      * Add a source to a customer
      *
      * @param  \CareCloud\Model\CustomerIdCustomersourcerecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -6520,7 +6520,7 @@ class CustomersApi
      * Add a source to a customer
      *
      * @param  \CareCloud\Model\CustomerIdCustomersourcerecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -6572,7 +6572,7 @@ class CustomersApi
      * Create request for operation 'postSubCustomerSource'
      *
      * @param  \CareCloud\Model\CustomerIdCustomersourcerecordsBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -6695,7 +6695,7 @@ class CustomersApi
      * Update a customer
      *
      * @param  \CareCloud\Model\CustomersCustomerIdBody $body body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -6713,7 +6713,7 @@ class CustomersApi
      * Update a customer
      *
      * @param  \CareCloud\Model\CustomersCustomerIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -6808,7 +6808,7 @@ class CustomersApi
      * Update a customer
      *
      * @param  \CareCloud\Model\CustomersCustomerIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -6830,7 +6830,7 @@ class CustomersApi
      * Update a customer
      *
      * @param  \CareCloud\Model\CustomersCustomerIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -6868,7 +6868,7 @@ class CustomersApi
      * Create request for operation 'putCustomer'
      *
      * @param  \CareCloud\Model\CustomersCustomerIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -6991,7 +6991,7 @@ class CustomersApi
      * Update an interest record on an account
      *
      * @param  \CareCloud\Model\InterestrecordsInterestRecordIdBody $body body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -7010,7 +7010,7 @@ class CustomersApi
      * Update an interest record on an account
      *
      * @param  \CareCloud\Model\InterestrecordsInterestRecordIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -7106,7 +7106,7 @@ class CustomersApi
      * Update an interest record on an account
      *
      * @param  \CareCloud\Model\InterestrecordsInterestRecordIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -7129,7 +7129,7 @@ class CustomersApi
      * Update an interest record on an account
      *
      * @param  \CareCloud\Model\InterestrecordsInterestRecordIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -7168,7 +7168,7 @@ class CustomersApi
      * Create request for operation 'putSubCustomerInterest'
      *
      * @param  \CareCloud\Model\InterestrecordsInterestRecordIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id for the interest record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -7306,7 +7306,7 @@ class CustomersApi
      * Update a property on an account
      *
      * @param  \CareCloud\Model\PropertyrecordsPropertyRecordIdBody $body body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -7325,7 +7325,7 @@ class CustomersApi
      * Update a property on an account
      *
      * @param  \CareCloud\Model\PropertyrecordsPropertyRecordIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -7421,7 +7421,7 @@ class CustomersApi
      * Update a property on an account
      *
      * @param  \CareCloud\Model\PropertyrecordsPropertyRecordIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -7444,7 +7444,7 @@ class CustomersApi
      * Update a property on an account
      *
      * @param  \CareCloud\Model\PropertyrecordsPropertyRecordIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -7483,7 +7483,7 @@ class CustomersApi
      * Create request for operation 'putSubCustomerProperty'
      *
      * @param  \CareCloud\Model\PropertyrecordsPropertyRecordIdBody $body (required)
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id for the property record (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *

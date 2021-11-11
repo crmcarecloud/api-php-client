@@ -93,7 +93,7 @@ class TokensApi
      *
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $external_application_id Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications) (required)
-     * @param  string $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
+     * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -113,7 +113,7 @@ class TokensApi
      *
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $external_application_id Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications) (required)
-     * @param  string $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
+     * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -231,7 +231,7 @@ class TokensApi
      *
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $external_application_id Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications) (required)
-     * @param  string $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
+     * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -254,7 +254,7 @@ class TokensApi
      *
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $external_application_id Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications) (required)
-     * @param  string $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
+     * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -307,7 +307,7 @@ class TokensApi
      *
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $external_application_id Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications) (required)
-     * @param  string $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
+     * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException

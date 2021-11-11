@@ -71,7 +71,7 @@ class ProductReservation implements ModelInterface, ArrayAccess
 'product_reservation_items' => '\CareCloud\Model\ProductReservationItem[]',
 'external_purchase_id' => 'string',
 'utm' => '\CareCloud\Model\UTM',
-'actual_state' => 'string',
+'actual_state' => 'int',
 'states' => 'string[]',
 'comments' => 'string[]',
 'last_change' => 'string',
@@ -243,15 +243,15 @@ class ProductReservation implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const ACTUAL_STATE__0 = '0';
-const ACTUAL_STATE__1 = '1';
-const ACTUAL_STATE__2 = '2';
-const ACTUAL_STATE__2_3 = '2';
-const ACTUAL_STATE__4 = '4';
-const ACTUAL_STATE__5 = '5';
-const ACTUAL_STATE__6 = '6';
-const ACTUAL_STATE__7 = '7';
-const ACTUAL_STATE__8 = '8';
+    const ACTUAL_STATE_0 = 0;
+const ACTUAL_STATE_1 = 1;
+const ACTUAL_STATE_2 = 2;
+const ACTUAL_STATE_2_3 = 2;
+const ACTUAL_STATE_4 = 4;
+const ACTUAL_STATE_5 = 5;
+const ACTUAL_STATE_6 = 6;
+const ACTUAL_STATE_7 = 7;
+const ACTUAL_STATE_8 = 8;
 const STATE_0 = 0;
 const STATE_1 = 1;
 const STATE_2 = 2;
@@ -264,15 +264,15 @@ const STATE_2 = 2;
     public function getActualStateAllowableValues()
     {
         return [
-            self::ACTUAL_STATE__0,
-self::ACTUAL_STATE__1,
-self::ACTUAL_STATE__2,
-self::ACTUAL_STATE__2_3,
-self::ACTUAL_STATE__4,
-self::ACTUAL_STATE__5,
-self::ACTUAL_STATE__6,
-self::ACTUAL_STATE__7,
-self::ACTUAL_STATE__8,        ];
+            self::ACTUAL_STATE_0,
+self::ACTUAL_STATE_1,
+self::ACTUAL_STATE_2,
+self::ACTUAL_STATE_2_3,
+self::ACTUAL_STATE_4,
+self::ACTUAL_STATE_5,
+self::ACTUAL_STATE_6,
+self::ACTUAL_STATE_7,
+self::ACTUAL_STATE_8,        ];
     }
     /**
      * Gets allowable values of the enum
@@ -711,7 +711,7 @@ self::STATE_2,        ];
     /**
      * Gets actual_state
      *
-     * @return string
+     * @return int
      */
     public function getActualState()
     {
@@ -721,7 +721,7 @@ self::STATE_2,        ];
     /**
      * Sets actual_state
      *
-     * @param string $actual_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
+     * @param int $actual_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
      *
      * @return $this
      */

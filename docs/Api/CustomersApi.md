@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getCustomer**](CustomersApi.md#getcustomer) | **GET** /customers/{customer_id} | Get information about a customer
 [**getCustomers**](CustomersApi.md#getcustomers) | **GET** /customers | Get all customers
 [**getSubCustomerCards**](CustomersApi.md#getsubcustomercards) | **GET** /customers/{customer_id}/cards | Get all customer cards
-[**getSubCustomerInterests**](CustomersApi.md#getsubcustomerinterests) | **GET** /customers/{customer_id}/interest-records/ | Get a collection of interest records
+[**getSubCustomerInterests**](CustomersApi.md#getsubcustomerinterests) | **GET** /customers/{customer_id}/interest-records | Get a collection of interest records
 [**getSubCustomerPints**](CustomersApi.md#getsubcustomerpints) | **GET** /customers/{customer_id}/points | Get all customer point records
 [**getSubCustomerProperties**](CustomersApi.md#getsubcustomerproperties) | **GET** /customers/{customer_id}/property-records | Get a collection of properties
 [**getSubCustomerPurchases**](CustomersApi.md#getsubcustomerpurchases) | **GET** /customers/{customer_id}/purchases | Get all customer purchases
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**getSubCustomerStatus**](CustomersApi.md#getsubcustomerstatus) | **GET** /customers/{customer_id}/status-records | Get a collection of status records
 [**getSubCustomerVouchers**](CustomersApi.md#getsubcustomervouchers) | **GET** /customers/{customer_id}/vouchers | Get all customer vouchers
 [**postCustomer**](CustomersApi.md#postcustomer) | **POST** /customers | Create a new customer
-[**postSubCustomerInterest**](CustomersApi.md#postsubcustomerinterest) | **POST** /customers/{customer_id}/interest-records/ | Add an interest record to a customer
+[**postSubCustomerInterest**](CustomersApi.md#postsubcustomerinterest) | **POST** /customers/{customer_id}/interest-records | Add an interest record to a customer
 [**postSubCustomerProperties**](CustomersApi.md#postsubcustomerproperties) | **POST** /customers/{customer_id}/property-records | Add a property to a customer
 [**postSubCustomerSource**](CustomersApi.md#postsubcustomersource) | **POST** /customers/{customer_id}/customer-source-records | Add a source to a customer
 [**putCustomer**](CustomersApi.md#putcustomer) | **PUT** /customers/{customer_id} | Update a customer
@@ -53,7 +53,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $interest_record_id = "interest_record_id_example"; // string | The unique id for the interest record
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -69,7 +69,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **interest_record_id** | **string**| The unique id for the interest record |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
@@ -114,7 +114,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $property_record_id = "property_record_id_example"; // string | The unique id for the property record
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -130,7 +130,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **property_record_id** | **string**| The unique id for the property record |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
@@ -175,7 +175,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -191,7 +191,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -314,7 +314,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
@@ -337,7 +337,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **customer_id** | **string**| The unique id for the customer | [optional]
+ **customer_id** | **string**| The unique id of the customer | [optional]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
@@ -387,7 +387,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -403,7 +403,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -447,7 +447,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
@@ -468,7 +468,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
@@ -517,7 +517,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -533,7 +533,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -577,7 +577,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
@@ -599,7 +599,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
@@ -649,7 +649,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
@@ -670,7 +670,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
@@ -719,7 +719,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
@@ -749,7 +749,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
@@ -807,7 +807,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -823,7 +823,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -867,7 +867,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
@@ -887,7 +887,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
@@ -935,7 +935,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
@@ -956,7 +956,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
@@ -1005,7 +1005,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
@@ -1028,7 +1028,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
@@ -1140,7 +1140,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     $config
 );
 $body = new \CareCloud\Model\CustomerIdInterestrecordsBody(); // \CareCloud\Model\CustomerIdInterestrecordsBody | 
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -1157,7 +1157,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CareCloud\Model\CustomerIdInterestrecordsBody**](../Model/CustomerIdInterestrecordsBody.md)|  |
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -1202,7 +1202,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     $config
 );
 $body = new \CareCloud\Model\CustomerIdPropertyrecordsBody(); // \CareCloud\Model\CustomerIdPropertyrecordsBody | 
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -1219,7 +1219,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CareCloud\Model\CustomerIdPropertyrecordsBody**](../Model/CustomerIdPropertyrecordsBody.md)|  |
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -1264,7 +1264,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     $config
 );
 $body = new \CareCloud\Model\CustomerIdCustomersourcerecordsBody(); // \CareCloud\Model\CustomerIdCustomersourcerecordsBody | 
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -1281,7 +1281,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CareCloud\Model\CustomerIdCustomersourcerecordsBody**](../Model/CustomerIdCustomersourcerecordsBody.md)|  |
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -1326,7 +1326,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     $config
 );
 $body = new \CareCloud\Model\CustomersCustomerIdBody(); // \CareCloud\Model\CustomersCustomerIdBody | 
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -1342,7 +1342,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CareCloud\Model\CustomersCustomerIdBody**](../Model/CustomersCustomerIdBody.md)|  |
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -1387,7 +1387,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     $config
 );
 $body = new \CareCloud\Model\InterestrecordsInterestRecordIdBody(); // \CareCloud\Model\InterestrecordsInterestRecordIdBody | 
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $interest_record_id = "interest_record_id_example"; // string | The unique id for the interest record
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -1404,7 +1404,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CareCloud\Model\InterestrecordsInterestRecordIdBody**](../Model/InterestrecordsInterestRecordIdBody.md)|  |
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **interest_record_id** | **string**| The unique id for the interest record |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
@@ -1450,7 +1450,7 @@ $apiInstance = new CareCloud\Api\CustomersApi(
     $config
 );
 $body = new \CareCloud\Model\PropertyrecordsPropertyRecordIdBody(); // \CareCloud\Model\PropertyrecordsPropertyRecordIdBody | 
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $property_record_id = "property_record_id_example"; // string | The unique id for the property record
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -1467,7 +1467,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CareCloud\Model\PropertyrecordsPropertyRecordIdBody**](../Model/PropertyrecordsPropertyRecordIdBody.md)|  |
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **property_record_id** | **string**| The unique id for the property record |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 

@@ -62,8 +62,8 @@ class MessageTemplate implements ModelInterface, ArrayAccess
 'subject' => 'string',
 'sender' => 'string',
 'name' => 'string',
-'message_template_group_id' => 'string',
-'comunication_channel_id' => 'string',
+'message_template_group_id' => 'int',
+'comunication_channel_id' => 'int',
 'template_data' => '\CareCloud\Model\Parameter[]',
 'last_change' => 'string'    ];
 
@@ -193,13 +193,13 @@ class MessageTemplate implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const MESSAGE_TEMPLATE_GROUP_ID__1 = '1';
-const MESSAGE_TEMPLATE_GROUP_ID__2 = '2';
-const MESSAGE_TEMPLATE_GROUP_ID__3 = '3';
-const COMUNICATION_CHANNEL_ID__1 = '1';
-const COMUNICATION_CHANNEL_ID__2 = '2';
-const COMUNICATION_CHANNEL_ID__4 = '4';
-const COMUNICATION_CHANNEL_ID__5 = '5';
+    const MESSAGE_TEMPLATE_GROUP_ID_1 = 1;
+const MESSAGE_TEMPLATE_GROUP_ID_2 = 2;
+const MESSAGE_TEMPLATE_GROUP_ID_3 = 3;
+const COMUNICATION_CHANNEL_ID_1 = 1;
+const COMUNICATION_CHANNEL_ID_2 = 2;
+const COMUNICATION_CHANNEL_ID_4 = 4;
+const COMUNICATION_CHANNEL_ID_5 = 5;
 
     /**
      * Gets allowable values of the enum
@@ -209,9 +209,9 @@ const COMUNICATION_CHANNEL_ID__5 = '5';
     public function getMessageTemplateGroupIdAllowableValues()
     {
         return [
-            self::MESSAGE_TEMPLATE_GROUP_ID__1,
-self::MESSAGE_TEMPLATE_GROUP_ID__2,
-self::MESSAGE_TEMPLATE_GROUP_ID__3,        ];
+            self::MESSAGE_TEMPLATE_GROUP_ID_1,
+self::MESSAGE_TEMPLATE_GROUP_ID_2,
+self::MESSAGE_TEMPLATE_GROUP_ID_3,        ];
     }
     /**
      * Gets allowable values of the enum
@@ -221,10 +221,10 @@ self::MESSAGE_TEMPLATE_GROUP_ID__3,        ];
     public function getComunicationChannelIdAllowableValues()
     {
         return [
-            self::COMUNICATION_CHANNEL_ID__1,
-self::COMUNICATION_CHANNEL_ID__2,
-self::COMUNICATION_CHANNEL_ID__4,
-self::COMUNICATION_CHANNEL_ID__5,        ];
+            self::COMUNICATION_CHANNEL_ID_1,
+self::COMUNICATION_CHANNEL_ID_2,
+self::COMUNICATION_CHANNEL_ID_4,
+self::COMUNICATION_CHANNEL_ID_5,        ];
     }
 
     /**
@@ -431,7 +431,7 @@ self::COMUNICATION_CHANNEL_ID__5,        ];
     /**
      * Gets message_template_group_id
      *
-     * @return string
+     * @return int
      */
     public function getMessageTemplateGroupId()
     {
@@ -441,7 +441,7 @@ self::COMUNICATION_CHANNEL_ID__5,        ];
     /**
      * Sets message_template_group_id
      *
-     * @param string $message_template_group_id The unique id of the message template group. *Possible values are: 1 - newsletter template / 2- system template(registration message, order summary message, etc.) / 3 - transactional communication(for hotel, traveling,...)*
+     * @param int $message_template_group_id The unique id of the message template group. *Possible values are: 1 - newsletter template / 2- system template(registration message, order summary message, etc.) / 3 - transactional communication(for hotel, traveling,...)*
      *
      * @return $this
      */
@@ -464,7 +464,7 @@ self::COMUNICATION_CHANNEL_ID__5,        ];
     /**
      * Gets comunication_channel_id
      *
-     * @return string
+     * @return int
      */
     public function getComunicationChannelId()
     {
@@ -474,7 +474,7 @@ self::COMUNICATION_CHANNEL_ID__5,        ];
     /**
      * Sets comunication_channel_id
      *
-     * @param string $comunication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
+     * @param int $comunication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
      *
      * @return $this
      */

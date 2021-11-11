@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **validity_period** | **string** | Definition of the status validity period | 
 **collection_points** | **bool** | Enable / disable points collection | 
 **payment_points** | **bool** | Enable / disable payment by points | 
-**qualification_type** | **int** | The status achieving principle *(1 - after creation of the account / 2 - manually / 3 - after the defined conditions are met)* | 
+**qualification_type** | **int** | The status achieving principle *(0 - after creation of the account / 1 - manually / 2 - after the defined conditions are met)* | 
 **discount** | **int** | The basic loyalty discount | 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 

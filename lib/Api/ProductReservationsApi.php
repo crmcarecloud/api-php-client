@@ -416,9 +416,9 @@ class ProductReservationsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $reservation_code Code of the reservation (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id of the store in CareCloud (optional)
-     * @param  string $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  int $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -441,9 +441,9 @@ class ProductReservationsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $reservation_code Code of the reservation (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id of the store in CareCloud (optional)
-     * @param  string $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  int $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
      *
      * @throws \CareCloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -564,9 +564,9 @@ class ProductReservationsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $reservation_code Code of the reservation (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id of the store in CareCloud (optional)
-     * @param  string $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  int $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -592,9 +592,9 @@ class ProductReservationsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $reservation_code Code of the reservation (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id of the store in CareCloud (optional)
-     * @param  string $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  int $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -650,9 +650,9 @@ class ProductReservationsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $reservation_code Code of the reservation (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id of the store in CareCloud (optional)
-     * @param  string $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  int $reservation_state Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

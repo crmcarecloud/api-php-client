@@ -146,7 +146,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getCustomer**](docs/Api/CustomersApi.md#getcustomer) | **GET** /customers/{customer_id} | Get information about a customer
 *CustomersApi* | [**getCustomers**](docs/Api/CustomersApi.md#getcustomers) | **GET** /customers | Get all customers
 *CustomersApi* | [**getSubCustomerCards**](docs/Api/CustomersApi.md#getsubcustomercards) | **GET** /customers/{customer_id}/cards | Get all customer cards
-*CustomersApi* | [**getSubCustomerInterests**](docs/Api/CustomersApi.md#getsubcustomerinterests) | **GET** /customers/{customer_id}/interest-records/ | Get a collection of interest records
+*CustomersApi* | [**getSubCustomerInterests**](docs/Api/CustomersApi.md#getsubcustomerinterests) | **GET** /customers/{customer_id}/interest-records | Get a collection of interest records
 *CustomersApi* | [**getSubCustomerPints**](docs/Api/CustomersApi.md#getsubcustomerpints) | **GET** /customers/{customer_id}/points | Get all customer point records
 *CustomersApi* | [**getSubCustomerProperties**](docs/Api/CustomersApi.md#getsubcustomerproperties) | **GET** /customers/{customer_id}/property-records | Get a collection of properties
 *CustomersApi* | [**getSubCustomerPurchases**](docs/Api/CustomersApi.md#getsubcustomerpurchases) | **GET** /customers/{customer_id}/purchases | Get all customer purchases
@@ -157,7 +157,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getSubCustomerStatus**](docs/Api/CustomersApi.md#getsubcustomerstatus) | **GET** /customers/{customer_id}/status-records | Get a collection of status records
 *CustomersApi* | [**getSubCustomerVouchers**](docs/Api/CustomersApi.md#getsubcustomervouchers) | **GET** /customers/{customer_id}/vouchers | Get all customer vouchers
 *CustomersApi* | [**postCustomer**](docs/Api/CustomersApi.md#postcustomer) | **POST** /customers | Create a new customer
-*CustomersApi* | [**postSubCustomerInterest**](docs/Api/CustomersApi.md#postsubcustomerinterest) | **POST** /customers/{customer_id}/interest-records/ | Add an interest record to a customer
+*CustomersApi* | [**postSubCustomerInterest**](docs/Api/CustomersApi.md#postsubcustomerinterest) | **POST** /customers/{customer_id}/interest-records | Add an interest record to a customer
 *CustomersApi* | [**postSubCustomerProperties**](docs/Api/CustomersApi.md#postsubcustomerproperties) | **POST** /customers/{customer_id}/property-records | Add a property to a customer
 *CustomersApi* | [**postSubCustomerSource**](docs/Api/CustomersApi.md#postsubcustomersource) | **POST** /customers/{customer_id}/customer-source-records | Add a source to a customer
 *CustomersApi* | [**putCustomer**](docs/Api/CustomersApi.md#putcustomer) | **PUT** /customers/{customer_id} | Update a customer

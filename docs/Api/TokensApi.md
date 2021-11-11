@@ -40,7 +40,7 @@ $apiInstance = new CareCloud\Api\TokensApi(
 );
 $token_id = "token_id_example"; // string | Client's application token
 $external_application_id = "external_application_id_example"; // string | Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications)
-$token_type = "1"; // string | Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric*
+$token_type = 1; // int | Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric*
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token_id** | **string**| Client&#x27;s application token |
  **external_application_id** | **string**| Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications) |
- **token_type** | **string**| Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* | [default to 1]
+ **token_type** | **int**| Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* | [default to 1]
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type

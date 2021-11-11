@@ -91,7 +91,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation for shopping cart
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -112,7 +112,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation for shopping cart
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -231,7 +231,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation for shopping cart
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -255,7 +255,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation for shopping cart
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -309,7 +309,7 @@ class RecommendationEngineApi
     /**
      * Create request for operation 'getRecommendationCartCombined'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -439,7 +439,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation with elimination for shopping cart
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -459,7 +459,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation with elimination for shopping cart
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -577,7 +577,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation with elimination for shopping cart
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -600,7 +600,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation with elimination for shopping cart
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -653,7 +653,7 @@ class RecommendationEngineApi
     /**
      * Create request for operation 'getRecommendationCartEliminate'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
@@ -1117,7 +1117,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
@@ -1137,7 +1137,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
@@ -1255,7 +1255,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
@@ -1278,7 +1278,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
@@ -1331,7 +1331,7 @@ class RecommendationEngineApi
     /**
      * Create request for operation 'getRecommendationProductCombined'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
@@ -1453,7 +1453,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation with an elimination
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      *
@@ -1472,7 +1472,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation with an elimination
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      *
@@ -1589,7 +1589,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation with an elimination
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      *
@@ -1611,7 +1611,7 @@ class RecommendationEngineApi
      *
      * Get the best recommendation with an elimination
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      *
@@ -1663,7 +1663,7 @@ class RecommendationEngineApi
     /**
      * Create request for operation 'getRecommendationProductEliminate'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      *
@@ -1780,7 +1780,7 @@ class RecommendationEngineApi
      *
      * Order products for the best recommendation.
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
@@ -1800,7 +1800,7 @@ class RecommendationEngineApi
      *
      * Order products for the best recommendation.
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
@@ -1918,7 +1918,7 @@ class RecommendationEngineApi
      *
      * Order products for the best recommendation.
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
@@ -1941,7 +1941,7 @@ class RecommendationEngineApi
      *
      * Order products for the best recommendation.
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)
@@ -1994,7 +1994,7 @@ class RecommendationEngineApi
     /**
      * Create request for operation 'getRecommendationProductOrder'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string[] $product_id_list List of the product ids. Initial products for the recommendation engine. (optional)
      * @param  int $count The number of records to return. (optional, default to 100)

@@ -75,7 +75,7 @@ class Skipass implements ModelInterface, ArrayAccess
 'valid_from' => 'string',
 'valid_to' => 'string',
 'last_change' => 'string',
-'state' => 'string'    ];
+'state' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -246,8 +246,8 @@ class Skipass implements ModelInterface, ArrayAccess
     const SKIPASS_TYPE_ID_0 = 0;
 const SKIPASS_TYPE_ID_1 = 1;
 const SKIPASS_TYPE_ID_2 = 2;
-const STATE__0 = '0';
-const STATE__1 = '1';
+const STATE_0 = 0;
+const STATE_1 = 1;
 
     /**
      * Gets allowable values of the enum
@@ -269,8 +269,8 @@ self::SKIPASS_TYPE_ID_2,        ];
     public function getStateAllowableValues()
     {
         return [
-            self::STATE__0,
-self::STATE__1,        ];
+            self::STATE_0,
+self::STATE_1,        ];
     }
 
     /**
@@ -805,7 +805,7 @@ self::STATE__1,        ];
     /**
      * Gets state
      *
-     * @return string
+     * @return int
      */
     public function getState()
     {
@@ -815,7 +815,7 @@ self::STATE__1,        ];
     /**
      * Sets state
      *
-     * @param string $state State of the event type *Possible values are: 0 - cancelled / 1- active*
+     * @param int $state State of the event type *Possible values are: 0 - cancelled / 1- active*
      *
      * @return $this
      */

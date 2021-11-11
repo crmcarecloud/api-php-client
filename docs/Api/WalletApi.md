@@ -36,7 +36,7 @@ $apiInstance = new CareCloud\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval *(YYYY-MM-DD)*
 $date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval *(YYYY-MM-DD)*
@@ -54,7 +54,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **date_from** | **string**| Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* | [optional]
  **date_to** | **string**| Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* | [optional]
@@ -100,7 +100,7 @@ $apiInstance = new CareCloud\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -116,7 +116,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -160,7 +160,7 @@ $apiInstance = new CareCloud\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval *(YYYY-MM-DD)*
 $date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval *(YYYY-MM-DD)*
@@ -178,7 +178,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **date_from** | **string**| Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* | [optional]
  **date_to** | **string**| Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* | [optional]
@@ -224,7 +224,7 @@ $apiInstance = new CareCloud\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -240,7 +240,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -284,7 +284,7 @@ $apiInstance = new CareCloud\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval *(YYYY-MM-DD)*
 $date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval *(YYYY-MM-DD)*
@@ -302,7 +302,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **date_from** | **string**| Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* | [optional]
  **date_to** | **string**| Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* | [optional]

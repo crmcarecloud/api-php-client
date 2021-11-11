@@ -106,7 +106,7 @@ $name = "name_example"; // string | name string Name of the charged skipass (pro
 $resort_name = "resort_name_example"; // string | string Name of the resort where is a skipass charged
 $customer_category_name = "customer_category_name_example"; // string | Name of the customer category
 $card_id = "card_id_example"; // string | Id of card used for charge skipasses
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $skipass_type_id = 56; // int | Type of the skipass *Possible values are: season ticket - 0/ one day ticket -1/ multiple day ticket - 2*
 $state = 56; // int | State of the skipass *Possible values are: canceled skipass - 0 / valid skipass -1*
 $external_skipass_id = "external_skipass_id_example"; // string | External id of skipass. Structure can be different depends of POS system, that created skipass
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
  **resort_name** | **string**| string Name of the resort where is a skipass charged | [optional]
  **customer_category_name** | **string**| Name of the customer category | [optional]
  **card_id** | **string**| Id of card used for charge skipasses | [optional]
- **customer_id** | **string**| The unique id for the customer | [optional]
+ **customer_id** | **string**| The unique id of the customer | [optional]
  **skipass_type_id** | **int**| Type of the skipass *Possible values are: season ticket - 0/ one day ticket -1/ multiple day ticket - 2* | [optional]
  **state** | **int**| State of the skipass *Possible values are: canceled skipass - 0 / valid skipass -1* | [optional]
  **external_skipass_id** | **string**| External id of skipass. Structure can be different depends of POS system, that created skipass | [optional]

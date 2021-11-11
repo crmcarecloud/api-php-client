@@ -101,9 +101,9 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $reservation_code = "reservation_code_example"; // string | Code of the reservation
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $store_id = "store_id_example"; // string | The unique id of the store in CareCloud
-$reservation_state = "reservation_state_example"; // string | Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
+$reservation_state = 56; // int | Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
 
 try {
     $result = $apiInstance->getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state);
@@ -124,9 +124,9 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **reservation_code** | **string**| Code of the reservation | [optional]
- **customer_id** | **string**| The unique id for the customer | [optional]
+ **customer_id** | **string**| The unique id of the customer | [optional]
  **store_id** | **string**| The unique id of the store in CareCloud | [optional]
- **reservation_state** | **string**| Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional]
+ **reservation_state** | **int**| Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional]
 
 ### Return type
 

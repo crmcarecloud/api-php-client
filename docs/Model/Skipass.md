@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **valid_from** | **string** | Date of the first day when customer can use skipass *(YYYY-MM-DD)* | [optional] 
 **valid_to** | **string** | Date of the last day when customer can use skipass *(YYYY-MM-DD)* | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
-**state** | **string** | State of the event type *Possible values are: 0 - cancelled / 1- active* | 
+**state** | **int** | State of the event type *Possible values are: 0 - cancelled / 1- active* | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

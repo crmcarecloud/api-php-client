@@ -2274,7 +2274,7 @@ class RewardsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id for the store where customer can apply the reward (optional)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -2298,7 +2298,7 @@ class RewardsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id for the store where customer can apply the reward (optional)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -2420,7 +2420,7 @@ class RewardsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id for the store where customer can apply the reward (optional)
      *
      * @throws \InvalidArgumentException
@@ -2447,7 +2447,7 @@ class RewardsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id for the store where customer can apply the reward (optional)
      *
      * @throws \InvalidArgumentException
@@ -2504,7 +2504,7 @@ class RewardsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id for the store where customer can apply the reward (optional)
      *
      * @throws \InvalidArgumentException

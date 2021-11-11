@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message_id** | **string** | The unique id of the message | [optional] 
-**status** | **string** | The status id of the message. *Possible values are: 0 - message was not send / 1- message was send successfully / -1 message was not recieved (it was returned) / 2 - an error occured while sending / 4 - customer has no agreements (GDPR)* | [optional] 
+**status** | **int** | The status id of the message. *Possible values are: 0 - message was not send / 1- message was send successfully / -1 message was not recieved (it was returned) / 2 - an error occured while sending / 4 - customer has no agreements (GDPR)* | [optional] 
 **message_template_id** | **string** | The unique id of the message_template | 
 **customer_id** | **string** | The unique id for the card holder. | 
 **contact** | **string** | Email address or phone number of customer in case of send message to different contact than customer has in database | [optional] 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **opened_time** | **string** | Date and time when message was opened by recipient *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **mail_client_user_agent** | **string** | User agent of the mail client application where message was opened | [optional] 
 **mail_client_language** | **string** | Language of the mail client application where message was opened | [optional] 
-**communication_channel_id** | **string** | The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* | 
+**communication_channel_id** | **int** | The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* | 
 **message_data** | [**\CareCloud\Model\Parameter[]**](Parameter.md) | Message data could contains array of customized paramteres. They may have influence on message display or add values to message | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 

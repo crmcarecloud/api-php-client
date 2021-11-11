@@ -58,7 +58,7 @@ class Message implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'message_id' => 'string',
-'status' => 'string',
+'status' => 'int',
 'message_template_id' => 'string',
 'customer_id' => 'string',
 'contact' => 'string',
@@ -67,7 +67,7 @@ class Message implements ModelInterface, ArrayAccess
 'opened_time' => 'string',
 'mail_client_user_agent' => 'string',
 'mail_client_language' => 'string',
-'communication_channel_id' => 'string',
+'communication_channel_id' => 'int',
 'message_data' => '\CareCloud\Model\Parameter[]',
 'last_change' => 'string'    ];
 
@@ -213,15 +213,15 @@ class Message implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const STATUS__0 = '0';
-const STATUS__1 = '1';
-const STATUS__1_2 = '-1';
-const STATUS__2 = '2';
-const STATUS__4 = '4';
-const COMMUNICATION_CHANNEL_ID__1 = '1';
-const COMMUNICATION_CHANNEL_ID__2 = '2';
-const COMMUNICATION_CHANNEL_ID__4 = '4';
-const COMMUNICATION_CHANNEL_ID__5 = '5';
+    const STATUS_0 = 0;
+const STATUS_1 = 1;
+const STATUS_MINUS_1 = -1;
+const STATUS_2 = 2;
+const STATUS_4 = 4;
+const COMMUNICATION_CHANNEL_ID_1 = 1;
+const COMMUNICATION_CHANNEL_ID_2 = 2;
+const COMMUNICATION_CHANNEL_ID_4 = 4;
+const COMMUNICATION_CHANNEL_ID_5 = 5;
 
     /**
      * Gets allowable values of the enum
@@ -231,11 +231,11 @@ const COMMUNICATION_CHANNEL_ID__5 = '5';
     public function getStatusAllowableValues()
     {
         return [
-            self::STATUS__0,
-self::STATUS__1,
-self::STATUS__1_2,
-self::STATUS__2,
-self::STATUS__4,        ];
+            self::STATUS_0,
+self::STATUS_1,
+self::STATUS_MINUS_1,
+self::STATUS_2,
+self::STATUS_4,        ];
     }
     /**
      * Gets allowable values of the enum
@@ -245,10 +245,10 @@ self::STATUS__4,        ];
     public function getCommunicationChannelIdAllowableValues()
     {
         return [
-            self::COMMUNICATION_CHANNEL_ID__1,
-self::COMMUNICATION_CHANNEL_ID__2,
-self::COMMUNICATION_CHANNEL_ID__4,
-self::COMMUNICATION_CHANNEL_ID__5,        ];
+            self::COMMUNICATION_CHANNEL_ID_1,
+self::COMMUNICATION_CHANNEL_ID_2,
+self::COMMUNICATION_CHANNEL_ID_4,
+self::COMMUNICATION_CHANNEL_ID_5,        ];
     }
 
     /**
@@ -357,7 +357,7 @@ self::COMMUNICATION_CHANNEL_ID__5,        ];
     /**
      * Gets status
      *
-     * @return string
+     * @return int
      */
     public function getStatus()
     {
@@ -367,7 +367,7 @@ self::COMMUNICATION_CHANNEL_ID__5,        ];
     /**
      * Sets status
      *
-     * @param string $status The status id of the message. *Possible values are: 0 - message was not send / 1- message was send successfully / -1 message was not recieved (it was returned) / 2 - an error occured while sending / 4 - customer has no agreements (GDPR)*
+     * @param int $status The status id of the message. *Possible values are: 0 - message was not send / 1- message was send successfully / -1 message was not recieved (it was returned) / 2 - an error occured while sending / 4 - customer has no agreements (GDPR)*
      *
      * @return $this
      */
@@ -582,7 +582,7 @@ self::COMMUNICATION_CHANNEL_ID__5,        ];
     /**
      * Gets communication_channel_id
      *
-     * @return string
+     * @return int
      */
     public function getCommunicationChannelId()
     {
@@ -592,7 +592,7 @@ self::COMMUNICATION_CHANNEL_ID__5,        ];
     /**
      * Sets communication_channel_id
      *
-     * @param string $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
+     * @param int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
      *
      * @return $this
      */

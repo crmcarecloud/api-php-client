@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **product_reservation_items** | [**\CareCloud\Model\ProductReservationItem[]**](ProductReservationItem.md) | List of the Product Reservation Items | [optional] 
 **external_purchase_id** | **string** | The unique external id of the purchase | [optional] 
 **utm** | [**\CareCloud\Model\UTM**](UTM.md) |  | [optional] 
-**actual_state** | **string** | Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional] 
+**actual_state** | **int** | Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional] 
 **states** | **string[]** | History of the state values. States are sorted in descending order by time | [optional] 
 **comments** | **string[]** | Reservation comments. Comments are sorted in descending order by time | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 

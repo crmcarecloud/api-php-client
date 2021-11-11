@@ -91,7 +91,7 @@ class WalletApi
      *
      * Get credits overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -111,7 +111,7 @@ class WalletApi
      *
      * Get credits overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -229,7 +229,7 @@ class WalletApi
      *
      * Get credits overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -252,7 +252,7 @@ class WalletApi
      *
      * Get credits overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -305,7 +305,7 @@ class WalletApi
     /**
      * Create request for operation 'getWalletCredits'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -424,7 +424,7 @@ class WalletApi
      *
      * Get credits expiration overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -442,7 +442,7 @@ class WalletApi
      *
      * Get credits expiration overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -558,7 +558,7 @@ class WalletApi
      *
      * Get credits expiration overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -579,7 +579,7 @@ class WalletApi
      *
      * Get credits expiration overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -630,7 +630,7 @@ class WalletApi
     /**
      * Create request for operation 'getWalletCreditsExpiration'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -739,7 +739,7 @@ class WalletApi
      *
      * Get points overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -759,7 +759,7 @@ class WalletApi
      *
      * Get points overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -877,7 +877,7 @@ class WalletApi
      *
      * Get points overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -900,7 +900,7 @@ class WalletApi
      *
      * Get points overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -953,7 +953,7 @@ class WalletApi
     /**
      * Create request for operation 'getWalletPoints'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -1072,7 +1072,7 @@ class WalletApi
      *
      * Get points expiration overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -1090,7 +1090,7 @@ class WalletApi
      *
      * Get points expiration overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -1206,7 +1206,7 @@ class WalletApi
      *
      * Get points expiration overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1227,7 +1227,7 @@ class WalletApi
      *
      * Get points expiration overview
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1278,7 +1278,7 @@ class WalletApi
     /**
      * Create request for operation 'getWalletPointsExpiration'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1387,7 +1387,7 @@ class WalletApi
      *
      * Get sales turnover
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -1407,7 +1407,7 @@ class WalletApi
      *
      * Get sales turnover
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -1525,7 +1525,7 @@ class WalletApi
      *
      * Get sales turnover
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -1548,7 +1548,7 @@ class WalletApi
      *
      * Get sales turnover
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
@@ -1601,7 +1601,7 @@ class WalletApi
     /**
      * Create request for operation 'getWalletSalesTurnover'
      *
-     * @param  string $customer_id The unique id for the customer (required)
+     * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)

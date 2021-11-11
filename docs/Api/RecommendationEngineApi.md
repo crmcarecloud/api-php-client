@@ -37,7 +37,7 @@ $apiInstance = new CareCloud\Api\RecommendationEngineApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $cart_product_ids = array("cart_product_ids_example"); // string[] | List of the product ids in customer's shopping cart
 $product_id_list = array("product_id_list_example"); // string[] | List of the product ids. Initial products for the recommendation engine.
@@ -56,7 +56,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **cart_product_ids** | [**string[]**](../Model/string.md)| List of the product ids in customer&#x27;s shopping cart | [optional]
  **product_id_list** | [**string[]**](../Model/string.md)| List of the product ids. Initial products for the recommendation engine. | [optional]
@@ -103,7 +103,7 @@ $apiInstance = new CareCloud\Api\RecommendationEngineApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $cart_product_ids = array("cart_product_ids_example"); // string[] | List of the product ids in customer's shopping cart
 $product_id_list = array("product_id_list_example"); // string[] | List of the product ids. Initial products for the recommendation engine.
@@ -121,7 +121,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **cart_product_ids** | [**string[]**](../Model/string.md)| List of the product ids in customer&#x27;s shopping cart | [optional]
  **product_id_list** | [**string[]**](../Model/string.md)| List of the product ids. Initial products for the recommendation engine. | [optional]
@@ -231,7 +231,7 @@ $apiInstance = new CareCloud\Api\RecommendationEngineApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $product_id_list = array("product_id_list_example"); // string[] | List of the product ids. Initial products for the recommendation engine.
 $count = 100; // int | The number of records to return.
@@ -249,7 +249,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **product_id_list** | [**string[]**](../Model/string.md)| List of the product ids. Initial products for the recommendation engine. | [optional]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
@@ -295,7 +295,7 @@ $apiInstance = new CareCloud\Api\RecommendationEngineApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $product_id_list = array("product_id_list_example"); // string[] | List of the product ids. Initial products for the recommendation engine.
 
@@ -312,7 +312,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **product_id_list** | [**string[]**](../Model/string.md)| List of the product ids. Initial products for the recommendation engine. | [optional]
 
@@ -357,7 +357,7 @@ $apiInstance = new CareCloud\Api\RecommendationEngineApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $product_id_list = array("product_id_list_example"); // string[] | List of the product ids. Initial products for the recommendation engine.
 $count = 100; // int | The number of records to return.
@@ -375,7 +375,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id for the customer |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **product_id_list** | [**string[]**](../Model/string.md)| List of the product ids. Initial products for the recommendation engine. | [optional]
  **count** | **int**| The number of records to return. | [optional] [default to 100]

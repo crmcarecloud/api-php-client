@@ -761,7 +761,7 @@ class CardTypesApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -785,7 +785,7 @@ class CardTypesApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \CareCloud\ApiException on non-2xx response
@@ -907,7 +907,7 @@ class CardTypesApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \InvalidArgumentException
@@ -934,7 +934,7 @@ class CardTypesApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \InvalidArgumentException
@@ -991,7 +991,7 @@ class CardTypesApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \InvalidArgumentException

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **shipping_date** | **string** | Date of the order shipping. If the date is in future, order should be shipped in this date | [optional] 
 **program_ranking** | **int** | Rank of order in case of the series of multiple orders | [optional] 
 **payment_status** | **string** | Text representation of the payment status | [optional] 
+**invoice_document_url** | **string** | URL address with the invoice PDF | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

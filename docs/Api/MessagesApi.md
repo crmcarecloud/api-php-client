@@ -100,9 +100,9 @@ $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $contact = "contact_example"; // string | Email of phone number that was used as a contact in message
-$communication_channel_id = "communication_channel_id_example"; // string | The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
+$communication_channel_id = 56; // int | The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
 $send_time_from = "send_time_from_example"; // string | Start date and time of the time interval *YYYY-MM-DD HH:MM:SS*
 $send_time_to = "send_time_to_example"; // string | End date and time of the time interval *YYYY-MM-DD HH:MM:SS*
 
@@ -124,9 +124,9 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_id** | **string**| The unique id for the customer | [optional]
+ **customer_id** | **string**| The unique id of the customer | [optional]
  **contact** | **string**| Email of phone number that was used as a contact in message | [optional]
- **communication_channel_id** | **string**| The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* | [optional]
+ **communication_channel_id** | **int**| The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* | [optional]
  **send_time_from** | **string**| Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* | [optional]
  **send_time_to** | **string**| End date and time of the time interval *YYYY-MM-DD HH:MM:SS* | [optional]
 

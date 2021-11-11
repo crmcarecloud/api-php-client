@@ -96,7 +96,7 @@ class CustomerSourceRecordsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $external_id The unique external id. It may be id from the other system (optional)
      * @param  string $customer_source_id The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created (optional)
      *
@@ -120,7 +120,7 @@ class CustomerSourceRecordsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $external_id The unique external id. It may be id from the other system (optional)
      * @param  string $customer_source_id The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created (optional)
      *
@@ -242,7 +242,7 @@ class CustomerSourceRecordsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $external_id The unique external id. It may be id from the other system (optional)
      * @param  string $customer_source_id The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created (optional)
      *
@@ -269,7 +269,7 @@ class CustomerSourceRecordsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $external_id The unique external id. It may be id from the other system (optional)
      * @param  string $customer_source_id The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created (optional)
      *
@@ -326,7 +326,7 @@ class CustomerSourceRecordsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id for the customer (optional)
+     * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $external_id The unique external id. It may be id from the other system (optional)
      * @param  string $customer_source_id The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created (optional)
      *

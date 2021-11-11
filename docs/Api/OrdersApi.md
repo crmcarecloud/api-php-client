@@ -99,7 +99,7 @@ $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $state = 56; // int | State of the card *Possible values are: 0 - blocked / 1 - active*
 
 try {
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_id** | **string**| The unique id for the customer | [optional]
+ **customer_id** | **string**| The unique id of the customer | [optional]
  **state** | **int**| State of the card *Possible values are: 0 - blocked / 1 - active* | [optional]
 
 ### Return type

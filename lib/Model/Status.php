@@ -543,7 +543,7 @@ class Status implements ModelInterface, ArrayAccess
     /**
      * Sets qualification_type
      *
-     * @param int $qualification_type The status achieving principle *(1 - after creation of the account / 2 - manually / 3 - after the defined conditions are met)*
+     * @param int $qualification_type The status achieving principle *(0 - after creation of the account / 1 - manually / 2 - after the defined conditions are met)*
      *
      * @return $this
      */

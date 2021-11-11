@@ -102,7 +102,7 @@ $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $point_type_id = "point_type_id_example"; // string | The unique id of a point type
 $create_point_time_from = "create_point_time_from_example"; // string | Date and time from of the create point record *(YYYY-MM-DD HH:MM:SS)*
 $create_point_time_to = "create_point_time_to_example"; // string | Date and time to of the create point record *(YYYY-MM-DD HH:MM:SS)*
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_id** | **string**| The unique id for the customer | [optional]
+ **customer_id** | **string**| The unique id of the customer | [optional]
  **point_type_id** | **string**| The unique id of a point type | [optional]
  **create_point_time_from** | **string**| Date and time from of the create point record *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **create_point_time_to** | **string**| Date and time to of the create point record *(YYYY-MM-DD HH:MM:SS)* | [optional]
@@ -178,7 +178,7 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $store_id = "store_id_example"; // string | The unique id of the store in CareCloud
-$customer_id = "customer_id_example"; // string | The unique id for the customer
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $type_id = "type_id_example"; // string | Purchase type
 $payment_time_from = "payment_time_from_example"; // string | Date and time from of the purchase payment *(YYYY-MM-DD HH:MM:SS)*
 $payment_time_to = "payment_time_to_example"; // string | Date and time to of the purchase payment *(YYYY-MM-DD HH:MM:SS)*
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **store_id** | **string**| The unique id of the store in CareCloud | [optional]
- **customer_id** | **string**| The unique id for the customer | [optional]
+ **customer_id** | **string**| The unique id of the customer | [optional]
  **type_id** | **string**| Purchase type | [optional]
  **payment_time_from** | **string**| Date and time from of the purchase payment *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **payment_time_to** | **string**| Date and time to of the purchase payment *(YYYY-MM-DD HH:MM:SS)* | [optional]

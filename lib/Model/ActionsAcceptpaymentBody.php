@@ -284,7 +284,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id Id of store
+     * @param string $store_id Id of the store
      *
      * @return $this
      */
@@ -308,7 +308,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Sets cashdesk_number
      *
-     * @param string $cashdesk_number Number of the cashdesk in store
+     * @param string $cashdesk_number Number of the cashdesk in the store
      *
      * @return $this
      */
@@ -332,7 +332,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Sets card_number
      *
-     * @param string $card_number A customer's card number
+     * @param string $card_number The customer's card number
      *
      * @return $this
      */
