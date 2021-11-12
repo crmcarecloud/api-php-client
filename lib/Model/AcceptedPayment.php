@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * AcceptedPayment Class Doc Comment
  *
  * @category Class
  * @description The structure contains values for applied rewards, vouchers, discounts, and other benefits
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,15 +57,15 @@ class AcceptedPayment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'recommended_discounts' => '\CareCloud\Model\DiscountItem[]',
+        'recommended_discounts' => '\CrmCareCloud\Webservice\RestApi\Client\Model\DiscountItem[]',
 'credit_points' => 'float',
 'price_of_credit_points' => 'float',
 'credit' => 'float',
-'benefit_codes' => '\CareCloud\Model\PaymentVoucher[]',
+'benefit_codes' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[]',
 'credit_points_of_this_transaction' => 'float',
 'total_credit_points' => 'float',
 'total_credit' => 'float',
-'messages' => '\CareCloud\Model\CashierMessage[]'    ];
+'messages' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CashierMessage[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -248,7 +248,7 @@ class AcceptedPayment implements ModelInterface, ArrayAccess
     /**
      * Gets recommended_discounts
      *
-     * @return \CareCloud\Model\DiscountItem[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\DiscountItem[]
      */
     public function getRecommendedDiscounts()
     {
@@ -258,7 +258,7 @@ class AcceptedPayment implements ModelInterface, ArrayAccess
     /**
      * Sets recommended_discounts
      *
-     * @param \CareCloud\Model\DiscountItem[] $recommended_discounts The list of offered discounts excludes rewards (Loyalty Status Discount)
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\DiscountItem[] $recommended_discounts The list of offered discounts excludes rewards (Loyalty Status Discount)
      *
      * @return $this
      */
@@ -344,7 +344,7 @@ class AcceptedPayment implements ModelInterface, ArrayAccess
     /**
      * Gets benefit_codes
      *
-     * @return \CareCloud\Model\PaymentVoucher[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[]
      */
     public function getBenefitCodes()
     {
@@ -354,7 +354,7 @@ class AcceptedPayment implements ModelInterface, ArrayAccess
     /**
      * Sets benefit_codes
      *
-     * @param \CareCloud\Model\PaymentVoucher[] $benefit_codes List of applied vouchers on the current bill (includes the value of discount) independent of DiscountItem
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[] $benefit_codes List of applied vouchers on the current bill (includes the value of discount) independent of DiscountItem
      *
      * @return $this
      */
@@ -440,7 +440,7 @@ class AcceptedPayment implements ModelInterface, ArrayAccess
     /**
      * Gets messages
      *
-     * @return \CareCloud\Model\CashierMessage[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CashierMessage[]
      */
     public function getMessages()
     {
@@ -450,7 +450,7 @@ class AcceptedPayment implements ModelInterface, ArrayAccess
     /**
      * Sets messages
      *
-     * @param \CareCloud\Model\CashierMessage[] $messages A recommendation messages for the cashier in his language localization
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CashierMessage[] $messages A recommendation messages for the cashier in his language localization
      *
      * @return $this
      */

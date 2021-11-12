@@ -1,5 +1,5 @@
 {
-  "invokerPackage": "CareCloud",
+  "invokerPackage": "CrmCareCloud\\Webservice\\RestApi\\Client",
   "packagePath": ".",
   "gitUserId":  "crmcarecloud",
   "gitRepoId":  "api-php-client"

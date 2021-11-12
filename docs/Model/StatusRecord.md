@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **customer_id** | **string** | The unique id of the customer | 
 **valid_from** | **string** | Date and time of the record valid from *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **valid_to** | **string** | Date and time of the record valid to *(YYYY-MM-DD HH:MM:SS)* | [optional] 
-**purchase_conditions** | [**\CareCloud\Model\PurchaseConditions**](PurchaseConditions.md) |  | [optional] 
+**purchase_conditions** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseConditions**](PurchaseConditions.md) |  | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the reward *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 
 

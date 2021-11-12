@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Reward Class Doc Comment
  *
  * @category Class
  * @description Reward structure
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,8 +66,8 @@ class Reward implements ModelInterface, ArrayAccess
 'valid_time_from' => 'string',
 'valid_time_to' => 'string',
 'reward_group' => 'int',
-'store_list' => '\CareCloud\Model\Store[]',
-'additional_properties' => '\CareCloud\Model\PropertyRecord[]',
+'store_list' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]',
+'additional_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
 'priority' => 'int',
 'image_urls' => 'string[]',
 'reward_external_url' => 'string',
@@ -632,7 +632,7 @@ self::STATE_2,        ];
     /**
      * Gets store_list
      *
-     * @return \CareCloud\Model\Store[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Store[]
      */
     public function getStoreList()
     {
@@ -642,7 +642,7 @@ self::STATE_2,        ];
     /**
      * Sets store_list
      *
-     * @param \CareCloud\Model\Store[] $store_list List of the stores where the reward can be redeemed
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Store[] $store_list List of the stores where the reward can be redeemed
      *
      * @return $this
      */
@@ -656,7 +656,7 @@ self::STATE_2,        ];
     /**
      * Gets additional_properties
      *
-     * @return \CareCloud\Model\PropertyRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
      */
     public function getAdditionalProperties()
     {
@@ -666,7 +666,7 @@ self::STATE_2,        ];
     /**
      * Sets additional_properties
      *
-     * @param \CareCloud\Model\PropertyRecord[] $additional_properties Additional properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $additional_properties Additional properties
      *
      * @return $this
      */

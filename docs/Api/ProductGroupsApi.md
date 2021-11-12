@@ -1,4 +1,4 @@
-# CareCloud\ProductGroupsApi
+# CrmCareCloud\Webservice\RestApi\Client\ProductGroupsApi
 
 All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductGroups**](ProductGroupsApi.md#getproductgroups) | **GET** /product-groups | Get all product groups
 
 # **getProductGroup**
-> \CareCloud\Model\InlineResponse20068 getProductGroup($product_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068 getProductGroup($product_group_id, $accept_language)
 
 Get a product group
 
@@ -19,15 +19,15 @@ Get information about a specific product group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\ProductGroupsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductGroups**
-> \CareCloud\Model\InlineResponse20067 getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067 getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code)
 
 Get all product groups
 
@@ -79,15 +79,15 @@ Get a list of all product groups
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\ProductGroupsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
 
 ### Authorization
 

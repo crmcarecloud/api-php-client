@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse200118Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse200118Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'turnover' => '\CareCloud\Model\QualificationTurnover[]'    ];
+        'turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class InlineResponse200118Data implements ModelInterface, ArrayAccess
     /**
      * Gets turnover
      *
-     * @return \CareCloud\Model\QualificationTurnover[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
      */
     public function getTurnover()
     {
@@ -209,7 +209,7 @@ class InlineResponse200118Data implements ModelInterface, ArrayAccess
     /**
      * Sets turnover
      *
-     * @param \CareCloud\Model\QualificationTurnover[] $turnover List of all turnover by currency in time interval
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $turnover List of all turnover by currency in time interval
      *
      * @return $this
      */

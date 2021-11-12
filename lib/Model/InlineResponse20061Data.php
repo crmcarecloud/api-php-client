@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20061Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'point_types' => '\CareCloud\Model\PointType[]',
+        'point_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PointType[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
     /**
      * Gets point_types
      *
-     * @return \CareCloud\Model\PointType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PointType[]
      */
     public function getPointTypes()
     {
@@ -215,7 +215,7 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
     /**
      * Sets point_types
      *
-     * @param \CareCloud\Model\PointType[] $point_types List of the point types
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PointType[] $point_types List of the point types
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CampaignsBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class CampaignsBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'campaign' => '\CareCloud\Model\Campaign'    ];
+        'campaign' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Campaign'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class CampaignsBody implements ModelInterface, ArrayAccess
     /**
      * Gets campaign
      *
-     * @return \CareCloud\Model\Campaign
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Campaign
      */
     public function getCampaign()
     {
@@ -212,7 +212,7 @@ class CampaignsBody implements ModelInterface, ArrayAccess
     /**
      * Sets campaign
      *
-     * @param \CareCloud\Model\Campaign $campaign campaign
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Campaign $campaign campaign
      *
      * @return $this
      */

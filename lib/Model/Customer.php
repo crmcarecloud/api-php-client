@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Customer Class Doc Comment
  *
  * @category Class
  * @description Basic information about a customer
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class Customer implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'customer_id' => 'string',
-'personal_information' => '\CareCloud\Model\PersonalInformation',
+'personal_information' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PersonalInformation',
 'last_change' => 'string',
 'state' => 'int'    ];
 
@@ -268,7 +268,7 @@ self::STATE_2,        ];
     /**
      * Gets personal_information
      *
-     * @return \CareCloud\Model\PersonalInformation
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PersonalInformation
      */
     public function getPersonalInformation()
     {
@@ -278,7 +278,7 @@ self::STATE_2,        ];
     /**
      * Sets personal_information
      *
-     * @param \CareCloud\Model\PersonalInformation $personal_information personal_information
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PersonalInformation $personal_information personal_information
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20019Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20019Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'points' => '\CareCloud\Model\Point[]',
+        'points' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Point[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20019Data implements ModelInterface, ArrayAccess
     /**
      * Gets points
      *
-     * @return \CareCloud\Model\Point[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Point[]
      */
     public function getPoints()
     {
@@ -215,7 +215,7 @@ class InlineResponse20019Data implements ModelInterface, ArrayAccess
     /**
      * Sets points
      *
-     * @param \CareCloud\Model\Point[] $points List of the point records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Point[] $points List of the point records
      *
      * @return $this
      */

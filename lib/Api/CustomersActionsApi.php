@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Api;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CareCloud\ApiException;
-use CareCloud\Configuration;
-use CareCloud\HeaderSelector;
-use CareCloud\ObjectSerializer;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CustomersActionsApi Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -98,9 +98,9 @@ class CustomersActionsApi
      * @param  string $card_number Number of the customer card (optional)
      * @param  string $mode Mode of search results.  *Possible values are: strict - return only 100% matching results*  &lt;p class&#x3D;\&quot;warning\&quot;&gt;⚠️ Caution: Strict mode makes all path parameters as required. For succesful result you have to set all parameters.&lt;/p&gt; (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20028
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028
      */
     public function getCustomerSearch($accept_language = 'cs, en-gb;q=0.8', $first_name = null, $last_name = null, $birthdate = null, $card_number = null, $mode = null)
     {
@@ -120,13 +120,13 @@ class CustomersActionsApi
      * @param  string $card_number Number of the customer card (optional)
      * @param  string $mode Mode of search results.  *Possible values are: strict - return only 100% matching results*  &lt;p class&#x3D;\&quot;warning\&quot;&gt;⚠️ Caution: Strict mode makes all path parameters as required. For succesful result you have to set all parameters.&lt;/p&gt; (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20028, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerSearchWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $first_name = null, $last_name = null, $birthdate = null, $card_number = null, $mode = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20028';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
         $request = $this->getCustomerSearchRequest($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode);
 
         try {
@@ -178,7 +178,7 @@ class CustomersActionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20028',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class CustomersActionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class CustomersActionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class CustomersActionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class CustomersActionsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class CustomersActionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class CustomersActionsApi
      */
     public function getCustomerSearchAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $first_name = null, $last_name = null, $birthdate = null, $card_number = null, $mode = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20028';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
         $request = $this->getCustomerSearchRequest($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode);
 
         return $this->client
@@ -436,11 +436,11 @@ class CustomersActionsApi
      *
      * Customer credentials verification
      *
-     * @param  \CareCloud\Model\ActionsVerifycredentialsBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifycredentialsBody $body body (required)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2016
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016
      */
     public function postCustomerVerifyCredentials($body)
     {
@@ -453,15 +453,15 @@ class CustomersActionsApi
      *
      * Customer credentials verification
      *
-     * @param  \CareCloud\Model\ActionsVerifycredentialsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifycredentialsBody $body (required)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCustomerVerifyCredentialsWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postCustomerVerifyCredentialsRequest($body);
 
         try {
@@ -513,7 +513,7 @@ class CustomersActionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2016',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -521,7 +521,7 @@ class CustomersActionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -529,7 +529,7 @@ class CustomersActionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -537,7 +537,7 @@ class CustomersActionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class CustomersActionsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class CustomersActionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class CustomersActionsApi
      *
      * Customer credentials verification
      *
-     * @param  \CareCloud\Model\ActionsVerifycredentialsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifycredentialsBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -588,14 +588,14 @@ class CustomersActionsApi
      *
      * Customer credentials verification
      *
-     * @param  \CareCloud\Model\ActionsVerifycredentialsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifycredentialsBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postCustomerVerifyCredentialsAsyncWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postCustomerVerifyCredentialsRequest($body);
 
         return $this->client
@@ -638,7 +638,7 @@ class CustomersActionsApi
     /**
      * Create request for operation 'postCustomerVerifyCredentials'
      *
-     * @param  \CareCloud\Model\ActionsVerifycredentialsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifycredentialsBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -741,11 +741,11 @@ class CustomersActionsApi
      *
      * Social network credentials verification
      *
-     * @param  \CareCloud\Model\ActionsVerifysocialnetworkcredentialsBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifysocialnetworkcredentialsBody $body body (required)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2016
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016
      */
     public function postCustomerVerifySocialNetworkCredentials($body)
     {
@@ -758,15 +758,15 @@ class CustomersActionsApi
      *
      * Social network credentials verification
      *
-     * @param  \CareCloud\Model\ActionsVerifysocialnetworkcredentialsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifysocialnetworkcredentialsBody $body (required)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCustomerVerifySocialNetworkCredentialsWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postCustomerVerifySocialNetworkCredentialsRequest($body);
 
         try {
@@ -818,7 +818,7 @@ class CustomersActionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2016',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -826,7 +826,7 @@ class CustomersActionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -834,7 +834,7 @@ class CustomersActionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -842,7 +842,7 @@ class CustomersActionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -850,7 +850,7 @@ class CustomersActionsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -858,7 +858,7 @@ class CustomersActionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -873,7 +873,7 @@ class CustomersActionsApi
      *
      * Social network credentials verification
      *
-     * @param  \CareCloud\Model\ActionsVerifysocialnetworkcredentialsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifysocialnetworkcredentialsBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -893,14 +893,14 @@ class CustomersActionsApi
      *
      * Social network credentials verification
      *
-     * @param  \CareCloud\Model\ActionsVerifysocialnetworkcredentialsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifysocialnetworkcredentialsBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postCustomerVerifySocialNetworkCredentialsAsyncWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postCustomerVerifySocialNetworkCredentialsRequest($body);
 
         return $this->client
@@ -943,7 +943,7 @@ class CustomersActionsApi
     /**
      * Create request for operation 'postCustomerVerifySocialNetworkCredentials'
      *
-     * @param  \CareCloud\Model\ActionsVerifysocialnetworkcredentialsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifysocialnetworkcredentialsBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1046,11 +1046,11 @@ class CustomersActionsApi
      *
      * Verify auth token
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody $body body (required)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2016
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016
      */
     public function postCustomersVerifyAuthToken($body)
     {
@@ -1063,15 +1063,15 @@ class CustomersActionsApi
      *
      * Verify auth token
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody $body (required)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCustomersVerifyAuthTokenWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postCustomersVerifyAuthTokenRequest($body);
 
         try {
@@ -1123,7 +1123,7 @@ class CustomersActionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2016',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1131,7 +1131,7 @@ class CustomersActionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1139,7 +1139,7 @@ class CustomersActionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1147,7 +1147,7 @@ class CustomersActionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1155,7 +1155,7 @@ class CustomersActionsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1163,7 +1163,7 @@ class CustomersActionsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1178,7 +1178,7 @@ class CustomersActionsApi
      *
      * Verify auth token
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1198,14 +1198,14 @@ class CustomersActionsApi
      *
      * Verify auth token
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postCustomersVerifyAuthTokenAsyncWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postCustomersVerifyAuthTokenRequest($body);
 
         return $this->client
@@ -1248,7 +1248,7 @@ class CustomersActionsApi
     /**
      * Create request for operation 'postCustomersVerifyAuthToken'
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

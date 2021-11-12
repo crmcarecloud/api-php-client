@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20049Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'messages' => '\CareCloud\Model\Message[]',
+        'messages' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Message[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
     /**
      * Gets messages
      *
-     * @return \CareCloud\Model\Message[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Message[]
      */
     public function getMessages()
     {
@@ -215,7 +215,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
     /**
      * Sets messages
      *
-     * @param \CareCloud\Model\Message[] $messages List of all messages
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Message[] $messages List of all messages
      *
      * @return $this
      */

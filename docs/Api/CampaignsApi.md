@@ -1,4 +1,4 @@
-# CareCloud\CampaignsApi
+# CrmCareCloud\Webservice\RestApi\Client\CampaignsApi
 
 All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postCampaign**](CampaignsApi.md#postcampaign) | **POST** /campaigns | Create a campaign
 
 # **getCampaign**
-> \CareCloud\Model\InlineResponse2003 getCampaign($campaign_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2003 getCampaign($campaign_id, $accept_language)
 
 Detail of a specific campaign
 
@@ -20,15 +20,15 @@ Get a list of all customers
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CampaignsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaigns**
-> \CareCloud\Model\InlineResponse2002 getCampaigns($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002 getCampaigns($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Collection of campaigns
 
@@ -80,15 +80,15 @@ Get information about all available campaigns
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CampaignsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCampaign**
-> \CareCloud\Model\InlineResponse201 postCampaign($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse201 postCampaign($body, $accept_language)
 
 Create a campaign
 
@@ -148,21 +148,21 @@ Add a new campaign
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CampaignsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\CampaignsBody(); // \CareCloud\Model\CampaignsBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignsBody | 
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -178,12 +178,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\CampaignsBody**](../Model/CampaignsBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignsBody**](../Model/CampaignsBody.md)|  |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 

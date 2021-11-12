@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Api;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CareCloud\ApiException;
-use CareCloud\Configuration;
-use CareCloud\HeaderSelector;
-use CareCloud\ObjectSerializer;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * RewardsApi Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class RewardsApi
      * @param  string $reward_id The unique id for the reward (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20088
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088
      */
     public function getReward($reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,13 +112,13 @@ class RewardsApi
      * @param  string $reward_id The unique id for the reward (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20088, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRewardWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20088';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088';
         $request = $this->getRewardRequest($reward_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20088',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class RewardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class RewardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class RewardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class RewardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class RewardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class RewardsApi
      */
     public function getRewardAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20088';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088';
         $request = $this->getRewardRequest($reward_id, $accept_language);
 
         return $this->client
@@ -426,9 +426,9 @@ class RewardsApi
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values (optional)
      * @param  bool $without_stores If true, resource call returns rewards without list of stores. If false, or not set resource returns default strucutre. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20087
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087
      */
     public function getRewards($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null)
     {
@@ -457,13 +457,13 @@ class RewardsApi
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values (optional)
      * @param  bool $without_stores If true, resource call returns rewards without list of stores. If false, or not set resource returns default strucutre. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20087, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRewardsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20087';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087';
         $request = $this->getRewardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores);
 
         try {
@@ -515,7 +515,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20087',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -523,7 +523,7 @@ class RewardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -531,7 +531,7 @@ class RewardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -539,7 +539,7 @@ class RewardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -547,7 +547,7 @@ class RewardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -555,7 +555,7 @@ class RewardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -625,7 +625,7 @@ class RewardsApi
      */
     public function getRewardsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20087';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087';
         $request = $this->getRewardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores);
 
         return $this->client
@@ -846,9 +846,9 @@ class RewardsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20092
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092
      */
     public function getSubRewardProductBrands($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -868,13 +868,13 @@ class RewardsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20092, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardProductBrandsWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20092';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092';
         $request = $this->getSubRewardProductBrandsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -926,7 +926,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20092',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -934,7 +934,7 @@ class RewardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -942,7 +942,7 @@ class RewardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -950,7 +950,7 @@ class RewardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -958,7 +958,7 @@ class RewardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -966,7 +966,7 @@ class RewardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1018,7 +1018,7 @@ class RewardsApi
      */
     public function getSubRewardProductBrandsAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20092';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092';
         $request = $this->getSubRewardProductBrandsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1201,9 +1201,9 @@ class RewardsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20091
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091
      */
     public function getSubRewardProductGroups($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -1223,13 +1223,13 @@ class RewardsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20091, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardProductGroupsWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20091';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091';
         $request = $this->getSubRewardProductGroupsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -1281,7 +1281,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20091',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1289,7 +1289,7 @@ class RewardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1297,7 +1297,7 @@ class RewardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1305,7 +1305,7 @@ class RewardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1313,7 +1313,7 @@ class RewardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1321,7 +1321,7 @@ class RewardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1373,7 +1373,7 @@ class RewardsApi
      */
     public function getSubRewardProductGroupsAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20091';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091';
         $request = $this->getSubRewardProductGroupsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1556,9 +1556,9 @@ class RewardsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20090
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090
      */
     public function getSubRewardProducts($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -1578,13 +1578,13 @@ class RewardsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20090, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardProductsWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20090';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090';
         $request = $this->getSubRewardProductsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -1636,7 +1636,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20090',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1644,7 +1644,7 @@ class RewardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1652,7 +1652,7 @@ class RewardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1660,7 +1660,7 @@ class RewardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1668,7 +1668,7 @@ class RewardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1676,7 +1676,7 @@ class RewardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1728,7 +1728,7 @@ class RewardsApi
      */
     public function getSubRewardProductsAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20090';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090';
         $request = $this->getSubRewardProductsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1912,9 +1912,9 @@ class RewardsApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  int $visible_for_customer State of the visibility for the customer *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20093
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093
      */
     public function getSubRewardStores($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null)
     {
@@ -1935,13 +1935,13 @@ class RewardsApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  int $visible_for_customer State of the visibility for the customer *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20093, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardStoresWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20093';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093';
         $request = $this->getSubRewardStoresRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer);
 
         try {
@@ -1993,7 +1993,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20093',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2001,7 +2001,7 @@ class RewardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2009,7 +2009,7 @@ class RewardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2017,7 +2017,7 @@ class RewardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2025,7 +2025,7 @@ class RewardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2033,7 +2033,7 @@ class RewardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2087,7 +2087,7 @@ class RewardsApi
      */
     public function getSubRewardStoresAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20093';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093';
         $request = $this->getSubRewardStoresRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer);
 
         return $this->client
@@ -2277,9 +2277,9 @@ class RewardsApi
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id for the store where customer can apply the reward (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20089
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089
      */
     public function getSubRewardVouchers($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null)
     {
@@ -2301,13 +2301,13 @@ class RewardsApi
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id for the store where customer can apply the reward (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20089, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardVouchersWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20089';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089';
         $request = $this->getSubRewardVouchersRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id);
 
         try {
@@ -2359,7 +2359,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20089',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2367,7 +2367,7 @@ class RewardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2375,7 +2375,7 @@ class RewardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2383,7 +2383,7 @@ class RewardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2391,7 +2391,7 @@ class RewardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2399,7 +2399,7 @@ class RewardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2455,7 +2455,7 @@ class RewardsApi
      */
     public function getSubRewardVouchersAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20089';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089';
         $request = $this->getSubRewardVouchersRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id);
 
         return $this->client
@@ -2641,13 +2641,13 @@ class RewardsApi
      *
      * Create a new voucher
      *
-     * @param  \CareCloud\Model\ActionsCreatevoucherBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCreatevoucherBody $body body (required)
      * @param  string $reward_id The unique id for the reward (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20114
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114
      */
     public function postRewardCreateVoucher($body, $reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2660,17 +2660,17 @@ class RewardsApi
      *
      * Create a new voucher
      *
-     * @param  \CareCloud\Model\ActionsCreatevoucherBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCreatevoucherBody $body (required)
      * @param  string $reward_id The unique id for the reward (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20114, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114, HTTP status code, HTTP response headers (array of strings)
      */
     public function postRewardCreateVoucherWithHttpInfo($body, $reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20114';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114';
         $request = $this->postRewardCreateVoucherRequest($body, $reward_id, $accept_language);
 
         try {
@@ -2722,7 +2722,7 @@ class RewardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20114',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2730,7 +2730,7 @@ class RewardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2738,7 +2738,7 @@ class RewardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2746,7 +2746,7 @@ class RewardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2754,7 +2754,7 @@ class RewardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2762,7 +2762,7 @@ class RewardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2777,7 +2777,7 @@ class RewardsApi
      *
      * Create a new voucher
      *
-     * @param  \CareCloud\Model\ActionsCreatevoucherBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCreatevoucherBody $body (required)
      * @param  string $reward_id The unique id for the reward (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -2799,7 +2799,7 @@ class RewardsApi
      *
      * Create a new voucher
      *
-     * @param  \CareCloud\Model\ActionsCreatevoucherBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCreatevoucherBody $body (required)
      * @param  string $reward_id The unique id for the reward (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -2808,7 +2808,7 @@ class RewardsApi
      */
     public function postRewardCreateVoucherAsyncWithHttpInfo($body, $reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20114';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114';
         $request = $this->postRewardCreateVoucherRequest($body, $reward_id, $accept_language);
 
         return $this->client
@@ -2851,7 +2851,7 @@ class RewardsApi
     /**
      * Create request for operation 'postRewardCreateVoucher'
      *
-     * @param  \CareCloud\Model\ActionsCreatevoucherBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCreatevoucherBody $body (required)
      * @param  string $reward_id The unique id for the reward (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *

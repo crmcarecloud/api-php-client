@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CampaignProduct Class Doc Comment
  *
  * @category Class
  * @description Campaign product structure
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -67,7 +67,7 @@ class CampaignProduct implements ModelInterface, ArrayAccess
 'valid_to' => 'string',
 'display_in' => 'string[]',
 'type_id' => 'string',
-'presentation_data' => '\CareCloud\Model\CampaignPresentationData',
+'presentation_data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignPresentationData',
 'last_change' => 'string',
 'state' => 'int'    ];
 
@@ -590,7 +590,7 @@ self::STATE_1,        ];
     /**
      * Gets presentation_data
      *
-     * @return \CareCloud\Model\CampaignPresentationData
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignPresentationData
      */
     public function getPresentationData()
     {
@@ -600,7 +600,7 @@ self::STATE_1,        ];
     /**
      * Sets presentation_data
      *
-     * @param \CareCloud\Model\CampaignPresentationData $presentation_data presentation_data
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignPresentationData $presentation_data presentation_data
      *
      * @return $this
      */

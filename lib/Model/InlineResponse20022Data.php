@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20022Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'segment_records' => '\CareCloud\Model\SegmentRecord[]',
+        'segment_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SegmentRecord[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
     /**
      * Gets segment_records
      *
-     * @return \CareCloud\Model\SegmentRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentRecord[]
      */
     public function getSegmentRecords()
     {
@@ -215,7 +215,7 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
     /**
      * Sets segment_records
      *
-     * @param \CareCloud\Model\SegmentRecord[] $segment_records List of segment records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentRecord[] $segment_records List of segment records
      *
      * @return $this
      */

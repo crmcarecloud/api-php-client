@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse2002Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse2002Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'campaigns' => '\CareCloud\Model\Campaign[]',
+        'campaigns' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse2002Data implements ModelInterface, ArrayAccess
     /**
      * Gets campaigns
      *
-     * @return \CareCloud\Model\Campaign[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[]
      */
     public function getCampaigns()
     {
@@ -215,7 +215,7 @@ class InlineResponse2002Data implements ModelInterface, ArrayAccess
     /**
      * Sets campaigns
      *
-     * @param \CareCloud\Model\Campaign[] $campaigns List of the campaigns
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[] $campaigns List of the campaigns
      *
      * @return $this
      */

@@ -1,4 +1,4 @@
-# CareCloud\ReservableProductsApi
+# CrmCareCloud\Webservice\RestApi\Client\ReservableProductsApi
 
 All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postReservableProductsSearch**](ReservableProductsApi.md#postreservableproductssearch) | **POST** /reservable-products/actions/search-reservable-products | Search reservable products
 
 # **getReservableProduct**
-> \CareCloud\Model\InlineResponse20064 getReservableProduct($reservable_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064 getReservableProduct($reservable_product_id, $accept_language)
 
 Get a reservable product
 
@@ -20,15 +20,15 @@ Get information about a specific reservable product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\ReservableProductsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ReservableProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getReservableProducts**
-> \CareCloud\Model\InlineResponse20074 getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074 getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code)
 
 Get all reservable products
 
@@ -80,15 +80,15 @@ Get the information as a list of reservable products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\ReservableProductsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ReservableProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postReservableProductsSearch**
-> \CareCloud\Model\InlineResponse20075 postReservableProductsSearch($body, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075 postReservableProductsSearch($body, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Search reservable products
 
@@ -148,21 +148,21 @@ Search reservable products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\ReservableProductsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ReservableProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\ActionsSearchreservableproductsBody(); // \CareCloud\Model\ActionsSearchreservableproductsBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody | 
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
@@ -182,7 +182,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\ActionsSearchreservableproductsBody**](../Model/ActionsSearchreservableproductsBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody**](../Model/ActionsSearchreservableproductsBody.md)|  |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
 
 ### Authorization
 

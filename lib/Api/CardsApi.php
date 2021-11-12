@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Api;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CareCloud\ApiException;
-use CareCloud\Configuration;
-use CareCloud\HeaderSelector;
-use CareCloud\ObjectSerializer;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CardsApi Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class CardsApi
      * @param  string $card_id The unique id for the card (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2008
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008
      */
     public function getCard($card_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,13 +112,13 @@ class CardsApi
      * @param  string $card_id The unique id for the card (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCardWithHttpInfo($card_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2008';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008';
         $request = $this->getCardRequest($card_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2008',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class CardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class CardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class CardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class CardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class CardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class CardsApi
      */
     public function getCardAsyncWithHttpInfo($card_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2008';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008';
         $request = $this->getCardRequest($card_id, $accept_language);
 
         return $this->client
@@ -421,9 +421,9 @@ class CardsApi
      * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2007
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2007
      */
     public function getCards($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null)
     {
@@ -447,13 +447,13 @@ class CardsApi
      * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCardsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2007';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2007';
         $request = $this->getCardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid);
 
         try {
@@ -505,7 +505,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2007',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2007',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class CardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -521,7 +521,7 @@ class CardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -529,7 +529,7 @@ class CardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -537,7 +537,7 @@ class CardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class CardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -605,7 +605,7 @@ class CardsApi
      */
     public function getCardsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2007';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2007';
         $request = $this->getCardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid);
 
         return $this->client
@@ -791,12 +791,12 @@ class CardsApi
      *
      * Assign free card
      *
-     * @param  \CareCloud\Model\ActionsAssignfreecardBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignfreecardBody $body body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2014
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014
      */
     public function postAssignCard($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -809,16 +809,16 @@ class CardsApi
      *
      * Assign free card
      *
-     * @param  \CareCloud\Model\ActionsAssignfreecardBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignfreecardBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2014, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014, HTTP status code, HTTP response headers (array of strings)
      */
     public function postAssignCardWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2014';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014';
         $request = $this->postAssignCardRequest($body, $accept_language);
 
         try {
@@ -870,7 +870,7 @@ class CardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2014',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -878,7 +878,7 @@ class CardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -886,7 +886,7 @@ class CardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -894,7 +894,7 @@ class CardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -902,7 +902,7 @@ class CardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -910,7 +910,7 @@ class CardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -925,7 +925,7 @@ class CardsApi
      *
      * Assign free card
      *
-     * @param  \CareCloud\Model\ActionsAssignfreecardBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignfreecardBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -946,7 +946,7 @@ class CardsApi
      *
      * Assign free card
      *
-     * @param  \CareCloud\Model\ActionsAssignfreecardBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignfreecardBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -954,7 +954,7 @@ class CardsApi
      */
     public function postAssignCardAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2014';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014';
         $request = $this->postAssignCardRequest($body, $accept_language);
 
         return $this->client
@@ -997,7 +997,7 @@ class CardsApi
     /**
      * Create request for operation 'postAssignCard'
      *
-     * @param  \CareCloud\Model\ActionsAssignfreecardBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignfreecardBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1105,12 +1105,12 @@ class CardsApi
      *
      * Create a card
      *
-     * @param  \CareCloud\Model\CardsBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBody $body body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2013
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013
      */
     public function postCard($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1123,16 +1123,16 @@ class CardsApi
      *
      * Create a card
      *
-     * @param  \CareCloud\Model\CardsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2013, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCardWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2013';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013';
         $request = $this->postCardRequest($body, $accept_language);
 
         try {
@@ -1184,7 +1184,7 @@ class CardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2013',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1192,7 +1192,7 @@ class CardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1200,7 +1200,7 @@ class CardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1208,7 +1208,7 @@ class CardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1216,7 +1216,7 @@ class CardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1224,7 +1224,7 @@ class CardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1239,7 +1239,7 @@ class CardsApi
      *
      * Create a card
      *
-     * @param  \CareCloud\Model\CardsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1260,7 +1260,7 @@ class CardsApi
      *
      * Create a card
      *
-     * @param  \CareCloud\Model\CardsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1268,7 +1268,7 @@ class CardsApi
      */
     public function postCardAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2013';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013';
         $request = $this->postCardRequest($body, $accept_language);
 
         return $this->client
@@ -1311,7 +1311,7 @@ class CardsApi
     /**
      * Create request for operation 'postCard'
      *
-     * @param  \CareCloud\Model\CardsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1419,12 +1419,12 @@ class CardsApi
      *
      * Generate digital card file
      *
-     * @param  \CareCloud\Model\ActionsGeneratedigitalcardfileBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratedigitalcardfileBody $body body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2009
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009
      */
     public function postGenerateDigitalCard($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1437,16 +1437,16 @@ class CardsApi
      *
      * Generate digital card file
      *
-     * @param  \CareCloud\Model\ActionsGeneratedigitalcardfileBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratedigitalcardfileBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
      */
     public function postGenerateDigitalCardWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2009';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009';
         $request = $this->postGenerateDigitalCardRequest($body, $accept_language);
 
         try {
@@ -1498,7 +1498,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2009',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1506,7 +1506,7 @@ class CardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1514,7 +1514,7 @@ class CardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1522,7 +1522,7 @@ class CardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1530,7 +1530,7 @@ class CardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1538,7 +1538,7 @@ class CardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1553,7 +1553,7 @@ class CardsApi
      *
      * Generate digital card file
      *
-     * @param  \CareCloud\Model\ActionsGeneratedigitalcardfileBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratedigitalcardfileBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1574,7 +1574,7 @@ class CardsApi
      *
      * Generate digital card file
      *
-     * @param  \CareCloud\Model\ActionsGeneratedigitalcardfileBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratedigitalcardfileBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1582,7 +1582,7 @@ class CardsApi
      */
     public function postGenerateDigitalCardAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2009';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009';
         $request = $this->postGenerateDigitalCardRequest($body, $accept_language);
 
         return $this->client
@@ -1625,7 +1625,7 @@ class CardsApi
     /**
      * Create request for operation 'postGenerateDigitalCard'
      *
-     * @param  \CareCloud\Model\ActionsGeneratedigitalcardfileBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratedigitalcardfileBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1733,11 +1733,11 @@ class CardsApi
      *
      * Update a card
      *
-     * @param  \CareCloud\Model\CardsCardIdBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody $body body (required)
      * @param  string $card_id The unique id for the card (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1751,11 +1751,11 @@ class CardsApi
      *
      * Update a card
      *
-     * @param  \CareCloud\Model\CardsCardIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody $body (required)
      * @param  string $card_id The unique id for the card (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1799,7 +1799,7 @@ class CardsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1807,7 +1807,7 @@ class CardsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1815,7 +1815,7 @@ class CardsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1823,7 +1823,7 @@ class CardsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1831,7 +1831,7 @@ class CardsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1846,7 +1846,7 @@ class CardsApi
      *
      * Update a card
      *
-     * @param  \CareCloud\Model\CardsCardIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody $body (required)
      * @param  string $card_id The unique id for the card (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1868,7 +1868,7 @@ class CardsApi
      *
      * Update a card
      *
-     * @param  \CareCloud\Model\CardsCardIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody $body (required)
      * @param  string $card_id The unique id for the card (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1906,7 +1906,7 @@ class CardsApi
     /**
      * Create request for operation 'putCard'
      *
-     * @param  \CareCloud\Model\CardsCardIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody $body (required)
      * @param  string $card_id The unique id for the card (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *

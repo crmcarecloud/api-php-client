@@ -1,4 +1,4 @@
-# CareCloud\RecommendationEngineApi
+# CrmCareCloud\Webservice\RestApi\Client\RecommendationEngineApi
 
 All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**getRecommendationProductOrder**](RecommendationEngineApi.md#getrecommendationproductorder) | **GET** /recommendation-engine/product/actions/order | Order products for the best recommendation.
 
 # **getRecommendationCartCombined**
-> \CareCloud\Model\InlineResponse20086 getRecommendationCartCombined($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086 getRecommendationCartCombined($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count)
 
 Get the best recommendation for shopping cart
 
@@ -23,15 +23,15 @@ It selects the best products from an initial list for the customer shopping cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\RecommendationEngineApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RecommendationEngineApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationCartEliminate**
-> \CareCloud\Model\InlineResponse20086 getRecommendationCartEliminate($customer_id, $accept_language, $cart_product_ids, $product_id_list)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086 getRecommendationCartEliminate($customer_id, $accept_language, $cart_product_ids, $product_id_list)
 
 Get the best recommendation with elimination for shopping cart
 
@@ -89,15 +89,15 @@ It selects the best products from an initial list for the customer shopping cart
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\RecommendationEngineApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RecommendationEngineApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationCartOrder**
-> \CareCloud\Model\InlineResponse20086 getRecommendationCartOrder($cart_product_ids, $accept_language, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086 getRecommendationCartOrder($cart_product_ids, $accept_language, $product_id_list, $count)
 
 Order products for the best recommendation for a shopping cart
 
@@ -153,15 +153,15 @@ The method returns the algorithm ordered products from the initial list (best fi
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\RecommendationEngineApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RecommendationEngineApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductCombined**
-> \CareCloud\Model\InlineResponse20085 getRecommendationProductCombined($customer_id, $accept_language, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085 getRecommendationProductCombined($customer_id, $accept_language, $product_id_list, $count)
 
 Get the best recommendation
 
@@ -217,15 +217,15 @@ It selects the best products from an initial list for the customer. Eliminates a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\RecommendationEngineApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RecommendationEngineApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductEliminate**
-> \CareCloud\Model\InlineResponse20085 getRecommendationProductEliminate($customer_id, $accept_language, $product_id_list)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085 getRecommendationProductEliminate($customer_id, $accept_language, $product_id_list)
 
 Get the best recommendation with an elimination
 
@@ -281,15 +281,15 @@ It selects the best products from an initial list for the customer. Eliminates a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\RecommendationEngineApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RecommendationEngineApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductOrder**
-> \CareCloud\Model\InlineResponse20085 getRecommendationProductOrder($customer_id, $accept_language, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085 getRecommendationProductOrder($customer_id, $accept_language, $product_id_list, $count)
 
 Order products for the best recommendation.
 
@@ -343,15 +343,15 @@ The method returns the algorithm ordered products from the initial list (best fi
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\RecommendationEngineApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RecommendationEngineApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
 
 ### Authorization
 

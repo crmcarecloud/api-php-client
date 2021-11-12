@@ -1,4 +1,4 @@
-# CareCloud\CountriesApi
+# CrmCareCloud\Webservice\RestApi\Client\CountriesApi
 
 All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
 
@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCountries**](CountriesApi.md#getcountries) | **GET** /countries | Get all countries
 
 # **getCountries**
-> \CareCloud\Model\InlineResponse20013 getCountries($accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013 getCountries($accept_language)
 
 Get all countries
 
@@ -18,15 +18,15 @@ Get a list of countries accepted in CRM CareCloud
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CountriesApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CountriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 

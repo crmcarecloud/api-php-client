@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20067Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20067Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_groups' => '\CareCloud\Model\ProductGroup[]',
+        'product_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20067Data implements ModelInterface, ArrayAccess
     /**
      * Gets product_groups
      *
-     * @return \CareCloud\Model\ProductGroup[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]
      */
     public function getProductGroups()
     {
@@ -215,7 +215,7 @@ class InlineResponse20067Data implements ModelInterface, ArrayAccess
     /**
      * Sets product_groups
      *
-     * @param \CareCloud\Model\ProductGroup[] $product_groups List of all product groups
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[] $product_groups List of all product groups
      *
      * @return $this
      */

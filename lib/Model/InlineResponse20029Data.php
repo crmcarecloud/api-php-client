@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20029Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer_types' => '\CareCloud\Model\CustomerType[]',
+        'customer_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
     /**
      * Gets customer_types
      *
-     * @return \CareCloud\Model\CustomerType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[]
      */
     public function getCustomerTypes()
     {
@@ -215,7 +215,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
     /**
      * Sets customer_types
      *
-     * @param \CareCloud\Model\CustomerType[] $customer_types List of the customer types
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[] $customer_types List of the customer types
      *
      * @return $this
      */

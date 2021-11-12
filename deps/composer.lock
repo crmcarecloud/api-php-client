@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "735c1954836a5172e4dd33b75bc944db",
+    "content-hash": "09425ac1483629a9777c8906d7afbf9a",
     "packages": [
         {
             "name": "crmcarecloud/api-spec",
@@ -20,10 +20,12 @@
                 "reference": "4536635cf8d7debfd8a49c7116111e4e2fd86d09",
                 "shasum": ""
             },
+            "default-branch": true,
             "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
             "support": {
-                "source": "https://github.com/crmcarecloud/api-spec/tree/master",
-                "issues": "https://github.com/crmcarecloud/api-spec/issues"
+                "issues": "https://github.com/crmcarecloud/api-spec/issues",
+                "source": "https://github.com/crmcarecloud/api-spec/tree/master"
             },
             "time": "2021-11-11T11:43:16+00:00"
         }
@@ -38,5 +40,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }

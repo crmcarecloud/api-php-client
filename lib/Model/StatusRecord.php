@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * StatusRecord Class Doc Comment
  *
  * @category Class
  * @description Customer status record
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class StatusRecord implements ModelInterface, ArrayAccess
 'customer_id' => 'string',
 'valid_from' => 'string',
 'valid_to' => 'string',
-'purchase_conditions' => '\CareCloud\Model\PurchaseConditions',
+'purchase_conditions' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseConditions',
 'last_change' => 'string',
 'state' => 'int'    ];
 
@@ -391,7 +391,7 @@ self::STATE_2,        ];
     /**
      * Gets purchase_conditions
      *
-     * @return \CareCloud\Model\PurchaseConditions
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseConditions
      */
     public function getPurchaseConditions()
     {
@@ -401,7 +401,7 @@ self::STATE_2,        ];
     /**
      * Sets purchase_conditions
      *
-     * @param \CareCloud\Model\PurchaseConditions $purchase_conditions purchase_conditions
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseConditions $purchase_conditions purchase_conditions
      *
      * @return $this
      */

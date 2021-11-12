@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * SkipassesSkipassIdBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class SkipassesSkipassIdBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'skipass' => '\CareCloud\Model\Skipass'    ];
+        'skipass' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Skipass'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class SkipassesSkipassIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets skipass
      *
-     * @return \CareCloud\Model\Skipass
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Skipass
      */
     public function getSkipass()
     {
@@ -212,7 +212,7 @@ class SkipassesSkipassIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets skipass
      *
-     * @param \CareCloud\Model\Skipass $skipass skipass
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Skipass $skipass skipass
      *
      * @return $this
      */

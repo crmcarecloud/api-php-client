@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20025Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer_source_records' => '\CareCloud\Model\CustomerSourceRecord[]',
+        'customer_source_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
     /**
      * Gets customer_source_records
      *
-     * @return \CareCloud\Model\CustomerSourceRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord[]
      */
     public function getCustomerSourceRecords()
     {
@@ -215,7 +215,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
     /**
      * Sets customer_source_records
      *
-     * @param \CareCloud\Model\CustomerSourceRecord[] $customer_source_records List of the customer source records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord[] $customer_source_records List of the customer source records
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * PurchaseItem Class Doc Comment
  *
  * @category Class
  * @description Purchase item
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,7 +64,7 @@ class PurchaseItem implements ModelInterface, ArrayAccess
 'price' => 'float',
 'amount' => 'float',
 'vat_rate' => 'float',
-'additional_properties' => '\CareCloud\Model\PropertyRecord[]'    ];
+'additional_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -425,7 +425,7 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     /**
      * Gets additional_properties
      *
-     * @return \CareCloud\Model\PropertyRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
      */
     public function getAdditionalProperties()
     {
@@ -435,7 +435,7 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     /**
      * Sets additional_properties
      *
-     * @param \CareCloud\Model\PropertyRecord[] $additional_properties List of additional properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $additional_properties List of additional properties
      *
      * @return $this
      */

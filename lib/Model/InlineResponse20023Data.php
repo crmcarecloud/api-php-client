@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20023Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'status_records' => '\CareCloud\Model\StatusRecord[]',
+        'status_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\StatusRecord[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
     /**
      * Gets status_records
      *
-     * @return \CareCloud\Model\StatusRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\StatusRecord[]
      */
     public function getStatusRecords()
     {
@@ -215,7 +215,7 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
     /**
      * Sets status_records
      *
-     * @param \CareCloud\Model\StatusRecord[] $status_records List of status records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\StatusRecord[] $status_records List of status records
      *
      * @return $this
      */

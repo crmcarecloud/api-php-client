@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Api;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CareCloud\ApiException;
-use CareCloud\Configuration;
-use CareCloud\HeaderSelector;
-use CareCloud\ObjectSerializer;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * WalletApi Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,9 +96,9 @@ class WalletApi
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200120
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120
      */
     public function getWalletCredits($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -116,13 +116,13 @@ class WalletApi
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200120, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletCreditsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200120';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120';
         $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -174,7 +174,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200120',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +182,7 @@ class WalletApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class WalletApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +198,7 @@ class WalletApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class WalletApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class WalletApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class WalletApi
      */
     public function getWalletCreditsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200120';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120';
         $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client
@@ -427,9 +427,9 @@ class WalletApi
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200121
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121
      */
     public function getWalletCreditsExpiration($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -445,13 +445,13 @@ class WalletApi
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200121, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletCreditsExpirationWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200121';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121';
         $request = $this->getWalletCreditsExpirationRequest($customer_id, $accept_language);
 
         try {
@@ -503,7 +503,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200121',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -511,7 +511,7 @@ class WalletApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -519,7 +519,7 @@ class WalletApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -527,7 +527,7 @@ class WalletApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -535,7 +535,7 @@ class WalletApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -543,7 +543,7 @@ class WalletApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -587,7 +587,7 @@ class WalletApi
      */
     public function getWalletCreditsExpirationAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200121';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121';
         $request = $this->getWalletCreditsExpirationRequest($customer_id, $accept_language);
 
         return $this->client
@@ -744,9 +744,9 @@ class WalletApi
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200119
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119
      */
     public function getWalletPoints($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -764,13 +764,13 @@ class WalletApi
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200119, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletPointsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200119';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119';
         $request = $this->getWalletPointsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -822,7 +822,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200119',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -830,7 +830,7 @@ class WalletApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -838,7 +838,7 @@ class WalletApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -846,7 +846,7 @@ class WalletApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class WalletApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -862,7 +862,7 @@ class WalletApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -910,7 +910,7 @@ class WalletApi
      */
     public function getWalletPointsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200119';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119';
         $request = $this->getWalletPointsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client
@@ -1075,9 +1075,9 @@ class WalletApi
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200121
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121
      */
     public function getWalletPointsExpiration($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1093,13 +1093,13 @@ class WalletApi
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200121, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletPointsExpirationWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200121';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121';
         $request = $this->getWalletPointsExpirationRequest($customer_id, $accept_language);
 
         try {
@@ -1151,7 +1151,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200121',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1159,7 +1159,7 @@ class WalletApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1167,7 +1167,7 @@ class WalletApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1175,7 +1175,7 @@ class WalletApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1183,7 +1183,7 @@ class WalletApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1191,7 +1191,7 @@ class WalletApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1235,7 +1235,7 @@ class WalletApi
      */
     public function getWalletPointsExpirationAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200121';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121';
         $request = $this->getWalletPointsExpirationRequest($customer_id, $accept_language);
 
         return $this->client
@@ -1392,9 +1392,9 @@ class WalletApi
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200118
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118
      */
     public function getWalletSalesTurnover($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -1412,13 +1412,13 @@ class WalletApi
      * @param  string $date_from Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletSalesTurnoverWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200118';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
         $request = $this->getWalletSalesTurnoverRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -1470,7 +1470,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200118',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1478,7 +1478,7 @@ class WalletApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1486,7 +1486,7 @@ class WalletApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1494,7 +1494,7 @@ class WalletApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1502,7 +1502,7 @@ class WalletApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1510,7 +1510,7 @@ class WalletApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1558,7 +1558,7 @@ class WalletApi
      */
     public function getWalletSalesTurnoverAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200118';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
         $request = $this->getWalletSalesTurnoverRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client

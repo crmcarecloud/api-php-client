@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Api;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CareCloud\ApiException;
-use CareCloud\Configuration;
-use CareCloud\HeaderSelector;
-use CareCloud\ObjectSerializer;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * ReservableProductsApi Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class ReservableProductsApi
      * @param  string $reservable_product_id The unique id for the reservable product (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20064
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064
      */
     public function getReservableProduct($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,13 +112,13 @@ class ReservableProductsApi
      * @param  string $reservable_product_id The unique id for the reservable product (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20064, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReservableProductWithHttpInfo($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20064';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064';
         $request = $this->getReservableProductRequest($reservable_product_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class ReservableProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20064',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class ReservableProductsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class ReservableProductsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class ReservableProductsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class ReservableProductsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class ReservableProductsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class ReservableProductsApi
      */
     public function getReservableProductAsyncWithHttpInfo($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20064';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064';
         $request = $this->getReservableProductRequest($reservable_product_id, $accept_language);
 
         return $this->client
@@ -418,9 +418,9 @@ class ReservableProductsApi
      * @param  string $name Search record by name or a part of the name (optional)
      * @param  string $code Code of the product (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20074
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074
      */
     public function getReservableProducts($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null)
     {
@@ -441,13 +441,13 @@ class ReservableProductsApi
      * @param  string $name Search record by name or a part of the name (optional)
      * @param  string $code Code of the product (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20074, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReservableProductsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20074';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
         $request = $this->getReservableProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code);
 
         try {
@@ -499,7 +499,7 @@ class ReservableProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20074',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -507,7 +507,7 @@ class ReservableProductsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class ReservableProductsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -523,7 +523,7 @@ class ReservableProductsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -531,7 +531,7 @@ class ReservableProductsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -539,7 +539,7 @@ class ReservableProductsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class ReservableProductsApi
      */
     public function getReservableProductsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20074';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
         $request = $this->getReservableProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code);
 
         return $this->client
@@ -764,16 +764,16 @@ class ReservableProductsApi
      *
      * Search reservable products
      *
-     * @param  \CareCloud\Model\ActionsSearchreservableproductsBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20075
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075
      */
     public function postReservableProductsSearch($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -786,20 +786,20 @@ class ReservableProductsApi
      *
      * Search reservable products
      *
-     * @param  \CareCloud\Model\ActionsSearchreservableproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20075, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075, HTTP status code, HTTP response headers (array of strings)
      */
     public function postReservableProductsSearchWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20075';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
         $request = $this->postReservableProductsSearchRequest($body, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -851,7 +851,7 @@ class ReservableProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20075',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -859,7 +859,7 @@ class ReservableProductsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -867,7 +867,7 @@ class ReservableProductsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -875,7 +875,7 @@ class ReservableProductsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -883,7 +883,7 @@ class ReservableProductsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -891,7 +891,7 @@ class ReservableProductsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -906,7 +906,7 @@ class ReservableProductsApi
      *
      * Search reservable products
      *
-     * @param  \CareCloud\Model\ActionsSearchreservableproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -931,7 +931,7 @@ class ReservableProductsApi
      *
      * Search reservable products
      *
-     * @param  \CareCloud\Model\ActionsSearchreservableproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
@@ -943,7 +943,7 @@ class ReservableProductsApi
      */
     public function postReservableProductsSearchAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20075';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
         $request = $this->postReservableProductsSearchRequest($body, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -986,7 +986,7 @@ class ReservableProductsApi
     /**
      * Create request for operation 'postReservableProductsSearch'
      *
-     * @param  \CareCloud\Model\ActionsSearchreservableproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)

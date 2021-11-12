@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20014Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20014Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'currencies' => '\CareCloud\Model\Currency[]',
+        'currencies' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Currency[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20014Data implements ModelInterface, ArrayAccess
     /**
      * Gets currencies
      *
-     * @return \CareCloud\Model\Currency[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[]
      */
     public function getCurrencies()
     {
@@ -215,7 +215,7 @@ class InlineResponse20014Data implements ModelInterface, ArrayAccess
     /**
      * Sets currencies
      *
-     * @param \CareCloud\Model\Currency[] $currencies Structure of currency
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[] $currencies Structure of currency
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * FinalBill Class Doc Comment
  *
  * @category Class
  * @description Final bill structure
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,15 +61,15 @@ class FinalBill implements ModelInterface, ArrayAccess
 'purchase_type_id' => 'int',
 'canceled' => 'bool',
 'payment_type' => 'string',
-'payment_recap' => '\CareCloud\Model\PaymentRecap',
+'payment_recap' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PaymentRecap',
 'bill_id' => 'string',
 'bill_number' => 'string',
 'payment_time' => 'string',
 'created_by' => 'string',
 'currency_id' => 'string',
 'total_price' => 'float',
-'utm' => '\CareCloud\Model\UTM',
-'bill_items' => '\CareCloud\Model\BillItem[]'    ];
+'utm' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UTM',
+'bill_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\BillItem[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -429,7 +429,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Gets payment_recap
      *
-     * @return \CareCloud\Model\PaymentRecap
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentRecap
      */
     public function getPaymentRecap()
     {
@@ -439,7 +439,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Sets payment_recap
      *
-     * @param \CareCloud\Model\PaymentRecap $payment_recap payment_recap
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentRecap $payment_recap payment_recap
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Gets utm
      *
-     * @return \CareCloud\Model\UTM
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\UTM
      */
     public function getUtm()
     {
@@ -607,7 +607,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Sets utm
      *
-     * @param \CareCloud\Model\UTM $utm utm
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\UTM $utm utm
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Gets bill_items
      *
-     * @return \CareCloud\Model\BillItem[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\BillItem[]
      */
     public function getBillItems()
     {
@@ -631,7 +631,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Sets bill_items
      *
-     * @param \CareCloud\Model\BillItem[] $bill_items List of bill items
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\BillItem[] $bill_items List of bill items
      *
      * @return $this
      */

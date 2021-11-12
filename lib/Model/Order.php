@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Order Class Doc Comment
  *
  * @category Class
  * @description Order resource
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,9 +63,9 @@ class Order implements ModelInterface, ArrayAccess
 'currency_id' => 'string',
 'total_price' => 'float',
 'discount_codes' => 'string[]',
-'order_items' => '\CareCloud\Model\OrderItem[]',
-'invoicing_data' => '\CareCloud\Model\OrderInvoicing',
-'shipping_data' => '\CareCloud\Model\OrderShipping',
+'order_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\OrderItem[]',
+'invoicing_data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\OrderInvoicing',
+'shipping_data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\OrderShipping',
 'customer_note' => 'string',
 'order_status' => 'string',
 'shipping_date' => 'string',
@@ -449,7 +449,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Gets order_items
      *
-     * @return \CareCloud\Model\OrderItem[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\OrderItem[]
      */
     public function getOrderItems()
     {
@@ -459,7 +459,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets order_items
      *
-     * @param \CareCloud\Model\OrderItem[] $order_items List of the OrderItems
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\OrderItem[] $order_items List of the OrderItems
      *
      * @return $this
      */
@@ -473,7 +473,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Gets invoicing_data
      *
-     * @return \CareCloud\Model\OrderInvoicing
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\OrderInvoicing
      */
     public function getInvoicingData()
     {
@@ -483,7 +483,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets invoicing_data
      *
-     * @param \CareCloud\Model\OrderInvoicing $invoicing_data invoicing_data
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\OrderInvoicing $invoicing_data invoicing_data
      *
      * @return $this
      */
@@ -497,7 +497,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_data
      *
-     * @return \CareCloud\Model\OrderShipping
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\OrderShipping
      */
     public function getShippingData()
     {
@@ -507,7 +507,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_data
      *
-     * @param \CareCloud\Model\OrderShipping $shipping_data shipping_data
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\OrderShipping $shipping_data shipping_data
      *
      * @return $this
      */

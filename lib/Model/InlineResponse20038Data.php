@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20038Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'events' => '\CareCloud\Model\Event[]',
+        'events' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Event[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
     /**
      * Gets events
      *
-     * @return \CareCloud\Model\Event[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Event[]
      */
     public function getEvents()
     {
@@ -215,7 +215,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
     /**
      * Sets events
      *
-     * @param \CareCloud\Model\Event[] $events Collection of all events
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Event[] $events Collection of all events
      *
      * @return $this
      */

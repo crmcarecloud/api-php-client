@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **max_points** | **string** | Amount of points to be redeemed | [optional] 
 **max_credit** | **string** | Amount of credits to be used | [optional] 
 **benefit_codes** | **string[]** | The bill closure will use present codes and recommend discounts | [optional] 
-**bill** | [**\CareCloud\Model\Bill**](Bill.md) |  | 
+**bill** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Bill**](Bill.md) |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20069Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20069Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_properties' => '\CareCloud\Model\Property[]',
+        'product_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20069Data implements ModelInterface, ArrayAccess
     /**
      * Gets product_properties
      *
-     * @return \CareCloud\Model\Property[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
     public function getProductProperties()
     {
@@ -215,7 +215,7 @@ class InlineResponse20069Data implements ModelInterface, ArrayAccess
     /**
      * Sets product_properties
      *
-     * @param \CareCloud\Model\Property[] $product_properties List of all product properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $product_properties List of all product properties
      *
      * @return $this
      */

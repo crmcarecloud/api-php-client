@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Purchase Class Doc Comment
  *
  * @category Class
  * @description Purchase
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class Purchase implements ModelInterface, ArrayAccess
 'external_purchase_id' => 'string',
 'payment_time' => 'string',
 'items_count' => 'int',
-'purchase_items' => '\CareCloud\Model\PurchaseItem[]',
+'purchase_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItem[]',
 'type_id' => 'string',
 'total_price' => 'float',
 'currency_id' => 'string',
@@ -443,7 +443,7 @@ class Purchase implements ModelInterface, ArrayAccess
     /**
      * Gets purchase_items
      *
-     * @return \CareCloud\Model\PurchaseItem[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItem[]
      */
     public function getPurchaseItems()
     {
@@ -453,7 +453,7 @@ class Purchase implements ModelInterface, ArrayAccess
     /**
      * Sets purchase_items
      *
-     * @param \CareCloud\Model\PurchaseItem[] $purchase_items List of all items of the purchase. Data is returned if query parameter purchase_items_extension has value true in the query string of the request.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItem[] $purchase_items List of all items of the purchase. Data is returned if query parameter purchase_items_extension has value true in the query string of the request.
      *
      * @return $this
      */

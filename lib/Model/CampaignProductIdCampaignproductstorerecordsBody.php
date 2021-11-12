@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CampaignProductIdCampaignproductstorerecordsBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class CampaignProductIdCampaignproductstorerecordsBody implements ModelInterface
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'campaign_product_store_record' => '\CareCloud\Model\CampaignProductStoreRecord'    ];
+        'campaign_product_store_record' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductStoreRecord'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class CampaignProductIdCampaignproductstorerecordsBody implements ModelInterface
     /**
      * Gets campaign_product_store_record
      *
-     * @return \CareCloud\Model\CampaignProductStoreRecord
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductStoreRecord
      */
     public function getCampaignProductStoreRecord()
     {
@@ -212,7 +212,7 @@ class CampaignProductIdCampaignproductstorerecordsBody implements ModelInterface
     /**
      * Sets campaign_product_store_record
      *
-     * @param \CareCloud\Model\CampaignProductStoreRecord $campaign_product_store_record campaign_product_store_record
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductStoreRecord $campaign_product_store_record campaign_product_store_record
      *
      * @return $this
      */

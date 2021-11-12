@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20056Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'partners' => '\CareCloud\Model\Partner[]',
+        'partners' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Partner[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
     /**
      * Gets partners
      *
-     * @return \CareCloud\Model\Partner[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Partner[]
      */
     public function getPartners()
     {
@@ -215,7 +215,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
     /**
      * Sets partners
      *
-     * @param \CareCloud\Model\Partner[] $partners List of a partners
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Partner[] $partners List of a partners
      *
      * @return $this
      */

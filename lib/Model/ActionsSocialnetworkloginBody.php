@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * ActionsSocialnetworkloginBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class ActionsSocialnetworkloginBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'social_network_credentials' => '\CareCloud\Model\SocialNetworkCredentials'    ];
+        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class ActionsSocialnetworkloginBody implements ModelInterface, ArrayAccess
     /**
      * Gets social_network_credentials
      *
-     * @return \CareCloud\Model\SocialNetworkCredentials
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
      */
     public function getSocialNetworkCredentials()
     {
@@ -212,7 +212,7 @@ class ActionsSocialnetworkloginBody implements ModelInterface, ArrayAccess
     /**
      * Sets social_network_credentials
      *
-     * @param \CareCloud\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
      *
      * @return $this
      */

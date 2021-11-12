@@ -1,4 +1,4 @@
-# CareCloud\TokensApi
+# CrmCareCloud\Webservice\RestApi\Client\TokensApi
 
 All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**putToken**](TokensApi.md#puttoken) | **PUT** /tokens/{token_id} | Edit a push token
 
 # **getTokenAuthentication**
-> \CareCloud\Model\InlineResponse200109 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
 
 Get authentication token
 
@@ -24,15 +24,15 @@ Returns authentication token for specific external application
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\TokensApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse200109**](../Model/InlineResponse200109.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109**](../Model/InlineResponse200109.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postToken**
-> \CareCloud\Model\InlineResponse20116 postToken($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116 postToken($body, $accept_language)
 
 Create a token
 
@@ -88,18 +88,18 @@ Create a token and setup of the client's application <p class=\"warning\">Note: 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new CareCloud\Api\TokensApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\TokensBody(); // \CareCloud\Model\TokensBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody | 
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -115,12 +115,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\TokensBody**](../Model/TokensBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody**](../Model/TokensBody.md)|  |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20116**](../Model/InlineResponse20116.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116**](../Model/InlineResponse20116.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenLogin**
-> \CareCloud\Model\InlineResponse2016 postTokenLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postTokenLogin($body, $token_id, $accept_language)
 
 Login to the application
 
@@ -145,21 +145,21 @@ Login of a customer account to client's application
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\TokensApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\ActionsLoginBody(); // \CareCloud\Model\ActionsLoginBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody | 
 $token_id = "token_id_example"; // string | Client's application token
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -176,13 +176,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\ActionsLoginBody**](../Model/ActionsLoginBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody**](../Model/ActionsLoginBody.md)|  |
  **token_id** | **string**| Client&#x27;s application token |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
 
 ### Authorization
 
@@ -207,15 +207,15 @@ Logout of a customer account to client's application
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\TokensApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -266,21 +266,21 @@ Send email, that contains link to set up a password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\TokensApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\ActionsSendpasswordsetupemailBody(); // \CareCloud\Model\ActionsSendpasswordsetupemailBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody | 
 $token_id = "token_id_example"; // string | Client's application token
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -296,7 +296,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\ActionsSendpasswordsetupemailBody**](../Model/ActionsSendpasswordsetupemailBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody**](../Model/ActionsSendpasswordsetupemailBody.md)|  |
  **token_id** | **string**| Client&#x27;s application token |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
@@ -316,7 +316,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenSocialLogin**
-> \CareCloud\Model\InlineResponse2016 postTokenSocialLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postTokenSocialLogin($body, $token_id, $accept_language)
 
 Login via social network
 
@@ -327,21 +327,21 @@ Login of a customer account to client's application via social network
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\TokensApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\ActionsSocialnetworkloginBody(); // \CareCloud\Model\ActionsSocialnetworkloginBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody | 
 $token_id = "token_id_example"; // string | Client's application token
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -358,13 +358,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\ActionsSocialnetworkloginBody**](../Model/ActionsSocialnetworkloginBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody**](../Model/ActionsSocialnetworkloginBody.md)|  |
  **token_id** | **string**| Client&#x27;s application token |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
 
 ### Authorization
 
@@ -389,21 +389,21 @@ Update a push token and installation setup
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\TokensApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\TokensTokenIdBody(); // \CareCloud\Model\TokensTokenIdBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody | 
 $token_id = "token_id_example"; // string | Client's application token
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -419,7 +419,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\TokensTokenIdBody**](../Model/TokensTokenIdBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody**](../Model/TokensTokenIdBody.md)|  |
  **token_id** | **string**| Client&#x27;s application token |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 

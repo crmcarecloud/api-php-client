@@ -1,4 +1,4 @@
-# CareCloud\CampaignProductsApi
+# CrmCareCloud\Webservice\RestApi\Client\CampaignProductsApi
 
 All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**postCampaignProductStoreRecord**](CampaignProductsApi.md#postcampaignproductstorerecord) | **POST** /campaign-products/{campaign_product_id}/campaign-product-store-records | Add a store to the campaign product
 
 # **getCampaignProduct**
-> \CareCloud\Model\InlineResponse2005 getCampaignProduct($campaign_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005 getCampaignProduct($campaign_product_id, $accept_language)
 
 Detail of a specific campaign product
 
@@ -22,15 +22,15 @@ Get information about all details of a specific campaign product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CampaignProductsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaignProductStoreRecords**
-> \CareCloud\Model\InlineResponse2006 getCampaignProductStoreRecords($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006 getCampaignProductStoreRecords($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get a campaign product store records
 
@@ -82,15 +82,15 @@ Get information about all campaign products store records.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CampaignProductsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaignProducts**
-> \CareCloud\Model\InlineResponse2004 getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004 getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to)
 
 Collection of campaign products
 
@@ -150,15 +150,15 @@ Get information about all available campaign products
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CampaignProductsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCampaignProduct**
-> \CareCloud\Model\InlineResponse2011 postCampaignProduct($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011 postCampaignProduct($body, $accept_language)
 
 Create a campaign product
 
@@ -234,21 +234,21 @@ Add a new campaign product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CampaignProductsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\CampaignproductsBody(); // \CareCloud\Model\CampaignproductsBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody | 
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -264,12 +264,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\CampaignproductsBody**](../Model/CampaignproductsBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody**](../Model/CampaignproductsBody.md)|  |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2011**](../Model/InlineResponse2011.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011**](../Model/InlineResponse2011.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCampaignProductStoreRecord**
-> \CareCloud\Model\InlineResponse2012 postCampaignProductStoreRecord($body, $campaign_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012 postCampaignProductStoreRecord($body, $campaign_product_id, $accept_language)
 
 Add a store to the campaign product
 
@@ -294,21 +294,21 @@ Add one of the [stores](#tag/Stores) to a campaign product
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CampaignProductsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\CampaignProductIdCampaignproductstorerecordsBody(); // \CareCloud\Model\CampaignProductIdCampaignproductstorerecordsBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody | 
 $campaign_product_id = "campaign_product_id_example"; // string | The unique id for the campaign product in CareCloud
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -325,13 +325,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\CampaignProductIdCampaignproductstorerecordsBody**](../Model/CampaignProductIdCampaignproductstorerecordsBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody**](../Model/CampaignProductIdCampaignproductstorerecordsBody.md)|  |
  **campaign_product_id** | **string**| The unique id for the campaign product in CareCloud |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2012**](../Model/InlineResponse2012.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012**](../Model/InlineResponse2012.md)
 
 ### Authorization
 

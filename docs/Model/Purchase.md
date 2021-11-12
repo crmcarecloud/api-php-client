@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **external_purchase_id** | **string** | The external unique id of the purchase | 
 **payment_time** | **string** | Date and time of the purchase payment *(YYYY-MM-DD HH:MM:SS)* | 
 **items_count** | **int** | Count of the purchase items | 
-**purchase_items** | [**\CareCloud\Model\PurchaseItem[]**](PurchaseItem.md) | List of all items of the purchase. Data is returned if query parameter purchase_items_extension has value true in the query string of the request. | [optional] 
+**purchase_items** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItem[]**](PurchaseItem.md) | List of all items of the purchase. Data is returned if query parameter purchase_items_extension has value true in the query string of the request. | [optional] 
 **type_id** | **string** | Purchase type | 
 **total_price** | **float** | Total price of the purchase | 
 **currency_id** | **string** | The unique id of the currency | 

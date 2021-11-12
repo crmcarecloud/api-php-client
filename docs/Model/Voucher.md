@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **valid_from** | **string** | Date from the voucher is valid *(YYYY-MM-DD HH:MM:SS)* | 
 **valid_to** | **string** | Date to the voucher is valid *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **reward_group** | **string** | The unique id of the reward group | 
-**reward** | [**\CareCloud\Model\Reward**](Reward.md) |  | 
+**reward** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Reward**](Reward.md) |  | 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the voucher *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * BillItem Class Doc Comment
  *
  * @category Class
  * @description Bill item structure
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class BillItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'plu_ids' => '\CareCloud\Model\PluId[]',
+        'plu_ids' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PluId[]',
 'plu_name' => 'string',
 'category_plu_id' => 'string',
 'vat_rate' => 'float',
@@ -290,7 +290,7 @@ class BillItem implements ModelInterface, ArrayAccess
     /**
      * Gets plu_ids
      *
-     * @return \CareCloud\Model\PluId[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[]
      */
     public function getPluIds()
     {
@@ -300,7 +300,7 @@ class BillItem implements ModelInterface, ArrayAccess
     /**
      * Sets plu_ids
      *
-     * @param \CareCloud\Model\PluId[] $plu_ids An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id for every product across all POS systems))
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[] $plu_ids An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id for every product across all POS systems))
      *
      * @return $this
      */

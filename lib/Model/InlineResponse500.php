@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse500 Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse500 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'error' => '\CareCloud\Model\BasicError'    ];
+        'error' => '\CrmCareCloud\Webservice\RestApi\Client\Model\BasicError'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class InlineResponse500 implements ModelInterface, ArrayAccess
     /**
      * Gets error
      *
-     * @return \CareCloud\Model\BasicError
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\BasicError
      */
     public function getError()
     {
@@ -209,7 +209,7 @@ class InlineResponse500 implements ModelInterface, ArrayAccess
     /**
      * Sets error
      *
-     * @param \CareCloud\Model\BasicError $error error
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\BasicError $error error
      *
      * @return $this
      */

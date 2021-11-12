@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Voucher Class Doc Comment
  *
  * @category Class
  * @description Customer&#x27;s voucher
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,7 +66,7 @@ class Voucher implements ModelInterface, ArrayAccess
 'valid_from' => 'string',
 'valid_to' => 'string',
 'reward_group' => 'string',
-'reward' => '\CareCloud\Model\Reward',
+'reward' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Reward',
 'last_change' => 'string',
 'state' => 'int'    ];
 
@@ -529,7 +529,7 @@ self::STATE_2,        ];
     /**
      * Gets reward
      *
-     * @return \CareCloud\Model\Reward
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Reward
      */
     public function getReward()
     {
@@ -539,7 +539,7 @@ self::STATE_2,        ];
     /**
      * Sets reward
      *
-     * @param \CareCloud\Model\Reward $reward reward
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Reward $reward reward
      *
      * @return $this
      */

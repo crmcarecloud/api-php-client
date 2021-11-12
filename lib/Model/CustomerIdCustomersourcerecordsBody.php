@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CustomerIdCustomersourcerecordsBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class CustomerIdCustomersourcerecordsBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer_source_record' => '\CareCloud\Model\CustomerSourceRecord'    ];
+        'customer_source_record' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class CustomerIdCustomersourcerecordsBody implements ModelInterface, ArrayAccess
     /**
      * Gets customer_source_record
      *
-     * @return \CareCloud\Model\CustomerSourceRecord
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord
      */
     public function getCustomerSourceRecord()
     {
@@ -212,7 +212,7 @@ class CustomerIdCustomersourcerecordsBody implements ModelInterface, ArrayAccess
     /**
      * Sets customer_source_record
      *
-     * @param \CareCloud\Model\CustomerSourceRecord $customer_source_record customer_source_record
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord $customer_source_record customer_source_record
      *
      * @return $this
      */

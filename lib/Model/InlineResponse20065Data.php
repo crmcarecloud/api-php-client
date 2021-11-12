@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20065Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_brands' => '\CareCloud\Model\ProductBrand[]',
+        'product_brands' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
     /**
      * Gets product_brands
      *
-     * @return \CareCloud\Model\ProductBrand[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[]
      */
     public function getProductBrands()
     {
@@ -215,7 +215,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
     /**
      * Sets product_brands
      *
-     * @param \CareCloud\Model\ProductBrand[] $product_brands List of all product brands
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[] $product_brands List of all product brands
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Partner Class Doc Comment
  *
  * @category Class
  * @description Partner resource
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class Partner implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'partner_id' => 'string',
 'name' => 'string',
-'address' => '\CareCloud\Model\Address',
+'address' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Address',
 'registration_id' => 'string',
 'vat_id' => 'string',
 'email' => 'string',
@@ -316,7 +316,7 @@ self::STATE_2,        ];
     /**
      * Gets address
      *
-     * @return \CareCloud\Model\Address
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Address
      */
     public function getAddress()
     {
@@ -326,7 +326,7 @@ self::STATE_2,        ];
     /**
      * Sets address
      *
-     * @param \CareCloud\Model\Address $address address
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Address $address address
      *
      * @return $this
      */

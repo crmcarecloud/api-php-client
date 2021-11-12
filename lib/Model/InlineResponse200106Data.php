@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse200106Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_groups' => '\CareCloud\Model\StoreGroup[]',
+        'store_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
     /**
      * Gets store_groups
      *
-     * @return \CareCloud\Model\StoreGroup[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]
      */
     public function getStoreGroups()
     {
@@ -215,7 +215,7 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
     /**
      * Sets store_groups
      *
-     * @param \CareCloud\Model\StoreGroup[] $store_groups List of all store groups
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[] $store_groups List of all store groups
      *
      * @return $this
      */

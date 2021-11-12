@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud\Model
+ * @package  CrmCareCloud\Webservice\RestApi\Client\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package CareCloud\Model
+ * @package CrmCareCloud\Webservice\RestApi\Client\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20046Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20046Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'interests' => '\CareCloud\Model\Interest[]',
+        'interests' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20046Data implements ModelInterface, ArrayAccess
     /**
      * Gets interests
      *
-     * @return \CareCloud\Model\Interest[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]
      */
     public function getInterests()
     {
@@ -215,7 +215,7 @@ class InlineResponse20046Data implements ModelInterface, ArrayAccess
     /**
      * Sets interests
      *
-     * @param \CareCloud\Model\Interest[] $interests List of all interests
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[] $interests List of all interests
      *
      * @return $this
      */

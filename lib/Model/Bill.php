@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Bill Class Doc Comment
  *
  * @category Class
  * @description Structure of bill from POS
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,8 +63,8 @@ class Bill implements ModelInterface, ArrayAccess
 'created_by' => 'string',
 'currency_id' => 'string',
 'total_price' => 'float',
-'utm' => '\CareCloud\Model\UTM',
-'bill_items' => '\CareCloud\Model\BillItem[]'    ];
+'utm' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UTM',
+'bill_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\BillItem[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -401,7 +401,7 @@ class Bill implements ModelInterface, ArrayAccess
     /**
      * Gets utm
      *
-     * @return \CareCloud\Model\UTM
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\UTM
      */
     public function getUtm()
     {
@@ -411,7 +411,7 @@ class Bill implements ModelInterface, ArrayAccess
     /**
      * Sets utm
      *
-     * @param \CareCloud\Model\UTM $utm utm
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\UTM $utm utm
      *
      * @return $this
      */
@@ -425,7 +425,7 @@ class Bill implements ModelInterface, ArrayAccess
     /**
      * Gets bill_items
      *
-     * @return \CareCloud\Model\BillItem[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\BillItem[]
      */
     public function getBillItems()
     {
@@ -435,7 +435,7 @@ class Bill implements ModelInterface, ArrayAccess
     /**
      * Sets bill_items
      *
-     * @param \CareCloud\Model\BillItem[] $bill_items List of bill items
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\BillItem[] $bill_items List of bill items
      *
      * @return $this
      */

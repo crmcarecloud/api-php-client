@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CampaignproductsBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class CampaignproductsBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'campaign_product' => '\CareCloud\Model\CampaignProduct'    ];
+        'campaign_product' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProduct'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class CampaignproductsBody implements ModelInterface, ArrayAccess
     /**
      * Gets campaign_product
      *
-     * @return \CareCloud\Model\CampaignProduct
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProduct
      */
     public function getCampaignProduct()
     {
@@ -212,7 +212,7 @@ class CampaignproductsBody implements ModelInterface, ArrayAccess
     /**
      * Sets campaign_product
      *
-     * @param \CareCloud\Model\CampaignProduct $campaign_product campaign_product
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProduct $campaign_product campaign_product
      *
      * @return $this
      */

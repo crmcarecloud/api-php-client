@@ -28,9 +28,9 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "CareCloud\\" : "lib/" }
+        "psr-4": { "CrmCareCloud\\Webservice\\RestApi\\Client\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "CareCloud\\" : "test/" }
+        "psr-4": { "CrmCareCloud\\Webservice\\RestApi\\Client\\" : "test/" }
     }
 }

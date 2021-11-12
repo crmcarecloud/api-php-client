@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * EventsBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class EventsBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'event' => '\CareCloud\Model\Event',
-'property_records' => '\CareCloud\Model\PropertyRecord[]'    ];
+        'event' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Event',
+'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -208,7 +208,7 @@ class EventsBody implements ModelInterface, ArrayAccess
     /**
      * Gets event
      *
-     * @return \CareCloud\Model\Event
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Event
      */
     public function getEvent()
     {
@@ -218,7 +218,7 @@ class EventsBody implements ModelInterface, ArrayAccess
     /**
      * Sets event
      *
-     * @param \CareCloud\Model\Event $event event
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Event $event event
      *
      * @return $this
      */
@@ -232,7 +232,7 @@ class EventsBody implements ModelInterface, ArrayAccess
     /**
      * Gets property_records
      *
-     * @return \CareCloud\Model\PropertyRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
      */
     public function getPropertyRecords()
     {
@@ -242,7 +242,7 @@ class EventsBody implements ModelInterface, ArrayAccess
     /**
      * Sets property_records
      *
-     * @param \CareCloud\Model\PropertyRecord[] $property_records List of an event property records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of an event property records
      *
      * @return $this
      */

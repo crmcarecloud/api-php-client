@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * RecommendedReward Class Doc Comment
  *
  * @category Class
  * @description Recommended reward structure
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class RecommendedReward implements ModelInterface, ArrayAccess
 'reward_priority' => 'int',
 'max_count' => 'int',
 'description' => 'string',
-'reward_properties' => '\CareCloud\Model\RewardProperties'    ];
+'reward_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\RewardProperties'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -394,7 +394,7 @@ self::REWARD_PRIORITY_9,        ];
     /**
      * Gets reward_properties
      *
-     * @return \CareCloud\Model\RewardProperties
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\RewardProperties
      */
     public function getRewardProperties()
     {
@@ -404,7 +404,7 @@ self::REWARD_PRIORITY_9,        ];
     /**
      * Sets reward_properties
      *
-     * @param \CareCloud\Model\RewardProperties $reward_properties reward_properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\RewardProperties $reward_properties reward_properties
      *
      * @return $this
      */

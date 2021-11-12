@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20079Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20079Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'recommended_best_rewards' => '\CareCloud\Model\RecommendedReward[]',
+        'recommended_best_rewards' => '\CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedReward[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20079Data implements ModelInterface, ArrayAccess
     /**
      * Gets recommended_best_rewards
      *
-     * @return \CareCloud\Model\RecommendedReward[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedReward[]
      */
     public function getRecommendedBestRewards()
     {
@@ -215,7 +215,7 @@ class InlineResponse20079Data implements ModelInterface, ArrayAccess
     /**
      * Sets recommended_best_rewards
      *
-     * @param \CareCloud\Model\RecommendedReward[] $recommended_best_rewards List of the best rewards for POS
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedReward[] $recommended_best_rewards List of the best rewards for POS
      *
      * @return $this
      */

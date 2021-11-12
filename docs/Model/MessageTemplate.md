@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **name** | **string** | Name of the message template | 
 **message_template_group_id** | **int** | The unique id of the message template group. *Possible values are: 1 - newsletter template / 2- system template(registration message, order summary message, etc.) / 3 - transactional communication(for hotel, traveling,...)* | 
 **comunication_channel_id** | **int** | The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* | 
-**template_data** | [**\CareCloud\Model\Parameter[]**](Parameter.md) | Template data could contains array of customized paramteres. They may have influence on template display or add values to template | [optional] 
+**template_data** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Parameter[]**](Parameter.md) | Template data could contains array of customized paramteres. They may have influence on template display or add values to template | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

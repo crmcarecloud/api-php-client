@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * TokensTokenIdBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class TokensTokenIdBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'setup' => '\CareCloud\Model\Setup',
+        'setup' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Setup',
 'push_token' => 'string'    ];
 
     /**
@@ -208,7 +208,7 @@ class TokensTokenIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets setup
      *
-     * @return \CareCloud\Model\Setup
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Setup
      */
     public function getSetup()
     {
@@ -218,7 +218,7 @@ class TokensTokenIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets setup
      *
-     * @param \CareCloud\Model\Setup $setup setup
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Setup $setup setup
      *
      * @return $this
      */

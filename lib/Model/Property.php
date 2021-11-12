@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Property Class Doc Comment
  *
  * @category Class
  * @description Property structure
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class Property implements ModelInterface, ArrayAccess
 'name' => 'string',
 'description' => 'string',
 'data_type' => 'string',
-'items' => '\CareCloud\Model\PropertyItem[]',
+'items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyItem[]',
 'is_required' => 'bool',
 'is_unique' => 'bool',
 'last_change' => 'string',
@@ -379,7 +379,7 @@ self::STATE_2,        ];
     /**
      * Gets items
      *
-     * @return \CareCloud\Model\PropertyItem[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyItem[]
      */
     public function getItems()
     {
@@ -389,7 +389,7 @@ self::STATE_2,        ];
     /**
      * Sets items
      *
-     * @param \CareCloud\Model\PropertyItem[] $items List of possible values. Used for multivalued data types ( like enum, multiselect)
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyItem[] $items List of possible values. Used for multivalued data types ( like enum, multiselect)
      *
      * @return $this
      */

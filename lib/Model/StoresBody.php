@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * StoresBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class StoresBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store' => '\CareCloud\Model\Store'    ];
+        'store' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Store'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class StoresBody implements ModelInterface, ArrayAccess
     /**
      * Gets store
      *
-     * @return \CareCloud\Model\Store
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Store
      */
     public function getStore()
     {
@@ -212,7 +212,7 @@ class StoresBody implements ModelInterface, ArrayAccess
     /**
      * Sets store
      *
-     * @param \CareCloud\Model\Store $store store
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Store $store store
      *
      * @return $this
      */

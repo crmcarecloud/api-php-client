@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * OrderShipping Class Doc Comment
  *
  * @category Class
  * @description Structure of OrderShipping. Contains neccessery data for shipping of the order
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class OrderShipping implements ModelInterface, ArrayAccess
 'contact_firstname' => 'string',
 'contact_lastname' => 'string',
 'phone' => 'string',
-'address' => '\CareCloud\Model\Address'    ];
+'address' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Address'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -323,7 +323,7 @@ class OrderShipping implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \CareCloud\Model\Address
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Address
      */
     public function getAddress()
     {
@@ -333,7 +333,7 @@ class OrderShipping implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \CareCloud\Model\Address $address address
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Address $address address
      *
      * @return $this
      */

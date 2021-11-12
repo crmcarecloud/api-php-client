@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * ActionsRecommendedbestrewardsBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class ActionsRecommendedbestrewardsBody implements ModelInterface, ArrayAccess
 'cashdesk_number' => 'string',
 'card_number' => 'string',
 'reward_list_type' => 'string',
-'bill' => '\CareCloud\Model\Bill'    ];
+'bill' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Bill'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -366,7 +366,7 @@ self::REWARD_LIST_TYPE_A,        ];
     /**
      * Gets bill
      *
-     * @return \CareCloud\Model\Bill
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Bill
      */
     public function getBill()
     {
@@ -376,7 +376,7 @@ self::REWARD_LIST_TYPE_A,        ];
     /**
      * Sets bill
      *
-     * @param \CareCloud\Model\Bill $bill bill
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Bill $bill bill
      *
      * @return $this
      */

@@ -1,4 +1,4 @@
-# CareCloud\CustomersActionsApi
+# CrmCareCloud\Webservice\RestApi\Client\CustomersActionsApi
 
 All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postCustomersVerifyAuthToken**](CustomersActionsApi.md#postcustomersverifyauthtoken) | **POST** /customers/actions/verify-auth-token | Verify auth token
 
 # **getCustomerSearch**
-> \CareCloud\Model\InlineResponse20028 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
 
 Search customers
 
@@ -21,15 +21,15 @@ Search all customers matching for parameters  <p class=\"warning\">⚠️ Action
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CustomersActionsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomerVerifyCredentials**
-> \CareCloud\Model\InlineResponse2016 postCustomerVerifyCredentials($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postCustomerVerifyCredentials($body)
 
 Customer credentials verification
 
@@ -89,21 +89,21 @@ Verification of a Customer account credentials  <p class=\"warning\">⚠️ Acti
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CustomersActionsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\ActionsVerifycredentialsBody(); // \CareCloud\Model\ActionsVerifycredentialsBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifycredentialsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifycredentialsBody | 
 
 try {
     $result = $apiInstance->postCustomerVerifyCredentials($body);
@@ -118,11 +118,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\ActionsVerifycredentialsBody**](../Model/ActionsVerifycredentialsBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifycredentialsBody**](../Model/ActionsVerifycredentialsBody.md)|  |
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomerVerifySocialNetworkCredentials**
-> \CareCloud\Model\InlineResponse2016 postCustomerVerifySocialNetworkCredentials($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postCustomerVerifySocialNetworkCredentials($body)
 
 Social network credentials verification
 
@@ -147,21 +147,21 @@ Verification of a Customer account Social network credentials  <p class=\"warnin
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CustomersActionsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\ActionsVerifysocialnetworkcredentialsBody(); // \CareCloud\Model\ActionsVerifysocialnetworkcredentialsBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifysocialnetworkcredentialsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifysocialnetworkcredentialsBody | 
 
 try {
     $result = $apiInstance->postCustomerVerifySocialNetworkCredentials($body);
@@ -176,11 +176,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\ActionsVerifysocialnetworkcredentialsBody**](../Model/ActionsVerifysocialnetworkcredentialsBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifysocialnetworkcredentialsBody**](../Model/ActionsVerifysocialnetworkcredentialsBody.md)|  |
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersVerifyAuthToken**
-> \CareCloud\Model\InlineResponse2016 postCustomersVerifyAuthToken($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postCustomersVerifyAuthToken($body)
 
 Verify auth token
 
@@ -205,21 +205,21 @@ Method verifies authentication token created by a specified application. There i
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CustomersActionsApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersActionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\ActionsVerifyauthtokenBody(); // \CareCloud\Model\ActionsVerifyauthtokenBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody | 
 
 try {
     $result = $apiInstance->postCustomersVerifyAuthToken($body);
@@ -234,11 +234,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\ActionsVerifyauthtokenBody**](../Model/ActionsVerifyauthtokenBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody**](../Model/ActionsVerifyauthtokenBody.md)|  |
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
 
 ### Authorization
 

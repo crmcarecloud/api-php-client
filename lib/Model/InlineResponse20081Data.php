@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20081Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'purchase_item_types' => '\CareCloud\Model\PurchaseItemType[]',
+        'purchase_item_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
     /**
      * Gets purchase_item_types
      *
-     * @return \CareCloud\Model\PurchaseItemType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[]
      */
     public function getPurchaseItemTypes()
     {
@@ -215,7 +215,7 @@ class InlineResponse20081Data implements ModelInterface, ArrayAccess
     /**
      * Sets purchase_item_types
      *
-     * @param \CareCloud\Model\PurchaseItemType[] $purchase_item_types List of the purchase item types
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[] $purchase_item_types List of the purchase item types
      *
      * @return $this
      */

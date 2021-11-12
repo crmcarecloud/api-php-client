@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **partner_id** | **string** | The unique id of the company | [optional] 
 **name** | **string** | Name of the company | 
-**address** | [**\CareCloud\Model\Address**](Address.md) |  | [optional] 
+**address** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Address**](Address.md) |  | [optional] 
 **registration_id** | **string** | Company registration number. National Registration unique id for the company. | [optional] 
 **vat_id** | **string** | VAT registration number. Value Added Tax unique id for the company. | [optional] 
 **email** | **string** | Email of the company | [optional] 

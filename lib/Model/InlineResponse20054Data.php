@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20054Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'orders' => '\CareCloud\Model\Order[]',
+        'orders' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Order[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
     /**
      * Gets orders
      *
-     * @return \CareCloud\Model\Order[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Order[]
      */
     public function getOrders()
     {
@@ -215,7 +215,7 @@ class InlineResponse20054Data implements ModelInterface, ArrayAccess
     /**
      * Sets orders
      *
-     * @param \CareCloud\Model\Order[] $orders Collection of the customer orders
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Order[] $orders Collection of the customer orders
      *
      * @return $this
      */

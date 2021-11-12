@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * SearchResult Class Doc Comment
  *
  * @category Class
  * @description Search result resource
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class SearchResult implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'search_result_string' => 'string',
 'resource_id' => 'string',
-'flags' => '\CareCloud\Model\Flag[]'    ];
+'flags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Flag[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -266,7 +266,7 @@ class SearchResult implements ModelInterface, ArrayAccess
     /**
      * Gets flags
      *
-     * @return \CareCloud\Model\Flag[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Flag[]
      */
     public function getFlags()
     {
@@ -276,7 +276,7 @@ class SearchResult implements ModelInterface, ArrayAccess
     /**
      * Sets flags
      *
-     * @param \CareCloud\Model\Flag[] $flags List of flags that identify result of the search
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Flag[] $flags List of flags that identify result of the search
      *
      * @return $this
      */

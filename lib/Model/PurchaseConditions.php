@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * PurchaseConditions Class Doc Comment
  *
  * @category Class
  * @description Structure contains purchase conditions of the status record
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class PurchaseConditions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'keep_status_turnover' => '\CareCloud\Model\QualificationTurnover[]',
-'next_status_turnover' => '\CareCloud\Model\QualificationTurnover[]',
+        'keep_status_turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]',
+'next_status_turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]',
 'next_status_id' => 'string'    ];
 
     /**
@@ -212,7 +212,7 @@ class PurchaseConditions implements ModelInterface, ArrayAccess
     /**
      * Gets keep_status_turnover
      *
-     * @return \CareCloud\Model\QualificationTurnover[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
      */
     public function getKeepStatusTurnover()
     {
@@ -222,7 +222,7 @@ class PurchaseConditions implements ModelInterface, ArrayAccess
     /**
      * Sets keep_status_turnover
      *
-     * @param \CareCloud\Model\QualificationTurnover[] $keep_status_turnover Missing turnover to keep current status in every active currency
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $keep_status_turnover Missing turnover to keep current status in every active currency
      *
      * @return $this
      */
@@ -236,7 +236,7 @@ class PurchaseConditions implements ModelInterface, ArrayAccess
     /**
      * Gets next_status_turnover
      *
-     * @return \CareCloud\Model\QualificationTurnover[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
      */
     public function getNextStatusTurnover()
     {
@@ -246,7 +246,7 @@ class PurchaseConditions implements ModelInterface, ArrayAccess
     /**
      * Sets next_status_turnover
      *
-     * @param \CareCloud\Model\QualificationTurnover[] $next_status_turnover Missing turnover to the next status in every active currency
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $next_status_turnover Missing turnover to the next status in every active currency
      *
      * @return $this
      */

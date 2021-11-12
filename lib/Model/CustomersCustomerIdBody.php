@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CustomersCustomerIdBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,9 +56,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer' => '\CareCloud\Model\Customer',
+        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
 'password' => 'string',
-'social_network_credentials' => '\CareCloud\Model\SocialNetworkCredentials'    ];
+'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -214,7 +214,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \CareCloud\Model\Customer
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
      */
     public function getCustomer()
     {
@@ -224,7 +224,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \CareCloud\Model\Customer $customer customer
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets social_network_credentials
      *
-     * @return \CareCloud\Model\SocialNetworkCredentials
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
      */
     public function getSocialNetworkCredentials()
     {
@@ -272,7 +272,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets social_network_credentials
      *
-     * @param \CareCloud\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
      *
      * @return $this
      */

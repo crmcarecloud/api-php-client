@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * ProductreservationsBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class ProductreservationsBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_reservation' => '\CareCloud\Model\ProductReservation'    ];
+        'product_reservation' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class ProductreservationsBody implements ModelInterface, ArrayAccess
     /**
      * Gets product_reservation
      *
-     * @return \CareCloud\Model\ProductReservation
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation
      */
     public function getProductReservation()
     {
@@ -212,7 +212,7 @@ class ProductreservationsBody implements ModelInterface, ArrayAccess
     /**
      * Sets product_reservation
      *
-     * @param \CareCloud\Model\ProductReservation $product_reservation product_reservation
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation $product_reservation product_reservation
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Agreement Class Doc Comment
  *
  * @category Class
  * @description Customer&#x27;s consents
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class Agreement implements ModelInterface, ArrayAccess
         'agreement_gtc' => 'int',
 'agreement_profiling' => 'int',
 'agreement_marketing_communication' => 'int',
-'custom_agreements' => '\CareCloud\Model\CustomAgreements[]'    ];
+'custom_agreements' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomAgreements[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -386,7 +386,7 @@ self::AGREEMENT_MARKETING_COMMUNICATION_2,        ];
     /**
      * Gets custom_agreements
      *
-     * @return \CareCloud\Model\CustomAgreements[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomAgreements[]
      */
     public function getCustomAgreements()
     {
@@ -396,7 +396,7 @@ self::AGREEMENT_MARKETING_COMMUNICATION_2,        ];
     /**
      * Sets custom_agreements
      *
-     * @param \CareCloud\Model\CustomAgreements[] $custom_agreements Custom agreements
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomAgreements[] $custom_agreements Custom agreements
      *
      * @return $this
      */

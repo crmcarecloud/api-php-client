@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20052Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'message_templates' => '\CareCloud\Model\MessageTemplate[]',
+        'message_templates' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
     /**
      * Gets message_templates
      *
-     * @return \CareCloud\Model\MessageTemplate[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]
      */
     public function getMessageTemplates()
     {
@@ -215,7 +215,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
     /**
      * Sets message_templates
      *
-     * @param \CareCloud\Model\MessageTemplate[] $message_templates List of all message templates
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[] $message_templates List of all message templates
      *
      * @return $this
      */

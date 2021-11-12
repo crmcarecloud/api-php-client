@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * OrdersBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class OrdersBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'order' => '\CareCloud\Model\Order'    ];
+        'order' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Order'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class OrdersBody implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return \CareCloud\Model\Order
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Order
      */
     public function getOrder()
     {
@@ -212,7 +212,7 @@ class OrdersBody implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param \CareCloud\Model\Order $order order
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Order $order order
      *
      * @return $this
      */

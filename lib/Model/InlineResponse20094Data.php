@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20094Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20094Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reward_properties' => '\CareCloud\Model\Property[]',
+        'reward_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20094Data implements ModelInterface, ArrayAccess
     /**
      * Gets reward_properties
      *
-     * @return \CareCloud\Model\Property[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
     public function getRewardProperties()
     {
@@ -215,7 +215,7 @@ class InlineResponse20094Data implements ModelInterface, ArrayAccess
     /**
      * Sets reward_properties
      *
-     * @param \CareCloud\Model\Property[] $reward_properties List of all reward properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $reward_properties List of all reward properties
      *
      * @return $this
      */

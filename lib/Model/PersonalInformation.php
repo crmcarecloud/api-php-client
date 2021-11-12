@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * PersonalInformation Class Doc Comment
  *
  * @category Class
  * @description Personal information of the customer
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,8 +66,8 @@ class PersonalInformation implements ModelInterface, ArrayAccess
 'language_id' => 'string',
 'store_id' => 'string',
 'photo_url' => 'string',
-'address' => '\CareCloud\Model\Address',
-'agreement' => '\CareCloud\Model\Agreement'    ];
+'address' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Address',
+'agreement' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -509,7 +509,7 @@ self::GENDER_2,        ];
     /**
      * Gets address
      *
-     * @return \CareCloud\Model\Address
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Address
      */
     public function getAddress()
     {
@@ -519,7 +519,7 @@ self::GENDER_2,        ];
     /**
      * Sets address
      *
-     * @param \CareCloud\Model\Address $address address
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Address $address address
      *
      * @return $this
      */
@@ -533,7 +533,7 @@ self::GENDER_2,        ];
     /**
      * Gets agreement
      *
-     * @return \CareCloud\Model\Agreement
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Agreement
      */
     public function getAgreement()
     {
@@ -543,7 +543,7 @@ self::GENDER_2,        ];
     /**
      * Sets agreement
      *
-     * @param \CareCloud\Model\Agreement $agreement agreement
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Agreement $agreement agreement
      *
      * @return $this
      */

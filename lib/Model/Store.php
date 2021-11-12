@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Store Class Doc Comment
  *
  * @category Class
  * @description Store structure
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,15 +60,15 @@ class Store implements ModelInterface, ArrayAccess
         'store_id' => 'string',
 'store_code' => 'string',
 'name' => 'string',
-'store_address' => '\CareCloud\Model\Address',
+'store_address' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Address',
 'contact_email' => 'string',
 'manager_name' => 'string',
 'phone_number' => 'string',
 'partner_id' => 'string',
 'system_id' => 'string',
-'gps_coordinates' => '\CareCloud\Model\GPSCoordinates',
+'gps_coordinates' => '\CrmCareCloud\Webservice\RestApi\Client\Model\GPSCoordinates',
 'url_address' => 'string',
-'opening' => '\CareCloud\Model\OpeningDay[]',
+'opening' => '\CrmCareCloud\Webservice\RestApi\Client\Model\OpeningDay[]',
 'image_urls' => 'string[]',
 'visibility_for_customer' => 'int',
 'short_description' => 'string',
@@ -439,7 +439,7 @@ self::STATE_2,        ];
     /**
      * Gets store_address
      *
-     * @return \CareCloud\Model\Address
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Address
      */
     public function getStoreAddress()
     {
@@ -449,7 +449,7 @@ self::STATE_2,        ];
     /**
      * Sets store_address
      *
-     * @param \CareCloud\Model\Address $store_address store_address
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Address $store_address store_address
      *
      * @return $this
      */
@@ -583,7 +583,7 @@ self::STATE_2,        ];
     /**
      * Gets gps_coordinates
      *
-     * @return \CareCloud\Model\GPSCoordinates
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GPSCoordinates
      */
     public function getGpsCoordinates()
     {
@@ -593,7 +593,7 @@ self::STATE_2,        ];
     /**
      * Sets gps_coordinates
      *
-     * @param \CareCloud\Model\GPSCoordinates $gps_coordinates gps_coordinates
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\GPSCoordinates $gps_coordinates gps_coordinates
      *
      * @return $this
      */
@@ -631,7 +631,7 @@ self::STATE_2,        ];
     /**
      * Gets opening
      *
-     * @return \CareCloud\Model\OpeningDay[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\OpeningDay[]
      */
     public function getOpening()
     {
@@ -641,7 +641,7 @@ self::STATE_2,        ];
     /**
      * Sets opening
      *
-     * @param \CareCloud\Model\OpeningDay[] $opening List of opening days
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\OpeningDay[] $opening List of opening days
      *
      * @return $this
      */

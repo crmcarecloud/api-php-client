@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20048Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'languages' => '\CareCloud\Model\Language[]',
+        'languages' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Language[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
     /**
      * Gets languages
      *
-     * @return \CareCloud\Model\Language[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Language[]
      */
     public function getLanguages()
     {
@@ -215,7 +215,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
     /**
      * Sets languages
      *
-     * @param \CareCloud\Model\Language[] $languages List of the language codes by ISO 639-1
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Language[] $languages List of the language codes by ISO 639-1
      *
      * @return $this
      */

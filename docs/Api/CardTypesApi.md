@@ -1,4 +1,4 @@
-# CareCloud\CardTypesApi
+# CrmCareCloud\Webservice\RestApi\Client\CardTypesApi
 
 All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**putCardType**](CardTypesApi.md#putcardtype) | **PUT** /card-types/{card_type_id} | Update a card type
 
 # **getCardType**
-> \CareCloud\Model\InlineResponse20011 getCardType($card_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011 getCardType($card_type_id, $accept_language)
 
 Get a card type
 
@@ -22,15 +22,15 @@ Get information about a specific customer card type
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CardTypesApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCardTypes**
-> \CareCloud\Model\InlineResponse20010 getCardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20010 getCardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get information about all card types
 
@@ -82,15 +82,15 @@ Get information about all card types as a list of all customer card types
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CardTypesApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCardTypeCards**
-> \CareCloud\Model\InlineResponse20012 getSubCardTypeCards($card_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $is_valid)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012 getSubCardTypeCards($card_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $is_valid)
 
 Get a collection of cards
 
@@ -150,15 +150,15 @@ Get information about all cards by card types resource
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CardTypesApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCardType**
-> \CareCloud\Model\InlineResponse2015 postCardType($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015 postCardType($body, $accept_language)
 
 Create a new card type
 
@@ -222,21 +222,21 @@ Add a new customer card type
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CardTypesApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\CardtypesBody(); // \CareCloud\Model\CardtypesBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CardtypesBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CardtypesBody | 
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -252,12 +252,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\CardtypesBody**](../Model/CardtypesBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CardtypesBody**](../Model/CardtypesBody.md)|  |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CareCloud\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
 
 ### Authorization
 
@@ -282,21 +282,21 @@ Update a specific customer card type
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basicAuth
-$config = CareCloud\Configuration::getDefaultConfiguration()
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
-    $config = CareCloud\Configuration::getDefaultConfiguration()
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CareCloud\Api\CardTypesApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CareCloud\Model\CardtypesCardTypeIdBody(); // \CareCloud\Model\CardtypesCardTypeIdBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CardtypesCardTypeIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CardtypesCardTypeIdBody | 
 $card_type_id = "card_type_id_example"; // string | The unique id for the card type
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
@@ -312,7 +312,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CareCloud\Model\CardtypesCardTypeIdBody**](../Model/CardtypesCardTypeIdBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CardtypesCardTypeIdBody**](../Model/CardtypesCardTypeIdBody.md)|  |
  **card_type_id** | **string**| The unique id for the card type |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * PaymentRecap Class Doc Comment
  *
  * @category Class
  * @description Alternative payment methods summary
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,8 +59,8 @@ class PaymentRecap implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'credit_points' => 'float',
 'amount_for_credit' => 'float',
-'vouchers' => '\CareCloud\Model\PaymentVoucher[]',
-'recommended_discounts' => '\CareCloud\Model\DiscountItem[]'    ];
+'vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[]',
+'recommended_discounts' => '\CrmCareCloud\Webservice\RestApi\Client\Model\DiscountItem[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -266,7 +266,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
     /**
      * Gets vouchers
      *
-     * @return \CareCloud\Model\PaymentVoucher[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[]
      */
     public function getVouchers()
     {
@@ -276,7 +276,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
     /**
      * Sets vouchers
      *
-     * @param \CareCloud\Model\PaymentVoucher[] $vouchers List of used vouchers for payment of bills
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[] $vouchers List of used vouchers for payment of bills
      *
      * @return $this
      */
@@ -290,7 +290,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
     /**
      * Gets recommended_discounts
      *
-     * @return \CareCloud\Model\DiscountItem[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\DiscountItem[]
      */
     public function getRecommendedDiscounts()
     {
@@ -300,7 +300,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
     /**
      * Sets recommended_discounts
      *
-     * @param \CareCloud\Model\DiscountItem[] $recommended_discounts List of applied discounts where the service did not use the voucher
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\DiscountItem[] $recommended_discounts List of applied discounts where the service did not use the voucher
      *
      * @return $this
      */

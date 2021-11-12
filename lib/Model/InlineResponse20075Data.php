@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20075Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'search_results' => '\CareCloud\Model\SearchResult[]',
+        'search_results' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SearchResult[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
     /**
      * Gets search_results
      *
-     * @return \CareCloud\Model\SearchResult[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SearchResult[]
      */
     public function getSearchResults()
     {
@@ -215,7 +215,7 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
     /**
      * Sets search_results
      *
-     * @param \CareCloud\Model\SearchResult[] $search_results List of the results
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SearchResult[] $search_results List of the results
      *
      * @return $this
      */

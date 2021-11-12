@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Product Class Doc Comment
  *
  * @category Class
  * @description Product resource
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class Product implements ModelInterface, ArrayAccess
 'external_id' => 'string',
 'product_group_id' => 'string',
 'product_brand_id' => 'string',
-'additional_properties' => '\CareCloud\Model\PropertyRecord[]',
+'additional_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
 'last_change' => 'string',
 'state' => 'int'    ];
 
@@ -424,7 +424,7 @@ self::STATE_2,        ];
     /**
      * Gets additional_properties
      *
-     * @return \CareCloud\Model\PropertyRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
      */
     public function getAdditionalProperties()
     {
@@ -434,7 +434,7 @@ self::STATE_2,        ];
     /**
      * Sets additional_properties
      *
-     * @param \CareCloud\Model\PropertyRecord[] $additional_properties List of additional properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $additional_properties List of additional properties
      *
      * @return $this
      */

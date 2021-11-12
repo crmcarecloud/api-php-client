@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse2006Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse2006Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'campaign_product_store_records' => '\CareCloud\Model\CampaignProductStoreRecord[]',
+        'campaign_product_store_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductStoreRecord[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse2006Data implements ModelInterface, ArrayAccess
     /**
      * Gets campaign_product_store_records
      *
-     * @return \CareCloud\Model\CampaignProductStoreRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductStoreRecord[]
      */
     public function getCampaignProductStoreRecords()
     {
@@ -215,7 +215,7 @@ class InlineResponse2006Data implements ModelInterface, ArrayAccess
     /**
      * Sets campaign_product_store_records
      *
-     * @param \CareCloud\Model\CampaignProductStoreRecord[] $campaign_product_store_records List of the campaign product store records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductStoreRecord[] $campaign_product_store_records List of the campaign product store records
      *
      * @return $this
      */

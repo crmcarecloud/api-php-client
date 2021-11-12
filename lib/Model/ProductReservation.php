@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * ProductReservation Class Doc Comment
  *
  * @category Class
  * @description Product reservation resource  &lt;p class&#x3D;\&quot;warning\&quot;&gt;⚠️Structure has to contain reservation codes or product reservation items&lt;/p&gt;
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,16 +61,16 @@ class ProductReservation implements ModelInterface, ArrayAccess
 'customer_id' => 'string',
 'store_id' => 'string',
 'reservation_codes' => 'string[]',
-'external_reservation_codes' => '\CareCloud\Model\ExternalCode[]',
+'external_reservation_codes' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ExternalCode[]',
 'benefit_codes' => 'string[]',
 'product_reservation_source_id' => 'string',
 'pickup_date' => 'string',
 'customers_note' => 'string',
 'total_price' => 'float',
 'currency_id' => 'string',
-'product_reservation_items' => '\CareCloud\Model\ProductReservationItem[]',
+'product_reservation_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationItem[]',
 'external_purchase_id' => 'string',
-'utm' => '\CareCloud\Model\UTM',
+'utm' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UTM',
 'actual_state' => 'int',
 'states' => 'string[]',
 'comments' => 'string[]',
@@ -471,7 +471,7 @@ self::STATE_2,        ];
     /**
      * Gets external_reservation_codes
      *
-     * @return \CareCloud\Model\ExternalCode[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalCode[]
      */
     public function getExternalReservationCodes()
     {
@@ -481,7 +481,7 @@ self::STATE_2,        ];
     /**
      * Sets external_reservation_codes
      *
-     * @param \CareCloud\Model\ExternalCode[] $external_reservation_codes List of external id codes. Id codes can have different sources. For the list of id sources please contact your account manager.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalCode[] $external_reservation_codes List of external id codes. Id codes can have different sources. For the list of id sources please contact your account manager.
      *
      * @return $this
      */
@@ -639,7 +639,7 @@ self::STATE_2,        ];
     /**
      * Gets product_reservation_items
      *
-     * @return \CareCloud\Model\ProductReservationItem[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationItem[]
      */
     public function getProductReservationItems()
     {
@@ -649,7 +649,7 @@ self::STATE_2,        ];
     /**
      * Sets product_reservation_items
      *
-     * @param \CareCloud\Model\ProductReservationItem[] $product_reservation_items List of the Product Reservation Items
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationItem[] $product_reservation_items List of the Product Reservation Items
      *
      * @return $this
      */
@@ -687,7 +687,7 @@ self::STATE_2,        ];
     /**
      * Gets utm
      *
-     * @return \CareCloud\Model\UTM
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\UTM
      */
     public function getUtm()
     {
@@ -697,7 +697,7 @@ self::STATE_2,        ];
     /**
      * Sets utm
      *
-     * @param \CareCloud\Model\UTM $utm utm
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\UTM $utm utm
      *
      * @return $this
      */

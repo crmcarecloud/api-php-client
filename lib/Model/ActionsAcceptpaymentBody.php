@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * ActionsAcceptpaymentBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class ActionsAcceptpaymentBody implements ModelInterface, ArrayAccess
 'max_points' => 'string',
 'max_credit' => 'string',
 'benefit_codes' => 'string[]',
-'bill' => '\CareCloud\Model\Bill'    ];
+'bill' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Bill'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -451,7 +451,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Gets bill
      *
-     * @return \CareCloud\Model\Bill
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Bill
      */
     public function getBill()
     {
@@ -461,7 +461,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Sets bill
      *
-     * @param \CareCloud\Model\Bill $bill bill
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Bill $bill bill
      *
      * @return $this
      */

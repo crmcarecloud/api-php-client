@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20031Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer_external_applications' => '\CareCloud\Model\ExternalApplication[]',
+        'customer_external_applications' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
     /**
      * Gets customer_external_applications
      *
-     * @return \CareCloud\Model\ExternalApplication[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[]
      */
     public function getCustomerExternalApplications()
     {
@@ -215,7 +215,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
     /**
      * Sets customer_external_applications
      *
-     * @param \CareCloud\Model\ExternalApplication[] $customer_external_applications List of the customer external applications
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[] $customer_external_applications List of the customer external applications
      *
      * @return $this
      */

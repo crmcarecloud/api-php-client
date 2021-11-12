@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Api;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CareCloud\ApiException;
-use CareCloud\Configuration;
-use CareCloud\HeaderSelector;
-use CareCloud\ObjectSerializer;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * UsersApi Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class UsersApi
      * @param  string $user_id The unique id of the user (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200111
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111
      */
     public function getUser($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,13 +112,13 @@ class UsersApi
      * @param  string $user_id The unique id of the user (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200111, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserWithHttpInfo($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200111';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111';
         $request = $this->getUserRequest($user_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200111',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class UsersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class UsersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class UsersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class UsersApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class UsersApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class UsersApi
      */
     public function getUserAsyncWithHttpInfo($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200111';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111';
         $request = $this->getUserRequest($user_id, $accept_language);
 
         return $this->client
@@ -421,9 +421,9 @@ class UsersApi
      * @param  string $first_name Search by first name (optional)
      * @param  string $last_name Search by last name (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200110
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110
      */
     public function getUsers($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null)
     {
@@ -447,13 +447,13 @@ class UsersApi
      * @param  string $first_name Search by first name (optional)
      * @param  string $last_name Search by last name (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200110, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUsersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200110';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110';
         $request = $this->getUsersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name);
 
         try {
@@ -505,7 +505,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200110',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class UsersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -521,7 +521,7 @@ class UsersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -529,7 +529,7 @@ class UsersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -537,7 +537,7 @@ class UsersApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class UsersApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -605,7 +605,7 @@ class UsersApi
      */
     public function getUsersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200110';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110';
         $request = $this->getUsersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name);
 
         return $this->client
@@ -791,12 +791,12 @@ class UsersApi
      *
      * User login
      *
-     * @param  \CareCloud\Model\ActionsLoginBody1 $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody1 $body body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200113
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113
      */
     public function postUserLogin($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -809,16 +809,16 @@ class UsersApi
      *
      * User login
      *
-     * @param  \CareCloud\Model\ActionsLoginBody1 $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody1 $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200113, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserLoginWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200113';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113';
         $request = $this->postUserLoginRequest($body, $accept_language);
 
         try {
@@ -870,7 +870,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200113',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -878,7 +878,7 @@ class UsersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -886,7 +886,7 @@ class UsersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -894,7 +894,7 @@ class UsersApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -902,7 +902,7 @@ class UsersApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -917,7 +917,7 @@ class UsersApi
      *
      * User login
      *
-     * @param  \CareCloud\Model\ActionsLoginBody1 $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody1 $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -938,7 +938,7 @@ class UsersApi
      *
      * User login
      *
-     * @param  \CareCloud\Model\ActionsLoginBody1 $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody1 $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -946,7 +946,7 @@ class UsersApi
      */
     public function postUserLoginAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200113';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113';
         $request = $this->postUserLoginRequest($body, $accept_language);
 
         return $this->client
@@ -989,7 +989,7 @@ class UsersApi
     /**
      * Create request for operation 'postUserLogin'
      *
-     * @param  \CareCloud\Model\ActionsLoginBody1 $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody1 $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1089,10 +1089,10 @@ class UsersApi
      *
      * User logout
      *
-     * @param  \CareCloud\Model\ActionsLogoutBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLogoutBody $body body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1106,10 +1106,10 @@ class UsersApi
      *
      * User logout
      *
-     * @param  \CareCloud\Model\ActionsLogoutBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLogoutBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1153,7 +1153,7 @@ class UsersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1161,7 +1161,7 @@ class UsersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1169,7 +1169,7 @@ class UsersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1177,7 +1177,7 @@ class UsersApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1185,7 +1185,7 @@ class UsersApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1200,7 +1200,7 @@ class UsersApi
      *
      * User logout
      *
-     * @param  \CareCloud\Model\ActionsLogoutBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLogoutBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1221,7 +1221,7 @@ class UsersApi
      *
      * User logout
      *
-     * @param  \CareCloud\Model\ActionsLogoutBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLogoutBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1258,7 +1258,7 @@ class UsersApi
     /**
      * Create request for operation 'postUserLogout'
      *
-     * @param  \CareCloud\Model\ActionsLogoutBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLogoutBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1366,12 +1366,12 @@ class UsersApi
      *
      * User SSO login
      *
-     * @param  \CareCloud\Model\ActionsSsologinBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSsologinBody $body body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200114
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114
      */
     public function postUserSsoLogin($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1384,16 +1384,16 @@ class UsersApi
      *
      * User SSO login
      *
-     * @param  \CareCloud\Model\ActionsSsologinBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSsologinBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200114, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserSsoLoginWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200114';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114';
         $request = $this->postUserSsoLoginRequest($body, $accept_language);
 
         try {
@@ -1445,7 +1445,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200114',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1453,7 +1453,7 @@ class UsersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1461,7 +1461,7 @@ class UsersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1469,7 +1469,7 @@ class UsersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1477,7 +1477,7 @@ class UsersApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1485,7 +1485,7 @@ class UsersApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1500,7 +1500,7 @@ class UsersApi
      *
      * User SSO login
      *
-     * @param  \CareCloud\Model\ActionsSsologinBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSsologinBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1521,7 +1521,7 @@ class UsersApi
      *
      * User SSO login
      *
-     * @param  \CareCloud\Model\ActionsSsologinBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSsologinBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1529,7 +1529,7 @@ class UsersApi
      */
     public function postUserSsoLoginAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200114';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114';
         $request = $this->postUserSsoLoginRequest($body, $accept_language);
 
         return $this->client
@@ -1572,7 +1572,7 @@ class UsersApi
     /**
      * Create request for operation 'postUserSsoLogin'
      *
-     * @param  \CareCloud\Model\ActionsSsologinBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSsologinBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1672,11 +1672,11 @@ class UsersApi
      *
      * Verify user auth token
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody1 $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody1 $body body (required)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200112
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112
      */
     public function postUserVerifyAuthToken($body)
     {
@@ -1689,15 +1689,15 @@ class UsersApi
      *
      * Verify user auth token
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody1 $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody1 $body (required)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200112, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserVerifyAuthTokenWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200112';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112';
         $request = $this->postUserVerifyAuthTokenRequest($body);
 
         try {
@@ -1749,7 +1749,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200112',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1757,7 +1757,7 @@ class UsersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1765,7 +1765,7 @@ class UsersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1773,7 +1773,7 @@ class UsersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1781,7 +1781,7 @@ class UsersApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1789,7 +1789,7 @@ class UsersApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1804,7 +1804,7 @@ class UsersApi
      *
      * Verify user auth token
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody1 $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody1 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1824,14 +1824,14 @@ class UsersApi
      *
      * Verify user auth token
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody1 $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody1 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postUserVerifyAuthTokenAsyncWithHttpInfo($body)
     {
-        $returnType = '\CareCloud\Model\InlineResponse200112';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112';
         $request = $this->postUserVerifyAuthTokenRequest($body);
 
         return $this->client
@@ -1874,7 +1874,7 @@ class UsersApi
     /**
      * Create request for operation 'postUserVerifyAuthToken'
      *
-     * @param  \CareCloud\Model\ActionsVerifyauthtokenBody1 $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyauthtokenBody1 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

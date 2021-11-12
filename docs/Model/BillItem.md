@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**plu_ids** | [**\CareCloud\Model\PluId[]**](PluId.md) | An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id for every product across all POS systems)) | 
+**plu_ids** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PluId[]**](PluId.md) | An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id for every product across all POS systems)) | 
 **plu_name** | **string** | Product name | 
 **category_plu_id** | **string** | Product category ID from Global product list (consist cleaned data - unique id for every category across all POS systems) | 
 **vat_rate** | **float** | VAT rate of the item | 

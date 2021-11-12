@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse200Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'agreements' => '\CareCloud\Model\AgreementList[]',
+        'agreements' => '\CrmCareCloud\Webservice\RestApi\Client\Model\AgreementList[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
     /**
      * Gets agreements
      *
-     * @return \CareCloud\Model\AgreementList[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\AgreementList[]
      */
     public function getAgreements()
     {
@@ -215,7 +215,7 @@ class InlineResponse200Data implements ModelInterface, ArrayAccess
     /**
      * Sets agreements
      *
-     * @param \CareCloud\Model\AgreementList[] $agreements List of the agreements
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\AgreementList[] $agreements List of the agreements
      *
      * @return $this
      */

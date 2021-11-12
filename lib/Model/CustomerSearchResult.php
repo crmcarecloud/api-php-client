@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CustomerSearchResult Class Doc Comment
  *
  * @category Class
  * @description Result of the search
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class CustomerSearchResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'strict' => '\CareCloud\Model\CustomerResult[]'    ];
+        'strict' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerResult[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -200,7 +200,7 @@ class CustomerSearchResult implements ModelInterface, ArrayAccess
     /**
      * Gets strict
      *
-     * @return \CareCloud\Model\CustomerResult[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerResult[]
      */
     public function getStrict()
     {
@@ -210,7 +210,7 @@ class CustomerSearchResult implements ModelInterface, ArrayAccess
     /**
      * Sets strict
      *
-     * @param \CareCloud\Model\CustomerResult[] $strict Search results for strict mode
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerResult[] $strict Search results for strict mode
      *
      * @return $this
      */

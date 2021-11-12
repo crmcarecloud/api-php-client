@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **language_id** | **string** | The unique id for the language by ISO 639 code | 
 **store_id** | **string** | The unique id for the original customer account store of registration | [optional] 
 **photo_url** | **string** | URL address of the customer photo. If customer has no photo, this parameter is not send | [optional] 
-**address** | [**\CareCloud\Model\Address**](Address.md) |  | [optional] 
-**agreement** | [**\CareCloud\Model\Agreement**](Agreement.md) |  | [optional] 
+**address** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Address**](Address.md) |  | [optional] 
+**agreement** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement**](Agreement.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

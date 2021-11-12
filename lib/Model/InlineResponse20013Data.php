@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20013Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'countries' => '\CareCloud\Model\InlineResponse20013DataCountries[]',
+        'countries' => '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013DataCountries[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
     /**
      * Gets countries
      *
-     * @return \CareCloud\Model\InlineResponse20013DataCountries[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013DataCountries[]
      */
     public function getCountries()
     {
@@ -215,7 +215,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
     /**
      * Sets countries
      *
-     * @param \CareCloud\Model\InlineResponse20013DataCountries[] $countries List of the countries
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013DataCountries[] $countries List of the countries
      *
      * @return $this
      */

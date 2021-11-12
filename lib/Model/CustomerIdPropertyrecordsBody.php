@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CustomerIdPropertyrecordsBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class CustomerIdPropertyrecordsBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'property_record' => '\CareCloud\Model\PropertyRecord'    ];
+        'property_record' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class CustomerIdPropertyrecordsBody implements ModelInterface, ArrayAccess
     /**
      * Gets property_record
      *
-     * @return \CareCloud\Model\PropertyRecord
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord
      */
     public function getPropertyRecord()
     {
@@ -212,7 +212,7 @@ class CustomerIdPropertyrecordsBody implements ModelInterface, ArrayAccess
     /**
      * Sets property_record
      *
-     * @param \CareCloud\Model\PropertyRecord $property_record property_record
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord $property_record property_record
      *
      * @return $this
      */

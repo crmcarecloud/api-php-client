@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20070Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20070Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_reservations' => '\CareCloud\Model\ProductReservation[]',
+        'product_reservations' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20070Data implements ModelInterface, ArrayAccess
     /**
      * Gets product_reservations
      *
-     * @return \CareCloud\Model\ProductReservation[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation[]
      */
     public function getProductReservations()
     {
@@ -215,7 +215,7 @@ class InlineResponse20070Data implements ModelInterface, ArrayAccess
     /**
      * Sets product_reservations
      *
-     * @param \CareCloud\Model\ProductReservation[] $product_reservations List of the product reservations
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation[] $product_reservations List of the product reservations
      *
      * @return $this
      */

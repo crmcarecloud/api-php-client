@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Api;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CareCloud\ApiException;
-use CareCloud\Configuration;
-use CareCloud\HeaderSelector;
-use CareCloud\ObjectSerializer;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * SkipassesApi Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class SkipassesApi
      * @param  string $skipass_id The unique id of the skipass (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20098
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098
      */
     public function getSkipass($skipass_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,13 +112,13 @@ class SkipassesApi
      * @param  string $skipass_id The unique id of the skipass (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20098, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSkipassWithHttpInfo($skipass_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20098';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098';
         $request = $this->getSkipassRequest($skipass_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class SkipassesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20098',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class SkipassesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class SkipassesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class SkipassesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class SkipassesApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class SkipassesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class SkipassesApi
      */
     public function getSkipassAsyncWithHttpInfo($skipass_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20098';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098';
         $request = $this->getSkipassRequest($skipass_id, $accept_language);
 
         return $this->client
@@ -428,9 +428,9 @@ class SkipassesApi
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  bool $is_cancelled Filter for canceled skipasses. *Possible values: true - all cancelled skipasses / false - all non cancelled skipasses / no value - all skipasses* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20097
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097
      */
     public function getSkipasses($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $skipass_type_id = null, $state = null, $external_skipass_id = null, $is_valid = null, $is_cancelled = null)
     {
@@ -461,13 +461,13 @@ class SkipassesApi
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  bool $is_cancelled Filter for canceled skipasses. *Possible values: true - all cancelled skipasses / false - all non cancelled skipasses / no value - all skipasses* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20097, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSkipassesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $skipass_type_id = null, $state = null, $external_skipass_id = null, $is_valid = null, $is_cancelled = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20097';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097';
         $request = $this->getSkipassesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled);
 
         try {
@@ -519,7 +519,7 @@ class SkipassesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20097',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -527,7 +527,7 @@ class SkipassesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -535,7 +535,7 @@ class SkipassesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -543,7 +543,7 @@ class SkipassesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -551,7 +551,7 @@ class SkipassesApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -559,7 +559,7 @@ class SkipassesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -633,7 +633,7 @@ class SkipassesApi
      */
     public function getSkipassesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $skipass_type_id = null, $state = null, $external_skipass_id = null, $is_valid = null, $is_cancelled = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20097';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097';
         $request = $this->getSkipassesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled);
 
         return $this->client
@@ -858,9 +858,9 @@ class SkipassesApi
      * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
      * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20099
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099
      */
     public function getSkipassesOverview($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null)
     {
@@ -877,13 +877,13 @@ class SkipassesApi
      * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
      * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20099, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSkipassesOverviewWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20099';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099';
         $request = $this->getSkipassesOverviewRequest($accept_language, $valid_from, $valid_to);
 
         try {
@@ -935,7 +935,7 @@ class SkipassesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20099',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -943,7 +943,7 @@ class SkipassesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -951,7 +951,7 @@ class SkipassesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -959,7 +959,7 @@ class SkipassesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -967,7 +967,7 @@ class SkipassesApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -975,7 +975,7 @@ class SkipassesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1021,7 +1021,7 @@ class SkipassesApi
      */
     public function getSkipassesOverviewAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse20099';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099';
         $request = $this->getSkipassesOverviewRequest($accept_language, $valid_from, $valid_to);
 
         return $this->client
@@ -1172,11 +1172,11 @@ class SkipassesApi
      *
      * Update a skipass
      *
-     * @param  \CareCloud\Model\SkipassesSkipassIdBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\SkipassesSkipassIdBody $body body (required)
      * @param  string $skipass_id The unique id of the skipass (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1190,11 +1190,11 @@ class SkipassesApi
      *
      * Update a skipass
      *
-     * @param  \CareCloud\Model\SkipassesSkipassIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\SkipassesSkipassIdBody $body (required)
      * @param  string $skipass_id The unique id of the skipass (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1238,7 +1238,7 @@ class SkipassesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1246,7 +1246,7 @@ class SkipassesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1254,7 +1254,7 @@ class SkipassesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1262,7 +1262,7 @@ class SkipassesApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1270,7 +1270,7 @@ class SkipassesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1285,7 +1285,7 @@ class SkipassesApi
      *
      * Update a skipass
      *
-     * @param  \CareCloud\Model\SkipassesSkipassIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\SkipassesSkipassIdBody $body (required)
      * @param  string $skipass_id The unique id of the skipass (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1307,7 +1307,7 @@ class SkipassesApi
      *
      * Update a skipass
      *
-     * @param  \CareCloud\Model\SkipassesSkipassIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\SkipassesSkipassIdBody $body (required)
      * @param  string $skipass_id The unique id of the skipass (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1345,7 +1345,7 @@ class SkipassesApi
     /**
      * Create request for operation 'putSkipass'
      *
-     * @param  \CareCloud\Model\SkipassesSkipassIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\SkipassesSkipassIdBody $body (required)
      * @param  string $skipass_id The unique id of the skipass (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *

@@ -6,15 +6,15 @@ Name | Type | Description | Notes
 **store_id** | **string** | The unique id of the store in CareCloud | 
 **store_code** | **string** | External code of the store | 
 **name** | **string** | Name of the store | 
-**store_address** | [**\CareCloud\Model\Address**](Address.md) |  | [optional] 
+**store_address** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Address**](Address.md) |  | [optional] 
 **contact_email** | **string** | Contact email of the store | [optional] 
 **manager_name** | **string** | Name of the store manager | [optional] 
 **phone_number** | **string** | Phone number of the store with international prefix (420000000) | [optional] 
 **partner_id** | **string** | The unique id for the partner | 
 **system_id** | **string** | The external unique id of the store in external system | 
-**gps_coordinates** | [**\CareCloud\Model\GPSCoordinates**](GPSCoordinates.md) |  | [optional] 
+**gps_coordinates** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\GPSCoordinates**](GPSCoordinates.md) |  | [optional] 
 **url_address** | **string** | URL address of the store | [optional] 
-**opening** | [**\CareCloud\Model\OpeningDay[]**](OpeningDay.md) | List of opening days | [optional] 
+**opening** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\OpeningDay[]**](OpeningDay.md) | List of opening days | [optional] 
 **image_urls** | **string[]** | A list of image URL addresses | [optional] 
 **visibility_for_customer** | **int** | State of the visibility for the customer *Possible values are: 0 - invisible / 1- visible* | [optional] 
 **short_description** | **string** | Short description of the store | [optional] 

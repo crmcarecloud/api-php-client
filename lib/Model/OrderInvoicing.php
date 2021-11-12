@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * OrderInvoicing Class Doc Comment
  *
  * @category Class
  * @description Structure of OrderInvoicing. Contains neccessery data for invoicing of the order
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class OrderInvoicing implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'payment_id' => 'string',
 'paid_date' => 'string',
-'personal_information' => '\CareCloud\Model\PersonalInformation'    ];
+'personal_information' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PersonalInformation'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -263,7 +263,7 @@ class OrderInvoicing implements ModelInterface, ArrayAccess
     /**
      * Gets personal_information
      *
-     * @return \CareCloud\Model\PersonalInformation
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PersonalInformation
      */
     public function getPersonalInformation()
     {
@@ -273,7 +273,7 @@ class OrderInvoicing implements ModelInterface, ArrayAccess
     /**
      * Sets personal_information
      *
-     * @param \CareCloud\Model\PersonalInformation $personal_information personal_information
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PersonalInformation $personal_information personal_information
      *
      * @return $this
      */

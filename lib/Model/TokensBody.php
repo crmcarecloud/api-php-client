@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * TokensBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class TokensBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'device' => '\CareCloud\Model\Device',
-'setup' => '\CareCloud\Model\Setup',
+        'device' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Device',
+'setup' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Setup',
 'external_application_id' => 'string',
 'push_token' => 'string'    ];
 
@@ -226,7 +226,7 @@ class TokensBody implements ModelInterface, ArrayAccess
     /**
      * Gets device
      *
-     * @return \CareCloud\Model\Device
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Device
      */
     public function getDevice()
     {
@@ -236,7 +236,7 @@ class TokensBody implements ModelInterface, ArrayAccess
     /**
      * Sets device
      *
-     * @param \CareCloud\Model\Device $device device
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Device $device device
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class TokensBody implements ModelInterface, ArrayAccess
     /**
      * Gets setup
      *
-     * @return \CareCloud\Model\Setup
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Setup
      */
     public function getSetup()
     {
@@ -260,7 +260,7 @@ class TokensBody implements ModelInterface, ArrayAccess
     /**
      * Sets setup
      *
-     * @param \CareCloud\Model\Setup $setup setup
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Setup $setup setup
      *
      * @return $this
      */

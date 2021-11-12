@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20077Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'purchase_items' => '\CareCloud\Model\PurchaseItem[]',
+        'purchase_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItem[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
     /**
      * Gets purchase_items
      *
-     * @return \CareCloud\Model\PurchaseItem[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItem[]
      */
     public function getPurchaseItems()
     {
@@ -215,7 +215,7 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
     /**
      * Sets purchase_items
      *
-     * @param \CareCloud\Model\PurchaseItem[] $purchase_items List of purchase items tied to a purchase
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItem[] $purchase_items List of purchase items tied to a purchase
      *
      * @return $this
      */

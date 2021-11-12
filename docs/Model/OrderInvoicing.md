@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **payment_id** | **string** | The unique id of the payment | 
 **paid_date** | **string** | Date and time of the order payment *(YYYY-MM-DD HH:MM:SS)* | [optional] 
-**personal_information** | [**\CareCloud\Model\PersonalInformation**](PersonalInformation.md) |  | [optional] 
+**personal_information** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PersonalInformation**](PersonalInformation.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

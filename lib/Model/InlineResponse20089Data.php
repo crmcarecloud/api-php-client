@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20089Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20089Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'vouchers' => '\CareCloud\Model\Voucher[]',
+        'vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20089Data implements ModelInterface, ArrayAccess
     /**
      * Gets vouchers
      *
-     * @return \CareCloud\Model\Voucher[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]
      */
     public function getVouchers()
     {
@@ -215,7 +215,7 @@ class InlineResponse20089Data implements ModelInterface, ArrayAccess
     /**
      * Sets vouchers
      *
-     * @param \CareCloud\Model\Voucher[] $vouchers List of vouchers tied to a reward
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[] $vouchers List of vouchers tied to a reward
      *
      * @return $this
      */

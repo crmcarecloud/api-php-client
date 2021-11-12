@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * MessageTemplate Class Doc Comment
  *
  * @category Class
  * @description Message template resource
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,7 +64,7 @@ class MessageTemplate implements ModelInterface, ArrayAccess
 'name' => 'string',
 'message_template_group_id' => 'int',
 'comunication_channel_id' => 'int',
-'template_data' => '\CareCloud\Model\Parameter[]',
+'template_data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Parameter[]',
 'last_change' => 'string'    ];
 
     /**
@@ -497,7 +497,7 @@ self::COMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Gets template_data
      *
-     * @return \CareCloud\Model\Parameter[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Parameter[]
      */
     public function getTemplateData()
     {
@@ -507,7 +507,7 @@ self::COMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets template_data
      *
-     * @param \CareCloud\Model\Parameter[] $template_data Template data could contains array of customized paramteres. They may have influence on template display or add values to template
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Parameter[] $template_data Template data could contains array of customized paramteres. They may have influence on template display or add values to template
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CustomersBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,11 +56,11 @@ class CustomersBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer' => '\CareCloud\Model\Customer',
-'customer_source' => '\CareCloud\Model\CustomerSourceRecord',
+        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
+'customer_source' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord',
 'password' => 'string',
 'autologin' => 'bool',
-'social_network_credentials' => '\CareCloud\Model\SocialNetworkCredentials'    ];
+'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -232,7 +232,7 @@ class CustomersBody implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \CareCloud\Model\Customer
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
      */
     public function getCustomer()
     {
@@ -242,7 +242,7 @@ class CustomersBody implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \CareCloud\Model\Customer $customer customer
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
      *
      * @return $this
      */
@@ -256,7 +256,7 @@ class CustomersBody implements ModelInterface, ArrayAccess
     /**
      * Gets customer_source
      *
-     * @return \CareCloud\Model\CustomerSourceRecord
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord
      */
     public function getCustomerSource()
     {
@@ -266,7 +266,7 @@ class CustomersBody implements ModelInterface, ArrayAccess
     /**
      * Sets customer_source
      *
-     * @param \CareCloud\Model\CustomerSourceRecord $customer_source customer_source
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord $customer_source customer_source
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class CustomersBody implements ModelInterface, ArrayAccess
     /**
      * Gets social_network_credentials
      *
-     * @return \CareCloud\Model\SocialNetworkCredentials
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
      */
     public function getSocialNetworkCredentials()
     {
@@ -338,7 +338,7 @@ class CustomersBody implements ModelInterface, ArrayAccess
     /**
      * Sets social_network_credentials
      *
-     * @param \CareCloud\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
      *
      * @return $this
      */

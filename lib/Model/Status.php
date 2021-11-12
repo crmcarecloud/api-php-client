@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Status Class Doc Comment
  *
  * @category Class
  * @description Status record
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class Status implements ModelInterface, ArrayAccess
 'name' => 'string',
 'description' => 'string',
 'qualification_period' => 'int',
-'qualification_turnover' => '\CareCloud\Model\QualificationTurnover[]',
+'qualification_turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]',
 'previous_status' => 'string',
 'next_status' => 'string',
 'validity_period' => 'string',
@@ -389,7 +389,7 @@ class Status implements ModelInterface, ArrayAccess
     /**
      * Gets qualification_turnover
      *
-     * @return \CareCloud\Model\QualificationTurnover[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
      */
     public function getQualificationTurnover()
     {
@@ -399,7 +399,7 @@ class Status implements ModelInterface, ArrayAccess
     /**
      * Sets qualification_turnover
      *
-     * @param \CareCloud\Model\QualificationTurnover[] $qualification_turnover The turnover necessary to be met to qualify for the status based on defined conditions.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $qualification_turnover The turnover necessary to be met to qualify for the status based on defined conditions.
      *
      * @return $this
      */

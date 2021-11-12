@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20083Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'recommendations' => '\CareCloud\Model\Recommendation[]',
+        'recommendations' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
     /**
      * Gets recommendations
      *
-     * @return \CareCloud\Model\Recommendation[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[]
      */
     public function getRecommendations()
     {
@@ -215,7 +215,7 @@ class InlineResponse20083Data implements ModelInterface, ArrayAccess
     /**
      * Sets recommendations
      *
-     * @param \CareCloud\Model\Recommendation[] $recommendations List of recommendations
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[] $recommendations List of recommendations
      *
      * @return $this
      */

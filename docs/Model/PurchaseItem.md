@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **price** | **float** | Price of the purchase item | 
 **amount** | **float** | Amount of the purchase item | 
 **vat_rate** | **float** | The rate of an item VAT | 
-**additional_properties** | [**\CareCloud\Model\PropertyRecord[]**](PropertyRecord.md) | List of additional properties | [optional] 
+**additional_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of additional properties | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * Message Class Doc Comment
  *
  * @category Class
  * @description Message resource
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -68,7 +68,7 @@ class Message implements ModelInterface, ArrayAccess
 'mail_client_user_agent' => 'string',
 'mail_client_language' => 'string',
 'communication_channel_id' => 'int',
-'message_data' => '\CareCloud\Model\Parameter[]',
+'message_data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Parameter[]',
 'last_change' => 'string'    ];
 
     /**
@@ -615,7 +615,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Gets message_data
      *
-     * @return \CareCloud\Model\Parameter[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Parameter[]
      */
     public function getMessageData()
     {
@@ -625,7 +625,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets message_data
      *
-     * @param \CareCloud\Model\Parameter[] $message_data Message data could contains array of customized paramteres. They may have influence on message display or add values to message
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Parameter[] $message_data Message data could contains array of customized paramteres. They may have influence on message display or add values to message
      *
      * @return $this
      */

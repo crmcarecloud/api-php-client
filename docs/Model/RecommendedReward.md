@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **reward_priority** | **int** | Priority of the reward *1 - highest, 9 - lowest* | [optional] 
 **max_count** | **int** | Maximum number of the reward applications | [optional] 
 **description** | **string** | Reward description | [optional] 
-**reward_properties** | [**\CareCloud\Model\RewardProperties**](RewardProperties.md) |  | [optional] 
+**reward_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RewardProperties**](RewardProperties.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse200110Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse200110Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'users' => '\CareCloud\Model\User[]',
+        'users' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse200110Data implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \CareCloud\Model\User[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User[]
      */
     public function getUsers()
     {
@@ -215,7 +215,7 @@ class InlineResponse200110Data implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \CareCloud\Model\User[] $users Array of users
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User[] $users Array of users
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CustomerIdInterestrecordsBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class CustomerIdInterestrecordsBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'interest_record' => '\CareCloud\Model\InterestRecord'    ];
+        'interest_record' => '\CrmCareCloud\Webservice\RestApi\Client\Model\InterestRecord'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class CustomerIdInterestrecordsBody implements ModelInterface, ArrayAccess
     /**
      * Gets interest_record
      *
-     * @return \CareCloud\Model\InterestRecord
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InterestRecord
      */
     public function getInterestRecord()
     {
@@ -212,7 +212,7 @@ class CustomerIdInterestrecordsBody implements ModelInterface, ArrayAccess
     /**
      * Sets interest_record
      *
-     * @param \CareCloud\Model\InterestRecord $interest_record interest_record
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\InterestRecord $interest_record interest_record
      *
      * @return $this
      */

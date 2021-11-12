@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * ActionsSendpurchaseBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
 'cashdesk_number' => 'string',
 'card_number' => 'string',
 'customer_id' => 'string',
-'bill' => '\CareCloud\Model\FinalBill'    ];
+'bill' => '\CrmCareCloud\Webservice\RestApi\Client\Model\FinalBill'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -328,7 +328,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
     /**
      * Gets bill
      *
-     * @return \CareCloud\Model\FinalBill
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\FinalBill
      */
     public function getBill()
     {
@@ -338,7 +338,7 @@ class ActionsSendpurchaseBody implements ModelInterface, ArrayAccess
     /**
      * Sets bill
      *
-     * @param \CareCloud\Model\FinalBill $bill bill
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\FinalBill $bill bill
      *
      * @return $this
      */

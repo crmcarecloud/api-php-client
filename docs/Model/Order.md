@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **currency_id** | **string** | Id of currency | 
 **total_price** | **float** | Total price of the order | 
 **discount_codes** | **string[]** | Discount codes used in order | [optional] 
-**order_items** | [**\CareCloud\Model\OrderItem[]**](OrderItem.md) | List of the OrderItems | 
-**invoicing_data** | [**\CareCloud\Model\OrderInvoicing**](OrderInvoicing.md) |  | 
-**shipping_data** | [**\CareCloud\Model\OrderShipping**](OrderShipping.md) |  | [optional] 
+**order_items** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\OrderItem[]**](OrderItem.md) | List of the OrderItems | 
+**invoicing_data** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\OrderInvoicing**](OrderInvoicing.md) |  | 
+**shipping_data** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\OrderShipping**](OrderShipping.md) |  | [optional] 
 **customer_note** | **string** | Customer’s note for the merchant | [optional] 
 **order_status** | **string** | Text representation of the order status | [optional] 
 **shipping_date** | **string** | Date of the order shipping. If the date is in future, order should be shipped in this date | [optional] 

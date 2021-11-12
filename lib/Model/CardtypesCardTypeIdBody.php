@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CardtypesCardTypeIdBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class CardtypesCardTypeIdBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'card_type' => '\CareCloud\Model\CardType'    ];
+        'card_type' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CardType'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class CardtypesCardTypeIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets card_type
      *
-     * @return \CareCloud\Model\CardType
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CardType
      */
     public function getCardType()
     {
@@ -212,7 +212,7 @@ class CardtypesCardTypeIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets card_type
      *
-     * @param \CareCloud\Model\CardType $card_type card_type
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CardType $card_type card_type
      *
      * @return $this
      */

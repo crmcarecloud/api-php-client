@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * InlineResponse20010Data Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class InlineResponse20010Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'card_types' => '\CareCloud\Model\CardType[]',
+        'card_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CardType[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20010Data implements ModelInterface, ArrayAccess
     /**
      * Gets card_types
      *
-     * @return \CareCloud\Model\CardType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CardType[]
      */
     public function getCardTypes()
     {
@@ -215,7 +215,7 @@ class InlineResponse20010Data implements ModelInterface, ArrayAccess
     /**
      * Sets card_types
      *
-     * @param \CareCloud\Model\CardType[] $card_types Collection of all card types
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CardType[] $card_types Collection of all card types
      *
      * @return $this
      */

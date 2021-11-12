@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Api;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CareCloud\ApiException;
-use CareCloud\Configuration;
-use CareCloud\HeaderSelector;
-use CareCloud\ObjectSerializer;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * CampaignProductsApi Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class CampaignProductsApi
      * @param  string $campaign_product_id The unique id for the campaign product in CareCloud (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2005
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005
      */
     public function getCampaignProduct($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,13 +112,13 @@ class CampaignProductsApi
      * @param  string $campaign_product_id The unique id for the campaign product in CareCloud (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCampaignProductWithHttpInfo($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2005';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005';
         $request = $this->getCampaignProductRequest($campaign_product_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CampaignProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2005',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -178,7 +178,7 @@ class CampaignProductsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class CampaignProductsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class CampaignProductsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class CampaignProductsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class CampaignProductsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class CampaignProductsApi
      */
     public function getCampaignProductAsyncWithHttpInfo($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2005';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005';
         $request = $this->getCampaignProductRequest($campaign_product_id, $accept_language);
 
         return $this->client
@@ -417,9 +417,9 @@ class CampaignProductsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2006
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006
      */
     public function getCampaignProductStoreRecords($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -439,13 +439,13 @@ class CampaignProductsApi
      * @param  string $sort_field One of the query string parameters for sorting. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCampaignProductStoreRecordsWithHttpInfo($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2006';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006';
         $request = $this->getCampaignProductStoreRecordsRequest($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -497,7 +497,7 @@ class CampaignProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2006',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -505,7 +505,7 @@ class CampaignProductsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class CampaignProductsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -521,7 +521,7 @@ class CampaignProductsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -529,7 +529,7 @@ class CampaignProductsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -537,7 +537,7 @@ class CampaignProductsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -589,7 +589,7 @@ class CampaignProductsApi
      */
     public function getCampaignProductStoreRecordsAsyncWithHttpInfo($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2006';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006';
         $request = $this->getCampaignProductStoreRecordsRequest($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -780,9 +780,9 @@ class CampaignProductsApi
      * @param  string $valid_from Date and time from where is valid already. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $valid_to Date and time to where is valid still. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2004
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004
      */
     public function getCampaignProducts($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $display_in = null, $type_id = null, $store_id = null, $value_type_id = null, $is_valid = null, $valid_from = null, $valid_to = null)
     {
@@ -810,13 +810,13 @@ class CampaignProductsApi
      * @param  string $valid_from Date and time from where is valid already. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $valid_to Date and time to where is valid still. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCampaignProductsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $display_in = null, $type_id = null, $store_id = null, $value_type_id = null, $is_valid = null, $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2004';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004';
         $request = $this->getCampaignProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to);
 
         try {
@@ -868,7 +868,7 @@ class CampaignProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2004',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -876,7 +876,7 @@ class CampaignProductsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -884,7 +884,7 @@ class CampaignProductsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -892,7 +892,7 @@ class CampaignProductsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -900,7 +900,7 @@ class CampaignProductsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -908,7 +908,7 @@ class CampaignProductsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -976,7 +976,7 @@ class CampaignProductsApi
      */
     public function getCampaignProductsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $display_in = null, $type_id = null, $store_id = null, $value_type_id = null, $is_valid = null, $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CareCloud\Model\InlineResponse2004';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004';
         $request = $this->getCampaignProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to);
 
         return $this->client
@@ -1185,12 +1185,12 @@ class CampaignProductsApi
      *
      * Create a campaign product
      *
-     * @param  \CareCloud\Model\CampaignproductsBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody $body body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2011
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011
      */
     public function postCampaignProduct($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1203,16 +1203,16 @@ class CampaignProductsApi
      *
      * Create a campaign product
      *
-     * @param  \CareCloud\Model\CampaignproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCampaignProductWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2011';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011';
         $request = $this->postCampaignProductRequest($body, $accept_language);
 
         try {
@@ -1264,7 +1264,7 @@ class CampaignProductsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2011',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1272,7 +1272,7 @@ class CampaignProductsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1280,7 +1280,7 @@ class CampaignProductsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1288,7 +1288,7 @@ class CampaignProductsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1296,7 +1296,7 @@ class CampaignProductsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1304,7 +1304,7 @@ class CampaignProductsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1319,7 +1319,7 @@ class CampaignProductsApi
      *
      * Create a campaign product
      *
-     * @param  \CareCloud\Model\CampaignproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1340,7 +1340,7 @@ class CampaignProductsApi
      *
      * Create a campaign product
      *
-     * @param  \CareCloud\Model\CampaignproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1348,7 +1348,7 @@ class CampaignProductsApi
      */
     public function postCampaignProductAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2011';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011';
         $request = $this->postCampaignProductRequest($body, $accept_language);
 
         return $this->client
@@ -1391,7 +1391,7 @@ class CampaignProductsApi
     /**
      * Create request for operation 'postCampaignProduct'
      *
-     * @param  \CareCloud\Model\CampaignproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -1499,13 +1499,13 @@ class CampaignProductsApi
      *
      * Add a store to the campaign product
      *
-     * @param  \CareCloud\Model\CampaignProductIdCampaignproductstorerecordsBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody $body body (required)
      * @param  string $campaign_product_id The unique id for the campaign product in CareCloud (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2012
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012
      */
     public function postCampaignProductStoreRecord($body, $campaign_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1518,17 +1518,17 @@ class CampaignProductsApi
      *
      * Add a store to the campaign product
      *
-     * @param  \CareCloud\Model\CampaignProductIdCampaignproductstorerecordsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody $body (required)
      * @param  string $campaign_product_id The unique id for the campaign product in CareCloud (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2012, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCampaignProductStoreRecordWithHttpInfo($body, $campaign_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2012';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012';
         $request = $this->postCampaignProductStoreRecordRequest($body, $campaign_product_id, $accept_language);
 
         try {
@@ -1580,7 +1580,7 @@ class CampaignProductsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2012',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1588,7 +1588,7 @@ class CampaignProductsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1596,7 +1596,7 @@ class CampaignProductsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1604,7 +1604,7 @@ class CampaignProductsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1612,7 +1612,7 @@ class CampaignProductsApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1620,7 +1620,7 @@ class CampaignProductsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1635,7 +1635,7 @@ class CampaignProductsApi
      *
      * Add a store to the campaign product
      *
-     * @param  \CareCloud\Model\CampaignProductIdCampaignproductstorerecordsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody $body (required)
      * @param  string $campaign_product_id The unique id for the campaign product in CareCloud (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1657,7 +1657,7 @@ class CampaignProductsApi
      *
      * Add a store to the campaign product
      *
-     * @param  \CareCloud\Model\CampaignProductIdCampaignproductstorerecordsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody $body (required)
      * @param  string $campaign_product_id The unique id for the campaign product in CareCloud (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1666,7 +1666,7 @@ class CampaignProductsApi
      */
     public function postCampaignProductStoreRecordAsyncWithHttpInfo($body, $campaign_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2012';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012';
         $request = $this->postCampaignProductStoreRecordRequest($body, $campaign_product_id, $accept_language);
 
         return $this->client
@@ -1709,7 +1709,7 @@ class CampaignProductsApi
     /**
      * Create request for operation 'postCampaignProductStoreRecord'
      *
-     * @param  \CareCloud\Model\CampaignProductIdCampaignproductstorerecordsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody $body (required)
      * @param  string $campaign_product_id The unique id for the campaign product in CareCloud (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *

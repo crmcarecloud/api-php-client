@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * ActionsSendmessageBody Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class ActionsSendmessageBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'message' => '\CareCloud\Model\Message'    ];
+        'message' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Message'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class ActionsSendmessageBody implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return \CareCloud\Model\Message
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Message
      */
     public function getMessage()
     {
@@ -212,7 +212,7 @@ class ActionsSendmessageBody implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param \CareCloud\Model\Message $message message
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Message $message message
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Api;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CareCloud\ApiException;
-use CareCloud\Configuration;
-use CareCloud\HeaderSelector;
-use CareCloud\ObjectSerializer;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * TokensApi Class Doc Comment
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,9 +96,9 @@ class TokensApi
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse200109
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109
      */
     public function getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -116,13 +116,13 @@ class TokensApi
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse200109, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTokenAuthenticationWithHttpInfo($token_id, $external_application_id, $token_type, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200109';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109';
         $request = $this->getTokenAuthenticationRequest($token_id, $external_application_id, $token_type, $accept_language);
 
         try {
@@ -174,7 +174,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse200109',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +182,7 @@ class TokensApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class TokensApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +198,7 @@ class TokensApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class TokensApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class TokensApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class TokensApi
      */
     public function getTokenAuthenticationAsyncWithHttpInfo($token_id, $external_application_id, $token_type, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse200109';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109';
         $request = $this->getTokenAuthenticationRequest($token_id, $external_application_id, $token_type, $accept_language);
 
         return $this->client
@@ -440,12 +440,12 @@ class TokensApi
      *
      * Create a token
      *
-     * @param  \CareCloud\Model\TokensBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody $body body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse20116
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116
      */
     public function postToken($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -458,16 +458,16 @@ class TokensApi
      *
      * Create a token
      *
-     * @param  \CareCloud\Model\TokensBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse20116, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTokenWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20116';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116';
         $request = $this->postTokenRequest($body, $accept_language);
 
         try {
@@ -519,7 +519,7 @@ class TokensApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse20116',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -527,7 +527,7 @@ class TokensApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -535,7 +535,7 @@ class TokensApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -543,7 +543,7 @@ class TokensApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -551,7 +551,7 @@ class TokensApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -559,7 +559,7 @@ class TokensApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -574,7 +574,7 @@ class TokensApi
      *
      * Create a token
      *
-     * @param  \CareCloud\Model\TokensBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -595,7 +595,7 @@ class TokensApi
      *
      * Create a token
      *
-     * @param  \CareCloud\Model\TokensBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -603,7 +603,7 @@ class TokensApi
      */
     public function postTokenAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse20116';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116';
         $request = $this->postTokenRequest($body, $accept_language);
 
         return $this->client
@@ -646,7 +646,7 @@ class TokensApi
     /**
      * Create request for operation 'postToken'
      *
-     * @param  \CareCloud\Model\TokensBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody $body (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -750,13 +750,13 @@ class TokensApi
      *
      * Login to the application
      *
-     * @param  \CareCloud\Model\ActionsLoginBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody $body body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2016
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016
      */
     public function postTokenLogin($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -769,17 +769,17 @@ class TokensApi
      *
      * Login to the application
      *
-     * @param  \CareCloud\Model\ActionsLoginBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTokenLoginWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postTokenLoginRequest($body, $token_id, $accept_language);
 
         try {
@@ -831,7 +831,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2016',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -839,7 +839,7 @@ class TokensApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -847,7 +847,7 @@ class TokensApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -855,7 +855,7 @@ class TokensApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -863,7 +863,7 @@ class TokensApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -871,7 +871,7 @@ class TokensApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -886,7 +886,7 @@ class TokensApi
      *
      * Login to the application
      *
-     * @param  \CareCloud\Model\ActionsLoginBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -908,7 +908,7 @@ class TokensApi
      *
      * Login to the application
      *
-     * @param  \CareCloud\Model\ActionsLoginBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -917,7 +917,7 @@ class TokensApi
      */
     public function postTokenLoginAsyncWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postTokenLoginRequest($body, $token_id, $accept_language);
 
         return $this->client
@@ -960,7 +960,7 @@ class TokensApi
     /**
      * Create request for operation 'postTokenLogin'
      *
-     * @param  \CareCloud\Model\ActionsLoginBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1086,7 +1086,7 @@ class TokensApi
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1103,7 +1103,7 @@ class TokensApi
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1147,7 +1147,7 @@ class TokensApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1155,7 +1155,7 @@ class TokensApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1163,7 +1163,7 @@ class TokensApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1171,7 +1171,7 @@ class TokensApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1179,7 +1179,7 @@ class TokensApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1365,11 +1365,11 @@ class TokensApi
      *
      * Send email for set up of the new customer password
      *
-     * @param  \CareCloud\Model\ActionsSendpasswordsetupemailBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1383,11 +1383,11 @@ class TokensApi
      *
      * Send email for set up of the new customer password
      *
-     * @param  \CareCloud\Model\ActionsSendpasswordsetupemailBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1431,7 +1431,7 @@ class TokensApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1439,7 +1439,7 @@ class TokensApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1447,7 +1447,7 @@ class TokensApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1455,7 +1455,7 @@ class TokensApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1463,7 +1463,7 @@ class TokensApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1478,7 +1478,7 @@ class TokensApi
      *
      * Send email for set up of the new customer password
      *
-     * @param  \CareCloud\Model\ActionsSendpasswordsetupemailBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1500,7 +1500,7 @@ class TokensApi
      *
      * Send email for set up of the new customer password
      *
-     * @param  \CareCloud\Model\ActionsSendpasswordsetupemailBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1538,7 +1538,7 @@ class TokensApi
     /**
      * Create request for operation 'postTokenSendPasswordSetup'
      *
-     * @param  \CareCloud\Model\ActionsSendpasswordsetupemailBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1661,13 +1661,13 @@ class TokensApi
      *
      * Login via social network
      *
-     * @param  \CareCloud\Model\ActionsSocialnetworkloginBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody $body body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CareCloud\Model\InlineResponse2016
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016
      */
     public function postTokenSocialLogin($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1680,17 +1680,17 @@ class TokensApi
      *
      * Login via social network
      *
-     * @param  \CareCloud\Model\ActionsSocialnetworkloginBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CareCloud\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTokenSocialLoginWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postTokenSocialLoginRequest($body, $token_id, $accept_language);
 
         try {
@@ -1742,7 +1742,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse2016',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1750,7 +1750,7 @@ class TokensApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1758,7 +1758,7 @@ class TokensApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1766,7 +1766,7 @@ class TokensApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1774,7 +1774,7 @@ class TokensApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1782,7 +1782,7 @@ class TokensApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1797,7 +1797,7 @@ class TokensApi
      *
      * Login via social network
      *
-     * @param  \CareCloud\Model\ActionsSocialnetworkloginBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1819,7 +1819,7 @@ class TokensApi
      *
      * Login via social network
      *
-     * @param  \CareCloud\Model\ActionsSocialnetworkloginBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1828,7 +1828,7 @@ class TokensApi
      */
     public function postTokenSocialLoginAsyncWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CareCloud\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
         $request = $this->postTokenSocialLoginRequest($body, $token_id, $accept_language);
 
         return $this->client
@@ -1871,7 +1871,7 @@ class TokensApi
     /**
      * Create request for operation 'postTokenSocialLogin'
      *
-     * @param  \CareCloud\Model\ActionsSocialnetworkloginBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -1994,11 +1994,11 @@ class TokensApi
      *
      * Edit a push token
      *
-     * @param  \CareCloud\Model\TokensTokenIdBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody $body body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2012,11 +2012,11 @@ class TokensApi
      *
      * Edit a push token
      *
-     * @param  \CareCloud\Model\TokensTokenIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @throws \CareCloud\ApiException on non-2xx response
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2060,7 +2060,7 @@ class TokensApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse400',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2068,7 +2068,7 @@ class TokensApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse401',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2076,7 +2076,7 @@ class TokensApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse404',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2084,7 +2084,7 @@ class TokensApi
                 case 405:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse405',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2092,7 +2092,7 @@ class TokensApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CareCloud\Model\InlineResponse500',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2107,7 +2107,7 @@ class TokensApi
      *
      * Edit a push token
      *
-     * @param  \CareCloud\Model\TokensTokenIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -2129,7 +2129,7 @@ class TokensApi
      *
      * Edit a push token
      *
-     * @param  \CareCloud\Model\TokensTokenIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
@@ -2167,7 +2167,7 @@ class TokensApi
     /**
      * Create request for operation 'putToken'
      *
-     * @param  \CareCloud\Model\TokensTokenIdBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *

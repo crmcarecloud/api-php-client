@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace CareCloud\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Model;
 
 use \ArrayAccess;
-use \CareCloud\ObjectSerializer;
+use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
  * OpeningDay Class Doc Comment
  *
  * @category Class
  * @description Opening day structure
- * @package  CareCloud
+ * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class OpeningDay implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'day_id' => 'string',
-'time_intervals' => '\CareCloud\Model\TimeInterval[]'    ];
+'time_intervals' => '\CrmCareCloud\Webservice\RestApi\Client\Model\TimeInterval[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -236,7 +236,7 @@ class OpeningDay implements ModelInterface, ArrayAccess
     /**
      * Gets time_intervals
      *
-     * @return \CareCloud\Model\TimeInterval[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\TimeInterval[]
      */
     public function getTimeIntervals()
     {
@@ -246,7 +246,7 @@ class OpeningDay implements ModelInterface, ArrayAccess
     /**
      * Sets time_intervals
      *
-     * @param \CareCloud\Model\TimeInterval[] $time_intervals List of time Intervals
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\TimeInterval[] $time_intervals List of time Intervals
      *
      * @return $this
      */
