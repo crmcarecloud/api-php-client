@@ -1,14 +1,15 @@
 # CrmCareCloud\Webservice\RestApi\Client\ProductsApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getProduct**](ProductsApi.md#getproduct) | **GET** /products/{product_id} | Detail of a product
 [**getProducts**](ProductsApi.md#getproducts) | **GET** /products | Collection of available products
+[**postBulkProducts**](ProductsApi.md#postbulkproducts) | **POST** /products/batch | Create a batch of products
 
 # **getProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064 getProduct($product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068 getProduct($product_id, $accept_language)
 
 Detail of a product
 
@@ -54,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
 
 ### Authorization
 
@@ -68,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067 getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code)
 
 Collection of available products
 
@@ -128,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
 
 ### Authorization
 
@@ -137,6 +138,65 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postBulkProducts**
+> postBulkProducts($body, $accept_language)
+
+Create a batch of products
+
+Batch process helps to add multiple products in one request. <p class=\"warning\">⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time.</p>
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ProductsBatchBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ProductsBatchBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $apiInstance->postBulkProducts($body, $accept_language);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductsApi->postBulkProducts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductsBatchBody**](../Model/ProductsBatchBody.md)|  |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

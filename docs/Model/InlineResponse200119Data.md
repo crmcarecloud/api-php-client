@@ -3,9 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**earned_points** | **float** | Amount of earned points in time interval | [optional] 
-**redeemed_points** | **float** | Amount of redeemed points in time interval | [optional] 
-**available_points** | **float** | Amount of available points in the moment. Time interval has no influence to the result | [optional] 
+**bearer_token** | **string** | Autentication bearer token for an user. Token can be used for autentication in REST API with Bearer Autentication (more information about it [here](#section/Authorization/bearerAuth)) | [optional] 
+**user** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\User**](User.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

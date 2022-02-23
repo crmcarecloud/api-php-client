@@ -1,16 +1,16 @@
 # CrmCareCloud\Webservice\RestApi\Client\EventsApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getEvent**](EventsApi.md#getevent) | **GET** /events/{event_id} | Get an event
 [**getEvents**](EventsApi.md#getevents) | **GET** /events | Get information about all events
-[**getSubEventProperties**](EventsApi.md#getsubeventproperties) | **GET** /events/{event_id}/property-records | Get a collection of properties
+[**getSubEventProperties**](EventsApi.md#getsubeventproperties) | **GET** /events/{event_id}/property-records | Get a collection of event properties records
 [**postEvent**](EventsApi.md#postevent) | **POST** /events | Create a new event
 
 # **getEvent**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getEvent($event_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040 getEvent($event_id, $accept_language)
 
 Get an event
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEvents**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038 getEvents($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getEvents($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id)
 
 Get information about all events
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
 
 ### Authorization
 
@@ -138,9 +138,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubEventProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040 getSubEventProperties($event_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041 getSubEventProperties($event_id, $accept_language)
 
-Get a collection of properties
+Get a collection of event properties records
 
 Get information about all property records on an event
 
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postEvent**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110 postEvent($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019 postEvent($body, $accept_language)
 
 Create a new event
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110**](../Model/InlineResponse20110.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019**](../Model/InlineResponse2019.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # CrmCareCloud\Webservice\RestApi\Client\EventPropertiesApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getEventProperty**](EventPropertiesApi.md#geteventproperty) | **GET** /event-properties/{event_property_id} | Get a event property
 
 # **getEventProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043 getEventProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044 getEventProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all event properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
 
 ### Authorization
 

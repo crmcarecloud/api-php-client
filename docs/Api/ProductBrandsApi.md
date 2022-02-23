@@ -1,14 +1,15 @@
 # CrmCareCloud\Webservice\RestApi\Client\ProductBrandsApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getProductBrand**](ProductBrandsApi.md#getproductbrand) | **GET** /product-brands/{product_brand_id} | Get a product brand
 [**getProductBrands**](ProductBrandsApi.md#getproductbrands) | **GET** /product-brands | Get all product brand
+[**postBulkProductBrands**](ProductBrandsApi.md#postbulkproductbrands) | **POST** /product-brands/batch | Create a batch of product brands
 
 # **getProductBrand**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20066 getProductBrand($product_brand_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070 getProductBrand($product_brand_id, $accept_language)
 
 Get a product brand
 
@@ -54,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 
@@ -68,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductBrands**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065 getProductBrands($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069 getProductBrands($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all product brand
 
@@ -122,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
 
 ### Authorization
 
@@ -131,6 +132,65 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postBulkProductBrands**
+> postBulkProductBrands($body, $accept_language)
+
+Create a batch of product brands
+
+Batch process helps to add multiple product brands in one request
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductBrandsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ProductbrandsBatchBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ProductbrandsBatchBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $apiInstance->postBulkProductBrands($body, $accept_language);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductBrandsApi->postBulkProductBrands: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductbrandsBatchBody**](../Model/ProductbrandsBatchBody.md)|  |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

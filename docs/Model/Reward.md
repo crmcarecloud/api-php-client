@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **has_group_condition** | **bool** | Parameter says, if there is group condition on reward | [optional] 
 **has_brand_condition** | **bool** | Parameter says, if there is brand condition on reward | [optional] 
 **is_automated** | **bool** | Parameter says, if reward is automated or not. If reward is automated, means it&#x27;s applied by rules of the reward. Otherwise have to be applied manually | [optional] 
+**tags** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]**](Tag.md) | List of the tags assigned to the reward. | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the reward *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 
 

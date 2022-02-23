@@ -1,6 +1,6 @@
 # CrmCareCloud\Webservice\RestApi\Client\RecommendationEngineApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**getRecommendationProductOrder**](RecommendationEngineApi.md#getrecommendationproductorder) | **GET** /recommendation-engine/product/actions/order | Order products for the best recommendation.
 
 # **getRecommendationCartCombined**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086 getRecommendationCartCombined($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090 getRecommendationCartCombined($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count)
 
 Get the best recommendation for shopping cart
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090**](../Model/InlineResponse20090.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationCartEliminate**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086 getRecommendationCartEliminate($customer_id, $accept_language, $cart_product_ids, $product_id_list)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090 getRecommendationCartEliminate($customer_id, $accept_language, $cart_product_ids, $product_id_list)
 
 Get the best recommendation with elimination for shopping cart
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090**](../Model/InlineResponse20090.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationCartOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086 getRecommendationCartOrder($cart_product_ids, $accept_language, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090 getRecommendationCartOrder($cart_product_ids, $accept_language, $product_id_list, $count)
 
 Order products for the best recommendation for a shopping cart
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090**](../Model/InlineResponse20090.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductCombined**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085 getRecommendationProductCombined($customer_id, $accept_language, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089 getRecommendationProductCombined($customer_id, $accept_language, $product_id_list, $count)
 
 Get the best recommendation
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductEliminate**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085 getRecommendationProductEliminate($customer_id, $accept_language, $product_id_list)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089 getRecommendationProductEliminate($customer_id, $accept_language, $product_id_list)
 
 Get the best recommendation with an elimination
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085 getRecommendationProductOrder($customer_id, $accept_language, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089 getRecommendationProductOrder($customer_id, $accept_language, $product_id_list, $count)
 
 Order products for the best recommendation.
 
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
 
 ### Authorization
 

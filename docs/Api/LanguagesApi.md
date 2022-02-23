@@ -1,13 +1,13 @@
 # CrmCareCloud\Webservice\RestApi\Client\LanguagesApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getLanguages**](LanguagesApi.md#getlanguages) | **GET** /languages | Get all languages
 
 # **getLanguages**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048 getLanguages($accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050 getLanguages($accept_language)
 
 Get all languages
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
 
 ### Authorization
 

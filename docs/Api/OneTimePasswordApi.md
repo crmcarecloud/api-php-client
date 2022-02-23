@@ -1,0 +1,129 @@
+# CrmCareCloud\Webservice\RestApi\Client\OneTimePasswordApi
+
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**postSendOtp**](OneTimePasswordApi.md#postsendotp) | **POST** /one-time-password/actions/send | Send a one-time password to a communication channel
+[**postVerifyOtp**](OneTimePasswordApi.md#postverifyotp) | **POST** /one-time-password/actions/verify | Verify a one-time password
+
+# **postSendOtp**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056 postSendOtp($body, $accept_language)
+
+Send a one-time password to a communication channel
+
+Action method sends generated password to the selected communication channel and provides verification string Resource provides a mechanism OTP for the verification using a unique password that can only be used once.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\OneTimePasswordApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $result = $apiInstance->postSendOtp($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OneTimePasswordApi->postSendOtp: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendBody**](../Model/ActionsSendBody.md)|  |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postVerifyOtp**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057 postVerifyOtp($body, $accept_language)
+
+Verify a one-time password
+
+Action method verify one time password. Resource provides a mechanism OTP for the verification using a unique password that can only be used once.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\OneTimePasswordApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $result = $apiInstance->postVerifyOtp($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OneTimePasswordApi->postVerifyOtp: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsVerifyBody**](../Model/ActionsVerifyBody.md)|  |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+

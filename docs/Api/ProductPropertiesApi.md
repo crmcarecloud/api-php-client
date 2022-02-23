@@ -1,6 +1,6 @@
 # CrmCareCloud\Webservice\RestApi\Client\ProductPropertiesApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductProperty**](ProductPropertiesApi.md#getproductproperty) | **GET** /product-properties/{product_property_id} | Get a product property
 
 # **getProductProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069 getProductProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073 getProductProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all product properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
 
 ### Authorization
 

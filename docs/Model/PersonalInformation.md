@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**salutation** | **string** | Customer&#x27;s salutation. If it is not set in POST or PUT calls, it will be generated automatically. | [optional] 
 **gender** | **int** | Gender of the customer *Possible values: 1 - male, 2 - female* | [optional] 
 **first_name** | **string** | First name of the customer | [optional] 
 **last_name** | **string** | Last name of the customer | [optional] 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **string** | Authentication token for external application | [optional] 
-**token_request_id** | **string** | The parameter specifies the request that caused the token to be created. If two customers generated an authentication token at the same time and in the same application, the token_request_id parameter represents additional verification to identify the correct token | [optional] 
+**stores** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]**](Store.md) | List of all stores | [optional] 
+**total_items** | **int** | Count of all found stores | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

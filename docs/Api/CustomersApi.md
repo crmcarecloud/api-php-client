@@ -1,6 +1,6 @@
 # CrmCareCloud\Webservice\RestApi\Client\CustomersApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,7 +22,6 @@ Method | HTTP request | Description
 [**postCustomer**](CustomersApi.md#postcustomer) | **POST** /customers | Create a new customer
 [**postSubCustomerInterest**](CustomersApi.md#postsubcustomerinterest) | **POST** /customers/{customer_id}/interest-records | Add an interest record to a customer
 [**postSubCustomerProperties**](CustomersApi.md#postsubcustomerproperties) | **POST** /customers/{customer_id}/property-records | Add a property to a customer
-[**postSubCustomerSource**](CustomersApi.md#postsubcustomersource) | **POST** /customers/{customer_id}/customer-source-records | Add a source to a customer
 [**putCustomer**](CustomersApi.md#putcustomer) | **PUT** /customers/{customer_id} | Update a customer
 [**putSubCustomerInterest**](CustomersApi.md#putsubcustomerinterest) | **PUT** /customers/{customer_id}/interest-records/{interest_record_id} | Update an interest record on an account
 [**putSubCustomerProperty**](CustomersApi.md#putsubcustomerproperty) | **PUT** /customers/{customer_id}/property-records/{property_record_id} | Update a property on an account
@@ -694,7 +693,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRewards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021 getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021 getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids)
 
 Get all customer rewards
 
@@ -735,9 +734,10 @@ $is_automated = true; // bool | Filter of the automated rewards *Possible values
 $reward_group = 56; // int | The unique id for the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward*
 $customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. Logic OR is used between values
 $without_stores = true; // bool | If true, resource call returns rewards without list of stores. If false, or not set resource returns default strucutre.
+$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag ids. Logic OR is used between values.
 
 try {
-    $result = $apiInstance->getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores);
+    $result = $apiInstance->getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getSubCustomerRewards: ', $e->getMessage(), PHP_EOL;
@@ -765,6 +765,7 @@ Name | Type | Description  | Notes
  **reward_group** | **int**| The unique id for the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward* | [optional]
  **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. Logic OR is used between values | [optional]
  **without_stores** | **bool**| If true, resource call returns rewards without list of stores. If false, or not set resource returns default strucutre. | [optional]
+ **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag ids. Logic OR is used between values. | [optional]
 
 ### Return type
 
@@ -842,7 +843,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025 getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025 getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $external_id, $customer_source_id)
 
 Get customer source records
 
@@ -873,9 +874,11 @@ $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
+$external_id = "external_id_example"; // string | The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems).
+$customer_source_id = "customer_source_id_example"; // string | The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created
 
 try {
-    $result = $apiInstance->getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
+    $result = $apiInstance->getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $external_id, $customer_source_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getSubCustomerSource: ', $e->getMessage(), PHP_EOL;
@@ -893,6 +896,8 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
+ **external_id** | **string**| The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). | [optional]
+ **customer_source_id** | **string**| The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created | [optional]
 
 ### Return type
 
@@ -1114,7 +1119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerInterest**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019 postSubCustomerInterest($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postSubCustomerInterest($body, $customer_id, $accept_language)
 
 Add an interest record to a customer
 
@@ -1162,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019**](../Model/InlineResponse2019.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
 
 ### Authorization
 
@@ -1176,7 +1181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postSubCustomerProperties($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postSubCustomerProperties($body, $customer_id, $accept_language)
 
 Add a property to a customer
 
@@ -1219,68 +1224,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPropertyrecordsBody**](../Model/CustomerIdPropertyrecordsBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
-
-### Return type
-
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
-
-### Authorization
-
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **postSubCustomerSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postSubCustomerSource($body, $customer_id, $accept_language)
-
-Add a source to a customer
-
-Add one of the [customer sources](#tag/Customer-sources) to a customer account
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdCustomersourcerecordsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdCustomersourcerecordsBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
-
-try {
-    $result = $apiInstance->postSubCustomerSource($body, $customer_id, $accept_language);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->postSubCustomerSource: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdCustomersourcerecordsBody**](../Model/CustomerIdCustomersourcerecordsBody.md)|  |
  **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 

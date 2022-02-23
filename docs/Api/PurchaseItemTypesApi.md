@@ -1,13 +1,13 @@
 # CrmCareCloud\Webservice\RestApi\Client\PurchaseItemTypesApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getPurchaseItemTypes**](PurchaseItemTypesApi.md#getpurchaseitemtypes) | **GET** /purchase-item-types | Get all purchase item types
 
 # **getPurchaseItemTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081 getPurchaseItemTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085 getPurchaseItemTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all purchase item types
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # CrmCareCloud\Webservice\RestApi\Client\StorePropertiesApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getStoreProperty**](StorePropertiesApi.md#getstoreproperty) | **GET** /store-properties/{store_property_id} | Get a store property
 
 # **getStoreProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108 getStoreProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113 getStoreProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all store properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108**](../Model/InlineResponse200108.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113**](../Model/InlineResponse200113.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # CrmCareCloud\Webservice\RestApi\Client\ProductReservationSourcesApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductReservationSources**](ProductReservationSourcesApi.md#getproductreservationsources) | **GET** /product-reservation-sources | Get all product reservation sources
 
 # **getProductReservationSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073 getProductReservationSource($product_reservation_source_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077 getProductReservationSource($product_reservation_source_id, $accept_language)
 
 Detail of an product reservation source
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservationSources**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072 getProductReservationSources($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076 getProductReservationSources($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all product reservation sources
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
 
 ### Authorization
 

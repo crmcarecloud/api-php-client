@@ -1,6 +1,6 @@
 # CrmCareCloud\Webservice\RestApi\Client\RewardPropertiesApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/enterprise-interface/v1.0*
+All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRewardProperty**](RewardPropertiesApi.md#getrewardproperty) | **GET** /reward-properties/{reward_property_id} | Get a reward property
 
 # **getRewardProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20094 getRewardProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099 getRewardProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all reward properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20094**](../Model/InlineResponse20094.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099**](../Model/InlineResponse20099.md)
 
 ### Authorization
 
