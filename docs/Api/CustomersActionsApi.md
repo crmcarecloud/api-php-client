@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**getCustomerSearch**](CustomersActionsApi.md#getcustomersearch) | **GET** /customers/actions/search-customers | Search customers
 [**postCustomerVerifyCredentials**](CustomersActionsApi.md#postcustomerverifycredentials) | **POST** /customers/actions/verify-credentials | Customer credentials verification
 [**postCustomerVerifySocialNetworkCredentials**](CustomersActionsApi.md#postcustomerverifysocialnetworkcredentials) | **POST** /customers/actions/verify-social-network-credentials | Social network credentials verification
+[**postCustomersUploadPhoto**](CustomersActionsApi.md#postcustomersuploadphoto) | **POST** /customers/actions/upload-customer-photo | Upload customer&#x27;s profile photo
 [**postCustomersVerifyAuthToken**](CustomersActionsApi.md#postcustomersverifyauthtoken) | **POST** /customers/actions/verify-auth-token | Verify auth token
 
 # **getCustomerSearch**
@@ -181,6 +182,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postCustomersUploadPhoto**
+> postCustomersUploadPhoto($body)
+
+Upload customer's profile photo
+
+Method uploads cusomer's profile photo. In case customer already has a photo, new photo will replace the old one. Maximum size of picture is 2 MB. <br/> Available formats: `.jpg, .jpeg, .png`
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersActionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsUploadcustomerphotoBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsUploadcustomerphotoBody | 
+
+try {
+    $apiInstance->postCustomersUploadPhoto($body);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersActionsApi->postCustomersUploadPhoto: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsUploadcustomerphotoBody**](../Model/ActionsUploadcustomerphotoBody.md)|  |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

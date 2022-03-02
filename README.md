@@ -165,6 +165,7 @@ Class | Method | HTTP request | Description
 *CustomersActionsApi* | [**getCustomerSearch**](docs/Api/CustomersActionsApi.md#getcustomersearch) | **GET** /customers/actions/search-customers | Search customers
 *CustomersActionsApi* | [**postCustomerVerifyCredentials**](docs/Api/CustomersActionsApi.md#postcustomerverifycredentials) | **POST** /customers/actions/verify-credentials | Customer credentials verification
 *CustomersActionsApi* | [**postCustomerVerifySocialNetworkCredentials**](docs/Api/CustomersActionsApi.md#postcustomerverifysocialnetworkcredentials) | **POST** /customers/actions/verify-social-network-credentials | Social network credentials verification
+*CustomersActionsApi* | [**postCustomersUploadPhoto**](docs/Api/CustomersActionsApi.md#postcustomersuploadphoto) | **POST** /customers/actions/upload-customer-photo | Upload customer&#x27;s profile photo
 *CustomersActionsApi* | [**postCustomersVerifyAuthToken**](docs/Api/CustomersActionsApi.md#postcustomersverifyauthtoken) | **POST** /customers/actions/verify-auth-token | Verify auth token
 *EventGroupsApi* | [**getEventGroup**](docs/Api/EventGroupsApi.md#geteventgroup) | **GET** /event-groups/{event_group_id} | Get a event group
 *EventGroupsApi* | [**getEventGroups**](docs/Api/EventGroupsApi.md#geteventgroups) | **GET** /event-groups | Get all event groups
@@ -333,6 +334,7 @@ Class | Method | HTTP request | Description
  - [ActionsSocialnetworkloginBody](docs/Model/ActionsSocialnetworkloginBody.md)
  - [ActionsSsologinBody](docs/Model/ActionsSsologinBody.md)
  - [ActionsTransferpointsBody](docs/Model/ActionsTransferpointsBody.md)
+ - [ActionsUploadcustomerphotoBody](docs/Model/ActionsUploadcustomerphotoBody.md)
  - [ActionsVerifyBody](docs/Model/ActionsVerifyBody.md)
  - [ActionsVerifyauthtokenBody](docs/Model/ActionsVerifyauthtokenBody.md)
  - [ActionsVerifyauthtokenBody1](docs/Model/ActionsVerifyauthtokenBody1.md)
