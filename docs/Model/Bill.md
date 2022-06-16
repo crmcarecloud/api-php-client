@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **created_by** | **string** | Name of the user who created a bill | [optional] 
 **currency_id** | **string** | Id of the currency from resource [currencies](#tag/Currencies) | 
 **total_price** | **float** | The total price of the bill as a sum of all items | 
-**utm** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\UTM**](UTM.md) |  | [optional] 
 **bill_items** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\BillItem[]**](BillItem.md) | List of bill items | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

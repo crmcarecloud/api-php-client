@@ -164,9 +164,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\StoresApi(
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
-$sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
+$sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$visible_for_customer = 56; // int | State of the visibility for the customer *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.*
+$visible_for_customer = 56; // int | State of the visibility of the customer *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.*
 $property_id = "property_id_example"; // string | Store property id from resource [store-properties](#tag/Store-properties). The parameter determines property, which is used to filter stores by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request.
 $property_value = "property_value_example"; // string | Store property record value from resource [/stores/{store_id}/property-records](#operation/getSubStoreProperties) or [store-properties](#tag/Store-properties) in case of datatype with multiple values . Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request.
 
@@ -186,9 +186,9 @@ Name | Type | Description  | Notes
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
- **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
+ **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **visible_for_customer** | **int**| State of the visibility for the customer *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* | [optional]
+ **visible_for_customer** | **int**| State of the visibility of the customer *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* | [optional]
  **property_id** | **string**| Store property id from resource [store-properties](#tag/Store-properties). The parameter determines property, which is used to filter stores by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. | [optional]
  **property_value** | **string**| Store property record value from resource [/stores/{store_id}/property-records](#operation/getSubStoreProperties) or [store-properties](#tag/Store-properties) in case of datatype with multiple values . Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. | [optional]
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postStore**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114 postStore($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115 postStore($body, $accept_language)
 
 Create a store
 
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114**](../Model/InlineResponse20114.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115**](../Model/InlineResponse20115.md)
 
 ### Authorization
 
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubStoreProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postSubStoreProperties($body, $store_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postSubStoreProperties($body, $store_id, $accept_language)
 
 Add a property to a store
 
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
 
 ### Authorization
 

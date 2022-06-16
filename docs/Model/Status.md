@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **payment_points** | **bool** | Enable / disable payment by points | 
 **qualification_type** | **int** | The status achieving principle *(0 - after creation of the account / 1 - manually / 2 - after the defined conditions are met)* | 
 **discount** | **int** | The basic loyalty discount | 
+**overall_discount_on_discounted_purchase_items** | **bool** | If true, overall discounts can be applied on already discounted purchase items in purchase checkout process | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

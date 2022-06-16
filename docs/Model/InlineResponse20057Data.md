@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_valid** | **bool** | Result of the OTP verification | [optional] 
+**orders** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Order[]**](Order.md) | Collection of the customer orders | [optional] 
+**total_items** | **int** | Count of all found customer orders | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

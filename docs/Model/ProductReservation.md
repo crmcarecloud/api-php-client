@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **customer_id** | **string** | The unique id of the customer, owner of the product reservation | 
 **store_id** | **string** | The unique id of the store tied to the reservation | 
 **reservation_codes** | **string[]** | Ids of the reservation | [optional] 
-**external_reservation_codes** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ExternalCode[]**](ExternalCode.md) | List of external id codes. Id codes can have different sources. For the list of id sources please contact your account manager. | [optional] 
+**external_reservation_codes** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ExternalCode[]**](ExternalCode.md) | List of external id codes. Id codes can have different sources. Please get in touch with your account manager for the list of id sources. | [optional] 
 **benefit_codes** | **string[]** | List of the benefit (rewards, vouchers) codes used in a reservation. After the reservation is delivered, all benefits are applied on the customer&#x27;s account | [optional] 
 **product_reservation_source_id** | **string** | The unique id of the product reservation source | 
 **pickup_date** | **string** | Date of the reservation pickup in the tied store (YYYY-MM-DD) | [optional] 
@@ -17,9 +17,9 @@ Name | Type | Description | Notes
 **product_reservation_items** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationItem[]**](ProductReservationItem.md) | List of the Product Reservation Items | [optional] 
 **external_purchase_id** | **string** | The unique external id of the purchase | [optional] 
 **utm** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\UTM**](UTM.md) |  | [optional] 
-**actual_state** | **int** | Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional] 
-**states** | **string[]** | History of the state values. States are sorted in descending order by time | [optional] 
-**comments** | **string[]** | Reservation comments. Comments are sorted in descending order by time | [optional] 
+**actual_state** | **int** | Current progress of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional] 
+**reservation_progress_history** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationProgress[]**](ProductReservationProgress.md) | History of the product reservation progress. Product reservation progress is sorted in descending order by time | [optional] 
+**comments** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationComment[]**](ProductReservationComment.md) | Product reservation comments. Comments are sorted in descending order by time | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the product reservation *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 
 

@@ -35,7 +35,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservation
     new GuzzleHttp\Client(),
     $config
 );
-$product_reservation_id = "product_reservation_id_example"; // string | The unique id for a product reservation
+$product_reservation_id = "product_reservation_id_example"; // string | The unique id of the product reservation
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -51,7 +51,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_reservation_id** | **string**| The unique id for a product reservation |
+ **product_reservation_id** | **string**| The unique id of the product reservation |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -98,12 +98,12 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservation
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
-$sort_field = "sort_field_example"; // string | One of the query string parameters for sorting. *Response is sorted by the specified field.*
+$sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $reservation_code = "reservation_code_example"; // string | Code of the reservation
 $customer_id = "customer_id_example"; // string | The unique id of the customer
 $store_id = "store_id_example"; // string | The unique id of the store in CareCloud
-$reservation_state = 56; // int | Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
+$reservation_state = 56; // int | Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
 
 try {
     $result = $apiInstance->getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state);
@@ -121,12 +121,12 @@ Name | Type | Description  | Notes
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
- **sort_field** | **string**| One of the query string parameters for sorting. *Response is sorted by the specified field.* | [optional]
+ **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **reservation_code** | **string**| Code of the reservation | [optional]
  **customer_id** | **string**| The unique id of the customer | [optional]
  **store_id** | **string**| The unique id of the store in CareCloud | [optional]
- **reservation_state** | **int**| Actual state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional]
+ **reservation_state** | **int**| Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional]
 
 ### Return type
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postProductReservation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111 postProductReservation($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112 postProductReservation($body, $accept_language)
 
 Create a reservation
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111**](../Model/InlineResponse20111.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112**](../Model/InlineResponse20112.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservation
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCancelreservationBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCancelreservationBody | 
-$product_reservation_id = "product_reservation_id_example"; // string | The unique id for a product reservation
+$product_reservation_id = "product_reservation_id_example"; // string | The unique id of the product reservation
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -246,7 +246,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCancelreservationBody**](../Model/ActionsCancelreservationBody.md)|  |
- **product_reservation_id** | **string**| The unique id for a product reservation |
+ **product_reservation_id** | **string**| The unique id of the product reservation |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type

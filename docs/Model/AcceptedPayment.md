@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **credit_points** | **float** | Amount of used points | [optional] 
 **price_of_credit_points** | **float** | Amount of money corresponding to the number of used points | [optional] 
 **credit** | **float** | Amount of used credits | [optional] 
-**benefit_codes** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[]**](PaymentVoucher.md) | List of applied vouchers on the current bill (includes the value of discount) independent of DiscountItem | [optional] 
+**vouchers** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[]**](PaymentVoucher.md) | List of applied rewards/vouchers on the current bill (includes the value of discount) independent of DiscountItem | [optional] 
 **credit_points_of_this_transaction** | **float** | Sum of points gained from this transaction | [optional] 
 **total_credit_points** | **float** | Amount of the points on the customer account (after the recent purchase is closed) | [optional] 
 **total_credit** | **float** | Amount of the credits on the customer account (after the recent purchase is closed) | [optional] 
