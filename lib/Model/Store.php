@@ -521,7 +521,7 @@ self::STATE_2,        ];
     /**
      * Sets phone_number
      *
-     * @param string $phone_number Phone number of the store with international prefix (420000000)
+     * @param string $phone_number Phone number of the store with international prefix (420000000000)
      *
      * @return $this
      */

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **store_address** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Address**](Address.md) |  | [optional] 
 **contact_email** | **string** | Contact email of the store | [optional] 
 **manager_name** | **string** | Name of the store manager | [optional] 
-**phone_number** | **string** | Phone number of the store with international prefix (420000000) | [optional] 
+**phone_number** | **string** | Phone number of the store with international prefix (420000000000) | [optional] 
 **partner_id** | **string** | The unique id for the partner | 
 **system_id** | **string** | The external unique id of the store in external system | 
 **gps_coordinates** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\GPSCoordinates**](GPSCoordinates.md) |  | [optional] 

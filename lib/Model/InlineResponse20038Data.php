@@ -56,7 +56,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'events' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Event[]',
+        'customer_sources' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSource[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'events' => null,
+        'customer_sources' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'events' => 'events',
+        'customer_sources' => 'customer_sources',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'events' => 'setEvents',
+        'customer_sources' => 'setCustomerSources',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'events' => 'getEvents',
+        'customer_sources' => 'getCustomerSources',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['events'] = isset($data['events']) ? $data['events'] : null;
+        $this->container['customer_sources'] = isset($data['customer_sources']) ? $data['customer_sources'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets events
+     * Gets customer_sources
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Event[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSource[]
      */
-    public function getEvents()
+    public function getCustomerSources()
     {
-        return $this->container['events'];
+        return $this->container['customer_sources'];
     }
 
     /**
-     * Sets events
+     * Sets customer_sources
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Event[] $events Collection of all events
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSource[] $customer_sources List of the customer sources
      *
      * @return $this
      */
-    public function setEvents($events)
+    public function setCustomerSources($customer_sources)
     {
-        $this->container['events'] = $events;
+        $this->container['customer_sources'] = $customer_sources;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20038Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found events
+     * @param int $total_items Count of all found customer sources
      *
      * @return $this
      */

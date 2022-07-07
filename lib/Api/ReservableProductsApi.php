@@ -96,7 +96,7 @@ class ReservableProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071
      */
     public function getReservableProduct($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class ReservableProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReservableProductWithHttpInfo($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071';
         $request = $this->getReservableProductRequest($reservable_product_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class ReservableProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class ReservableProductsApi
      */
     public function getReservableProductAsyncWithHttpInfo($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071';
         $request = $this->getReservableProductRequest($reservable_product_id, $accept_language);
 
         return $this->client
@@ -420,7 +420,7 @@ class ReservableProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081
      */
     public function getReservableProducts($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null)
     {
@@ -443,11 +443,11 @@ class ReservableProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081, HTTP status code, HTTP response headers (array of strings)
      */
     public function getReservableProductsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081';
         $request = $this->getReservableProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code);
 
         try {
@@ -499,7 +499,7 @@ class ReservableProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class ReservableProductsApi
      */
     public function getReservableProductsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081';
         $request = $this->getReservableProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code);
 
         return $this->client
@@ -773,7 +773,7 @@ class ReservableProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082
      */
     public function postReservableProductsSearch($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -795,11 +795,11 @@ class ReservableProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082, HTTP status code, HTTP response headers (array of strings)
      */
     public function postReservableProductsSearchWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082';
         $request = $this->postReservableProductsSearchRequest($body, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -851,7 +851,7 @@ class ReservableProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -943,7 +943,7 @@ class ReservableProductsApi
      */
     public function postReservableProductsSearchAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082';
         $request = $this->postReservableProductsSearchRequest($body, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

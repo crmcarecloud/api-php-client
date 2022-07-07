@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**turnover** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]**](QualificationTurnover.md) | List of all turnover by currency in time interval | [optional] 
+**task_types** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TaskType[]**](TaskType.md) | List of all task types | [optional] 
+**total_items** | **int** | Count of all found task types | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

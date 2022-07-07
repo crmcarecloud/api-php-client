@@ -56,7 +56,8 @@ class InlineResponse200131Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bearer_token' => 'string'    ];
+        'users' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class InlineResponse200131Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bearer_token' => null    ];
+        'users' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class InlineResponse200131Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bearer_token' => 'bearer_token'    ];
+        'users' => 'users',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class InlineResponse200131Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bearer_token' => 'setBearerToken'    ];
+        'users' => 'setUsers',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class InlineResponse200131Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bearer_token' => 'getBearerToken'    ];
+        'users' => 'getUsers',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +174,8 @@ class InlineResponse200131Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -197,25 +203,49 @@ class InlineResponse200131Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bearer_token
+     * Gets users
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User[]
      */
-    public function getBearerToken()
+    public function getUsers()
     {
-        return $this->container['bearer_token'];
+        return $this->container['users'];
     }
 
     /**
-     * Sets bearer_token
+     * Sets users
      *
-     * @param string $bearer_token Autentication bearer token for an user. Token can be used for autentication in REST API with Bearer Autentication (more information about it [here](#section/Authorization/bearerAuth))
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User[] $users Array of users
      *
      * @return $this
      */
-    public function setBearerToken($bearer_token)
+    public function setUsers($users)
     {
-        $this->container['bearer_token'] = $bearer_token;
+        $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items Count of all found users
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

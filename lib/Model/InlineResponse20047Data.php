@@ -56,7 +56,7 @@ class InlineResponse20047Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'interests' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]',
+        'event_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\EventType[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20047Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'interests' => null,
+        'event_types' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20047Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'interests' => 'interests',
+        'event_types' => 'event_types',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20047Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'interests' => 'setInterests',
+        'event_types' => 'setEventTypes',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20047Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'interests' => 'getInterests',
+        'event_types' => 'getEventTypes',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20047Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['interests'] = isset($data['interests']) ? $data['interests'] : null;
+        $this->container['event_types'] = isset($data['event_types']) ? $data['event_types'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20047Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets interests
+     * Gets event_types
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\EventType[]
      */
-    public function getInterests()
+    public function getEventTypes()
     {
-        return $this->container['interests'];
+        return $this->container['event_types'];
     }
 
     /**
-     * Sets interests
+     * Sets event_types
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[] $interests List of all interests
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\EventType[] $event_types List of all event types
      *
      * @return $this
      */
-    public function setInterests($interests)
+    public function setEventTypes($event_types)
     {
-        $this->container['interests'] = $interests;
+        $this->container['event_types'] = $event_types;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20047Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found interests
+     * @param int $total_items Count of all found event types
      *
      * @return $this
      */

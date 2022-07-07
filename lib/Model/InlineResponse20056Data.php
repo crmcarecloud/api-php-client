@@ -56,7 +56,8 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_valid' => 'bool'    ];
+        'message_templates' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'is_valid' => null    ];
+        'message_templates' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_valid' => 'is_valid'    ];
+        'message_templates' => 'message_templates',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'is_valid' => 'setIsValid'    ];
+        'message_templates' => 'setMessageTemplates',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'is_valid' => 'getIsValid'    ];
+        'message_templates' => 'getMessageTemplates',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +174,8 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_valid'] = isset($data['is_valid']) ? $data['is_valid'] : null;
+        $this->container['message_templates'] = isset($data['message_templates']) ? $data['message_templates'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -197,25 +203,49 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets is_valid
+     * Gets message_templates
      *
-     * @return bool
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]
      */
-    public function getIsValid()
+    public function getMessageTemplates()
     {
-        return $this->container['is_valid'];
+        return $this->container['message_templates'];
     }
 
     /**
-     * Sets is_valid
+     * Sets message_templates
      *
-     * @param bool $is_valid Result of the OTP verification
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[] $message_templates List of all message templates
      *
      * @return $this
      */
-    public function setIsValid($is_valid)
+    public function setMessageTemplates($message_templates)
     {
-        $this->container['is_valid'] = $is_valid;
+        $this->container['message_templates'] = $message_templates;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items Count of all found message templates
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

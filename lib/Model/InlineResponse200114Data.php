@@ -56,7 +56,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tasks' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Task[]',
+        'store_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'tasks' => null,
+        'store_groups' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'tasks' => 'tasks',
+        'store_groups' => 'store_groups',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'tasks' => 'setTasks',
+        'store_groups' => 'setStoreGroups',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'tasks' => 'getTasks',
+        'store_groups' => 'getStoreGroups',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['tasks'] = isset($data['tasks']) ? $data['tasks'] : null;
+        $this->container['store_groups'] = isset($data['store_groups']) ? $data['store_groups'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets tasks
+     * Gets store_groups
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Task[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]
      */
-    public function getTasks()
+    public function getStoreGroups()
     {
-        return $this->container['tasks'];
+        return $this->container['store_groups'];
     }
 
     /**
-     * Sets tasks
+     * Sets store_groups
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Task[] $tasks List of all tasks
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[] $store_groups List of all store groups
      *
      * @return $this
      */
-    public function setTasks($tasks)
+    public function setStoreGroups($store_groups)
     {
-        $this->container['tasks'] = $tasks;
+        $this->container['store_groups'] = $store_groups;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found tasks
+     * @param int $total_items Count of all found store groups
      *
      * @return $this
      */

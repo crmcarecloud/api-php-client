@@ -96,7 +96,7 @@ class MessageTemplatesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057
      */
     public function getMessageTemplate($message_template_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class MessageTemplatesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMessageTemplateWithHttpInfo($message_template_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057';
         $request = $this->getMessageTemplateRequest($message_template_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class MessageTemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class MessageTemplatesApi
      */
     public function getMessageTemplateAsyncWithHttpInfo($message_template_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057';
         $request = $this->getMessageTemplateRequest($message_template_id, $accept_language);
 
         return $this->client
@@ -419,7 +419,7 @@ class MessageTemplatesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056
      */
     public function getMessageTemplates($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -441,11 +441,11 @@ class MessageTemplatesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMessageTemplatesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056';
         $request = $this->getMessageTemplatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -497,7 +497,7 @@ class MessageTemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -589,7 +589,7 @@ class MessageTemplatesApi
      */
     public function getMessageTemplatesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056';
         $request = $this->getMessageTemplatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client

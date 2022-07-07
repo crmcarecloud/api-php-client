@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postBulkProductGroups**](ProductGroupsApi.md#postbulkproductgroups) | **POST** /product-groups/batch | Create a batch of product groups
 
 # **getProductGroup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072 getProductGroup($product_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075 getProductGroup($product_group_id, $accept_language)
 
 Get a product group
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071 getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074 getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code)
 
 Get all product groups
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
 
 ### Authorization
 

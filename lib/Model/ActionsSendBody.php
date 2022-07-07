@@ -222,7 +222,7 @@ self::OTP_TYPE_2,        ];
         $this->container['external_application_id'] = isset($data['external_application_id']) ? $data['external_application_id'] : null;
         $this->container['communication_channel_id'] = isset($data['communication_channel_id']) ? $data['communication_channel_id'] : null;
         $this->container['recipient'] = isset($data['recipient']) ? $data['recipient'] : null;
-        $this->container['otp_type'] = isset($data['otp_type']) ? $data['otp_type'] : OTP_TYPE.1;
+        $this->container['otp_type'] = isset($data['otp_type']) ? $data['otp_type'] : null;
         $this->container['message_template_id'] = isset($data['message_template_id']) ? $data['message_template_id'] : null;
     }
 

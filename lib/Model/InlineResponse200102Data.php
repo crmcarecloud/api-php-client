@@ -56,7 +56,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'skipasses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[]',
+        'reward_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'skipasses' => null,
+        'reward_properties' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'skipasses' => 'skipasses',
+        'reward_properties' => 'reward_properties',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'skipasses' => 'setSkipasses',
+        'reward_properties' => 'setRewardProperties',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'skipasses' => 'getSkipasses',
+        'reward_properties' => 'getRewardProperties',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['skipasses'] = isset($data['skipasses']) ? $data['skipasses'] : null;
+        $this->container['reward_properties'] = isset($data['reward_properties']) ? $data['reward_properties'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets skipasses
+     * Gets reward_properties
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getSkipasses()
+    public function getRewardProperties()
     {
-        return $this->container['skipasses'];
+        return $this->container['reward_properties'];
     }
 
     /**
-     * Sets skipasses
+     * Sets reward_properties
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[] $skipasses List of available skipasses
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $reward_properties List of all reward properties
      *
      * @return $this
      */
-    public function setSkipasses($skipasses)
+    public function setRewardProperties($reward_properties)
     {
-        $this->container['skipasses'] = $skipasses;
+        $this->container['reward_properties'] = $reward_properties;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found skipasses
+     * @param int $total_items Count of all found reward properties
      *
      * @return $this
      */

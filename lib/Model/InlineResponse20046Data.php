@@ -95,7 +95,7 @@ class InlineResponse20046Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_properties' => 'event-properties',
+        'event_properties' => 'event_properties',
 'total_items' => 'total_items'    ];
 
     /**
@@ -215,7 +215,7 @@ class InlineResponse20046Data implements ModelInterface, ArrayAccess
     /**
      * Sets event_properties
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $event_properties List of event properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $event_properties List of all event properties
      *
      * @return $this
      */

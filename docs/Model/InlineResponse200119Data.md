@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bearer_token** | **string** | Autentication bearer token for an user. Token can be used for autentication in REST API with Bearer Autentication (more information about it [here](#section/Authorization/bearerAuth)) | [optional] 
-**user** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\User**](User.md) |  | [optional] 
+**task_comments** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TaskComment[]**](TaskComment.md) | List of all task comments | [optional] 
+**total_items** | **int** | Count of all found task comments | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

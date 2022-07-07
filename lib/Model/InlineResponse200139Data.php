@@ -56,9 +56,7 @@ class InlineResponse200139Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'next_amount' => 'float',
-'next_date' => 'string',
-'current_month_amount' => 'float'    ];
+        'turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +64,7 @@ class InlineResponse200139Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'next_amount' => 'float',
-'next_date' => null,
-'current_month_amount' => 'float'    ];
+        'turnover' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +93,7 @@ class InlineResponse200139Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_amount' => 'next_amount',
-'next_date' => 'next_date',
-'current_month_amount' => 'current_month_amount'    ];
+        'turnover' => 'turnover'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +101,7 @@ class InlineResponse200139Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'next_amount' => 'setNextAmount',
-'next_date' => 'setNextDate',
-'current_month_amount' => 'setCurrentMonthAmount'    ];
+        'turnover' => 'setTurnover'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +109,7 @@ class InlineResponse200139Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'next_amount' => 'getNextAmount',
-'next_date' => 'getNextDate',
-'current_month_amount' => 'getCurrentMonthAmount'    ];
+        'turnover' => 'getTurnover'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +169,7 @@ class InlineResponse200139Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_amount'] = isset($data['next_amount']) ? $data['next_amount'] : null;
-        $this->container['next_date'] = isset($data['next_date']) ? $data['next_date'] : null;
-        $this->container['current_month_amount'] = isset($data['current_month_amount']) ? $data['current_month_amount'] : null;
+        $this->container['turnover'] = isset($data['turnover']) ? $data['turnover'] : null;
     }
 
     /**
@@ -209,73 +197,25 @@ class InlineResponse200139Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets next_amount
+     * Gets turnover
      *
-     * @return float
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
      */
-    public function getNextAmount()
+    public function getTurnover()
     {
-        return $this->container['next_amount'];
+        return $this->container['turnover'];
     }
 
     /**
-     * Sets next_amount
+     * Sets turnover
      *
-     * @param float $next_amount Date (ISO 8601) when first points will expire
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $turnover List of all turnover by currency in time interval
      *
      * @return $this
      */
-    public function setNextAmount($next_amount)
+    public function setTurnover($turnover)
     {
-        $this->container['next_amount'] = $next_amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets next_date
-     *
-     * @return string
-     */
-    public function getNextDate()
-    {
-        return $this->container['next_date'];
-    }
-
-    /**
-     * Sets next_date
-     *
-     * @param string $next_date Amount of redeemed points in time interval *(YYYY-MM-DD)*
-     *
-     * @return $this
-     */
-    public function setNextDate($next_date)
-    {
-        $this->container['next_date'] = $next_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets current_month_amount
-     *
-     * @return float
-     */
-    public function getCurrentMonthAmount()
-    {
-        return $this->container['current_month_amount'];
-    }
-
-    /**
-     * Sets current_month_amount
-     *
-     * @param float $current_month_amount Amount of points that will expire in current month
-     *
-     * @return $this
-     */
-    public function setCurrentMonthAmount($current_month_amount)
-    {
-        $this->container['current_month_amount'] = $current_month_amount;
+        $this->container['turnover'] = $turnover;
 
         return $this;
     }

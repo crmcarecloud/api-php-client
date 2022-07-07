@@ -56,7 +56,8 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]'    ];
+        'user_roles' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'turnover' => null    ];
+        'user_roles' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'turnover' => 'turnover'    ];
+        'user_roles' => 'user_roles',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'turnover' => 'setTurnover'    ];
+        'user_roles' => 'setUserRoles',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'turnover' => 'getTurnover'    ];
+        'user_roles' => 'getUserRoles',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +174,8 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['turnover'] = isset($data['turnover']) ? $data['turnover'] : null;
+        $this->container['user_roles'] = isset($data['user_roles']) ? $data['user_roles'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -197,25 +203,49 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets turnover
+     * Gets user_roles
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]
      */
-    public function getTurnover()
+    public function getUserRoles()
     {
-        return $this->container['turnover'];
+        return $this->container['user_roles'];
     }
 
     /**
-     * Sets turnover
+     * Sets user_roles
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $turnover List of all turnover by currency in time interval
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[] $user_roles Array of user roles
      *
      * @return $this
      */
-    public function setTurnover($turnover)
+    public function setUserRoles($user_roles)
     {
-        $this->container['turnover'] = $turnover;
+        $this->container['user_roles'] = $user_roles;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items Count of all found user roles
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

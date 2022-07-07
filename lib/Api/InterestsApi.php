@@ -96,7 +96,7 @@ class InterestsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051
      */
     public function getInterest($interest_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class InterestsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInterestWithHttpInfo($interest_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051';
         $request = $this->getInterestRequest($interest_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class InterestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class InterestsApi
      */
     public function getInterestAsyncWithHttpInfo($interest_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051';
         $request = $this->getInterestRequest($interest_id, $accept_language);
 
         return $this->client
@@ -419,7 +419,7 @@ class InterestsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050
      */
     public function getInterests($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -441,11 +441,11 @@ class InterestsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInterestsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050';
         $request = $this->getInterestsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -497,7 +497,7 @@ class InterestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -589,7 +589,7 @@ class InterestsApi
      */
     public function getInterestsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050';
         $request = $this->getInterestsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client

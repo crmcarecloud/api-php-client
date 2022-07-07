@@ -56,9 +56,8 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token' => 'string',
-'token_request_id' => 'string',
-'valid_to' => 'string'    ];
+        'task_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +65,8 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'token' => null,
-'token_request_id' => null,
-'valid_to' => null    ];
+        'task_properties' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +95,8 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token',
-'token_request_id' => 'token_request_id',
-'valid_to' => 'valid_to'    ];
+        'task_properties' => 'task_properties',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +104,8 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken',
-'token_request_id' => 'setTokenRequestId',
-'valid_to' => 'setValidTo'    ];
+        'task_properties' => 'setTaskProperties',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +113,8 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken',
-'token_request_id' => 'getTokenRequestId',
-'valid_to' => 'getValidTo'    ];
+        'task_properties' => 'getTaskProperties',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +174,8 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
-        $this->container['token_request_id'] = isset($data['token_request_id']) ? $data['token_request_id'] : null;
-        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
+        $this->container['task_properties'] = isset($data['task_properties']) ? $data['task_properties'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -209,73 +203,49 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets token
+     * Gets task_properties
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getToken()
+    public function getTaskProperties()
     {
-        return $this->container['token'];
+        return $this->container['task_properties'];
     }
 
     /**
-     * Sets token
+     * Sets task_properties
      *
-     * @param string $token Authentication token for external application
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $task_properties List of all task properties
      *
      * @return $this
      */
-    public function setToken($token)
+    public function setTaskProperties($task_properties)
     {
-        $this->container['token'] = $token;
+        $this->container['task_properties'] = $task_properties;
 
         return $this;
     }
 
     /**
-     * Gets token_request_id
+     * Gets total_items
      *
-     * @return string
+     * @return int
      */
-    public function getTokenRequestId()
+    public function getTotalItems()
     {
-        return $this->container['token_request_id'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets token_request_id
+     * Sets total_items
      *
-     * @param string $token_request_id The parameter specifies the request that caused the token to be created. If two customers generated an authentication token at the same time and in the same application, the token_request_id parameter represents additional verification to identify the correct token
+     * @param int $total_items Count of all found task properties
      *
      * @return $this
      */
-    public function setTokenRequestId($token_request_id)
+    public function setTotalItems($total_items)
     {
-        $this->container['token_request_id'] = $token_request_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets valid_to
-     *
-     * @return string
-     */
-    public function getValidTo()
-    {
-        return $this->container['valid_to'];
-    }
-
-    /**
-     * Sets valid_to
-     *
-     * @param string $valid_to Date and time of the token validity   *(YYYY-MM-DD HH:MM:SS)*
-     *
-     * @return $this
-     */
-    public function setValidTo($valid_to)
-    {
-        $this->container['valid_to'] = $valid_to;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

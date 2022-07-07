@@ -56,7 +56,7 @@ class InlineResponse20050Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'messages' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Message[]',
+        'interests' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20050Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'messages' => null,
+        'interests' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20050Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'messages' => 'messages',
+        'interests' => 'interests',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20050Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'messages' => 'setMessages',
+        'interests' => 'setInterests',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20050Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'messages' => 'getMessages',
+        'interests' => 'getInterests',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20050Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['messages'] = isset($data['messages']) ? $data['messages'] : null;
+        $this->container['interests'] = isset($data['interests']) ? $data['interests'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20050Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets messages
+     * Gets interests
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Message[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]
      */
-    public function getMessages()
+    public function getInterests()
     {
-        return $this->container['messages'];
+        return $this->container['interests'];
     }
 
     /**
-     * Sets messages
+     * Sets interests
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Message[] $messages List of all messages
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[] $interests List of all interests
      *
      * @return $this
      */
-    public function setMessages($messages)
+    public function setInterests($interests)
     {
-        $this->container['messages'] = $messages;
+        $this->container['interests'] = $interests;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20050Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found messages
+     * @param int $total_items Count of all found interests
      *
      * @return $this
      */

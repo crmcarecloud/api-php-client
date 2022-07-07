@@ -56,7 +56,7 @@ class InlineResponse20037 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037Data'    ];
+        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerRelationType'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class InlineResponse20037 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037Data
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerRelationType
      */
     public function getData()
     {
@@ -209,7 +209,7 @@ class InlineResponse20037 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037Data $data data
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerRelationType $data data
      *
      * @return $this
      */

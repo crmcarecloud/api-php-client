@@ -56,7 +56,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'languages' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Language[]',
+        'event_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'languages' => null,
+        'event_properties' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'languages' => 'languages',
+        'event_properties' => 'event-properties',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'languages' => 'setLanguages',
+        'event_properties' => 'setEventProperties',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'languages' => 'getLanguages',
+        'event_properties' => 'getEventProperties',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['languages'] = isset($data['languages']) ? $data['languages'] : null;
+        $this->container['event_properties'] = isset($data['event_properties']) ? $data['event_properties'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets languages
+     * Gets event_properties
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Language[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getLanguages()
+    public function getEventProperties()
     {
-        return $this->container['languages'];
+        return $this->container['event_properties'];
     }
 
     /**
-     * Sets languages
+     * Sets event_properties
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Language[] $languages List of the language codes by ISO 639-1
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $event_properties List of event properties
      *
      * @return $this
      */
-    public function setLanguages($languages)
+    public function setEventProperties($event_properties)
     {
-        $this->container['languages'] = $languages;
+        $this->container['event_properties'] = $event_properties;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20049Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found languages
+     * @param int $total_items Count of all found event properties
      *
      * @return $this
      */

@@ -56,7 +56,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'event_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\EventType[]',
+        'event_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\EventGroup[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'event_types' => null,
+        'event_groups' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_types' => 'event_types',
+        'event_groups' => 'event_groups',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'event_types' => 'setEventTypes',
+        'event_groups' => 'setEventGroups',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'event_types' => 'getEventTypes',
+        'event_groups' => 'getEventGroups',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['event_types'] = isset($data['event_types']) ? $data['event_types'] : null;
+        $this->container['event_groups'] = isset($data['event_groups']) ? $data['event_groups'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets event_types
+     * Gets event_groups
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\EventType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\EventGroup[]
      */
-    public function getEventTypes()
+    public function getEventGroups()
     {
-        return $this->container['event_types'];
+        return $this->container['event_groups'];
     }
 
     /**
-     * Sets event_types
+     * Sets event_groups
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\EventType[] $event_types List of all event types
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\EventGroup[] $event_groups List of all event groups
      *
      * @return $this
      */
-    public function setEventTypes($event_types)
+    public function setEventGroups($event_groups)
     {
-        $this->container['event_types'] = $event_types;
+        $this->container['event_groups'] = $event_groups;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found event types
+     * @param int $total_items Count of all found event groups
      *
      * @return $this
      */

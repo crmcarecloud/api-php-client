@@ -96,7 +96,7 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106
      */
     public function getSkipass($skipass_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSkipassWithHttpInfo($skipass_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
         $request = $this->getSkipassRequest($skipass_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class SkipassesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class SkipassesApi
      */
     public function getSkipassAsyncWithHttpInfo($skipass_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
         $request = $this->getSkipassRequest($skipass_id, $accept_language);
 
         return $this->client
@@ -430,7 +430,7 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105
      */
     public function getSkipasses($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $skipass_type_id = null, $state = null, $external_skipass_id = null, $is_valid = null, $is_cancelled = null)
     {
@@ -463,11 +463,11 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSkipassesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $skipass_type_id = null, $state = null, $external_skipass_id = null, $is_valid = null, $is_cancelled = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
         $request = $this->getSkipassesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled);
 
         try {
@@ -519,7 +519,7 @@ class SkipassesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -633,7 +633,7 @@ class SkipassesApi
      */
     public function getSkipassesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $skipass_type_id = null, $state = null, $external_skipass_id = null, $is_valid = null, $is_cancelled = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
         $request = $this->getSkipassesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled);
 
         return $this->client
@@ -860,7 +860,7 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107
      */
     public function getSkipassesOverview($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null)
     {
@@ -879,11 +879,11 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSkipassesOverviewWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
         $request = $this->getSkipassesOverviewRequest($accept_language, $valid_from, $valid_to);
 
         try {
@@ -935,7 +935,7 @@ class SkipassesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1021,7 +1021,7 @@ class SkipassesApi
      */
     public function getSkipassesOverviewAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
         $request = $this->getSkipassesOverviewRequest($accept_language, $valid_from, $valid_to);
 
         return $this->client

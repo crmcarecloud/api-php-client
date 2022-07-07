@@ -96,7 +96,7 @@ class CustomerRelationTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037
      */
     public function getCustomerRelationType($customer_relation_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class CustomerRelationTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerRelationTypeWithHttpInfo($customer_relation_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037';
         $request = $this->getCustomerRelationTypeRequest($customer_relation_type_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CustomerRelationTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class CustomerRelationTypesApi
      */
     public function getCustomerRelationTypeAsyncWithHttpInfo($customer_relation_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037';
         $request = $this->getCustomerRelationTypeRequest($customer_relation_type_id, $accept_language);
 
         return $this->client
@@ -418,7 +418,7 @@ class CustomerRelationTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036
      */
     public function getCustomerRelationTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -439,11 +439,11 @@ class CustomerRelationTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerRelationTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036';
         $request = $this->getCustomerRelationTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -495,7 +495,7 @@ class CustomerRelationTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -585,7 +585,7 @@ class CustomerRelationTypesApi
      */
     public function getCustomerRelationTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036';
         $request = $this->getCustomerRelationTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

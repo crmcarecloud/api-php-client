@@ -56,7 +56,7 @@ class InlineResponse200128Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'users' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User[]',
+        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200128Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'users' => null,
+        'property_records' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200128Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'users' => 'users',
+        'property_records' => 'property_records',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200128Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'users' => 'setUsers',
+        'property_records' => 'setPropertyRecords',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200128Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'users' => 'getUsers',
+        'property_records' => 'getPropertyRecords',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200128Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200128Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets users
+     * Gets property_records
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
      */
-    public function getUsers()
+    public function getPropertyRecords()
     {
-        return $this->container['users'];
+        return $this->container['property_records'];
     }
 
     /**
-     * Sets users
+     * Sets property_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User[] $users Array of users
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records
      *
      * @return $this
      */
-    public function setUsers($users)
+    public function setPropertyRecords($property_records)
     {
-        $this->container['users'] = $users;
+        $this->container['property_records'] = $property_records;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200128Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found users
+     * @param int $total_items Count of all found task property records
      *
      * @return $this
      */

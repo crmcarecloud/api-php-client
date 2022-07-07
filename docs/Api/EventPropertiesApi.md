@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getEventProperty**](EventPropertiesApi.md#geteventproperty) | **GET** /event-properties/{event_property_id} | Get a event property
 
 # **getEventProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043 getEventProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046 getEventProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all event properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEventProperty**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034 getEventProperty($event_property_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035 getEventProperty($event_property_id, $accept_language)
 
 Get a event property
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
 
 ### Authorization
 

@@ -57,6 +57,7 @@ class InlineResponse20013DataCountries implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'country_id' => 'string',
+'name' => 'string',
 'state' => 'int'    ];
 
     /**
@@ -66,6 +67,7 @@ class InlineResponse20013DataCountries implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'country_id' => null,
+'name' => null,
 'state' => null    ];
 
     /**
@@ -96,6 +98,7 @@ class InlineResponse20013DataCountries implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'country_id' => 'country_id',
+'name' => 'name',
 'state' => 'state'    ];
 
     /**
@@ -105,6 +108,7 @@ class InlineResponse20013DataCountries implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'country_id' => 'setCountryId',
+'name' => 'setName',
 'state' => 'setState'    ];
 
     /**
@@ -114,6 +118,7 @@ class InlineResponse20013DataCountries implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'country_id' => 'getCountryId',
+'name' => 'getName',
 'state' => 'getState'    ];
 
     /**
@@ -190,6 +195,7 @@ self::STATE_2,        ];
     public function __construct(array $data = null)
     {
         $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
     }
 
@@ -245,6 +251,30 @@ self::STATE_2,        ];
     public function setCountryId($country_id)
     {
         $this->container['country_id'] = $country_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name Name of the country. Language depends on the `Accept-Language` header from the request.
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
 
         return $this;
     }

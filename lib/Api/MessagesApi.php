@@ -96,7 +96,7 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054
      */
     public function getMessage($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMessageWithHttpInfo($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
         $request = $this->getMessageRequest($message_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class MessagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class MessagesApi
      */
     public function getMessageAsyncWithHttpInfo($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
         $request = $this->getMessageRequest($message_id, $accept_language);
 
         return $this->client
@@ -423,7 +423,7 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053
      */
     public function getMessages($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $contact = null, $communication_channel_id = null, $send_time_from = null, $send_time_to = null)
     {
@@ -449,11 +449,11 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMessagesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $contact = null, $communication_channel_id = null, $send_time_from = null, $send_time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053';
         $request = $this->getMessagesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to);
 
         try {
@@ -505,7 +505,7 @@ class MessagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -605,7 +605,7 @@ class MessagesApi
      */
     public function getMessagesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $contact = null, $communication_channel_id = null, $send_time_from = null, $send_time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053';
         $request = $this->getMessagesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to);
 
         return $this->client
@@ -796,7 +796,7 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055
      */
     public function getSubMessageDetail($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -814,11 +814,11 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubMessageDetailWithHttpInfo($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055';
         $request = $this->getSubMessageDetailRequest($message_id, $accept_language);
 
         try {
@@ -870,7 +870,7 @@ class MessagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -954,7 +954,7 @@ class MessagesApi
      */
     public function getSubMessageDetailAsyncWithHttpInfo($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055';
         $request = $this->getSubMessageDetailRequest($message_id, $accept_language);
 
         return $this->client

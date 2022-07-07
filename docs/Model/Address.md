@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **zip** | **string** | ZIP code | [optional] 
 **city** | **string** | City | [optional] 
 **country_code** | **string** | ISO code of the country *Possible values de / gb / us / it / cz / etc.* | [optional] 
+**address_type** | **string** | Type of the address. Address type is set only for additional customer addresses. Default address in customer structure has no type. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -56,7 +56,7 @@ class InlineResponse200105Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'statuses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Status[]',
+        'skipasses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200105Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'statuses' => null,
+        'skipasses' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200105Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'statuses' => 'statuses',
+        'skipasses' => 'skipasses',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200105Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'statuses' => 'setStatuses',
+        'skipasses' => 'setSkipasses',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200105Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'statuses' => 'getStatuses',
+        'skipasses' => 'getSkipasses',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200105Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['statuses'] = isset($data['statuses']) ? $data['statuses'] : null;
+        $this->container['skipasses'] = isset($data['skipasses']) ? $data['skipasses'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200105Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets statuses
+     * Gets skipasses
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Status[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[]
      */
-    public function getStatuses()
+    public function getSkipasses()
     {
-        return $this->container['statuses'];
+        return $this->container['skipasses'];
     }
 
     /**
-     * Sets statuses
+     * Sets skipasses
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Status[] $statuses List of recent statuses
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[] $skipasses List of available skipasses
      *
      * @return $this
      */
-    public function setStatuses($statuses)
+    public function setSkipasses($skipasses)
     {
-        $this->container['statuses'] = $statuses;
+        $this->container['skipasses'] = $skipasses;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200105Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found statuses
+     * @param int $total_items Count of all found skipasses
      *
      * @return $this
      */

@@ -56,7 +56,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'point_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PointType[]',
+        'point_history' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'point_types' => null,
+        'point_history' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'point_types' => 'point_types',
+        'point_history' => 'point_history',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'point_types' => 'setPointTypes',
+        'point_history' => 'setPointHistory',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'point_types' => 'getPointTypes',
+        'point_history' => 'getPointHistory',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['point_types'] = isset($data['point_types']) ? $data['point_types'] : null;
+        $this->container['point_history'] = isset($data['point_history']) ? $data['point_history'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets point_types
+     * Gets point_history
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PointType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[]
      */
-    public function getPointTypes()
+    public function getPointHistory()
     {
-        return $this->container['point_types'];
+        return $this->container['point_history'];
     }
 
     /**
-     * Sets point_types
+     * Sets point_history
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PointType[] $point_types List of the point types
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[] $point_history List of the point history records
      *
      * @return $this
      */
-    public function setPointTypes($point_types)
+    public function setPointHistory($point_history)
     {
-        $this->container['point_types'] = $point_types;
+        $this->container['point_history'] = $point_history;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found point types
+     * @param int $total_items Count of all found point history records
      *
      * @return $this
      */

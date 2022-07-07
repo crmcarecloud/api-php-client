@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**products** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Product[]**](Product.md) | List of products tied to a reward | [optional] 
-**total_items** | **int** | Count of all found products | [optional] 
+**rewards** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Reward[]**](Reward.md) | List of all rewards | [optional] 
+**total_items** | **int** | Count of all found rewards | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
