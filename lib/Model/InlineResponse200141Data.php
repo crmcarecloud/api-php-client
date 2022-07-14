@@ -1,6 +1,6 @@
 <?php
 /**
- * ActionsSendBody
+ * InlineResponse200141Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * ActionsSendBody Class Doc Comment
+ * InlineResponse200141Data Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ActionsSendBody implements ModelInterface, ArrayAccess
+class InlineResponse200141Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'actions_send_body';
+    protected static $swaggerModelName = 'inline_response_200_141_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,11 +56,9 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'external_application_id' => 'string',
-'communication_channel_id' => 'int',
-'recipient' => 'string',
-'otp_type' => 'int',
-'message_template_id' => 'string'    ];
+        'earned_credits' => 'float',
+'redeemed_credits' => 'float',
+'available_credits' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,11 +66,9 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'external_application_id' => null,
-'communication_channel_id' => null,
-'recipient' => null,
-'otp_type' => null,
-'message_template_id' => null    ];
+        'earned_credits' => 'float',
+'redeemed_credits' => 'float',
+'available_credits' => 'float'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -101,11 +97,9 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'external_application_id' => 'external_application_id',
-'communication_channel_id' => 'communication_channel_id',
-'recipient' => 'recipient',
-'otp_type' => 'otp_type',
-'message_template_id' => 'message_template_id'    ];
+        'earned_credits' => 'earned_credits',
+'redeemed_credits' => 'redeemed_credits',
+'available_credits' => 'available_credits'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -113,11 +107,9 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'external_application_id' => 'setExternalApplicationId',
-'communication_channel_id' => 'setCommunicationChannelId',
-'recipient' => 'setRecipient',
-'otp_type' => 'setOtpType',
-'message_template_id' => 'setMessageTemplateId'    ];
+        'earned_credits' => 'setEarnedCredits',
+'redeemed_credits' => 'setRedeemedCredits',
+'available_credits' => 'setAvailableCredits'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -125,11 +117,9 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'external_application_id' => 'getExternalApplicationId',
-'communication_channel_id' => 'getCommunicationChannelId',
-'recipient' => 'getRecipient',
-'otp_type' => 'getOtpType',
-'message_template_id' => 'getMessageTemplateId'    ];
+        'earned_credits' => 'getEarnedCredits',
+'redeemed_credits' => 'getRedeemedCredits',
+'available_credits' => 'getAvailableCredits'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -172,37 +162,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const COMMUNICATION_CHANNEL_ID_1 = 1;
-const COMMUNICATION_CHANNEL_ID_2 = 2;
-const COMMUNICATION_CHANNEL_ID_4 = 4;
-const COMMUNICATION_CHANNEL_ID_5 = 5;
-const OTP_TYPE_1 = 1;
-const OTP_TYPE_2 = 2;
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCommunicationChannelIdAllowableValues()
-    {
-        return [
-            self::COMMUNICATION_CHANNEL_ID_1,
-self::COMMUNICATION_CHANNEL_ID_2,
-self::COMMUNICATION_CHANNEL_ID_4,
-self::COMMUNICATION_CHANNEL_ID_5,        ];
-    }
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getOtpTypeAllowableValues()
-    {
-        return [
-            self::OTP_TYPE_1,
-self::OTP_TYPE_2,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -219,11 +179,9 @@ self::OTP_TYPE_2,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['external_application_id'] = isset($data['external_application_id']) ? $data['external_application_id'] : null;
-        $this->container['communication_channel_id'] = isset($data['communication_channel_id']) ? $data['communication_channel_id'] : null;
-        $this->container['recipient'] = isset($data['recipient']) ? $data['recipient'] : null;
-        $this->container['otp_type'] = isset($data['otp_type']) ? $data['otp_type'] : self::OTP_TYPE_1;
-        $this->container['message_template_id'] = isset($data['message_template_id']) ? $data['message_template_id'] : null;
+        $this->container['earned_credits'] = isset($data['earned_credits']) ? $data['earned_credits'] : null;
+        $this->container['redeemed_credits'] = isset($data['redeemed_credits']) ? $data['redeemed_credits'] : null;
+        $this->container['available_credits'] = isset($data['available_credits']) ? $data['available_credits'] : null;
     }
 
     /**
@@ -234,31 +192,6 @@ self::OTP_TYPE_2,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if ($this->container['external_application_id'] === null) {
-            $invalidProperties[] = "'external_application_id' can't be null";
-        }
-        if ($this->container['communication_channel_id'] === null) {
-            $invalidProperties[] = "'communication_channel_id' can't be null";
-        }
-        $allowedValues = $this->getCommunicationChannelIdAllowableValues();
-        if (!is_null($this->container['communication_channel_id']) && !in_array($this->container['communication_channel_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'communication_channel_id', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['recipient'] === null) {
-            $invalidProperties[] = "'recipient' can't be null";
-        }
-        $allowedValues = $this->getOtpTypeAllowableValues();
-        if (!is_null($this->container['otp_type']) && !in_array($this->container['otp_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'otp_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -276,139 +209,73 @@ self::OTP_TYPE_2,        ];
 
 
     /**
-     * Gets external_application_id
+     * Gets earned_credits
      *
-     * @return string
+     * @return float
      */
-    public function getExternalApplicationId()
+    public function getEarnedCredits()
     {
-        return $this->container['external_application_id'];
+        return $this->container['earned_credits'];
     }
 
     /**
-     * Sets external_application_id
+     * Sets earned_credits
      *
-     * @param string $external_application_id Id of the external application that requested one time password. If you dont have external application id, guide how to get it is available [here](#section/Authentication)
+     * @param float $earned_credits Amount of earned credits in time interval
      *
      * @return $this
      */
-    public function setExternalApplicationId($external_application_id)
+    public function setEarnedCredits($earned_credits)
     {
-        $this->container['external_application_id'] = $external_application_id;
+        $this->container['earned_credits'] = $earned_credits;
 
         return $this;
     }
 
     /**
-     * Gets communication_channel_id
+     * Gets redeemed_credits
      *
-     * @return int
+     * @return float
      */
-    public function getCommunicationChannelId()
+    public function getRedeemedCredits()
     {
-        return $this->container['communication_channel_id'];
+        return $this->container['redeemed_credits'];
     }
 
     /**
-     * Sets communication_channel_id
+     * Sets redeemed_credits
      *
-     * @param int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
+     * @param float $redeemed_credits Amount of redeemed credits in time interval
      *
      * @return $this
      */
-    public function setCommunicationChannelId($communication_channel_id)
+    public function setRedeemedCredits($redeemed_credits)
     {
-        $allowedValues = $this->getCommunicationChannelIdAllowableValues();
-        if (!in_array($communication_channel_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'communication_channel_id', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['communication_channel_id'] = $communication_channel_id;
+        $this->container['redeemed_credits'] = $redeemed_credits;
 
         return $this;
     }
 
     /**
-     * Gets recipient
+     * Gets available_credits
      *
-     * @return string
+     * @return float
      */
-    public function getRecipient()
+    public function getAvailableCredits()
     {
-        return $this->container['recipient'];
+        return $this->container['available_credits'];
     }
 
     /**
-     * Sets recipient
+     * Sets available_credits
      *
-     * @param string $recipient Recipient of the message with OTP. The parameter could contain email, phone number or other identifier of the message recipient.
+     * @param float $available_credits Amount of available credits in the moment. Time interval has no influence to the result
      *
      * @return $this
      */
-    public function setRecipient($recipient)
+    public function setAvailableCredits($available_credits)
     {
-        $this->container['recipient'] = $recipient;
-
-        return $this;
-    }
-
-    /**
-     * Gets otp_type
-     *
-     * @return int
-     */
-    public function getOtpType()
-    {
-        return $this->container['otp_type'];
-    }
-
-    /**
-     * Sets otp_type
-     *
-     * @param int $otp_type Parameter sets witch OTP type should be generated. *Possible values: 1- alphanumeric, 2- numeric*
-     *
-     * @return $this
-     */
-    public function setOtpType($otp_type)
-    {
-        $allowedValues = $this->getOtpTypeAllowableValues();
-        if (!is_null($otp_type) && !in_array($otp_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'otp_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['otp_type'] = $otp_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets message_template_id
-     *
-     * @return string
-     */
-    public function getMessageTemplateId()
-    {
-        return $this->container['message_template_id'];
-    }
-
-    /**
-     * Sets message_template_id
-     *
-     * @param string $message_template_id The unique id of the message_template. If not set, CareCloud uses default value from the system configuration
-     *
-     * @return $this
-     */
-    public function setMessageTemplateId($message_template_id)
-    {
-        $this->container['message_template_id'] = $message_template_id;
+        $this->container['available_credits'] = $available_credits;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ActionsSendBody
+ * InlineResponse200135Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * ActionsSendBody Class Doc Comment
+ * InlineResponse200135Data Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ActionsSendBody implements ModelInterface, ArrayAccess
+class InlineResponse200135Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'actions_send_body';
+    protected static $swaggerModelName = 'inline_response_200_135_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,11 +56,8 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'external_application_id' => 'string',
-'communication_channel_id' => 'int',
-'recipient' => 'string',
-'otp_type' => 'int',
-'message_template_id' => 'string'    ];
+        'bearer_token' => 'string',
+'user' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,11 +65,8 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'external_application_id' => null,
-'communication_channel_id' => null,
-'recipient' => null,
-'otp_type' => null,
-'message_template_id' => null    ];
+        'bearer_token' => null,
+'user' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -101,11 +95,8 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'external_application_id' => 'external_application_id',
-'communication_channel_id' => 'communication_channel_id',
-'recipient' => 'recipient',
-'otp_type' => 'otp_type',
-'message_template_id' => 'message_template_id'    ];
+        'bearer_token' => 'bearer_token',
+'user' => 'user'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -113,11 +104,8 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'external_application_id' => 'setExternalApplicationId',
-'communication_channel_id' => 'setCommunicationChannelId',
-'recipient' => 'setRecipient',
-'otp_type' => 'setOtpType',
-'message_template_id' => 'setMessageTemplateId'    ];
+        'bearer_token' => 'setBearerToken',
+'user' => 'setUser'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -125,11 +113,8 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'external_application_id' => 'getExternalApplicationId',
-'communication_channel_id' => 'getCommunicationChannelId',
-'recipient' => 'getRecipient',
-'otp_type' => 'getOtpType',
-'message_template_id' => 'getMessageTemplateId'    ];
+        'bearer_token' => 'getBearerToken',
+'user' => 'getUser'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -172,37 +157,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const COMMUNICATION_CHANNEL_ID_1 = 1;
-const COMMUNICATION_CHANNEL_ID_2 = 2;
-const COMMUNICATION_CHANNEL_ID_4 = 4;
-const COMMUNICATION_CHANNEL_ID_5 = 5;
-const OTP_TYPE_1 = 1;
-const OTP_TYPE_2 = 2;
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCommunicationChannelIdAllowableValues()
-    {
-        return [
-            self::COMMUNICATION_CHANNEL_ID_1,
-self::COMMUNICATION_CHANNEL_ID_2,
-self::COMMUNICATION_CHANNEL_ID_4,
-self::COMMUNICATION_CHANNEL_ID_5,        ];
-    }
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getOtpTypeAllowableValues()
-    {
-        return [
-            self::OTP_TYPE_1,
-self::OTP_TYPE_2,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -219,11 +174,8 @@ self::OTP_TYPE_2,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['external_application_id'] = isset($data['external_application_id']) ? $data['external_application_id'] : null;
-        $this->container['communication_channel_id'] = isset($data['communication_channel_id']) ? $data['communication_channel_id'] : null;
-        $this->container['recipient'] = isset($data['recipient']) ? $data['recipient'] : null;
-        $this->container['otp_type'] = isset($data['otp_type']) ? $data['otp_type'] : self::OTP_TYPE_1;
-        $this->container['message_template_id'] = isset($data['message_template_id']) ? $data['message_template_id'] : null;
+        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -234,31 +186,6 @@ self::OTP_TYPE_2,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if ($this->container['external_application_id'] === null) {
-            $invalidProperties[] = "'external_application_id' can't be null";
-        }
-        if ($this->container['communication_channel_id'] === null) {
-            $invalidProperties[] = "'communication_channel_id' can't be null";
-        }
-        $allowedValues = $this->getCommunicationChannelIdAllowableValues();
-        if (!is_null($this->container['communication_channel_id']) && !in_array($this->container['communication_channel_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'communication_channel_id', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['recipient'] === null) {
-            $invalidProperties[] = "'recipient' can't be null";
-        }
-        $allowedValues = $this->getOtpTypeAllowableValues();
-        if (!is_null($this->container['otp_type']) && !in_array($this->container['otp_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'otp_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -276,139 +203,49 @@ self::OTP_TYPE_2,        ];
 
 
     /**
-     * Gets external_application_id
+     * Gets bearer_token
      *
      * @return string
      */
-    public function getExternalApplicationId()
+    public function getBearerToken()
     {
-        return $this->container['external_application_id'];
+        return $this->container['bearer_token'];
     }
 
     /**
-     * Sets external_application_id
+     * Sets bearer_token
      *
-     * @param string $external_application_id Id of the external application that requested one time password. If you dont have external application id, guide how to get it is available [here](#section/Authentication)
+     * @param string $bearer_token Autentication bearer token for an user. Token can be used for autentication in REST API with Bearer Autentication (more information about it [here](#section/Authorization/bearerAuth))
      *
      * @return $this
      */
-    public function setExternalApplicationId($external_application_id)
+    public function setBearerToken($bearer_token)
     {
-        $this->container['external_application_id'] = $external_application_id;
+        $this->container['bearer_token'] = $bearer_token;
 
         return $this;
     }
 
     /**
-     * Gets communication_channel_id
+     * Gets user
      *
-     * @return int
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User
      */
-    public function getCommunicationChannelId()
+    public function getUser()
     {
-        return $this->container['communication_channel_id'];
+        return $this->container['user'];
     }
 
     /**
-     * Sets communication_channel_id
+     * Sets user
      *
-     * @param int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User $user user
      *
      * @return $this
      */
-    public function setCommunicationChannelId($communication_channel_id)
+    public function setUser($user)
     {
-        $allowedValues = $this->getCommunicationChannelIdAllowableValues();
-        if (!in_array($communication_channel_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'communication_channel_id', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['communication_channel_id'] = $communication_channel_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets recipient
-     *
-     * @return string
-     */
-    public function getRecipient()
-    {
-        return $this->container['recipient'];
-    }
-
-    /**
-     * Sets recipient
-     *
-     * @param string $recipient Recipient of the message with OTP. The parameter could contain email, phone number or other identifier of the message recipient.
-     *
-     * @return $this
-     */
-    public function setRecipient($recipient)
-    {
-        $this->container['recipient'] = $recipient;
-
-        return $this;
-    }
-
-    /**
-     * Gets otp_type
-     *
-     * @return int
-     */
-    public function getOtpType()
-    {
-        return $this->container['otp_type'];
-    }
-
-    /**
-     * Sets otp_type
-     *
-     * @param int $otp_type Parameter sets witch OTP type should be generated. *Possible values: 1- alphanumeric, 2- numeric*
-     *
-     * @return $this
-     */
-    public function setOtpType($otp_type)
-    {
-        $allowedValues = $this->getOtpTypeAllowableValues();
-        if (!is_null($otp_type) && !in_array($otp_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'otp_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['otp_type'] = $otp_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets message_template_id
-     *
-     * @return string
-     */
-    public function getMessageTemplateId()
-    {
-        return $this->container['message_template_id'];
-    }
-
-    /**
-     * Sets message_template_id
-     *
-     * @param string $message_template_id The unique id of the message_template. If not set, CareCloud uses default value from the system configuration
-     *
-     * @return $this
-     */
-    public function setMessageTemplateId($message_template_id)
-    {
-        $this->container['message_template_id'] = $message_template_id;
+        $this->container['user'] = $user;
 
         return $this;
     }

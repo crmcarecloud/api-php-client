@@ -20,8 +20,13 @@
                 "reference": "be97181cd0f31106141ecc32542dd381b9589b00",
                 "shasum": ""
             },
+            "default-branch": true,
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/crmcarecloud/api-spec/issues",
+                "source": "https://github.com/crmcarecloud/api-spec/tree/master"
+            },
             "time": "2022-07-07T13:24:08+00:00"
         }
     ],
@@ -35,5 +40,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }

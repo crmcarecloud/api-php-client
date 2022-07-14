@@ -1,7 +1,6 @@
 <?php
 /**
- * ActionsSendBody
- *
+ * CustomerAddressTypesApi
  * PHP version 5
  *
  * @category Class
@@ -26,459 +25,738 @@
  * Do not edit the class manually.
  */
 
-namespace CrmCareCloud\Webservice\RestApi\Client\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
-use \ArrayAccess;
-use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
+use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\MultipartStream;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * ActionsSendBody Class Doc Comment
+ * CustomerAddressTypesApi Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ActionsSendBody implements ModelInterface, ArrayAccess
+class CustomerAddressTypesApi
 {
-    const DISCRIMINATOR = null;
-
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
-    protected static $swaggerModelName = 'actions_send_body';
-
-    /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
-    protected static $swaggerTypes = [
-        'external_application_id' => 'string',
-'communication_channel_id' => 'int',
-'recipient' => 'string',
-'otp_type' => 'int',
-'message_template_id' => 'string'    ];
-
-    /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
-    protected static $swaggerFormats = [
-        'external_application_id' => null,
-'communication_channel_id' => null,
-'recipient' => null,
-'otp_type' => null,
-'message_template_id' => null    ];
-
-    /**
-     * Array of property to type mappings. Used for (de)serialization
-     *
-     * @return array
+     * @var ClientInterface
      */
-    public static function swaggerTypes()
-    {
-        return self::$swaggerTypes;
+    protected $client;
+
+    /**
+     * @var Configuration
+     */
+    protected $config;
+
+    /**
+     * @var HeaderSelector
+     */
+    protected $headerSelector;
+
+    /**
+     * @param ClientInterface $client
+     * @param Configuration   $config
+     * @param HeaderSelector  $selector
+     */
+    public function __construct(
+        ClientInterface $client = null,
+        Configuration $config = null,
+        HeaderSelector $selector = null
+    ) {
+        $this->client = $client ?: new Client();
+        $this->config = $config ?: new Configuration();
+        $this->headerSelector = $selector ?: new HeaderSelector();
     }
 
     /**
-     * Array of property to format mappings. Used for (de)serialization
-     *
-     * @return array
+     * @return Configuration
      */
-    public static function swaggerFormats()
+    public function getConfig()
     {
-        return self::$swaggerFormats;
+        return $this->config;
     }
 
     /**
-     * Array of attributes where the key is the local name,
-     * and the value is the original name
+     * Operation getCustomerAddressType
      *
-     * @var string[]
-     */
-    protected static $attributeMap = [
-        'external_application_id' => 'external_application_id',
-'communication_channel_id' => 'communication_channel_id',
-'recipient' => 'recipient',
-'otp_type' => 'otp_type',
-'message_template_id' => 'message_template_id'    ];
-
-    /**
-     * Array of attributes to setter functions (for deserialization of responses)
+     * Detail of a customer address type
      *
-     * @var string[]
-     */
-    protected static $setters = [
-        'external_application_id' => 'setExternalApplicationId',
-'communication_channel_id' => 'setCommunicationChannelId',
-'recipient' => 'setRecipient',
-'otp_type' => 'setOtpType',
-'message_template_id' => 'setMessageTemplateId'    ];
-
-    /**
-     * Array of attributes to getter functions (for serialization of requests)
+     * @param  string $customer_address_type_id The unique id of a customer address type in CareCloud (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @var string[]
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031
      */
-    protected static $getters = [
-        'external_application_id' => 'getExternalApplicationId',
-'communication_channel_id' => 'getCommunicationChannelId',
-'recipient' => 'getRecipient',
-'otp_type' => 'getOtpType',
-'message_template_id' => 'getMessageTemplateId'    ];
-
-    /**
-     * Array of attributes where the key is the local name,
-     * and the value is the original name
-     *
-     * @return array
-     */
-    public static function attributeMap()
+    public function getCustomerAddressType($customer_address_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        return self::$attributeMap;
+        list($response) = $this->getCustomerAddressTypeWithHttpInfo($customer_address_type_id, $accept_language);
+        return $response;
     }
 
     /**
-     * Array of attributes to setter functions (for deserialization of responses)
+     * Operation getCustomerAddressTypeWithHttpInfo
      *
-     * @return array
+     * Detail of a customer address type
+     *
+     * @param  string $customer_address_type_id The unique id of a customer address type in CareCloud (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031, HTTP status code, HTTP response headers (array of strings)
      */
-    public static function setters()
+    public function getCustomerAddressTypeWithHttpInfo($customer_address_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        return self::$setters;
-    }
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031';
+        $request = $this->getCustomerAddressTypeRequest($customer_address_type_id, $accept_language);
 
-    /**
-     * Array of attributes to getter functions (for serialization of requests)
-     *
-     * @return array
-     */
-    public static function getters()
-    {
-        return self::$getters;
-    }
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
 
-    /**
-     * The original name of the model.
-     *
-     * @return string
-     */
-    public function getModelName()
-    {
-        return self::$swaggerModelName;
-    }
+            $statusCode = $response->getStatusCode();
 
-    const COMMUNICATION_CHANNEL_ID_1 = 1;
-const COMMUNICATION_CHANNEL_ID_2 = 2;
-const COMMUNICATION_CHANNEL_ID_4 = 4;
-const COMMUNICATION_CHANNEL_ID_5 = 5;
-const OTP_TYPE_1 = 1;
-const OTP_TYPE_2 = 2;
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
 
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCommunicationChannelIdAllowableValues()
-    {
-        return [
-            self::COMMUNICATION_CHANNEL_ID_1,
-self::COMMUNICATION_CHANNEL_ID_2,
-self::COMMUNICATION_CHANNEL_ID_4,
-self::COMMUNICATION_CHANNEL_ID_5,        ];
-    }
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getOtpTypeAllowableValues()
-    {
-        return [
-            self::OTP_TYPE_1,
-self::OTP_TYPE_2,        ];
-    }
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var mixed[]
-     */
-    protected $container = [];
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
-    /**
-     * Constructor
-     *
-     * @param mixed[] $data Associated array of property values
-     *                      initializing the model
-     */
-    public function __construct(array $data = null)
-    {
-        $this->container['external_application_id'] = isset($data['external_application_id']) ? $data['external_application_id'] : null;
-        $this->container['communication_channel_id'] = isset($data['communication_channel_id']) ? $data['communication_channel_id'] : null;
-        $this->container['recipient'] = isset($data['recipient']) ? $data['recipient'] : null;
-        $this->container['otp_type'] = isset($data['otp_type']) ? $data['otp_type'] : self::OTP_TYPE_1;
-        $this->container['message_template_id'] = isset($data['message_template_id']) ? $data['message_template_id'] : null;
-    }
-
-    /**
-     * Show all the invalid properties with reasons.
-     *
-     * @return array invalid properties with reasons
-     */
-    public function listInvalidProperties()
-    {
-        $invalidProperties = [];
-
-        if ($this->container['external_application_id'] === null) {
-            $invalidProperties[] = "'external_application_id' can't be null";
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
         }
-        if ($this->container['communication_channel_id'] === null) {
-            $invalidProperties[] = "'communication_channel_id' can't be null";
-        }
-        $allowedValues = $this->getCommunicationChannelIdAllowableValues();
-        if (!is_null($this->container['communication_channel_id']) && !in_array($this->container['communication_channel_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'communication_channel_id', must be one of '%s'",
-                implode("', '", $allowedValues)
+    }
+
+    /**
+     * Operation getCustomerAddressTypeAsync
+     *
+     * Detail of a customer address type
+     *
+     * @param  string $customer_address_type_id The unique id of a customer address type in CareCloud (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCustomerAddressTypeAsync($customer_address_type_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->getCustomerAddressTypeAsyncWithHttpInfo($customer_address_type_id, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
             );
-        }
+    }
 
-        if ($this->container['recipient'] === null) {
-            $invalidProperties[] = "'recipient' can't be null";
-        }
-        $allowedValues = $this->getOtpTypeAllowableValues();
-        if (!is_null($this->container['otp_type']) && !in_array($this->container['otp_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'otp_type', must be one of '%s'",
-                implode("', '", $allowedValues)
+    /**
+     * Operation getCustomerAddressTypeAsyncWithHttpInfo
+     *
+     * Detail of a customer address type
+     *
+     * @param  string $customer_address_type_id The unique id of a customer address type in CareCloud (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCustomerAddressTypeAsyncWithHttpInfo($customer_address_type_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031';
+        $request = $this->getCustomerAddressTypeRequest($customer_address_type_id, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
             );
-        }
-
-        return $invalidProperties;
     }
 
     /**
-     * Validate all the properties in the model
-     * return true if all passed
+     * Create request for operation 'getCustomerAddressType'
      *
-     * @return bool True if all properties are valid
+     * @param  string $customer_address_type_id The unique id of a customer address type in CareCloud (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
      */
-    public function valid()
+    protected function getCustomerAddressTypeRequest($customer_address_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        return count($this->listInvalidProperties()) === 0;
-    }
-
-
-    /**
-     * Gets external_application_id
-     *
-     * @return string
-     */
-    public function getExternalApplicationId()
-    {
-        return $this->container['external_application_id'];
-    }
-
-    /**
-     * Sets external_application_id
-     *
-     * @param string $external_application_id Id of the external application that requested one time password. If you dont have external application id, guide how to get it is available [here](#section/Authentication)
-     *
-     * @return $this
-     */
-    public function setExternalApplicationId($external_application_id)
-    {
-        $this->container['external_application_id'] = $external_application_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets communication_channel_id
-     *
-     * @return int
-     */
-    public function getCommunicationChannelId()
-    {
-        return $this->container['communication_channel_id'];
-    }
-
-    /**
-     * Sets communication_channel_id
-     *
-     * @param int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
-     *
-     * @return $this
-     */
-    public function setCommunicationChannelId($communication_channel_id)
-    {
-        $allowedValues = $this->getCommunicationChannelIdAllowableValues();
-        if (!in_array($communication_channel_id, $allowedValues, true)) {
+        // verify the required parameter 'customer_address_type_id' is set
+        if ($customer_address_type_id === null || (is_array($customer_address_type_id) && count($customer_address_type_id) === 0)) {
             throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'communication_channel_id', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
+                'Missing the required parameter $customer_address_type_id when calling getCustomerAddressType'
             );
         }
-        $this->container['communication_channel_id'] = $communication_channel_id;
 
-        return $this;
-    }
+        $resourcePath = '/customer-address-types/{customer_address_type_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
 
-    /**
-     * Gets recipient
-     *
-     * @return string
-     */
-    public function getRecipient()
-    {
-        return $this->container['recipient'];
-    }
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
 
-    /**
-     * Sets recipient
-     *
-     * @param string $recipient Recipient of the message with OTP. The parameter could contain email, phone number or other identifier of the message recipient.
-     *
-     * @return $this
-     */
-    public function setRecipient($recipient)
-    {
-        $this->container['recipient'] = $recipient;
-
-        return $this;
-    }
-
-    /**
-     * Gets otp_type
-     *
-     * @return int
-     */
-    public function getOtpType()
-    {
-        return $this->container['otp_type'];
-    }
-
-    /**
-     * Sets otp_type
-     *
-     * @param int $otp_type Parameter sets witch OTP type should be generated. *Possible values: 1- alphanumeric, 2- numeric*
-     *
-     * @return $this
-     */
-    public function setOtpType($otp_type)
-    {
-        $allowedValues = $this->getOtpTypeAllowableValues();
-        if (!is_null($otp_type) && !in_array($otp_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'otp_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
+        // path params
+        if ($customer_address_type_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'customer_address_type_id' . '}',
+                ObjectSerializer::toPathValue($customer_address_type_id),
+                $resourcePath
             );
         }
-        $this->container['otp_type'] = $otp_type;
 
-        return $this;
-    }
+        // body params
+        $_tempBody = null;
 
-    /**
-     * Gets message_template_id
-     *
-     * @return string
-     */
-    public function getMessageTemplateId()
-    {
-        return $this->container['message_template_id'];
-    }
-
-    /**
-     * Sets message_template_id
-     *
-     * @param string $message_template_id The unique id of the message_template. If not set, CareCloud uses default value from the system configuration
-     *
-     * @return $this
-     */
-    public function setMessageTemplateId($message_template_id)
-    {
-        $this->container['message_template_id'] = $message_template_id;
-
-        return $this;
-    }
-    /**
-     * Returns true if offset exists. False otherwise.
-     *
-     * @param integer $offset Offset
-     *
-     * @return boolean
-     */
-    public function offsetExists($offset)
-    {
-        return isset($this->container[$offset]);
-    }
-
-    /**
-     * Gets offset.
-     *
-     * @param integer $offset Offset
-     *
-     * @return mixed
-     */
-    public function offsetGet($offset)
-    {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
-    }
-
-    /**
-     * Sets value based on offset.
-     *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
-     *
-     * @return void
-     */
-    public function offsetSet($offset, $value)
-    {
-        if (is_null($offset)) {
-            $this->container[] = $value;
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
         } else {
-            $this->container[$offset] = $value;
-        }
-    }
-
-    /**
-     * Unsets offset.
-     *
-     * @param integer $offset Offset
-     *
-     * @return void
-     */
-    public function offsetUnset($offset)
-    {
-        unset($this->container[$offset]);
-    }
-
-    /**
-     * Gets the string presentation of the object
-     *
-     * @return string
-     */
-    public function __toString()
-    {
-        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(
-                ObjectSerializer::sanitizeForSerialization($this),
-                JSON_PRETTY_PRINT
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
             );
         }
 
-        return json_encode(ObjectSerializer::sanitizeForSerialization($this));
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+        }
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getCustomerAddressTypes
+     *
+     * Get all customer address types
+     *
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030
+     */
+    public function getCustomerAddressTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+        list($response) = $this->getCustomerAddressTypesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction);
+        return $response;
+    }
+
+    /**
+     * Operation getCustomerAddressTypesWithHttpInfo
+     *
+     * Get all customer address types
+     *
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCustomerAddressTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030';
+        $request = $this->getCustomerAddressTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getCustomerAddressTypesAsync
+     *
+     * Get all customer address types
+     *
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCustomerAddressTypesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+        return $this->getCustomerAddressTypesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getCustomerAddressTypesAsyncWithHttpInfo
+     *
+     * Get all customer address types
+     *
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCustomerAddressTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030';
+        $request = $this->getCustomerAddressTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getCustomerAddressTypes'
+     *
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getCustomerAddressTypesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+
+        $resourcePath = '/customer-address-types';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($count !== null) {
+            $queryParams['count'] = ObjectSerializer::toQueryValue($count, null);
+        }
+        // query params
+        if ($offset !== null) {
+            $queryParams['offset'] = ObjectSerializer::toQueryValue($offset, null);
+        }
+        // query params
+        if ($sort_field !== null) {
+            $queryParams['sort_field'] = ObjectSerializer::toQueryValue($sort_field, null);
+        }
+        // query params
+        if ($sort_direction !== null) {
+            $queryParams['sort_direction'] = ObjectSerializer::toQueryValue($sort_direction, null);
+        }
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+        }
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
     }
 }

@@ -161,7 +161,7 @@ class {{classname}} {{#parentSchema}}extends {{{parent}}} {{/parentSchema}}{{^pa
 
         {{/parentSchema}}
         {{#vars}}
-        $this->container['{{name}}'] = isset($data['{{name}}']) ? $data['{{name}}'] : {{#defaultValue}}{{{defaultValue}}}{{/defaultValue}}{{^defaultValue}}null{{/defaultValue}};
+        $this->container['{{name}}'] = isset($data['{{name}}']) ? $data['{{name}}'] : {{#defaultValue}}{{#isEnum}}self::{{{defaultValue}}}{{/isEnum}}{{^isEnum}}{{{defaultValue}}}{{/isEnum}}{{/defaultValue}}{{^defaultValue}}null{{/defaultValue}};
         {{/vars}}
         {{#discriminator}}
 

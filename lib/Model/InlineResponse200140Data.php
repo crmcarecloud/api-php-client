@@ -1,6 +1,6 @@
 <?php
 /**
- * ActionsSendBody
+ * InlineResponse200140Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * ActionsSendBody Class Doc Comment
+ * InlineResponse200140Data Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ActionsSendBody implements ModelInterface, ArrayAccess
+class InlineResponse200140Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'actions_send_body';
+    protected static $swaggerModelName = 'inline_response_200_140_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,11 +56,10 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'external_application_id' => 'string',
-'communication_channel_id' => 'int',
-'recipient' => 'string',
-'otp_type' => 'int',
-'message_template_id' => 'string'    ];
+        'earned_points' => 'float',
+'redeemed_points' => 'float',
+'available_points' => 'float',
+'available_points_money_value' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,11 +67,10 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'external_application_id' => null,
-'communication_channel_id' => null,
-'recipient' => null,
-'otp_type' => null,
-'message_template_id' => null    ];
+        'earned_points' => 'float',
+'redeemed_points' => 'float',
+'available_points' => 'float',
+'available_points_money_value' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -101,11 +99,10 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'external_application_id' => 'external_application_id',
-'communication_channel_id' => 'communication_channel_id',
-'recipient' => 'recipient',
-'otp_type' => 'otp_type',
-'message_template_id' => 'message_template_id'    ];
+        'earned_points' => 'earned_points',
+'redeemed_points' => 'redeemed_points',
+'available_points' => 'available_points',
+'available_points_money_value' => 'available_points_money_value'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -113,11 +110,10 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'external_application_id' => 'setExternalApplicationId',
-'communication_channel_id' => 'setCommunicationChannelId',
-'recipient' => 'setRecipient',
-'otp_type' => 'setOtpType',
-'message_template_id' => 'setMessageTemplateId'    ];
+        'earned_points' => 'setEarnedPoints',
+'redeemed_points' => 'setRedeemedPoints',
+'available_points' => 'setAvailablePoints',
+'available_points_money_value' => 'setAvailablePointsMoneyValue'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -125,11 +121,10 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'external_application_id' => 'getExternalApplicationId',
-'communication_channel_id' => 'getCommunicationChannelId',
-'recipient' => 'getRecipient',
-'otp_type' => 'getOtpType',
-'message_template_id' => 'getMessageTemplateId'    ];
+        'earned_points' => 'getEarnedPoints',
+'redeemed_points' => 'getRedeemedPoints',
+'available_points' => 'getAvailablePoints',
+'available_points_money_value' => 'getAvailablePointsMoneyValue'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -172,37 +167,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const COMMUNICATION_CHANNEL_ID_1 = 1;
-const COMMUNICATION_CHANNEL_ID_2 = 2;
-const COMMUNICATION_CHANNEL_ID_4 = 4;
-const COMMUNICATION_CHANNEL_ID_5 = 5;
-const OTP_TYPE_1 = 1;
-const OTP_TYPE_2 = 2;
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCommunicationChannelIdAllowableValues()
-    {
-        return [
-            self::COMMUNICATION_CHANNEL_ID_1,
-self::COMMUNICATION_CHANNEL_ID_2,
-self::COMMUNICATION_CHANNEL_ID_4,
-self::COMMUNICATION_CHANNEL_ID_5,        ];
-    }
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getOtpTypeAllowableValues()
-    {
-        return [
-            self::OTP_TYPE_1,
-self::OTP_TYPE_2,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -219,11 +184,10 @@ self::OTP_TYPE_2,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['external_application_id'] = isset($data['external_application_id']) ? $data['external_application_id'] : null;
-        $this->container['communication_channel_id'] = isset($data['communication_channel_id']) ? $data['communication_channel_id'] : null;
-        $this->container['recipient'] = isset($data['recipient']) ? $data['recipient'] : null;
-        $this->container['otp_type'] = isset($data['otp_type']) ? $data['otp_type'] : self::OTP_TYPE_1;
-        $this->container['message_template_id'] = isset($data['message_template_id']) ? $data['message_template_id'] : null;
+        $this->container['earned_points'] = isset($data['earned_points']) ? $data['earned_points'] : null;
+        $this->container['redeemed_points'] = isset($data['redeemed_points']) ? $data['redeemed_points'] : null;
+        $this->container['available_points'] = isset($data['available_points']) ? $data['available_points'] : null;
+        $this->container['available_points_money_value'] = isset($data['available_points_money_value']) ? $data['available_points_money_value'] : null;
     }
 
     /**
@@ -234,31 +198,6 @@ self::OTP_TYPE_2,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if ($this->container['external_application_id'] === null) {
-            $invalidProperties[] = "'external_application_id' can't be null";
-        }
-        if ($this->container['communication_channel_id'] === null) {
-            $invalidProperties[] = "'communication_channel_id' can't be null";
-        }
-        $allowedValues = $this->getCommunicationChannelIdAllowableValues();
-        if (!is_null($this->container['communication_channel_id']) && !in_array($this->container['communication_channel_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'communication_channel_id', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['recipient'] === null) {
-            $invalidProperties[] = "'recipient' can't be null";
-        }
-        $allowedValues = $this->getOtpTypeAllowableValues();
-        if (!is_null($this->container['otp_type']) && !in_array($this->container['otp_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'otp_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -276,139 +215,97 @@ self::OTP_TYPE_2,        ];
 
 
     /**
-     * Gets external_application_id
+     * Gets earned_points
      *
-     * @return string
+     * @return float
      */
-    public function getExternalApplicationId()
+    public function getEarnedPoints()
     {
-        return $this->container['external_application_id'];
+        return $this->container['earned_points'];
     }
 
     /**
-     * Sets external_application_id
+     * Sets earned_points
      *
-     * @param string $external_application_id Id of the external application that requested one time password. If you dont have external application id, guide how to get it is available [here](#section/Authentication)
+     * @param float $earned_points Amount of earned points in time interval
      *
      * @return $this
      */
-    public function setExternalApplicationId($external_application_id)
+    public function setEarnedPoints($earned_points)
     {
-        $this->container['external_application_id'] = $external_application_id;
+        $this->container['earned_points'] = $earned_points;
 
         return $this;
     }
 
     /**
-     * Gets communication_channel_id
+     * Gets redeemed_points
      *
-     * @return int
+     * @return float
      */
-    public function getCommunicationChannelId()
+    public function getRedeemedPoints()
     {
-        return $this->container['communication_channel_id'];
+        return $this->container['redeemed_points'];
     }
 
     /**
-     * Sets communication_channel_id
+     * Sets redeemed_points
      *
-     * @param int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
+     * @param float $redeemed_points Amount of redeemed points in time interval
      *
      * @return $this
      */
-    public function setCommunicationChannelId($communication_channel_id)
+    public function setRedeemedPoints($redeemed_points)
     {
-        $allowedValues = $this->getCommunicationChannelIdAllowableValues();
-        if (!in_array($communication_channel_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'communication_channel_id', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['communication_channel_id'] = $communication_channel_id;
+        $this->container['redeemed_points'] = $redeemed_points;
 
         return $this;
     }
 
     /**
-     * Gets recipient
+     * Gets available_points
      *
-     * @return string
+     * @return float
      */
-    public function getRecipient()
+    public function getAvailablePoints()
     {
-        return $this->container['recipient'];
+        return $this->container['available_points'];
     }
 
     /**
-     * Sets recipient
+     * Sets available_points
      *
-     * @param string $recipient Recipient of the message with OTP. The parameter could contain email, phone number or other identifier of the message recipient.
+     * @param float $available_points Amount of available points in the moment. Time interval has no influence to the result
      *
      * @return $this
      */
-    public function setRecipient($recipient)
+    public function setAvailablePoints($available_points)
     {
-        $this->container['recipient'] = $recipient;
+        $this->container['available_points'] = $available_points;
 
         return $this;
     }
 
     /**
-     * Gets otp_type
+     * Gets available_points_money_value
      *
-     * @return int
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]
      */
-    public function getOtpType()
+    public function getAvailablePointsMoneyValue()
     {
-        return $this->container['otp_type'];
+        return $this->container['available_points_money_value'];
     }
 
     /**
-     * Sets otp_type
+     * Sets available_points_money_value
      *
-     * @param int $otp_type Parameter sets witch OTP type should be generated. *Possible values: 1- alphanumeric, 2- numeric*
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[] $available_points_money_value Parameter shows money representation of the 'available_points' parameter. CareCloud calculates money value for every system currency. The calculation is available only if the customer's status allows a point payment. This setup is possible in CareCloud administration.
      *
      * @return $this
      */
-    public function setOtpType($otp_type)
+    public function setAvailablePointsMoneyValue($available_points_money_value)
     {
-        $allowedValues = $this->getOtpTypeAllowableValues();
-        if (!is_null($otp_type) && !in_array($otp_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'otp_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['otp_type'] = $otp_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets message_template_id
-     *
-     * @return string
-     */
-    public function getMessageTemplateId()
-    {
-        return $this->container['message_template_id'];
-    }
-
-    /**
-     * Sets message_template_id
-     *
-     * @param string $message_template_id The unique id of the message_template. If not set, CareCloud uses default value from the system configuration
-     *
-     * @return $this
-     */
-    public function setMessageTemplateId($message_template_id)
-    {
-        $this->container['message_template_id'] = $message_template_id;
+        $this->container['available_points_money_value'] = $available_points_money_value;
 
         return $this;
     }

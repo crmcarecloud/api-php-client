@@ -7,3 +7,4 @@ docker run --rm -v $PROJECT_DIRECTORY:/local swaggerapi/swagger-codegen-cli-v3:3
 
 docker run --rm -v $PROJECT_DIRECTORY:/local php-server:5.6 sed -i -e 's/AnyOfEventData/\\CrmCareCloud\\Webservice\\RestApi\\Client\\Model\\AnyOfEventData/g' /local/lib/Model/Event.php
 docker run --rm -v $PROJECT_DIRECTORY:/local php-server:5.6 sed -i -e 's/AnyOfPropertyRecordPropertyValue/\\CrmCareCloud\\Webservice\\RestApi\\Client\\Model\\AnyOfPropertyRecordPropertyValue/g' /local/lib/Model/PropertyRecord.php
+docker run --rm -v $PROJECT_DIRECTORY:/local php-server:5.6 sed -i -E 's/(self::[0-9A-Za-z_]+)\.([0-9A-Za-z_]+)/\1_\2/g' /local/lib/Model/ActionsSendBody.php
