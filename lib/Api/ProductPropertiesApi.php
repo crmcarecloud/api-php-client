@@ -100,7 +100,7 @@ class ProductPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077
      */
     public function getProductProperties($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -122,11 +122,11 @@ class ProductPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductPropertiesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077';
         $request = $this->getProductPropertiesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -178,7 +178,7 @@ class ProductPropertiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class ProductPropertiesApi
      */
     public function getProductPropertiesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077';
         $request = $this->getProductPropertiesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client
@@ -441,7 +441,7 @@ class ProductPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036
      */
     public function getProductProperty($product_property_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -459,11 +459,11 @@ class ProductPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductPropertyWithHttpInfo($product_property_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036';
         $request = $this->getProductPropertyRequest($product_property_id, $accept_language);
 
         try {
@@ -515,7 +515,7 @@ class ProductPropertiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -599,7 +599,7 @@ class ProductPropertiesApi
      */
     public function getProductPropertyAsyncWithHttpInfo($product_property_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036';
         $request = $this->getProductPropertyRequest($product_property_id, $accept_language);
 
         return $this->client

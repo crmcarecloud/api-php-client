@@ -56,7 +56,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'string'    ];
+        'voucher_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => null    ];
+        'voucher_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'store_id'    ];
+        'voucher_id' => 'voucher_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId'    ];
+        'voucher_id' => 'setVoucherId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId'    ];
+        'voucher_id' => 'getVoucherId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['voucher_id'] = isset($data['voucher_id']) ? $data['voucher_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
+     * Gets voucher_id
      *
      * @return string
      */
-    public function getStoreId()
+    public function getVoucherId()
     {
-        return $this->container['store_id'];
+        return $this->container['voucher_id'];
     }
 
     /**
-     * Sets store_id
+     * Sets voucher_id
      *
-     * @param string $store_id The unique id of the store in CareCloud
+     * @param string $voucher_id The unique id of the voucher
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setVoucherId($voucher_id)
     {
-        $this->container['store_id'] = $store_id;
+        $this->container['voucher_id'] = $voucher_id;
 
         return $this;
     }

@@ -260,7 +260,15 @@ class ObjectSerializer
                 return null;
             }
         } elseif (in_array($class, [{{&primitives}}], true)) {
-            settype($data, $class);
+            if($class === 'mixed')
+            {
+                if($data instanceof \stdClass) $data = (array) $data;
+            }
+            else
+            {
+                settype($data, $class);
+            }
+
             return $data;
         } elseif ($class === '\SplFileObject') {
             /** @var \Psr\Http\Message\StreamInterface $data */

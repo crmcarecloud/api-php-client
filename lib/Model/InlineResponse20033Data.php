@@ -56,7 +56,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'customer_external_applications' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'customer_properties' => null,
+        'customer_external_applications' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_properties' => 'customer_properties',
+        'customer_external_applications' => 'customer_external_applications',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_properties' => 'setCustomerProperties',
+        'customer_external_applications' => 'setCustomerExternalApplications',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_properties' => 'getCustomerProperties',
+        'customer_external_applications' => 'getCustomerExternalApplications',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_properties'] = isset($data['customer_properties']) ? $data['customer_properties'] : null;
+        $this->container['customer_external_applications'] = isset($data['customer_external_applications']) ? $data['customer_external_applications'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_properties
+     * Gets customer_external_applications
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[]
      */
-    public function getCustomerProperties()
+    public function getCustomerExternalApplications()
     {
-        return $this->container['customer_properties'];
+        return $this->container['customer_external_applications'];
     }
 
     /**
-     * Sets customer_properties
+     * Sets customer_external_applications
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $customer_properties List of all customer properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[] $customer_external_applications List of the customer external applications
      *
      * @return $this
      */
-    public function setCustomerProperties($customer_properties)
+    public function setCustomerExternalApplications($customer_external_applications)
     {
-        $this->container['customer_properties'] = $customer_properties;
+        $this->container['customer_external_applications'] = $customer_external_applications;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found customer properties
+     * @param int $total_items Count of all found customer external applications
      *
      * @return $this
      */

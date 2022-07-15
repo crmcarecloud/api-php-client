@@ -56,7 +56,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token_id' => 'string'    ];
+        'task_assignee_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'token_id' => null    ];
+        'task_assignee_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token_id' => 'token_id'    ];
+        'task_assignee_id' => 'task_assignee_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token_id' => 'setTokenId'    ];
+        'task_assignee_id' => 'setTaskAssigneeId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token_id' => 'getTokenId'    ];
+        'task_assignee_id' => 'getTaskAssigneeId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['token_id'] = isset($data['token_id']) ? $data['token_id'] : null;
+        $this->container['task_assignee_id'] = isset($data['task_assignee_id']) ? $data['task_assignee_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets token_id
+     * Gets task_assignee_id
      *
      * @return string
      */
-    public function getTokenId()
+    public function getTaskAssigneeId()
     {
-        return $this->container['token_id'];
+        return $this->container['task_assignee_id'];
     }
 
     /**
-     * Sets token_id
+     * Sets task_assignee_id
      *
-     * @param string $token_id Client's application token
+     * @param string $task_assignee_id The unique id of the task assignee in CareCloud
      *
      * @return $this
      */
-    public function setTokenId($token_id)
+    public function setTaskAssigneeId($task_assignee_id)
     {
-        $this->container['token_id'] = $token_id;
+        $this->container['task_assignee_id'] = $task_assignee_id;
 
         return $this;
     }

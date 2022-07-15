@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCustomerProperty**](CustomerPropertiesApi.md#getcustomerproperty) | **GET** /customer-properties/{customer_property_id} | Get a customer property
 
 # **getCustomerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034 getCustomerProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035 getCustomerProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all customer properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerProperty**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035 getCustomerProperty($customer_property_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getCustomerProperty($customer_property_id, $accept_language)
 
 Get a customer property
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCustomerTypes**](CustomerTypesApi.md#getcustomertypes) | **GET** /customer-types | Get all customer types
 
 # **getCustomerType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040 getCustomerType($customer_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041 getCustomerType($customer_type_id, $accept_language)
 
 Detail of a customer type
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getCustomerTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040 getCustomerTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all customer types
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
 
 ### Authorization
 

@@ -56,7 +56,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'event_id' => 'string'    ];
+        'additional_address_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'event_id' => null    ];
+        'additional_address_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_id' => 'event_id'    ];
+        'additional_address_id' => 'additional_address_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'event_id' => 'setEventId'    ];
+        'additional_address_id' => 'setAdditionalAddressId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'event_id' => 'getEventId'    ];
+        'additional_address_id' => 'getAdditionalAddressId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['event_id'] = isset($data['event_id']) ? $data['event_id'] : null;
+        $this->container['additional_address_id'] = isset($data['additional_address_id']) ? $data['additional_address_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets event_id
+     * Gets additional_address_id
      *
      * @return string
      */
-    public function getEventId()
+    public function getAdditionalAddressId()
     {
-        return $this->container['event_id'];
+        return $this->container['additional_address_id'];
     }
 
     /**
-     * Sets event_id
+     * Sets additional_address_id
      *
-     * @param string $event_id The unique id of the event
+     * @param string $additional_address_id The unique id of the additional customer address
      *
      * @return $this
      */
-    public function setEventId($event_id)
+    public function setAdditionalAddressId($additional_address_id)
     {
-        $this->container['event_id'] = $event_id;
+        $this->container['additional_address_id'] = $additional_address_id;
 
         return $this;
     }

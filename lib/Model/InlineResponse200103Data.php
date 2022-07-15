@@ -56,7 +56,7 @@ class InlineResponse200103Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'segments' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Segment[]',
+        'reward_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200103Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'segments' => null,
+        'reward_properties' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200103Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'segments' => 'segments',
+        'reward_properties' => 'reward_properties',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200103Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'segments' => 'setSegments',
+        'reward_properties' => 'setRewardProperties',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200103Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'segments' => 'getSegments',
+        'reward_properties' => 'getRewardProperties',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200103Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['segments'] = isset($data['segments']) ? $data['segments'] : null;
+        $this->container['reward_properties'] = isset($data['reward_properties']) ? $data['reward_properties'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200103Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets segments
+     * Gets reward_properties
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Segment[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getSegments()
+    public function getRewardProperties()
     {
-        return $this->container['segments'];
+        return $this->container['reward_properties'];
     }
 
     /**
-     * Sets segments
+     * Sets reward_properties
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Segment[] $segments List of all segments
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $reward_properties List of all reward properties
      *
      * @return $this
      */
-    public function setSegments($segments)
+    public function setRewardProperties($reward_properties)
     {
-        $this->container['segments'] = $segments;
+        $this->container['reward_properties'] = $reward_properties;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200103Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found segments
+     * @param int $total_items Count of all found reward properties
      *
      * @return $this
      */

@@ -56,7 +56,7 @@ class InlineResponse20057Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'orders' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Order[]',
+        'message_templates' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20057Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'orders' => null,
+        'message_templates' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20057Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'orders' => 'orders',
+        'message_templates' => 'message_templates',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20057Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'orders' => 'setOrders',
+        'message_templates' => 'setMessageTemplates',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20057Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'orders' => 'getOrders',
+        'message_templates' => 'getMessageTemplates',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20057Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
+        $this->container['message_templates'] = isset($data['message_templates']) ? $data['message_templates'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20057Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets orders
+     * Gets message_templates
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Order[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]
      */
-    public function getOrders()
+    public function getMessageTemplates()
     {
-        return $this->container['orders'];
+        return $this->container['message_templates'];
     }
 
     /**
-     * Sets orders
+     * Sets message_templates
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Order[] $orders Collection of the customer orders
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[] $message_templates List of all message templates
      *
      * @return $this
      */
-    public function setOrders($orders)
+    public function setMessageTemplates($message_templates)
     {
-        $this->container['orders'] = $orders;
+        $this->container['message_templates'] = $message_templates;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20057Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found customer orders
+     * @param int $total_items Count of all found message templates
      *
      * @return $this
      */

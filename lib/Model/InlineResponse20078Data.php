@@ -56,7 +56,7 @@ class InlineResponse20078Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'reservable_products' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Product[]',
+        'product_reservations' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20078Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'reservable_products' => null,
+        'product_reservations' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20078Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'reservable_products' => 'reservable_products',
+        'product_reservations' => 'product_reservations',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20078Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'reservable_products' => 'setReservableProducts',
+        'product_reservations' => 'setProductReservations',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20078Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'reservable_products' => 'getReservableProducts',
+        'product_reservations' => 'getProductReservations',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20078Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['reservable_products'] = isset($data['reservable_products']) ? $data['reservable_products'] : null;
+        $this->container['product_reservations'] = isset($data['product_reservations']) ? $data['product_reservations'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20078Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets reservable_products
+     * Gets product_reservations
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Product[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation[]
      */
-    public function getReservableProducts()
+    public function getProductReservations()
     {
-        return $this->container['reservable_products'];
+        return $this->container['product_reservations'];
     }
 
     /**
-     * Sets reservable_products
+     * Sets product_reservations
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Product[] $reservable_products List of reservable products
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation[] $product_reservations List of the product reservations
      *
      * @return $this
      */
-    public function setReservableProducts($reservable_products)
+    public function setProductReservations($product_reservations)
     {
-        $this->container['reservable_products'] = $reservable_products;
+        $this->container['product_reservations'] = $product_reservations;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20078Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found reservable products
+     * @param int $total_items Count of all found product reservations
      *
      * @return $this
      */

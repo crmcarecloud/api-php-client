@@ -56,7 +56,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[]',
+        'customer_sources' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSource[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'customer_types' => null,
+        'customer_sources' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_types' => 'customer_types',
+        'customer_sources' => 'customer_sources',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_types' => 'setCustomerTypes',
+        'customer_sources' => 'setCustomerSources',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_types' => 'getCustomerTypes',
+        'customer_sources' => 'getCustomerSources',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_types'] = isset($data['customer_types']) ? $data['customer_types'] : null;
+        $this->container['customer_sources'] = isset($data['customer_sources']) ? $data['customer_sources'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_types
+     * Gets customer_sources
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSource[]
      */
-    public function getCustomerTypes()
+    public function getCustomerSources()
     {
-        return $this->container['customer_types'];
+        return $this->container['customer_sources'];
     }
 
     /**
-     * Sets customer_types
+     * Sets customer_sources
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[] $customer_types List of the customer types
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSource[] $customer_sources List of the customer sources
      *
      * @return $this
      */
-    public function setCustomerTypes($customer_types)
+    public function setCustomerSources($customer_sources)
     {
-        $this->container['customer_types'] = $customer_types;
+        $this->container['customer_sources'] = $customer_sources;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found customer types
+     * @param int $total_items Count of all found customer sources
      *
      * @return $this
      */

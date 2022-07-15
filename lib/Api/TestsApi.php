@@ -95,7 +95,7 @@ class TestsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130
      */
     public function getTestsConnection($test_string = null)
     {
@@ -112,11 +112,11 @@ class TestsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTestsConnectionWithHttpInfo($test_string = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130';
         $request = $this->getTestsConnectionRequest($test_string);
 
         try {
@@ -168,7 +168,7 @@ class TestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -250,7 +250,7 @@ class TestsApi
      */
     public function getTestsConnectionAsyncWithHttpInfo($test_string = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130';
         $request = $this->getTestsConnectionRequest($test_string);
 
         return $this->client

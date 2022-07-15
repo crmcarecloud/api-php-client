@@ -56,7 +56,7 @@ class InlineResponse20073Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'product_brands' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20073Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'product_properties' => null,
+        'product_brands' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20073Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_properties' => 'product_properties',
+        'product_brands' => 'product_brands',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20073Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_properties' => 'setProductProperties',
+        'product_brands' => 'setProductBrands',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20073Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_properties' => 'getProductProperties',
+        'product_brands' => 'getProductBrands',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20073Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_properties'] = isset($data['product_properties']) ? $data['product_properties'] : null;
+        $this->container['product_brands'] = isset($data['product_brands']) ? $data['product_brands'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20073Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets product_properties
+     * Gets product_brands
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[]
      */
-    public function getProductProperties()
+    public function getProductBrands()
     {
-        return $this->container['product_properties'];
+        return $this->container['product_brands'];
     }
 
     /**
-     * Sets product_properties
+     * Sets product_brands
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $product_properties List of all product properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[] $product_brands List of all product brands
      *
      * @return $this
      */
-    public function setProductProperties($product_properties)
+    public function setProductBrands($product_brands)
     {
-        $this->container['product_properties'] = $product_properties;
+        $this->container['product_brands'] = $product_brands;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20073Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found product properties
+     * @param int $total_items Count of all found product brands
      *
      * @return $this
      */

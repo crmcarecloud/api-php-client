@@ -66,8 +66,7 @@ class Address implements ModelInterface, ArrayAccess
 'address7' => 'string',
 'zip' => 'string',
 'city' => 'string',
-'country_code' => 'string',
-'address_type' => 'string'    ];
+'country_code' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -84,8 +83,7 @@ class Address implements ModelInterface, ArrayAccess
 'address7' => null,
 'zip' => null,
 'city' => null,
-'country_code' => null,
-'address_type' => null    ];
+'country_code' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -123,8 +121,7 @@ class Address implements ModelInterface, ArrayAccess
 'address7' => 'address7',
 'zip' => 'zip',
 'city' => 'city',
-'country_code' => 'country_code',
-'address_type' => 'address_type'    ];
+'country_code' => 'country_code'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -141,8 +138,7 @@ class Address implements ModelInterface, ArrayAccess
 'address7' => 'setAddress7',
 'zip' => 'setZip',
 'city' => 'setCity',
-'country_code' => 'setCountryCode',
-'address_type' => 'setAddressType'    ];
+'country_code' => 'setCountryCode'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -159,8 +155,7 @@ class Address implements ModelInterface, ArrayAccess
 'address7' => 'getAddress7',
 'zip' => 'getZip',
 'city' => 'getCity',
-'country_code' => 'getCountryCode',
-'address_type' => 'getAddressType'    ];
+'country_code' => 'getCountryCode'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -230,7 +225,6 @@ class Address implements ModelInterface, ArrayAccess
         $this->container['zip'] = isset($data['zip']) ? $data['zip'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
-        $this->container['address_type'] = isset($data['address_type']) ? $data['address_type'] : null;
     }
 
     /**
@@ -493,30 +487,6 @@ class Address implements ModelInterface, ArrayAccess
     public function setCountryCode($country_code)
     {
         $this->container['country_code'] = $country_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets address_type
-     *
-     * @return string
-     */
-    public function getAddressType()
-    {
-        return $this->container['address_type'];
-    }
-
-    /**
-     * Sets address_type
-     *
-     * @param string $address_type Type of the address. Address type is set only for additional customer addresses. Default address in customer structure has no type.
-     *
-     * @return $this
-     */
-    public function setAddressType($address_type)
-    {
-        $this->container['address_type'] = $address_type;
 
         return $this;
     }

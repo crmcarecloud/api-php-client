@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**purchase_types** | [**\CareCloud\Model\PurchaseType[]**](PurchaseType.md) | List of the purchase types | [optional] 
-**total_items** | **int** | Count of all found purchase types | [optional] 
+**product_reservation_sources** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationSource[]**](ProductReservationSource.md) | List of the product reservation sources | [optional] 
+**total_items** | **int** | Count of all found product reservation sources | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

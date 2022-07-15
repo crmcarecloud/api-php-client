@@ -56,7 +56,7 @@ class InlineResponse200101Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]',
+        'stores' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200101Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'tags' => null,
+        'stores' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200101Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'tags' => 'tags',
+        'stores' => 'stores',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200101Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'tags' => 'setTags',
+        'stores' => 'setStores',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200101Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'tags' => 'getTags',
+        'stores' => 'getStores',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200101Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200101Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets tags
+     * Gets stores
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Store[]
      */
-    public function getTags()
+    public function getStores()
     {
-        return $this->container['tags'];
+        return $this->container['stores'];
     }
 
     /**
-     * Sets tags
+     * Sets stores
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[] $tags List of the all tags assigned to the resource rewards.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Store[] $stores List of the all stores where customer can apply reward
      *
      * @return $this
      */
-    public function setTags($tags)
+    public function setStores($stores)
     {
-        $this->container['tags'] = $tags;
+        $this->container['stores'] = $stores;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200101Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found tags
+     * @param int $total_items Count of all found stores
      *
      * @return $this
      */

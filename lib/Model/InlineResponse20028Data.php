@@ -56,7 +56,7 @@ class InlineResponse20028Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'addresses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Address[]',
+        'addresses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\AdditionalAddress[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20028Data implements ModelInterface, ArrayAccess
     /**
      * Gets addresses
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Address[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\AdditionalAddress[]
      */
     public function getAddresses()
     {
@@ -215,7 +215,7 @@ class InlineResponse20028Data implements ModelInterface, ArrayAccess
     /**
      * Sets addresses
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Address[] $addresses Collection of customer addresses
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\AdditionalAddress[] $addresses Collection of customer addresses
      *
      * @return $this
      */

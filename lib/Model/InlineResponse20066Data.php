@@ -56,7 +56,7 @@ class InlineResponse20066Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'point_reservations' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PointReservation[]',
+        'point_history' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20066Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'point_reservations' => null,
+        'point_history' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20066Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'point_reservations' => 'point_reservations',
+        'point_history' => 'point_history',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20066Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'point_reservations' => 'setPointReservations',
+        'point_history' => 'setPointHistory',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20066Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'point_reservations' => 'getPointReservations',
+        'point_history' => 'getPointHistory',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20066Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['point_reservations'] = isset($data['point_reservations']) ? $data['point_reservations'] : null;
+        $this->container['point_history'] = isset($data['point_history']) ? $data['point_history'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20066Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets point_reservations
+     * Gets point_history
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PointReservation[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[]
      */
-    public function getPointReservations()
+    public function getPointHistory()
     {
-        return $this->container['point_reservations'];
+        return $this->container['point_history'];
     }
 
     /**
-     * Sets point_reservations
+     * Sets point_history
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PointReservation[] $point_reservations List of the point reservations
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[] $point_history List of the point history records
      *
      * @return $this
      */
-    public function setPointReservations($point_reservations)
+    public function setPointHistory($point_history)
     {
-        $this->container['point_reservations'] = $point_reservations;
+        $this->container['point_history'] = $point_history;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20066Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found point reservations
+     * @param int $total_items Count of all found point history records
      *
      * @return $this
      */

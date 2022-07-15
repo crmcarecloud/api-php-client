@@ -56,7 +56,7 @@ class InlineResponse200134Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bearer_token' => 'string'    ];
+        'user_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse200134Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bearer_token' => null    ];
+        'user_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse200134Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bearer_token' => 'bearer_token'    ];
+        'user_id' => 'user_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse200134Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bearer_token' => 'setBearerToken'    ];
+        'user_id' => 'setUserId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse200134Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bearer_token' => 'getBearerToken'    ];
+        'user_id' => 'getUserId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse200134Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
+        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse200134Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bearer_token
+     * Gets user_id
      *
      * @return string
      */
-    public function getBearerToken()
+    public function getUserId()
     {
-        return $this->container['bearer_token'];
+        return $this->container['user_id'];
     }
 
     /**
-     * Sets bearer_token
+     * Sets user_id
      *
-     * @param string $bearer_token Autentication bearer token for an user. Token can be used for autentication in REST API with Bearer Autentication (more information about it [here](#section/Authorization/bearerAuth))
+     * @param string $user_id The unique id of the user
      *
      * @return $this
      */
-    public function setBearerToken($bearer_token)
+    public function setUserId($user_id)
     {
-        $this->container['bearer_token'] = $bearer_token;
+        $this->container['user_id'] = $user_id;
 
         return $this;
     }

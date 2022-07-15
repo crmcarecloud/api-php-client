@@ -56,7 +56,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'task_id' => 'string'    ];
+        'store_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'task_id' => null    ];
+        'store_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'task_id' => 'task_id'    ];
+        'store_id' => 'store_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'task_id' => 'setTaskId'    ];
+        'store_id' => 'setStoreId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'task_id' => 'getTaskId'    ];
+        'store_id' => 'getStoreId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['task_id'] = isset($data['task_id']) ? $data['task_id'] : null;
+        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets task_id
+     * Gets store_id
      *
      * @return string
      */
-    public function getTaskId()
+    public function getStoreId()
     {
-        return $this->container['task_id'];
+        return $this->container['store_id'];
     }
 
     /**
-     * Sets task_id
+     * Sets store_id
      *
-     * @param string $task_id The unique id of the task in CareCloud
+     * @param string $store_id The unique id of the store in CareCloud
      *
      * @return $this
      */
-    public function setTaskId($task_id)
+    public function setStoreId($store_id)
     {
-        $this->container['task_id'] = $task_id;
+        $this->container['store_id'] = $store_id;
 
         return $this;
     }

@@ -56,8 +56,8 @@ class InlineResponse200132Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bearer_token' => 'string',
-'user' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User'    ];
+        'users' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +65,8 @@ class InlineResponse200132Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bearer_token' => null,
-'user' => null    ];
+        'users' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +95,8 @@ class InlineResponse200132Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bearer_token' => 'bearer_token',
-'user' => 'user'    ];
+        'users' => 'users',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +104,8 @@ class InlineResponse200132Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bearer_token' => 'setBearerToken',
-'user' => 'setUser'    ];
+        'users' => 'setUsers',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +113,8 @@ class InlineResponse200132Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bearer_token' => 'getBearerToken',
-'user' => 'getUser'    ];
+        'users' => 'getUsers',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +174,8 @@ class InlineResponse200132Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -203,49 +203,49 @@ class InlineResponse200132Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bearer_token
+     * Gets users
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User[]
      */
-    public function getBearerToken()
+    public function getUsers()
     {
-        return $this->container['bearer_token'];
+        return $this->container['users'];
     }
 
     /**
-     * Sets bearer_token
+     * Sets users
      *
-     * @param string $bearer_token Autentication bearer token for an user. Token can be used for autentication in REST API with Bearer Autentication (more information about it [here](#section/Authorization/bearerAuth))
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User[] $users Array of users
      *
      * @return $this
      */
-    public function setBearerToken($bearer_token)
+    public function setUsers($users)
     {
-        $this->container['bearer_token'] = $bearer_token;
+        $this->container['users'] = $users;
 
         return $this;
     }
 
     /**
-     * Gets user
+     * Gets total_items
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User
+     * @return int
      */
-    public function getUser()
+    public function getTotalItems()
     {
-        return $this->container['user'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets user
+     * Sets total_items
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User $user user
+     * @param int $total_items Count of all found users
      *
      * @return $this
      */
-    public function setUser($user)
+    public function setTotalItems($total_items)
     {
-        $this->container['user'] = $user;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

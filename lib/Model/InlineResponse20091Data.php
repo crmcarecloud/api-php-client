@@ -56,7 +56,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'rewards' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Reward[]',
+        'recommendations' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'rewards' => null,
+        'recommendations' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'rewards' => 'rewards',
+        'recommendations' => 'recommendations',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'rewards' => 'setRewards',
+        'recommendations' => 'setRecommendations',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'rewards' => 'getRewards',
+        'recommendations' => 'getRecommendations',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['rewards'] = isset($data['rewards']) ? $data['rewards'] : null;
+        $this->container['recommendations'] = isset($data['recommendations']) ? $data['recommendations'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets rewards
+     * Gets recommendations
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Reward[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[]
      */
-    public function getRewards()
+    public function getRecommendations()
     {
-        return $this->container['rewards'];
+        return $this->container['recommendations'];
     }
 
     /**
-     * Sets rewards
+     * Sets recommendations
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Reward[] $rewards List of all rewards
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[] $recommendations List of recommendations
      *
      * @return $this
      */
-    public function setRewards($rewards)
+    public function setRecommendations($recommendations)
     {
-        $this->container['rewards'] = $rewards;
+        $this->container['recommendations'] = $recommendations;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20091Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found rewards
+     * @param int $total_items Count of all found recommendations
      *
      * @return $this
      */

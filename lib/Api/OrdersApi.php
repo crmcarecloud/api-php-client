@@ -96,7 +96,7 @@ class OrdersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062
      */
     public function getOrder($order_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class OrdersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderWithHttpInfo($order_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062';
         $request = $this->getOrderRequest($order_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class OrdersApi
      */
     public function getOrderAsyncWithHttpInfo($order_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062';
         $request = $this->getOrderRequest($order_id, $accept_language);
 
         return $this->client
@@ -420,7 +420,7 @@ class OrdersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061
      */
     public function getOrders($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null)
     {
@@ -443,11 +443,11 @@ class OrdersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrdersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061';
         $request = $this->getOrdersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state);
 
         try {
@@ -499,7 +499,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class OrdersApi
      */
     public function getOrdersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061';
         $request = $this->getOrdersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state);
 
         return $this->client
@@ -769,7 +769,7 @@ class OrdersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112
      */
     public function postOrder($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -787,11 +787,11 @@ class OrdersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112, HTTP status code, HTTP response headers (array of strings)
      */
     public function postOrderWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112';
         $request = $this->postOrderRequest($body, $accept_language);
 
         try {
@@ -843,7 +843,7 @@ class OrdersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -927,7 +927,7 @@ class OrdersApi
      */
     public function postOrderAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112';
         $request = $this->postOrderRequest($body, $accept_language);
 
         return $this->client

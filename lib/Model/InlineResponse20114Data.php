@@ -56,7 +56,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'voucher_id' => 'string'    ];
+        'purchase_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'voucher_id' => null    ];
+        'purchase_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'voucher_id' => 'voucher_id'    ];
+        'purchase_id' => 'purchase_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'voucher_id' => 'setVoucherId'    ];
+        'purchase_id' => 'setPurchaseId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'voucher_id' => 'getVoucherId'    ];
+        'purchase_id' => 'getPurchaseId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['voucher_id'] = isset($data['voucher_id']) ? $data['voucher_id'] : null;
+        $this->container['purchase_id'] = isset($data['purchase_id']) ? $data['purchase_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets voucher_id
+     * Gets purchase_id
      *
      * @return string
      */
-    public function getVoucherId()
+    public function getPurchaseId()
     {
-        return $this->container['voucher_id'];
+        return $this->container['purchase_id'];
     }
 
     /**
-     * Sets voucher_id
+     * Sets purchase_id
      *
-     * @param string $voucher_id The unique id of the voucher
+     * @param string $purchase_id The unique id of the purchase
      *
      * @return $this
      */
-    public function setVoucherId($voucher_id)
+    public function setPurchaseId($purchase_id)
     {
-        $this->container['voucher_id'] = $voucher_id;
+        $this->container['purchase_id'] = $purchase_id;
 
         return $this;
     }

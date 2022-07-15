@@ -95,7 +95,7 @@ class LanguagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053
      */
     public function getLanguages($accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,11 +112,11 @@ class LanguagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLanguagesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053';
         $request = $this->getLanguagesRequest($accept_language);
 
         try {
@@ -168,7 +168,7 @@ class LanguagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -250,7 +250,7 @@ class LanguagesApi
      */
     public function getLanguagesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053';
         $request = $this->getLanguagesRequest($accept_language);
 
         return $this->client

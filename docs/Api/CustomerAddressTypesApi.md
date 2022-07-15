@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCustomerAddressTypes**](CustomerAddressTypesApi.md#getcustomeraddresstypes) | **GET** /customer-address-types | Get all customer address types
 
 # **getCustomerAddressType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031 getCustomerAddressType($customer_address_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032 getCustomerAddressType($customer_address_type_id, $accept_language)
 
 Detail of a customer address type
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerAddressTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030 getCustomerAddressTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031 getCustomerAddressTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all customer address types
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
 
 ### Authorization
 

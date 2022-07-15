@@ -96,7 +96,7 @@ class EventGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046
      */
     public function getEventGroup($event_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class EventGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventGroupWithHttpInfo($event_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046';
         $request = $this->getEventGroupRequest($event_group_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class EventGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class EventGroupsApi
      */
     public function getEventGroupAsyncWithHttpInfo($event_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046';
         $request = $this->getEventGroupRequest($event_group_id, $accept_language);
 
         return $this->client
@@ -420,7 +420,7 @@ class EventGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045
      */
     public function getEventGroups($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
     {
@@ -443,11 +443,11 @@ class EventGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventGroupsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045';
         $request = $this->getEventGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
 
         try {
@@ -499,7 +499,7 @@ class EventGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class EventGroupsApi
      */
     public function getEventGroupsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045';
         $request = $this->getEventGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
 
         return $this->client

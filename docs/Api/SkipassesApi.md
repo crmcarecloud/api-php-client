@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**putSkipass**](SkipassesApi.md#putskipass) | **PUT** /skipasses/{skipass_id} | Update a skipass
 
 # **getSkipass**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106 getSkipass($skipass_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107 getSkipass($skipass_id, $accept_language)
 
 Get a skipass
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106**](../Model/InlineResponse200106.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107**](../Model/InlineResponse200107.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSkipasses**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105 getSkipasses($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106 getSkipasses($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled)
 
 Get all skipasses
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105**](../Model/InlineResponse200105.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106**](../Model/InlineResponse200106.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSkipassesOverview**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107 getSkipassesOverview($accept_language, $valid_from, $valid_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108 getSkipassesOverview($accept_language, $valid_from, $valid_to)
 
 Get skipasses overview
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107**](../Model/InlineResponse200107.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108**](../Model/InlineResponse200108.md)
 
 ### Authorization
 

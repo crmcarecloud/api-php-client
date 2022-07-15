@@ -56,10 +56,8 @@ class InlineResponse200104Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'active_skipasses' => 'int',
-'canceled_skipasses' => 'int',
-'deactivated_skipasses' => 'int',
-'sold_skipasses' => 'int'    ];
+        'segments' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Segment[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,10 +65,8 @@ class InlineResponse200104Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'active_skipasses' => null,
-'canceled_skipasses' => null,
-'deactivated_skipasses' => null,
-'sold_skipasses' => null    ];
+        'segments' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,10 +95,8 @@ class InlineResponse200104Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'active_skipasses' => 'active_skipasses',
-'canceled_skipasses' => 'canceled_skipasses',
-'deactivated_skipasses' => 'deactivated_skipasses',
-'sold_skipasses' => 'sold_skipasses'    ];
+        'segments' => 'segments',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -110,10 +104,8 @@ class InlineResponse200104Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'active_skipasses' => 'setActiveSkipasses',
-'canceled_skipasses' => 'setCanceledSkipasses',
-'deactivated_skipasses' => 'setDeactivatedSkipasses',
-'sold_skipasses' => 'setSoldSkipasses'    ];
+        'segments' => 'setSegments',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -121,10 +113,8 @@ class InlineResponse200104Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'active_skipasses' => 'getActiveSkipasses',
-'canceled_skipasses' => 'getCanceledSkipasses',
-'deactivated_skipasses' => 'getDeactivatedSkipasses',
-'sold_skipasses' => 'getSoldSkipasses'    ];
+        'segments' => 'getSegments',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -184,10 +174,8 @@ class InlineResponse200104Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['active_skipasses'] = isset($data['active_skipasses']) ? $data['active_skipasses'] : null;
-        $this->container['canceled_skipasses'] = isset($data['canceled_skipasses']) ? $data['canceled_skipasses'] : null;
-        $this->container['deactivated_skipasses'] = isset($data['deactivated_skipasses']) ? $data['deactivated_skipasses'] : null;
-        $this->container['sold_skipasses'] = isset($data['sold_skipasses']) ? $data['sold_skipasses'] : null;
+        $this->container['segments'] = isset($data['segments']) ? $data['segments'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -215,97 +203,49 @@ class InlineResponse200104Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets active_skipasses
+     * Gets segments
      *
-     * @return int
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Segment[]
      */
-    public function getActiveSkipasses()
+    public function getSegments()
     {
-        return $this->container['active_skipasses'];
+        return $this->container['segments'];
     }
 
     /**
-     * Sets active_skipasses
+     * Sets segments
      *
-     * @param int $active_skipasses Amount of active skipasses in date range. Active skipasses can be used by customers in their validity range
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Segment[] $segments List of all segments
      *
      * @return $this
      */
-    public function setActiveSkipasses($active_skipasses)
+    public function setSegments($segments)
     {
-        $this->container['active_skipasses'] = $active_skipasses;
+        $this->container['segments'] = $segments;
 
         return $this;
     }
 
     /**
-     * Gets canceled_skipasses
+     * Gets total_items
      *
      * @return int
      */
-    public function getCanceledSkipasses()
+    public function getTotalItems()
     {
-        return $this->container['canceled_skipasses'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets canceled_skipasses
+     * Sets total_items
      *
-     * @param int $canceled_skipasses Amount of canceled skipasses in date range. Canceled skipasses in production systems and in CareCloud. Customers cannot use them anymore
+     * @param int $total_items Count of all found segments
      *
      * @return $this
      */
-    public function setCanceledSkipasses($canceled_skipasses)
+    public function setTotalItems($total_items)
     {
-        $this->container['canceled_skipasses'] = $canceled_skipasses;
-
-        return $this;
-    }
-
-    /**
-     * Gets deactivated_skipasses
-     *
-     * @return int
-     */
-    public function getDeactivatedSkipasses()
-    {
-        return $this->container['deactivated_skipasses'];
-    }
-
-    /**
-     * Sets deactivated_skipasses
-     *
-     * @param int $deactivated_skipasses Amount of deactivated skipasses in date range. Skipasses deactivated in CareCloud only. These skipasses are usually not sent to production systems. Deactivation have been done in system CareCloud
-     *
-     * @return $this
-     */
-    public function setDeactivatedSkipasses($deactivated_skipasses)
-    {
-        $this->container['deactivated_skipasses'] = $deactivated_skipasses;
-
-        return $this;
-    }
-
-    /**
-     * Gets sold_skipasses
-     *
-     * @return int
-     */
-    public function getSoldSkipasses()
-    {
-        return $this->container['sold_skipasses'];
-    }
-
-    /**
-     * Sets sold_skipasses
-     *
-     * @param int $sold_skipasses Amount of sold skipasses in date range. Skipasses deactivated in CareCloud only. These skipasses are usually not sent to production systems. Deactivation have been done in system CareCloud
-     *
-     * @return $this
-     */
-    public function setSoldSkipasses($sold_skipasses)
-    {
-        $this->container['sold_skipasses'] = $sold_skipasses;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

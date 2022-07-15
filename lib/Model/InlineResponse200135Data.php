@@ -56,8 +56,7 @@ class InlineResponse200135Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bearer_token' => 'string',
-'user' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User'    ];
+        'bearer_token' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +64,7 @@ class InlineResponse200135Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bearer_token' => null,
-'user' => null    ];
+        'bearer_token' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +93,7 @@ class InlineResponse200135Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bearer_token' => 'bearer_token',
-'user' => 'user'    ];
+        'bearer_token' => 'bearer_token'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +101,7 @@ class InlineResponse200135Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bearer_token' => 'setBearerToken',
-'user' => 'setUser'    ];
+        'bearer_token' => 'setBearerToken'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +109,7 @@ class InlineResponse200135Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bearer_token' => 'getBearerToken',
-'user' => 'getUser'    ];
+        'bearer_token' => 'getBearerToken'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -175,7 +170,6 @@ class InlineResponse200135Data implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -222,30 +216,6 @@ class InlineResponse200135Data implements ModelInterface, ArrayAccess
     public function setBearerToken($bearer_token)
     {
         $this->container['bearer_token'] = $bearer_token;
-
-        return $this;
-    }
-
-    /**
-     * Gets user
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User
-     */
-    public function getUser()
-    {
-        return $this->container['user'];
-    }
-
-    /**
-     * Sets user
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User $user user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        $this->container['user'] = $user;
 
         return $this;
     }

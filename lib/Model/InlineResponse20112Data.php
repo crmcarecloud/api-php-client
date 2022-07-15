@@ -56,7 +56,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_reservation_id' => 'string'    ];
+        'order_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'product_reservation_id' => null    ];
+        'order_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_reservation_id' => 'product_reservation_id'    ];
+        'order_id' => 'order_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_reservation_id' => 'setProductReservationId'    ];
+        'order_id' => 'setOrderId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_reservation_id' => 'getProductReservationId'    ];
+        'order_id' => 'getOrderId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_reservation_id'] = isset($data['product_reservation_id']) ? $data['product_reservation_id'] : null;
+        $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets product_reservation_id
+     * Gets order_id
      *
      * @return string
      */
-    public function getProductReservationId()
+    public function getOrderId()
     {
-        return $this->container['product_reservation_id'];
+        return $this->container['order_id'];
     }
 
     /**
-     * Sets product_reservation_id
+     * Sets order_id
      *
-     * @param string $product_reservation_id The unique id of the product reservation
+     * @param string $order_id The unique id of the order
      *
      * @return $this
      */
-    public function setProductReservationId($product_reservation_id)
+    public function setOrderId($order_id)
     {
-        $this->container['product_reservation_id'] = $product_reservation_id;
+        $this->container['order_id'] = $order_id;
 
         return $this;
     }

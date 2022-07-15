@@ -56,8 +56,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'orders' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Order[]',
-'total_items' => 'int'    ];
+        'is_valid' => 'bool'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +64,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'orders' => null,
-'total_items' => null    ];
+        'is_valid' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +93,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'orders' => 'orders',
-'total_items' => 'total_items'    ];
+        'is_valid' => 'is_valid'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +101,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'orders' => 'setOrders',
-'total_items' => 'setTotalItems'    ];
+        'is_valid' => 'setIsValid'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +109,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'orders' => 'getOrders',
-'total_items' => 'getTotalItems'    ];
+        'is_valid' => 'getIsValid'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +169,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['is_valid'] = isset($data['is_valid']) ? $data['is_valid'] : null;
     }
 
     /**
@@ -203,49 +197,25 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets orders
+     * Gets is_valid
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Order[]
+     * @return bool
      */
-    public function getOrders()
+    public function getIsValid()
     {
-        return $this->container['orders'];
+        return $this->container['is_valid'];
     }
 
     /**
-     * Sets orders
+     * Sets is_valid
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Order[] $orders Collection of the customer orders
+     * @param bool $is_valid Result of the OTP verification
      *
      * @return $this
      */
-    public function setOrders($orders)
+    public function setIsValid($is_valid)
     {
-        $this->container['orders'] = $orders;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_items
-     *
-     * @return int
-     */
-    public function getTotalItems()
-    {
-        return $this->container['total_items'];
-    }
-
-    /**
-     * Sets total_items
-     *
-     * @param int $total_items Count of all found customer orders
-     *
-     * @return $this
-     */
-    public function setTotalItems($total_items)
-    {
-        $this->container['total_items'] = $total_items;
+        $this->container['is_valid'] = $is_valid;
 
         return $this;
     }

@@ -56,10 +56,8 @@ class InlineResponse200137Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'earned_points' => 'float',
-'redeemed_points' => 'float',
-'available_points' => 'float',
-'available_points_money_value' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]'    ];
+        'user_roles' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,10 +65,8 @@ class InlineResponse200137Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'earned_points' => 'float',
-'redeemed_points' => 'float',
-'available_points' => 'float',
-'available_points_money_value' => null    ];
+        'user_roles' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,10 +95,8 @@ class InlineResponse200137Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'earned_points' => 'earned_points',
-'redeemed_points' => 'redeemed_points',
-'available_points' => 'available_points',
-'available_points_money_value' => 'available_points_money_value'    ];
+        'user_roles' => 'user_roles',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -110,10 +104,8 @@ class InlineResponse200137Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'earned_points' => 'setEarnedPoints',
-'redeemed_points' => 'setRedeemedPoints',
-'available_points' => 'setAvailablePoints',
-'available_points_money_value' => 'setAvailablePointsMoneyValue'    ];
+        'user_roles' => 'setUserRoles',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -121,10 +113,8 @@ class InlineResponse200137Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'earned_points' => 'getEarnedPoints',
-'redeemed_points' => 'getRedeemedPoints',
-'available_points' => 'getAvailablePoints',
-'available_points_money_value' => 'getAvailablePointsMoneyValue'    ];
+        'user_roles' => 'getUserRoles',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -184,10 +174,8 @@ class InlineResponse200137Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['earned_points'] = isset($data['earned_points']) ? $data['earned_points'] : null;
-        $this->container['redeemed_points'] = isset($data['redeemed_points']) ? $data['redeemed_points'] : null;
-        $this->container['available_points'] = isset($data['available_points']) ? $data['available_points'] : null;
-        $this->container['available_points_money_value'] = isset($data['available_points_money_value']) ? $data['available_points_money_value'] : null;
+        $this->container['user_roles'] = isset($data['user_roles']) ? $data['user_roles'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -215,97 +203,49 @@ class InlineResponse200137Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets earned_points
+     * Gets user_roles
      *
-     * @return float
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]
      */
-    public function getEarnedPoints()
+    public function getUserRoles()
     {
-        return $this->container['earned_points'];
+        return $this->container['user_roles'];
     }
 
     /**
-     * Sets earned_points
+     * Sets user_roles
      *
-     * @param float $earned_points Amount of earned points in time interval
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[] $user_roles Array of user roles
      *
      * @return $this
      */
-    public function setEarnedPoints($earned_points)
+    public function setUserRoles($user_roles)
     {
-        $this->container['earned_points'] = $earned_points;
+        $this->container['user_roles'] = $user_roles;
 
         return $this;
     }
 
     /**
-     * Gets redeemed_points
+     * Gets total_items
      *
-     * @return float
+     * @return int
      */
-    public function getRedeemedPoints()
+    public function getTotalItems()
     {
-        return $this->container['redeemed_points'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets redeemed_points
+     * Sets total_items
      *
-     * @param float $redeemed_points Amount of redeemed points in time interval
+     * @param int $total_items Count of all found user roles
      *
      * @return $this
      */
-    public function setRedeemedPoints($redeemed_points)
+    public function setTotalItems($total_items)
     {
-        $this->container['redeemed_points'] = $redeemed_points;
-
-        return $this;
-    }
-
-    /**
-     * Gets available_points
-     *
-     * @return float
-     */
-    public function getAvailablePoints()
-    {
-        return $this->container['available_points'];
-    }
-
-    /**
-     * Sets available_points
-     *
-     * @param float $available_points Amount of available points in the moment. Time interval has no influence to the result
-     *
-     * @return $this
-     */
-    public function setAvailablePoints($available_points)
-    {
-        $this->container['available_points'] = $available_points;
-
-        return $this;
-    }
-
-    /**
-     * Gets available_points_money_value
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]
-     */
-    public function getAvailablePointsMoneyValue()
-    {
-        return $this->container['available_points_money_value'];
-    }
-
-    /**
-     * Sets available_points_money_value
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[] $available_points_money_value Parameter shows money representation of the 'available_points' parameter. CareCloud calculates money value for every system currency. The calculation is available only if the customer's status allows a point payment. This setup is possible in CareCloud administration.
-     *
-     * @return $this
-     */
-    public function setAvailablePointsMoneyValue($available_points_money_value)
-    {
-        $this->container['available_points_money_value'] = $available_points_money_value;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

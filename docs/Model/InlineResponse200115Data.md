@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**users** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\User[]**](User.md) | Array of users | [optional] 
-**total_items** | **int** | Count of all found users | [optional] 
+**store_groups** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]**](StoreGroup.md) | List of all store groups | [optional] 
+**total_items** | **int** | Count of all found store groups | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

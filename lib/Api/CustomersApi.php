@@ -1398,9 +1398,347 @@ class CustomersApi
     }
 
     /**
+     * Operation getSubCustomerAddress
+     *
+     * Get an additional customer address
+     *
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029
+     */
+    public function getSubCustomerAddress($customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        list($response) = $this->getSubCustomerAddressWithHttpInfo($customer_id, $additional_customer_address_id_path, $accept_language);
+        return $response;
+    }
+
+    /**
+     * Operation getSubCustomerAddressWithHttpInfo
+     *
+     * Get an additional customer address
+     *
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getSubCustomerAddressWithHttpInfo($customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029';
+        $request = $this->getSubCustomerAddressRequest($customer_id, $additional_customer_address_id_path, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getSubCustomerAddressAsync
+     *
+     * Get an additional customer address
+     *
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getSubCustomerAddressAsync($customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->getSubCustomerAddressAsyncWithHttpInfo($customer_id, $additional_customer_address_id_path, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getSubCustomerAddressAsyncWithHttpInfo
+     *
+     * Get an additional customer address
+     *
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getSubCustomerAddressAsyncWithHttpInfo($customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029';
+        $request = $this->getSubCustomerAddressRequest($customer_id, $additional_customer_address_id_path, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getSubCustomerAddress'
+     *
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getSubCustomerAddressRequest($customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'customer_id' is set
+        if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $customer_id when calling getSubCustomerAddress'
+            );
+        }
+        // verify the required parameter 'additional_customer_address_id_path' is set
+        if ($additional_customer_address_id_path === null || (is_array($additional_customer_address_id_path) && count($additional_customer_address_id_path) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $additional_customer_address_id_path when calling getSubCustomerAddress'
+            );
+        }
+
+        $resourcePath = '/customers/{customer_id}/addresses/{additional_customer_address_id_path}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+        // path params
+        if ($customer_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'customer_id' . '}',
+                ObjectSerializer::toPathValue($customer_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($additional_customer_address_id_path !== null) {
+            $resourcePath = str_replace(
+                '{' . 'additional_customer_address_id_path' . '}',
+                ObjectSerializer::toPathValue($additional_customer_address_id_path),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+        }
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getSubCustomerAddresses
      *
-     * Get all customer adresses
+     * Get all additional customer adresses
      *
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
@@ -1423,7 +1761,7 @@ class CustomersApi
     /**
      * Operation getSubCustomerAddressesWithHttpInfo
      *
-     * Get all customer adresses
+     * Get all additional customer adresses
      *
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
@@ -1544,7 +1882,7 @@ class CustomersApi
     /**
      * Operation getSubCustomerAddressesAsync
      *
-     * Get all customer adresses
+     * Get all additional customer adresses
      *
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
@@ -1570,7 +1908,7 @@ class CustomersApi
     /**
      * Operation getSubCustomerAddressesAsyncWithHttpInfo
      *
-     * Get all customer adresses
+     * Get all additional customer adresses
      *
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
@@ -6103,6 +6441,339 @@ class CustomersApi
     }
 
     /**
+     * Operation postSubCustomerAddress
+     *
+     * Create an additional customer address
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdAddressesBody $body body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110
+     */
+    public function postSubCustomerAddress($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        list($response) = $this->postSubCustomerAddressWithHttpInfo($body, $customer_id, $accept_language);
+        return $response;
+    }
+
+    /**
+     * Operation postSubCustomerAddressWithHttpInfo
+     *
+     * Create an additional customer address
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdAddressesBody $body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postSubCustomerAddressWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110';
+        $request = $this->postSubCustomerAddressRequest($body, $customer_id, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postSubCustomerAddressAsync
+     *
+     * Create an additional customer address
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdAddressesBody $body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postSubCustomerAddressAsync($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->postSubCustomerAddressAsyncWithHttpInfo($body, $customer_id, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postSubCustomerAddressAsyncWithHttpInfo
+     *
+     * Create an additional customer address
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdAddressesBody $body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postSubCustomerAddressAsyncWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110';
+        $request = $this->postSubCustomerAddressRequest($body, $customer_id, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postSubCustomerAddress'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdAddressesBody $body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postSubCustomerAddressRequest($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postSubCustomerAddress'
+            );
+        }
+        // verify the required parameter 'customer_id' is set
+        if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $customer_id when calling postSubCustomerAddress'
+            );
+        }
+
+        $resourcePath = '/customers/{customer_id}/addresses';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+        // path params
+        if ($customer_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'customer_id' . '}',
+                ObjectSerializer::toPathValue($customer_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+        }
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation postSubCustomerInterest
      *
      * Add an interest record to a customer
@@ -7318,6 +7989,321 @@ class CustomersApi
             $resourcePath = str_replace(
                 '{' . 'customer_id' . '}',
                 ObjectSerializer::toPathValue($customer_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->config->getUsername() !== null || $this->config->getPassword() !== null) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+        }
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation putSubCustomerAddress
+     *
+     * Update an additional customer address
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\AddressesAdditionalCustomerAddressIdPathBody $body body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function putSubCustomerAddress($body, $customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $this->putSubCustomerAddressWithHttpInfo($body, $customer_id, $additional_customer_address_id_path, $accept_language);
+    }
+
+    /**
+     * Operation putSubCustomerAddressWithHttpInfo
+     *
+     * Update an additional customer address
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\AddressesAdditionalCustomerAddressIdPathBody $body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function putSubCustomerAddressWithHttpInfo($body, $customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '';
+        $request = $this->putSubCustomerAddressRequest($body, $customer_id, $additional_customer_address_id_path, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation putSubCustomerAddressAsync
+     *
+     * Update an additional customer address
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\AddressesAdditionalCustomerAddressIdPathBody $body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function putSubCustomerAddressAsync($body, $customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->putSubCustomerAddressAsyncWithHttpInfo($body, $customer_id, $additional_customer_address_id_path, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation putSubCustomerAddressAsyncWithHttpInfo
+     *
+     * Update an additional customer address
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\AddressesAdditionalCustomerAddressIdPathBody $body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function putSubCustomerAddressAsyncWithHttpInfo($body, $customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '';
+        $request = $this->putSubCustomerAddressRequest($body, $customer_id, $additional_customer_address_id_path, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'putSubCustomerAddress'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\AddressesAdditionalCustomerAddressIdPathBody $body (required)
+     * @param  string $customer_id The unique id of the customer (required)
+     * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function putSubCustomerAddressRequest($body, $customer_id, $additional_customer_address_id_path, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling putSubCustomerAddress'
+            );
+        }
+        // verify the required parameter 'customer_id' is set
+        if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $customer_id when calling putSubCustomerAddress'
+            );
+        }
+        // verify the required parameter 'additional_customer_address_id_path' is set
+        if ($additional_customer_address_id_path === null || (is_array($additional_customer_address_id_path) && count($additional_customer_address_id_path) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $additional_customer_address_id_path when calling putSubCustomerAddress'
+            );
+        }
+
+        $resourcePath = '/customers/{customer_id}/addresses/{additional_customer_address_id_path}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+        // path params
+        if ($customer_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'customer_id' . '}',
+                ObjectSerializer::toPathValue($customer_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($additional_customer_address_id_path !== null) {
+            $resourcePath = str_replace(
+                '{' . 'additional_customer_address_id_path' . '}',
+                ObjectSerializer::toPathValue($additional_customer_address_id_path),
                 $resourcePath
             );
         }

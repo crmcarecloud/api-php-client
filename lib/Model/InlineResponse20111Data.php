@@ -56,7 +56,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'order_id' => 'string'    ];
+        'event_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'order_id' => null    ];
+        'event_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'order_id' => 'order_id'    ];
+        'event_id' => 'event_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'order_id' => 'setOrderId'    ];
+        'event_id' => 'setEventId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'order_id' => 'getOrderId'    ];
+        'event_id' => 'getEventId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
+        $this->container['event_id'] = isset($data['event_id']) ? $data['event_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets order_id
+     * Gets event_id
      *
      * @return string
      */
-    public function getOrderId()
+    public function getEventId()
     {
-        return $this->container['order_id'];
+        return $this->container['event_id'];
     }
 
     /**
-     * Sets order_id
+     * Sets event_id
      *
-     * @param string $order_id The unique id of the order
+     * @param string $event_id The unique id of the event
      *
      * @return $this
      */
-    public function setOrderId($order_id)
+    public function setEventId($event_id)
     {
-        $this->container['order_id'] = $order_id;
+        $this->container['event_id'] = $event_id;
 
         return $this;
     }

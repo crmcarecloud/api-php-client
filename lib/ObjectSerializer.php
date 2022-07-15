@@ -269,7 +269,15 @@ class ObjectSerializer
                 return null;
             }
         } elseif (in_array($class, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
-            settype($data, $class);
+            if($class === 'mixed')
+            {
+                if($data instanceof \stdClass) $data = (array) $data;
+            }
+            else
+            {
+                settype($data, $class);
+            }
+
             return $data;
         } elseif ($class === '\SplFileObject') {
             /** @var \Psr\Http\Message\StreamInterface $data */

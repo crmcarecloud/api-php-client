@@ -56,7 +56,7 @@ class InlineResponse20071Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]',
+        'products' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Product[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20071Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'product_groups' => null,
+        'products' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20071Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_groups' => 'product_groups',
+        'products' => 'products',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20071Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_groups' => 'setProductGroups',
+        'products' => 'setProducts',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20071Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_groups' => 'getProductGroups',
+        'products' => 'getProducts',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20071Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_groups'] = isset($data['product_groups']) ? $data['product_groups'] : null;
+        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20071Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets product_groups
+     * Gets products
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Product[]
      */
-    public function getProductGroups()
+    public function getProducts()
     {
-        return $this->container['product_groups'];
+        return $this->container['products'];
     }
 
     /**
-     * Sets product_groups
+     * Sets products
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[] $product_groups List of all product groups
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Product[] $products List of CareCloud products
      *
      * @return $this
      */
-    public function setProductGroups($product_groups)
+    public function setProducts($products)
     {
-        $this->container['product_groups'] = $product_groups;
+        $this->container['products'] = $products;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20071Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found product groups
+     * @param int $total_items Count of all found products
      *
      * @return $this
      */

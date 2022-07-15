@@ -61,7 +61,7 @@ class Event implements ModelInterface, ArrayAccess
 'event_type_id' => 'string',
 'customer_id' => 'string',
 'external_id' => 'string',
-'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\AnyOfEventData',
+'data' => 'mixed',
 'created_at' => 'string',
 'secondary_external_id' => 'string',
 'state' => 'int'    ];
@@ -370,7 +370,7 @@ self::STATE_2,        ];
     /**
      * Gets data
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\AnyOfEventData
+     * @return mixed
      */
     public function getData()
     {
@@ -380,7 +380,7 @@ self::STATE_2,        ];
     /**
      * Sets data
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\AnyOfEventData $data Additional data of the event. Serialized data in JSON
+     * @param mixed $data Additional data of the event. Serialized data in JSON
      *
      * @return $this
      */

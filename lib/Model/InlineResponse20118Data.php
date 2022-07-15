@@ -56,7 +56,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'task_assignee_id' => 'string'    ];
+        'task_comment_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'task_assignee_id' => null    ];
+        'task_comment_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'task_assignee_id' => 'task_assignee_id'    ];
+        'task_comment_id' => 'task_comment_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'task_assignee_id' => 'setTaskAssigneeId'    ];
+        'task_comment_id' => 'setTaskCommentId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'task_assignee_id' => 'getTaskAssigneeId'    ];
+        'task_comment_id' => 'getTaskCommentId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['task_assignee_id'] = isset($data['task_assignee_id']) ? $data['task_assignee_id'] : null;
+        $this->container['task_comment_id'] = isset($data['task_comment_id']) ? $data['task_comment_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets task_assignee_id
+     * Gets task_comment_id
      *
      * @return string
      */
-    public function getTaskAssigneeId()
+    public function getTaskCommentId()
     {
-        return $this->container['task_assignee_id'];
+        return $this->container['task_comment_id'];
     }
 
     /**
-     * Sets task_assignee_id
+     * Sets task_comment_id
      *
-     * @param string $task_assignee_id The unique id of the task assignee in CareCloud
+     * @param string $task_comment_id The unique id of the task comment in CareCloud
      *
      * @return $this
      */
-    public function setTaskAssigneeId($task_assignee_id)
+    public function setTaskCommentId($task_comment_id)
     {
-        $this->container['task_assignee_id'] = $task_assignee_id;
+        $this->container['task_comment_id'] = $task_comment_id;
 
         return $this;
     }
