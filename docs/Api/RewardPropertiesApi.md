@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRewardProperty**](RewardPropertiesApi.md#getrewardproperty) | **GET** /reward-properties/{reward_property_id} | Get a reward property
 
 # **getRewardProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getRewardProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110 getRewardProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all reward properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110**](../Model/InlineResponse200110.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRewardProperty**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getRewardProperty($reward_property_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008 getRewardProperty($reward_property_id, $accept_language)
 
 Get a reward property
 
@@ -101,7 +101,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RewardPropertiesAp
     new GuzzleHttp\Client(),
     $config
 );
-$reward_property_id = "reward_property_id_example"; // string | The unique id for the reward property
+$reward_property_id = "reward_property_id_example"; // string | The unique id of the reward property
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -117,12 +117,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reward_property_id** | **string**| The unique id for the reward property |
+ **reward_property_id** | **string**| The unique id of the reward property |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 

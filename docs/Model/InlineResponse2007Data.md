@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cards** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Card[]**](Card.md) | Collection of customer cards | [optional] 
-**total_items** | **int** | Count of all found customer cards | [optional] 
+**booking_ticket_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]**](Property.md) | List of all booking ticket properties | [optional] 
+**total_items** | **int** | Count of all found booking ticket properties | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

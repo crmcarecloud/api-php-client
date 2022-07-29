@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vouchers** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]**](Voucher.md) | List of all recent vouchers | [optional] 
-**total_items** | **int** | Count of all recent vouchers | [optional] 
+**countries** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020DataCountries[]**](InlineResponse20020DataCountries.md) | List of the countries | [optional] 
+**total_items** | **int** | Count of all found countries | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

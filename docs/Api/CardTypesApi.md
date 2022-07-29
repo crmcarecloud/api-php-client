@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**putCardType**](CardTypesApi.md#putcardtype) | **PUT** /card-types/{card_type_id} | Update a card type
 
 # **getCardType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011 getCardType($card_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018 getCardType($card_type_id, $accept_language)
 
 Get a card type
 
@@ -36,7 +36,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$card_type_id = "card_type_id_example"; // string | The unique id for the card type
+$card_type_id = "card_type_id_example"; // string | The unique id of the card type
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -52,12 +52,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_type_id** | **string**| The unique id for the card type |
+ **card_type_id** | **string**| The unique id of the card type |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCardTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20010 getCardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017 getCardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get information about all card types
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCardTypeCards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012 getSubCardTypeCards($card_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $is_valid)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019 getSubCardTypeCards($card_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $is_valid)
 
 Get a collection of cards
 
@@ -164,7 +164,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$card_type_id = "card_type_id_example"; // string | The unique id for the card type
+$card_type_id = "card_type_id_example"; // string | The unique id of the card type
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
@@ -186,7 +186,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_type_id** | **string**| The unique id for the card type |
+ **card_type_id** | **string**| The unique id of the card type |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCardType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015 postCardType($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postCardType($body, $accept_language)
 
 Create a new card type
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CardtypesCardTypeIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CardtypesCardTypeIdBody | 
-$card_type_id = "card_type_id_example"; // string | The unique id for the card type
+$card_type_id = "card_type_id_example"; // string | The unique id of the card type
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -313,7 +313,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CardtypesCardTypeIdBody**](../Model/CardtypesCardTypeIdBody.md)|  |
- **card_type_id** | **string**| The unique id for the card type |
+ **card_type_id** | **string**| The unique id of the card type |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type

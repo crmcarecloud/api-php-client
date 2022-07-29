@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**postCampaignProductStoreRecord**](CampaignProductsApi.md#postcampaignproductstorerecord) | **POST** /campaign-products/{campaign_product_id}/campaign-product-store-records | Add a store to the campaign product
 
 # **getCampaignProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005 getCampaignProduct($campaign_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012 getCampaignProduct($campaign_product_id, $accept_language)
 
 Detail of a specific campaign product
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaignProductStoreRecords**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006 getCampaignProductStoreRecords($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013 getCampaignProductStoreRecords($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get a campaign product store records
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaignProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004 getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011 getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to)
 
 Collection of campaign products
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCampaignProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011 postCampaignProduct($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012 postCampaignProduct($body, $accept_language)
 
 Create a campaign product
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011**](../Model/InlineResponse2011.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012**](../Model/InlineResponse2012.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCampaignProductStoreRecord**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012 postCampaignProductStoreRecord($body, $campaign_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013 postCampaignProductStoreRecord($body, $campaign_product_id, $accept_language)
 
 Add a store to the campaign product
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012**](../Model/InlineResponse2012.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013**](../Model/InlineResponse2013.md)
 
 ### Authorization
 

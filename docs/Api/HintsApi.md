@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRecommendations**](HintsApi.md#getrecommendations) | **GET** /recommendations | Get all recommendations
 
 # **getRecommendation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092 getRecommendation($recommendation_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099 getRecommendation($recommendation_id, $accept_language)
 
 Get a recommendation
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092**](../Model/InlineResponse20092.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099**](../Model/InlineResponse20099.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendations**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091 getRecommendations($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098 getRecommendations($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all recommendations
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091**](../Model/InlineResponse20091.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098**](../Model/InlineResponse20098.md)
 
 ### Authorization
 

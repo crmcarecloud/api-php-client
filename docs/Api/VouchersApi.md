@@ -4,12 +4,73 @@ All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterpr
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getSubVoucherProperties**](VouchersApi.md#getsubvoucherproperties) | **GET** /vouchers/{voucher_id}/property-records | Get a collection of voucher properties records
 [**getVoucher**](VouchersApi.md#getvoucher) | **GET** /vouchers/{voucher_id} | Get a voucher
 [**getVouchers**](VouchersApi.md#getvouchers) | **GET** /vouchers | Get all vouchers
 [**postVoucherApply**](VouchersApi.md#postvoucherapply) | **POST** /vouchers/{voucher_id}/actions/apply-voucher | Application of a voucher
 
+# **getSubVoucherProperties**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147 getSubVoucherProperties($voucher_id, $accept_language)
+
+Get a collection of voucher properties records
+
+Get information about all property records on an voucher
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\VouchersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$voucher_id = "voucher_id_example"; // string | The unique id of the voucher
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $result = $apiInstance->getSubVoucherProperties($voucher_id, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VouchersApi->getSubVoucherProperties: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **voucher_id** | **string**| The unique id of the voucher |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147**](../Model/InlineResponse200147.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getVoucher**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139 getVoucher($voucher_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146 getVoucher($voucher_id, $accept_language)
 
 Get a voucher
 
@@ -34,7 +95,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\VouchersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$voucher_id = "voucher_id_example"; // string | The unique id for the voucher
+$voucher_id = "voucher_id_example"; // string | The unique id of the voucher
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -50,12 +111,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voucher_id** | **string**| The unique id for the voucher |
+ **voucher_id** | **string**| The unique id of the voucher |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139**](../Model/InlineResponse200139.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146**](../Model/InlineResponse200146.md)
 
 ### Authorization
 
@@ -69,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getVouchers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020 getVouchers($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027 getVouchers($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores)
 
 Get all vouchers
 
@@ -133,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
 
 ### Authorization
 
@@ -173,7 +234,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\VouchersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsApplyvoucherBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsApplyvoucherBody | 
-$voucher_id = "voucher_id_example"; // string | The unique id for the voucher
+$voucher_id = "voucher_id_example"; // string | The unique id of the voucher
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -189,7 +250,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsApplyvoucherBody**](../Model/ActionsApplyvoucherBody.md)|  |
- **voucher_id** | **string**| The unique id for the voucher |
+ **voucher_id** | **string**| The unique id of the voucher |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type

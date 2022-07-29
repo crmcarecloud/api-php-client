@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**putCard**](CardsApi.md#putcard) | **PUT** /cards/{card_id} | Update a card
 
 # **getCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008 getCard($card_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015 getCard($card_id, $accept_language)
 
 Get a card
 
@@ -37,7 +37,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$card_id = "card_id_example"; // string | The unique id for the card
+$card_id = "card_id_example"; // string | The unique id of the card
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -53,12 +53,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_id** | **string**| The unique id for the card |
+ **card_id** | **string**| The unique id of the card |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2007 getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014 getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid)
 
 Get all cards
 
@@ -104,7 +104,7 @@ $sort_field = "sort_field_example"; // string | Name of the sorting parameter. Y
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique id of the customer
 $card_number = "card_number_example"; // string | Number of the customer card
-$card_type_id = "card_type_id_example"; // string | The unique id for the card type
+$card_type_id = "card_type_id_example"; // string | The unique id of the card type
 $state = 56; // int | State of the card *Possible values are: 0 - blocked / 1 - active*
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 
@@ -128,13 +128,13 @@ Name | Type | Description  | Notes
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique id of the customer | [optional]
  **card_number** | **string**| Number of the customer card | [optional]
- **card_type_id** | **string**| The unique id for the card type | [optional]
+ **card_type_id** | **string**| The unique id of the card type | [optional]
  **state** | **int**| State of the card *Possible values are: 0 - blocked / 1 - active* | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postAssignCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014 postAssignCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015 postAssignCard($body, $accept_language)
 
 Assign free card
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014**](../Model/InlineResponse2014.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013 postCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014 postCard($body, $accept_language)
 
 Create a card
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013**](../Model/InlineResponse2013.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014**](../Model/InlineResponse2014.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postGenerateDigitalCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009 postGenerateDigitalCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016 postGenerateDigitalCard($body, $accept_language)
 
 Generate digital card file
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody | 
-$card_id = "card_id_example"; // string | The unique id for the card
+$card_id = "card_id_example"; // string | The unique id of the card
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -370,7 +370,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody**](../Model/CardsCardIdBody.md)|  |
- **card_id** | **string**| The unique id for the card |
+ **card_id** | **string**| The unique id of the card |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type

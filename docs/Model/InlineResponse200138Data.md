@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**earned_credits** | **float** | Amount of earned credits in time interval | [optional] 
-**redeemed_credits** | **float** | Amount of redeemed credits in time interval | [optional] 
-**available_credits** | **float** | Amount of available credits in the moment. Time interval has no influence to the result | [optional] 
+**token** | **string** | Authentication token for external application | [optional] 
+**token_request_id** | **string** | The parameter specifies the request that caused the token to be created. If two customers generated an authentication token at the same time and in the same application, the token_request_id parameter represents additional verification to identify the correct token | [optional] 
+**valid_to** | **string** | Date and time of the token validity   *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

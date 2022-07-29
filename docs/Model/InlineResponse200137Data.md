@@ -3,8 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_roles** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]**](UserRole.md) | Array of user roles | [optional] 
-**total_items** | **int** | Count of all found user roles | [optional] 
+**test_string** | **string** | Reverted value of input parameters | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

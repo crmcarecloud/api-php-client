@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**file_url** | **string** | Url address of the final file with digital card | [optional] 
+**campaigns** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[]**](Campaign.md) | List of the campaigns | [optional] 
+**total_items** | **int** | Count of all found campaigns | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

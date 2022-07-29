@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**customer_source_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord[]**](CustomerSourceRecord.md) | List of the customer source records | [optional] 
-**total_items** | **int** | Count of all found customer source records | [optional] 
+**purchases** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[]**](Purchase.md) | List of purchases | [optional] 
+**total_items** | **int** | Count of all found purchases | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orders** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Order[]**](Order.md) | Collection of the customer orders | [optional] 
-**total_items** | **int** | Count of all found customer orders | [optional] 
+**messages** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Message[]**](Message.md) | List of all messages | [optional] 
+**total_items** | **int** | Count of all found messages | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

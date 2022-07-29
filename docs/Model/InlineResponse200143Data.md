@@ -3,9 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**next_amount** | **float** | Date (ISO 8601) when first points will expire | [optional] 
-**next_date** | **string** | Amount of redeemed points in time interval *(YYYY-MM-DD)* | [optional] 
-**current_month_amount** | **float** | Amount of points that will expire in current month | [optional] 
+**bearer_token** | **string** | Autentication bearer token for an user. Token can be used for autentication in REST API with Bearer Autentication (more information about it [here](#section/Authorization/bearerAuth)) | [optional] 
+**user** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\User**](User.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
