@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tasks** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Task[]**](Task.md) | List of all tasks | [optional] 
-**total_items** | **int** | Count of all found tasks | [optional] 
+**stores** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]**](Store.md) | List of all stores | [optional] 
+**total_items** | **int** | Count of all found stores | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

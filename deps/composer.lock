@@ -12,22 +12,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/crmcarecloud/api-spec.git",
-                "reference": "98f0fcc4f2fb12f25a76a5b526ee72482e2d9536"
+                "reference": "222771b81e40efaf9aacf0c5de7bdbaa3ff1759e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/crmcarecloud/api-spec/zipball/98f0fcc4f2fb12f25a76a5b526ee72482e2d9536",
-                "reference": "98f0fcc4f2fb12f25a76a5b526ee72482e2d9536",
+                "url": "https://api.github.com/repos/crmcarecloud/api-spec/zipball/222771b81e40efaf9aacf0c5de7bdbaa3ff1759e",
+                "reference": "222771b81e40efaf9aacf0c5de7bdbaa3ff1759e",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
-            "support": {
-                "issues": "https://github.com/crmcarecloud/api-spec/issues",
-                "source": "https://github.com/crmcarecloud/api-spec/tree/master"
-            },
-            "time": "2022-07-18T12:26:15+00:00"
+            "time": "2022-07-29T07:47:02+00:00"
         }
     ],
     "packages-dev": [],
@@ -40,5 +35,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "1.1.0"
 }
