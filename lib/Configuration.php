@@ -111,6 +111,20 @@ class Configuration
     protected $tempFolderPath;
 
     /**
+     * Flag, is bearer auth required
+     *
+     * @var bool
+     */
+    protected $isBasicAuth = false;
+
+    /**
+     * Flag, is bearer auth required
+     *
+     * @var bool
+     */
+    protected $isBearerdAuth = false;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -357,6 +371,48 @@ class Configuration
     public function getTempFolderPath()
     {
         return $this->tempFolderPath;
+    }
+
+    /**
+     * @param bool $isBasicAuth
+     *
+     * @return Configuration
+     */
+    public function setBasicAuth($isBasicAuth)
+    {
+        $this->isBasicAuth = $isBasicAuth;
+        return $this;
+    }
+
+    /**
+     * Get flag, is basic auth required
+     *
+     * @return bool
+     */
+    public function getBasicAuth()
+    {
+        return (bool) $this->isBasicAuth;
+    }
+
+    /**
+     * @param bool $isBearerAuth
+     *
+     * @return Configuration
+     */
+    public function setBearerAuth($isBearerAuth)
+    {
+        $this->isBearerdAuth = $isBearerAuth;
+        return $this;
+    }
+
+    /**
+     * Get flag, is bearer auth required
+     *
+     * @return bool
+     */
+    public function getBearerAuth()
+    {
+        return (bool)$this->isBearerdAuth;
     }
 
     /**

@@ -102,6 +102,20 @@ class Configuration
     protected $tempFolderPath;
 
     /**
+     * Flag, is bearer auth required
+     *
+     * @var bool
+     */
+    protected $isBasicAuth = false;
+
+    /**
+     * Flag, is bearer auth required
+     *
+     * @var bool
+     */
+    protected $isBearerdAuth = false;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -351,6 +365,48 @@ class Configuration
     }
 
     /**
+     * @param bool $isBasicAuth
+     *
+     * @return Configuration
+     */
+    public function setBasicAuth($isBasicAuth)
+    {
+        $this->isBasicAuth = $isBasicAuth;
+        return $this;
+    }
+
+    /**
+     * Get flag, is basic auth required
+     *
+     * @return bool
+     */
+    public function getBasicAuth()
+    {
+        return (bool) $this->isBasicAuth;
+    }
+
+    /**
+     * @param bool $isBearerAuth
+     *
+     * @return Configuration
+     */
+    public function setBearerAuth($isBearerAuth)
+    {
+        $this->isBearerdAuth = $isBearerAuth;
+        return $this;
+    }
+
+    /**
+     * Get flag, is bearer auth required
+     *
+     * @return bool
+     */
+    public function getBearerAuth()
+    {
+        return (bool)$this->isBearerdAuth;
+    }
+
+    /**
      * Gets the default configuration instance
      *
      * @return Configuration
@@ -387,9 +443,9 @@ class Configuration
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: {{version}}' . PHP_EOL;
-	    {{#artifactVersion}}
+        {{#artifactVersion}}
         $report .= '    SDK Package Version: {{artifactVersion}}' . PHP_EOL;
-    	{{/artifactVersion}}
+        {{/artifactVersion}}
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

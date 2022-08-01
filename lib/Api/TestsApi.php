@@ -359,8 +359,8 @@ class TestsApi
 
 
         $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
         }
 
         $headers = array_merge(
