@@ -54,7 +54,7 @@ class FinalBill implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'fiscal' => 'bool',
@@ -74,7 +74,7 @@ class FinalBill implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'fiscal' => null,
@@ -94,7 +94,7 @@ class FinalBill implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -104,7 +104,7 @@ class FinalBill implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {
@@ -221,7 +221,7 @@ const PAYMENT_TYPE_D = 'D';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getPaymentTypeAllowableValues()
     {

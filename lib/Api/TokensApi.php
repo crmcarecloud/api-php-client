@@ -255,7 +255,7 @@ class TokensApi
      * @param  string $token_id Client&#x27;s application token (required)
      * @param  string $external_application_id Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications) (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -363,8 +363,6 @@ class TokensApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -377,8 +375,11 @@ class TokensApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -596,7 +597,7 @@ class TokensApi
      * Create a token
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody $body (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -674,11 +675,6 @@ class TokensApi
         }
 
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -691,8 +687,11 @@ class TokensApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -910,7 +909,7 @@ class TokensApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1003,11 +1002,6 @@ class TokensApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1020,8 +1014,11 @@ class TokensApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1216,7 +1213,7 @@ class TokensApi
      * Logout from the application
      *
      * @param  string $token_id Client&#x27;s application token (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1229,7 +1226,7 @@ class TokensApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -1288,8 +1285,6 @@ class TokensApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1302,8 +1297,11 @@ class TokensApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1502,7 +1500,7 @@ class TokensApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1515,7 +1513,7 @@ class TokensApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -1581,11 +1579,6 @@ class TokensApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1598,8 +1591,11 @@ class TokensApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1821,7 +1817,7 @@ class TokensApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1914,11 +1910,6 @@ class TokensApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1931,8 +1922,11 @@ class TokensApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -2150,7 +2144,7 @@ class TokensApi
      * Login to the application for test customer
      *
      * @param  string $token_id Client&#x27;s application token (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2236,8 +2230,6 @@ class TokensApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2250,8 +2242,11 @@ class TokensApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -2450,7 +2445,7 @@ class TokensApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody $body (required)
      * @param  string $token_id Client&#x27;s application token (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2463,7 +2458,7 @@ class TokensApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -2529,11 +2524,6 @@ class TokensApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2546,8 +2536,11 @@ class TokensApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually

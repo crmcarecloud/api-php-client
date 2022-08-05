@@ -12,7 +12,7 @@ class {{classname}} {{#parentSchema}}extends {{{parent}}} {{/parentSchema}}{{^pa
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         {{#vars}}'{{name}}' => '{{{datatype}}}'{{#hasMore}},
@@ -22,7 +22,7 @@ class {{classname}} {{#parentSchema}}extends {{{parent}}} {{/parentSchema}}{{^pa
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         {{#vars}}'{{name}}' => {{#dataFormat}}'{{{dataFormat}}}'{{/dataFormat}}{{^dataFormat}}null{{/dataFormat}}{{#hasMore}},
@@ -32,7 +32,7 @@ class {{classname}} {{#parentSchema}}extends {{{parent}}} {{/parentSchema}}{{^pa
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -42,7 +42,7 @@ class {{classname}} {{#parentSchema}}extends {{{parent}}} {{/parentSchema}}{{^pa
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {
@@ -128,7 +128,7 @@ class {{classname}} {{#parentSchema}}extends {{{parent}}} {{/parentSchema}}{{^pa
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function {{getter}}AllowableValues()
     {

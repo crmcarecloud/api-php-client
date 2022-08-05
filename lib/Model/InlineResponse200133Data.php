@@ -53,7 +53,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'task_states' => '\CrmCareCloud\Webservice\RestApi\Client\Model\TaskState[]',
@@ -62,7 +62,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'task_states' => null,
@@ -71,7 +71,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -81,7 +81,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {

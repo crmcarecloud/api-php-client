@@ -53,7 +53,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'external_application_id' => 'string',
@@ -65,7 +65,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'external_application_id' => null,
@@ -77,7 +77,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -87,7 +87,7 @@ class ActionsSendBody implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {
@@ -182,7 +182,7 @@ const OTP_TYPE_2 = 2;
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getCommunicationChannelIdAllowableValues()
     {
@@ -195,7 +195,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getOtpTypeAllowableValues()
     {

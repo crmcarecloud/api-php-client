@@ -53,7 +53,7 @@ class TokensBody implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'device' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Device',
@@ -64,7 +64,7 @@ class TokensBody implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'device' => null,
@@ -75,7 +75,7 @@ class TokensBody implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -85,7 +85,7 @@ class TokensBody implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {

@@ -54,7 +54,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'message_id' => 'string',
@@ -74,7 +74,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'message_id' => null,
@@ -94,7 +94,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -104,7 +104,7 @@ class Message implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {
@@ -226,7 +226,7 @@ const COMMUNICATION_CHANNEL_ID_5 = 5;
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getStatusAllowableValues()
     {
@@ -240,7 +240,7 @@ self::STATUS_4,        ];
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getCommunicationChannelIdAllowableValues()
     {

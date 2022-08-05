@@ -53,7 +53,7 @@ class ActionsAcceptpaymentBody implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'store_id' => 'string',
@@ -69,7 +69,7 @@ class ActionsAcceptpaymentBody implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'store_id' => null,
@@ -85,7 +85,7 @@ class ActionsAcceptpaymentBody implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -95,7 +95,7 @@ class ActionsAcceptpaymentBody implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {
@@ -200,7 +200,7 @@ const PAYMENT_TYPE_D = 'D';
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getPaymentTypeAllowableValues()
     {

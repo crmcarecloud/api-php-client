@@ -243,7 +243,7 @@ class TestsApi
      *
      * Connection test
      *
-     * @param  string $test_string Test string send to REST API. Correct result should reverted string (optional)
+     * @param  string|null $test_string Test string send to REST API. Correct result should reverted string (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -314,8 +314,6 @@ class TestsApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -328,8 +326,11 @@ class TestsApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually

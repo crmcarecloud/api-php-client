@@ -256,10 +256,10 @@ class ProductRecommendationEngineApi
      * Get the best recommendation for shopping cart
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string[]|null $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
+     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -362,8 +362,6 @@ class ProductRecommendationEngineApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -376,8 +374,11 @@ class ProductRecommendationEngineApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -601,9 +602,9 @@ class ProductRecommendationEngineApi
      * Get the best recommendation with elimination for shopping cart
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string[]|null $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
+     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -701,8 +702,6 @@ class ProductRecommendationEngineApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -715,8 +714,11 @@ class ProductRecommendationEngineApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -940,9 +942,9 @@ class ProductRecommendationEngineApi
      * Order products for the best recommendation for a shopping cart
      *
      * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1040,8 +1042,6 @@ class ProductRecommendationEngineApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1054,8 +1054,11 @@ class ProductRecommendationEngineApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1279,9 +1282,9 @@ class ProductRecommendationEngineApi
      * Get the best recommendation
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1376,8 +1379,6 @@ class ProductRecommendationEngineApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1390,8 +1391,11 @@ class ProductRecommendationEngineApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1612,8 +1616,8 @@ class ProductRecommendationEngineApi
      * Get the best recommendation with an elimination
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1703,8 +1707,6 @@ class ProductRecommendationEngineApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1717,8 +1719,11 @@ class ProductRecommendationEngineApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1942,9 +1947,9 @@ class ProductRecommendationEngineApi
      * Order products for the best recommendation.
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2039,8 +2044,6 @@ class ProductRecommendationEngineApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2053,8 +2056,11 @@ class ProductRecommendationEngineApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -2249,7 +2255,7 @@ class ProductRecommendationEngineApi
      * Create a batch of the third party recommendations
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ThirdpartyrecommendationsBatchBody $body (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2262,7 +2268,7 @@ class ProductRecommendationEngineApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -2313,11 +2319,6 @@ class ProductRecommendationEngineApi
         }
 
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2330,8 +2331,11 @@ class ProductRecommendationEngineApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually

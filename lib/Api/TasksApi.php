@@ -228,7 +228,7 @@ class TasksApi
      *
      * @param  string $task_id The unique id of the task in CareCloud (required)
      * @param  string $assignee_id The unique id of the task assignee in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -241,7 +241,7 @@ class TasksApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -315,8 +315,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -329,8 +327,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -548,7 +549,7 @@ class TasksApi
      * Get a collection of task properties records
      *
      * @param  string $task_id The unique id of the task in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -634,8 +635,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -648,8 +647,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -867,7 +869,7 @@ class TasksApi
      * Get a task
      *
      * @param  string $task_id The unique id of the task in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -953,8 +955,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -967,8 +967,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1190,7 +1193,7 @@ class TasksApi
      *
      * @param  string $assignee_id The unique id of the task assignee in CareCloud (required)
      * @param  string $task_id The unique id of the task in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1291,8 +1294,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1305,8 +1306,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1536,11 +1540,11 @@ class TasksApi
      * Get all task assignees
      *
      * @param  string $task_id The unique id of the task in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1646,8 +1650,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1660,8 +1662,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1883,7 +1888,7 @@ class TasksApi
      *
      * @param  string $task_comment_id The unique id of the task comment in CareCloud (required)
      * @param  string $task_id The unique id of the task in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1984,8 +1989,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1998,8 +2001,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -2232,12 +2238,12 @@ class TasksApi
      * Get all task comments
      *
      * @param  string $task_id The unique id of the task in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $task_comment_text Search record by the task comment text or a part of the task comment text. (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $task_comment_text Search record by the task comment text or a part of the task comment text. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2348,8 +2354,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2362,8 +2366,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -2581,7 +2588,7 @@ class TasksApi
      * Get a task state
      *
      * @param  string $task_state_id The unique id of the task state in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2667,8 +2674,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2681,8 +2686,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -2908,11 +2916,11 @@ class TasksApi
      *
      * Get all task states
      *
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3003,8 +3011,6 @@ class TasksApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3017,8 +3023,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -3236,7 +3245,7 @@ class TasksApi
      * Get a task type
      *
      * @param  string $task_type_id The unique id of the task type in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3322,8 +3331,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3336,8 +3343,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -3563,11 +3573,11 @@ class TasksApi
      *
      * Get all task types
      *
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3658,8 +3668,6 @@ class TasksApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3672,8 +3680,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -3920,18 +3931,18 @@ class TasksApi
      *
      * Get all tasks
      *
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $task_type_id Task type id from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. (optional)
-     * @param  string $task_state_id Task state id from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state. (optional)
-     * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $priority The parameter filters tasks by their priority. *Possible values are: 1 - Critical / 2 - Major / 3 - Normal / 4 - Minor.* (optional)
-     * @param  string $due_date Date (ISO 8601) when the task due *(YYYY-MM-DD)* (optional)
-     * @param  string $task_title Search record by the task summary or a part of the task summary (optional)
-     * @param  string $task_note Search record by the task note or a part of the task note (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $task_type_id Task type id from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. (optional)
+     * @param  string|null $task_state_id Task state id from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state. (optional)
+     * @param  string|null $customer_id The unique id of the customer (optional)
+     * @param  int|null $priority The parameter filters tasks by their priority. *Possible values are: 1 - Critical / 2 - Major / 3 - Normal / 4 - Minor.* (optional)
+     * @param  string|null $due_date Date (ISO 8601) when the task due *(YYYY-MM-DD)* (optional)
+     * @param  string|null $task_title Search record by the task summary or a part of the task summary (optional)
+     * @param  string|null $task_note Search record by the task note or a part of the task note (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4057,8 +4068,6 @@ class TasksApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4071,8 +4080,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -4294,7 +4306,7 @@ class TasksApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TaskIdAssigneesBody $body (required)
      * @param  string $task_id The unique id of the task in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4387,11 +4399,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4404,8 +4411,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -4627,7 +4637,7 @@ class TasksApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TaskIdTaskcommentsBody $body (required)
      * @param  string $task_id The unique id of the task in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4720,11 +4730,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4737,8 +4742,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -4956,7 +4964,7 @@ class TasksApi
      * Create a task
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TasksBody $body (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5034,11 +5042,6 @@ class TasksApi
         }
 
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5051,8 +5054,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -5251,7 +5257,7 @@ class TasksApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\TasksTaskIdBody $body (required)
      * @param  string $task_id The unique id of the task in CareCloud (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5264,7 +5270,7 @@ class TasksApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -5330,11 +5336,6 @@ class TasksApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5347,8 +5348,11 @@ class TasksApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually

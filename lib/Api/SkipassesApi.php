@@ -247,7 +247,7 @@ class SkipassesApi
      * Get a skipass
      *
      * @param  string $skipass_id The unique id of the skipass (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -333,8 +333,6 @@ class SkipassesApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -347,8 +345,11 @@ class SkipassesApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -610,23 +611,23 @@ class SkipassesApi
      *
      * Get all skipasses
      *
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  int $pos_id Id of POS system for ski tickets. *Possible values are: skidata - 6 / axess - 9 / base - 11* (optional)
-     * @param  string $external_order_id string Id of an external order creaded in POS system (optional)
-     * @param  string $name name string Name of the charged skipass (product name is used from resource products) (optional)
-     * @param  string $resort_name string Name of the resort where is a skipass charged (optional)
-     * @param  string $customer_category_name Name of the customer category (optional)
-     * @param  string $card_id Id of card used for charge skipasses (optional)
-     * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $skipass_type_id Type of the skipass *Possible values are: season ticket - 0/ one day ticket -1/ multiple day ticket - 2* (optional)
-     * @param  int $state State of the skipass *Possible values are: canceled skipass - 0 / valid skipass -1* (optional)
-     * @param  string $external_skipass_id External id of skipass. Structure can be different depends of POS system, that created skipass (optional)
-     * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  bool $is_cancelled Filter for canceled skipasses. *Possible values: true - all cancelled skipasses / false - all non cancelled skipasses / no value - all skipasses* (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  int|null $pos_id Id of POS system for ski tickets. *Possible values are: skidata - 6 / axess - 9 / base - 11* (optional)
+     * @param  string|null $external_order_id string Id of an external order creaded in POS system (optional)
+     * @param  string|null $name name string Name of the charged skipass (product name is used from resource products) (optional)
+     * @param  string|null $resort_name string Name of the resort where is a skipass charged (optional)
+     * @param  string|null $customer_category_name Name of the customer category (optional)
+     * @param  string|null $card_id Id of card used for charge skipasses (optional)
+     * @param  string|null $customer_id The unique id of the customer (optional)
+     * @param  int|null $skipass_type_id Type of the skipass *Possible values are: season ticket - 0/ one day ticket -1/ multiple day ticket - 2* (optional)
+     * @param  int|null $state State of the skipass *Possible values are: canceled skipass - 0 / valid skipass -1* (optional)
+     * @param  string|null $external_skipass_id External id of skipass. Structure can be different depends of POS system, that created skipass (optional)
+     * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
+     * @param  bool|null $is_cancelled Filter for canceled skipasses. *Possible values: true - all cancelled skipasses / false - all non cancelled skipasses / no value - all skipasses* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -777,8 +778,6 @@ class SkipassesApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -791,8 +790,11 @@ class SkipassesApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1012,9 +1014,9 @@ class SkipassesApi
      *
      * Get skipasses overview
      *
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1095,8 +1097,6 @@ class SkipassesApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1109,8 +1109,11 @@ class SkipassesApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1309,7 +1312,7 @@ class SkipassesApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\SkipassesSkipassIdBody $body (required)
      * @param  string $skipass_id The unique id of the skipass (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1322,7 +1325,7 @@ class SkipassesApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -1388,11 +1391,6 @@ class SkipassesApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1405,8 +1403,11 @@ class SkipassesApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually

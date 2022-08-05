@@ -53,7 +53,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'segments' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Segment[]',
@@ -62,7 +62,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'segments' => null,
@@ -71,7 +71,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -81,7 +81,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {

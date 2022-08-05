@@ -228,7 +228,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id of the interest record (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -241,7 +241,7 @@ class CustomersApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -315,8 +315,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -329,8 +327,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -529,7 +530,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id of the property record (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -542,7 +543,7 @@ class CustomersApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -616,8 +617,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -630,8 +629,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -849,7 +851,7 @@ class CustomersApi
      * Get information about a customer
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -935,8 +937,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -949,8 +949,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1194,17 +1197,17 @@ class CustomersApi
      *
      * Get all customers
      *
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $email Search by email (optional)
-     * @param  string $phone Phone number with international prefix (420000000) (optional)
-     * @param  string $customer_source_id The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created (optional)
-     * @param  string $first_name Search by first name (optional)
-     * @param  string $last_name Search by last name (optional)
-     * @param  string $birthdate Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $email Search by email (optional)
+     * @param  string|null $phone Phone number with international prefix (420000000) (optional)
+     * @param  string|null $customer_source_id The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created (optional)
+     * @param  string|null $first_name Search by first name (optional)
+     * @param  string|null $last_name Search by last name (optional)
+     * @param  string|null $birthdate Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1325,8 +1328,6 @@ class CustomersApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1339,8 +1340,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1562,7 +1566,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1663,8 +1667,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1677,8 +1679,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1911,12 +1916,12 @@ class CustomersApi
      * Get all additional customer adresses
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_address_type_id The unique id of the customer address type. (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $customer_address_type_id The unique id of the customer address type. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2027,8 +2032,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2041,8 +2044,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -2280,15 +2286,15 @@ class CustomersApi
      *
      * Get all customer cards
      *
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $card_number Number of the customer card (optional)
-     * @param  string $card_type_id The unique id of the card type (optional)
-     * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $customer_id The unique id of the customer (optional)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $card_number Number of the customer card (optional)
+     * @param  string|null $card_type_id The unique id of the card type (optional)
+     * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2399,8 +2405,6 @@ class CustomersApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2413,8 +2417,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -2649,14 +2656,14 @@ class CustomersApi
      *
      * Get information about all customer's events
      *
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $event_type_id The unique id of the event type (optional)
-     * @param  string $external_id The unique external id. It may be id from the other system (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $customer_id The unique id of the customer (optional)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $event_type_id The unique id of the event type (optional)
+     * @param  string|null $external_id The unique external id. It may be id from the other system (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2762,8 +2769,6 @@ class CustomersApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2776,8 +2781,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -2995,7 +3003,7 @@ class CustomersApi
      * Get a collection of interest records
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3081,8 +3089,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3095,8 +3101,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -3329,12 +3338,12 @@ class CustomersApi
      * Get all customer point records
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $point_type_id The unique id of a point type (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $point_type_id The unique id of a point type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3445,8 +3454,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3459,8 +3466,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -3678,7 +3688,7 @@ class CustomersApi
      * Get a collection of properties
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3764,8 +3774,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3778,8 +3786,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -4015,13 +4026,13 @@ class CustomersApi
      * Get all customer purchases
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $store_id The unique id of the store in CareCloud (optional)
-     * @param  string $type_id Purchase type (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $store_id The unique id of the store in CareCloud (optional)
+     * @param  string|null $type_id Purchase type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4137,8 +4148,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4151,8 +4160,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -4385,12 +4397,12 @@ class CustomersApi
      * Get a collection of recommendation records
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $name Search record by name or a part of the name (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $name Search record by name or a part of the name (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4501,8 +4513,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4515,8 +4525,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -4752,13 +4765,13 @@ class CustomersApi
      * Get information about all related customers
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $related_customer_id The unique id of the related customer (optional)
-     * @param  string $customer_relation_type_id The unique id of the customer relation type in CareCloud (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $related_customer_id The unique id of the related customer (optional)
+     * @param  string|null $customer_relation_type_id The unique id of the customer relation type in CareCloud (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4874,8 +4887,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -4888,8 +4899,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -5152,22 +5166,22 @@ class CustomersApi
      * Get all customer rewards
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $name Search record by name or a part of the name (optional)
-     * @param  string $store_id The unique id of the store where customer can apply the reward (optional)
-     * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
-     * @param  string $code Code of the reward (optional)
-     * @param  bool $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
-     * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward* (optional)
-     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values (optional)
-     * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag ids. Logic OR is used between values. (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $name Search record by name or a part of the name (optional)
+     * @param  string|null $store_id The unique id of the store where customer can apply the reward (optional)
+     * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
+     * @param  string|null $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $code Code of the reward (optional)
+     * @param  bool|null $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
+     * @param  int|null $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward* (optional)
+     * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values (optional)
+     * @param  bool|null $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. (optional)
+     * @param  string[]|null $tag_ids Parameter filters values by a list of tag ids. Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5334,8 +5348,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5348,8 +5360,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -5567,7 +5582,7 @@ class CustomersApi
      * Get a collection of segment records
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5653,8 +5668,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5667,8 +5680,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -5904,13 +5920,13 @@ class CustomersApi
      * Get customer source records
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
-     * @param  string $customer_source_id The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string|null $customer_source_id The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6026,8 +6042,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6040,8 +6054,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -6274,12 +6291,12 @@ class CustomersApi
      * Get a collection of status records
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  bool $valid_now Status validity. Just one status can be valid in the time. *Possible values are: True for valid status / False for status not valid* (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  bool|null $valid_now Status validity. Just one status can be valid in the time. *Possible values are: True for valid status / False for status not valid* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6390,8 +6407,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6404,8 +6419,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -6650,16 +6668,16 @@ class CustomersApi
      * Get all customer vouchers
      *
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $code Unique code of the voucher (optional)
-     * @param  string $store_id The unique id of the store where customer can apply the reward (optional)
-     * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  bool $is_applied Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* (optional)
-     * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $code Unique code of the voucher (optional)
+     * @param  string|null $store_id The unique id of the store where customer can apply the reward (optional)
+     * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
+     * @param  bool|null $is_applied Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* (optional)
+     * @param  bool|null $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6790,8 +6808,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -6804,8 +6820,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -7023,7 +7042,7 @@ class CustomersApi
      * Create a new customer
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomersBody $body (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7101,11 +7120,6 @@ class CustomersApi
         }
 
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7118,8 +7132,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -7341,7 +7358,7 @@ class CustomersApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdAddressesBody $body (required)
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7434,11 +7451,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7451,8 +7463,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -7674,7 +7689,7 @@ class CustomersApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdInterestrecordsBody $body (required)
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7767,11 +7782,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -7784,8 +7794,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -8007,7 +8020,7 @@ class CustomersApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPropertyrecordsBody $body (required)
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8100,11 +8113,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -8117,8 +8125,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -8340,7 +8351,7 @@ class CustomersApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdCustomersourcerecordsBody $body (required)
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8433,11 +8444,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -8450,8 +8456,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -8650,7 +8659,7 @@ class CustomersApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomersCustomerIdBody $body (required)
      * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8663,7 +8672,7 @@ class CustomersApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -8729,11 +8738,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -8746,8 +8750,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -8950,7 +8957,7 @@ class CustomersApi
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\AddressesAdditionalCustomerAddressIdPathBody $body (required)
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $additional_customer_address_id_path Unique ID of the customer additional address (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8963,7 +8970,7 @@ class CustomersApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -9044,11 +9051,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -9061,8 +9063,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -9265,7 +9270,7 @@ class CustomersApi
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\InterestrecordsInterestRecordIdBody $body (required)
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $interest_record_id The unique id of the interest record (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9278,7 +9283,7 @@ class CustomersApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -9359,11 +9364,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -9376,8 +9376,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -9580,7 +9583,7 @@ class CustomersApi
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsPropertyRecordIdBody $body (required)
      * @param  string $customer_id The unique id of the customer (required)
      * @param  string $property_record_id The unique id of the property record (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9593,7 +9596,7 @@ class CustomersApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -9674,11 +9677,6 @@ class CustomersApi
             );
         }
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -9691,8 +9689,11 @@ class CustomersApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually

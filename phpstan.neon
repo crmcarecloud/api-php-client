@@ -1,0 +1,14 @@
+parameters:
+    level: 3
+    paths:
+        - lib
+    ignoreErrors:
+        -
+            message: '#^Default value of the parameter \#[0-9]|[0-9]+ \$[a-z]+ \(string\) of method CrmCareCloud\\Webservice\\RestApi\\Client\\Api\\[a-zA-Z]+::[a-zA-Z]+\(\) is incompatible with type int#'
+            path: lib/Api
+        -
+            message: '#Constructor of class CrmCareCloud\\Webservice\\RestApi\\Client\\Model\\OneOf[a-zA-Z]+ has an unused parameter \$data#'
+            path: lib/Model
+        -
+            message: '#Static call to instance method stdClass::getAllowableEnumValues#'
+            path: lib/ObjectSerializer.php

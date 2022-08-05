@@ -258,12 +258,12 @@ class CustomersActionsApi
      *
      * Search customers
      *
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $first_name Search by first name (optional)
-     * @param  string $last_name Search by last name (optional)
-     * @param  string $birthdate Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* (optional)
-     * @param  string $card_number Number of the customer card (optional)
-     * @param  string $mode Mode of search results.  *Possible values are: strict - return only 100% matching results*  &lt;p class&#x3D;\&quot;warning\&quot;&gt;⚠️ Caution: Strict mode makes all path parameters as required. For succesful result you have to set all parameters.&lt;/p&gt; (optional)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  string|null $first_name Search by first name (optional)
+     * @param  string|null $last_name Search by last name (optional)
+     * @param  string|null $birthdate Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* (optional)
+     * @param  string|null $card_number Number of the customer card (optional)
+     * @param  string|null $mode Mode of search results.  *Possible values are: strict - return only 100% matching results*  &lt;p class&#x3D;\&quot;warning\&quot;&gt;⚠️ Caution: Strict mode makes all path parameters as required. For succesful result you have to set all parameters.&lt;/p&gt; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -359,8 +359,6 @@ class CustomersActionsApi
         }
 
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -373,8 +371,11 @@ class CustomersActionsApi
             );
         }
 
+        // body params
+        $_tempBody = null;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -661,11 +662,6 @@ class CustomersActionsApi
 
 
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -678,8 +674,11 @@ class CustomersActionsApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -966,11 +965,6 @@ class CustomersActionsApi
 
 
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -983,8 +977,11 @@ class CustomersActionsApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1188,7 +1185,7 @@ class CustomersActionsApi
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
@@ -1234,11 +1231,6 @@ class CustomersActionsApi
 
 
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1251,8 +1243,11 @@ class CustomersActionsApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually
@@ -1539,11 +1534,6 @@ class CustomersActionsApi
 
 
 
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1556,8 +1546,11 @@ class CustomersActionsApi
             );
         }
 
+        // body params
+        $_tempBody = $body;
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually

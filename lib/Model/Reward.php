@@ -54,7 +54,7 @@ class Reward implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'reward_id' => 'string',
@@ -82,7 +82,7 @@ class Reward implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'reward_id' => null,
@@ -110,7 +110,7 @@ class Reward implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -120,7 +120,7 @@ class Reward implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {
@@ -272,7 +272,7 @@ const STATE_2 = 2;
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getRewardGroupAllowableValues()
     {
@@ -284,7 +284,7 @@ self::REWARD_GROUP_2,        ];
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getPriorityAllowableValues()
     {
@@ -302,7 +302,7 @@ self::PRIORITY_9,        ];
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getStateAllowableValues()
     {

@@ -232,7 +232,7 @@ use {{invokerPackage}}\ObjectSerializer;
      *
 {{/description}}
 {{#parameters}}
-     * @param  {{dataType}} ${{paramName}}{{#description}} {{description}}{{/description}} {{#required}}(required){{/required}}{{^required}}(optional{{#defaultValue}}, default to {{{.}}}{{/defaultValue}}){{/required}}
+     * @param  {{dataType}}{{#required}}{{/required}}{{^required}}|null{{/required}} ${{paramName}}{{#description}} {{description}}{{/description}} {{#required}}(required){{/required}}{{^required}}(optional{{#defaultValue}}, default to {{{.}}}{{/defaultValue}}){{/required}}
 {{/parameters}}
      *
      * @throws \InvalidArgumentException
@@ -246,7 +246,7 @@ use {{invokerPackage}}\ObjectSerializer;
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
+                function ($response){{#returnType}} use ($returnType){{/returnType}} {
                     {{#returnType}}
                     $responseBody = $response->getBody();
                     if ($returnType === '\SplFileObject') {
@@ -404,13 +404,6 @@ use {{invokerPackage}}\ObjectSerializer;
             {{/isBinary}}
         }
         {{/formParams}}
-        // body params
-        $_tempBody = null;
-        {{#bodyParams}}
-        if (isset(${{paramName}})) {
-            $_tempBody = ${{paramName}};
-        }
-        {{/bodyParams}}
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -423,8 +416,16 @@ use {{invokerPackage}}\ObjectSerializer;
             );
         }
 
+        // body params
+        {{#bodyParams}}
+        $_tempBody = ${{paramName}};
+        {{/bodyParams}}
+        {{^bodyParams}}
+        $_tempBody = null;
+        {{/bodyParams}}
+
         // for model (json/xml)
-        if (isset($_tempBody)) {
+        if ($_tempBody !== null) {
             // $_tempBody is the method argument, if present
             $httpBody = $_tempBody;
             // \stdClass has no __toString(), so we should encode it manually

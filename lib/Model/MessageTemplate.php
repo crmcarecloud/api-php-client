@@ -54,7 +54,7 @@ class MessageTemplate implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'message_template_id' => 'string',
@@ -70,7 +70,7 @@ class MessageTemplate implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'message_template_id' => null,
@@ -86,7 +86,7 @@ class MessageTemplate implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -96,7 +96,7 @@ class MessageTemplate implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {
@@ -204,7 +204,7 @@ const COMMUNICATION_CHANNEL_ID_5 = 5;
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getMessageTemplateGroupIdAllowableValues()
     {
@@ -216,7 +216,7 @@ self::MESSAGE_TEMPLATE_GROUP_ID_3,        ];
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getCommunicationChannelIdAllowableValues()
     {

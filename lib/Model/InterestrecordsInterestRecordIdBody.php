@@ -53,7 +53,7 @@ class InterestrecordsInterestRecordIdBody implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'interest_record' => '\CrmCareCloud\Webservice\RestApi\Client\Model\InterestRecord'    ];
@@ -61,7 +61,7 @@ class InterestrecordsInterestRecordIdBody implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'interest_record' => null    ];
@@ -69,7 +69,7 @@ class InterestrecordsInterestRecordIdBody implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -79,7 +79,7 @@ class InterestrecordsInterestRecordIdBody implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {

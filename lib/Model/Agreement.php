@@ -54,7 +54,7 @@ class Agreement implements ModelInterface, ArrayAccess
     /**
       * Array of property to type mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string>
       */
     protected static $swaggerTypes = [
         'agreement_gtc' => 'int',
@@ -65,7 +65,7 @@ class Agreement implements ModelInterface, ArrayAccess
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
-      * @var string[]
+      * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
         'agreement_gtc' => null,
@@ -76,7 +76,7 @@ class Agreement implements ModelInterface, ArrayAccess
     /**
      * Array of property to type mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string>
      */
     public static function swaggerTypes()
     {
@@ -86,7 +86,7 @@ class Agreement implements ModelInterface, ArrayAccess
     /**
      * Array of property to format mappings. Used for (de)serialization
      *
-     * @return array
+     * @return array<string,string|null>
      */
     public static function swaggerFormats()
     {
@@ -181,7 +181,7 @@ const AGREEMENT_MARKETING_COMMUNICATION_2 = 2;
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getAgreementGtcAllowableValues()
     {
@@ -193,7 +193,7 @@ self::AGREEMENT_GTC_2,        ];
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getAgreementProfilingAllowableValues()
     {
@@ -205,7 +205,7 @@ self::AGREEMENT_PROFILING_2,        ];
     /**
      * Gets allowable values of the enum
      *
-     * @return string[]
+     * @return array<int,int|string>
      */
     public function getAgreementMarketingCommunicationAllowableValues()
     {
