@@ -85,9 +85,9 @@ class Configuration
     /**
      * User agent of the HTTP request, set to "PHP-Swagger" by default
      *
-     * @var string
+     * @var array<int,string>
      */
-    protected $userAgent = 'Swagger-Codegen/1.0.0/php';
+    protected $userAgents = [];
 
     /**
      * Debug switch (default set to false)
@@ -130,6 +130,7 @@ class Configuration
     public function __construct()
     {
         $this->tempFolderPath = sys_get_temp_dir();
+        $this->userAgents = ['CareCloud Client '.ApiConfig::CLIENT_VERSION];
     }
 
     /**
@@ -290,7 +291,25 @@ class Configuration
             throw new \InvalidArgumentException('User-agent must be a string.');
         }
 
-        $this->userAgent = $userAgent;
+        $this->userAgents = [$userAgent];
+        return $this;
+    }
+
+    /**
+     * Add the user agent of the api client, are joined and used all
+     *
+     * @param string $userAgent the user agent of the api client
+     *
+     * @throws \InvalidArgumentException
+     * @return $this
+	 */
+    public function addUserAgent($userAgent)
+    {
+        if (!is_string($userAgent)) {
+            throw new \InvalidArgumentException('User-agent must be a string.');
+        }
+
+        $this->userAgents[] = $userAgent;
         return $this;
     }
 
@@ -301,7 +320,7 @@ class Configuration
      */
     public function getUserAgent()
     {
-        return $this->userAgent;
+        return implode(', ',$this->userAgents);
     }
 
     /**
