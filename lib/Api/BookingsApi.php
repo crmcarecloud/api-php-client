@@ -87,6 +87,289 @@ class BookingsApi
     }
 
     /**
+     * Operation deleteBooking
+     *
+     * Delete a booking
+     *
+     * @param  string $booking_id The unique id of the booking (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function deleteBooking($booking_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $this->deleteBookingWithHttpInfo($booking_id, $accept_language);
+    }
+
+    /**
+     * Operation deleteBookingWithHttpInfo
+     *
+     * Delete a booking
+     *
+     * @param  string $booking_id The unique id of the booking (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteBookingWithHttpInfo($booking_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '';
+        $request = $this->deleteBookingRequest($booking_id, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteBookingAsync
+     *
+     * Delete a booking
+     *
+     * @param  string $booking_id The unique id of the booking (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteBookingAsync($booking_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->deleteBookingAsyncWithHttpInfo($booking_id, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation deleteBookingAsyncWithHttpInfo
+     *
+     * Delete a booking
+     *
+     * @param  string $booking_id The unique id of the booking (required)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteBookingAsyncWithHttpInfo($booking_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '';
+        $request = $this->deleteBookingRequest($booking_id, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'deleteBooking'
+     *
+     * @param  string $booking_id The unique id of the booking (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function deleteBookingRequest($booking_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'booking_id' is set
+        if ($booking_id === null || (is_array($booking_id) && count($booking_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $booking_id when calling deleteBooking'
+            );
+        }
+
+        $resourcePath = '/bookings/{booking_id}}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+        // path params
+        if ($booking_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'booking_id' . '}',
+                ObjectSerializer::toPathValue($booking_id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'DELETE',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getBooking
      *
      * Get a booking
@@ -417,16 +700,16 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
-     * @param  bool $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: true - returns all booking items. / false - returns no booking items. / no value - return no booking items* (optional)
+     * @param  int $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002
      */
-    public function getBookings($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null, $add_booking_items = null)
+    public function getBookings($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
     {
-        list($response) = $this->getBookingsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state, $add_booking_items);
+        list($response) = $this->getBookingsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items);
         return $response;
     }
 
@@ -441,17 +724,17 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
-     * @param  bool $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: true - returns all booking items. / false - returns no booking items. / no value - return no booking items* (optional)
+     * @param  int $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBookingsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null, $add_booking_items = null)
+    public function getBookingsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002';
-        $request = $this->getBookingsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state, $add_booking_items);
+        $request = $this->getBookingsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items);
 
         try {
             $options = $this->createHttpClientOption();
@@ -563,15 +846,15 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
-     * @param  bool $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: true - returns all booking items. / false - returns no booking items. / no value - return no booking items* (optional)
+     * @param  int $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBookingsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null, $add_booking_items = null)
+    public function getBookingsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
     {
-        return $this->getBookingsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state, $add_booking_items)
+        return $this->getBookingsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -590,16 +873,16 @@ class BookingsApi
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique id of the customer (optional)
-     * @param  int|null $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
-     * @param  bool|null $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: true - returns all booking items. / false - returns no booking items. / no value - return no booking items* (optional)
+     * @param  int|null $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string|null $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBookingsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null, $add_booking_items = null)
+    public function getBookingsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002';
-        $request = $this->getBookingsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state, $add_booking_items);
+        $request = $this->getBookingsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -647,13 +930,13 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
-     * @param  bool $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: true - returns all booking items. / false - returns no booking items. / no value - return no booking items* (optional)
+     * @param  int $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getBookingsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null, $add_booking_items = null)
+    protected function getBookingsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
     {
 
         $resourcePath = '/bookings';
@@ -684,8 +967,8 @@ class BookingsApi
             $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
         }
         // query params
-        if ($state !== null) {
-            $queryParams['state'] = ObjectSerializer::toQueryValue($state, null);
+        if ($booking_status !== null) {
+            $queryParams['booking_status'] = ObjectSerializer::toQueryValue($booking_status, null);
         }
         // query params
         if ($add_booking_items !== null) {

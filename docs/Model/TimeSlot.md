@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **valid_to** | **string** | Date and time when time slot ends *(YYYY-MM-DD HH:MM:SS)* | 
 **total_capacity** | **int** | Total capacity of the time slot | 
 **free_capacity** | **int** | Free capacity of the time slot | [optional] 
-**created_at** | **string** | Date and time when ticket was created *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the booking ticket *Possible values are: 0 - blocked / 1 - active* | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 

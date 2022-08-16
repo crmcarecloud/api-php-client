@@ -419,7 +419,7 @@ class CardsApi
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $card_number Number of the customer card (optional)
      * @param  string $card_type_id The unique id of the card type (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
+     * @param  int $state State of the customer *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -445,7 +445,7 @@ class CardsApi
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $card_number Number of the customer card (optional)
      * @param  string $card_type_id The unique id of the card type (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
+     * @param  int $state State of the customer *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -569,7 +569,7 @@ class CardsApi
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $card_number Number of the customer card (optional)
      * @param  string $card_type_id The unique id of the card type (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
+     * @param  int $state State of the customer *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \InvalidArgumentException
@@ -598,7 +598,7 @@ class CardsApi
      * @param  string|null $customer_id The unique id of the customer (optional)
      * @param  string|null $card_number Number of the customer card (optional)
      * @param  string|null $card_type_id The unique id of the card type (optional)
-     * @param  int|null $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
+     * @param  int|null $state State of the customer *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \InvalidArgumentException
@@ -657,7 +657,7 @@ class CardsApi
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $card_number Number of the customer card (optional)
      * @param  string $card_type_id The unique id of the card type (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
+     * @param  int $state State of the customer *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      *
      * @throws \InvalidArgumentException

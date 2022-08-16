@@ -56,7 +56,7 @@ class InlineResponse201Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'card_id' => 'string'    ];
+        'booking_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse201Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'card_id' => null    ];
+        'booking_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse201Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'card_id' => 'card_id'    ];
+        'booking_id' => 'booking_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse201Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'card_id' => 'setCardId'    ];
+        'booking_id' => 'setBookingId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse201Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'card_id' => 'getCardId'    ];
+        'booking_id' => 'getBookingId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse201Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['card_id'] = isset($data['card_id']) ? $data['card_id'] : null;
+        $this->container['booking_id'] = isset($data['booking_id']) ? $data['booking_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse201Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets card_id
+     * Gets booking_id
      *
      * @return string
      */
-    public function getCardId()
+    public function getBookingId()
     {
-        return $this->container['card_id'];
+        return $this->container['booking_id'];
     }
 
     /**
-     * Sets card_id
+     * Sets booking_id
      *
-     * @param string $card_id The unique id of the booking
+     * @param string $booking_id The unique id of the booking
      *
      * @return $this
      */
-    public function setCardId($card_id)
+    public function setBookingId($booking_id)
     {
-        $this->container['card_id'] = $card_id;
+        $this->container['booking_id'] = $booking_id;
 
         return $this;
     }

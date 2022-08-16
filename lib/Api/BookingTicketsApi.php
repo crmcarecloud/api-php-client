@@ -417,15 +417,14 @@ class BookingTicketsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004
      */
-    public function getBookingTickets($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null)
+    public function getBookingTickets($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
     {
-        list($response) = $this->getBookingTicketsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state);
+        list($response) = $this->getBookingTicketsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id);
         return $response;
     }
 
@@ -440,16 +439,15 @@ class BookingTicketsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBookingTicketsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null)
+    public function getBookingTicketsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004';
-        $request = $this->getBookingTicketsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state);
+        $request = $this->getBookingTicketsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -561,14 +559,13 @@ class BookingTicketsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBookingTicketsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null)
+    public function getBookingTicketsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
     {
-        return $this->getBookingTicketsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state)
+        return $this->getBookingTicketsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -587,15 +584,14 @@ class BookingTicketsApi
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique id of the customer (optional)
-     * @param  int|null $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBookingTicketsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null)
+    public function getBookingTicketsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004';
-        $request = $this->getBookingTicketsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state);
+        $request = $this->getBookingTicketsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -643,12 +639,11 @@ class BookingTicketsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $state State of the card *Possible values are: 0 - blocked / 1 - active* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getBookingTicketsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $state = null)
+    protected function getBookingTicketsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
     {
 
         $resourcePath = '/booking-tickets';
@@ -677,10 +672,6 @@ class BookingTicketsApi
         // query params
         if ($customer_id !== null) {
             $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
-        }
-        // query params
-        if ($state !== null) {
-            $queryParams['state'] = ObjectSerializer::toQueryValue($state, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -772,7 +763,6 @@ class BookingTicketsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id of the customer (optional)
      * @param  bool $free_only Parameter defines what kind of time slots is going to be return depends on the capacity *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
      * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
@@ -783,9 +773,9 @@ class BookingTicketsApi
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006
      */
-    public function getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
+    public function getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
     {
-        list($response) = $this->getSubBookingTicketsTimeSlotsWithHttpInfo($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
+        list($response) = $this->getSubBookingTicketsTimeSlotsWithHttpInfo($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
         return $response;
     }
 
@@ -800,7 +790,6 @@ class BookingTicketsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id of the customer (optional)
      * @param  bool $free_only Parameter defines what kind of time slots is going to be return depends on the capacity *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
      * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
@@ -811,10 +800,10 @@ class BookingTicketsApi
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSubBookingTicketsTimeSlotsWithHttpInfo($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
+    public function getSubBookingTicketsTimeSlotsWithHttpInfo($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006';
-        $request = $this->getSubBookingTicketsTimeSlotsRequest($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
+        $request = $this->getSubBookingTicketsTimeSlotsRequest($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
 
         try {
             $options = $this->createHttpClientOption();
@@ -926,7 +915,6 @@ class BookingTicketsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id of the customer (optional)
      * @param  bool $free_only Parameter defines what kind of time slots is going to be return depends on the capacity *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
      * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
@@ -936,9 +924,9 @@ class BookingTicketsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubBookingTicketsTimeSlotsAsync($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
+    public function getSubBookingTicketsTimeSlotsAsync($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
     {
-        return $this->getSubBookingTicketsTimeSlotsAsyncWithHttpInfo($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value)
+        return $this->getSubBookingTicketsTimeSlotsAsyncWithHttpInfo($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -957,7 +945,6 @@ class BookingTicketsApi
      * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
-     * @param  string|null $customer_id The unique id of the customer (optional)
      * @param  bool|null $free_only Parameter defines what kind of time slots is going to be return depends on the capacity *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
      * @param  string|null $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string|null $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
@@ -967,10 +954,10 @@ class BookingTicketsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubBookingTicketsTimeSlotsAsyncWithHttpInfo($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
+    public function getSubBookingTicketsTimeSlotsAsyncWithHttpInfo($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006';
-        $request = $this->getSubBookingTicketsTimeSlotsRequest($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
+        $request = $this->getSubBookingTicketsTimeSlotsRequest($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1018,7 +1005,6 @@ class BookingTicketsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $customer_id The unique id of the customer (optional)
      * @param  bool $free_only Parameter defines what kind of time slots is going to be return depends on the capacity *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
      * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
@@ -1028,7 +1014,7 @@ class BookingTicketsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getSubBookingTicketsTimeSlotsRequest($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
+    protected function getSubBookingTicketsTimeSlotsRequest($booking_ticket_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $free_only = null, $time_from = null, $time_to = null, $booking_ticket_property_id = null, $booking_ticket_property_value = null)
     {
         // verify the required parameter 'booking_ticket_id' is set
         if ($booking_ticket_id === null || (is_array($booking_ticket_id) && count($booking_ticket_id) === 0)) {
@@ -1059,10 +1045,6 @@ class BookingTicketsApi
         // query params
         if ($sort_direction !== null) {
             $queryParams['sort_direction'] = ObjectSerializer::toQueryValue($sort_direction, null);
-        }
-        // query params
-        if ($customer_id !== null) {
-            $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
         }
         // query params
         if ($free_only !== null) {

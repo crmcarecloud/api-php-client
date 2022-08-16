@@ -59,6 +59,7 @@ class PropertyItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
 'name' => 'string',
+'resource_record_id' => 'string',
 'state' => 'int'    ];
 
     /**
@@ -69,6 +70,7 @@ class PropertyItem implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'id' => null,
 'name' => null,
+'resource_record_id' => null,
 'state' => null    ];
 
     /**
@@ -100,6 +102,7 @@ class PropertyItem implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
 'name' => 'name',
+'resource_record_id' => 'resource_record_id',
 'state' => 'state'    ];
 
     /**
@@ -110,6 +113,7 @@ class PropertyItem implements ModelInterface, ArrayAccess
     protected static $setters = [
         'id' => 'setId',
 'name' => 'setName',
+'resource_record_id' => 'setResourceRecordId',
 'state' => 'setState'    ];
 
     /**
@@ -120,6 +124,7 @@ class PropertyItem implements ModelInterface, ArrayAccess
     protected static $getters = [
         'id' => 'getId',
 'name' => 'getName',
+'resource_record_id' => 'getResourceRecordId',
 'state' => 'getState'    ];
 
     /**
@@ -197,6 +202,7 @@ self::STATE_2,        ];
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['resource_record_id'] = isset($data['resource_record_id']) ? $data['resource_record_id'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
     }
 
@@ -276,6 +282,30 @@ self::STATE_2,        ];
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets resource_record_id
+     *
+     * @return string
+     */
+    public function getResourceRecordId()
+    {
+        return $this->container['resource_record_id'];
+    }
+
+    /**
+     * Sets resource_record_id
+     *
+     * @param string $resource_record_id The ID of the CareCloud REST API resource record is filled when the property is related directly to the CareCloud API resource (for example resource stores). Usually, the data type of the property determines it.
+     *
+     * @return $this
+     */
+    public function setResourceRecordId($resource_record_id)
+    {
+        $this->container['resource_record_id'] = $resource_record_id;
 
         return $this;
     }

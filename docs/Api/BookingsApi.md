@@ -4,10 +4,70 @@ All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterpr
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**deleteBooking**](BookingsApi.md#deletebooking) | **DELETE** /bookings/{booking_id}} | Delete a booking
 [**getBooking**](BookingsApi.md#getbooking) | **GET** /bookings/{booking_id}} | Get a booking
 [**getBookings**](BookingsApi.md#getbookings) | **GET** /bookings | Get all bookings
 [**postBooking**](BookingsApi.md#postbooking) | **POST** /bookings | Create a new booking
 [**putBooking**](BookingsApi.md#putbooking) | **PUT** /bookings/{booking_id}} | Update a booking
+
+# **deleteBooking**
+> deleteBooking($booking_id, $accept_language)
+
+Delete a booking
+
+Delete selected booking
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$booking_id = "booking_id_example"; // string | The unique id of the booking
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $apiInstance->deleteBooking($booking_id, $accept_language);
+} catch (Exception $e) {
+    echo 'Exception when calling BookingsApi->deleteBooking: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **booking_id** | **string**| The unique id of the booking |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBooking**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2003 getBooking($booking_id, $accept_language)
@@ -70,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBookings**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002 getBookings($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state, $add_booking_items)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002 getBookings($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items)
 
 Get all bookings
 
@@ -101,11 +161,11 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique id of the customer
-$state = 56; // int | State of the card *Possible values are: 0 - blocked / 1 - active*
-$add_booking_items = true; // bool | Booking items are going to be return depends on the parameter value *Possible values: true - returns all booking items. / false - returns no booking items. / no value - return no booking items*
+$booking_status = 56; // int | Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled*
+$add_booking_items = "none"; // string | Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items*
 
 try {
-    $result = $apiInstance->getBookings($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state, $add_booking_items);
+    $result = $apiInstance->getBookings($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->getBookings: ', $e->getMessage(), PHP_EOL;
@@ -123,8 +183,8 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique id of the customer | [optional]
- **state** | **int**| State of the card *Possible values are: 0 - blocked / 1 - active* | [optional]
- **add_booking_items** | **bool**| Booking items are going to be return depends on the parameter value *Possible values: true - returns all booking items. / false - returns no booking items. / no value - return no booking items* | [optional]
+ **booking_status** | **int**| Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* | [optional]
+ **add_booking_items** | **string**| Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* | [optional] [default to none]
 
 ### Return type
 

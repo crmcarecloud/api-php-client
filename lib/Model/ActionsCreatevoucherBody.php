@@ -57,7 +57,8 @@ class ActionsCreatevoucherBody implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'customer_id' => 'string',
-'code' => 'string'    ];
+'code' => 'string',
+'note' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,7 +67,8 @@ class ActionsCreatevoucherBody implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'customer_id' => null,
-'code' => null    ];
+'code' => null,
+'note' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -96,7 +98,8 @@ class ActionsCreatevoucherBody implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'customer_id' => 'customer_id',
-'code' => 'code'    ];
+'code' => 'code',
+'note' => 'note'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -105,7 +108,8 @@ class ActionsCreatevoucherBody implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'customer_id' => 'setCustomerId',
-'code' => 'setCode'    ];
+'code' => 'setCode',
+'note' => 'setNote'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -114,7 +118,8 @@ class ActionsCreatevoucherBody implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'customer_id' => 'getCustomerId',
-'code' => 'getCode'    ];
+'code' => 'getCode',
+'note' => 'getNote'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -176,6 +181,7 @@ class ActionsCreatevoucherBody implements ModelInterface, ArrayAccess
     {
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
     }
 
     /**
@@ -249,6 +255,30 @@ class ActionsCreatevoucherBody implements ModelInterface, ArrayAccess
     public function setCode($code)
     {
         $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets note
+     *
+     * @return string
+     */
+    public function getNote()
+    {
+        return $this->container['note'];
+    }
+
+    /**
+     * Sets note
+     *
+     * @param string $note Voucher's note
+     *
+     * @return $this
+     */
+    public function setNote($note)
+    {
+        $this->container['note'] = $note;
 
         return $this;
     }

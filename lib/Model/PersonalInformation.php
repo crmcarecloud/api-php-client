@@ -477,7 +477,7 @@ self::GENDER_2,        ];
     /**
      * Sets language_id
      *
-     * @param string $language_id The unique id for the language by ISO 639 code
+     * @param string $language_id The unique id for the language by ISO 639-1 code
      *
      * @return $this
      */

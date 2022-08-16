@@ -65,6 +65,7 @@ class BookingItem implements ModelInterface, ArrayAccess
 'valid_to' => 'string',
 'capacity_taken' => 'int',
 'booking_item_status' => 'int',
+'additional_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
 'created_at' => 'string',
 'state' => 'int',
 'last_change' => 'string'    ];
@@ -83,6 +84,7 @@ class BookingItem implements ModelInterface, ArrayAccess
 'valid_to' => null,
 'capacity_taken' => null,
 'booking_item_status' => null,
+'additional_properties' => null,
 'created_at' => null,
 'state' => null,
 'last_change' => null    ];
@@ -122,6 +124,7 @@ class BookingItem implements ModelInterface, ArrayAccess
 'valid_to' => 'valid_to',
 'capacity_taken' => 'capacity_taken',
 'booking_item_status' => 'booking_item_status',
+'additional_properties' => 'additional_properties',
 'created_at' => 'created_at',
 'state' => 'state',
 'last_change' => 'last_change'    ];
@@ -140,6 +143,7 @@ class BookingItem implements ModelInterface, ArrayAccess
 'valid_to' => 'setValidTo',
 'capacity_taken' => 'setCapacityTaken',
 'booking_item_status' => 'setBookingItemStatus',
+'additional_properties' => 'setAdditionalProperties',
 'created_at' => 'setCreatedAt',
 'state' => 'setState',
 'last_change' => 'setLastChange'    ];
@@ -158,6 +162,7 @@ class BookingItem implements ModelInterface, ArrayAccess
 'valid_to' => 'getValidTo',
 'capacity_taken' => 'getCapacityTaken',
 'booking_item_status' => 'getBookingItemStatus',
+'additional_properties' => 'getAdditionalProperties',
 'created_at' => 'getCreatedAt',
 'state' => 'getState',
 'last_change' => 'getLastChange'    ];
@@ -258,6 +263,7 @@ self::STATE_2,        ];
         $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
         $this->container['capacity_taken'] = isset($data['capacity_taken']) ? $data['capacity_taken'] : 1;
         $this->container['booking_item_status'] = isset($data['booking_item_status']) ? $data['booking_item_status'] : null;
+        $this->container['additional_properties'] = isset($data['additional_properties']) ? $data['additional_properties'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
@@ -272,9 +278,6 @@ self::STATE_2,        ];
     {
         $invalidProperties = [];
 
-        if ($this->container['customer_id'] === null) {
-            $invalidProperties[] = "'customer_id' can't be null";
-        }
         if ($this->container['time_slot_id'] === null) {
             $invalidProperties[] = "'time_slot_id' can't be null";
         }
@@ -512,6 +515,30 @@ self::STATE_2,        ];
             );
         }
         $this->container['booking_item_status'] = $booking_item_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets additional_properties
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     */
+    public function getAdditionalProperties()
+    {
+        return $this->container['additional_properties'];
+    }
+
+    /**
+     * Sets additional_properties
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $additional_properties List of additional property records
+     *
+     * @return $this
+     */
+    public function setAdditionalProperties($additional_properties)
+    {
+        $this->container['additional_properties'] = $additional_properties;
 
         return $this;
     }

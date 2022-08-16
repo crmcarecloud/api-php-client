@@ -105,7 +105,7 @@ $sort_direction = "sort_direction_example"; // string | Direction of sorting the
 $customer_id = "customer_id_example"; // string | The unique id of the customer
 $card_number = "card_number_example"; // string | Number of the customer card
 $card_type_id = "card_type_id_example"; // string | The unique id of the card type
-$state = 56; // int | State of the card *Possible values are: 0 - blocked / 1 - active*
+$state = 56; // int | State of the customer *Possible values are: 0 - deleted / 1 - active / 2 - non active*
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 
 try {
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
  **customer_id** | **string**| The unique id of the customer | [optional]
  **card_number** | **string**| Number of the customer card | [optional]
  **card_type_id** | **string**| The unique id of the card type | [optional]
- **state** | **int**| State of the card *Possible values are: 0 - blocked / 1 - active* | [optional]
+ **state** | **int**| State of the customer *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
 
 ### Return type

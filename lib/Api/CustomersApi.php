@@ -4842,7 +4842,7 @@ class CustomersApi
             );
         }
 
-        $resourcePath = '/customers/{customer_id}/related_customers';
+        $resourcePath = '/customers/{customer_id}/related-customers';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4978,7 +4978,7 @@ class CustomersApi
      * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
      * @param  string $code Code of the reward (optional)
      * @param  bool $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
-     * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward* (optional)
+     * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag ids. Logic OR is used between values. (optional)
@@ -5011,7 +5011,7 @@ class CustomersApi
      * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
      * @param  string $code Code of the reward (optional)
      * @param  bool $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
-     * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward* (optional)
+     * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag ids. Logic OR is used between values. (optional)
@@ -5142,7 +5142,7 @@ class CustomersApi
      * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
      * @param  string $code Code of the reward (optional)
      * @param  bool $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
-     * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward* (optional)
+     * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag ids. Logic OR is used between values. (optional)
@@ -5178,7 +5178,7 @@ class CustomersApi
      * @param  string|null $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
      * @param  string|null $code Code of the reward (optional)
      * @param  bool|null $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
-     * @param  int|null $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward* (optional)
+     * @param  int|null $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values (optional)
      * @param  bool|null $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. (optional)
      * @param  string[]|null $tag_ids Parameter filters values by a list of tag ids. Logic OR is used between values. (optional)
@@ -5244,7 +5244,7 @@ class CustomersApi
      * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
      * @param  string $code Code of the reward (optional)
      * @param  bool $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
-     * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward* (optional)
+     * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag ids. Logic OR is used between values. (optional)

@@ -56,7 +56,7 @@ class BookingsBookingIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'booking' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Booking'    ];
+        'booking' => '\CrmCareCloud\Webservice\RestApi\Client\Model\BookingsbookingIdBooking'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class BookingsBookingIdBody implements ModelInterface, ArrayAccess
     /**
      * Gets booking
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Booking
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\BookingsbookingIdBooking
      */
     public function getBooking()
     {
@@ -212,7 +212,7 @@ class BookingsBookingIdBody implements ModelInterface, ArrayAccess
     /**
      * Sets booking
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Booking $booking booking
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\BookingsbookingIdBooking $booking booking
      *
      * @return $this
      */

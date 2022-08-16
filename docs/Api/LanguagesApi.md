@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getLanguages**](LanguagesApi.md#getlanguages) | **GET** /languages | Get all languages
 
 # **getLanguages**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060 getLanguages($accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060 getLanguages($accept_language, $language_list_type)
 
 Get all languages
 
@@ -33,9 +33,10 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\LanguagesApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$language_list_type = "carecloud-api"; // string | Type of language list. All lists can be managed from the CareCloud administration interface. *Possible values: customer-communication - list of languages used for communication with the customer (emails, notifications or text messages) / web-portal - list of languages for CareCloud web portal / carecloud-api - languages supported by CareCloud REST API (API communicates in these languages).*
 
 try {
-    $result = $apiInstance->getLanguages($accept_language);
+    $result = $apiInstance->getLanguages($accept_language, $language_list_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LanguagesApi->getLanguages: ', $e->getMessage(), PHP_EOL;
@@ -48,6 +49,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **language_list_type** | **string**| Type of language list. All lists can be managed from the CareCloud administration interface. *Possible values: customer-communication - list of languages used for communication with the customer (emails, notifications or text messages) / web-portal - list of languages for CareCloud web portal / carecloud-api - languages supported by CareCloud REST API (API communicates in these languages).* | [optional] [default to carecloud-api]
 
 ### Return type
 

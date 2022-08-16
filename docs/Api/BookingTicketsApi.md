@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBookingTickets**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004 getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004 getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id)
 
 Get all booking tickets
 
@@ -100,10 +100,9 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique id of the customer
-$state = 56; // int | State of the card *Possible values are: 0 - blocked / 1 - active*
 
 try {
-    $result = $apiInstance->getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state);
+    $result = $apiInstance->getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingTicketsApi->getBookingTickets: ', $e->getMessage(), PHP_EOL;
@@ -121,7 +120,6 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique id of the customer | [optional]
- **state** | **int**| State of the card *Possible values are: 0 - blocked / 1 - active* | [optional]
 
 ### Return type
 
@@ -139,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubBookingTicketsTimeSlots**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006 getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006 getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value)
 
 Get a collection time slots depends on booking ticket
 
@@ -170,7 +168,6 @@ $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_id = "customer_id_example"; // string | The unique id of the customer
 $free_only = true; // bool | Parameter defines what kind of time slots is going to be return depends on the capacity *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)*
 $time_from = "time_from_example"; // string | Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)*
 $time_to = "time_to_example"; // string | Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)*
@@ -178,7 +175,7 @@ $booking_ticket_property_id = "booking_ticket_property_id_example"; // string | 
 $booking_ticket_property_value = "booking_ticket_property_value_example"; // string | Booking ticket property record value from [booking-ticket-properties](#tag/Booking-ticket-properties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request.
 
 try {
-    $result = $apiInstance->getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
+    $result = $apiInstance->getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingTicketsApi->getSubBookingTicketsTimeSlots: ', $e->getMessage(), PHP_EOL;
@@ -196,7 +193,6 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_id** | **string**| The unique id of the customer | [optional]
  **free_only** | **bool**| Parameter defines what kind of time slots is going to be return depends on the capacity *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* | [optional]
  **time_from** | **string**| Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **time_to** | **string**| Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]

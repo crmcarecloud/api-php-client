@@ -63,7 +63,6 @@ class TimeSlot implements ModelInterface, ArrayAccess
 'valid_to' => 'string',
 'total_capacity' => 'int',
 'free_capacity' => 'int',
-'created_at' => 'string',
 'state' => 'int',
 'last_change' => 'string'    ];
 
@@ -79,7 +78,6 @@ class TimeSlot implements ModelInterface, ArrayAccess
 'valid_to' => null,
 'total_capacity' => null,
 'free_capacity' => null,
-'created_at' => null,
 'state' => null,
 'last_change' => null    ];
 
@@ -116,7 +114,6 @@ class TimeSlot implements ModelInterface, ArrayAccess
 'valid_to' => 'valid_to',
 'total_capacity' => 'total_capacity',
 'free_capacity' => 'free_capacity',
-'created_at' => 'created_at',
 'state' => 'state',
 'last_change' => 'last_change'    ];
 
@@ -132,7 +129,6 @@ class TimeSlot implements ModelInterface, ArrayAccess
 'valid_to' => 'setValidTo',
 'total_capacity' => 'setTotalCapacity',
 'free_capacity' => 'setFreeCapacity',
-'created_at' => 'setCreatedAt',
 'state' => 'setState',
 'last_change' => 'setLastChange'    ];
 
@@ -148,7 +144,6 @@ class TimeSlot implements ModelInterface, ArrayAccess
 'valid_to' => 'getValidTo',
 'total_capacity' => 'getTotalCapacity',
 'free_capacity' => 'getFreeCapacity',
-'created_at' => 'getCreatedAt',
 'state' => 'getState',
 'last_change' => 'getLastChange'    ];
 
@@ -229,7 +224,6 @@ self::STATE_1,        ];
         $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
         $this->container['total_capacity'] = isset($data['total_capacity']) ? $data['total_capacity'] : null;
         $this->container['free_capacity'] = isset($data['free_capacity']) ? $data['free_capacity'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
@@ -418,30 +412,6 @@ self::STATE_1,        ];
     public function setFreeCapacity($free_capacity)
     {
         $this->container['free_capacity'] = $free_capacity;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     *
-     * @return string
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     *
-     * @param string $created_at Date and time when ticket was created *(YYYY-MM-DD HH:MM:SS)*
-     *
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
 
         return $this;
     }

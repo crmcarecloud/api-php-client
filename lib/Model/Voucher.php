@@ -66,6 +66,7 @@ class Voucher implements ModelInterface, ArrayAccess
 'valid_from' => 'string',
 'valid_to' => 'string',
 'reward_group' => 'string',
+'note' => 'string',
 'reward' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Reward',
 'last_change' => 'string',
 'state' => 'int'    ];
@@ -85,6 +86,7 @@ class Voucher implements ModelInterface, ArrayAccess
 'valid_from' => null,
 'valid_to' => null,
 'reward_group' => null,
+'note' => null,
 'reward' => null,
 'last_change' => null,
 'state' => null    ];
@@ -125,6 +127,7 @@ class Voucher implements ModelInterface, ArrayAccess
 'valid_from' => 'valid_from',
 'valid_to' => 'valid_to',
 'reward_group' => 'reward_group',
+'note' => 'note',
 'reward' => 'reward',
 'last_change' => 'last_change',
 'state' => 'state'    ];
@@ -144,6 +147,7 @@ class Voucher implements ModelInterface, ArrayAccess
 'valid_from' => 'setValidFrom',
 'valid_to' => 'setValidTo',
 'reward_group' => 'setRewardGroup',
+'note' => 'setNote',
 'reward' => 'setReward',
 'last_change' => 'setLastChange',
 'state' => 'setState'    ];
@@ -163,6 +167,7 @@ class Voucher implements ModelInterface, ArrayAccess
 'valid_from' => 'getValidFrom',
 'valid_to' => 'getValidTo',
 'reward_group' => 'getRewardGroup',
+'note' => 'getNote',
 'reward' => 'getReward',
 'last_change' => 'getLastChange',
 'state' => 'getState'    ];
@@ -249,6 +254,7 @@ self::STATE_2,        ];
         $this->container['valid_from'] = isset($data['valid_from']) ? $data['valid_from'] : null;
         $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
         $this->container['reward_group'] = isset($data['reward_group']) ? $data['reward_group'] : null;
+        $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['reward'] = isset($data['reward']) ? $data['reward'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
@@ -522,6 +528,30 @@ self::STATE_2,        ];
     public function setRewardGroup($reward_group)
     {
         $this->container['reward_group'] = $reward_group;
+
+        return $this;
+    }
+
+    /**
+     * Gets note
+     *
+     * @return string
+     */
+    public function getNote()
+    {
+        return $this->container['note'];
+    }
+
+    /**
+     * Sets note
+     *
+     * @param string $note Voucher's note
+     *
+     * @return $this
+     */
+    public function setNote($note)
+    {
+        $this->container['note'] = $note;
 
         return $this;
     }

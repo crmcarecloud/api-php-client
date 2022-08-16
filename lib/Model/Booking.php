@@ -248,9 +248,6 @@ self::STATE_2,        ];
     {
         $invalidProperties = [];
 
-        if ($this->container['customer_id'] === null) {
-            $invalidProperties[] = "'customer_id' can't be null";
-        }
         if ($this->container['booking_items'] === null) {
             $invalidProperties[] = "'booking_items' can't be null";
         }
