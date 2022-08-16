@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vouchers** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]**](Voucher.md) | List of all recent vouchers | [optional] 
-**total_items** | **int** | Count of all recent vouchers | [optional] 
+**purchases** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[]**](Purchase.md) | List of purchases | [optional] 
+**total_items** | **int** | Count of all found purchases | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

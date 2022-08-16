@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postEvent**](EventsApi.md#postevent) | **POST** /events | Create a new event
 
 # **getEvent**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050 getEvent($event_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052 getEvent($event_id, $accept_language)
 
 Get an event
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEvents**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037 getEvents($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getEvents($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id)
 
 Get information about all events
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubEventProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051 getSubEventProperties($event_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053 getSubEventProperties($event_id, $accept_language)
 
 Get a collection of event properties records
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
 
 ### Authorization
 

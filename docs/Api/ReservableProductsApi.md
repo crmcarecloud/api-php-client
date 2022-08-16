@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postReservableProductsSearch**](ReservableProductsApi.md#postreservableproductssearch) | **POST** /reservable-products/actions/search-reservable-products | Search reservable products
 
 # **getReservableProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079 getReservableProduct($reservable_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081 getReservableProduct($reservable_product_id, $accept_language)
 
 Get a reservable product
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079**](../Model/InlineResponse20079.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getReservableProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089 getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091 getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code)
 
 Get all reservable products
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091**](../Model/InlineResponse20091.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postReservableProductsSearch**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090 postReservableProductsSearch($body, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092 postReservableProductsSearch($body, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Search reservable products
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090**](../Model/InlineResponse20090.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092**](../Model/InlineResponse20092.md)
 
 ### Authorization
 

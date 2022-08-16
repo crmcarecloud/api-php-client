@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**putCardType**](CardTypesApi.md#putcardtype) | **PUT** /card-types/{card_type_id} | Update a card type
 
 # **getCardType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018 getCardType($card_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020 getCardType($card_type_id, $accept_language)
 
 Get a card type
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCardTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017 getCardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019 getCardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get information about all card types
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCardTypeCards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019 getSubCardTypeCards($card_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $is_valid)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021 getSubCardTypeCards($card_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $is_valid)
 
 Get a collection of cards
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**getWalletSalesTurnover**](WalletApi.md#getwalletsalesturnover) | **GET** /wallet/actions/sales-turnover | Get sales turnover
 
 # **getWalletCredits**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151 getWalletCredits($customer_id, $accept_language, $date_from, $date_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153 getWalletCredits($customer_id, $accept_language, $date_from, $date_to)
 
 Get credits overview
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151**](../Model/InlineResponse200151.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153**](../Model/InlineResponse200153.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletCreditsExpiration**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152 getWalletCreditsExpiration($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200154 getWalletCreditsExpiration($customer_id, $accept_language)
 
 Get credits expiration overview
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152**](../Model/InlineResponse200152.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200154**](../Model/InlineResponse200154.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletPoints**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150 getWalletPoints($customer_id, $accept_language, $date_from, $date_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152 getWalletPoints($customer_id, $accept_language, $date_from, $date_to)
 
 Get points overview
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150**](../Model/InlineResponse200150.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152**](../Model/InlineResponse200152.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletPointsExpiration**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152 getWalletPointsExpiration($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200154 getWalletPointsExpiration($customer_id, $accept_language)
 
 Get points expiration overview
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152**](../Model/InlineResponse200152.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200154**](../Model/InlineResponse200154.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletSalesTurnover**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149 getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151 getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to)
 
 Get sales turnover
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149**](../Model/InlineResponse200149.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151**](../Model/InlineResponse200151.md)
 
 ### Authorization
 

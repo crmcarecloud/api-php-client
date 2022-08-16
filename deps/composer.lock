@@ -12,17 +12,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/crmcarecloud/api-spec.git",
-                "reference": "e095fdc77221763e606c4424859caf467a28cfdc"
+                "reference": "0e144fe1d4fb460d696f6ed5dbf0fdd104cc70ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/crmcarecloud/api-spec/zipball/e095fdc77221763e606c4424859caf467a28cfdc",
-                "reference": "e095fdc77221763e606c4424859caf467a28cfdc",
+                "url": "https://api.github.com/repos/crmcarecloud/api-spec/zipball/0e144fe1d4fb460d696f6ed5dbf0fdd104cc70ee",
+                "reference": "0e144fe1d4fb460d696f6ed5dbf0fdd104cc70ee",
                 "shasum": ""
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2022-08-10T10:21:23+00:00"
+            "time": "2022-08-16T12:59:18+00:00"
         }
     ],
     "packages-dev": [],

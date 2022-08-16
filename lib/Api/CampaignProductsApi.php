@@ -96,7 +96,7 @@ class CampaignProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014
      */
     public function getCampaignProduct($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class CampaignProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCampaignProductWithHttpInfo($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014';
         $request = $this->getCampaignProductRequest($campaign_product_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CampaignProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class CampaignProductsApi
      */
     public function getCampaignProductAsyncWithHttpInfo($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014';
         $request = $this->getCampaignProductRequest($campaign_product_id, $accept_language);
 
         return $this->client
@@ -420,7 +420,7 @@ class CampaignProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015
      */
     public function getCampaignProductStoreRecords($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -442,11 +442,11 @@ class CampaignProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCampaignProductStoreRecordsWithHttpInfo($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015';
         $request = $this->getCampaignProductStoreRecordsRequest($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -498,7 +498,7 @@ class CampaignProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -590,7 +590,7 @@ class CampaignProductsApi
      */
     public function getCampaignProductStoreRecordsAsyncWithHttpInfo($campaign_product_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015';
         $request = $this->getCampaignProductStoreRecordsRequest($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -779,12 +779,12 @@ class CampaignProductsApi
      * @param  string $store_id Parameter filters all campaig products from [store](#tag/Stores) by store id (optional)
      * @param  int $value_type_id Type of value (1 - percentage discount value, 2 - final price) (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date and time from where is valid already. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to where is valid still. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013
      */
     public function getCampaignProducts($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $display_in = null, $type_id = null, $store_id = null, $value_type_id = null, $is_valid = null, $valid_from = null, $valid_to = null)
     {
@@ -809,16 +809,16 @@ class CampaignProductsApi
      * @param  string $store_id Parameter filters all campaig products from [store](#tag/Stores) by store id (optional)
      * @param  int $value_type_id Type of value (1 - percentage discount value, 2 - final price) (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date and time from where is valid already. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to where is valid still. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCampaignProductsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $display_in = null, $type_id = null, $store_id = null, $value_type_id = null, $is_valid = null, $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013';
         $request = $this->getCampaignProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to);
 
         try {
@@ -870,7 +870,7 @@ class CampaignProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -937,8 +937,8 @@ class CampaignProductsApi
      * @param  string $store_id Parameter filters all campaig products from [store](#tag/Stores) by store id (optional)
      * @param  int $value_type_id Type of value (1 - percentage discount value, 2 - final price) (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date and time from where is valid already. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to where is valid still. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -970,15 +970,15 @@ class CampaignProductsApi
      * @param  string|null $store_id Parameter filters all campaig products from [store](#tag/Stores) by store id (optional)
      * @param  int|null $value_type_id Type of value (1 - percentage discount value, 2 - final price) (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string|null $valid_from Date and time from where is valid already. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $valid_to Date and time to where is valid still. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function getCampaignProductsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $display_in = null, $type_id = null, $store_id = null, $value_type_id = null, $is_valid = null, $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013';
         $request = $this->getCampaignProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to);
 
         return $this->client
@@ -1033,8 +1033,8 @@ class CampaignProductsApi
      * @param  string $store_id Parameter filters all campaig products from [store](#tag/Stores) by store id (optional)
      * @param  int $value_type_id Type of value (1 - percentage discount value, 2 - final price) (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date and time from where is valid already. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to where is valid still. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

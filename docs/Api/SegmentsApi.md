@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**postSegmentRemoveCustomer**](SegmentsApi.md#postsegmentremovecustomer) | **POST** /segments/{segment_id}/actions/remove-customer | Remove customer from a segment
 
 # **getSegment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112 getSegment($segment_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114 getSegment($segment_id, $accept_language)
 
 Get a segment
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112**](../Model/InlineResponse200112.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114**](../Model/InlineResponse200114.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all segments
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111**](../Model/InlineResponse200111.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113**](../Model/InlineResponse200113.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubSegmentRecords**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029 getSubSegmentRecords($segment_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031 getSubSegmentRecords($segment_id, $accept_language)
 
 Get a collection of segment records
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
 
 ### Authorization
 

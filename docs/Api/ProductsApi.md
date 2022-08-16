@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postBulkProducts**](ProductsApi.md#postbulkproducts) | **POST** /products/batch | Create a batch of products
 
 # **getProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079 getProduct($product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081 getProduct($product_id, $accept_language)
 
 Detail of a product
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079**](../Model/InlineResponse20079.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078 getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20080 getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code)
 
 Collection of available products
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078**](../Model/InlineResponse20078.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20080**](../Model/InlineResponse20080.md)
 
 ### Authorization
 

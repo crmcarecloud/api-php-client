@@ -60,7 +60,7 @@ class Booking implements ModelInterface, ArrayAccess
         'booking_id' => 'string',
 'customer_id' => 'string',
 'booking_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\BookingItem[]',
-'booking_status' => 'int',
+'booking_status' => 'string',
 'created_at' => 'string',
 'last_change' => 'string',
 'state' => 'int'    ];
@@ -183,25 +183,10 @@ class Booking implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const BOOKING_STATUS_0 = 0;
-const BOOKING_STATUS_1 = 1;
-const BOOKING_STATUS_2 = 2;
-const STATE_0 = 0;
+    const STATE_0 = 0;
 const STATE_1 = 1;
 const STATE_2 = 2;
 
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return array<int,int|string>
-     */
-    public function getBookingStatusAllowableValues()
-    {
-        return [
-            self::BOOKING_STATUS_0,
-self::BOOKING_STATUS_1,
-self::BOOKING_STATUS_2,        ];
-    }
     /**
      * Gets allowable values of the enum
      *
@@ -251,17 +236,6 @@ self::STATE_2,        ];
         if ($this->container['booking_items'] === null) {
             $invalidProperties[] = "'booking_items' can't be null";
         }
-        if ($this->container['booking_status'] === null) {
-            $invalidProperties[] = "'booking_status' can't be null";
-        }
-        $allowedValues = $this->getBookingStatusAllowableValues();
-        if (!is_null($this->container['booking_status']) && !in_array($this->container['booking_status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'booking_status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
         if ($this->container['created_at'] === null) {
             $invalidProperties[] = "'created_at' can't be null";
         }
@@ -363,7 +337,7 @@ self::STATE_2,        ];
     /**
      * Gets booking_status
      *
-     * @return int
+     * @return string
      */
     public function getBookingStatus()
     {
@@ -373,21 +347,12 @@ self::STATE_2,        ];
     /**
      * Sets booking_status
      *
-     * @param int $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled*
+     * @param string $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses). If not set, CareCloud uses default booking status.
      *
      * @return $this
      */
     public function setBookingStatus($booking_status)
     {
-        $allowedValues = $this->getBookingStatusAllowableValues();
-        if (!in_array($booking_status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'booking_status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['booking_status'] = $booking_status;
 
         return $this;

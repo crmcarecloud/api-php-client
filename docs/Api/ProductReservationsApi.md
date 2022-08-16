@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postProductReservationCancel**](ProductReservationsApi.md#postproductreservationcancel) | **POST** /product-reservations/{product_reservation_id}/actions/cancel-reservation | Cancel reservation
 
 # **getProductReservation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086 getProductReservation($product_reservation_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088 getProductReservation($product_reservation_id, $accept_language)
 
 Get a product-reservation
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088**](../Model/InlineResponse20088.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservations**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state)
 
 Get all product reservations
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087**](../Model/InlineResponse20087.md)
 
 ### Authorization
 

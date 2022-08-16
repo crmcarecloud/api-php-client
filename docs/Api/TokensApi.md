@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**putToken**](TokensApi.md#puttoken) | **PUT** /tokens/{token_id} | Edit a push token
 
 # **getTokenAuthentication**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
 
 Get authentication token
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138**](../Model/InlineResponse200138.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140**](../Model/InlineResponse200140.md)
 
 ### Authorization
 

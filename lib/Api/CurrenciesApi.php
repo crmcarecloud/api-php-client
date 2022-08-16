@@ -95,7 +95,7 @@ class CurrenciesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023
      */
     public function getCurrencies($accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,11 +112,11 @@ class CurrenciesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCurrenciesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023';
         $request = $this->getCurrenciesRequest($accept_language);
 
         try {
@@ -168,7 +168,7 @@ class CurrenciesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -250,7 +250,7 @@ class CurrenciesApi
      */
     public function getCurrenciesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023';
         $request = $this->getCurrenciesRequest($accept_language);
 
         return $this->client
@@ -397,7 +397,7 @@ class CurrenciesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024
      */
     public function getCurrency($currency_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -415,11 +415,11 @@ class CurrenciesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCurrencyWithHttpInfo($currency_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024';
         $request = $this->getCurrencyRequest($currency_id, $accept_language);
 
         try {
@@ -471,7 +471,7 @@ class CurrenciesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -555,7 +555,7 @@ class CurrenciesApi
      */
     public function getCurrencyAsyncWithHttpInfo($currency_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024';
         $request = $this->getCurrencyRequest($currency_id, $accept_language);
 
         return $this->client

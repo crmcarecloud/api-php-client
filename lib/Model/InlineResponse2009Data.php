@@ -56,7 +56,7 @@ class InlineResponse2009Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'campaigns' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[]',
+        'booking_statuses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\BookingStatus[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse2009Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'campaigns' => null,
+        'booking_statuses' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse2009Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'campaigns' => 'campaigns',
+        'booking_statuses' => 'booking_statuses',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse2009Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'campaigns' => 'setCampaigns',
+        'booking_statuses' => 'setBookingStatuses',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse2009Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'campaigns' => 'getCampaigns',
+        'booking_statuses' => 'getBookingStatuses',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse2009Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['campaigns'] = isset($data['campaigns']) ? $data['campaigns'] : null;
+        $this->container['booking_statuses'] = isset($data['booking_statuses']) ? $data['booking_statuses'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse2009Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets campaigns
+     * Gets booking_statuses
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\BookingStatus[]
      */
-    public function getCampaigns()
+    public function getBookingStatuses()
     {
-        return $this->container['campaigns'];
+        return $this->container['booking_statuses'];
     }
 
     /**
-     * Sets campaigns
+     * Sets booking_statuses
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[] $campaigns List of the campaigns
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\BookingStatus[] $booking_statuses Collection of booking statuses
      *
      * @return $this
      */
-    public function setCampaigns($campaigns)
+    public function setBookingStatuses($booking_statuses)
     {
-        $this->container['campaigns'] = $campaigns;
+        $this->container['booking_statuses'] = $booking_statuses;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse2009Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found campaigns
+     * @param int $total_items Count of all found booking statuses
      *
      * @return $this
      */

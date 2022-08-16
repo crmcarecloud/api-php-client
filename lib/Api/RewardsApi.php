@@ -96,7 +96,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105
      */
     public function getReward($reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRewardWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
         $request = $this->getRewardRequest($reward_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class RewardsApi
      */
     public function getRewardAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
         $request = $this->getRewardRequest($reward_id, $accept_language);
 
         return $this->client
@@ -419,8 +419,8 @@ class RewardsApi
      * @param  string $name Search record by name or a part of the name (optional)
      * @param  string $store_id The unique id of the store where customer can apply the reward (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string $code Code of the reward (optional)
      * @param  bool $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
@@ -430,7 +430,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104
      */
     public function getRewards($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null)
     {
@@ -451,8 +451,8 @@ class RewardsApi
      * @param  string $name Search record by name or a part of the name (optional)
      * @param  string $store_id The unique id of the store where customer can apply the reward (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string $code Code of the reward (optional)
      * @param  bool $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
@@ -462,11 +462,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRewardsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
         $request = $this->getRewardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids);
 
         try {
@@ -518,7 +518,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -581,8 +581,8 @@ class RewardsApi
      * @param  string $name Search record by name or a part of the name (optional)
      * @param  string $store_id The unique id of the store where customer can apply the reward (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string $code Code of the reward (optional)
      * @param  bool $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
@@ -616,8 +616,8 @@ class RewardsApi
      * @param  string|null $name Search record by name or a part of the name (optional)
      * @param  string|null $store_id The unique id of the store where customer can apply the reward (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string|null $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string|null $code Code of the reward (optional)
      * @param  bool|null $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int|null $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
@@ -630,7 +630,7 @@ class RewardsApi
      */
     public function getRewardsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
         $request = $this->getRewardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids);
 
         return $this->client
@@ -681,8 +681,8 @@ class RewardsApi
      * @param  string $name Search record by name or a part of the name (optional)
      * @param  string $store_id The unique id of the store where customer can apply the reward (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string $code Code of the reward (optional)
      * @param  bool $is_automated Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
@@ -862,7 +862,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109
      */
     public function getSubRewardProductBrands($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -884,11 +884,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardProductBrandsWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109';
         $request = $this->getSubRewardProductBrandsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -940,7 +940,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1032,7 +1032,7 @@ class RewardsApi
      */
     public function getSubRewardProductBrandsAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109';
         $request = $this->getSubRewardProductBrandsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1218,7 +1218,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108
      */
     public function getSubRewardProductGroups($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -1240,11 +1240,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardProductGroupsWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108';
         $request = $this->getSubRewardProductGroupsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -1296,7 +1296,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1388,7 +1388,7 @@ class RewardsApi
      */
     public function getSubRewardProductGroupsAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108';
         $request = $this->getSubRewardProductGroupsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1574,7 +1574,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107
      */
     public function getSubRewardProducts($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -1596,11 +1596,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardProductsWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
         $request = $this->getSubRewardProductsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -1652,7 +1652,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1744,7 +1744,7 @@ class RewardsApi
      */
     public function getSubRewardProductsAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
         $request = $this->getSubRewardProductsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1931,7 +1931,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110
      */
     public function getSubRewardStores($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null)
     {
@@ -1954,11 +1954,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardStoresWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110';
         $request = $this->getSubRewardStoresRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer);
 
         try {
@@ -2010,7 +2010,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2104,7 +2104,7 @@ class RewardsApi
      */
     public function getSubRewardStoresAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110';
         $request = $this->getSubRewardStoresRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer);
 
         return $this->client
@@ -2296,7 +2296,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111
      */
     public function getSubRewardTags($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
     {
@@ -2319,11 +2319,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardTagsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111';
         $request = $this->getSubRewardTagsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
 
         try {
@@ -2375,7 +2375,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2469,7 +2469,7 @@ class RewardsApi
      */
     public function getSubRewardTagsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111';
         $request = $this->getSubRewardTagsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
 
         return $this->client
@@ -2652,7 +2652,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106
      */
     public function getSubRewardVouchers($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null)
     {
@@ -2676,11 +2676,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardVouchersWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
         $request = $this->getSubRewardVouchersRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id);
 
         try {
@@ -2732,7 +2732,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2828,7 +2828,7 @@ class RewardsApi
      */
     public function getSubRewardVouchersAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
         $request = $this->getSubRewardVouchersRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id);
 
         return $this->client

@@ -96,7 +96,7 @@ class PartnersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073
      */
     public function getPartner($partner_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class PartnersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPartnerWithHttpInfo($partner_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073';
         $request = $this->getPartnerRequest($partner_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class PartnersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class PartnersApi
      */
     public function getPartnerAsyncWithHttpInfo($partner_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073';
         $request = $this->getPartnerRequest($partner_id, $accept_language);
 
         return $this->client
@@ -419,7 +419,7 @@ class PartnersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072
      */
     public function getPartners($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -440,11 +440,11 @@ class PartnersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPartnersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072';
         $request = $this->getPartnersRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -496,7 +496,7 @@ class PartnersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class PartnersApi
      */
     public function getPartnersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072';
         $request = $this->getPartnersRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

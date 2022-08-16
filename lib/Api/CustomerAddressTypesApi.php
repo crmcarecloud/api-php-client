@@ -96,7 +96,7 @@ class CustomerAddressTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043
      */
     public function getCustomerAddressType($customer_address_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class CustomerAddressTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerAddressTypeWithHttpInfo($customer_address_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043';
         $request = $this->getCustomerAddressTypeRequest($customer_address_type_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CustomerAddressTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class CustomerAddressTypesApi
      */
     public function getCustomerAddressTypeAsyncWithHttpInfo($customer_address_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043';
         $request = $this->getCustomerAddressTypeRequest($customer_address_type_id, $accept_language);
 
         return $this->client
@@ -419,7 +419,7 @@ class CustomerAddressTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042
      */
     public function getCustomerAddressTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -440,11 +440,11 @@ class CustomerAddressTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerAddressTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042';
         $request = $this->getCustomerAddressTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -496,7 +496,7 @@ class CustomerAddressTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class CustomerAddressTypesApi
      */
     public function getCustomerAddressTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042';
         $request = $this->getCustomerAddressTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

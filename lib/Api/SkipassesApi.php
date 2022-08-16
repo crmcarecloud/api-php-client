@@ -96,7 +96,7 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116
      */
     public function getSkipass($skipass_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSkipassWithHttpInfo($skipass_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116';
         $request = $this->getSkipassRequest($skipass_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class SkipassesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class SkipassesApi
      */
     public function getSkipassAsyncWithHttpInfo($skipass_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116';
         $request = $this->getSkipassRequest($skipass_id, $accept_language);
 
         return $this->client
@@ -431,7 +431,7 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115
      */
     public function getSkipasses($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $skipass_type_id = null, $state = null, $external_skipass_id = null, $is_valid = null, $is_cancelled = null)
     {
@@ -464,11 +464,11 @@ class SkipassesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSkipassesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $skipass_type_id = null, $state = null, $external_skipass_id = null, $is_valid = null, $is_cancelled = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115';
         $request = $this->getSkipassesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled);
 
         try {
@@ -520,7 +520,7 @@ class SkipassesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -634,7 +634,7 @@ class SkipassesApi
      */
     public function getSkipassesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $skipass_type_id = null, $state = null, $external_skipass_id = null, $is_valid = null, $is_cancelled = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115';
         $request = $this->getSkipassesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled);
 
         return $this->client
@@ -857,12 +857,12 @@ class SkipassesApi
      * Get skipasses overview
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117
      */
     public function getSkipassesOverview($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null)
     {
@@ -876,16 +876,16 @@ class SkipassesApi
      * Get skipasses overview
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSkipassesOverviewWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117';
         $request = $this->getSkipassesOverviewRequest($accept_language, $valid_from, $valid_to);
 
         try {
@@ -937,7 +937,7 @@ class SkipassesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -993,8 +993,8 @@ class SkipassesApi
      * Get skipasses overview
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1015,15 +1015,15 @@ class SkipassesApi
      * Get skipasses overview
      *
      * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string|null $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function getSkipassesOverviewAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117';
         $request = $this->getSkipassesOverviewRequest($accept_language, $valid_from, $valid_to);
 
         return $this->client
@@ -1067,8 +1067,8 @@ class SkipassesApi
      * Create request for operation 'getSkipassesOverview'
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string $valid_from Date from where is valid already. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to where is valid still. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -60,6 +60,8 @@ class BookingTicket implements ModelInterface, ArrayAccess
         'ticket_id' => 'string',
 'name' => 'string',
 'created_at' => 'string',
+'valid_from' => 'string',
+'valid_to' => 'string',
 'state' => 'int',
 'last_change' => 'string'    ];
 
@@ -72,6 +74,8 @@ class BookingTicket implements ModelInterface, ArrayAccess
         'ticket_id' => null,
 'name' => null,
 'created_at' => null,
+'valid_from' => null,
+'valid_to' => null,
 'state' => null,
 'last_change' => null    ];
 
@@ -105,6 +109,8 @@ class BookingTicket implements ModelInterface, ArrayAccess
         'ticket_id' => 'ticket_id',
 'name' => 'name',
 'created_at' => 'created_at',
+'valid_from' => 'valid_from',
+'valid_to' => 'valid_to',
 'state' => 'state',
 'last_change' => 'last_change'    ];
 
@@ -117,6 +123,8 @@ class BookingTicket implements ModelInterface, ArrayAccess
         'ticket_id' => 'setTicketId',
 'name' => 'setName',
 'created_at' => 'setCreatedAt',
+'valid_from' => 'setValidFrom',
+'valid_to' => 'setValidTo',
 'state' => 'setState',
 'last_change' => 'setLastChange'    ];
 
@@ -129,6 +137,8 @@ class BookingTicket implements ModelInterface, ArrayAccess
         'ticket_id' => 'getTicketId',
 'name' => 'getName',
 'created_at' => 'getCreatedAt',
+'valid_from' => 'getValidFrom',
+'valid_to' => 'getValidTo',
 'state' => 'getState',
 'last_change' => 'getLastChange'    ];
 
@@ -206,6 +216,8 @@ self::STATE_1,        ];
         $this->container['ticket_id'] = isset($data['ticket_id']) ? $data['ticket_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['valid_from'] = isset($data['valid_from']) ? $data['valid_from'] : null;
+        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
@@ -313,6 +325,54 @@ self::STATE_1,        ];
     public function setCreatedAt($created_at)
     {
         $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets valid_from
+     *
+     * @return string
+     */
+    public function getValidFrom()
+    {
+        return $this->container['valid_from'];
+    }
+
+    /**
+     * Sets valid_from
+     *
+     * @param string $valid_from Date and time from when is ticket valid already. *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setValidFrom($valid_from)
+    {
+        $this->container['valid_from'] = $valid_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets valid_to
+     *
+     * @return string
+     */
+    public function getValidTo()
+    {
+        return $this->container['valid_to'];
+    }
+
+    /**
+     * Sets valid_to
+     *
+     * @param string $valid_to Date and time to when is ticket still valid. *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setValidTo($valid_to)
+    {
+        $this->container['valid_to'] = $valid_to;
 
         return $this;
     }

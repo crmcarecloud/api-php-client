@@ -96,7 +96,7 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074
      */
     public function getPoint($point_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPointWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
         $request = $this->getPointRequest($point_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class PointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class PointsApi
      */
     public function getPointAsyncWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
         $request = $this->getPointRequest($point_id, $accept_language);
 
         return $this->client
@@ -423,7 +423,7 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028
      */
     public function getPoints($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $point_type_id = null, $create_point_time_from = null, $create_point_time_to = null)
     {
@@ -448,11 +448,11 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPointsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $point_type_id = null, $create_point_time_from = null, $create_point_time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
         $request = $this->getPointsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $point_type_id, $create_point_time_from, $create_point_time_to);
 
         try {
@@ -504,7 +504,7 @@ class PointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -602,7 +602,7 @@ class PointsApi
      */
     public function getPointsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $point_type_id = null, $create_point_time_from = null, $create_point_time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
         $request = $this->getPointsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $point_type_id, $create_point_time_from, $create_point_time_to);
 
         return $this->client
@@ -799,7 +799,7 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027
      */
     public function getSubPointPurchases($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
     {
@@ -827,11 +827,11 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubPointPurchasesWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027';
         $request = $this->getSubPointPurchasesRequest($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension);
 
         try {
@@ -883,7 +883,7 @@ class PointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -987,7 +987,7 @@ class PointsApi
      */
     public function getSubPointPurchasesAsyncWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027';
         $request = $this->getSubPointPurchasesRequest($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension);
 
         return $this->client

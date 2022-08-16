@@ -56,7 +56,8 @@ class InlineResponse20016Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'file_url' => 'string'    ];
+        'cards' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Card[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class InlineResponse20016Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'file_url' => null    ];
+        'cards' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class InlineResponse20016Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'file_url' => 'file_url'    ];
+        'cards' => 'cards',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class InlineResponse20016Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'file_url' => 'setFileUrl'    ];
+        'cards' => 'setCards',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class InlineResponse20016Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'file_url' => 'getFileUrl'    ];
+        'cards' => 'getCards',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +174,8 @@ class InlineResponse20016Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['file_url'] = isset($data['file_url']) ? $data['file_url'] : null;
+        $this->container['cards'] = isset($data['cards']) ? $data['cards'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -197,25 +203,49 @@ class InlineResponse20016Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets file_url
+     * Gets cards
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Card[]
      */
-    public function getFileUrl()
+    public function getCards()
     {
-        return $this->container['file_url'];
+        return $this->container['cards'];
     }
 
     /**
-     * Sets file_url
+     * Sets cards
      *
-     * @param string $file_url Url address of the final file with digital card
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Card[] $cards Collection of customer cards
      *
      * @return $this
      */
-    public function setFileUrl($file_url)
+    public function setCards($cards)
     {
-        $this->container['file_url'] = $file_url;
+        $this->container['cards'] = $cards;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items Count of all found customer cards
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

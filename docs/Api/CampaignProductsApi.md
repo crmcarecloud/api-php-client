@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**postCampaignProductStoreRecord**](CampaignProductsApi.md#postcampaignproductstorerecord) | **POST** /campaign-products/{campaign_product_id}/campaign-product-store-records | Add a store to the campaign product
 
 # **getCampaignProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012 getCampaignProduct($campaign_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014 getCampaignProduct($campaign_product_id, $accept_language)
 
 Detail of a specific campaign product
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaignProductStoreRecords**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013 getCampaignProductStoreRecords($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015 getCampaignProductStoreRecords($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get a campaign product store records
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaignProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011 getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013 getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to)
 
 Collection of campaign products
 
@@ -176,8 +176,8 @@ $type_id = array("type_id_example"); // string[] | Type of the customer for a ca
 $store_id = "store_id_example"; // string | Parameter filters all campaig products from [store](#tag/Stores) by store id
 $value_type_id = 56; // int | Type of value (1 - percentage discount value, 2 - final price)
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
-$valid_from = "valid_from_example"; // string | Date and time from where is valid already. *(YYYY-MM-DD HH:MM:SS)*
-$valid_to = "valid_to_example"; // string | Date and time to where is valid still. *(YYYY-MM-DD HH:MM:SS)*
+$valid_from = "valid_from_example"; // string | Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)*
+$valid_to = "valid_to_example"; // string | Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)*
 
 try {
     $result = $apiInstance->getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to);
@@ -204,12 +204,12 @@ Name | Type | Description  | Notes
  **store_id** | **string**| Parameter filters all campaig products from [store](#tag/Stores) by store id | [optional]
  **value_type_id** | **int**| Type of value (1 - percentage discount value, 2 - final price) | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
- **valid_from** | **string**| Date and time from where is valid already. *(YYYY-MM-DD HH:MM:SS)* | [optional]
- **valid_to** | **string**| Date and time to where is valid still. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **valid_from** | **string**| Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **valid_to** | **string**| Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 

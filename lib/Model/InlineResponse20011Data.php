@@ -56,7 +56,7 @@ class InlineResponse20011Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'campaign_products' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProduct[]',
+        'campaigns' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20011Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'campaign_products' => null,
+        'campaigns' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20011Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'campaign_products' => 'campaign_products',
+        'campaigns' => 'campaigns',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20011Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'campaign_products' => 'setCampaignProducts',
+        'campaigns' => 'setCampaigns',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20011Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'campaign_products' => 'getCampaignProducts',
+        'campaigns' => 'getCampaigns',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20011Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['campaign_products'] = isset($data['campaign_products']) ? $data['campaign_products'] : null;
+        $this->container['campaigns'] = isset($data['campaigns']) ? $data['campaigns'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20011Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets campaign_products
+     * Gets campaigns
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProduct[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[]
      */
-    public function getCampaignProducts()
+    public function getCampaigns()
     {
-        return $this->container['campaign_products'];
+        return $this->container['campaigns'];
     }
 
     /**
-     * Sets campaign_products
+     * Sets campaigns
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProduct[] $campaign_products List of the campaign products
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Campaign[] $campaigns List of the campaigns
      *
      * @return $this
      */
-    public function setCampaignProducts($campaign_products)
+    public function setCampaigns($campaigns)
     {
-        $this->container['campaign_products'] = $campaign_products;
+        $this->container['campaigns'] = $campaigns;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20011Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found campaign products
+     * @param int $total_items Count of all found campaigns
      *
      * @return $this
      */

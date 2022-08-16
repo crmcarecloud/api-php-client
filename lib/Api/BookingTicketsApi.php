@@ -417,14 +417,17 @@ class BookingTicketsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
+     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  bool $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004
      */
-    public function getBookingTickets($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
+    public function getBookingTickets($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $valid_from = null, $valid_to = null, $valid_only = null)
     {
-        list($response) = $this->getBookingTicketsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id);
+        list($response) = $this->getBookingTicketsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only);
         return $response;
     }
 
@@ -439,15 +442,18 @@ class BookingTicketsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
+     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  bool $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBookingTicketsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
+    public function getBookingTicketsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $valid_from = null, $valid_to = null, $valid_only = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004';
-        $request = $this->getBookingTicketsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id);
+        $request = $this->getBookingTicketsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only);
 
         try {
             $options = $this->createHttpClientOption();
@@ -559,13 +565,16 @@ class BookingTicketsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
+     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  bool $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBookingTicketsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
+    public function getBookingTicketsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $valid_from = null, $valid_to = null, $valid_only = null)
     {
-        return $this->getBookingTicketsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id)
+        return $this->getBookingTicketsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -584,14 +593,17 @@ class BookingTicketsApi
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique id of the customer (optional)
+     * @param  string|null $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  bool|null $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBookingTicketsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
+    public function getBookingTicketsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $valid_from = null, $valid_to = null, $valid_only = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004';
-        $request = $this->getBookingTicketsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id);
+        $request = $this->getBookingTicketsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -639,11 +651,14 @@ class BookingTicketsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
+     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  bool $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getBookingTicketsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null)
+    protected function getBookingTicketsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $valid_from = null, $valid_to = null, $valid_only = null)
     {
 
         $resourcePath = '/booking-tickets';
@@ -672,6 +687,18 @@ class BookingTicketsApi
         // query params
         if ($customer_id !== null) {
             $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
+        }
+        // query params
+        if ($valid_from !== null) {
+            $queryParams['valid_from'] = ObjectSerializer::toQueryValue($valid_from, null);
+        }
+        // query params
+        if ($valid_to !== null) {
+            $queryParams['valid_to'] = ObjectSerializer::toQueryValue($valid_to, null);
+        }
+        // query params
+        if ($valid_only !== null) {
+            $queryParams['valid_only'] = ObjectSerializer::toQueryValue($valid_only, null);
         }
         // header params
         if ($accept_language !== null) {

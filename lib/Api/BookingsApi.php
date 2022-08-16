@@ -700,7 +700,7 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses) (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -724,7 +724,7 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses) (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -846,7 +846,7 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses) (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
@@ -873,7 +873,7 @@ class BookingsApi
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique id of the customer (optional)
-     * @param  int|null $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string|null $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses) (optional)
      * @param  string|null $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
@@ -930,7 +930,7 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
-     * @param  int $booking_status Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* (optional)
+     * @param  string $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses) (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException

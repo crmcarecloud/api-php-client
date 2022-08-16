@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**putCard**](CardsApi.md#putcard) | **PUT** /cards/{card_id} | Update a card
 
 # **getCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015 getCard($card_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017 getCard($card_id, $accept_language)
 
 Get a card
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014 getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016 getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid)
 
 Get all cards
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postGenerateDigitalCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016 postGenerateDigitalCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018 postGenerateDigitalCard($body, $accept_language)
 
 Generate digital card file
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
 
 ### Authorization
 

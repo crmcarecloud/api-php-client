@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postMessageSend**](MessagesApi.md#postmessagesend) | **POST** /messages/actions/send-message | Send message
 
 # **getMessage**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062 getMessage($message_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064 getMessage($message_id, $accept_language)
 
 Get a message
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMessages**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061 getMessages($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 getMessages($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to)
 
 Get all messages
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubMessageDetail**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 getSubMessageDetail($message_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065 getSubMessageDetail($message_id, $accept_language)
 
 Get a message detail
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
 
 ### Authorization
 

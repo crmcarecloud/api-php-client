@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **valid_from** | **string** | Date and time when time slot starts *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **valid_to** | **string** | Date and time when time slot ends *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **capacity_taken** | **int** | How much capacity is taken by the booking item. If not set, value is 1 | [optional] [default to 1]
-**booking_item_status** | **int** | Current status of the booking item *Possible values: 0 - created and not used / 1 - used / 2 - canceled* | 
+**booking_item_status** | **string** | Current status of the booking item from resource [booking-statuses](#tag/Booking-statuses). If not set, CareCloud uses default booking status. | [optional] 
 **additional_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of additional property records | [optional] 
 **created_at** | **string** | Date and time of the boking item *(YYYY-MM-DD HH:MM:SS)* | 
 **state** | **int** | State of the booking item record *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 

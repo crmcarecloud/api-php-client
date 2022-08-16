@@ -56,8 +56,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'user_roles' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]',
-'total_items' => 'int'    ];
+        'bearer_token' => 'string',
+'valid_to' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +65,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'user_roles' => null,
-'total_items' => null    ];
+        'bearer_token' => null,
+'valid_to' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +95,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_roles' => 'user_roles',
-'total_items' => 'total_items'    ];
+        'bearer_token' => 'bearer_token',
+'valid_to' => 'valid_to'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +104,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user_roles' => 'setUserRoles',
-'total_items' => 'setTotalItems'    ];
+        'bearer_token' => 'setBearerToken',
+'valid_to' => 'setValidTo'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +113,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user_roles' => 'getUserRoles',
-'total_items' => 'getTotalItems'    ];
+        'bearer_token' => 'getBearerToken',
+'valid_to' => 'getValidTo'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +174,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user_roles'] = isset($data['user_roles']) ? $data['user_roles'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
+        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
     }
 
     /**
@@ -203,49 +203,49 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user_roles
+     * Gets bearer_token
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]
+     * @return string
      */
-    public function getUserRoles()
+    public function getBearerToken()
     {
-        return $this->container['user_roles'];
+        return $this->container['bearer_token'];
     }
 
     /**
-     * Sets user_roles
+     * Sets bearer_token
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[] $user_roles Array of user roles
+     * @param string $bearer_token Autentication bearer token for an user. Token can be used for autentication in REST API with Bearer Autentication (more information about it [here](#section/Authorization/bearerAuth))
      *
      * @return $this
      */
-    public function setUserRoles($user_roles)
+    public function setBearerToken($bearer_token)
     {
-        $this->container['user_roles'] = $user_roles;
+        $this->container['bearer_token'] = $bearer_token;
 
         return $this;
     }
 
     /**
-     * Gets total_items
+     * Gets valid_to
      *
-     * @return int
+     * @return string
      */
-    public function getTotalItems()
+    public function getValidTo()
     {
-        return $this->container['total_items'];
+        return $this->container['valid_to'];
     }
 
     /**
-     * Sets total_items
+     * Sets valid_to
      *
-     * @param int $total_items Count of all found user roles
+     * @param string $valid_to Date and time (local time zone of the project) of the token validity   *(YYYY-MM-DD HH:MM:SS)*
      *
      * @return $this
      */
-    public function setTotalItems($total_items)
+    public function setValidTo($valid_to)
     {
-        $this->container['total_items'] = $total_items;
+        $this->container['valid_to'] = $valid_to;
 
         return $this;
     }

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postCampaign**](CampaignsApi.md#postcampaign) | **POST** /campaigns | Create a campaign
 
 # **getCampaign**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20010 getCampaign($campaign_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012 getCampaign($campaign_id, $accept_language)
 
 Detail of a specific campaign
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaigns**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009 getCampaigns($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011 getCampaigns($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Collection of campaigns
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 

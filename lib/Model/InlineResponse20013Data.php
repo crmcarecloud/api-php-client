@@ -56,7 +56,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'campaign_product_store_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductStoreRecord[]',
+        'campaign_products' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProduct[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'campaign_product_store_records' => null,
+        'campaign_products' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'campaign_product_store_records' => 'campaign_product_store_records',
+        'campaign_products' => 'campaign_products',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'campaign_product_store_records' => 'setCampaignProductStoreRecords',
+        'campaign_products' => 'setCampaignProducts',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'campaign_product_store_records' => 'getCampaignProductStoreRecords',
+        'campaign_products' => 'getCampaignProducts',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['campaign_product_store_records'] = isset($data['campaign_product_store_records']) ? $data['campaign_product_store_records'] : null;
+        $this->container['campaign_products'] = isset($data['campaign_products']) ? $data['campaign_products'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets campaign_product_store_records
+     * Gets campaign_products
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductStoreRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProduct[]
      */
-    public function getCampaignProductStoreRecords()
+    public function getCampaignProducts()
     {
-        return $this->container['campaign_product_store_records'];
+        return $this->container['campaign_products'];
     }
 
     /**
-     * Sets campaign_product_store_records
+     * Sets campaign_products
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductStoreRecord[] $campaign_product_store_records List of the campaign product store records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProduct[] $campaign_products List of the campaign products
      *
      * @return $this
      */
-    public function setCampaignProductStoreRecords($campaign_product_store_records)
+    public function setCampaignProducts($campaign_products)
     {
-        $this->container['campaign_product_store_records'] = $campaign_product_store_records;
+        $this->container['campaign_products'] = $campaign_products;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20013Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found campaign product store records
+     * @param int $total_items Count of all found campaign products
      *
      * @return $this
      */

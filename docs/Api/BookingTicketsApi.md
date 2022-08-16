@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBookingTickets**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004 getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004 getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only)
 
 Get all booking tickets
 
@@ -100,9 +100,12 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique id of the customer
+$valid_from = "valid_from_example"; // string | Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)*
+$valid_to = "valid_to_example"; // string | Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)*
+$valid_only = true; // bool | Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation*
 
 try {
-    $result = $apiInstance->getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id);
+    $result = $apiInstance->getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingTicketsApi->getBookingTickets: ', $e->getMessage(), PHP_EOL;
@@ -120,6 +123,9 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique id of the customer | [optional]
+ **valid_from** | **string**| Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **valid_to** | **string**| Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **valid_only** | **bool**| Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* | [optional]
 
 ### Return type
 

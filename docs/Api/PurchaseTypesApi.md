@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getPurchaseTypes**](PurchaseTypesApi.md#getpurchasetypes) | **GET** /purchase-types | Get all purchase types
 
 # **getPurchaseTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097 getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099 getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all purchase types
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097**](../Model/InlineResponse20097.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099**](../Model/InlineResponse20099.md)
 
 ### Authorization
 

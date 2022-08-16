@@ -56,7 +56,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
+        'recommendations' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'property_records' => null,
+        'recommendations' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'property_records' => 'property_records',
+        'recommendations' => 'recommendations',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'property_records' => 'setPropertyRecords',
+        'recommendations' => 'setRecommendations',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'property_records' => 'getPropertyRecords',
+        'recommendations' => 'getRecommendations',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
+        $this->container['recommendations'] = isset($data['recommendations']) ? $data['recommendations'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets property_records
+     * Gets recommendations
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[]
      */
-    public function getPropertyRecords()
+    public function getRecommendations()
     {
-        return $this->container['property_records'];
+        return $this->container['recommendations'];
     }
 
     /**
-     * Sets property_records
+     * Sets recommendations
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[] $recommendations List of Recomendation records
      *
      * @return $this
      */
-    public function setPropertyRecords($property_records)
+    public function setRecommendations($recommendations)
     {
-        $this->container['property_records'] = $property_records;
+        $this->container['recommendations'] = $recommendations;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found customer sources
+     * @param int $total_items Count of all found recommendation records
      *
      * @return $this
      */

@@ -56,7 +56,7 @@ class InlineResponse200113Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'skipasses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[]',
+        'segments' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Segment[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200113Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'skipasses' => null,
+        'segments' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200113Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'skipasses' => 'skipasses',
+        'segments' => 'segments',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200113Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'skipasses' => 'setSkipasses',
+        'segments' => 'setSegments',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200113Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'skipasses' => 'getSkipasses',
+        'segments' => 'getSegments',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200113Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['skipasses'] = isset($data['skipasses']) ? $data['skipasses'] : null;
+        $this->container['segments'] = isset($data['segments']) ? $data['segments'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200113Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets skipasses
+     * Gets segments
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Segment[]
      */
-    public function getSkipasses()
+    public function getSegments()
     {
-        return $this->container['skipasses'];
+        return $this->container['segments'];
     }
 
     /**
-     * Sets skipasses
+     * Sets segments
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[] $skipasses List of available skipasses
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Segment[] $segments List of all segments
      *
      * @return $this
      */
-    public function setSkipasses($skipasses)
+    public function setSegments($segments)
     {
-        $this->container['skipasses'] = $skipasses;
+        $this->container['segments'] = $segments;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200113Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found skipasses
+     * @param int $total_items Count of all found segments
      *
      * @return $this
      */

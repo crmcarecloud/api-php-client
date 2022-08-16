@@ -161,7 +161,7 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique id of the customer
-$booking_status = 56; // int | Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled*
+$booking_status = "booking_status_example"; // string | Current status of the booking from resource [booking-statuses](#tag/Booking-statuses)
 $add_booking_items = "none"; // string | Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items*
 
 try {
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique id of the customer | [optional]
- **booking_status** | **int**| Current status of the booking *Possible values: 0 - created and not used / 1 - used / 2 - canceled* | [optional]
+ **booking_status** | **string**| Current status of the booking from resource [booking-statuses](#tag/Booking-statuses) | [optional]
  **add_booking_items** | **string**| Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* | [optional] [default to none]
 
 ### Return type

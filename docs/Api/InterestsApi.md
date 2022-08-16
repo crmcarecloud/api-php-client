@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getInterests**](InterestsApi.md#getinterests) | **GET** /interests | Get all interests
 
 # **getInterest**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059 getInterest($interest_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061 getInterest($interest_id, $accept_language)
 
 Get an interest
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInterests**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20058 getInterests($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060 getInterests($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all interests
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
 
 ### Authorization
 

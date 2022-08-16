@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**putSkipass**](SkipassesApi.md#putskipass) | **PUT** /skipasses/{skipass_id} | Update a skipass
 
 # **getSkipass**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114 getSkipass($skipass_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116 getSkipass($skipass_id, $accept_language)
 
 Get a skipass
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114**](../Model/InlineResponse200114.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116**](../Model/InlineResponse200116.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSkipasses**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113 getSkipasses($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115 getSkipasses($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $skipass_type_id, $state, $external_skipass_id, $is_valid, $is_cancelled)
 
 Get all skipasses
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113**](../Model/InlineResponse200113.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115**](../Model/InlineResponse200115.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSkipassesOverview**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115 getSkipassesOverview($accept_language, $valid_from, $valid_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117 getSkipassesOverview($accept_language, $valid_from, $valid_to)
 
 Get skipasses overview
 
@@ -186,8 +186,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SkipassesApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
-$valid_from = "valid_from_example"; // string | Date from where is valid already. *(YYYY-MM-DD)*
-$valid_to = "valid_to_example"; // string | Date to where is valid still. *(YYYY-MM-DD)*
+$valid_from = "valid_from_example"; // string | Date from when is record already valid. *(YYYY-MM-DD)*
+$valid_to = "valid_to_example"; // string | Date to when is record still valid. *(YYYY-MM-DD)*
 
 try {
     $result = $apiInstance->getSkipassesOverview($accept_language, $valid_from, $valid_to);
@@ -203,12 +203,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **valid_from** | **string**| Date from where is valid already. *(YYYY-MM-DD)* | [optional]
- **valid_to** | **string**| Date to where is valid still. *(YYYY-MM-DD)* | [optional]
+ **valid_from** | **string**| Date from when is record already valid. *(YYYY-MM-DD)* | [optional]
+ **valid_to** | **string**| Date to when is record still valid. *(YYYY-MM-DD)* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115**](../Model/InlineResponse200115.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117**](../Model/InlineResponse200117.md)
 
 ### Authorization
 
