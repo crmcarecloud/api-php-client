@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **reward_group** | **string** | The unique id of the reward group | 
 **note** | **string** | Voucher&#x27;s note | [optional] 
 **reward** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Reward**](Reward.md) |  | 
+**created_at** | **string** | Date of the voucher creation *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the voucher *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 
 

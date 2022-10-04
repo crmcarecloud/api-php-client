@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **booking_item_id** | **string** | The unique id of the booking item | [optional] 
 **customer_id** | **string** | The unique id of the customer | [optional] 
 **time_slot_id** | **string** | The unique id of the booking time slot | 
-**ticket_id** | **string** | The unique id of the booking ticket | [optional] 
+**booking_ticket** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\BookingTicket**](BookingTicket.md) |  | [optional] 
 **valid_from** | **string** | Date and time when time slot starts *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **valid_to** | **string** | Date and time when time slot ends *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **capacity_taken** | **int** | How much capacity is taken by the booking item. If not set, value is 1 | [optional] [default to 1]

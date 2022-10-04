@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBookingTickets**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004 getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004 getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only, $booking_ticket_property_id, $booking_ticket_property_value)
 
 Get all booking tickets
 
@@ -103,9 +103,11 @@ $customer_id = "customer_id_example"; // string | The unique id of the customer
 $valid_from = "valid_from_example"; // string | Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)*
 $valid_to = "valid_to_example"; // string | Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)*
 $valid_only = true; // bool | Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation*
+$booking_ticket_property_id = "booking_ticket_property_id_example"; // string | Booking ticket property id from resource [booking-ticket-properties](#tag/Booking-ticket-properties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request.
+$booking_ticket_property_value = "booking_ticket_property_value_example"; // string | Booking ticket property record value from [booking-ticket-properties](#tag/Booking-ticket-properties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request.
 
 try {
-    $result = $apiInstance->getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only);
+    $result = $apiInstance->getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only, $booking_ticket_property_id, $booking_ticket_property_value);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingTicketsApi->getBookingTickets: ', $e->getMessage(), PHP_EOL;
@@ -126,6 +128,8 @@ Name | Type | Description  | Notes
  **valid_from** | **string**| Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **valid_to** | **string**| Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **valid_only** | **bool**| Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* | [optional]
+ **booking_ticket_property_id** | **string**| Booking ticket property id from resource [booking-ticket-properties](#tag/Booking-ticket-properties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. | [optional]
+ **booking_ticket_property_value** | **string**| Booking ticket property record value from [booking-ticket-properties](#tag/Booking-ticket-properties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. | [optional]
 
 ### Return type
 

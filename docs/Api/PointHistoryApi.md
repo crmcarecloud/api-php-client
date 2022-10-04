@@ -39,7 +39,7 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $store_id = "store_id_example"; // string | The unique id of the store in CareCloud
-$partner_id = "partner_id_example"; // string | The unique id of the partner
+$partner_id = "partner_id_example"; // string | Unique ID of the partner from the resource [GET /partners](/#tag/Partners)
 $time_from = "time_from_example"; // string | Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)*
 $time_to = "time_to_example"; // string | Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)*
 $point_operation_type = "point_operation_type_example"; // string | Search record by the operation type name or a part of the operation type name
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **store_id** | **string**| The unique id of the store in CareCloud | [optional]
- **partner_id** | **string**| The unique id of the partner | [optional]
+ **partner_id** | **string**| Unique ID of the partner from the resource [GET /partners](/#tag/Partners) | [optional]
  **time_from** | **string**| Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **time_to** | **string**| Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **point_operation_type** | **string**| Search record by the operation type name or a part of the operation type name | [optional]
