@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**postPurchaseSend**](PurchasesApi.md#postpurchasesend) | **POST** /purchases/actions/send-purchase | Send purchase
 
 # **getPurchase**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093 getPurchase($purchase_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20094 getPurchase($purchase_id, $accept_language)
 
 Get a purchase
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093**](../Model/InlineResponse20093.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20094**](../Model/InlineResponse20094.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPurchasePaymentSummary**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20095 getPurchasePaymentSummary($purchase_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096 getPurchasePaymentSummary($purchase_id, $accept_language)
 
 Return payment summary
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20095**](../Model/InlineResponse20095.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096**](../Model/InlineResponse20096.md)
 
 ### Authorization
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubPurchaseItems**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20094 getSubPurchaseItems($purchase_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20095 getSubPurchaseItems($purchase_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get purchase items tied to a purchase
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20094**](../Model/InlineResponse20094.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20095**](../Model/InlineResponse20095.md)
 
 ### Authorization
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPurchaseAcceptPayment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097 postPurchaseAcceptPayment($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098 postPurchaseAcceptPayment($body, $accept_language)
 
 Accept payment
 
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097**](../Model/InlineResponse20097.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098**](../Model/InlineResponse20098.md)
 
 ### Authorization
 
@@ -537,7 +537,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPurchaseRecommendedRewards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096 postPurchaseRecommendedRewards($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097 postPurchaseRecommendedRewards($body, $accept_language)
 
 Recommended best rewards
 
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096**](../Model/InlineResponse20096.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097**](../Model/InlineResponse20097.md)
 
 ### Authorization
 
@@ -597,7 +597,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPurchaseSend**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115 postPurchaseSend($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116 postPurchaseSend($body, $accept_language)
 
 Send purchase
 
@@ -643,7 +643,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115**](../Model/InlineResponse20115.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116**](../Model/InlineResponse20116.md)
 
 ### Authorization
 

@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**customer_relation_id** | **string** | The unique id of the customer&#x27;s relation | [optional] 
 **related_customer_id** | **string** | The unique id of the related customer | 
 **short_name** | **string** | Short name of the customer | [optional] 
 **customer_relation_type_id** | **string** | The unique id of the customer relation type | 

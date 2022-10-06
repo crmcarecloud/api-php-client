@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**postCustomersVerifyAuthToken**](CustomersActionsApi.md#postcustomersverifyauthtoken) | **POST** /customers/actions/verify-auth-token | Verify auth token
 
 # **getCustomerSearch**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
 
 Search customers
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
 
 ### Authorization
 

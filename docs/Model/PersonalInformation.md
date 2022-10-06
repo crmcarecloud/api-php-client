@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **gender** | **int** | Gender of the customer *Possible values: 1 - male, 2 - female* | [optional] 
 **first_name** | **string** | First name of the customer | [optional] 
 **last_name** | **string** | Last name of the customer | [optional] 
+**pre_nominals** | **string** | Academic degrees, academic titles, other titles of customer placed before name | [optional] 
+**post_nominals** | **string** | Academic degrees, academic titles, other titles of customer placed after name | [optional] 
 **birthdate** | [**\DateTime**](\DateTime.md) | Customer&#x27;s date of birth (YYYY-MM-DD) | [optional] 
 **email** | **string** | Email of the customer | [optional] 
 **phone** | **string** | Phone number of the customer with international prefix (420000000000) | [optional] 

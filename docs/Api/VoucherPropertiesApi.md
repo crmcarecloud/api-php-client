@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getVoucherProperty**](VoucherPropertiesApi.md#getvoucherproperty) | **GET** /voucher-properties/{voucher_property_id} | Get a voucher property
 
 # **getVoucherProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152 getVoucherProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153 getVoucherProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all voucher properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152**](../Model/InlineResponse200152.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153**](../Model/InlineResponse200153.md)
 
 ### Authorization
 

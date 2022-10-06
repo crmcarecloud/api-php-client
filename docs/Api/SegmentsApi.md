@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**postSegmentRemoveCustomer**](SegmentsApi.md#postsegmentremovecustomer) | **POST** /segments/{segment_id}/actions/remove-customer | Remove customer from a segment
 
 # **getSegment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114 getSegment($segment_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115 getSegment($segment_id, $accept_language)
 
 Get a segment
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114**](../Model/InlineResponse200114.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115**](../Model/InlineResponse200115.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegmentGroup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116 getSegmentGroup($segment_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117 getSegmentGroup($segment_group_id, $accept_language)
 
 Get a segment group
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116**](../Model/InlineResponse200116.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117**](../Model/InlineResponse200117.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegmentGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115 getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116 getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all segment groups
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115**](../Model/InlineResponse200115.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116**](../Model/InlineResponse200116.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids)
 
 Get all segments
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113**](../Model/InlineResponse200113.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114**](../Model/InlineResponse200114.md)
 
 ### Authorization
 

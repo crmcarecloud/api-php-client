@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getLanguages**](LanguagesApi.md#getlanguages) | **GET** /languages | Get all languages
 
 # **getLanguages**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062 getLanguages($accept_language, $language_list_type)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 getLanguages($accept_language, $language_list_type)
 
 Get all languages
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getTaskProperty**](TaskPropertiesApi.md#gettaskproperty) | **GET** /task-properties/{task_property_id} | Get a task property
 
 # **getTaskProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139 getTaskProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140 getTaskProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all task properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139**](../Model/InlineResponse200139.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140**](../Model/InlineResponse200140.md)
 
 ### Authorization
 

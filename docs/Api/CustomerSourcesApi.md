@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCustomerSources**](CustomerSourcesApi.md#getcustomersources) | **GET** /customer-sources | Get customer sources
 
 # **getCustomerSources**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049 getCustomerSources($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050 getCustomerSources($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get customer sources
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postOrder**](OrdersApi.md#postorder) | **POST** /orders | Create an order
 
 # **getOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071 getOrder($order_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072 getOrder($order_id, $accept_language)
 
 Get an order
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrders**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070 getOrders($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071 getOrders($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state)
 
 Get all orders
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113 postOrder($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114 postOrder($body, $accept_language)
 
 Create an order
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114**](../Model/InlineResponse20114.md)
 
 ### Authorization
 

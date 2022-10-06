@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getPointHistory**](PointHistoryApi.md#getpointhistory) | **GET** /point-history | Get point transaction history
 
 # **getPointHistory**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075 getPointHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $point_operation_type, $point_operation_note)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076 getPointHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $point_operation_type, $point_operation_note)
 
 Get point transaction history
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
 
 ### Authorization
 

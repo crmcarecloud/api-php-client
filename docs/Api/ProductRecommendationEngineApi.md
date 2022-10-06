@@ -4,16 +4,16 @@ All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterpr
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getRecommendationCartCombined**](ProductRecommendationEngineApi.md#getrecommendationcartcombined) | **GET** /recommendation-engine/shopping-cart/actions/combined | Get the best recommendation for shopping cart
+[**getRecommendationCartCombined**](ProductRecommendationEngineApi.md#getrecommendationcartcombined) | **GET** /recommendation-engine/shopping-cart/actions/combine | Get the best recommendation for shopping cart
 [**getRecommendationCartEliminate**](ProductRecommendationEngineApi.md#getrecommendationcarteliminate) | **GET** /recommendation-engine/shopping-cart/actions/eliminate | Get the best recommendation with elimination for shopping cart
 [**getRecommendationCartOrder**](ProductRecommendationEngineApi.md#getrecommendationcartorder) | **GET** /recommendation-engine/shopping-cart/actions/order | Order products for the best recommendation for a shopping cart
-[**getRecommendationProductCombined**](ProductRecommendationEngineApi.md#getrecommendationproductcombined) | **GET** /recommendation-engine/product/actions/combined | Get the best recommendation
+[**getRecommendationProductCombine**](ProductRecommendationEngineApi.md#getrecommendationproductcombine) | **GET** /recommendation-engine/product/actions/combine | Get the best recommendation
 [**getRecommendationProductEliminate**](ProductRecommendationEngineApi.md#getrecommendationproducteliminate) | **GET** /recommendation-engine/product/actions/eliminate | Get the best recommendation with an elimination
 [**getRecommendationProductOrder**](ProductRecommendationEngineApi.md#getrecommendationproductorder) | **GET** /recommendation-engine/product/actions/order | Order products for the best recommendation.
 [**postBulkThirdPartyRecommendations**](ProductRecommendationEngineApi.md#postbulkthirdpartyrecommendations) | **POST** /third-party-recommendations/batch | Create a batch of the third party recommendations
 
 # **getRecommendationCartCombined**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getRecommendationCartCombined($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104 getRecommendationCartCombined($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count)
 
 Get the best recommendation for shopping cart
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104**](../Model/InlineResponse200104.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationCartEliminate**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getRecommendationCartEliminate($customer_id, $accept_language, $cart_product_ids, $product_id_list)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104 getRecommendationCartEliminate($customer_id, $accept_language, $cart_product_ids, $product_id_list)
 
 Get the best recommendation with elimination for shopping cart
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104**](../Model/InlineResponse200104.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationCartOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getRecommendationCartOrder($cart_product_ids, $accept_language, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104 getRecommendationCartOrder($cart_product_ids, $accept_language, $product_id_list, $count)
 
 Order products for the best recommendation for a shopping cart
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104**](../Model/InlineResponse200104.md)
 
 ### Authorization
 
@@ -206,8 +206,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getRecommendationProductCombined**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102 getRecommendationProductCombined($customer_id, $accept_language, $product_id_list, $count)
+# **getRecommendationProductCombine**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getRecommendationProductCombine($customer_id, $accept_language, $product_id_list, $count)
 
 Get the best recommendation
 
@@ -238,10 +238,10 @@ $product_id_list = array("product_id_list_example"); // string[] | List of the p
 $count = 100; // int | The number of records to return.
 
 try {
-    $result = $apiInstance->getRecommendationProductCombined($customer_id, $accept_language, $product_id_list, $count);
+    $result = $apiInstance->getRecommendationProductCombine($customer_id, $accept_language, $product_id_list, $count);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductRecommendationEngineApi->getRecommendationProductCombined: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductRecommendationEngineApi->getRecommendationProductCombine: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102**](../Model/InlineResponse200102.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductEliminate**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102 getRecommendationProductEliminate($customer_id, $accept_language, $product_id_list)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getRecommendationProductEliminate($customer_id, $accept_language, $product_id_list)
 
 Get the best recommendation with an elimination
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102**](../Model/InlineResponse200102.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendationProductOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102 getRecommendationProductOrder($customer_id, $accept_language, $product_id_list, $count)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getRecommendationProductOrder($customer_id, $accept_language, $product_id_list, $count)
 
 Order products for the best recommendation.
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102**](../Model/InlineResponse200102.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
 
 ### Authorization
 

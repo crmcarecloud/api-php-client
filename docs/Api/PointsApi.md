@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**postPointsTransfer**](PointsApi.md#postpointstransfer) | **POST** /points/actions/transfer-points | Transfer points
 
 # **getPoint**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074 getPoint($point_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075 getPoint($point_id, $accept_language)
 
 Get a point record
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
 
 ### Authorization
 

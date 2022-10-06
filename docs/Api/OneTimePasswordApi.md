@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**postVerifyOtp**](OneTimePasswordApi.md#postverifyotp) | **POST** /one-time-password/actions/verify | Verify a one-time password
 
 # **postSendOtp**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068 postSendOtp($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069 postSendOtp($body, $accept_language)
 
 Send a one-time password to a communication channel
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postVerifyOtp**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069 postVerifyOtp($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070 postVerifyOtp($body, $accept_language)
 
 Verify a one-time password
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 
