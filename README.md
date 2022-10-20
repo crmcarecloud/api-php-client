@@ -3,7 +3,7 @@
 ## Installation
 You can install this package with composer:
 ```
-composer require crmcarecloud/api-php-client
+composer require crmcarecloud/api-php-client:^1.0
 ```
 
 ## Example
