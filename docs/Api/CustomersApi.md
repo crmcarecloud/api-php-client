@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**getSubCustomerCards**](CustomersApi.md#getsubcustomercards) | **GET** /customers/{customer_id}/cards | Get all customer cards
 [**getSubCustomerEvents**](CustomersApi.md#getsubcustomerevents) | **GET** /customers/{customer_id}/events | Get information about all customer&#x27;s events
 [**getSubCustomerInterests**](CustomersApi.md#getsubcustomerinterests) | **GET** /customers/{customer_id}/interest-records | Get a collection of interest records
-[**getSubCustomerPints**](CustomersApi.md#getsubcustomerpints) | **GET** /customers/{customer_id}/points | Get all customer point records
+[**getSubCustomerPoints**](CustomersApi.md#getsubcustomerpoints) | **GET** /customers/{customer_id}/points | Get all customer point records
 [**getSubCustomerProperties**](CustomersApi.md#getsubcustomerproperties) | **GET** /customers/{customer_id}/property-records | Get a collection of properties
 [**getSubCustomerPurchases**](CustomersApi.md#getsubcustomerpurchases) | **GET** /customers/{customer_id}/purchases | Get all customer purchases
 [**getSubCustomerRecommendation**](CustomersApi.md#getsubcustomerrecommendation) | **GET** /customers/{customer_id}/recommendation-records | Get a collection of recommendation records
@@ -220,7 +220,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomer**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026 getCustomer($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032 getCustomer($customer_id, $accept_language)
 
 Get information about a customer
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025 getCustomers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $customer_source_id, $first_name, $last_name, $birthdate)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031 getCustomers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $customer_source_id, $first_name, $last_name, $birthdate)
 
 Get all customers
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
 
 ### Authorization
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerAddress**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038 getSubCustomerAddress($customer_id, $additional_customer_address_id_path, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043 getSubCustomerAddress($customer_id, $additional_customer_address_id_path, $accept_language)
 
 Get an additional customer address
 
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
 
 ### Authorization
 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerAddresses**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037 getSubCustomerAddresses($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_address_type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042 getSubCustomerAddresses($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_address_type_id)
 
 Get all additional customer adresses
 
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
 
 ### Authorization
 
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerCards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016 getSubCustomerCards($accept_language, $customer_id, $count, $offset, $sort_field, $sort_direction, $card_number, $card_type_id, $is_valid)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016 getSubCustomerCards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $card_number, $card_type_id, $is_valid)
 
 Get all customer cards
 
@@ -515,8 +515,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $customer_id = "customer_id_example"; // string | The unique id of the customer
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -526,7 +526,7 @@ $card_type_id = "card_type_id_example"; // string | The unique id of the card ty
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 
 try {
-    $result = $apiInstance->getSubCustomerCards($accept_language, $customer_id, $count, $offset, $sort_field, $sort_direction, $card_number, $card_type_id, $is_valid);
+    $result = $apiInstance->getSubCustomerCards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $card_number, $card_type_id, $is_valid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getSubCustomerCards: ', $e->getMessage(), PHP_EOL;
@@ -538,8 +538,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **customer_id** | **string**| The unique id of the customer | [optional]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerEvents**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getSubCustomerEvents($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $external_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044 getSubCustomerEvents($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $external_id)
 
 Get information about all customer's events
 
@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
 
 ### Authorization
 
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerInterests**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getSubCustomerInterests($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041 getSubCustomerInterests($customer_id, $accept_language)
 
 Get a collection of interest records
 
@@ -682,7 +682,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
 
 ### Authorization
 
@@ -695,8 +695,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getSubCustomerPints**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028 getSubCustomerPints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id)
+# **getSubCustomerPoints**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033 getSubCustomerPoints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id)
 
 Get all customer point records
 
@@ -730,10 +730,10 @@ $sort_direction = "sort_direction_example"; // string | Direction of sorting the
 $point_type_id = "point_type_id_example"; // string | The unique id of a point type
 
 try {
-    $result = $apiInstance->getSubCustomerPints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id);
+    $result = $apiInstance->getSubCustomerPoints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->getSubCustomerPints: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomersApi->getSubCustomerPoints: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033**](../Model/InlineResponse20033.md)
 
 ### Authorization
 
@@ -766,7 +766,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035 getSubCustomerProperties($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040 getSubCustomerProperties($customer_id, $accept_language)
 
 Get a collection of properties
 
@@ -812,7 +812,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
 
 ### Authorization
 
@@ -826,7 +826,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerPurchases**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027 getSubCustomerPurchases($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025 getSubCustomerPurchases($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $type_id)
 
 Get all customer purchases
 
@@ -884,7 +884,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
 
 ### Authorization
 
@@ -898,7 +898,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRecommendation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033 getSubCustomerRecommendation($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038 getSubCustomerRecommendation($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get a collection of recommendation records
 
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033**](../Model/InlineResponse20033.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
 
 ### Authorization
 
@@ -968,7 +968,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRelatedCustomer**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041 getSubCustomerRelatedCustomer($customer_id, $customer_relation_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046 getSubCustomerRelatedCustomer($customer_id, $customer_relation_id, $accept_language)
 
 Detail of a relation between customers
 
@@ -1016,7 +1016,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
 
 ### Authorization
 
@@ -1030,7 +1030,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRelatedCustomers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040 getSubCustomerRelatedCustomers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $related_customer_id, $customer_relation_type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045 getSubCustomerRelatedCustomers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $related_customer_id, $customer_relation_type_id)
 
 Get information about all related customers
 
@@ -1088,7 +1088,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045**](../Model/InlineResponse20045.md)
 
 ### Authorization
 
@@ -1102,7 +1102,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRewards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030 getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035 getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids)
 
 Get all customer rewards
 
@@ -1142,7 +1142,7 @@ $code = "code_example"; // string | Code of the reward
 $is_automated = true; // bool | Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)*
 $reward_group = 56; // int | The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward*
 $customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. Logic OR is used between values
-$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre.
+$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture.
 $tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag ids. Logic OR is used between values.
 
 try {
@@ -1173,12 +1173,12 @@ Name | Type | Description  | Notes
  **is_automated** | **bool**| Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* | [optional]
  **reward_group** | **int**| The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* | [optional]
  **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. Logic OR is used between values | [optional]
- **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. | [optional]
+ **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture. | [optional]
  **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag ids. Logic OR is used between values. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
 
 ### Authorization
 
@@ -1192,7 +1192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerSegments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031 getSubCustomerSegments($customer_id, $accept_language, $segment_group_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getSubCustomerSegments($customer_id, $accept_language, $segment_group_ids)
 
 Get a collection of segment records
 
@@ -1240,7 +1240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
 
 ### Authorization
 
@@ -1254,7 +1254,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034 getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $external_id, $customer_source_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $external_id, $customer_source_id)
 
 Get customer source records
 
@@ -1312,7 +1312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
 
 ### Authorization
 
@@ -1326,7 +1326,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerStatus**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032 getSubCustomerStatus($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $valid_now)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037 getSubCustomerStatus($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $valid_now)
 
 Get a collection of status records
 
@@ -1382,7 +1382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
 
 ### Authorization
 
@@ -1396,7 +1396,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerVouchers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029 getSubCustomerVouchers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $code, $store_id, $is_valid, $is_applied, $without_stores)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034 getSubCustomerVouchers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $code, $store_id, $is_valid, $is_applied, $without_stores)
 
 Get all customer vouchers
 
@@ -1431,7 +1431,7 @@ $code = "code_example"; // string | Unique code of the voucher
 $store_id = "store_id_example"; // string | The unique id of the store where customer can apply the reward
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $is_applied = true; // bool | Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers*
-$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre.
+$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture.
 
 try {
     $result = $apiInstance->getSubCustomerVouchers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $code, $store_id, $is_valid, $is_applied, $without_stores);
@@ -1456,11 +1456,11 @@ Name | Type | Description  | Notes
  **store_id** | **string**| The unique id of the store where customer can apply the reward | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **is_applied** | **bool**| Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* | [optional]
- **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. | [optional]
+ **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
 
 ### Authorization
 
@@ -1720,7 +1720,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerRelatedCustomers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112 postSubCustomerRelatedCustomers($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112 postSubCustomerRelatedCustomers($body, $customer_id, $accept_language)
 
 Create a customer relation
 
@@ -1746,10 +1746,11 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody | 
+$customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
-    $result = $apiInstance->postSubCustomerRelatedCustomers($body, $accept_language);
+    $result = $apiInstance->postSubCustomerRelatedCustomers($body, $customer_id, $accept_language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->postSubCustomerRelatedCustomers: ', $e->getMessage(), PHP_EOL;
@@ -1762,6 +1763,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody**](../Model/CustomerIdRelatedcustomersBody.md)|  |
+ **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type

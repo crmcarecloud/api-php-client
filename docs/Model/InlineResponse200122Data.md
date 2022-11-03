@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**stores** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]**](Store.md) | List of all stores | [optional] 
-**total_items** | **int** | Count of all found stores | [optional] 
+**segment_groups** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\SegmentGroup[]**](SegmentGroup.md) | List of all segment groups | [optional] 
+**total_items** | **int** | Count of all found segments | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

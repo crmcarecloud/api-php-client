@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**postCustomersVerifyAuthToken**](CustomersActionsApi.md#postcustomersverifyauthtoken) | **POST** /customers/actions/verify-auth-token | Verify auth token
 
 # **getCustomerSearch**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
 
 Search customers
 
@@ -41,7 +41,7 @@ $first_name = "first_name_example"; // string | Search by first name
 $last_name = "last_name_example"; // string | Search by last name
 $birthdate = "birthdate_example"; // string | Customer's date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY*
 $card_number = "card_number_example"; // string | Number of the customer card
-$mode = "mode_example"; // string | Mode of search results.  *Possible values are: strict - return only 100% matching results*  <p class=\"warning\">⚠️ Caution: Strict mode makes all path parameters as required. For succesful result you have to set all parameters.</p>
+$mode = "mode_example"; // string | Mode of search results.  *Possible values are: strict - return only 100% matching results / none - return results in strict mode*  <p class=\"warning\">⚠️ Caution: Strict mode makes all query parameters as required. For a successful result, you have to set all parameters.</p> <p class=\"warning\">⚠️ Caution: Currently, the whole resource is returning results only in strict mode.</p>
 
 try {
     $result = $apiInstance->getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode);
@@ -61,11 +61,11 @@ Name | Type | Description  | Notes
  **last_name** | **string**| Search by last name | [optional]
  **birthdate** | **string**| Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* | [optional]
  **card_number** | **string**| Number of the customer card | [optional]
- **mode** | **string**| Mode of search results.  *Possible values are: strict - return only 100% matching results*  &lt;p class&#x3D;\&quot;warning\&quot;&gt;⚠️ Caution: Strict mode makes all path parameters as required. For succesful result you have to set all parameters.&lt;/p&gt; | [optional]
+ **mode** | **string**| Mode of search results.  *Possible values are: strict - return only 100% matching results / none - return results in strict mode*  &lt;p class&#x3D;\&quot;warning\&quot;&gt;⚠️ Caution: Strict mode makes all query parameters as required. For a successful result, you have to set all parameters.&lt;/p&gt; &lt;p class&#x3D;\&quot;warning\&quot;&gt;⚠️ Caution: Currently, the whole resource is returning results only in strict mode.&lt;/p&gt; | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 

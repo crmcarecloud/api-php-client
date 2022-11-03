@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductProperty**](ProductPropertiesApi.md#getproductproperty) | **GET** /product-properties/{product_property_id} | Get a product property
 
 # **getProductProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087 getProductProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093 getProductProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all product properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087**](../Model/InlineResponse20087.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093**](../Model/InlineResponse20093.md)
 
 ### Authorization
 

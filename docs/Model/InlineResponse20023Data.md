@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**currencies** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Currency[]**](Currency.md) | Structure of currency | [optional] 
-**total_items** | **int** | Total count of found items of resource currencies | [optional] 
+**credits** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Credit[]**](Credit.md) | List of the credit records | [optional] 
+**total_items** | **int** | Count of all found credit records | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

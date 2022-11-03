@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**putEntrance**](ChargedEntrancesApi.md#putentrance) | **PUT** /entrances/{entrance_id} | Update an entrance
 
 # **getEntrance**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119 getEntrance($entrance_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200125 getEntrance($entrance_id, $accept_language)
 
 Get an entrance
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119**](../Model/InlineResponse200119.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200125**](../Model/InlineResponse200125.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEntrances**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118 getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200124 getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled)
 
 Get all entrances
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118**](../Model/InlineResponse200118.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200124**](../Model/InlineResponse200124.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEntrancesOverview**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120 getEntrancesOverview($accept_language, $valid_from, $valid_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200126 getEntrancesOverview($accept_language, $valid_from, $valid_to)
 
 Get entrances overview
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120**](../Model/InlineResponse200120.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200126**](../Model/InlineResponse200126.md)
 
 ### Authorization
 

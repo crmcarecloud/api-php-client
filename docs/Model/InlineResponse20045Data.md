@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**customer_external_applications** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[]**](ExternalApplication.md) | List of the customer external applications | [optional] 
-**total_items** | **int** | Count of all found customer external applications | [optional] 
+**related_customers** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RelatedCustomer[]**](RelatedCustomer.md) | Collection of all related customers | [optional] 
+**total_items** | **int** | Count of all found related customers | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

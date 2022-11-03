@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message_templates** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]**](MessageTemplate.md) | List of all message templates | [optional] 
-**total_items** | **int** | Count of all found message templates | [optional] 
+**event_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]**](Property.md) | List of event properties | [optional] 
+**total_items** | **int** | Count of all found event properties | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

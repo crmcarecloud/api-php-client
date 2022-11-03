@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCustomerProperty**](CustomerPropertiesApi.md#getcustomerproperty) | **GET** /customer-properties/{customer_property_id} | Get a customer property
 
 # **getCustomerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047 getCustomerProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052 getCustomerProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all customer properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCurrency**](CurrenciesApi.md#getcurrency) | **GET** /currencies/{currency_id} | Detail of a currency
 
 # **getCurrencies**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023 getCurrencies($accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029 getCurrencies($accept_language)
 
 Get all currencies
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCurrency**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024 getCurrency($currency_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030 getCurrency($currency_id, $accept_language)
 
 Detail of a currency
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
 
 ### Authorization
 

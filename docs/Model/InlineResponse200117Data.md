@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**skipasses** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Skipass[]**](Skipass.md) | List of available skipasses | [optional] 
-**total_items** | **int** | Count of all found skipasses | [optional] 
+**stores** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]**](Store.md) | List of the all stores where customer can apply reward | [optional] 
+**total_items** | **int** | Count of all found stores | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

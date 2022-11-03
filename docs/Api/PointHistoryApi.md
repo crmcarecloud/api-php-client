@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getPointHistory**](PointHistoryApi.md#getpointhistory) | **GET** /point-history | Get point transaction history
 
 # **getPointHistory**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076 getPointHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $point_operation_type, $point_operation_note)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082 getPointHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $point_operation_type, $point_operation_note, $point_type_id)
 
 Get point transaction history
 
@@ -44,9 +44,10 @@ $time_from = "time_from_example"; // string | Filter results on the start of the
 $time_to = "time_to_example"; // string | Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)*
 $point_operation_type = "point_operation_type_example"; // string | Search record by the operation type name or a part of the operation type name
 $point_operation_note = "point_operation_note_example"; // string | Search record by the operation note or a part of the operation note
+$point_type_id = "point_type_id_example"; // string | The unique id of a point type
 
 try {
-    $result = $apiInstance->getPointHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $point_operation_type, $point_operation_note);
+    $result = $apiInstance->getPointHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $point_operation_type, $point_operation_note, $point_type_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PointHistoryApi->getPointHistory: ', $e->getMessage(), PHP_EOL;
@@ -70,10 +71,11 @@ Name | Type | Description  | Notes
  **time_to** | **string**| Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **point_operation_type** | **string**| Search record by the operation type name or a part of the operation type name | [optional]
  **point_operation_note** | **string**| Search record by the operation note or a part of the operation note | [optional]
+ **point_type_id** | **string**| The unique id of a point type | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
 
 ### Authorization
 

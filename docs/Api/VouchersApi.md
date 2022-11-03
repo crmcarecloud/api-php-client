@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postVoucherApply**](VouchersApi.md#postvoucherapply) | **POST** /vouchers/{voucher_id}/actions/apply-voucher | Application of a voucher
 
 # **getSubVoucherProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152 getSubVoucherProperties($voucher_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200157 getSubVoucherProperties($voucher_id, $accept_language)
 
 Get a collection of voucher properties records
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152**](../Model/InlineResponse200152.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200157**](../Model/InlineResponse200157.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getVoucher**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151 getVoucher($voucher_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200156 getVoucher($voucher_id, $accept_language)
 
 Get a voucher
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151**](../Model/InlineResponse200151.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200156**](../Model/InlineResponse200156.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getVouchers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029 getVouchers($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034 getVouchers($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores)
 
 Get all vouchers
 
@@ -165,7 +165,7 @@ $code = "code_example"; // string | Unique code of the voucher
 $store_id = "store_id_example"; // string | The unique id of the store where customer can apply the reward
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $is_applied = true; // bool | Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers*
-$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre.
+$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture.
 
 try {
     $result = $apiInstance->getVouchers($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores);
@@ -190,11 +190,11 @@ Name | Type | Description  | Notes
  **store_id** | **string**| The unique id of the store where customer can apply the reward | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **is_applied** | **bool**| Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* | [optional]
- **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucutre. | [optional]
+ **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
 
 ### Authorization
 

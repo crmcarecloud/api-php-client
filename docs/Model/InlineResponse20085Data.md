@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**product_groups** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]**](ProductGroup.md) | List of all product groups | [optional] 
-**total_items** | **int** | Count of all found product groups | [optional] 
+**point_types** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PointType[]**](PointType.md) | List of the point types | [optional] 
+**total_items** | **int** | Count of all found point types | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

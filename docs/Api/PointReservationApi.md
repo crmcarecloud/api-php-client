@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postPointReservationRelease**](PointReservationApi.md#postpointreservationrelease) | **POST** /point-reservations/actions/free-points | Free points from reserevation
 
 # **getPointReservation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078 getPointReservation($point_reservation_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20084 getPointReservation($point_reservation_id, $accept_language)
 
 Get a point reservation
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078**](../Model/InlineResponse20078.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20084**](../Model/InlineResponse20084.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPointReservations**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077 getPointReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083 getPointReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id)
 
 Get all point reservations
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
 
 ### Authorization
 
