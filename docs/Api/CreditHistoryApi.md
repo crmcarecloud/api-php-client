@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCreditHistory**](CreditHistoryApi.md#getcredithistory) | **GET** /credit-history | Get credit transaction history
 
 # **getCreditHistory**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026 getCreditHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $credit_operation_type, $credit_operation_note)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028 getCreditHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $credit_operation_type, $credit_operation_note)
 
 Get credit transaction history
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
 
 ### Authorization
 

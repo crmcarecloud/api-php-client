@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**statuses** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Status[]**](Status.md) | List of recent statuses | [optional] 
-**total_items** | **int** | Count of all found statuses | [optional] 
+**reward_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]**](Property.md) | List of all reward properties | [optional] 
+**total_items** | **int** | Count of all found reward properties | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -99,7 +99,7 @@ class PurchaseItemTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107
      */
     public function getPurchaseItemTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -120,11 +120,11 @@ class PurchaseItemTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPurchaseItemTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
         $request = $this->getPurchaseItemTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -176,7 +176,7 @@ class PurchaseItemTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -266,7 +266,7 @@ class PurchaseItemTypesApi
      */
     public function getPurchaseItemTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
         $request = $this->getPurchaseItemTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

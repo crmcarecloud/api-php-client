@@ -98,7 +98,7 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163
      */
     public function getWalletCredits($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -118,11 +118,11 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletCreditsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163';
         $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -174,7 +174,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class WalletApi
      */
     public function getWalletCreditsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163';
         $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client
@@ -430,7 +430,7 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164
      */
     public function getWalletCreditsExpiration($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -448,11 +448,11 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletCreditsExpirationWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
         $request = $this->getWalletCreditsExpirationRequest($customer_id, $accept_language);
 
         try {
@@ -504,7 +504,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -588,7 +588,7 @@ class WalletApi
      */
     public function getWalletCreditsExpirationAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
         $request = $this->getWalletCreditsExpirationRequest($customer_id, $accept_language);
 
         return $this->client
@@ -748,7 +748,7 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162
      */
     public function getWalletPoints($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -768,11 +768,11 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletPointsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
         $request = $this->getWalletPointsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -824,7 +824,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -912,7 +912,7 @@ class WalletApi
      */
     public function getWalletPointsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
         $request = $this->getWalletPointsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client
@@ -1080,7 +1080,7 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164
      */
     public function getWalletPointsExpiration($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1098,11 +1098,11 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletPointsExpirationWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
         $request = $this->getWalletPointsExpirationRequest($customer_id, $accept_language);
 
         try {
@@ -1154,7 +1154,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1238,7 +1238,7 @@ class WalletApi
      */
     public function getWalletPointsExpirationAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
         $request = $this->getWalletPointsExpirationRequest($customer_id, $accept_language);
 
         return $this->client
@@ -1398,7 +1398,7 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161
      */
     public function getWalletSalesTurnover($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -1418,11 +1418,11 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletSalesTurnoverWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161';
         $request = $this->getWalletSalesTurnoverRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -1474,7 +1474,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1562,7 +1562,7 @@ class WalletApi
      */
     public function getWalletSalesTurnoverAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161';
         $request = $this->getWalletSalesTurnoverRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client

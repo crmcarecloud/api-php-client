@@ -56,7 +56,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'event_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'event_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\EventGroup[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'event_properties' => null,
+        'event_groups' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_properties' => 'event_properties',
+        'event_groups' => 'event_groups',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'event_properties' => 'setEventProperties',
+        'event_groups' => 'setEventGroups',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'event_properties' => 'getEventProperties',
+        'event_groups' => 'getEventGroups',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['event_properties'] = isset($data['event_properties']) ? $data['event_properties'] : null;
+        $this->container['event_groups'] = isset($data['event_groups']) ? $data['event_groups'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets event_properties
+     * Gets event_groups
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\EventGroup[]
      */
-    public function getEventProperties()
+    public function getEventGroups()
     {
-        return $this->container['event_properties'];
+        return $this->container['event_groups'];
     }
 
     /**
-     * Sets event_properties
+     * Sets event_groups
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $event_properties List of all event properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\EventGroup[] $event_groups List of all event groups
      *
      * @return $this
      */
-    public function setEventProperties($event_properties)
+    public function setEventGroups($event_groups)
     {
-        $this->container['event_properties'] = $event_properties;
+        $this->container['event_groups'] = $event_groups;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found event properties
+     * @param int $total_items Count of all found event groups
      *
      * @return $this
      */

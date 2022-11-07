@@ -56,7 +56,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'store_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]',
+        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'store_groups' => null,
+        'property_records' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_groups' => 'store_groups',
+        'property_records' => 'property_records',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_groups' => 'setStoreGroups',
+        'property_records' => 'setPropertyRecords',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_groups' => 'getStoreGroups',
+        'property_records' => 'getPropertyRecords',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_groups'] = isset($data['store_groups']) ? $data['store_groups'] : null;
+        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_groups
+     * Gets property_records
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
      */
-    public function getStoreGroups()
+    public function getPropertyRecords()
     {
-        return $this->container['store_groups'];
+        return $this->container['property_records'];
     }
 
     /**
-     * Sets store_groups
+     * Sets property_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[] $store_groups List of all store groups
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records
      *
      * @return $this
      */
-    public function setStoreGroups($store_groups)
+    public function setPropertyRecords($property_records)
     {
-        $this->container['store_groups'] = $store_groups;
+        $this->container['property_records'] = $property_records;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found store groups
+     * @param int $total_items Count of all found store property records
      *
      * @return $this
      */

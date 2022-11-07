@@ -106,7 +106,7 @@ class CreditHistoryApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028
      */
     public function getCreditHistory($customer_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $partner_id = null, $time_from = null, $time_to = null, $credit_operation_type = null, $credit_operation_note = null)
     {
@@ -134,11 +134,11 @@ class CreditHistoryApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditHistoryWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $partner_id = null, $time_from = null, $time_to = null, $credit_operation_type = null, $credit_operation_note = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
         $request = $this->getCreditHistoryRequest($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $credit_operation_type, $credit_operation_note);
 
         try {
@@ -190,7 +190,7 @@ class CreditHistoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -294,7 +294,7 @@ class CreditHistoryApi
      */
     public function getCreditHistoryAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $partner_id = null, $time_from = null, $time_to = null, $credit_operation_type = null, $credit_operation_note = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
         $request = $this->getCreditHistoryRequest($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $credit_operation_type, $credit_operation_note);
 
         return $this->client

@@ -56,7 +56,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
+        'events' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Event[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'property_records' => null,
+        'events' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'property_records' => 'property_records',
+        'events' => 'events',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'property_records' => 'setPropertyRecords',
+        'events' => 'setEvents',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'property_records' => 'getPropertyRecords',
+        'events' => 'getEvents',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
+        $this->container['events'] = isset($data['events']) ? $data['events'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets property_records
+     * Gets events
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Event[]
      */
-    public function getPropertyRecords()
+    public function getEvents()
     {
-        return $this->container['property_records'];
+        return $this->container['events'];
     }
 
     /**
-     * Sets property_records
+     * Sets events
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Event[] $events Collection of all events
      *
      * @return $this
      */
-    public function setPropertyRecords($property_records)
+    public function setEvents($events)
     {
-        $this->container['property_records'] = $property_records;
+        $this->container['events'] = $events;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found event property records
+     * @param int $total_items Count of all found events
      *
      * @return $this
      */

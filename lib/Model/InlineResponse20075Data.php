@@ -56,7 +56,8 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'request_id' => 'string'    ];
+        'message_templates' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'request_id' => null    ];
+        'message_templates' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'request_id' => 'request_id'    ];
+        'message_templates' => 'message_templates',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'request_id' => 'setRequestId'    ];
+        'message_templates' => 'setMessageTemplates',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'request_id' => 'getRequestId'    ];
+        'message_templates' => 'getMessageTemplates',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +174,8 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['request_id'] = isset($data['request_id']) ? $data['request_id'] : null;
+        $this->container['message_templates'] = isset($data['message_templates']) ? $data['message_templates'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -197,25 +203,49 @@ class InlineResponse20075Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets request_id
+     * Gets message_templates
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]
      */
-    public function getRequestId()
+    public function getMessageTemplates()
     {
-        return $this->container['request_id'];
+        return $this->container['message_templates'];
     }
 
     /**
-     * Sets request_id
+     * Sets message_templates
      *
-     * @param string $request_id The parameter specifies the request that caused the OTP to be created. Request id will be used as one of the parameter in method [/one-time-password/actions/verify](#operation/postVerifyOtp)
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[] $message_templates List of all message templates
      *
      * @return $this
      */
-    public function setRequestId($request_id)
+    public function setMessageTemplates($message_templates)
     {
-        $this->container['request_id'] = $request_id;
+        $this->container['message_templates'] = $message_templates;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items Count of all found message templates
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

@@ -100,7 +100,7 @@ class EventPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065
      */
     public function getEventProperties($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -122,11 +122,11 @@ class EventPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventPropertiesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065';
         $request = $this->getEventPropertiesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -178,7 +178,7 @@ class EventPropertiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class EventPropertiesApi
      */
     public function getEventPropertiesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065';
         $request = $this->getEventPropertiesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client
@@ -435,7 +435,7 @@ class EventPropertiesApi
     /**
      * Operation getEventProperty
      *
-     * Get a event property
+     * Get an event property
      *
      * @param  string $event_property_id The unique id of the event property (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
@@ -453,7 +453,7 @@ class EventPropertiesApi
     /**
      * Operation getEventPropertyWithHttpInfo
      *
-     * Get a event property
+     * Get an event property
      *
      * @param  string $event_property_id The unique id of the event property (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
@@ -569,7 +569,7 @@ class EventPropertiesApi
     /**
      * Operation getEventPropertyAsync
      *
-     * Get a event property
+     * Get an event property
      *
      * @param  string $event_property_id The unique id of the event property (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
@@ -590,7 +590,7 @@ class EventPropertiesApi
     /**
      * Operation getEventPropertyAsyncWithHttpInfo
      *
-     * Get a event property
+     * Get an event property
      *
      * @param  string $event_property_id The unique id of the event property (required)
      * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)

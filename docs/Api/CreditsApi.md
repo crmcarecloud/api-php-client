@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getSubCreditPurchases**](CreditsApi.md#getsubcreditpurchases) | **GET** /credits/{credit_id}/purchases | Get a collection of purchases
 
 # **getCredit**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024 getCredit($credit_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026 getCredit($credit_id, $accept_language)
 
 Get a credit record
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCredits**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023 getCredits($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $credit_type_id, $create_credit_time_from, $create_credit_time_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025 getCredits($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $credit_type_id, $create_credit_time_from, $create_credit_time_to)
 
 Get all credit records
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCreditPurchases**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025 getSubCreditPurchases($credit_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027 getSubCreditPurchases($credit_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension)
 
 Get a collection of purchases
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
 
 ### Authorization
 

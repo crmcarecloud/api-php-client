@@ -76,7 +76,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStore**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130 getStore($store_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132 getStore($store_id, $accept_language)
 
 Get a store
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130**](../Model/InlineResponse200130.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132**](../Model/InlineResponse200132.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStores**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129 getStores($accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer, $property_id, $property_value)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131 getStores($accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer, $property_id, $property_value)
 
 Get all stores
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129**](../Model/InlineResponse200129.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131**](../Model/InlineResponse200131.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubStoreGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132 getSubStoreGroups($store_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134 getSubStoreGroups($store_id, $accept_language)
 
 Get a collection of store group records
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132**](../Model/InlineResponse200132.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134**](../Model/InlineResponse200134.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubStoreProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131 getSubStoreProperties($store_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133 getSubStoreProperties($store_id, $accept_language)
 
 Get a collection of properties
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131**](../Model/InlineResponse200131.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133**](../Model/InlineResponse200133.md)
 
 ### Authorization
 

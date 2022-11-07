@@ -56,9 +56,7 @@ class InlineResponse200161Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'earned_credits' => 'float',
-'redeemed_credits' => 'float',
-'available_credits' => 'float'    ];
+        'turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +64,7 @@ class InlineResponse200161Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'earned_credits' => 'float',
-'redeemed_credits' => 'float',
-'available_credits' => 'float'    ];
+        'turnover' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +93,7 @@ class InlineResponse200161Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'earned_credits' => 'earned_credits',
-'redeemed_credits' => 'redeemed_credits',
-'available_credits' => 'available_credits'    ];
+        'turnover' => 'turnover'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +101,7 @@ class InlineResponse200161Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'earned_credits' => 'setEarnedCredits',
-'redeemed_credits' => 'setRedeemedCredits',
-'available_credits' => 'setAvailableCredits'    ];
+        'turnover' => 'setTurnover'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +109,7 @@ class InlineResponse200161Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'earned_credits' => 'getEarnedCredits',
-'redeemed_credits' => 'getRedeemedCredits',
-'available_credits' => 'getAvailableCredits'    ];
+        'turnover' => 'getTurnover'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +169,7 @@ class InlineResponse200161Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['earned_credits'] = isset($data['earned_credits']) ? $data['earned_credits'] : null;
-        $this->container['redeemed_credits'] = isset($data['redeemed_credits']) ? $data['redeemed_credits'] : null;
-        $this->container['available_credits'] = isset($data['available_credits']) ? $data['available_credits'] : null;
+        $this->container['turnover'] = isset($data['turnover']) ? $data['turnover'] : null;
     }
 
     /**
@@ -209,73 +197,25 @@ class InlineResponse200161Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets earned_credits
+     * Gets turnover
      *
-     * @return float
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
      */
-    public function getEarnedCredits()
+    public function getTurnover()
     {
-        return $this->container['earned_credits'];
+        return $this->container['turnover'];
     }
 
     /**
-     * Sets earned_credits
+     * Sets turnover
      *
-     * @param float $earned_credits Amount of earned credits in time interval
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $turnover List of all turnover by currency in time interval
      *
      * @return $this
      */
-    public function setEarnedCredits($earned_credits)
+    public function setTurnover($turnover)
     {
-        $this->container['earned_credits'] = $earned_credits;
-
-        return $this;
-    }
-
-    /**
-     * Gets redeemed_credits
-     *
-     * @return float
-     */
-    public function getRedeemedCredits()
-    {
-        return $this->container['redeemed_credits'];
-    }
-
-    /**
-     * Sets redeemed_credits
-     *
-     * @param float $redeemed_credits Amount of redeemed credits in time interval
-     *
-     * @return $this
-     */
-    public function setRedeemedCredits($redeemed_credits)
-    {
-        $this->container['redeemed_credits'] = $redeemed_credits;
-
-        return $this;
-    }
-
-    /**
-     * Gets available_credits
-     *
-     * @return float
-     */
-    public function getAvailableCredits()
-    {
-        return $this->container['available_credits'];
-    }
-
-    /**
-     * Sets available_credits
-     *
-     * @param float $available_credits Amount of available credits in the moment. Time interval has no influence to the result
-     *
-     * @return $this
-     */
-    public function setAvailableCredits($available_credits)
-    {
-        $this->container['available_credits'] = $available_credits;
+        $this->container['turnover'] = $turnover;
 
         return $this;
     }

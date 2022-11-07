@@ -56,7 +56,8 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]'    ];
+        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'turnover' => null    ];
+        'property_records' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'turnover' => 'turnover'    ];
+        'property_records' => 'property_records',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'turnover' => 'setTurnover'    ];
+        'property_records' => 'setPropertyRecords',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'turnover' => 'getTurnover'    ];
+        'property_records' => 'getPropertyRecords',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +174,8 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['turnover'] = isset($data['turnover']) ? $data['turnover'] : null;
+        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -197,25 +203,49 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets turnover
+     * Gets property_records
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
      */
-    public function getTurnover()
+    public function getPropertyRecords()
     {
-        return $this->container['turnover'];
+        return $this->container['property_records'];
     }
 
     /**
-     * Sets turnover
+     * Sets property_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $turnover List of all turnover by currency in time interval
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records
      *
      * @return $this
      */
-    public function setTurnover($turnover)
+    public function setPropertyRecords($property_records)
     {
-        $this->container['turnover'] = $turnover;
+        $this->container['property_records'] = $property_records;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items Count of all found voucher property records
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

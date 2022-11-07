@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCreditTypes**](CreditTypesApi.md#getcredittypes) | **GET** /credit-types | Get all credit types
 
 # **getCreditType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028 getCreditType($credit_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030 getCreditType($credit_type_id, $accept_language)
 
 Get a credit type
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCreditTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027 getCreditTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029 getCreditTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all credit types
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
 
 ### Authorization
 

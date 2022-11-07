@@ -4,13 +4,13 @@ All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterpr
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getEventGroup**](EventGroupsApi.md#geteventgroup) | **GET** /event-groups/{event_group_id} | Get a event group
+[**getEventGroup**](EventGroupsApi.md#geteventgroup) | **GET** /event-groups/{event_group_id} | Get an event group
 [**getEventGroups**](EventGroupsApi.md#geteventgroups) | **GET** /event-groups | Get all event groups
 
 # **getEventGroup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062 getEventGroup($event_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064 getEventGroup($event_group_id, $accept_language)
 
-Get a event group
+Get an event group
 
 Get information about a specific event group.
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEventGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061 getEventGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 getEventGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
 
 Get all event groups
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
 
 ### Authorization
 

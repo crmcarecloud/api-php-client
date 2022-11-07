@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**languages** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Language[]**](Language.md) | List of the language codes by ISO 639-1 | [optional] 
-**total_items** | **int** | Count of all found languages | [optional] 
+**property_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of property records | [optional] 
+**total_items** | **int** | Count of all found event property records | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

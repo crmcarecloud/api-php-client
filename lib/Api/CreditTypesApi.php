@@ -96,7 +96,7 @@ class CreditTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030
      */
     public function getCreditType($credit_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class CreditTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditTypeWithHttpInfo($credit_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030';
         $request = $this->getCreditTypeRequest($credit_type_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CreditTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class CreditTypesApi
      */
     public function getCreditTypeAsyncWithHttpInfo($credit_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030';
         $request = $this->getCreditTypeRequest($credit_type_id, $accept_language);
 
         return $this->client
@@ -419,7 +419,7 @@ class CreditTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029
      */
     public function getCreditTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -440,11 +440,11 @@ class CreditTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029';
         $request = $this->getCreditTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -496,7 +496,7 @@ class CreditTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class CreditTypesApi
      */
     public function getCreditTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029';
         $request = $this->getCreditTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

@@ -96,7 +96,7 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073
      */
     public function getMessage($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMessageWithHttpInfo($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073';
         $request = $this->getMessageRequest($message_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class MessagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class MessagesApi
      */
     public function getMessageAsyncWithHttpInfo($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073';
         $request = $this->getMessageRequest($message_id, $accept_language);
 
         return $this->client
@@ -418,13 +418,13 @@ class MessagesApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* (optional)
+     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
      * @param  string $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072
      */
     public function getMessages($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $contact = null, $communication_channel_id = null, $send_time_from = null, $send_time_to = null)
     {
@@ -444,17 +444,17 @@ class MessagesApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* (optional)
+     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
      * @param  string $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMessagesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $contact = null, $communication_channel_id = null, $send_time_from = null, $send_time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072';
         $request = $this->getMessagesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to);
 
         try {
@@ -506,7 +506,7 @@ class MessagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -568,7 +568,7 @@ class MessagesApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* (optional)
+     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
      * @param  string $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *
@@ -597,7 +597,7 @@ class MessagesApi
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique id of the customer (optional)
      * @param  string|null $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int|null $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* (optional)
+     * @param  int|null $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
      * @param  string|null $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string|null $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *
@@ -606,7 +606,7 @@ class MessagesApi
      */
     public function getMessagesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $contact = null, $communication_channel_id = null, $send_time_from = null, $send_time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072';
         $request = $this->getMessagesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to);
 
         return $this->client
@@ -656,7 +656,7 @@ class MessagesApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* (optional)
+     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
      * @param  string $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *
@@ -798,7 +798,7 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074
      */
     public function getSubMessageDetail($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -816,11 +816,11 @@ class MessagesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubMessageDetailWithHttpInfo($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
         $request = $this->getSubMessageDetailRequest($message_id, $accept_language);
 
         try {
@@ -872,7 +872,7 @@ class MessagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -956,7 +956,7 @@ class MessagesApi
      */
     public function getSubMessageDetailAsyncWithHttpInfo($message_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
         $request = $this->getSubMessageDetailRequest($message_id, $accept_language);
 
         return $this->client

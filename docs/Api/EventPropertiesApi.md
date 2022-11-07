@@ -5,10 +5,10 @@ All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterpr
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getEventProperties**](EventPropertiesApi.md#geteventproperties) | **GET** /event-properties | Get all event properties
-[**getEventProperty**](EventPropertiesApi.md#geteventproperty) | **GET** /event-properties/{event_property_id} | Get a event property
+[**getEventProperty**](EventPropertiesApi.md#geteventproperty) | **GET** /event-properties/{event_property_id} | Get an event property
 
 # **getEventProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 getEventProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065 getEventProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all event properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 # **getEventProperty**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2008 getEventProperty($event_property_id, $accept_language)
 
-Get a event property
+Get an event property
 
 Get information about a specific event property
 

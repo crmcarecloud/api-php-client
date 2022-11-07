@@ -56,7 +56,8 @@ class InlineResponse200152Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'user_id' => 'string'    ];
+        'users' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class InlineResponse200152Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'user_id' => null    ];
+        'users' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class InlineResponse200152Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id'    ];
+        'users' => 'users',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class InlineResponse200152Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId'    ];
+        'users' => 'setUsers',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class InlineResponse200152Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId'    ];
+        'users' => 'getUsers',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +174,8 @@ class InlineResponse200152Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -197,25 +203,49 @@ class InlineResponse200152Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user_id
+     * Gets users
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User[]
      */
-    public function getUserId()
+    public function getUsers()
     {
-        return $this->container['user_id'];
+        return $this->container['users'];
     }
 
     /**
-     * Sets user_id
+     * Sets users
      *
-     * @param string $user_id The unique id of the user
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User[] $users Array of users
      *
      * @return $this
      */
-    public function setUserId($user_id)
+    public function setUsers($users)
     {
-        $this->container['user_id'] = $user_id;
+        $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items Count of all found users
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

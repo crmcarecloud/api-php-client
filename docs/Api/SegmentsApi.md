@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**postSegmentRemoveCustomer**](SegmentsApi.md#postsegmentremovecustomer) | **POST** /segments/{segment_id}/actions/remove-customer | Remove customer from a segment
 
 # **getSegment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121 getSegment($segment_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123 getSegment($segment_id, $accept_language)
 
 Get a segment
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121**](../Model/InlineResponse200121.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123**](../Model/InlineResponse200123.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegmentGroup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123 getSegmentGroup($segment_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200125 getSegmentGroup($segment_group_id, $accept_language)
 
 Get a segment group
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123**](../Model/InlineResponse200123.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200125**](../Model/InlineResponse200125.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegmentGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122 getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200124 getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all segment groups
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122**](../Model/InlineResponse200122.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200124**](../Model/InlineResponse200124.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids)
 
 Get all segments
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120**](../Model/InlineResponse200120.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122**](../Model/InlineResponse200122.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubSegmentRecords**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getSubSegmentRecords($segment_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038 getSubSegmentRecords($segment_id, $accept_language)
 
 Get a collection of segment records
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
 
 ### Authorization
 

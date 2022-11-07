@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCountries**](CountriesApi.md#getcountries) | **GET** /countries | Get all countries
 
 # **getCountries**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022 getCountries($accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024 getCountries($accept_language)
 
 Get all countries
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
 
 ### Authorization
 

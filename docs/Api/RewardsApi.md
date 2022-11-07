@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**postRewardCreateVoucher**](RewardsApi.md#postrewardcreatevoucher) | **POST** /rewards/{reward_id}/actions/create-voucher | Create a new voucher
 
 # **getReward**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112 getReward($reward_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114 getReward($reward_id, $accept_language)
 
 Get a reward
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112**](../Model/InlineResponse200112.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114**](../Model/InlineResponse200114.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRewards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111 getRewards($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113 getRewards($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id)
 
 Get all rewards
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111**](../Model/InlineResponse200111.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113**](../Model/InlineResponse200113.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubRewardProductBrands**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116 getSubRewardProductBrands($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118 getSubRewardProductBrands($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get product brands tied to a reward
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116**](../Model/InlineResponse200116.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118**](../Model/InlineResponse200118.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubRewardProductGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115 getSubRewardProductGroups($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117 getSubRewardProductGroups($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get product groups tied to a reward
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115**](../Model/InlineResponse200115.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117**](../Model/InlineResponse200117.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubRewardProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114 getSubRewardProducts($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116 getSubRewardProducts($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get products tied to a reward
 
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200114**](../Model/InlineResponse200114.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116**](../Model/InlineResponse200116.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubRewardStores**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117 getSubRewardStores($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119 getSubRewardStores($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer)
 
 Get all stores
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117**](../Model/InlineResponse200117.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119**](../Model/InlineResponse200119.md)
 
 ### Authorization
 
@@ -439,7 +439,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubRewardTags**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118 getSubRewardTags($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120 getSubRewardTags($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
 
 Get all tags for resource rewards
 
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118**](../Model/InlineResponse200118.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120**](../Model/InlineResponse200120.md)
 
 ### Authorization
 
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubRewardVouchers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113 getSubRewardVouchers($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115 getSubRewardVouchers($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id)
 
 Get vouchers tied to a reward
 
@@ -567,7 +567,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200113**](../Model/InlineResponse200113.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115**](../Model/InlineResponse200115.md)
 
 ### Authorization
 

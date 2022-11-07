@@ -83,7 +83,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubTaskProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147 getSubTaskProperties($task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149 getSubTaskProperties($task_id, $accept_language)
 
 Get a collection of task properties records
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147**](../Model/InlineResponse200147.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149**](../Model/InlineResponse200149.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTask**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137 getTask($task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139 getTask($task_id, $accept_language)
 
 Get a task
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137**](../Model/InlineResponse200137.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139**](../Model/InlineResponse200139.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskAssignee**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141 getTaskAssignee($assignee_id, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143 getTaskAssignee($assignee_id, $task_id, $accept_language)
 
 Get a task assignee
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141**](../Model/InlineResponse200141.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143**](../Model/InlineResponse200143.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskAssignees**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140 getTaskAssignees($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142 getTaskAssignees($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all task assignees
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140**](../Model/InlineResponse200140.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142**](../Model/InlineResponse200142.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskComment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139 getTaskComment($task_comment_id, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141 getTaskComment($task_comment_id, $task_id, $accept_language)
 
 Get a task comment
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139**](../Model/InlineResponse200139.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141**](../Model/InlineResponse200141.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskComments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138 getTaskComments($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140 getTaskComments($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text)
 
 Get all task comments
 
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138**](../Model/InlineResponse200138.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140**](../Model/InlineResponse200140.md)
 
 ### Authorization
 
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskState**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200145 getTaskState($task_state_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147 getTaskState($task_state_id, $accept_language)
 
 Get a task state
 
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200145**](../Model/InlineResponse200145.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147**](../Model/InlineResponse200147.md)
 
 ### Authorization
 
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskStates**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200144 getTaskStates($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146 getTaskStates($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all task states
 
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200144**](../Model/InlineResponse200144.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146**](../Model/InlineResponse200146.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143 getTaskType($task_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200145 getTaskType($task_type_id, $accept_language)
 
 Get a task type
 
@@ -637,7 +637,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143**](../Model/InlineResponse200143.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200145**](../Model/InlineResponse200145.md)
 
 ### Authorization
 
@@ -651,7 +651,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142 getTaskTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200144 getTaskTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all task types
 
@@ -703,7 +703,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142**](../Model/InlineResponse200142.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200144**](../Model/InlineResponse200144.md)
 
 ### Authorization
 
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTasks**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136 getTasks($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138 getTasks($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note)
 
 Get all tasks
 
@@ -783,7 +783,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136**](../Model/InlineResponse200136.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138**](../Model/InlineResponse200138.md)
 
 ### Authorization
 

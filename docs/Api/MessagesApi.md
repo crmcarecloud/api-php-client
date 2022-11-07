@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postMessageSend**](MessagesApi.md#postmessagesend) | **POST** /messages/actions/send-message | Send message
 
 # **getMessage**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071 getMessage($message_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073 getMessage($message_id, $accept_language)
 
 Get a message
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMessages**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070 getMessages($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072 getMessages($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to)
 
 Get all messages
 
@@ -102,7 +102,7 @@ $sort_field = "sort_field_example"; // string | Name of the sorting parameter. Y
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique id of the customer
 $contact = "contact_example"; // string | Email of phone number that was used as a contact in message
-$communication_channel_id = 56; // int | The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
+$communication_channel_id = 56; // int | The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages*
 $send_time_from = "send_time_from_example"; // string | Start date and time of the time interval *YYYY-MM-DD HH:MM:SS*
 $send_time_to = "send_time_to_example"; // string | End date and time of the time interval *YYYY-MM-DD HH:MM:SS*
 
@@ -126,13 +126,13 @@ Name | Type | Description  | Notes
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique id of the customer | [optional]
  **contact** | **string**| Email of phone number that was used as a contact in message | [optional]
- **communication_channel_id** | **int**| The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* | [optional]
+ **communication_channel_id** | **int**| The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* | [optional]
  **send_time_from** | **string**| Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* | [optional]
  **send_time_to** | **string**| End date and time of the time interval *YYYY-MM-DD HH:MM:SS* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubMessageDetail**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072 getSubMessageDetail($message_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074 getSubMessageDetail($message_id, $accept_language)
 
 Get a message detail
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
 
 ### Authorization
 

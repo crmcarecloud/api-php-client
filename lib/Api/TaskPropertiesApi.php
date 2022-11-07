@@ -100,7 +100,7 @@ class TaskPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148
      */
     public function getTaskProperties($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -122,11 +122,11 @@ class TaskPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskPropertiesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148';
         $request = $this->getTaskPropertiesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -178,7 +178,7 @@ class TaskPropertiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class TaskPropertiesApi
      */
     public function getTaskPropertiesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148';
         $request = $this->getTaskPropertiesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client

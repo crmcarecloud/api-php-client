@@ -3,8 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**point_types** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PointType[]**](PointType.md) | List of the point types | [optional] 
-**total_items** | **int** | Count of all found point types | [optional] 
+**is_valid** | **bool** | Result of the OTP verification | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

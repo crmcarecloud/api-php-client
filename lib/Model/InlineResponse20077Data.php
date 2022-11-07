@@ -56,8 +56,7 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'orders' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Order[]',
-'total_items' => 'int'    ];
+        'request_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +64,7 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'orders' => null,
-'total_items' => null    ];
+        'request_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +93,7 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'orders' => 'orders',
-'total_items' => 'total_items'    ];
+        'request_id' => 'request_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +101,7 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'orders' => 'setOrders',
-'total_items' => 'setTotalItems'    ];
+        'request_id' => 'setRequestId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +109,7 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'orders' => 'getOrders',
-'total_items' => 'getTotalItems'    ];
+        'request_id' => 'getRequestId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +169,7 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['request_id'] = isset($data['request_id']) ? $data['request_id'] : null;
     }
 
     /**
@@ -203,49 +197,25 @@ class InlineResponse20077Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets orders
+     * Gets request_id
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Order[]
+     * @return string
      */
-    public function getOrders()
+    public function getRequestId()
     {
-        return $this->container['orders'];
+        return $this->container['request_id'];
     }
 
     /**
-     * Sets orders
+     * Sets request_id
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Order[] $orders Collection of the customer orders
+     * @param string $request_id The parameter specifies the request that caused the OTP to be created. Request id will be used as one of the parameter in method [/one-time-password/actions/verify](#operation/postVerifyOtp)
      *
      * @return $this
      */
-    public function setOrders($orders)
+    public function setRequestId($request_id)
     {
-        $this->container['orders'] = $orders;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_items
-     *
-     * @return int
-     */
-    public function getTotalItems()
-    {
-        return $this->container['total_items'];
-    }
-
-    /**
-     * Sets total_items
-     *
-     * @param int $total_items Count of all found customer orders
-     *
-     * @return $this
-     */
-    public function setTotalItems($total_items)
-    {
-        $this->container['total_items'] = $total_items;
+        $this->container['request_id'] = $request_id;
 
         return $this;
     }

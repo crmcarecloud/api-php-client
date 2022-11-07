@@ -95,7 +95,7 @@ class CountriesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024
      */
     public function getCountries($accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,11 +112,11 @@ class CountriesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCountriesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024';
         $request = $this->getCountriesRequest($accept_language);
 
         try {
@@ -168,7 +168,7 @@ class CountriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -250,7 +250,7 @@ class CountriesApi
      */
     public function getCountriesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024';
         $request = $this->getCountriesRequest($accept_language);
 
         return $this->client

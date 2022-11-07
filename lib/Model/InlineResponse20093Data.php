@@ -56,7 +56,7 @@ class InlineResponse20093Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'product_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'product_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20093Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'product_properties' => null,
+        'product_groups' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20093Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_properties' => 'product_properties',
+        'product_groups' => 'product_groups',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20093Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_properties' => 'setProductProperties',
+        'product_groups' => 'setProductGroups',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20093Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_properties' => 'getProductProperties',
+        'product_groups' => 'getProductGroups',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20093Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_properties'] = isset($data['product_properties']) ? $data['product_properties'] : null;
+        $this->container['product_groups'] = isset($data['product_groups']) ? $data['product_groups'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20093Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets product_properties
+     * Gets product_groups
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]
      */
-    public function getProductProperties()
+    public function getProductGroups()
     {
-        return $this->container['product_properties'];
+        return $this->container['product_groups'];
     }
 
     /**
-     * Sets product_properties
+     * Sets product_groups
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $product_properties List of all product properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[] $product_groups List of all product groups
      *
      * @return $this
      */
-    public function setProductProperties($product_properties)
+    public function setProductGroups($product_groups)
     {
-        $this->container['product_properties'] = $product_properties;
+        $this->container['product_groups'] = $product_groups;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20093Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found product properties
+     * @param int $total_items Count of all found product groups
      *
      * @return $this
      */

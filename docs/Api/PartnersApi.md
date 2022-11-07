@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getPartners**](PartnersApi.md#getpartners) | **GET** /partners | Get all partners
 
 # **getPartner**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20080 getPartner($partner_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082 getPartner($partner_id, $accept_language)
 
 Get a partner
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20080**](../Model/InlineResponse20080.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPartners**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079 getPartners($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081 getPartners($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all partners
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079**](../Model/InlineResponse20079.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
 
 ### Authorization
 

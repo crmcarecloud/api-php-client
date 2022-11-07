@@ -56,7 +56,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'purchases' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[]',
+        'credits' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Credit[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'purchases' => null,
+        'credits' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'purchases' => 'purchases',
+        'credits' => 'credits',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'purchases' => 'setPurchases',
+        'credits' => 'setCredits',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'purchases' => 'getPurchases',
+        'credits' => 'getCredits',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['purchases'] = isset($data['purchases']) ? $data['purchases'] : null;
+        $this->container['credits'] = isset($data['credits']) ? $data['credits'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets purchases
+     * Gets credits
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Credit[]
      */
-    public function getPurchases()
+    public function getCredits()
     {
-        return $this->container['purchases'];
+        return $this->container['credits'];
     }
 
     /**
-     * Sets purchases
+     * Sets credits
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[] $purchases List of purchases
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Credit[] $credits List of the credit records
      *
      * @return $this
      */
-    public function setPurchases($purchases)
+    public function setCredits($credits)
     {
-        $this->container['purchases'] = $purchases;
+        $this->container['credits'] = $credits;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found purchases
+     * @param int $total_items Count of all found credit records
      *
      * @return $this
      */

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCustomerRelationTypes**](CustomerRelationTypesApi.md#getcustomerrelationtypes) | **GET** /customer-relation-types | Get all customer relation types
 
 # **getCustomerRelationType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054 getCustomerRelationType($customer_relation_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056 getCustomerRelationType($customer_relation_type_id, $accept_language)
 
 Detail of a customer relation type
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerRelationTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053 getCustomerRelationTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055 getCustomerRelationTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all customer relation types
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
 
 ### Authorization
 

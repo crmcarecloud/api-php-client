@@ -200,6 +200,7 @@ const COMMUNICATION_CHANNEL_ID_1 = 1;
 const COMMUNICATION_CHANNEL_ID_2 = 2;
 const COMMUNICATION_CHANNEL_ID_4 = 4;
 const COMMUNICATION_CHANNEL_ID_5 = 5;
+const COMMUNICATION_CHANNEL_ID_9 = 9;
 
     /**
      * Gets allowable values of the enum
@@ -224,7 +225,8 @@ self::MESSAGE_TEMPLATE_GROUP_ID_3,        ];
             self::COMMUNICATION_CHANNEL_ID_1,
 self::COMMUNICATION_CHANNEL_ID_2,
 self::COMMUNICATION_CHANNEL_ID_4,
-self::COMMUNICATION_CHANNEL_ID_5,        ];
+self::COMMUNICATION_CHANNEL_ID_5,
+self::COMMUNICATION_CHANNEL_ID_9,        ];
     }
 
     /**
@@ -474,7 +476,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets communication_channel_id
      *
-     * @param int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification*
+     * @param int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification / 9 - Viber messages*
      *
      * @return $this
      */

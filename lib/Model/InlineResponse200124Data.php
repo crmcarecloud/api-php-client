@@ -56,7 +56,7 @@ class InlineResponse200124Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'entrances' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Entrance[]',
+        'segment_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SegmentGroup[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200124Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'entrances' => null,
+        'segment_groups' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200124Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'entrances' => 'entrances',
+        'segment_groups' => 'segment_groups',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200124Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'entrances' => 'setEntrances',
+        'segment_groups' => 'setSegmentGroups',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200124Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'entrances' => 'getEntrances',
+        'segment_groups' => 'getSegmentGroups',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200124Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['entrances'] = isset($data['entrances']) ? $data['entrances'] : null;
+        $this->container['segment_groups'] = isset($data['segment_groups']) ? $data['segment_groups'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200124Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets entrances
+     * Gets segment_groups
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Entrance[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentGroup[]
      */
-    public function getEntrances()
+    public function getSegmentGroups()
     {
-        return $this->container['entrances'];
+        return $this->container['segment_groups'];
     }
 
     /**
-     * Sets entrances
+     * Sets segment_groups
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Entrance[] $entrances List of available entrances
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentGroup[] $segment_groups List of all segment groups
      *
      * @return $this
      */
-    public function setEntrances($entrances)
+    public function setSegmentGroups($segment_groups)
     {
-        $this->container['entrances'] = $entrances;
+        $this->container['segment_groups'] = $segment_groups;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200124Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found entrances
+     * @param int $total_items Count of all found segments
      *
      * @return $this
      */

@@ -56,7 +56,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'currencies' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Currency[]',
+        'credit_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CreditType[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'currencies' => null,
+        'credit_types' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'currencies' => 'currencies',
+        'credit_types' => 'credit_types',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'currencies' => 'setCurrencies',
+        'credit_types' => 'setCreditTypes',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'currencies' => 'getCurrencies',
+        'credit_types' => 'getCreditTypes',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['currencies'] = isset($data['currencies']) ? $data['currencies'] : null;
+        $this->container['credit_types'] = isset($data['credit_types']) ? $data['credit_types'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets currencies
+     * Gets credit_types
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CreditType[]
      */
-    public function getCurrencies()
+    public function getCreditTypes()
     {
-        return $this->container['currencies'];
+        return $this->container['credit_types'];
     }
 
     /**
-     * Sets currencies
+     * Sets credit_types
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[] $currencies Structure of currency
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CreditType[] $credit_types List of the credit types
      *
      * @return $this
      */
-    public function setCurrencies($currencies)
+    public function setCreditTypes($credit_types)
     {
-        $this->container['currencies'] = $currencies;
+        $this->container['credit_types'] = $credit_types;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Total count of found items of resource currencies
+     * @param int $total_items Count of all found credit types
      *
      * @return $this
      */

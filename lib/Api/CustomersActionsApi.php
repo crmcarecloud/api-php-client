@@ -100,7 +100,7 @@ class CustomersActionsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049
      */
     public function getCustomerSearch($accept_language = 'cs, en-gb;q=0.8', $first_name = null, $last_name = null, $birthdate = null, $card_number = null, $mode = null)
     {
@@ -122,11 +122,11 @@ class CustomersActionsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerSearchWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $first_name = null, $last_name = null, $birthdate = null, $card_number = null, $mode = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049';
         $request = $this->getCustomerSearchRequest($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode);
 
         try {
@@ -178,7 +178,7 @@ class CustomersActionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class CustomersActionsApi
      */
     public function getCustomerSearchAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $first_name = null, $last_name = null, $birthdate = null, $card_number = null, $mode = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049';
         $request = $this->getCustomerSearchRequest($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode);
 
         return $this->client

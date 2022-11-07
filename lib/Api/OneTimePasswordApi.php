@@ -96,7 +96,7 @@ class OneTimePasswordApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077
      */
     public function postSendOtp($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class OneTimePasswordApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSendOtpWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077';
         $request = $this->postSendOtpRequest($body, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class OneTimePasswordApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class OneTimePasswordApi
      */
     public function postSendOtpAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077';
         $request = $this->postSendOtpRequest($body, $accept_language);
 
         return $this->client
@@ -408,7 +408,7 @@ class OneTimePasswordApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078
      */
     public function postVerifyOtp($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -426,11 +426,11 @@ class OneTimePasswordApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078, HTTP status code, HTTP response headers (array of strings)
      */
     public function postVerifyOtpWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078';
         $request = $this->postVerifyOtpRequest($body, $accept_language);
 
         try {
@@ -482,7 +482,7 @@ class OneTimePasswordApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -566,7 +566,7 @@ class OneTimePasswordApi
      */
     public function postVerifyOtpAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078';
         $request = $this->postVerifyOtpRequest($body, $accept_language);
 
         return $this->client
