@@ -91,12 +91,12 @@ class HintsApi
      *
      * Get a recommendation
      *
-     * @param  string $recommendation_id The unique id for a recommendation (required)
+     * @param  string $recommendation_id The unique id of a recommendation (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112
      */
     public function getRecommendation($recommendation_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -109,16 +109,16 @@ class HintsApi
      *
      * Get a recommendation
      *
-     * @param  string $recommendation_id The unique id for a recommendation (required)
+     * @param  string $recommendation_id The unique id of a recommendation (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecommendationWithHttpInfo($recommendation_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112';
         $request = $this->getRecommendationRequest($recommendation_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class HintsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -225,7 +225,7 @@ class HintsApi
      *
      * Get a recommendation
      *
-     * @param  string $recommendation_id The unique id for a recommendation (required)
+     * @param  string $recommendation_id The unique id of a recommendation (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -246,7 +246,7 @@ class HintsApi
      *
      * Get a recommendation
      *
-     * @param  string $recommendation_id The unique id for a recommendation (required)
+     * @param  string $recommendation_id The unique id of a recommendation (required)
      * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -254,7 +254,7 @@ class HintsApi
      */
     public function getRecommendationAsyncWithHttpInfo($recommendation_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112';
         $request = $this->getRecommendationRequest($recommendation_id, $accept_language);
 
         return $this->client
@@ -297,7 +297,7 @@ class HintsApi
     /**
      * Create request for operation 'getRecommendation'
      *
-     * @param  string $recommendation_id The unique id for a recommendation (required)
+     * @param  string $recommendation_id The unique id of a recommendation (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
@@ -420,7 +420,7 @@ class HintsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111
      */
     public function getRecommendations($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -442,11 +442,11 @@ class HintsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecommendationsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111';
         $request = $this->getRecommendationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -498,7 +498,7 @@ class HintsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -590,7 +590,7 @@ class HintsApi
      */
     public function getRecommendationsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111';
         $request = $this->getRecommendationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client

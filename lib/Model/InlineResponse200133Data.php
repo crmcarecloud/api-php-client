@@ -56,7 +56,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
+        'statuses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Status[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'property_records' => null,
+        'statuses' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'property_records' => 'property_records',
+        'statuses' => 'statuses',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'property_records' => 'setPropertyRecords',
+        'statuses' => 'setStatuses',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'property_records' => 'getPropertyRecords',
+        'statuses' => 'getStatuses',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
+        $this->container['statuses'] = isset($data['statuses']) ? $data['statuses'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets property_records
+     * Gets statuses
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Status[]
      */
-    public function getPropertyRecords()
+    public function getStatuses()
     {
-        return $this->container['property_records'];
+        return $this->container['statuses'];
     }
 
     /**
-     * Sets property_records
+     * Sets statuses
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Status[] $statuses List of recent statuses
      *
      * @return $this
      */
-    public function setPropertyRecords($property_records)
+    public function setStatuses($statuses)
     {
-        $this->container['property_records'] = $property_records;
+        $this->container['statuses'] = $statuses;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found store property records
+     * @param int $total_items Count of all found statuses
      *
      * @return $this
      */

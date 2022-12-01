@@ -242,7 +242,7 @@ self::LOGIN_TYPE_EMAIL,        ];
     /**
      * Sets login_type
      *
-     * @param string $login_type The unique id for the login type.
+     * @param string $login_type The unique id of the login type.
      *
      * @return $this
      */

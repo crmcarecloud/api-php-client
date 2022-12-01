@@ -209,7 +209,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
     /**
      * Sets interest_record_id
      *
-     * @param string $interest_record_id The unique id for the interest record
+     * @param string $interest_record_id The unique id of the interest record
      *
      * @return $this
      */

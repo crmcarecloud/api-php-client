@@ -246,7 +246,7 @@ class Flag implements ModelInterface, ArrayAccess
     /**
      * Sets text_id
      *
-     * @param string $text_id The unique id for the flag
+     * @param string $text_id The unique id of the flag
      *
      * @return $this
      */

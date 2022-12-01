@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event_id** | **string** | The unique id of the event | [optional] 
 **event_type_id** | **string** | The unique id of the event type | 
-**customer_id** | **string** | The unique id for the card holder. | 
+**customer_id** | **string** | The unique id of the card holder. | 
 **external_id** | **string** | The unique external id of the event. It may be id from other system | 
 **data** | [**OneOfEventData**](OneOfEventData.md) | Additional data of the event. Serialized data in JSON | [optional] 
 **created_at** | **string** | Date and time of the event *(YYYY-MM-DD HH:MM:SS)* | [optional] 

@@ -228,7 +228,7 @@ class CardType implements ModelInterface, ArrayAccess
     /**
      * Sets card_type_id
      *
-     * @param string $card_type_id The unique id for the card type.
+     * @param string $card_type_id The unique id of the card type.
      *
      * @return $this
      */

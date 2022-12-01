@@ -370,7 +370,7 @@ self::REWARD_LIST_TYPE_A,        ];
     /**
      * Sets reward_list_type
      *
-     * @param string $reward_list_type Type of the rewards *Possible values: F - full (all manual rewards available and valid for the specific POS)/ C -condensed (only manual rewards corresponding to items on the bill - maxCount not equals zero)/ A - all rewards list including automatic apply this is only for the DATA CUBE*
+     * @param string $reward_list_type Type of the rewards *Possible values: F - full (all manual rewards available and valid of the specific POS)/ C -condensed (only manual rewards corresponding to items on the bill - maxCount not equals zero)/ A - all rewards list including automatic apply this is only for the DATA CUBE*
      *
      * @return $this
      */

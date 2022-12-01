@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**putEntrance**](ChargedEntrancesApi.md#putentrance) | **PUT** /entrances/{entrance_id} | Update an entrance
 
 # **getEntrance**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200127 getEntrance($entrance_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131 getEntrance($entrance_id, $accept_language)
 
 Get an entrance
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200127**](../Model/InlineResponse200127.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131**](../Model/InlineResponse200131.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEntrances**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200126 getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130 getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled)
 
 Get all entrances
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200126**](../Model/InlineResponse200126.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130**](../Model/InlineResponse200130.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEntrancesOverview**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128 getEntrancesOverview($accept_language, $valid_from, $valid_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132 getEntrancesOverview($accept_language, $valid_from, $valid_to, $pos_id)
 
 Get entrances overview
 
@@ -188,9 +188,10 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ChargedEntrancesAp
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 $valid_from = "valid_from_example"; // string | Date from when is record already valid. *(YYYY-MM-DD)*
 $valid_to = "valid_to_example"; // string | Date to when is record still valid. *(YYYY-MM-DD)*
+$pos_id = 56; // int | Id of POS system for tickets. Required with path parameter entrance id *Possible values are: EPOS - 3 / skidata - 6 / axess - 9 / base - 11*
 
 try {
-    $result = $apiInstance->getEntrancesOverview($accept_language, $valid_from, $valid_to);
+    $result = $apiInstance->getEntrancesOverview($accept_language, $valid_from, $valid_to, $pos_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChargedEntrancesApi->getEntrancesOverview: ', $e->getMessage(), PHP_EOL;
@@ -205,10 +206,11 @@ Name | Type | Description  | Notes
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **valid_from** | **string**| Date from when is record already valid. *(YYYY-MM-DD)* | [optional]
  **valid_to** | **string**| Date to when is record still valid. *(YYYY-MM-DD)* | [optional]
+ **pos_id** | **int**| Id of POS system for tickets. Required with path parameter entrance id *Possible values are: EPOS - 3 / skidata - 6 / axess - 9 / base - 11* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128**](../Model/InlineResponse200128.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132**](../Model/InlineResponse200132.md)
 
 ### Authorization
 

@@ -209,7 +209,7 @@ class InlineResponse2014Data implements ModelInterface, ArrayAccess
     /**
      * Sets card_id
      *
-     * @param string $card_id The unique id for the card
+     * @param string $card_id The unique id of the card
      *
      * @return $this
      */

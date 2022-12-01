@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**recommendation_id** | **string** | The unique id for the recommendation | [optional] 
+**recommendation_id** | **string** | The unique id of the recommendation | [optional] 
 **name** | **string** | Name of a the recommendation | 
 **brief_description** | **string** | Brief description of the recommendation | [optional] 
 **detailed_description** | **string** | Detailed recommendation description | [optional] 

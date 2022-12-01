@@ -288,7 +288,7 @@ self::STATE_1,        ];
     /**
      * Sets card_id
      *
-     * @param string $card_id The unique id for the card
+     * @param string $card_id The unique id of the card
      *
      * @return $this
      */
@@ -312,7 +312,7 @@ self::STATE_1,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique id for the card holder.
+     * @param string $customer_id The unique id of the card holder.
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ self::STATE_1,        ];
     /**
      * Sets card_type_id
      *
-     * @param string $card_type_id The unique id for the card type.
+     * @param string $card_type_id The unique id of the card type.
      *
      * @return $this
      */
@@ -432,7 +432,7 @@ self::STATE_1,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique id for the store, where the card was assigned to a customer
+     * @param string $store_id The unique id of the store, where the card was assigned to a customer
      *
      * @return $this
      */

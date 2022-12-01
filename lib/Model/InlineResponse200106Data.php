@@ -56,8 +56,11 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'purchase_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseType[]',
-'total_items' => 'int'    ];
+        'earned_points' => 'float',
+'used_credits' => 'float',
+'used_points' => 'float',
+'used_points_total' => 'float',
+'used_vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +68,11 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'purchase_types' => null,
-'total_items' => null    ];
+        'earned_points' => 'float',
+'used_credits' => 'float',
+'used_points' => 'float',
+'used_points_total' => 'float',
+'used_vouchers' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +101,11 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'purchase_types' => 'purchase_types',
-'total_items' => 'total_items'    ];
+        'earned_points' => 'earned_points',
+'used_credits' => 'used_credits',
+'used_points' => 'used_points',
+'used_points_total' => 'used_points_total',
+'used_vouchers' => 'used_vouchers'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +113,11 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'purchase_types' => 'setPurchaseTypes',
-'total_items' => 'setTotalItems'    ];
+        'earned_points' => 'setEarnedPoints',
+'used_credits' => 'setUsedCredits',
+'used_points' => 'setUsedPoints',
+'used_points_total' => 'setUsedPointsTotal',
+'used_vouchers' => 'setUsedVouchers'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +125,11 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'purchase_types' => 'getPurchaseTypes',
-'total_items' => 'getTotalItems'    ];
+        'earned_points' => 'getEarnedPoints',
+'used_credits' => 'getUsedCredits',
+'used_points' => 'getUsedPoints',
+'used_points_total' => 'getUsedPointsTotal',
+'used_vouchers' => 'getUsedVouchers'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +189,11 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['purchase_types'] = isset($data['purchase_types']) ? $data['purchase_types'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['earned_points'] = isset($data['earned_points']) ? $data['earned_points'] : null;
+        $this->container['used_credits'] = isset($data['used_credits']) ? $data['used_credits'] : null;
+        $this->container['used_points'] = isset($data['used_points']) ? $data['used_points'] : null;
+        $this->container['used_points_total'] = isset($data['used_points_total']) ? $data['used_points_total'] : null;
+        $this->container['used_vouchers'] = isset($data['used_vouchers']) ? $data['used_vouchers'] : null;
     }
 
     /**
@@ -203,49 +221,121 @@ class InlineResponse200106Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets purchase_types
+     * Gets earned_points
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseType[]
+     * @return float
      */
-    public function getPurchaseTypes()
+    public function getEarnedPoints()
     {
-        return $this->container['purchase_types'];
+        return $this->container['earned_points'];
     }
 
     /**
-     * Sets purchase_types
+     * Sets earned_points
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseType[] $purchase_types List of the purchase types
+     * @param float $earned_points Amount of earned points of the purchase.
      *
      * @return $this
      */
-    public function setPurchaseTypes($purchase_types)
+    public function setEarnedPoints($earned_points)
     {
-        $this->container['purchase_types'] = $purchase_types;
+        $this->container['earned_points'] = $earned_points;
 
         return $this;
     }
 
     /**
-     * Gets total_items
+     * Gets used_credits
      *
-     * @return int
+     * @return float
      */
-    public function getTotalItems()
+    public function getUsedCredits()
     {
-        return $this->container['total_items'];
+        return $this->container['used_credits'];
     }
 
     /**
-     * Sets total_items
+     * Sets used_credits
      *
-     * @param int $total_items Count of all found purchase types
+     * @param float $used_credits Amount of credits used to pay of the purchase
      *
      * @return $this
      */
-    public function setTotalItems($total_items)
+    public function setUsedCredits($used_credits)
     {
-        $this->container['total_items'] = $total_items;
+        $this->container['used_credits'] = $used_credits;
+
+        return $this;
+    }
+
+    /**
+     * Gets used_points
+     *
+     * @return float
+     */
+    public function getUsedPoints()
+    {
+        return $this->container['used_points'];
+    }
+
+    /**
+     * Sets used_points
+     *
+     * @param float $used_points Amount of points used to pay of the purchase
+     *
+     * @return $this
+     */
+    public function setUsedPoints($used_points)
+    {
+        $this->container['used_points'] = $used_points;
+
+        return $this;
+    }
+
+    /**
+     * Gets used_points_total
+     *
+     * @return float
+     */
+    public function getUsedPointsTotal()
+    {
+        return $this->container['used_points_total'];
+    }
+
+    /**
+     * Sets used_points_total
+     *
+     * @param float $used_points_total Amount of points used to pay and used in vouchers of the purchase
+     *
+     * @return $this
+     */
+    public function setUsedPointsTotal($used_points_total)
+    {
+        $this->container['used_points_total'] = $used_points_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets used_vouchers
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]
+     */
+    public function getUsedVouchers()
+    {
+        return $this->container['used_vouchers'];
+    }
+
+    /**
+     * Sets used_vouchers
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[] $used_vouchers List of used vouchers
+     *
+     * @return $this
+     */
+    public function setUsedVouchers($used_vouchers)
+    {
+        $this->container['used_vouchers'] = $used_vouchers;
 
         return $this;
     }

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entrances** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Entrance[]**](Entrance.md) | List of available entrances | [optional] 
-**total_items** | **int** | Count of all found entrances | [optional] 
+**segments** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Segment[]**](Segment.md) | List of all segments | [optional] 
+**total_items** | **int** | Count of all found segments | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

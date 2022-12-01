@@ -56,8 +56,9 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
-'total_items' => 'int'    ];
+        'bearer_token' => 'string',
+'valid_to' => 'string',
+'user' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +66,9 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'property_records' => null,
-'total_items' => null    ];
+        'bearer_token' => null,
+'valid_to' => null,
+'user' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +97,9 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'property_records' => 'property_records',
-'total_items' => 'total_items'    ];
+        'bearer_token' => 'bearer_token',
+'valid_to' => 'valid_to',
+'user' => 'user'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +107,9 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'property_records' => 'setPropertyRecords',
-'total_items' => 'setTotalItems'    ];
+        'bearer_token' => 'setBearerToken',
+'valid_to' => 'setValidTo',
+'user' => 'setUser'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +117,9 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'property_records' => 'getPropertyRecords',
-'total_items' => 'getTotalItems'    ];
+        'bearer_token' => 'getBearerToken',
+'valid_to' => 'getValidTo',
+'user' => 'getUser'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +179,9 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
+        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -203,49 +209,73 @@ class InlineResponse200159Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets property_records
+     * Gets bearer_token
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     * @return string
      */
-    public function getPropertyRecords()
+    public function getBearerToken()
     {
-        return $this->container['property_records'];
+        return $this->container['bearer_token'];
     }
 
     /**
-     * Sets property_records
+     * Sets bearer_token
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records
+     * @param string $bearer_token Autentication bearer token for an user. Token can be used for autentication in REST API with Bearer Autentication (more information about it [here](#section/Authorization/bearerAuth))
      *
      * @return $this
      */
-    public function setPropertyRecords($property_records)
+    public function setBearerToken($bearer_token)
     {
-        $this->container['property_records'] = $property_records;
+        $this->container['bearer_token'] = $bearer_token;
 
         return $this;
     }
 
     /**
-     * Gets total_items
+     * Gets valid_to
      *
-     * @return int
+     * @return string
      */
-    public function getTotalItems()
+    public function getValidTo()
     {
-        return $this->container['total_items'];
+        return $this->container['valid_to'];
     }
 
     /**
-     * Sets total_items
+     * Sets valid_to
      *
-     * @param int $total_items Count of all found voucher property records
+     * @param string $valid_to Date and time (local time zone of the project) of the token validity   *(YYYY-MM-DD HH:MM:SS)*
      *
      * @return $this
      */
-    public function setTotalItems($total_items)
+    public function setValidTo($valid_to)
     {
-        $this->container['total_items'] = $total_items;
+        $this->container['valid_to'] = $valid_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets user
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User
+     */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+     * Sets user
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User $user user
+     *
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
 
         return $this;
     }

@@ -96,7 +96,7 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104
      */
     public function getPurchase($purchase_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPurchaseWithHttpInfo($purchase_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
         $request = $this->getPurchaseRequest($purchase_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class PurchasesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class PurchasesApi
      */
     public function getPurchaseAsyncWithHttpInfo($purchase_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
         $request = $this->getPurchaseRequest($purchase_id, $accept_language);
 
         return $this->client
@@ -416,7 +416,7 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106
      */
     public function getPurchasePaymentSummary($purchase_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -434,11 +434,11 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPurchasePaymentSummaryWithHttpInfo($purchase_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
         $request = $this->getPurchasePaymentSummaryRequest($purchase_id, $accept_language);
 
         try {
@@ -490,7 +490,7 @@ class PurchasesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -574,7 +574,7 @@ class PurchasesApi
      */
     public function getPurchasePaymentSummaryAsyncWithHttpInfo($purchase_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
         $request = $this->getPurchasePaymentSummaryRequest($purchase_id, $accept_language);
 
         return $this->client
@@ -1131,7 +1131,7 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105
      */
     public function getSubPurchaseItems($purchase_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -1153,11 +1153,11 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubPurchaseItemsWithHttpInfo($purchase_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
         $request = $this->getSubPurchaseItemsRequest($purchase_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -1209,7 +1209,7 @@ class PurchasesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1301,7 +1301,7 @@ class PurchasesApi
      */
     public function getSubPurchaseItemsAsyncWithHttpInfo($purchase_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
         $request = $this->getSubPurchaseItemsRequest($purchase_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -2195,7 +2195,7 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108
      */
     public function postPurchaseAcceptPayment($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2213,11 +2213,11 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108, HTTP status code, HTTP response headers (array of strings)
      */
     public function postPurchaseAcceptPaymentWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108';
         $request = $this->postPurchaseAcceptPaymentRequest($body, $accept_language);
 
         try {
@@ -2269,7 +2269,7 @@ class PurchasesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2353,7 +2353,7 @@ class PurchasesApi
      */
     public function postPurchaseAcceptPaymentAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108';
         $request = $this->postPurchaseAcceptPaymentRequest($body, $accept_language);
 
         return $this->client
@@ -2782,7 +2782,7 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107
      */
     public function postPurchaseRecommendedRewards($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2800,11 +2800,11 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107, HTTP status code, HTTP response headers (array of strings)
      */
     public function postPurchaseRecommendedRewardsWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
         $request = $this->postPurchaseRecommendedRewardsRequest($body, $accept_language);
 
         try {
@@ -2856,7 +2856,7 @@ class PurchasesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2940,7 +2940,7 @@ class PurchasesApi
      */
     public function postPurchaseRecommendedRewardsAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107';
         $request = $this->postPurchaseRecommendedRewardsRequest($body, $accept_language);
 
         return $this->client

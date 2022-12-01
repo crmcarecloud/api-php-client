@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservations**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code)
 
 Get all product reservations
 
@@ -100,13 +100,14 @@ $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$reservation_code = "reservation_code_example"; // string | Code of the reservation
 $customer_id = "customer_id_example"; // string | The unique id of the customer
 $store_id = "store_id_example"; // string | The unique id of the store in CareCloud
 $reservation_state = 56; // int | Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
+$external_reservation_list_type_id = "external_reservation_list_type_id_example"; // string | Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. If set, `external_reservation_code` has to be present in request too.
+$external_reservation_code = "external_reservation_code_example"; // string | Code of the reservation from external system (cashdesk, webshop, production system, others). If set, `external_reservation_list_type_id` has to be present in request too
 
 try {
-    $result = $apiInstance->getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state);
+    $result = $apiInstance->getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductReservationsApi->getProductReservations: ', $e->getMessage(), PHP_EOL;
@@ -123,10 +124,11 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **reservation_code** | **string**| Code of the reservation | [optional]
  **customer_id** | **string**| The unique id of the customer | [optional]
  **store_id** | **string**| The unique id of the store in CareCloud | [optional]
  **reservation_state** | **int**| Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional]
+ **external_reservation_list_type_id** | **string**| Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. If set, &#x60;external_reservation_code&#x60; has to be present in request too. | [optional]
+ **external_reservation_code** | **string**| Code of the reservation from external system (cashdesk, webshop, production system, others). If set, &#x60;external_reservation_list_type_id&#x60; has to be present in request too | [optional]
 
 ### Return type
 

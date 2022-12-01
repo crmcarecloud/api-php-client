@@ -231,7 +231,7 @@ class Currency implements ModelInterface, ArrayAccess
     /**
      * Sets currency_id
      *
-     * @param string $currency_id The unique id for the currency
+     * @param string $currency_id The unique id of the currency
      *
      * @return $this
      */

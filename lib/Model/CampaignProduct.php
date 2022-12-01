@@ -351,7 +351,7 @@ self::STATE_1,        ];
     /**
      * Sets campaign_product_id
      *
-     * @param string $campaign_product_id The unique id for the campaign product
+     * @param string $campaign_product_id The unique id of the campaign product
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ self::STATE_1,        ];
     /**
      * Sets product_id
      *
-     * @param string $product_id The unique id for the product
+     * @param string $product_id The unique id of the product
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ self::STATE_1,        ];
     /**
      * Sets currency_id
      *
-     * @param string $currency_id The unique id for the currency
+     * @param string $currency_id The unique id of the currency
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ self::STATE_1,        ];
     /**
      * Sets campaign_id
      *
-     * @param string $campaign_id The unique id for the campaign
+     * @param string $campaign_id The unique id of the campaign
      *
      * @return $this
      */

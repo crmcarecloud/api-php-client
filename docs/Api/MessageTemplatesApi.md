@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMessageTemplates**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075 getMessageTemplates($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075 getMessageTemplates($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $communication_channel_id)
 
 Get all message templates
 
@@ -99,9 +99,10 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name
+$communication_channel_id = "communication_channel_id_example"; // string | The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels)
 
 try {
-    $result = $apiInstance->getMessageTemplates($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
+    $result = $apiInstance->getMessageTemplates($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $communication_channel_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MessageTemplatesApi->getMessageTemplates: ', $e->getMessage(), PHP_EOL;
@@ -119,6 +120,7 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name | [optional]
+ **communication_channel_id** | **string**| The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) | [optional]
 
 ### Return type
 

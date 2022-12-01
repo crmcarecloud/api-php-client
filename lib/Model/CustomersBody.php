@@ -60,7 +60,8 @@ class CustomersBody implements ModelInterface, ArrayAccess
 'customer_source' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord',
 'password' => 'string',
 'autologin' => 'bool',
-'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'    ];
+'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials',
+'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -72,7 +73,8 @@ class CustomersBody implements ModelInterface, ArrayAccess
 'customer_source' => null,
 'password' => 'password',
 'autologin' => null,
-'social_network_credentials' => null    ];
+'social_network_credentials' => null,
+'property_records' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -105,7 +107,8 @@ class CustomersBody implements ModelInterface, ArrayAccess
 'customer_source' => 'customer_source',
 'password' => 'password',
 'autologin' => 'autologin',
-'social_network_credentials' => 'social_network_credentials'    ];
+'social_network_credentials' => 'social_network_credentials',
+'property_records' => 'property_records'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -117,7 +120,8 @@ class CustomersBody implements ModelInterface, ArrayAccess
 'customer_source' => 'setCustomerSource',
 'password' => 'setPassword',
 'autologin' => 'setAutologin',
-'social_network_credentials' => 'setSocialNetworkCredentials'    ];
+'social_network_credentials' => 'setSocialNetworkCredentials',
+'property_records' => 'setPropertyRecords'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -129,7 +133,8 @@ class CustomersBody implements ModelInterface, ArrayAccess
 'customer_source' => 'getCustomerSource',
 'password' => 'getPassword',
 'autologin' => 'getAutologin',
-'social_network_credentials' => 'getSocialNetworkCredentials'    ];
+'social_network_credentials' => 'getSocialNetworkCredentials',
+'property_records' => 'getPropertyRecords'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -194,6 +199,7 @@ class CustomersBody implements ModelInterface, ArrayAccess
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['autologin'] = isset($data['autologin']) ? $data['autologin'] : null;
         $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
     }
 
     /**
@@ -345,6 +351,30 @@ class CustomersBody implements ModelInterface, ArrayAccess
     public function setSocialNetworkCredentials($social_network_credentials)
     {
         $this->container['social_network_credentials'] = $social_network_credentials;
+
+        return $this;
+    }
+
+    /**
+     * Gets property_records
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     */
+    public function getPropertyRecords()
+    {
+        return $this->container['property_records'];
+    }
+
+    /**
+     * Sets property_records
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of an customer property records
+     *
+     * @return $this
+     */
+    public function setPropertyRecords($property_records)
+    {
+        $this->container['property_records'] = $property_records;
 
         return $this;
     }

@@ -209,7 +209,7 @@ class InlineResponse2012Data implements ModelInterface, ArrayAccess
     /**
      * Sets campaign_product_id
      *
-     * @param string $campaign_product_id The unique id for the campaign product
+     * @param string $campaign_product_id The unique id of the campaign product
      *
      * @return $this
      */

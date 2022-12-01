@@ -56,7 +56,7 @@ class InlineResponse200156Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'user_roles' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]',
+        'users' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200156Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'user_roles' => null,
+        'users' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200156Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_roles' => 'user_roles',
+        'users' => 'users',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200156Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user_roles' => 'setUserRoles',
+        'users' => 'setUsers',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200156Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user_roles' => 'getUserRoles',
+        'users' => 'getUsers',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200156Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user_roles'] = isset($data['user_roles']) ? $data['user_roles'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200156Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user_roles
+     * Gets users
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User[]
      */
-    public function getUserRoles()
+    public function getUsers()
     {
-        return $this->container['user_roles'];
+        return $this->container['users'];
     }
 
     /**
-     * Sets user_roles
+     * Sets users
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[] $user_roles Array of user roles
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User[] $users Array of users
      *
      * @return $this
      */
-    public function setUserRoles($user_roles)
+    public function setUsers($users)
     {
-        $this->container['user_roles'] = $user_roles;
+        $this->container['users'] = $users;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200156Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found user roles
+     * @param int $total_items Count of all found users
      *
      * @return $this
      */

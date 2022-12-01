@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postVoucherApply**](VouchersApi.md#postvoucherapply) | **POST** /vouchers/{voucher_id}/actions/apply-voucher | Application of a voucher
 
 # **getSubVoucherProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159 getSubVoucherProperties($voucher_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163 getSubVoucherProperties($voucher_id, $accept_language)
 
 Get a collection of voucher properties records
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159**](../Model/InlineResponse200159.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163**](../Model/InlineResponse200163.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getVoucher**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200158 getVoucher($voucher_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162 getVoucher($voucher_id, $accept_language)
 
 Get a voucher
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200158**](../Model/InlineResponse200158.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162**](../Model/InlineResponse200162.md)
 
 ### Authorization
 

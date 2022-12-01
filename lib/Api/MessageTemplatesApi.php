@@ -417,14 +417,15 @@ class MessageTemplatesApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name (optional)
+     * @param  string $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075
      */
-    public function getMessageTemplates($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
+    public function getMessageTemplates($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $communication_channel_id = null)
     {
-        list($response) = $this->getMessageTemplatesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
+        list($response) = $this->getMessageTemplatesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $communication_channel_id);
         return $response;
     }
 
@@ -439,15 +440,16 @@ class MessageTemplatesApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name (optional)
+     * @param  string $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMessageTemplatesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
+    public function getMessageTemplatesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $communication_channel_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
-        $request = $this->getMessageTemplatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
+        $request = $this->getMessageTemplatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $communication_channel_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -559,13 +561,14 @@ class MessageTemplatesApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name (optional)
+     * @param  string $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMessageTemplatesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
+    public function getMessageTemplatesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $communication_channel_id = null)
     {
-        return $this->getMessageTemplatesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+        return $this->getMessageTemplatesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $communication_channel_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -584,14 +587,15 @@ class MessageTemplatesApi
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $name Search record by name or a part of the name (optional)
+     * @param  string|null $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMessageTemplatesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
+    public function getMessageTemplatesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $communication_channel_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
-        $request = $this->getMessageTemplatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
+        $request = $this->getMessageTemplatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $communication_channel_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -639,11 +643,12 @@ class MessageTemplatesApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name (optional)
+     * @param  string $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getMessageTemplatesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
+    protected function getMessageTemplatesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $communication_channel_id = null)
     {
 
         $resourcePath = '/message-templates';
@@ -672,6 +677,10 @@ class MessageTemplatesApi
         // query params
         if ($name !== null) {
             $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);
+        }
+        // query params
+        if ($communication_channel_id !== null) {
+            $queryParams['communication_channel_id'] = ObjectSerializer::toQueryValue($communication_channel_id, null);
         }
         // header params
         if ($accept_language !== null) {

@@ -412,14 +412,18 @@ class CommunicationChannelsApi
      * Get all communication channels
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022
      */
-    public function getCommunicationChannels($accept_language = 'cs, en-gb;q=0.8')
+    public function getCommunicationChannels($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        list($response) = $this->getCommunicationChannelsWithHttpInfo($accept_language);
+        list($response) = $this->getCommunicationChannelsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction);
         return $response;
     }
 
@@ -429,15 +433,19 @@ class CommunicationChannelsApi
      * Get all communication channels
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCommunicationChannelsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8')
+    public function getCommunicationChannelsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022';
-        $request = $this->getCommunicationChannelsRequest($accept_language);
+        $request = $this->getCommunicationChannelsRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
             $options = $this->createHttpClientOption();
@@ -544,13 +552,17 @@ class CommunicationChannelsApi
      * Get all communication channels
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCommunicationChannelsAsync($accept_language = 'cs, en-gb;q=0.8')
+    public function getCommunicationChannelsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        return $this->getCommunicationChannelsAsyncWithHttpInfo($accept_language)
+        return $this->getCommunicationChannelsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -564,14 +576,18 @@ class CommunicationChannelsApi
      * Get all communication channels
      *
      * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCommunicationChannelsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8')
+    public function getCommunicationChannelsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022';
-        $request = $this->getCommunicationChannelsRequest($accept_language);
+        $request = $this->getCommunicationChannelsRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -614,11 +630,15 @@ class CommunicationChannelsApi
      * Create request for operation 'getCommunicationChannels'
      *
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCommunicationChannelsRequest($accept_language = 'cs, en-gb;q=0.8')
+    protected function getCommunicationChannelsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
 
         $resourcePath = '/communication-channels';
@@ -628,6 +648,22 @@ class CommunicationChannelsApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($count !== null) {
+            $queryParams['count'] = ObjectSerializer::toQueryValue($count, null);
+        }
+        // query params
+        if ($offset !== null) {
+            $queryParams['offset'] = ObjectSerializer::toQueryValue($offset, null);
+        }
+        // query params
+        if ($sort_field !== null) {
+            $queryParams['sort_field'] = ObjectSerializer::toQueryValue($sort_field, null);
+        }
+        // query params
+        if ($sort_direction !== null) {
+            $queryParams['sort_direction'] = ObjectSerializer::toQueryValue($sort_direction, null);
+        }
         // header params
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);

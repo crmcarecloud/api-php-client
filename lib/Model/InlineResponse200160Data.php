@@ -56,7 +56,7 @@ class InlineResponse200160Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'voucher_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'user_roles' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200160Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'voucher_properties' => null,
+        'user_roles' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200160Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'voucher_properties' => 'voucher_properties',
+        'user_roles' => 'user_roles',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200160Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'voucher_properties' => 'setVoucherProperties',
+        'user_roles' => 'setUserRoles',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200160Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'voucher_properties' => 'getVoucherProperties',
+        'user_roles' => 'getUserRoles',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200160Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['voucher_properties'] = isset($data['voucher_properties']) ? $data['voucher_properties'] : null;
+        $this->container['user_roles'] = isset($data['user_roles']) ? $data['user_roles'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200160Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets voucher_properties
+     * Gets user_roles
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]
      */
-    public function getVoucherProperties()
+    public function getUserRoles()
     {
-        return $this->container['voucher_properties'];
+        return $this->container['user_roles'];
     }
 
     /**
-     * Sets voucher_properties
+     * Sets user_roles
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $voucher_properties List of all voucher properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[] $user_roles Array of user roles
      *
      * @return $this
      */
-    public function setVoucherProperties($voucher_properties)
+    public function setUserRoles($user_roles)
     {
-        $this->container['voucher_properties'] = $voucher_properties;
+        $this->container['user_roles'] = $user_roles;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200160Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found voucher properties
+     * @param int $total_items Count of all found user roles
      *
      * @return $this
      */

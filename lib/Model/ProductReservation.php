@@ -457,7 +457,7 @@ self::STATE_2,        ];
     /**
      * Sets reservation_codes
      *
-     * @param string[] $reservation_codes Ids of the reservation
+     * @param string[] $reservation_codes Reservation codes of the reservation from CareCloud
      *
      * @return $this
      */
@@ -481,7 +481,7 @@ self::STATE_2,        ];
     /**
      * Sets external_reservation_codes
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalCode[] $external_reservation_codes List of external id codes. Id codes can have different sources. Please get in touch with your account manager for the list of id sources.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalCode[] $external_reservation_codes List of the external reservation codes. Id codes can have different sources. Please get in touch with your account manager for the list of id sources.
      *
      * @return $this
      */

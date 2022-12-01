@@ -216,7 +216,7 @@ class Interest implements ModelInterface, ArrayAccess
     /**
      * Sets interest_id
      *
-     * @param string $interest_id The unique id for the interest
+     * @param string $interest_id The unique id of the interest
      *
      * @return $this
      */

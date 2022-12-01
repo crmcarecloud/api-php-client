@@ -234,7 +234,7 @@ class StoreGroupRecord implements ModelInterface, ArrayAccess
     /**
      * Sets store_group_record_id
      *
-     * @param string $store_group_record_id The unique id for the store group record.
+     * @param string $store_group_record_id The unique id of the store group record.
      *
      * @return $this
      */

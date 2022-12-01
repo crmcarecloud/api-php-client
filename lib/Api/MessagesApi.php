@@ -418,7 +418,7 @@ class MessagesApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
+     * @param  string $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      * @param  string $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *
@@ -444,7 +444,7 @@ class MessagesApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
+     * @param  string $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      * @param  string $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *
@@ -568,7 +568,7 @@ class MessagesApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
+     * @param  string $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      * @param  string $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *
@@ -597,7 +597,7 @@ class MessagesApi
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique id of the customer (optional)
      * @param  string|null $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int|null $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
+     * @param  string|null $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      * @param  string|null $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string|null $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *
@@ -656,7 +656,7 @@ class MessagesApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $contact Email of phone number that was used as a contact in message (optional)
-     * @param  int $communication_channel_id The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* (optional)
+     * @param  string $communication_channel_id The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) (optional)
      * @param  string $send_time_from Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      * @param  string $send_time_to End date and time of the time interval *YYYY-MM-DD HH:MM:SS* (optional)
      *

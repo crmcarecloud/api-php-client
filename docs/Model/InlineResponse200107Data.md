@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**purchase_item_types** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[]**](PurchaseItemType.md) | List of the purchase item types | [optional] 
-**total_items** | **int** | Count of all found purchase types | [optional] 
+**recommended_best_rewards** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedReward[]**](RecommendedReward.md) | List of the best rewards for POS | [optional] 
+**total_items** | **int** | Count of all found rewards | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

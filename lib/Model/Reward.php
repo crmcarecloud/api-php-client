@@ -66,6 +66,7 @@ class Reward implements ModelInterface, ArrayAccess
 'valid_time_from' => 'string',
 'valid_time_to' => 'string',
 'reward_group' => 'int',
+'reward_type_id' => 'string',
 'store_list' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]',
 'additional_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
 'priority' => 'int',
@@ -94,6 +95,7 @@ class Reward implements ModelInterface, ArrayAccess
 'valid_time_from' => null,
 'valid_time_to' => null,
 'reward_group' => null,
+'reward_type_id' => null,
 'store_list' => null,
 'additional_properties' => null,
 'priority' => null,
@@ -143,6 +145,7 @@ class Reward implements ModelInterface, ArrayAccess
 'valid_time_from' => 'valid_time_from',
 'valid_time_to' => 'valid_time_to',
 'reward_group' => 'reward_group',
+'reward_type_id' => 'reward_type_id',
 'store_list' => 'store_list',
 'additional_properties' => 'additional_properties',
 'priority' => 'priority',
@@ -171,6 +174,7 @@ class Reward implements ModelInterface, ArrayAccess
 'valid_time_from' => 'setValidTimeFrom',
 'valid_time_to' => 'setValidTimeTo',
 'reward_group' => 'setRewardGroup',
+'reward_type_id' => 'setRewardTypeId',
 'store_list' => 'setStoreList',
 'additional_properties' => 'setAdditionalProperties',
 'priority' => 'setPriority',
@@ -199,6 +203,7 @@ class Reward implements ModelInterface, ArrayAccess
 'valid_time_from' => 'getValidTimeFrom',
 'valid_time_to' => 'getValidTimeTo',
 'reward_group' => 'getRewardGroup',
+'reward_type_id' => 'getRewardTypeId',
 'store_list' => 'getStoreList',
 'additional_properties' => 'getAdditionalProperties',
 'priority' => 'getPriority',
@@ -338,6 +343,7 @@ self::STATE_2,        ];
         $this->container['valid_time_from'] = isset($data['valid_time_from']) ? $data['valid_time_from'] : null;
         $this->container['valid_time_to'] = isset($data['valid_time_to']) ? $data['valid_time_to'] : null;
         $this->container['reward_group'] = isset($data['reward_group']) ? $data['reward_group'] : null;
+        $this->container['reward_type_id'] = isset($data['reward_type_id']) ? $data['reward_type_id'] : null;
         $this->container['store_list'] = isset($data['store_list']) ? $data['store_list'] : null;
         $this->container['additional_properties'] = isset($data['additional_properties']) ? $data['additional_properties'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
@@ -633,6 +639,30 @@ self::STATE_2,        ];
             );
         }
         $this->container['reward_group'] = $reward_group;
+
+        return $this;
+    }
+
+    /**
+     * Gets reward_type_id
+     *
+     * @return string
+     */
+    public function getRewardTypeId()
+    {
+        return $this->container['reward_type_id'];
+    }
+
+    /**
+     * Sets reward_type_id
+     *
+     * @param string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others.
+     *
+     * @return $this
+     */
+    public function setRewardTypeId($reward_type_id)
+    {
+        $this->container['reward_type_id'] = $reward_type_id;
 
         return $this;
     }

@@ -221,7 +221,7 @@ class ActionsAssignfreecardBody implements ModelInterface, ArrayAccess
     /**
      * Sets card_type_id
      *
-     * @param string $card_type_id The unique id for the card type.
+     * @param string $card_type_id The unique id of the card type.
      *
      * @return $this
      */
@@ -245,7 +245,7 @@ class ActionsAssignfreecardBody implements ModelInterface, ArrayAccess
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique id for the card holder.
+     * @param string $customer_id The unique id of the card holder.
      *
      * @return $this
      */

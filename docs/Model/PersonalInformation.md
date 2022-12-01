@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **birthdate** | [**\DateTime**](\DateTime.md) | Customer&#x27;s date of birth (YYYY-MM-DD) | [optional] 
 **email** | **string** | Email of the customer | [optional] 
 **phone** | **string** | Phone number of the customer with international prefix (420000000000) | [optional] 
-**language_id** | **string** | The unique id for the language by ISO 639-1 code | 
-**store_id** | **string** | The unique id for the original customer account store of registration | [optional] 
+**language_id** | **string** | The unique id of the language by ISO 639-1 code | 
+**store_id** | **string** | The unique id of the original customer account store of registration | [optional] 
 **photo_url** | **string** | URL address of the customer photo. If customer has no photo, this parameter is not send | [optional] 
 **address** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Address**](Address.md) |  | [optional] 
 **agreement** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement**](Agreement.md) |  | [optional] 

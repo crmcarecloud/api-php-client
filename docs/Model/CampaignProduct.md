@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**campaign_product_id** | **string** | The unique id for the campaign product | [optional] 
-**product_id** | **string** | The unique id for the product | 
-**currency_id** | **string** | The unique id for the currency | 
-**campaign_id** | **string** | The unique id for the campaign | 
+**campaign_product_id** | **string** | The unique id of the campaign product | [optional] 
+**product_id** | **string** | The unique id of the product | 
+**currency_id** | **string** | The unique id of the currency | 
+**campaign_id** | **string** | The unique id of the campaign | 
 **value** | **float** | Value of the product | 
 **value_type_id** | **int** | Type of value (1 - percentage discount value, 2 - final price) | 
 **valid_from** | **string** | Valid from *(YYYY-MM-DD HH:MM:SS)* | 

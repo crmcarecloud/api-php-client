@@ -240,7 +240,7 @@ class ProductIdentification implements ModelInterface, ArrayAccess
     /**
      * Sets plu_ids
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[] $plu_ids An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id for every product across all POS systems)).
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[] $plu_ids An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id of every product across all POS systems)).
      *
      * @return $this
      */

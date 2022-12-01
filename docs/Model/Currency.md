@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**currency_id** | **string** | The unique id for the currency | 
+**currency_id** | **string** | The unique id of the currency | 
 **name** | **string** | Name of the currency | 
 **code** | **string** | International ISO code of the currency | 
 

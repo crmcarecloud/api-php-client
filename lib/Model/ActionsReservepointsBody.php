@@ -260,7 +260,7 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique id for the customer.
+     * @param string $customer_id The unique id of the customer.
      *
      * @return $this
      */

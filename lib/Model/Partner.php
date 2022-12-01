@@ -350,7 +350,7 @@ self::STATE_2,        ];
     /**
      * Sets registration_id
      *
-     * @param string $registration_id Company registration number. National Registration unique id for the company.
+     * @param string $registration_id Company registration number. National Registration unique id of the company.
      *
      * @return $this
      */
@@ -374,7 +374,7 @@ self::STATE_2,        ];
     /**
      * Sets vat_id
      *
-     * @param string $vat_id VAT registration number. Value Added Tax unique id for the company.
+     * @param string $vat_id VAT registration number. Value Added Tax unique id of the company.
      *
      * @return $this
      */

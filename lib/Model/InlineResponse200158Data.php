@@ -56,8 +56,7 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'voucher_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
-'total_items' => 'int'    ];
+        'user_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +64,7 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'voucher_properties' => null,
-'total_items' => null    ];
+        'user_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +93,7 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'voucher_properties' => 'voucher_properties',
-'total_items' => 'total_items'    ];
+        'user_id' => 'user_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +101,7 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'voucher_properties' => 'setVoucherProperties',
-'total_items' => 'setTotalItems'    ];
+        'user_id' => 'setUserId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +109,7 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'voucher_properties' => 'getVoucherProperties',
-'total_items' => 'getTotalItems'    ];
+        'user_id' => 'getUserId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +169,7 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['voucher_properties'] = isset($data['voucher_properties']) ? $data['voucher_properties'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
     }
 
     /**
@@ -203,49 +197,25 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets voucher_properties
+     * Gets user_id
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
+     * @return string
      */
-    public function getVoucherProperties()
+    public function getUserId()
     {
-        return $this->container['voucher_properties'];
+        return $this->container['user_id'];
     }
 
     /**
-     * Sets voucher_properties
+     * Sets user_id
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $voucher_properties List of all voucher properties
+     * @param string $user_id The unique id of the user
      *
      * @return $this
      */
-    public function setVoucherProperties($voucher_properties)
+    public function setUserId($user_id)
     {
-        $this->container['voucher_properties'] = $voucher_properties;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_items
-     *
-     * @return int
-     */
-    public function getTotalItems()
-    {
-        return $this->container['total_items'];
-    }
-
-    /**
-     * Sets total_items
-     *
-     * @param int $total_items Count of all found voucher properties
-     *
-     * @return $this
-     */
-    public function setTotalItems($total_items)
-    {
-        $this->container['total_items'] = $total_items;
+        $this->container['user_id'] = $user_id;
 
         return $this;
     }

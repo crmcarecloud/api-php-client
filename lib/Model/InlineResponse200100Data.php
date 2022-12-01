@@ -56,7 +56,7 @@ class InlineResponse200100Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'reservable_products' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Product[]',
+        'product_reservation_external_list_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationExternalListType[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200100Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'reservable_products' => null,
+        'product_reservation_external_list_types' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200100Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'reservable_products' => 'reservable_products',
+        'product_reservation_external_list_types' => 'product_reservation_external_list_types',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200100Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'reservable_products' => 'setReservableProducts',
+        'product_reservation_external_list_types' => 'setProductReservationExternalListTypes',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200100Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'reservable_products' => 'getReservableProducts',
+        'product_reservation_external_list_types' => 'getProductReservationExternalListTypes',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200100Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['reservable_products'] = isset($data['reservable_products']) ? $data['reservable_products'] : null;
+        $this->container['product_reservation_external_list_types'] = isset($data['product_reservation_external_list_types']) ? $data['product_reservation_external_list_types'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200100Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets reservable_products
+     * Gets product_reservation_external_list_types
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Product[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationExternalListType[]
      */
-    public function getReservableProducts()
+    public function getProductReservationExternalListTypes()
     {
-        return $this->container['reservable_products'];
+        return $this->container['product_reservation_external_list_types'];
     }
 
     /**
-     * Sets reservable_products
+     * Sets product_reservation_external_list_types
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Product[] $reservable_products List of reservable products
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationExternalListType[] $product_reservation_external_list_types List of the product reservation external list types
      *
      * @return $this
      */
-    public function setReservableProducts($reservable_products)
+    public function setProductReservationExternalListTypes($product_reservation_external_list_types)
     {
-        $this->container['reservable_products'] = $reservable_products;
+        $this->container['product_reservation_external_list_types'] = $product_reservation_external_list_types;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200100Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found reservable products
+     * @param int $total_items Count of all found product reservation external list types
      *
      * @return $this
      */

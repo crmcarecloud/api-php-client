@@ -222,7 +222,7 @@ class PluId implements ModelInterface, ArrayAccess
     /**
      * Sets list_code
      *
-     * @param string $list_code Code of the particular product list (basic is code of Global product list (consist cleaned data - unique id for every product across all POS systems)). For example, “GLOBAL”, “SKU”, “PLU”, etc.
+     * @param string $list_code Code of the particular product list (basic is code of Global product list (consist cleaned data - unique id of every product across all POS systems)). For example, “GLOBAL”, “SKU”, “PLU”, etc.
      *
      * @return $this
      */
@@ -246,7 +246,7 @@ class PluId implements ModelInterface, ArrayAccess
     /**
      * Sets code
      *
-     * @param string $code Code of product from the product list (basic is Product ID from Global product list (consist cleaned data - unique id for every product across all POS systems))
+     * @param string $code Code of product from the product list (basic is Product ID from Global product list (consist cleaned data - unique id of every product across all POS systems))
      *
      * @return $this
      */

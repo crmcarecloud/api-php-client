@@ -56,7 +56,7 @@ class InlineResponse200154Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'user_id' => 'string'    ];
+        'test_string' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse200154Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'user_id' => null    ];
+        'test_string' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse200154Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id'    ];
+        'test_string' => 'test_string'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse200154Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId'    ];
+        'test_string' => 'setTestString'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse200154Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId'    ];
+        'test_string' => 'getTestString'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse200154Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
+        $this->container['test_string'] = isset($data['test_string']) ? $data['test_string'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse200154Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user_id
+     * Gets test_string
      *
      * @return string
      */
-    public function getUserId()
+    public function getTestString()
     {
-        return $this->container['user_id'];
+        return $this->container['test_string'];
     }
 
     /**
-     * Sets user_id
+     * Sets test_string
      *
-     * @param string $user_id The unique id of the user
+     * @param string $test_string Reverted value of input parameters
      *
      * @return $this
      */
-    public function setUserId($user_id)
+    public function setTestString($test_string)
     {
-        $this->container['user_id'] = $user_id;
+        $this->container['test_string'] = $test_string;
 
         return $this;
     }

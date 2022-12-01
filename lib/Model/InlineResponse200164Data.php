@@ -56,9 +56,8 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'next_amount' => 'float',
-'next_date' => 'string',
-'current_month_amount' => 'float'    ];
+        'voucher_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +65,8 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'next_amount' => 'float',
-'next_date' => null,
-'current_month_amount' => 'float'    ];
+        'voucher_properties' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +95,8 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_amount' => 'next_amount',
-'next_date' => 'next_date',
-'current_month_amount' => 'current_month_amount'    ];
+        'voucher_properties' => 'voucher_properties',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +104,8 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'next_amount' => 'setNextAmount',
-'next_date' => 'setNextDate',
-'current_month_amount' => 'setCurrentMonthAmount'    ];
+        'voucher_properties' => 'setVoucherProperties',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +113,8 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'next_amount' => 'getNextAmount',
-'next_date' => 'getNextDate',
-'current_month_amount' => 'getCurrentMonthAmount'    ];
+        'voucher_properties' => 'getVoucherProperties',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +174,8 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_amount'] = isset($data['next_amount']) ? $data['next_amount'] : null;
-        $this->container['next_date'] = isset($data['next_date']) ? $data['next_date'] : null;
-        $this->container['current_month_amount'] = isset($data['current_month_amount']) ? $data['current_month_amount'] : null;
+        $this->container['voucher_properties'] = isset($data['voucher_properties']) ? $data['voucher_properties'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -209,73 +203,49 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets next_amount
+     * Gets voucher_properties
      *
-     * @return float
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getNextAmount()
+    public function getVoucherProperties()
     {
-        return $this->container['next_amount'];
+        return $this->container['voucher_properties'];
     }
 
     /**
-     * Sets next_amount
+     * Sets voucher_properties
      *
-     * @param float $next_amount Date (ISO 8601) when first points will expire
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $voucher_properties List of all voucher properties
      *
      * @return $this
      */
-    public function setNextAmount($next_amount)
+    public function setVoucherProperties($voucher_properties)
     {
-        $this->container['next_amount'] = $next_amount;
+        $this->container['voucher_properties'] = $voucher_properties;
 
         return $this;
     }
 
     /**
-     * Gets next_date
+     * Gets total_items
      *
-     * @return string
+     * @return int
      */
-    public function getNextDate()
+    public function getTotalItems()
     {
-        return $this->container['next_date'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets next_date
+     * Sets total_items
      *
-     * @param string $next_date Amount of redeemed points in time interval *(YYYY-MM-DD)*
+     * @param int $total_items Count of all found voucher properties
      *
      * @return $this
      */
-    public function setNextDate($next_date)
+    public function setTotalItems($total_items)
     {
-        $this->container['next_date'] = $next_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets current_month_amount
-     *
-     * @return float
-     */
-    public function getCurrentMonthAmount()
-    {
-        return $this->container['current_month_amount'];
-    }
-
-    /**
-     * Sets current_month_amount
-     *
-     * @param float $current_month_amount Amount of points that will expire in current month
-     *
-     * @return $this
-     */
-    public function setCurrentMonthAmount($current_month_amount)
-    {
-        $this->container['current_month_amount'] = $current_month_amount;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

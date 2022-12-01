@@ -284,7 +284,7 @@ self::STATE_2,        ];
     /**
      * Sets recommendation_id
      *
-     * @param string $recommendation_id The unique id for the recommendation
+     * @param string $recommendation_id The unique id of the recommendation
      *
      * @return $this
      */

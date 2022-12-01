@@ -416,18 +416,19 @@ class ProductReservationsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $reservation_code Code of the reservation (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id of the store in CareCloud (optional)
      * @param  int $reservation_state Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  string $external_reservation_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. If set, &#x60;external_reservation_code&#x60; has to be present in request too. (optional)
+     * @param  string $external_reservation_code Code of the reservation from external system (cashdesk, webshop, production system, others). If set, &#x60;external_reservation_list_type_id&#x60; has to be present in request too (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096
      */
-    public function getProductReservations($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservation_code = null, $customer_id = null, $store_id = null, $reservation_state = null)
+    public function getProductReservations($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null, $reservation_state = null, $external_reservation_list_type_id = null, $external_reservation_code = null)
     {
-        list($response) = $this->getProductReservationsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state);
+        list($response) = $this->getProductReservationsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code);
         return $response;
     }
 
@@ -441,19 +442,20 @@ class ProductReservationsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $reservation_code Code of the reservation (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id of the store in CareCloud (optional)
      * @param  int $reservation_state Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  string $external_reservation_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. If set, &#x60;external_reservation_code&#x60; has to be present in request too. (optional)
+     * @param  string $external_reservation_code Code of the reservation from external system (cashdesk, webshop, production system, others). If set, &#x60;external_reservation_list_type_id&#x60; has to be present in request too (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductReservationsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservation_code = null, $customer_id = null, $store_id = null, $reservation_state = null)
+    public function getProductReservationsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null, $reservation_state = null, $external_reservation_list_type_id = null, $external_reservation_code = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096';
-        $request = $this->getProductReservationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state);
+        $request = $this->getProductReservationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code);
 
         try {
             $options = $this->createHttpClientOption();
@@ -564,17 +566,18 @@ class ProductReservationsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $reservation_code Code of the reservation (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id of the store in CareCloud (optional)
      * @param  int $reservation_state Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  string $external_reservation_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. If set, &#x60;external_reservation_code&#x60; has to be present in request too. (optional)
+     * @param  string $external_reservation_code Code of the reservation from external system (cashdesk, webshop, production system, others). If set, &#x60;external_reservation_list_type_id&#x60; has to be present in request too (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductReservationsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservation_code = null, $customer_id = null, $store_id = null, $reservation_state = null)
+    public function getProductReservationsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null, $reservation_state = null, $external_reservation_list_type_id = null, $external_reservation_code = null)
     {
-        return $this->getProductReservationsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state)
+        return $this->getProductReservationsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -592,18 +595,19 @@ class ProductReservationsApi
      * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
-     * @param  string|null $reservation_code Code of the reservation (optional)
      * @param  string|null $customer_id The unique id of the customer (optional)
      * @param  string|null $store_id The unique id of the store in CareCloud (optional)
      * @param  int|null $reservation_state Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  string|null $external_reservation_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. If set, &#x60;external_reservation_code&#x60; has to be present in request too. (optional)
+     * @param  string|null $external_reservation_code Code of the reservation from external system (cashdesk, webshop, production system, others). If set, &#x60;external_reservation_list_type_id&#x60; has to be present in request too (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductReservationsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservation_code = null, $customer_id = null, $store_id = null, $reservation_state = null)
+    public function getProductReservationsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null, $reservation_state = null, $external_reservation_list_type_id = null, $external_reservation_code = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096';
-        $request = $this->getProductReservationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $reservation_code, $customer_id, $store_id, $reservation_state);
+        $request = $this->getProductReservationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -650,15 +654,16 @@ class ProductReservationsApi
      * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $reservation_code Code of the reservation (optional)
      * @param  string $customer_id The unique id of the customer (optional)
      * @param  string $store_id The unique id of the store in CareCloud (optional)
      * @param  int $reservation_state Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* (optional)
+     * @param  string $external_reservation_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. If set, &#x60;external_reservation_code&#x60; has to be present in request too. (optional)
+     * @param  string $external_reservation_code Code of the reservation from external system (cashdesk, webshop, production system, others). If set, &#x60;external_reservation_list_type_id&#x60; has to be present in request too (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductReservationsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservation_code = null, $customer_id = null, $store_id = null, $reservation_state = null)
+    protected function getProductReservationsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null, $reservation_state = null, $external_reservation_list_type_id = null, $external_reservation_code = null)
     {
 
         $resourcePath = '/product-reservations';
@@ -685,10 +690,6 @@ class ProductReservationsApi
             $queryParams['sort_direction'] = ObjectSerializer::toQueryValue($sort_direction, null);
         }
         // query params
-        if ($reservation_code !== null) {
-            $queryParams['reservation_code'] = ObjectSerializer::toQueryValue($reservation_code, null);
-        }
-        // query params
         if ($customer_id !== null) {
             $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
         }
@@ -699,6 +700,14 @@ class ProductReservationsApi
         // query params
         if ($reservation_state !== null) {
             $queryParams['reservation_state'] = ObjectSerializer::toQueryValue($reservation_state, null);
+        }
+        // query params
+        if ($external_reservation_list_type_id !== null) {
+            $queryParams['external_reservation_list_type_id'] = ObjectSerializer::toQueryValue($external_reservation_list_type_id, null);
+        }
+        // query params
+        if ($external_reservation_code !== null) {
+            $queryParams['external_reservation_code'] = ObjectSerializer::toQueryValue($external_reservation_code, null);
         }
         // header params
         if ($accept_language !== null) {

@@ -228,7 +228,7 @@ class CampaignProductStoreRecord implements ModelInterface, ArrayAccess
     /**
      * Sets campaign_product_store_record_id
      *
-     * @param string $campaign_product_store_record_id The unique id for the campaing product store record.
+     * @param string $campaign_product_store_record_id The unique id of the campaign product store record.
      *
      * @return $this
      */

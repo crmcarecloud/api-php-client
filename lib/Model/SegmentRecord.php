@@ -58,7 +58,9 @@ class SegmentRecord implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'segment_id' => 'string',
-'customer_id' => 'string'    ];
+'customer_id' => 'string',
+'created_at' => 'string',
+'last_change' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,7 +69,9 @@ class SegmentRecord implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'segment_id' => null,
-'customer_id' => null    ];
+'customer_id' => null,
+'created_at' => null,
+'last_change' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,7 +101,9 @@ class SegmentRecord implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'segment_id' => 'segment_id',
-'customer_id' => 'customer_id'    ];
+'customer_id' => 'customer_id',
+'created_at' => 'created_at',
+'last_change' => 'last_change'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -106,7 +112,9 @@ class SegmentRecord implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'segment_id' => 'setSegmentId',
-'customer_id' => 'setCustomerId'    ];
+'customer_id' => 'setCustomerId',
+'created_at' => 'setCreatedAt',
+'last_change' => 'setLastChange'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -115,7 +123,9 @@ class SegmentRecord implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'segment_id' => 'getSegmentId',
-'customer_id' => 'getCustomerId'    ];
+'customer_id' => 'getCustomerId',
+'created_at' => 'getCreatedAt',
+'last_change' => 'getLastChange'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -177,6 +187,8 @@ class SegmentRecord implements ModelInterface, ArrayAccess
     {
         $this->container['segment_id'] = isset($data['segment_id']) ? $data['segment_id'] : null;
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
 
     /**
@@ -193,6 +205,9 @@ class SegmentRecord implements ModelInterface, ArrayAccess
         }
         if ($this->container['customer_id'] === null) {
             $invalidProperties[] = "'customer_id' can't be null";
+        }
+        if ($this->container['created_at'] === null) {
+            $invalidProperties[] = "'created_at' can't be null";
         }
         return $invalidProperties;
     }
@@ -253,6 +268,54 @@ class SegmentRecord implements ModelInterface, ArrayAccess
     public function setCustomerId($customer_id)
     {
         $this->container['customer_id'] = $customer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     *
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param string $created_at Date and time when was the segment record created *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_change
+     *
+     * @return string
+     */
+    public function getLastChange()
+    {
+        return $this->container['last_change'];
+    }
+
+    /**
+     * Sets last_change
+     *
+     * @param string $last_change Date and time of the last change *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setLastChange($last_change)
+    {
+        $this->container['last_change'] = $last_change;
 
         return $this;
     }

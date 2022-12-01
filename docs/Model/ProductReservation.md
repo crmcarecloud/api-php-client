@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **product_reservation_id** | **string** | The unique id of the product reservation | [optional] 
 **customer_id** | **string** | The unique id of the customer, owner of the product reservation | 
 **store_id** | **string** | The unique id of the store tied to the reservation | 
-**reservation_codes** | **string[]** | Ids of the reservation | [optional] 
-**external_reservation_codes** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ExternalCode[]**](ExternalCode.md) | List of external id codes. Id codes can have different sources. Please get in touch with your account manager for the list of id sources. | [optional] 
+**reservation_codes** | **string[]** | Reservation codes of the reservation from CareCloud | [optional] 
+**external_reservation_codes** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ExternalCode[]**](ExternalCode.md) | List of the external reservation codes. Id codes can have different sources. Please get in touch with your account manager for the list of id sources. | [optional] 
 **benefit_codes** | **string[]** | List of the benefit (rewards, vouchers) codes used in a reservation. After the reservation is delivered, all benefits are applied on the customer&#x27;s account | [optional] 
 **product_reservation_source_id** | **string** | The unique id of the product reservation source | 
 **pickup_date** | **string** | Date of the reservation pickup in the tied store (YYYY-MM-DD) | [optional] 

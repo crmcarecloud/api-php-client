@@ -690,7 +690,7 @@ self::STATE_1,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time whe skipass was created in CareCloud *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Date and time when entrance was created in CareCloud *(YYYY-MM-DD HH:MM:SS)*
      *
      * @return $this
      */
@@ -714,7 +714,7 @@ self::STATE_1,        ];
     /**
      * Sets cancelled_at
      *
-     * @param string $cancelled_at Date and time whe skipass was cancelled in CareCloud *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $cancelled_at Date and time when entrance was cancelled in CareCloud *(YYYY-MM-DD HH:MM:SS)*
      *
      * @return $this
      */
@@ -786,7 +786,7 @@ self::STATE_1,        ];
     /**
      * Sets charge_date
      *
-     * @param string $charge_date Date and time when entrance will be charged to the POS system *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $charge_date Date and time when entrance will be/was charged to the POS system *(YYYY-MM-DD HH:MM:SS)*
      *
      * @return $this
      */

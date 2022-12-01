@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRecommendations**](HintsApi.md#getrecommendations) | **GET** /recommendations | Get all recommendations
 
 # **getRecommendation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110 getRecommendation($recommendation_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112 getRecommendation($recommendation_id, $accept_language)
 
 Get a recommendation
 
@@ -33,7 +33,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\HintsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$recommendation_id = "recommendation_id_example"; // string | The unique id for a recommendation
+$recommendation_id = "recommendation_id_example"; // string | The unique id of a recommendation
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
 
 try {
@@ -49,12 +49,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **recommendation_id** | **string**| The unique id for a recommendation |
+ **recommendation_id** | **string**| The unique id of a recommendation |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110**](../Model/InlineResponse200110.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112**](../Model/InlineResponse200112.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendations**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109 getRecommendations($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111 getRecommendations($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all recommendations
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109**](../Model/InlineResponse200109.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111**](../Model/InlineResponse200111.md)
 
 ### Authorization
 

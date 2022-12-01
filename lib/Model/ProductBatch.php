@@ -336,7 +336,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
     /**
      * Sets plu_ids
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[] $plu_ids An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id for every product across all POS systems))
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[] $plu_ids An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id of every product across all POS systems))
      *
      * @return $this
      */
@@ -360,7 +360,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
     /**
      * Sets product_group_id
      *
-     * @param string $product_group_id The unique id for the product group. If `product_group_external_id` is also set, both parameters have to represent the same product group.
+     * @param string $product_group_id The unique id of the product group. If `product_group_external_id` is also set, both parameters have to represent the same product group.
      *
      * @return $this
      */
@@ -384,7 +384,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
     /**
      * Sets product_group_external_id
      *
-     * @param string $product_group_external_id The unique external id for the product group. If `product_group_id` is also set, both parameters have to represent the same product group.
+     * @param string $product_group_external_id The unique external id of the product group. If `product_group_id` is also set, both parameters have to represent the same product group.
      *
      * @return $this
      */
@@ -408,7 +408,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
     /**
      * Sets product_brand_id
      *
-     * @param string $product_brand_id The unique id for the product brand. If `product_brand_external_id` is also set, both parameters have to represent the same product brand.
+     * @param string $product_brand_id The unique id of the product brand. If `product_brand_external_id` is also set, both parameters have to represent the same product brand.
      *
      * @return $this
      */
@@ -432,7 +432,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
     /**
      * Sets product_brand_external_id
      *
-     * @param string $product_brand_external_id The unique external id for the product brand. If `product_brand_id` is also set, both parameters have to represent the same product brand.
+     * @param string $product_brand_external_id The unique external id of the product brand. If `product_brand_id` is also set, both parameters have to represent the same product brand.
      *
      * @return $this
      */
@@ -456,7 +456,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique id for the store where the product group is valid. The product group is global if this value is not set
+     * @param string $store_id The unique id of the store where the product group is valid. The product group is global if this value is not set
      *
      * @return $this
      */

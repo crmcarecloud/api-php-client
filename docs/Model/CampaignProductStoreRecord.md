@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**campaign_product_store_record_id** | **string** | The unique id for the campaing product store record. | [optional] 
+**campaign_product_store_record_id** | **string** | The unique id of the campaign product store record. | [optional] 
 **store_id** | **string** | The unique id of the store. | 
 **campaign_product_id** | **string** | The unique id of the campaign product. | 
 

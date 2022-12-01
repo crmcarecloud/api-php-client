@@ -1,7 +1,6 @@
 <?php
 /**
- * InlineResponse200132Data
- *
+ * ProductReservationExternalListTypesApi
  * PHP version 5
  *
  * @category Class
@@ -26,356 +25,740 @@
  * Do not edit the class manually.
  */
 
-namespace CrmCareCloud\Webservice\RestApi\Client\Model;
+namespace CrmCareCloud\Webservice\RestApi\Client\Api;
 
-use \ArrayAccess;
-use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
+use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\MultipartStream;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
+use CrmCareCloud\Webservice\RestApi\Client\ApiException;
+use CrmCareCloud\Webservice\RestApi\Client\Configuration;
+use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
+use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * InlineResponse200132Data Class Doc Comment
+ * ProductReservationExternalListTypesApi Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200132Data implements ModelInterface, ArrayAccess
+class ProductReservationExternalListTypesApi
 {
-    const DISCRIMINATOR = null;
-
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
-    protected static $swaggerModelName = 'inline_response_200_132_data';
-
-    /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var array<string,string>
-      */
-    protected static $swaggerTypes = [
-        'active_entrances' => 'int',
-'canceled_entrances' => 'int',
-'deactivated_entrances' => 'int',
-'sold_entrances' => 'int'    ];
-
-    /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var array<string,string|null>
-      */
-    protected static $swaggerFormats = [
-        'active_entrances' => null,
-'canceled_entrances' => null,
-'deactivated_entrances' => null,
-'sold_entrances' => null    ];
-
-    /**
-     * Array of property to type mappings. Used for (de)serialization
-     *
-     * @return array<string,string>
+     * @var ClientInterface
      */
-    public static function swaggerTypes()
-    {
-        return self::$swaggerTypes;
+    protected $client;
+
+    /**
+     * @var Configuration
+     */
+    protected $config;
+
+    /**
+     * @var HeaderSelector
+     */
+    protected $headerSelector;
+
+    /**
+     * @param ClientInterface $client
+     * @param Configuration   $config
+     * @param HeaderSelector  $selector
+     */
+    public function __construct(
+        ClientInterface $client = null,
+        Configuration $config = null,
+        HeaderSelector $selector = null
+    ) {
+        $this->client = $client ?: new Client();
+        $this->config = $config ?: new Configuration();
+        $this->headerSelector = $selector ?: new HeaderSelector();
     }
 
     /**
-     * Array of property to format mappings. Used for (de)serialization
-     *
-     * @return array<string,string|null>
+     * @return Configuration
      */
-    public static function swaggerFormats()
+    public function getConfig()
     {
-        return self::$swaggerFormats;
+        return $this->config;
     }
 
     /**
-     * Array of attributes where the key is the local name,
-     * and the value is the original name
+     * Operation getProductReservationExternalListType
      *
-     * @var string[]
-     */
-    protected static $attributeMap = [
-        'active_entrances' => 'active_entrances',
-'canceled_entrances' => 'canceled_entrances',
-'deactivated_entrances' => 'deactivated_entrances',
-'sold_entrances' => 'sold_entrances'    ];
-
-    /**
-     * Array of attributes to setter functions (for deserialization of responses)
+     * Detail of an product reservation external list type
      *
-     * @var string[]
-     */
-    protected static $setters = [
-        'active_entrances' => 'setActiveEntrances',
-'canceled_entrances' => 'setCanceledEntrances',
-'deactivated_entrances' => 'setDeactivatedEntrances',
-'sold_entrances' => 'setSoldEntrances'    ];
-
-    /**
-     * Array of attributes to getter functions (for serialization of requests)
+     * @param  string $product_reservation_external_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
-     * @var string[]
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101
      */
-    protected static $getters = [
-        'active_entrances' => 'getActiveEntrances',
-'canceled_entrances' => 'getCanceledEntrances',
-'deactivated_entrances' => 'getDeactivatedEntrances',
-'sold_entrances' => 'getSoldEntrances'    ];
-
-    /**
-     * Array of attributes where the key is the local name,
-     * and the value is the original name
-     *
-     * @return array
-     */
-    public static function attributeMap()
+    public function getProductReservationExternalListType($product_reservation_external_list_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        return self::$attributeMap;
+        list($response) = $this->getProductReservationExternalListTypeWithHttpInfo($product_reservation_external_list_type_id, $accept_language);
+        return $response;
     }
 
     /**
-     * Array of attributes to setter functions (for deserialization of responses)
+     * Operation getProductReservationExternalListTypeWithHttpInfo
      *
-     * @return array
+     * Detail of an product reservation external list type
+     *
+     * @param  string $product_reservation_external_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101, HTTP status code, HTTP response headers (array of strings)
      */
-    public static function setters()
+    public function getProductReservationExternalListTypeWithHttpInfo($product_reservation_external_list_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        return self::$setters;
-    }
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101';
+        $request = $this->getProductReservationExternalListTypeRequest($product_reservation_external_list_type_id, $accept_language);
 
-    /**
-     * Array of attributes to getter functions (for serialization of requests)
-     *
-     * @return array
-     */
-    public static function getters()
-    {
-        return self::$getters;
-    }
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
 
-    /**
-     * The original name of the model.
-     *
-     * @return string
-     */
-    public function getModelName()
-    {
-        return self::$swaggerModelName;
-    }
+            $statusCode = $response->getStatusCode();
 
-    
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var mixed[]
-     */
-    protected $container = [];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
 
-    /**
-     * Constructor
-     *
-     * @param mixed[] $data Associated array of property values
-     *                      initializing the model
-     */
-    public function __construct(array $data = null)
-    {
-        $this->container['active_entrances'] = isset($data['active_entrances']) ? $data['active_entrances'] : null;
-        $this->container['canceled_entrances'] = isset($data['canceled_entrances']) ? $data['canceled_entrances'] : null;
-        $this->container['deactivated_entrances'] = isset($data['deactivated_entrances']) ? $data['deactivated_entrances'] : null;
-        $this->container['sold_entrances'] = isset($data['sold_entrances']) ? $data['sold_entrances'] : null;
-    }
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
-    /**
-     * Show all the invalid properties with reasons.
-     *
-     * @return array invalid properties with reasons
-     */
-    public function listInvalidProperties()
-    {
-        $invalidProperties = [];
-
-        return $invalidProperties;
-    }
-
-    /**
-     * Validate all the properties in the model
-     * return true if all passed
-     *
-     * @return bool True if all properties are valid
-     */
-    public function valid()
-    {
-        return count($this->listInvalidProperties()) === 0;
-    }
-
-
-    /**
-     * Gets active_entrances
-     *
-     * @return int
-     */
-    public function getActiveEntrances()
-    {
-        return $this->container['active_entrances'];
-    }
-
-    /**
-     * Sets active_entrances
-     *
-     * @param int $active_entrances Amount of active entrances in date range. Active entrances can be used by customers in their validity range
-     *
-     * @return $this
-     */
-    public function setActiveEntrances($active_entrances)
-    {
-        $this->container['active_entrances'] = $active_entrances;
-
-        return $this;
-    }
-
-    /**
-     * Gets canceled_entrances
-     *
-     * @return int
-     */
-    public function getCanceledEntrances()
-    {
-        return $this->container['canceled_entrances'];
-    }
-
-    /**
-     * Sets canceled_entrances
-     *
-     * @param int $canceled_entrances Amount of canceled entrances in date range. Canceled entrances in production systems and in CareCloud. Customers cannot use them anymore
-     *
-     * @return $this
-     */
-    public function setCanceledEntrances($canceled_entrances)
-    {
-        $this->container['canceled_entrances'] = $canceled_entrances;
-
-        return $this;
-    }
-
-    /**
-     * Gets deactivated_entrances
-     *
-     * @return int
-     */
-    public function getDeactivatedEntrances()
-    {
-        return $this->container['deactivated_entrances'];
-    }
-
-    /**
-     * Sets deactivated_entrances
-     *
-     * @param int $deactivated_entrances Amount of deactivated entrances in date range. Entrances deactivated in CareCloud only. These entrances are usually not sent to production systems. Deactivation have been done in system CareCloud
-     *
-     * @return $this
-     */
-    public function setDeactivatedEntrances($deactivated_entrances)
-    {
-        $this->container['deactivated_entrances'] = $deactivated_entrances;
-
-        return $this;
-    }
-
-    /**
-     * Gets sold_entrances
-     *
-     * @return int
-     */
-    public function getSoldEntrances()
-    {
-        return $this->container['sold_entrances'];
-    }
-
-    /**
-     * Sets sold_entrances
-     *
-     * @param int $sold_entrances Amount of sold entrances in date range. Entrances deactivated in CareCloud only. These entrances are usually not sent to production systems. Deactivation have been done in system CareCloud
-     *
-     * @return $this
-     */
-    public function setSoldEntrances($sold_entrances)
-    {
-        $this->container['sold_entrances'] = $sold_entrances;
-
-        return $this;
-    }
-    /**
-     * Returns true if offset exists. False otherwise.
-     *
-     * @param integer $offset Offset
-     *
-     * @return boolean
-     */
-    public function offsetExists($offset)
-    {
-        return isset($this->container[$offset]);
-    }
-
-    /**
-     * Gets offset.
-     *
-     * @param integer $offset Offset
-     *
-     * @return mixed
-     */
-    public function offsetGet($offset)
-    {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
-    }
-
-    /**
-     * Sets value based on offset.
-     *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
-     *
-     * @return void
-     */
-    public function offsetSet($offset, $value)
-    {
-        if (is_null($offset)) {
-            $this->container[] = $value;
-        } else {
-            $this->container[$offset] = $value;
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
         }
     }
 
     /**
-     * Unsets offset.
+     * Operation getProductReservationExternalListTypeAsync
      *
-     * @param integer $offset Offset
+     * Detail of an product reservation external list type
      *
-     * @return void
+     * @param  string $product_reservation_external_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function offsetUnset($offset)
+    public function getProductReservationExternalListTypeAsync($product_reservation_external_list_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        unset($this->container[$offset]);
+        return $this->getProductReservationExternalListTypeAsyncWithHttpInfo($product_reservation_external_list_type_id, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
     }
 
     /**
-     * Gets the string presentation of the object
+     * Operation getProductReservationExternalListTypeAsyncWithHttpInfo
      *
-     * @return string
+     * Detail of an product reservation external list type
+     *
+     * @param  string $product_reservation_external_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. (required)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function __toString()
+    public function getProductReservationExternalListTypeAsyncWithHttpInfo($product_reservation_external_list_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(
-                ObjectSerializer::sanitizeForSerialization($this),
-                JSON_PRETTY_PRINT
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101';
+        $request = $this->getProductReservationExternalListTypeRequest($product_reservation_external_list_type_id, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getProductReservationExternalListType'
+     *
+     * @param  string $product_reservation_external_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getProductReservationExternalListTypeRequest($product_reservation_external_list_type_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'product_reservation_external_list_type_id' is set
+        if ($product_reservation_external_list_type_id === null || (is_array($product_reservation_external_list_type_id) && count($product_reservation_external_list_type_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $product_reservation_external_list_type_id when calling getProductReservationExternalListType'
             );
         }
 
-        return json_encode(ObjectSerializer::sanitizeForSerialization($this));
+        $resourcePath = '/product-reservation-external-list-types/{product_reservation_external_list_type_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+        // path params
+        if ($product_reservation_external_list_type_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'product_reservation_external_list_type_id' . '}',
+                ObjectSerializer::toPathValue($product_reservation_external_list_type_id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getProductReservationExternalListTypes
+     *
+     * Get all product reservation external list types
+     *
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100
+     */
+    public function getProductReservationExternalListTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+        list($response) = $this->getProductReservationExternalListTypesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction);
+        return $response;
+    }
+
+    /**
+     * Operation getProductReservationExternalListTypesWithHttpInfo
+     *
+     * Get all product reservation external list types
+     *
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getProductReservationExternalListTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100';
+        $request = $this->getProductReservationExternalListTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getProductReservationExternalListTypesAsync
+     *
+     * Get all product reservation external list types
+     *
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductReservationExternalListTypesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+        return $this->getProductReservationExternalListTypesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getProductReservationExternalListTypesAsyncWithHttpInfo
+     *
+     * Get all product reservation external list types
+     *
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductReservationExternalListTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100';
+        $request = $this->getProductReservationExternalListTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getProductReservationExternalListTypes'
+     *
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
+     * @param  string $sort_direction Direction of sorting the response list. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getProductReservationExternalListTypesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    {
+
+        $resourcePath = '/product-reservation-external-list-types';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($count !== null) {
+            $queryParams['count'] = ObjectSerializer::toQueryValue($count, null);
+        }
+        // query params
+        if ($offset !== null) {
+            $queryParams['offset'] = ObjectSerializer::toQueryValue($offset, null);
+        }
+        // query params
+        if ($sort_field !== null) {
+            $queryParams['sort_field'] = ObjectSerializer::toQueryValue($sort_field, null);
+        }
+        // query params
+        if ($sort_direction !== null) {
+            $queryParams['sort_direction'] = ObjectSerializer::toQueryValue($sort_direction, null);
+        }
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
     }
 }

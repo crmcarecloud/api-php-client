@@ -537,7 +537,7 @@ self::GENDER_2,        ];
     /**
      * Sets language_id
      *
-     * @param string $language_id The unique id for the language by ISO 639-1 code
+     * @param string $language_id The unique id of the language by ISO 639-1 code
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ self::GENDER_2,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique id for the original customer account store of registration
+     * @param string $store_id The unique id of the original customer account store of registration
      *
      * @return $this
      */

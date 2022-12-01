@@ -335,7 +335,7 @@ self::STATE_2,        ];
     /**
      * Sets parent_product_group_id
      *
-     * @param string $parent_product_group_id The unique id for the parent product group. If `parent_external_id` is also set, both parameters have to represent the same product group.
+     * @param string $parent_product_group_id The unique id of the parent product group. If `parent_external_id` is also set, both parameters have to represent the same product group.
      *
      * @return $this
      */
@@ -359,7 +359,7 @@ self::STATE_2,        ];
     /**
      * Sets parent_external_id
      *
-     * @param string $parent_external_id The unique external id for the parent product group. If `parent_product_group_id` is also set, both parameters have to represent the same product group.
+     * @param string $parent_external_id The unique external id of the parent product group. If `parent_product_group_id` is also set, both parameters have to represent the same product group.
      *
      * @return $this
      */
@@ -431,7 +431,7 @@ self::STATE_2,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique id for the store where the product group is valid. The product group is global if this value is not set
+     * @param string $store_id The unique id of the store where the product group is valid. The product group is global if this value is not set
      *
      * @return $this
      */

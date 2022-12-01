@@ -332,7 +332,7 @@ self::STATE_2,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique id for the card holder.
+     * @param string $customer_id The unique id of the card holder.
      *
      * @return $this
      */

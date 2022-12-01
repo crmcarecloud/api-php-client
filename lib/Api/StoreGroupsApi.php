@@ -96,7 +96,7 @@ class StoreGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140
      */
     public function getStoreGroup($store_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class StoreGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStoreGroupWithHttpInfo($store_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140';
         $request = $this->getStoreGroupRequest($store_group_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class StoreGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class StoreGroupsApi
      */
     public function getStoreGroupAsyncWithHttpInfo($store_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140';
         $request = $this->getStoreGroupRequest($store_group_id, $accept_language);
 
         return $this->client
@@ -420,7 +420,7 @@ class StoreGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139
      */
     public function getStoreGroups($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -442,11 +442,11 @@ class StoreGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStoreGroupsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139';
         $request = $this->getStoreGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -498,7 +498,7 @@ class StoreGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -590,7 +590,7 @@ class StoreGroupsApi
      */
     public function getStoreGroupsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139';
         $request = $this->getStoreGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client

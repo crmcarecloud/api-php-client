@@ -383,7 +383,7 @@ self::STATE_2,        ];
     /**
      * Sets plu_ids
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[] $plu_ids An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id for every product across all POS systems)).
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[] $plu_ids An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique id of every product across all POS systems)).
      *
      * @return $this
      */
@@ -407,7 +407,7 @@ self::STATE_2,        ];
     /**
      * Sets product_group_id
      *
-     * @param string $product_group_id The unique id for the product group
+     * @param string $product_group_id The unique id of the product group
      *
      * @return $this
      */
@@ -431,7 +431,7 @@ self::STATE_2,        ];
     /**
      * Sets product_brand_id
      *
-     * @param string $product_brand_id The unique id for the product brand
+     * @param string $product_brand_id The unique id of the product brand
      *
      * @return $this
      */

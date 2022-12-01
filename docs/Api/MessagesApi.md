@@ -102,7 +102,7 @@ $sort_field = "sort_field_example"; // string | Name of the sorting parameter. Y
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique id of the customer
 $contact = "contact_example"; // string | Email of phone number that was used as a contact in message
-$communication_channel_id = 56; // int | The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages*
+$communication_channel_id = "communication_channel_id_example"; // string | The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels)
 $send_time_from = "send_time_from_example"; // string | Start date and time of the time interval *YYYY-MM-DD HH:MM:SS*
 $send_time_to = "send_time_to_example"; // string | End date and time of the time interval *YYYY-MM-DD HH:MM:SS*
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique id of the customer | [optional]
  **contact** | **string**| Email of phone number that was used as a contact in message | [optional]
- **communication_channel_id** | **int**| The unique id of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification/ 9 - Viber messages* | [optional]
+ **communication_channel_id** | **string**| The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) | [optional]
  **send_time_from** | **string**| Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* | [optional]
  **send_time_to** | **string**| End date and time of the time interval *YYYY-MM-DD HH:MM:SS* | [optional]
 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **purchase_id** | **string** | The unique id of the purchase | [optional] 
-**customer_id** | **string** | The unique id for the customer. | 
+**customer_id** | **string** | The unique id of the customer. | 
 **store_id** | **string** | The unique id of the store in CareCloud | 
 **external_purchase_id** | **string** | The external unique id of the purchase | 
 **payment_time** | **string** | Date and time of the purchase payment *(YYYY-MM-DD HH:MM:SS)* | 
