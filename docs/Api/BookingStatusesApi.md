@@ -4,7 +4,7 @@ All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterpr
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getBookingStatus**](BookingStatusesApi.md#getbookingstatus) | **GET** /booking-statuses/{booking_status_id}} | Get a booking status
+[**getBookingStatus**](BookingStatusesApi.md#getbookingstatus) | **GET** /booking-statuses/{booking_status_id} | Get a booking status
 [**getBookingStatuses**](BookingStatusesApi.md#getbookingstatuses) | **GET** /booking-statuses | Get all booking statuses
 
 # **getBookingStatus**

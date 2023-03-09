@@ -4,13 +4,13 @@ All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterpr
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getProductReservationSource**](ProductReservationSourcesApi.md#getproductreservationsource) | **GET** /product-reservation-sources/{product_reservation_source_id} | Detail of an product reservation source
+[**getProductReservationSource**](ProductReservationSourcesApi.md#getproductreservationsource) | **GET** /product-reservation-sources/{product_reservation_source_id} | Detail of a product reservation source
 [**getProductReservationSources**](ProductReservationSourcesApi.md#getproductreservationsources) | **GET** /product-reservation-sources | Get all product reservation sources
 
 # **getProductReservationSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099 getProductReservationSource($product_reservation_source_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getProductReservationSource($product_reservation_source_id, $accept_language)
 
-Detail of an product reservation source
+Detail of a product reservation source
 
 Get information about a specific product reservation source
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099**](../Model/InlineResponse20099.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservationSources**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098 getProductReservationSources($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102 getProductReservationSources($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all product reservation sources
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20098**](../Model/InlineResponse20098.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102**](../Model/InlineResponse200102.md)
 
 ### Authorization
 

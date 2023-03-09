@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRewardProperty**](RewardPropertiesApi.md#getrewardproperty) | **GET** /reward-properties/{reward_property_id} | Get a reward property
 
 # **getRewardProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123 getRewardProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200127 getRewardProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all reward properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123**](../Model/InlineResponse200123.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200127**](../Model/InlineResponse200127.md)
 
 ### Authorization
 

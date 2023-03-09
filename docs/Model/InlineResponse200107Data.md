@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**recommended_best_rewards** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedReward[]**](RecommendedReward.md) | List of the best rewards for POS | [optional] 
-**total_items** | **int** | Count of all found rewards | [optional] 
+**search_results** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\SearchResult[]**](SearchResult.md) | List of the results | [optional] 
+**total_items** | **int** | Count of the results | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

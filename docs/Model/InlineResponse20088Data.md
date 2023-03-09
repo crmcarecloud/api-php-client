@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**product_reservations** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservation[]**](ProductReservation.md) | List of the product reservations | [optional] 
-**total_items** | **int** | Count of all found product reservations | [optional] 
+**point_history** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[]**](PointHistoryRecord.md) | List of the point history records | [optional] 
+**total_items** | **int** | Count of all found point history records | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **credit_operation_type** | **string** | Type of the credit operation record | [optional] 
 **credit_operation_note** | **string** | Note of the credit operation record | [optional] 
 **partner_id** | **string** | The unique id of the partner company | [optional] 
+**currency_id** | **string** | The unique id of the currency | [optional] 
 **store_id** | **string** | The unique id of the store in CareCloud | [optional] 
 **credit_history_record_time** | **string** | Date and time of the credit record from the credit history *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 

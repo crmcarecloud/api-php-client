@@ -3,8 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orders** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Order[]**](Order.md) | Collection of the customer orders | [optional] 
-**total_items** | **int** | Count of all found customer orders | [optional] 
+**request_id** | **string** | The parameter specifies the request that caused the OTP to be created. Request id will be used as one of the parameter in method [/one-time-password/actions/verify](#operation/postVerifyOtp) | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

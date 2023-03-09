@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductReservationExternalListTypes**](ProductReservationExternalListTypesApi.md#getproductreservationexternallisttypes) | **GET** /product-reservation-external-list-types | Get all product reservation external list types
 
 # **getProductReservationExternalListType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101 getProductReservationExternalListType($product_reservation_external_list_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105 getProductReservationExternalListType($product_reservation_external_list_type_id, $accept_language)
 
 Detail of an product reservation external list type
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101**](../Model/InlineResponse200101.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105**](../Model/InlineResponse200105.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservationExternalListTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100 getProductReservationExternalListTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104 getProductReservationExternalListTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all product reservation external list types
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100**](../Model/InlineResponse200100.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104**](../Model/InlineResponse200104.md)
 
 ### Authorization
 

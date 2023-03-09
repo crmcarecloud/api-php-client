@@ -5,7 +5,8 @@ All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterpr
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteSubCustomerInterest**](CustomersApi.md#deletesubcustomerinterest) | **DELETE** /customers/{customer_id}/interest-records/{interest_record_id} | Delete an interest record on an account
-[**deleteSubCustomerProperty**](CustomersApi.md#deletesubcustomerproperty) | **DELETE** /customers/{customer_id}/property-records/{property_record_id} | Delete a property on an account
+[**deleteSubCustomerPartner**](CustomersApi.md#deletesubcustomerpartner) | **DELETE** /customers/{customer_id}/partner-records/{partner_record_id} | Delete a partner record from an account
+[**deleteSubCustomerProperty**](CustomersApi.md#deletesubcustomerproperty) | **DELETE** /customers/{customer_id}/property-records/{property_record_id} | Delete a property of a customer
 [**deleteSubCustomerRelatedCustomer**](CustomersApi.md#deletesubcustomerrelatedcustomer) | **DELETE** /customers/{customer_id}/related-customers/{customer_relation_id} | Delete a customer&#x27;s relation
 [**getCustomer**](CustomersApi.md#getcustomer) | **GET** /customers/{customer_id} | Get information about a customer
 [**getCustomers**](CustomersApi.md#getcustomers) | **GET** /customers | Get all customers
@@ -14,6 +15,7 @@ Method | HTTP request | Description
 [**getSubCustomerCards**](CustomersApi.md#getsubcustomercards) | **GET** /customers/{customer_id}/cards | Get all customer cards
 [**getSubCustomerEvents**](CustomersApi.md#getsubcustomerevents) | **GET** /customers/{customer_id}/events | Get information about all customer&#x27;s events
 [**getSubCustomerInterests**](CustomersApi.md#getsubcustomerinterests) | **GET** /customers/{customer_id}/interest-records | Get a collection of interest records
+[**getSubCustomerPartners**](CustomersApi.md#getsubcustomerpartners) | **GET** /customers/{customer_id}/partner-records | Get information about all customer&#x27;s partners
 [**getSubCustomerPoints**](CustomersApi.md#getsubcustomerpoints) | **GET** /customers/{customer_id}/points | Get all customer point records
 [**getSubCustomerProperties**](CustomersApi.md#getsubcustomerproperties) | **GET** /customers/{customer_id}/property-records | Get a collection of properties
 [**getSubCustomerPurchases**](CustomersApi.md#getsubcustomerpurchases) | **GET** /customers/{customer_id}/purchases | Get all customer purchases
@@ -28,13 +30,15 @@ Method | HTTP request | Description
 [**postCustomer**](CustomersApi.md#postcustomer) | **POST** /customers | Create a new customer
 [**postSubCustomerAddress**](CustomersApi.md#postsubcustomeraddress) | **POST** /customers/{customer_id}/addresses | Create an additional customer address
 [**postSubCustomerInterest**](CustomersApi.md#postsubcustomerinterest) | **POST** /customers/{customer_id}/interest-records | Add an interest record to a customer
+[**postSubCustomerPartnerRecord**](CustomersApi.md#postsubcustomerpartnerrecord) | **POST** /customers/{customer_id}/partner-records | Add a partner to the customer
 [**postSubCustomerProperties**](CustomersApi.md#postsubcustomerproperties) | **POST** /customers/{customer_id}/property-records | Add a property to a customer
-[**postSubCustomerRelatedCustomers**](CustomersApi.md#postsubcustomerrelatedcustomers) | **POST** /customers/{customer_id}/related-customers | Create a customer relation
-[**postSubCustomerSource**](CustomersApi.md#postsubcustomersource) | **POST** /customers/{customer_id}/customer-source-records | Add an customer source record to a customer
+[**postSubCustomerPropertiesBatch**](CustomersApi.md#postsubcustomerpropertiesbatch) | **POST** /customers/{customer_id}/property-records/batch | Create a batch of property records for a customer
+[**postSubCustomerRelatedCustomers**](CustomersApi.md#postsubcustomerrelatedcustomers) | **POST** /customers/{customer_id}/related-customers | Create a customer&#x27;s relation
+[**postSubCustomerSource**](CustomersApi.md#postsubcustomersource) | **POST** /customers/{customer_id}/customer-source-records | Add a customer source record to a customer
 [**putCustomer**](CustomersApi.md#putcustomer) | **PUT** /customers/{customer_id} | Update a customer
 [**putSubCustomerAddress**](CustomersApi.md#putsubcustomeraddress) | **PUT** /customers/{customer_id}/addresses/{additional_customer_address_id_path} | Update an additional customer address
 [**putSubCustomerInterest**](CustomersApi.md#putsubcustomerinterest) | **PUT** /customers/{customer_id}/interest-records/{interest_record_id} | Update an interest record on an account
-[**putSubCustomerProperty**](CustomersApi.md#putsubcustomerproperty) | **PUT** /customers/{customer_id}/property-records/{property_record_id} | Update a property on an account
+[**putSubCustomerProperty**](CustomersApi.md#putsubcustomerproperty) | **PUT** /customers/{customer_id}/property-records/{property_record_id} | Update a property of a customer
 
 # **deleteSubCustomerInterest**
 > deleteSubCustomerInterest($customer_id, $interest_record_id, $accept_language)
@@ -97,10 +101,71 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **deleteSubCustomerPartner**
+> deleteSubCustomerPartner($customer_id, $partner_record_id, $accept_language)
+
+Delete a partner record from an account
+
+Delete a specific customer partner record from a customer account
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$customer_id = "customer_id_example"; // string | The unique id of the customer
+$partner_record_id = "partner_record_id_example"; // string | The unique id of the partner record from account
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $apiInstance->deleteSubCustomerPartner($customer_id, $partner_record_id, $accept_language);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->deleteSubCustomerPartner: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **string**| The unique id of the customer |
+ **partner_record_id** | **string**| The unique id of the partner record from account |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **deleteSubCustomerProperty**
 > deleteSubCustomerProperty($customer_id, $property_record_id, $accept_language)
 
-Delete a property on an account
+Delete a property of a customer
 
 Delete a specific customer property record on a customer account
 
@@ -695,6 +760,74 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getSubCustomerPartners**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049 getSubCustomerPartners($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+
+Get information about all customer's partners
+
+Get a list of customer's partners in CareCloud
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$customer_id = "customer_id_example"; // string | The unique id of the customer
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$count = 100; // int | The number of records to return.
+$offset = 0; // int | The number of records from a collection to skip.
+$sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
+$sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
+
+try {
+    $result = $apiInstance->getSubCustomerPartners($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getSubCustomerPartners: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **string**| The unique id of the customer |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **count** | **int**| The number of records to return. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
+ **sort_direction** | **string**| Direction of sorting the response list. | [optional]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getSubCustomerPoints**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035 getSubCustomerPoints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id)
 
@@ -766,7 +899,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042 getSubCustomerProperties($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042 getSubCustomerProperties($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get a collection of properties
 
@@ -793,9 +926,13 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique id of the customer
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$count = 100; // int | The number of records to return.
+$offset = 0; // int | The number of records from a collection to skip.
+$sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
+$sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 
 try {
-    $result = $apiInstance->getSubCustomerProperties($customer_id, $accept_language);
+    $result = $apiInstance->getSubCustomerProperties($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getSubCustomerProperties: ', $e->getMessage(), PHP_EOL;
@@ -809,6 +946,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique id of the customer |
  **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **count** | **int**| The number of records to return. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
+ **sort_direction** | **string**| Direction of sorting the response list. | [optional]
 
 ### Return type
 
@@ -1034,7 +1175,7 @@ Name | Type | Description  | Notes
 
 Get information about all related customers
 
-Get a list of customer relations in CRM CareCloud
+Get a list of customers' relations in CRM CareCloud
 
 ### Example
 ```php
@@ -1657,6 +1798,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **postSubCustomerPartnerRecord**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113 postSubCustomerPartnerRecord($body, $customer_id, $accept_language)
+
+Add a partner to the customer
+
+Add a new partner to the customer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPartnerrecordsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPartnerrecordsBody | 
+$customer_id = "customer_id_example"; // string | The unique id of the customer
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $result = $apiInstance->postSubCustomerPartnerRecord($body, $customer_id, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->postSubCustomerPartnerRecord: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPartnerrecordsBody**](../Model/CustomerIdPartnerrecordsBody.md)|  |
+ **customer_id** | **string**| The unique id of the customer |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **postSubCustomerProperties**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019 postSubCustomerProperties($body, $customer_id, $accept_language)
 
@@ -1719,12 +1922,73 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **postSubCustomerPropertiesBatch**
+> postSubCustomerPropertiesBatch($body, $customer_id, $accept_language)
+
+Create a batch of property records for a customer
+
+Add a batch of customer property records to a customer account. In case of an existing property record, CareCloud API will update this record. In case of error, CareCloud will cancel the whole transaction, and API will return error information.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsBatchBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsBatchBody | 
+$customer_id = "customer_id_example"; // string | The unique id of the customer
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $apiInstance->postSubCustomerPropertiesBatch($body, $customer_id, $accept_language);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->postSubCustomerPropertiesBatch: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsBatchBody**](../Model/PropertyrecordsBatchBody.md)|  |
+ **customer_id** | **string**| The unique id of the customer |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **postSubCustomerRelatedCustomers**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112 postSubCustomerRelatedCustomers($body, $customer_id, $accept_language)
 
-Create a customer relation
+Create a customer's relation
 
-Add a new customer relation the customer account
+Add a new customer's relation to a customer's account
 
 ### Example
 ```php
@@ -1784,7 +2048,7 @@ Name | Type | Description  | Notes
 # **postSubCustomerSource**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postSubCustomerSource($body, $customer_id, $accept_language)
 
-Add an customer source record to a customer
+Add a customer source record to a customer
 
 Add one of the [customer sources](/#tag/Customer-sources) to a customer account
 
@@ -2033,7 +2297,7 @@ void (empty response body)
 # **putSubCustomerProperty**
 > putSubCustomerProperty($body, $customer_id, $property_record_id, $accept_language)
 
-Update a property on an account
+Update a property of a customer
 
 Update a specific customer property record on a customer account
 

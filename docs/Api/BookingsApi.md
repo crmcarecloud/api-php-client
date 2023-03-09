@@ -4,11 +4,11 @@ All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterpr
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteBooking**](BookingsApi.md#deletebooking) | **DELETE** /bookings/{booking_id}} | Delete a booking
-[**getBooking**](BookingsApi.md#getbooking) | **GET** /bookings/{booking_id}} | Get a booking
+[**deleteBooking**](BookingsApi.md#deletebooking) | **DELETE** /bookings/{booking_id} | Delete a booking
+[**getBooking**](BookingsApi.md#getbooking) | **GET** /bookings/{booking_id} | Get a booking
 [**getBookings**](BookingsApi.md#getbookings) | **GET** /bookings | Get all bookings
 [**postBooking**](BookingsApi.md#postbooking) | **POST** /bookings | Create a new booking
-[**putBooking**](BookingsApi.md#putbooking) | **PUT** /bookings/{booking_id}} | Update a booking
+[**putBooking**](BookingsApi.md#putbooking) | **PUT** /bookings/{booking_id} | Update a booking
 
 # **deleteBooking**
 > deleteBooking($booking_id, $accept_language)

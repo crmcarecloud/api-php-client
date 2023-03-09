@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAgreements**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200 getAgreements($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200 getAgreements($accept_language, $count, $offset, $sort_field, $sort_direction, $communication_channel_id)
 
 Get all agreements
 
@@ -98,9 +98,10 @@ $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
+$communication_channel_id = "communication_channel_id_example"; // string | The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels)
 
 try {
-    $result = $apiInstance->getAgreements($accept_language, $count, $offset, $sort_field, $sort_direction);
+    $result = $apiInstance->getAgreements($accept_language, $count, $offset, $sort_field, $sort_direction, $communication_channel_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AgreementsApi->getAgreements: ', $e->getMessage(), PHP_EOL;
@@ -117,6 +118,7 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
+ **communication_channel_id** | **string**| The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) | [optional]
 
 ### Return type
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Detail of a specific campaign
 
-Get a list of all customers
+Get information about a specific campaign
 
 ### Example
 ```php

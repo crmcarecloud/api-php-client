@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **customer_id** | **string** | Id of the customer that made the purchase. You can search customers by plenty parameter in resource customers | [optional] 
 **payment_type** | **string** | Payment type changes the checkout process depending on the value of the parameter you can allow/deny the use of benefits. *Possible values are: \&quot;S\&quot; - with standard setup checkout process allows you to collect points, but isn&#x27;t possible to apply overall discounts  / \&quot;A\&quot;- checkout process allows you to collect points and apply overall discounts too / \&quot;C\&quot; - use credits for payment, allows you to collect points, but isn&#x27;t possible to apply overall discounts / \&quot;D\&quot;- will enable you to use overall discounts, but you are not able to collect points with this setup* | 
 **max_points** | **string** | Amount of points to be redeemed | [optional] 
-**max_credit** | **string** | Amount of credits to be used | [optional] 
+**max_credit** | **string** | Amount of credit customer wants to use in the purchase | [optional] 
 **benefit_codes** | **string[]** | The bill closure will use present codes and recommend discounts | [optional] 
 **bill** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Bill**](Bill.md) |  | 
 

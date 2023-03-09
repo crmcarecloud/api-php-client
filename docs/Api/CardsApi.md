@@ -7,8 +7,9 @@ Method | HTTP request | Description
 [**getCard**](CardsApi.md#getcard) | **GET** /cards/{card_id} | Get a card
 [**getCards**](CardsApi.md#getcards) | **GET** /cards | Get all cards
 [**postAssignCard**](CardsApi.md#postassigncard) | **POST** /cards/actions/assign-free-card | Assign free card
+[**postBatchCards**](CardsApi.md#postbatchcards) | **POST** /cards/batch | Create a batch of cards
 [**postCard**](CardsApi.md#postcard) | **POST** /cards | Create a card
-[**postGenerateDigitalCard**](CardsApi.md#postgeneratedigitalcard) | **POST** /cards/actions/generate-digital-card-file | Generate digital card file
+[**postGenerateDigitalCard**](CardsApi.md#postgeneratedigitalcard) | **POST** /cards/actions/generate-digital-card-file | Generate virtual card file
 [**putCard**](CardsApi.md#putcard) | **PUT** /cards/{card_id} | Update a card
 
 # **getCard**
@@ -207,6 +208,65 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **postBatchCards**
+> postBatchCards($body, $accept_language)
+
+Create a batch of cards
+
+Batch process helps to add multiple cards in one request. <p class=\"warning\">⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time.</p>
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBatchBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBatchBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+
+try {
+    $apiInstance->postBatchCards($body, $accept_language);
+} catch (Exception $e) {
+    echo 'Exception when calling CardsApi->postBatchCards: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CardsBatchBody**](../Model/CardsBatchBody.md)|  |
+ **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **postCard**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014 postCard($body, $accept_language)
 
@@ -270,9 +330,9 @@ Name | Type | Description  | Notes
 # **postGenerateDigitalCard**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018 postGenerateDigitalCard($body, $accept_language)
 
-Generate digital card file
+Generate virtual card file
 
-Generate file with digital card. File can be generated as a PNG file or file for Apple Wallet.
+Generate file with virtual card. File can be generated as a PNG file or file for Apple Wallet.
 
 ### Example
 ```php
