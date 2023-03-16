@@ -100,7 +100,7 @@ class EventPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068
      */
     public function getEventProperties($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -122,11 +122,11 @@ class EventPropertiesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventPropertiesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068';
         $request = $this->getEventPropertiesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -178,7 +178,7 @@ class EventPropertiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class EventPropertiesApi
      */
     public function getEventPropertiesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068';
         $request = $this->getEventPropertiesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client

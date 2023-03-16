@@ -89,14 +89,14 @@ class ProductReservationExternalListTypesApi
     /**
      * Operation getProductReservationExternalListType
      *
-     * Detail of an product reservation external list type
+     * Detail of a product reservation external list type
      *
      * @param  string $product_reservation_external_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106
      */
     public function getProductReservationExternalListType($product_reservation_external_list_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -107,18 +107,18 @@ class ProductReservationExternalListTypesApi
     /**
      * Operation getProductReservationExternalListTypeWithHttpInfo
      *
-     * Detail of an product reservation external list type
+     * Detail of a product reservation external list type
      *
      * @param  string $product_reservation_external_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductReservationExternalListTypeWithHttpInfo($product_reservation_external_list_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
         $request = $this->getProductReservationExternalListTypeRequest($product_reservation_external_list_type_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class ProductReservationExternalListTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -223,7 +223,7 @@ class ProductReservationExternalListTypesApi
     /**
      * Operation getProductReservationExternalListTypeAsync
      *
-     * Detail of an product reservation external list type
+     * Detail of a product reservation external list type
      *
      * @param  string $product_reservation_external_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. (required)
      * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
@@ -244,7 +244,7 @@ class ProductReservationExternalListTypesApi
     /**
      * Operation getProductReservationExternalListTypeAsyncWithHttpInfo
      *
-     * Detail of an product reservation external list type
+     * Detail of a product reservation external list type
      *
      * @param  string $product_reservation_external_list_type_id Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. (required)
      * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
@@ -254,7 +254,7 @@ class ProductReservationExternalListTypesApi
      */
     public function getProductReservationExternalListTypeAsyncWithHttpInfo($product_reservation_external_list_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106';
         $request = $this->getProductReservationExternalListTypeRequest($product_reservation_external_list_type_id, $accept_language);
 
         return $this->client
@@ -419,7 +419,7 @@ class ProductReservationExternalListTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105
      */
     public function getProductReservationExternalListTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -440,11 +440,11 @@ class ProductReservationExternalListTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductReservationExternalListTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
         $request = $this->getProductReservationExternalListTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -496,7 +496,7 @@ class ProductReservationExternalListTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class ProductReservationExternalListTypesApi
      */
     public function getProductReservationExternalListTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105';
         $request = $this->getProductReservationExternalListTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

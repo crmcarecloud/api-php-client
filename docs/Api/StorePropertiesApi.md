@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getStoreProperty**](StorePropertiesApi.md#getstoreproperty) | **GET** /store-properties/{store_property_id} | Get a store property
 
 # **getStoreProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200145 getStoreProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146 getStoreProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all store properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200145**](../Model/InlineResponse200145.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146**](../Model/InlineResponse200146.md)
 
 ### Authorization
 

@@ -96,7 +96,7 @@ class PointReservationApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091
      */
     public function getPointReservation($point_reservation_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class PointReservationApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPointReservationWithHttpInfo($point_reservation_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091';
         $request = $this->getPointReservationRequest($point_reservation_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class PointReservationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class PointReservationApi
      */
     public function getPointReservationAsyncWithHttpInfo($point_reservation_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091';
         $request = $this->getPointReservationRequest($point_reservation_id, $accept_language);
 
         return $this->client
@@ -421,7 +421,7 @@ class PointReservationApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090
      */
     public function getPointReservations($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $external_id = null)
     {
@@ -444,11 +444,11 @@ class PointReservationApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPointReservationsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $external_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090';
         $request = $this->getPointReservationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id);
 
         try {
@@ -500,7 +500,7 @@ class PointReservationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -594,7 +594,7 @@ class PointReservationApi
      */
     public function getPointReservationsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $external_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090';
         $request = $this->getPointReservationsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id);
 
         return $this->client

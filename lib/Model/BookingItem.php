@@ -521,7 +521,7 @@ self::STATE_2,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time of the boking item *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Date and time of the booking item *(YYYY-MM-DD HH:MM:SS)*
      *
      * @return $this
      */

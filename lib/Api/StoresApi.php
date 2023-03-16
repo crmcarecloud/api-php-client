@@ -398,7 +398,7 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141
      */
     public function getStore($store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -416,11 +416,11 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStoreWithHttpInfo($store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141';
         $request = $this->getStoreRequest($store_id, $accept_language);
 
         try {
@@ -472,7 +472,7 @@ class StoresApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -556,7 +556,7 @@ class StoresApi
      */
     public function getStoreAsyncWithHttpInfo($store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141';
         $request = $this->getStoreRequest($store_id, $accept_language);
 
         return $this->client
@@ -724,7 +724,7 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140
      */
     public function getStores($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null, $property_id = null, $property_value = null)
     {
@@ -748,11 +748,11 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStoresWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null, $property_id = null, $property_value = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140';
         $request = $this->getStoresRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer, $property_id, $property_value);
 
         try {
@@ -804,7 +804,7 @@ class StoresApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -900,7 +900,7 @@ class StoresApi
      */
     public function getStoresAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null, $property_id = null, $property_value = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140';
         $request = $this->getStoresRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer, $property_id, $property_value);
 
         return $this->client
@@ -1082,7 +1082,7 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143
      */
     public function getSubStoreGroups($store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1100,11 +1100,11 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubStoreGroupsWithHttpInfo($store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143';
         $request = $this->getSubStoreGroupsRequest($store_id, $accept_language);
 
         try {
@@ -1156,7 +1156,7 @@ class StoresApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1240,7 +1240,7 @@ class StoresApi
      */
     public function getSubStoreGroupsAsyncWithHttpInfo($store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143';
         $request = $this->getSubStoreGroupsRequest($store_id, $accept_language);
 
         return $this->client
@@ -1402,7 +1402,7 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142
      */
     public function getSubStoreProperties($store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1420,11 +1420,11 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubStorePropertiesWithHttpInfo($store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142';
         $request = $this->getSubStorePropertiesRequest($store_id, $accept_language);
 
         try {
@@ -1476,7 +1476,7 @@ class StoresApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1560,7 +1560,7 @@ class StoresApi
      */
     public function getSubStorePropertiesAsyncWithHttpInfo($store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142';
         $request = $this->getSubStorePropertiesRequest($store_id, $accept_language);
 
         return $this->client
@@ -2035,7 +2035,7 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120
      */
     public function postSubStoreProperties($body, $store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2054,11 +2054,11 @@ class StoresApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSubStorePropertiesWithHttpInfo($body, $store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120';
         $request = $this->postSubStorePropertiesRequest($body, $store_id, $accept_language);
 
         try {
@@ -2110,7 +2110,7 @@ class StoresApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2196,7 +2196,7 @@ class StoresApi
      */
     public function postSubStorePropertiesAsyncWithHttpInfo($body, $store_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120';
         $request = $this->postSubStorePropertiesRequest($body, $store_id, $accept_language);
 
         return $this->client

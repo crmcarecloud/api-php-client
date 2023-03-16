@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **capacity_taken** | **int** | How much capacity is taken by the booking item. If not set, value is 1 | [optional] [default to 1]
 **booking_item_status** | **string** | Current status of the booking item from resource [booking-statuses](#tag/Booking-statuses). If not set, CareCloud uses default booking status. | [optional] 
 **additional_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of additional property records | [optional] 
-**created_at** | **string** | Date and time of the boking item *(YYYY-MM-DD HH:MM:SS)* | 
+**created_at** | **string** | Date and time of the booking item *(YYYY-MM-DD HH:MM:SS)* | 
 **state** | **int** | State of the booking item record *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 
 **last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 

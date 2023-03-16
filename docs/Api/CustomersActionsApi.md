@@ -253,7 +253,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersVerifyAuthToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postCustomersVerifyAuthToken($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051 postCustomersVerifyAuthToken($body)
 
 Verify auth token
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
 
 ### Authorization
 

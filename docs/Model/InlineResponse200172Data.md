@@ -3,9 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**next_amount** | **float** | Date (ISO 8601) when first points will expire | [optional] 
-**next_date** | **string** | Amount of redeemed points in time interval *(YYYY-MM-DD)* | [optional] 
-**current_month_amount** | **float** | Amount of points that will expire in current month | [optional] 
+**earned_credits** | **float** | Amount of earned credits in time interval | [optional] 
+**redeemed_credits** | **float** | Amount of redeemed credits in time interval | [optional] 
+**available_credits** | **float** | Amount of available credits in the moment. Time interval has no influence to the result | [optional] 
+**split_by_currency** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]**](CreditWalletSummary.md) | The credit overview split by currency | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -56,7 +56,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'task_id' => 'string'    ];
+        'property_record_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'task_id' => null    ];
+        'property_record_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'task_id' => 'task_id'    ];
+        'property_record_id' => 'property_record_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'task_id' => 'setTaskId'    ];
+        'property_record_id' => 'setPropertyRecordId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'task_id' => 'getTaskId'    ];
+        'property_record_id' => 'getPropertyRecordId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['task_id'] = isset($data['task_id']) ? $data['task_id'] : null;
+        $this->container['property_record_id'] = isset($data['property_record_id']) ? $data['property_record_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets task_id
+     * Gets property_record_id
      *
      * @return string
      */
-    public function getTaskId()
+    public function getPropertyRecordId()
     {
-        return $this->container['task_id'];
+        return $this->container['property_record_id'];
     }
 
     /**
-     * Sets task_id
+     * Sets property_record_id
      *
-     * @param string $task_id The unique id of the task in CareCloud
+     * @param string $property_record_id The unique id of the property record
      *
      * @return $this
      */
-    public function setTaskId($task_id)
+    public function setPropertyRecordId($property_record_id)
     {
-        $this->container['task_id'] = $task_id;
+        $this->container['property_record_id'] = $property_record_id;
 
         return $this;
     }

@@ -56,7 +56,7 @@ class InlineResponse20074Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'messages' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Message[]',
+        'languages' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Language[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20074Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'messages' => null,
+        'languages' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20074Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'messages' => 'messages',
+        'languages' => 'languages',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20074Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'messages' => 'setMessages',
+        'languages' => 'setLanguages',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20074Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'messages' => 'getMessages',
+        'languages' => 'getLanguages',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20074Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['messages'] = isset($data['messages']) ? $data['messages'] : null;
+        $this->container['languages'] = isset($data['languages']) ? $data['languages'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse20074Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets messages
+     * Gets languages
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Message[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Language[]
      */
-    public function getMessages()
+    public function getLanguages()
     {
-        return $this->container['messages'];
+        return $this->container['languages'];
     }
 
     /**
-     * Sets messages
+     * Sets languages
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Message[] $messages List of all messages
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Language[] $languages List of the language codes by ISO 639-1
      *
      * @return $this
      */
-    public function setMessages($messages)
+    public function setLanguages($languages)
     {
-        $this->container['messages'] = $messages;
+        $this->container['languages'] = $languages;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse20074Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found messages
+     * @param int $total_items Count of all found languages
      *
      * @return $this
      */

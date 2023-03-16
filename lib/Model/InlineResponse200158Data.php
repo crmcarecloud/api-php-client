@@ -56,7 +56,8 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'test_string' => 'string'    ];
+        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
+'total_items' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'test_string' => null    ];
+        'property_records' => null,
+'total_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'test_string' => 'test_string'    ];
+        'property_records' => 'property_records',
+'total_items' => 'total_items'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'test_string' => 'setTestString'    ];
+        'property_records' => 'setPropertyRecords',
+'total_items' => 'setTotalItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'test_string' => 'getTestString'    ];
+        'property_records' => 'getPropertyRecords',
+'total_items' => 'getTotalItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +174,8 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['test_string'] = isset($data['test_string']) ? $data['test_string'] : null;
+        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -197,25 +203,49 @@ class InlineResponse200158Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets test_string
+     * Gets property_records
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
      */
-    public function getTestString()
+    public function getPropertyRecords()
     {
-        return $this->container['test_string'];
+        return $this->container['property_records'];
     }
 
     /**
-     * Sets test_string
+     * Sets property_records
      *
-     * @param string $test_string Reverted value of input parameters
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records
      *
      * @return $this
      */
-    public function setTestString($test_string)
+    public function setPropertyRecords($property_records)
     {
-        $this->container['test_string'] = $test_string;
+        $this->container['property_records'] = $property_records;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items Count of all found task property records
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

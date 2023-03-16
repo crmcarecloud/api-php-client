@@ -1313,7 +1313,7 @@ class CustomersActionsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051
      */
     public function postCustomersVerifyAuthToken($body)
     {
@@ -1330,11 +1330,11 @@ class CustomersActionsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCustomersVerifyAuthTokenWithHttpInfo($body)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051';
         $request = $this->postCustomersVerifyAuthTokenRequest($body);
 
         try {
@@ -1386,7 +1386,7 @@ class CustomersActionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1468,7 +1468,7 @@ class CustomersActionsApi
      */
     public function postCustomersVerifyAuthTokenAsyncWithHttpInfo($body)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051';
         $request = $this->postCustomersVerifyAuthTokenRequest($body);
 
         return $this->client

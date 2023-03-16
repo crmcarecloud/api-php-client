@@ -35,7 +35,7 @@ use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
  * CustomerResult Class Doc Comment
  *
  * @category Class
- * @description Search results for strict mode
+ * @description Search results for the strict mode
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen

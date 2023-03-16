@@ -389,7 +389,7 @@ self::STATE_2,        ];
     /**
      * Sets items
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyItem[] $items List of possible values. Used for multivalued data types ( like enum, multiselect)
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyItem[] $items List of possible values. Used for multivalued data types (like enum, multiselect)
      *
      * @return $this
      */

@@ -56,7 +56,7 @@ class InlineResponse20024Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'countries' => '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024DataCountries[]',
+        'countries' => 'array',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20024Data implements ModelInterface, ArrayAccess
     /**
      * Gets countries
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024DataCountries[]
+     * @return array
      */
     public function getCountries()
     {
@@ -215,7 +215,7 @@ class InlineResponse20024Data implements ModelInterface, ArrayAccess
     /**
      * Sets countries
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024DataCountries[] $countries List of the countries
+     * @param array $countries List of the countries
      *
      * @return $this
      */

@@ -87,2037 +87,6 @@ class ProductRecommendationEngineApi
     }
 
     /**
-     * Operation getRecommendationCartCombined
-     *
-     * Get the best recommendation for shopping cart
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118
-     */
-    public function getRecommendationCartCombined($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null, $count = '100')
-    {
-        list($response) = $this->getRecommendationCartCombinedWithHttpInfo($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count);
-        return $response;
-    }
-
-    /**
-     * Operation getRecommendationCartCombinedWithHttpInfo
-     *
-     * Get the best recommendation for shopping cart
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getRecommendationCartCombinedWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null, $count = '100')
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
-        $request = $this->getRecommendationCartCombinedRequest($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = (string) $responseBody;
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 405:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getRecommendationCartCombinedAsync
-     *
-     * Get the best recommendation for shopping cart
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationCartCombinedAsync($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null, $count = '100')
-    {
-        return $this->getRecommendationCartCombinedAsyncWithHttpInfo($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getRecommendationCartCombinedAsyncWithHttpInfo
-     *
-     * Get the best recommendation for shopping cart
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[]|null $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationCartCombinedAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null, $count = '100')
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
-        $request = $this->getRecommendationCartCombinedRequest($customer_id, $accept_language, $cart_product_ids, $product_id_list, $count);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = (string) $responseBody;
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getRecommendationCartCombined'
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getRecommendationCartCombinedRequest($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null, $count = '100')
-    {
-        // verify the required parameter 'customer_id' is set
-        if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $customer_id when calling getRecommendationCartCombined'
-            );
-        }
-
-        $resourcePath = '/recommendation-engine/shopping-cart/actions/combine';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($customer_id !== null) {
-            $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
-        }
-        // query params
-        if (is_array($cart_product_ids)) {
-            $cart_product_ids = ObjectSerializer::serializeCollection($cart_product_ids, 'multi', true);
-        }
-        if ($cart_product_ids !== null) {
-            $queryParams['cart_product_ids'] = ObjectSerializer::toQueryValue($cart_product_ids, null);
-        }
-        // query params
-        if (is_array($product_id_list)) {
-            $product_id_list = ObjectSerializer::serializeCollection($product_id_list, 'multi', true);
-        }
-        if ($product_id_list !== null) {
-            $queryParams['product_id_list'] = ObjectSerializer::toQueryValue($product_id_list, null);
-        }
-        // query params
-        if ($count !== null) {
-            $queryParams['count'] = ObjectSerializer::toQueryValue($count, null);
-        }
-        // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
-        }
-
-
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        // for model (json/xml)
-        if ($_tempBody !== null) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->getConfig()->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getRecommendationCartEliminate
-     *
-     * Get the best recommendation with elimination for shopping cart
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118
-     */
-    public function getRecommendationCartEliminate($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null)
-    {
-        list($response) = $this->getRecommendationCartEliminateWithHttpInfo($customer_id, $accept_language, $cart_product_ids, $product_id_list);
-        return $response;
-    }
-
-    /**
-     * Operation getRecommendationCartEliminateWithHttpInfo
-     *
-     * Get the best recommendation with elimination for shopping cart
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getRecommendationCartEliminateWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null)
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
-        $request = $this->getRecommendationCartEliminateRequest($customer_id, $accept_language, $cart_product_ids, $product_id_list);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = (string) $responseBody;
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 405:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getRecommendationCartEliminateAsync
-     *
-     * Get the best recommendation with elimination for shopping cart
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationCartEliminateAsync($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null)
-    {
-        return $this->getRecommendationCartEliminateAsyncWithHttpInfo($customer_id, $accept_language, $cart_product_ids, $product_id_list)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getRecommendationCartEliminateAsyncWithHttpInfo
-     *
-     * Get the best recommendation with elimination for shopping cart
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[]|null $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationCartEliminateAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null)
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
-        $request = $this->getRecommendationCartEliminateRequest($customer_id, $accept_language, $cart_product_ids, $product_id_list);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = (string) $responseBody;
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getRecommendationCartEliminate'
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (optional)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getRecommendationCartEliminateRequest($customer_id, $accept_language = 'cs, en-gb;q=0.8', $cart_product_ids = null, $product_id_list = null)
-    {
-        // verify the required parameter 'customer_id' is set
-        if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $customer_id when calling getRecommendationCartEliminate'
-            );
-        }
-
-        $resourcePath = '/recommendation-engine/shopping-cart/actions/eliminate';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($customer_id !== null) {
-            $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
-        }
-        // query params
-        if (is_array($cart_product_ids)) {
-            $cart_product_ids = ObjectSerializer::serializeCollection($cart_product_ids, 'multi', true);
-        }
-        if ($cart_product_ids !== null) {
-            $queryParams['cart_product_ids'] = ObjectSerializer::toQueryValue($cart_product_ids, null);
-        }
-        // query params
-        if (is_array($product_id_list)) {
-            $product_id_list = ObjectSerializer::serializeCollection($product_id_list, 'multi', true);
-        }
-        if ($product_id_list !== null) {
-            $queryParams['product_id_list'] = ObjectSerializer::toQueryValue($product_id_list, null);
-        }
-        // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
-        }
-
-
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        // for model (json/xml)
-        if ($_tempBody !== null) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->getConfig()->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getRecommendationCartOrder
-     *
-     * Order products for the best recommendation for a shopping cart
-     *
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118
-     */
-    public function getRecommendationCartOrder($cart_product_ids, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        list($response) = $this->getRecommendationCartOrderWithHttpInfo($cart_product_ids, $accept_language, $product_id_list, $count);
-        return $response;
-    }
-
-    /**
-     * Operation getRecommendationCartOrderWithHttpInfo
-     *
-     * Order products for the best recommendation for a shopping cart
-     *
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getRecommendationCartOrderWithHttpInfo($cart_product_ids, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
-        $request = $this->getRecommendationCartOrderRequest($cart_product_ids, $accept_language, $product_id_list, $count);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = (string) $responseBody;
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 405:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getRecommendationCartOrderAsync
-     *
-     * Order products for the best recommendation for a shopping cart
-     *
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationCartOrderAsync($cart_product_ids, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        return $this->getRecommendationCartOrderAsyncWithHttpInfo($cart_product_ids, $accept_language, $product_id_list, $count)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getRecommendationCartOrderAsyncWithHttpInfo
-     *
-     * Order products for the best recommendation for a shopping cart
-     *
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (required)
-     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationCartOrderAsyncWithHttpInfo($cart_product_ids, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
-        $request = $this->getRecommendationCartOrderRequest($cart_product_ids, $accept_language, $product_id_list, $count);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = (string) $responseBody;
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getRecommendationCartOrder'
-     *
-     * @param  string[] $cart_product_ids List of the product ids in customer&#x27;s shopping cart (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getRecommendationCartOrderRequest($cart_product_ids, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        // verify the required parameter 'cart_product_ids' is set
-        if ($cart_product_ids === null || (is_array($cart_product_ids) && count($cart_product_ids) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $cart_product_ids when calling getRecommendationCartOrder'
-            );
-        }
-
-        $resourcePath = '/recommendation-engine/shopping-cart/actions/order';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if (is_array($cart_product_ids)) {
-            $cart_product_ids = ObjectSerializer::serializeCollection($cart_product_ids, 'multi', true);
-        }
-        if ($cart_product_ids !== null) {
-            $queryParams['cart_product_ids'] = ObjectSerializer::toQueryValue($cart_product_ids, null);
-        }
-        // query params
-        if (is_array($product_id_list)) {
-            $product_id_list = ObjectSerializer::serializeCollection($product_id_list, 'multi', true);
-        }
-        if ($product_id_list !== null) {
-            $queryParams['product_id_list'] = ObjectSerializer::toQueryValue($product_id_list, null);
-        }
-        // query params
-        if ($count !== null) {
-            $queryParams['count'] = ObjectSerializer::toQueryValue($count, null);
-        }
-        // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
-        }
-
-
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        // for model (json/xml)
-        if ($_tempBody !== null) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->getConfig()->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getRecommendationProductCombine
-     *
-     * Get the best recommendation
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117
-     */
-    public function getRecommendationProductCombine($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        list($response) = $this->getRecommendationProductCombineWithHttpInfo($customer_id, $accept_language, $product_id_list, $count);
-        return $response;
-    }
-
-    /**
-     * Operation getRecommendationProductCombineWithHttpInfo
-     *
-     * Get the best recommendation
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getRecommendationProductCombineWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117';
-        $request = $this->getRecommendationProductCombineRequest($customer_id, $accept_language, $product_id_list, $count);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = (string) $responseBody;
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 405:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getRecommendationProductCombineAsync
-     *
-     * Get the best recommendation
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationProductCombineAsync($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        return $this->getRecommendationProductCombineAsyncWithHttpInfo($customer_id, $accept_language, $product_id_list, $count)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getRecommendationProductCombineAsyncWithHttpInfo
-     *
-     * Get the best recommendation
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationProductCombineAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117';
-        $request = $this->getRecommendationProductCombineRequest($customer_id, $accept_language, $product_id_list, $count);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = (string) $responseBody;
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getRecommendationProductCombine'
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getRecommendationProductCombineRequest($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        // verify the required parameter 'customer_id' is set
-        if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $customer_id when calling getRecommendationProductCombine'
-            );
-        }
-
-        $resourcePath = '/recommendation-engine/product/actions/combine';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($customer_id !== null) {
-            $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
-        }
-        // query params
-        if (is_array($product_id_list)) {
-            $product_id_list = ObjectSerializer::serializeCollection($product_id_list, 'multi', true);
-        }
-        if ($product_id_list !== null) {
-            $queryParams['product_id_list'] = ObjectSerializer::toQueryValue($product_id_list, null);
-        }
-        // query params
-        if ($count !== null) {
-            $queryParams['count'] = ObjectSerializer::toQueryValue($count, null);
-        }
-        // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
-        }
-
-
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        // for model (json/xml)
-        if ($_tempBody !== null) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->getConfig()->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getRecommendationProductEliminate
-     *
-     * Get the best recommendation with an elimination
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117
-     */
-    public function getRecommendationProductEliminate($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null)
-    {
-        list($response) = $this->getRecommendationProductEliminateWithHttpInfo($customer_id, $accept_language, $product_id_list);
-        return $response;
-    }
-
-    /**
-     * Operation getRecommendationProductEliminateWithHttpInfo
-     *
-     * Get the best recommendation with an elimination
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getRecommendationProductEliminateWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null)
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117';
-        $request = $this->getRecommendationProductEliminateRequest($customer_id, $accept_language, $product_id_list);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = (string) $responseBody;
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 405:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getRecommendationProductEliminateAsync
-     *
-     * Get the best recommendation with an elimination
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationProductEliminateAsync($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null)
-    {
-        return $this->getRecommendationProductEliminateAsyncWithHttpInfo($customer_id, $accept_language, $product_id_list)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getRecommendationProductEliminateAsyncWithHttpInfo
-     *
-     * Get the best recommendation with an elimination
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationProductEliminateAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null)
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117';
-        $request = $this->getRecommendationProductEliminateRequest($customer_id, $accept_language, $product_id_list);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = (string) $responseBody;
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getRecommendationProductEliminate'
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getRecommendationProductEliminateRequest($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null)
-    {
-        // verify the required parameter 'customer_id' is set
-        if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $customer_id when calling getRecommendationProductEliminate'
-            );
-        }
-
-        $resourcePath = '/recommendation-engine/product/actions/eliminate';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($customer_id !== null) {
-            $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
-        }
-        // query params
-        if (is_array($product_id_list)) {
-            $product_id_list = ObjectSerializer::serializeCollection($product_id_list, 'multi', true);
-        }
-        if ($product_id_list !== null) {
-            $queryParams['product_id_list'] = ObjectSerializer::toQueryValue($product_id_list, null);
-        }
-        // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
-        }
-
-
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        // for model (json/xml)
-        if ($_tempBody !== null) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->getConfig()->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getRecommendationProductOrder
-     *
-     * Order products for the best recommendation.
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117
-     */
-    public function getRecommendationProductOrder($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        list($response) = $this->getRecommendationProductOrderWithHttpInfo($customer_id, $accept_language, $product_id_list, $count);
-        return $response;
-    }
-
-    /**
-     * Operation getRecommendationProductOrderWithHttpInfo
-     *
-     * Order products for the best recommendation.
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getRecommendationProductOrderWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117';
-        $request = $this->getRecommendationProductOrderRequest($customer_id, $accept_language, $product_id_list, $count);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = (string) $responseBody;
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 405:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getRecommendationProductOrderAsync
-     *
-     * Order products for the best recommendation.
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationProductOrderAsync($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        return $this->getRecommendationProductOrderAsyncWithHttpInfo($customer_id, $accept_language, $product_id_list, $count)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getRecommendationProductOrderAsyncWithHttpInfo
-     *
-     * Order products for the best recommendation.
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[]|null $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getRecommendationProductOrderAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200117';
-        $request = $this->getRecommendationProductOrderRequest($customer_id, $accept_language, $product_id_list, $count);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = (string) $responseBody;
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getRecommendationProductOrder'
-     *
-     * @param  string $customer_id The unique id of the customer (required)
-     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $product_id_list List of the product ids. Initial products of the recommendation engine. (optional)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getRecommendationProductOrderRequest($customer_id, $accept_language = 'cs, en-gb;q=0.8', $product_id_list = null, $count = '100')
-    {
-        // verify the required parameter 'customer_id' is set
-        if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $customer_id when calling getRecommendationProductOrder'
-            );
-        }
-
-        $resourcePath = '/recommendation-engine/product/actions/order';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($customer_id !== null) {
-            $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
-        }
-        // query params
-        if (is_array($product_id_list)) {
-            $product_id_list = ObjectSerializer::serializeCollection($product_id_list, 'multi', true);
-        }
-        if ($product_id_list !== null) {
-            $queryParams['product_id_list'] = ObjectSerializer::toQueryValue($product_id_list, null);
-        }
-        // query params
-        if ($count !== null) {
-            $queryParams['count'] = ObjectSerializer::toQueryValue($count, null);
-        }
-        // header params
-        if ($accept_language !== null) {
-            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
-        }
-
-
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        // for model (json/xml)
-        if ($_tempBody !== null) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->getConfig()->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
      * Operation postBulkThirdPartyRecommendations
      *
      * Create a batch of the third party recommendations
@@ -2307,6 +276,1878 @@ class ProductRecommendationEngineApi
         }
 
         $resourcePath = '/third-party-recommendations/batch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // body params
+        $_tempBody = $body;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation postRecommendationCartCombine
+     *
+     * Get the best recommendation for shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody1 $body body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119
+     */
+    public function postRecommendationCartCombine($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        list($response) = $this->postRecommendationCartCombineWithHttpInfo($body, $accept_language);
+        return $response;
+    }
+
+    /**
+     * Operation postRecommendationCartCombineWithHttpInfo
+     *
+     * Get the best recommendation for shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody1 $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postRecommendationCartCombineWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119';
+        $request = $this->postRecommendationCartCombineRequest($body, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postRecommendationCartCombineAsync
+     *
+     * Get the best recommendation for shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody1 $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationCartCombineAsync($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->postRecommendationCartCombineAsyncWithHttpInfo($body, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postRecommendationCartCombineAsyncWithHttpInfo
+     *
+     * Get the best recommendation for shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody1 $body (required)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationCartCombineAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119';
+        $request = $this->postRecommendationCartCombineRequest($body, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postRecommendationCartCombine'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody1 $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postRecommendationCartCombineRequest($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postRecommendationCartCombine'
+            );
+        }
+
+        $resourcePath = '/recommendation-engine/shopping-cart/actions/combine';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // body params
+        $_tempBody = $body;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation postRecommendationCartEliminate
+     *
+     * Get the best recommendation with elimination for shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody1 $body body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119
+     */
+    public function postRecommendationCartEliminate($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        list($response) = $this->postRecommendationCartEliminateWithHttpInfo($body, $accept_language);
+        return $response;
+    }
+
+    /**
+     * Operation postRecommendationCartEliminateWithHttpInfo
+     *
+     * Get the best recommendation with elimination for shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody1 $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postRecommendationCartEliminateWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119';
+        $request = $this->postRecommendationCartEliminateRequest($body, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postRecommendationCartEliminateAsync
+     *
+     * Get the best recommendation with elimination for shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody1 $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationCartEliminateAsync($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->postRecommendationCartEliminateAsyncWithHttpInfo($body, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postRecommendationCartEliminateAsyncWithHttpInfo
+     *
+     * Get the best recommendation with elimination for shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody1 $body (required)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationCartEliminateAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119';
+        $request = $this->postRecommendationCartEliminateRequest($body, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postRecommendationCartEliminate'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody1 $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postRecommendationCartEliminateRequest($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postRecommendationCartEliminate'
+            );
+        }
+
+        $resourcePath = '/recommendation-engine/shopping-cart/actions/eliminate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // body params
+        $_tempBody = $body;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation postRecommendationCartOrder
+     *
+     * Order products for the best recommendation for a shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody1 $body body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119
+     */
+    public function postRecommendationCartOrder($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        list($response) = $this->postRecommendationCartOrderWithHttpInfo($body, $accept_language);
+        return $response;
+    }
+
+    /**
+     * Operation postRecommendationCartOrderWithHttpInfo
+     *
+     * Order products for the best recommendation for a shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody1 $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postRecommendationCartOrderWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119';
+        $request = $this->postRecommendationCartOrderRequest($body, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postRecommendationCartOrderAsync
+     *
+     * Order products for the best recommendation for a shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody1 $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationCartOrderAsync($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->postRecommendationCartOrderAsyncWithHttpInfo($body, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postRecommendationCartOrderAsyncWithHttpInfo
+     *
+     * Order products for the best recommendation for a shopping cart
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody1 $body (required)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationCartOrderAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119';
+        $request = $this->postRecommendationCartOrderRequest($body, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postRecommendationCartOrder'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody1 $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postRecommendationCartOrderRequest($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postRecommendationCartOrder'
+            );
+        }
+
+        $resourcePath = '/recommendation-engine/shopping-cart/actions/order';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // body params
+        $_tempBody = $body;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation postRecommendationProductCombine
+     *
+     * Get the best recommendation
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody $body body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118
+     */
+    public function postRecommendationProductCombine($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        list($response) = $this->postRecommendationProductCombineWithHttpInfo($body, $accept_language);
+        return $response;
+    }
+
+    /**
+     * Operation postRecommendationProductCombineWithHttpInfo
+     *
+     * Get the best recommendation
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postRecommendationProductCombineWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
+        $request = $this->postRecommendationProductCombineRequest($body, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postRecommendationProductCombineAsync
+     *
+     * Get the best recommendation
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationProductCombineAsync($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->postRecommendationProductCombineAsyncWithHttpInfo($body, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postRecommendationProductCombineAsyncWithHttpInfo
+     *
+     * Get the best recommendation
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody $body (required)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationProductCombineAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
+        $request = $this->postRecommendationProductCombineRequest($body, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postRecommendationProductCombine'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postRecommendationProductCombineRequest($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postRecommendationProductCombine'
+            );
+        }
+
+        $resourcePath = '/recommendation-engine/product/actions/combine';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // body params
+        $_tempBody = $body;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation postRecommendationProductEliminate
+     *
+     * Get the best recommendation with an elimination
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody $body body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118
+     */
+    public function postRecommendationProductEliminate($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        list($response) = $this->postRecommendationProductEliminateWithHttpInfo($body, $accept_language);
+        return $response;
+    }
+
+    /**
+     * Operation postRecommendationProductEliminateWithHttpInfo
+     *
+     * Get the best recommendation with an elimination
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postRecommendationProductEliminateWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
+        $request = $this->postRecommendationProductEliminateRequest($body, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postRecommendationProductEliminateAsync
+     *
+     * Get the best recommendation with an elimination
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationProductEliminateAsync($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->postRecommendationProductEliminateAsyncWithHttpInfo($body, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postRecommendationProductEliminateAsyncWithHttpInfo
+     *
+     * Get the best recommendation with an elimination
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody $body (required)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationProductEliminateAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
+        $request = $this->postRecommendationProductEliminateRequest($body, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postRecommendationProductEliminate'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postRecommendationProductEliminateRequest($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postRecommendationProductEliminate'
+            );
+        }
+
+        $resourcePath = '/recommendation-engine/product/actions/eliminate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // body params
+        $_tempBody = $body;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation postRecommendationProductOrder
+     *
+     * Order products for the best recommendation.
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody $body body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118
+     */
+    public function postRecommendationProductOrder($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        list($response) = $this->postRecommendationProductOrderWithHttpInfo($body, $accept_language);
+        return $response;
+    }
+
+    /**
+     * Operation postRecommendationProductOrderWithHttpInfo
+     *
+     * Order products for the best recommendation.
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postRecommendationProductOrderWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
+        $request = $this->postRecommendationProductOrderRequest($body, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postRecommendationProductOrderAsync
+     *
+     * Order products for the best recommendation.
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationProductOrderAsync($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->postRecommendationProductOrderAsyncWithHttpInfo($body, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postRecommendationProductOrderAsyncWithHttpInfo
+     *
+     * Order products for the best recommendation.
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody $body (required)
+     * @param  string|null $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postRecommendationProductOrderAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118';
+        $request = $this->postRecommendationProductOrderRequest($body, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postRecommendationProductOrder'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody $body (required)
+     * @param  string $accept_language The unique id of the language code by ISO 639-1 (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postRecommendationProductOrderRequest($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postRecommendationProductOrder'
+            );
+        }
+
+        $resourcePath = '/recommendation-engine/product/actions/order';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

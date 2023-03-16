@@ -216,6 +216,7 @@ class Message implements ModelInterface, ArrayAccess
     const STATUS_0 = 0;
 const STATUS_1 = 1;
 const STATUS_MINUS_1 = -1;
+const STATUS_MINUS_2 = -2;
 const STATUS_2 = 2;
 const STATUS_4 = 4;
 const COMMUNICATION_CHANNEL_ID_1 = 1;
@@ -234,6 +235,7 @@ const COMMUNICATION_CHANNEL_ID_5 = 5;
             self::STATUS_0,
 self::STATUS_1,
 self::STATUS_MINUS_1,
+self::STATUS_MINUS_2,
 self::STATUS_2,
 self::STATUS_4,        ];
     }
@@ -367,7 +369,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets status
      *
-     * @param int $status The status id of the message. *Possible values are: 0 - message was not send / 1- message was send successfully / -1 message was not recieved (it was returned) / 2 - an error occured while sending / 4 - customer has no agreements (GDPR)*
+     * @param int $status The status id of the message. *Possible values are: 0 - message was not send / 1- message was send successfully / -1 message was not recieved (it was returned) / -2 message was not recieved (soft bounce) / 2 - an error occured while sending / 4 - customer has no agreements (GDPR)*
      *
      * @return $this
      */

@@ -96,7 +96,7 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088
      */
     public function getPoint($point_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPointWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088';
         $request = $this->getPointRequest($point_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class PointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class PointsApi
      */
     public function getPointAsyncWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088';
         $request = $this->getPointRequest($point_id, $accept_language);
 
         return $this->client

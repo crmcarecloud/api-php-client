@@ -362,7 +362,7 @@ self::STATE_2,        ];
     /**
      * Sets available_credits
      *
-     * @param float $available_credits The number of avalilable credits from the record
+     * @param float $available_credits The number of avaliable credits from the record
      *
      * @return $this
      */

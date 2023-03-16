@@ -56,7 +56,7 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'rewards_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'tags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]',
 'total_items' => 'int'    ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'rewards_properties' => null,
+        'tags' => null,
 'total_items' => null    ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'rewards_properties' => 'rewards_properties',
+        'tags' => 'tags',
 'total_items' => 'total_items'    ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'rewards_properties' => 'setRewardsProperties',
+        'tags' => 'setTags',
 'total_items' => 'setTotalItems'    ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'rewards_properties' => 'getRewardsProperties',
+        'tags' => 'getTags',
 'total_items' => 'getTotalItems'    ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['rewards_properties'] = isset($data['rewards_properties']) ? $data['rewards_properties'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -203,25 +203,25 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets rewards_properties
+     * Gets tags
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]
      */
-    public function getRewardsProperties()
+    public function getTags()
     {
-        return $this->container['rewards_properties'];
+        return $this->container['tags'];
     }
 
     /**
-     * Sets rewards_properties
+     * Sets tags
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $rewards_properties List of all reward properties
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[] $tags List of the all tags assigned to the resource rewards.
      *
      * @return $this
      */
-    public function setRewardsProperties($rewards_properties)
+    public function setTags($tags)
     {
-        $this->container['rewards_properties'] = $rewards_properties;
+        $this->container['tags'] = $tags;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class InlineResponse200127Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of all found reward properties
+     * @param int $total_items Count of all found tags
      *
      * @return $this
      */

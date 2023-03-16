@@ -96,7 +96,7 @@ class PaymentTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087
      */
     public function getPaymentType($payment_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class PaymentTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPaymentTypeWithHttpInfo($payment_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087';
         $request = $this->getPaymentTypeRequest($payment_type_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class PaymentTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class PaymentTypesApi
      */
     public function getPaymentTypeAsyncWithHttpInfo($payment_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087';
         $request = $this->getPaymentTypeRequest($payment_type_id, $accept_language);
 
         return $this->client
@@ -419,7 +419,7 @@ class PaymentTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086
      */
     public function getPaymentTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -440,11 +440,11 @@ class PaymentTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPaymentTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086';
         $request = $this->getPaymentTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -496,7 +496,7 @@ class PaymentTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class PaymentTypesApi
      */
     public function getPaymentTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086';
         $request = $this->getPaymentTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

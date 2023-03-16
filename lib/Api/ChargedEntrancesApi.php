@@ -96,7 +96,7 @@ class ChargedEntrancesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136
      */
     public function getEntrance($entrance_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class ChargedEntrancesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEntranceWithHttpInfo($entrance_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->getEntranceRequest($entrance_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class ChargedEntrancesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class ChargedEntrancesApi
      */
     public function getEntranceAsyncWithHttpInfo($entrance_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->getEntranceRequest($entrance_id, $accept_language);
 
         return $this->client
@@ -434,7 +434,7 @@ class ChargedEntrancesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135
      */
     public function getEntrances($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null)
     {
@@ -470,11 +470,11 @@ class ChargedEntrancesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEntrancesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
         $request = $this->getEntrancesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id);
 
         try {
@@ -526,7 +526,7 @@ class ChargedEntrancesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -646,7 +646,7 @@ class ChargedEntrancesApi
      */
     public function getEntrancesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
         $request = $this->getEntrancesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id);
 
         return $this->client
@@ -890,7 +890,7 @@ class ChargedEntrancesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137
      */
     public function getEntrancesOverview($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null, $pos_id = null)
     {
@@ -910,11 +910,11 @@ class ChargedEntrancesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEntrancesOverviewWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null, $pos_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->getEntrancesOverviewRequest($accept_language, $valid_from, $valid_to, $pos_id);
 
         try {
@@ -966,7 +966,7 @@ class ChargedEntrancesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1054,7 +1054,7 @@ class ChargedEntrancesApi
      */
     public function getEntrancesOverviewAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $valid_from = null, $valid_to = null, $pos_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->getEntrancesOverviewRequest($accept_language, $valid_from, $valid_to, $pos_id);
 
         return $this->client

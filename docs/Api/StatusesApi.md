@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getStatuses**](StatusesApi.md#getstatuses) | **GET** /statuses | Get all statuses
 
 # **getStatus**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138 getStatus($status_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139 getStatus($status_id, $accept_language)
 
 Get a status
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138**](../Model/InlineResponse200138.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139**](../Model/InlineResponse200139.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStatuses**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137 getStatuses($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138 getStatuses($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all statuses
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137**](../Model/InlineResponse200137.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138**](../Model/InlineResponse200138.md)
 
 ### Authorization
 

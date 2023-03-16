@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**postProductReservationCancel**](ProductReservationsApi.md#postproductreservationcancel) | **POST** /product-reservations/{product_reservation_id}/actions/cancel-reservation | Cancel reservation
 
 # **getProductReservation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101 getProductReservation($product_reservation_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102 getProductReservation($product_reservation_id, $accept_language)
 
 Get a product-reservation
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101**](../Model/InlineResponse200101.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102**](../Model/InlineResponse200102.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservations**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code)
 
 Get all product reservations
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100**](../Model/InlineResponse200100.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101**](../Model/InlineResponse200101.md)
 
 ### Authorization
 

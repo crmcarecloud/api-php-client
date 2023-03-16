@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**postBulkProductBrands**](ProductBrandsApi.md#postbulkproductbrands) | **POST** /product-brands/batch | Create a batch of product brands
 
 # **getProductBrand**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096 getProductBrand($product_brand_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097 getProductBrand($product_brand_id, $accept_language)
 
 Get a product brand
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096**](../Model/InlineResponse20096.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097**](../Model/InlineResponse20097.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductBrands**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20095 getProductBrands($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096 getProductBrands($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all product brand
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20095**](../Model/InlineResponse20095.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096**](../Model/InlineResponse20096.md)
 
 ### Authorization
 

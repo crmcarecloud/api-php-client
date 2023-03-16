@@ -96,7 +96,7 @@ class CustomerExternalApplicationsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055
      */
     public function getCustomerExternalApp($customer_external_application_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class CustomerExternalApplicationsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerExternalAppWithHttpInfo($customer_external_application_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055';
         $request = $this->getCustomerExternalAppRequest($customer_external_application_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CustomerExternalApplicationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class CustomerExternalApplicationsApi
      */
     public function getCustomerExternalAppAsyncWithHttpInfo($customer_external_application_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055';
         $request = $this->getCustomerExternalAppRequest($customer_external_application_id, $accept_language);
 
         return $this->client
@@ -419,7 +419,7 @@ class CustomerExternalApplicationsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054
      */
     public function getCustomerExternalApps($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -440,11 +440,11 @@ class CustomerExternalApplicationsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerExternalAppsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
         $request = $this->getCustomerExternalAppsRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -496,7 +496,7 @@ class CustomerExternalApplicationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -586,7 +586,7 @@ class CustomerExternalApplicationsApi
      */
     public function getCustomerExternalAppsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
         $request = $this->getCustomerExternalAppsRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

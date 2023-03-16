@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message_id** | **string** | The unique id of the message | [optional] 
-**status** | **int** | The status id of the message. *Possible values are: 0 - message was not send / 1- message was send successfully / -1 message was not recieved (it was returned) / 2 - an error occured while sending / 4 - customer has no agreements (GDPR)* | [optional] 
+**status** | **int** | The status id of the message. *Possible values are: 0 - message was not send / 1- message was send successfully / -1 message was not recieved (it was returned) / -2 message was not recieved (soft bounce) / 2 - an error occured while sending / 4 - customer has no agreements (GDPR)* | [optional] 
 **message_template_id** | **string** | The unique id of the message_template | 
 **customer_id** | **string** | The unique id of the card holder. | 
 **contact** | **string** | Email address or phone number of customer in case of send message to different contact than customer has in database | [optional] 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**property_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of property records | [optional] 
-**total_items** | **int** | Count of all found task property records | [optional] 
+**tasks** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Task[]**](Task.md) | List of all tasks | [optional] 
+**total_items** | **int** | Count of all found tasks | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -56,10 +56,10 @@ class InlineResponse200171Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'earned_credits' => 'float',
-'redeemed_credits' => 'float',
-'available_credits' => 'float',
-'split_by_currency' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]'    ];
+        'earned_points' => 'float',
+'redeemed_points' => 'float',
+'available_points' => 'float',
+'available_points_money_value' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,10 +67,10 @@ class InlineResponse200171Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'earned_credits' => 'float',
-'redeemed_credits' => 'float',
-'available_credits' => 'float',
-'split_by_currency' => null    ];
+        'earned_points' => 'float',
+'redeemed_points' => 'float',
+'available_points' => 'float',
+'available_points_money_value' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,10 +99,10 @@ class InlineResponse200171Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'earned_credits' => 'earned_credits',
-'redeemed_credits' => 'redeemed_credits',
-'available_credits' => 'available_credits',
-'split_by_currency' => 'split_by_currency'    ];
+        'earned_points' => 'earned_points',
+'redeemed_points' => 'redeemed_points',
+'available_points' => 'available_points',
+'available_points_money_value' => 'available_points_money_value'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -110,10 +110,10 @@ class InlineResponse200171Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'earned_credits' => 'setEarnedCredits',
-'redeemed_credits' => 'setRedeemedCredits',
-'available_credits' => 'setAvailableCredits',
-'split_by_currency' => 'setSplitByCurrency'    ];
+        'earned_points' => 'setEarnedPoints',
+'redeemed_points' => 'setRedeemedPoints',
+'available_points' => 'setAvailablePoints',
+'available_points_money_value' => 'setAvailablePointsMoneyValue'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -121,10 +121,10 @@ class InlineResponse200171Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'earned_credits' => 'getEarnedCredits',
-'redeemed_credits' => 'getRedeemedCredits',
-'available_credits' => 'getAvailableCredits',
-'split_by_currency' => 'getSplitByCurrency'    ];
+        'earned_points' => 'getEarnedPoints',
+'redeemed_points' => 'getRedeemedPoints',
+'available_points' => 'getAvailablePoints',
+'available_points_money_value' => 'getAvailablePointsMoneyValue'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -184,10 +184,10 @@ class InlineResponse200171Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['earned_credits'] = isset($data['earned_credits']) ? $data['earned_credits'] : null;
-        $this->container['redeemed_credits'] = isset($data['redeemed_credits']) ? $data['redeemed_credits'] : null;
-        $this->container['available_credits'] = isset($data['available_credits']) ? $data['available_credits'] : null;
-        $this->container['split_by_currency'] = isset($data['split_by_currency']) ? $data['split_by_currency'] : null;
+        $this->container['earned_points'] = isset($data['earned_points']) ? $data['earned_points'] : null;
+        $this->container['redeemed_points'] = isset($data['redeemed_points']) ? $data['redeemed_points'] : null;
+        $this->container['available_points'] = isset($data['available_points']) ? $data['available_points'] : null;
+        $this->container['available_points_money_value'] = isset($data['available_points_money_value']) ? $data['available_points_money_value'] : null;
     }
 
     /**
@@ -215,97 +215,97 @@ class InlineResponse200171Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets earned_credits
+     * Gets earned_points
      *
      * @return float
      */
-    public function getEarnedCredits()
+    public function getEarnedPoints()
     {
-        return $this->container['earned_credits'];
+        return $this->container['earned_points'];
     }
 
     /**
-     * Sets earned_credits
+     * Sets earned_points
      *
-     * @param float $earned_credits Amount of earned credits in time interval
+     * @param float $earned_points Amount of earned points in time interval
      *
      * @return $this
      */
-    public function setEarnedCredits($earned_credits)
+    public function setEarnedPoints($earned_points)
     {
-        $this->container['earned_credits'] = $earned_credits;
+        $this->container['earned_points'] = $earned_points;
 
         return $this;
     }
 
     /**
-     * Gets redeemed_credits
+     * Gets redeemed_points
      *
      * @return float
      */
-    public function getRedeemedCredits()
+    public function getRedeemedPoints()
     {
-        return $this->container['redeemed_credits'];
+        return $this->container['redeemed_points'];
     }
 
     /**
-     * Sets redeemed_credits
+     * Sets redeemed_points
      *
-     * @param float $redeemed_credits Amount of redeemed credits in time interval
+     * @param float $redeemed_points Amount of redeemed points in time interval
      *
      * @return $this
      */
-    public function setRedeemedCredits($redeemed_credits)
+    public function setRedeemedPoints($redeemed_points)
     {
-        $this->container['redeemed_credits'] = $redeemed_credits;
+        $this->container['redeemed_points'] = $redeemed_points;
 
         return $this;
     }
 
     /**
-     * Gets available_credits
+     * Gets available_points
      *
      * @return float
      */
-    public function getAvailableCredits()
+    public function getAvailablePoints()
     {
-        return $this->container['available_credits'];
+        return $this->container['available_points'];
     }
 
     /**
-     * Sets available_credits
+     * Sets available_points
      *
-     * @param float $available_credits Amount of available credits in the moment. Time interval has no influence to the result
+     * @param float $available_points Amount of available points in the moment. Time interval has no influence to the result
      *
      * @return $this
      */
-    public function setAvailableCredits($available_credits)
+    public function setAvailablePoints($available_points)
     {
-        $this->container['available_credits'] = $available_credits;
+        $this->container['available_points'] = $available_points;
 
         return $this;
     }
 
     /**
-     * Gets split_by_currency
+     * Gets available_points_money_value
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]
      */
-    public function getSplitByCurrency()
+    public function getAvailablePointsMoneyValue()
     {
-        return $this->container['split_by_currency'];
+        return $this->container['available_points_money_value'];
     }
 
     /**
-     * Sets split_by_currency
+     * Sets available_points_money_value
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[] $split_by_currency The credit overview split by currency
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[] $available_points_money_value Parameter shows money representation of the 'available_points' parameter. CareCloud calculates money value for every system currency. The calculation is available only if the customer's status allows a point payment. This setup is possible in CareCloud administration.
      *
      * @return $this
      */
-    public function setSplitByCurrency($split_by_currency)
+    public function setAvailablePointsMoneyValue($available_points_money_value)
     {
-        $this->container['split_by_currency'] = $split_by_currency;
+        $this->container['available_points_money_value'] = $available_points_money_value;
 
         return $this;
     }

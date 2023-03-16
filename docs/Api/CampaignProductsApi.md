@@ -173,7 +173,7 @@ $name = "name_example"; // string | Search record by name or a part of the name
 $code = "code_example"; // string | Code of the product
 $display_in = "display_in_example"; // string | Place to display campaign product.
 $type_id = array("type_id_example"); // string[] | Type of the customer for a campaign product.
-$store_id = "store_id_example"; // string | Parameter filters all campaig products from [store](#tag/Stores) by store id
+$store_id = "store_id_example"; // string | Parameter filters all campaign products from [store](#tag/Stores) by store id
 $value_type_id = 56; // int | Type of value (1 - percentage discount value, 2 - final price)
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $valid_from = "valid_from_example"; // string | Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)*
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
  **code** | **string**| Code of the product | [optional]
  **display_in** | **string**| Place to display campaign product. | [optional]
  **type_id** | [**string[]**](../Model/string.md)| Type of the customer for a campaign product. | [optional]
- **store_id** | **string**| Parameter filters all campaig products from [store](#tag/Stores) by store id | [optional]
+ **store_id** | **string**| Parameter filters all campaign products from [store](#tag/Stores) by store id | [optional]
  **value_type_id** | **int**| Type of value (1 - percentage discount value, 2 - final price) | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **valid_from** | **string**| Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]

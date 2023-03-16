@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **credit_id** | **string** | The unique id of the credit record | [optional] 
 **customer_id** | **string** | The unique id of the customer. | 
 **assigned_credits** | **float** | The number of earned credits in the record | [optional] 
-**available_credits** | **float** | The number of avalilable credits from the record | [optional] 
+**available_credits** | **float** | The number of avaliable credits from the record | [optional] 
 **credit_type_id** | **string** | Type of the credit record | 
 **partner_id** | **string** | The unique id of the partner company | 
 **valid_to** | **string** | Date and time of the credit record validity to *(YYYY-MM-DD HH:MM:SS)* | [optional] 

@@ -56,9 +56,10 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'next_amount' => 'float',
-'next_date' => 'string',
-'current_month_amount' => 'float'    ];
+        'earned_credits' => 'float',
+'redeemed_credits' => 'float',
+'available_credits' => 'float',
+'split_by_currency' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +67,10 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'next_amount' => 'float',
-'next_date' => null,
-'current_month_amount' => 'float'    ];
+        'earned_credits' => 'float',
+'redeemed_credits' => 'float',
+'available_credits' => 'float',
+'split_by_currency' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +99,10 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_amount' => 'next_amount',
-'next_date' => 'next_date',
-'current_month_amount' => 'current_month_amount'    ];
+        'earned_credits' => 'earned_credits',
+'redeemed_credits' => 'redeemed_credits',
+'available_credits' => 'available_credits',
+'split_by_currency' => 'split_by_currency'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +110,10 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'next_amount' => 'setNextAmount',
-'next_date' => 'setNextDate',
-'current_month_amount' => 'setCurrentMonthAmount'    ];
+        'earned_credits' => 'setEarnedCredits',
+'redeemed_credits' => 'setRedeemedCredits',
+'available_credits' => 'setAvailableCredits',
+'split_by_currency' => 'setSplitByCurrency'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +121,10 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'next_amount' => 'getNextAmount',
-'next_date' => 'getNextDate',
-'current_month_amount' => 'getCurrentMonthAmount'    ];
+        'earned_credits' => 'getEarnedCredits',
+'redeemed_credits' => 'getRedeemedCredits',
+'available_credits' => 'getAvailableCredits',
+'split_by_currency' => 'getSplitByCurrency'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +184,10 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_amount'] = isset($data['next_amount']) ? $data['next_amount'] : null;
-        $this->container['next_date'] = isset($data['next_date']) ? $data['next_date'] : null;
-        $this->container['current_month_amount'] = isset($data['current_month_amount']) ? $data['current_month_amount'] : null;
+        $this->container['earned_credits'] = isset($data['earned_credits']) ? $data['earned_credits'] : null;
+        $this->container['redeemed_credits'] = isset($data['redeemed_credits']) ? $data['redeemed_credits'] : null;
+        $this->container['available_credits'] = isset($data['available_credits']) ? $data['available_credits'] : null;
+        $this->container['split_by_currency'] = isset($data['split_by_currency']) ? $data['split_by_currency'] : null;
     }
 
     /**
@@ -209,73 +215,97 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets next_amount
+     * Gets earned_credits
      *
      * @return float
      */
-    public function getNextAmount()
+    public function getEarnedCredits()
     {
-        return $this->container['next_amount'];
+        return $this->container['earned_credits'];
     }
 
     /**
-     * Sets next_amount
+     * Sets earned_credits
      *
-     * @param float $next_amount Date (ISO 8601) when first points will expire
+     * @param float $earned_credits Amount of earned credits in time interval
      *
      * @return $this
      */
-    public function setNextAmount($next_amount)
+    public function setEarnedCredits($earned_credits)
     {
-        $this->container['next_amount'] = $next_amount;
+        $this->container['earned_credits'] = $earned_credits;
 
         return $this;
     }
 
     /**
-     * Gets next_date
+     * Gets redeemed_credits
      *
-     * @return string
+     * @return float
      */
-    public function getNextDate()
+    public function getRedeemedCredits()
     {
-        return $this->container['next_date'];
+        return $this->container['redeemed_credits'];
     }
 
     /**
-     * Sets next_date
+     * Sets redeemed_credits
      *
-     * @param string $next_date Amount of redeemed points in time interval *(YYYY-MM-DD)*
+     * @param float $redeemed_credits Amount of redeemed credits in time interval
      *
      * @return $this
      */
-    public function setNextDate($next_date)
+    public function setRedeemedCredits($redeemed_credits)
     {
-        $this->container['next_date'] = $next_date;
+        $this->container['redeemed_credits'] = $redeemed_credits;
 
         return $this;
     }
 
     /**
-     * Gets current_month_amount
+     * Gets available_credits
      *
      * @return float
      */
-    public function getCurrentMonthAmount()
+    public function getAvailableCredits()
     {
-        return $this->container['current_month_amount'];
+        return $this->container['available_credits'];
     }
 
     /**
-     * Sets current_month_amount
+     * Sets available_credits
      *
-     * @param float $current_month_amount Amount of points that will expire in current month
+     * @param float $available_credits Amount of available credits in the moment. Time interval has no influence to the result
      *
      * @return $this
      */
-    public function setCurrentMonthAmount($current_month_amount)
+    public function setAvailableCredits($available_credits)
     {
-        $this->container['current_month_amount'] = $current_month_amount;
+        $this->container['available_credits'] = $available_credits;
+
+        return $this;
+    }
+
+    /**
+     * Gets split_by_currency
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]
+     */
+    public function getSplitByCurrency()
+    {
+        return $this->container['split_by_currency'];
+    }
+
+    /**
+     * Sets split_by_currency
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[] $split_by_currency The credit overview split by currency
+     *
+     * @return $this
+     */
+    public function setSplitByCurrency($split_by_currency)
+    {
+        $this->container['split_by_currency'] = $split_by_currency;
 
         return $this;
     }

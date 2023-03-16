@@ -210,7 +210,7 @@ class CustomerSearchResult implements ModelInterface, ArrayAccess
     /**
      * Sets strict
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerResult[] $strict Search results for strict mode
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerResult[] $strict Search results for the strict mode
      *
      * @return $this
      */

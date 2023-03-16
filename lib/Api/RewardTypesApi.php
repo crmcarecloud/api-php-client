@@ -100,7 +100,7 @@ class RewardTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129
      */
     public function getRewardTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -122,11 +122,11 @@ class RewardTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRewardTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129';
         $request = $this->getRewardTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -178,7 +178,7 @@ class RewardTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class RewardTypesApi
      */
     public function getRewardTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129';
         $request = $this->getRewardTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client
@@ -442,7 +442,7 @@ class RewardTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130
      */
     public function getRewardtype($reward_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -460,11 +460,11 @@ class RewardTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRewardtypeWithHttpInfo($reward_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130';
         $request = $this->getRewardtypeRequest($reward_type_id, $accept_language);
 
         try {
@@ -516,7 +516,7 @@ class RewardTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -600,7 +600,7 @@ class RewardTypesApi
      */
     public function getRewardtypeAsyncWithHttpInfo($reward_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130';
         $request = $this->getRewardtypeRequest($reward_type_id, $accept_language);
 
         return $this->client

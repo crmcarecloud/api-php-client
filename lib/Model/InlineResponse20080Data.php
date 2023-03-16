@@ -56,7 +56,7 @@ class InlineResponse20080Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'is_valid' => 'bool'    ];
+        'request_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20080Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'is_valid' => null    ];
+        'request_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20080Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_valid' => 'is_valid'    ];
+        'request_id' => 'request_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20080Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'is_valid' => 'setIsValid'    ];
+        'request_id' => 'setRequestId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20080Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'is_valid' => 'getIsValid'    ];
+        'request_id' => 'getRequestId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20080Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_valid'] = isset($data['is_valid']) ? $data['is_valid'] : null;
+        $this->container['request_id'] = isset($data['request_id']) ? $data['request_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20080Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets is_valid
+     * Gets request_id
      *
-     * @return bool
+     * @return string
      */
-    public function getIsValid()
+    public function getRequestId()
     {
-        return $this->container['is_valid'];
+        return $this->container['request_id'];
     }
 
     /**
-     * Sets is_valid
+     * Sets request_id
      *
-     * @param bool $is_valid Result of the OTP verification
+     * @param string $request_id The parameter specifies the request that caused the OTP to be created. Request id will be used as one of the parameter in method [/one-time-password/actions/verify](#operation/postVerifyOtp)
      *
      * @return $this
      */
-    public function setIsValid($is_valid)
+    public function setRequestId($request_id)
     {
-        $this->container['is_valid'] = $is_valid;
+        $this->container['request_id'] = $request_id;
 
         return $this;
     }
