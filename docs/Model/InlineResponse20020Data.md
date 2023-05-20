@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**countries** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020DataCountries[]**](InlineResponse20020DataCountries.md) | List of the countries | [optional] 
-**total_items** | **int** | Count of all found countries | [optional] 
+**card_types** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CardType[]**](CardType.md) | Collection of all card types. | [optional] 
+**total_items** | **int** | The number of all found card types. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

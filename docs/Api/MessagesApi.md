@@ -10,11 +10,11 @@ Method | HTTP request | Description
 [**postMessageSend**](MessagesApi.md#postmessagesend) | **POST** /messages/actions/send-message | Send message
 
 # **getMessage**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076 getMessage($message_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078 getMessage($message_id, $accept_language)
 
 Get a message
 
-Get information about a specific message
+Get information about a specific message.
 
 ### Example
 ```php
@@ -35,8 +35,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\MessagesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message_id = "message_id_example"; // string | The unique id of the message
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$message_id = "message_id_example"; // string | The unique ID of the message.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getMessage($message_id, $accept_language);
@@ -51,12 +51,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_id** | **string**| The unique id of the message |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **message_id** | **string**| The unique ID of the message. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078**](../Model/InlineResponse20078.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMessages**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075 getMessages($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077 getMessages($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to)
 
 Get all messages
 
@@ -95,16 +95,16 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\MessagesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$contact = "contact_example"; // string | Email of phone number that was used as a contact in message
-$communication_channel_id = "communication_channel_id_example"; // string | The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels)
-$send_time_from = "send_time_from_example"; // string | Start date and time of the time interval *YYYY-MM-DD HH:MM:SS*
-$send_time_to = "send_time_to_example"; // string | End date and time of the time interval *YYYY-MM-DD HH:MM:SS*
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$contact = "contact_example"; // string | Email of phone number that was used as a contact in message.
+$communication_channel_id = "communication_channel_id_example"; // string | The unique ID of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels).
+$send_time_from = "send_time_from_example"; // string | Start date and time of the time interval. *YYYY-MM-DD HH:MM:SS*
+$send_time_to = "send_time_to_example"; // string | End date and time of the time interval. *YYYY-MM-DD HH:MM:SS*
 
 try {
     $result = $apiInstance->getMessages($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to);
@@ -119,20 +119,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_id** | **string**| The unique id of the customer | [optional]
- **contact** | **string**| Email of phone number that was used as a contact in message | [optional]
- **communication_channel_id** | **string**| The unique id of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels) | [optional]
- **send_time_from** | **string**| Start date and time of the time interval *YYYY-MM-DD HH:MM:SS* | [optional]
- **send_time_to** | **string**| End date and time of the time interval *YYYY-MM-DD HH:MM:SS* | [optional]
+ **customer_id** | **string**| The unique ID of the customer. | [optional]
+ **contact** | **string**| Email of phone number that was used as a contact in message. | [optional]
+ **communication_channel_id** | **string**| The unique ID of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels). | [optional]
+ **send_time_from** | **string**| Start date and time of the time interval. *YYYY-MM-DD HH:MM:SS* | [optional]
+ **send_time_to** | **string**| End date and time of the time interval. *YYYY-MM-DD HH:MM:SS* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubMessageDetail**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077 getSubMessageDetail($message_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079 getSubMessageDetail($message_id, $accept_language)
 
 Get a message detail
 
@@ -171,8 +171,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\MessagesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$message_id = "message_id_example"; // string | The unique id of the message
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$message_id = "message_id_example"; // string | The unique ID of the message.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getSubMessageDetail($message_id, $accept_language);
@@ -187,12 +187,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **message_id** | **string**| The unique id of the message |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **message_id** | **string**| The unique ID of the message. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079**](../Model/InlineResponse20079.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 Send message
 
-Send message (email, SMS or PUSH notification) to customer  <p class=\"warning\">⚠️ Action methods are available only in Enterprise interface.</p>
+Send message (email, SMS or PUSH notification) to customer.  <p class=\"warning\">⚠️ Action methods are available only in Enterprise interface.</p>
 
 ### Example
 ```php
@@ -232,7 +232,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\MessagesApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendmessageBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendmessageBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postMessageSend($body, $accept_language);
@@ -247,7 +247,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendmessageBody**](../Model/ActionsSendmessageBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

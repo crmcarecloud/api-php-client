@@ -14,11 +14,11 @@ Method | HTTP request | Description
 [**putToken**](TokensApi.md#puttoken) | **PUT** /tokens/{token_id} | Edit a push token
 
 # **getTokenAuthentication**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
 
 Get authentication token
 
-Returns authentication token for specific external application
+Returns authentication token for specific external application.
 
 ### Example
 ```php
@@ -39,10 +39,10 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     new GuzzleHttp\Client(),
     $config
 );
-$token_id = "token_id_example"; // string | Client's application token
-$external_application_id = "external_application_id_example"; // string | Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications)
+$token_id = "token_id_example"; // string | A client application token.
+$external_application_id = "external_application_id_example"; // string | ID of external application. For ID of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications).
 $token_type = 1; // int | Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric*
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language);
@@ -57,14 +57,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token_id** | **string**| Client&#x27;s application token |
- **external_application_id** | **string**| Id of external application. For id of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications) |
+ **token_id** | **string**| A client application token. |
+ **external_application_id** | **string**| ID of external application. For ID of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications). |
  **token_type** | **int**| Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* | [default to 1]
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160**](../Model/InlineResponse200160.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164**](../Model/InlineResponse200164.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 Create a token
 
-Create a token and setup of the client's application <p class=\"warning\">Note: When creating a new token, HTTP header doesn't contain token_id in authentication part.</p> <p class=\"warning\">⚠️ Warning: We highly recommend filling all identifications in tokens resource (device and application) to avoid problems if multiple applications use CareCloud REST API on one device.</p> <p class=\"warning\">The creation of a token is different from other API calls. HTTP Authorization header contains only a login name and no token. See [Use cases](#section/Use-cases/Authentication-and-login-process-for-customer-interface).</p>
+Create a token and setup of the client application. <p class=\"warning\">Note: When creating a new token, HTTP header doesn't contain token_id in authentication part.</p> <p class=\"warning\">⚠️ Warning: We highly recommend filling all identifications in tokens resource (device and application) to avoid problems if multiple applications use CareCloud REST API on one device.</p> <p class=\"warning\">The creation of a token is different from other API calls. HTTP Authorization header contains only a login name and no token. See [Use cases](#section/Use-cases/Authentication-and-login-process-for-customer-interface).</p>
 
 ### Example
 ```php
@@ -101,7 +101,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postToken($body, $accept_language);
@@ -117,7 +117,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody**](../Model/TokensBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -135,11 +135,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postTokenLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052 postTokenLogin($body, $token_id, $accept_language)
 
 Login to the application
 
-Login of a customer account to client's application
+Login of a customer account to client's application.
 
 ### Example
 ```php
@@ -161,8 +161,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody | 
-$token_id = "token_id_example"; // string | Client's application token
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$token_id = "token_id_example"; // string | A client application token.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postTokenLogin($body, $token_id, $accept_language);
@@ -178,12 +178,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody**](../Model/ActionsLoginBody.md)|  |
- **token_id** | **string**| Client&#x27;s application token |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **token_id** | **string**| A client application token. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 Logout from the application
 
-Logout of a customer account to client's application
+Logout of a customer account to client's application.
 
 ### Example
 ```php
@@ -222,8 +222,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     new GuzzleHttp\Client(),
     $config
 );
-$token_id = "token_id_example"; // string | Client's application token
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$token_id = "token_id_example"; // string | A client application token.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postTokenLogout($token_id, $accept_language);
@@ -237,8 +237,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token_id** | **string**| Client&#x27;s application token |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **token_id** | **string**| A client application token. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -260,7 +260,7 @@ void (empty response body)
 
 Send email for set up of the new customer password
 
-Send email, that contains link to set up a password
+Send email, that contains link to set up a password.
 
 ### Example
 ```php
@@ -282,8 +282,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody | 
-$token_id = "token_id_example"; // string | Client's application token
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$token_id = "token_id_example"; // string | A client application token.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postTokenSendPasswordSetup($body, $token_id, $accept_language);
@@ -298,8 +298,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody**](../Model/ActionsSendpasswordsetupemailBody.md)|  |
- **token_id** | **string**| Client&#x27;s application token |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **token_id** | **string**| A client application token. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -317,11 +317,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenSocialLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postTokenSocialLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postTokenSocialLogin($body, $token_id, $accept_language)
 
 Login via social network
 
-Login of a customer account to client's application via social network
+Login of a customer account to client's application via social network.
 
 ### Example
 ```php
@@ -343,8 +343,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody | 
-$token_id = "token_id_example"; // string | Client's application token
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$token_id = "token_id_example"; // string | A client application token.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postTokenSocialLogin($body, $token_id, $accept_language);
@@ -360,12 +360,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSocialnetworkloginBody**](../Model/ActionsSocialnetworkloginBody.md)|  |
- **token_id** | **string**| Client&#x27;s application token |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **token_id** | **string**| A client application token. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenTestCustomerLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postTokenTestCustomerLogin($token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165 postTokenTestCustomerLogin($token_id, $accept_language)
 
 Login to the application for test customer
 
@@ -404,8 +404,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     new GuzzleHttp\Client(),
     $config
 );
-$token_id = "token_id_example"; // string | Client's application token
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$token_id = "token_id_example"; // string | A client application token.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postTokenTestCustomerLogin($token_id, $accept_language);
@@ -420,12 +420,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token_id** | **string**| Client&#x27;s application token |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **token_id** | **string**| A client application token. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165**](../Model/InlineResponse200165.md)
 
 ### Authorization
 
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 
 Edit a push token
 
-Update a push token and installation setup
+Update a push token and installation setup.
 
 ### Example
 ```php
@@ -465,8 +465,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody | 
-$token_id = "token_id_example"; // string | Client's application token
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$token_id = "token_id_example"; // string | A client application token.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->putToken($body, $token_id, $accept_language);
@@ -481,8 +481,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TokensTokenIdBody**](../Model/TokensTokenIdBody.md)|  |
- **token_id** | **string**| Client&#x27;s application token |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **token_id** | **string**| A client application token. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

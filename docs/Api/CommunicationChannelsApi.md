@@ -8,11 +8,11 @@ Method | HTTP request | Description
 [**getCommunicationChannels**](CommunicationChannelsApi.md#getcommunicationchannels) | **GET** /communication-channels | Get all communication channels
 
 # **getCommunicationChannel**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023 getCommunicationChannel($communication_channel_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024 getCommunicationChannel($communication_channel_id, $accept_language)
 
 Detail of a communication channel
 
-Get information about a specific communication channel
+Get information about a specific communication channel.
 
 ### Example
 ```php
@@ -33,8 +33,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CommunicationChann
     new GuzzleHttp\Client(),
     $config
 );
-$communication_channel_id = "communication_channel_id_example"; // string | The unique id of the communication channel
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$communication_channel_id = "communication_channel_id_example"; // string | The unique ID of the communication channel.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getCommunicationChannel($communication_channel_id, $accept_language);
@@ -49,12 +49,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **communication_channel_id** | **string**| The unique id of the communication channel |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **communication_channel_id** | **string**| The unique ID of the communication channel. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
 
 ### Authorization
 
@@ -68,11 +68,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommunicationChannels**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022 getCommunicationChannels($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023 getCommunicationChannels($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all communication channels
 
-Get a list of communication channels accepted in CRM CareCloud
+Get a list of communication channels accepted in CRM CareCloud.
 
 ### Example
 ```php
@@ -93,7 +93,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CommunicationChann
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -112,7 +112,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
 
 ### Authorization
 

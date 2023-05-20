@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**additional_address_id** | **string** | Unique additional address ID | [optional] 
+**additional_address_id** | **string** | Unique additional address ID. | [optional] 
 **address_type** | **string** | Type of the address. Address type is set only for additional customer addresses. Default address in customer structure has no type. | 
 **address** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Address**](Address.md) |  | 
 

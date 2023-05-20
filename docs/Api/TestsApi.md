@@ -7,11 +7,11 @@ Method | HTTP request | Description
 [**getTestsConnection**](TestsApi.md#gettestsconnection) | **GET** /tests/connection | Connection test
 
 # **getTestsConnection**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159 getTestsConnection($test_string)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163 getTestsConnection($test_string)
 
 Connection test
 
-If you need test REST API availability, please use this resource
+If you need test REST API availability, please use this resource.
 
 ### Example
 ```php
@@ -23,7 +23,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TestsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$test_string = "test_string_example"; // string | Test string send to REST API. Correct result should reverted string
+$test_string = "test_string_example"; // string | A test string sends to REST API. Correct result should revert the string.
 
 try {
     $result = $apiInstance->getTestsConnection($test_string);
@@ -38,11 +38,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **test_string** | **string**| Test string send to REST API. Correct result should reverted string | [optional]
+ **test_string** | **string**| A test string sends to REST API. Correct result should revert the string. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159**](../Model/InlineResponse200159.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163**](../Model/InlineResponse200163.md)
 
 ### Authorization
 

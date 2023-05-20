@@ -11,11 +11,11 @@ Method | HTTP request | Description
 [**getWalletSalesTurnover**](WalletApi.md#getwalletsalesturnover) | **GET** /wallet/actions/sales-turnover | Get sales turnover
 
 # **getWalletCredits**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172 getWalletCredits($customer_id, $accept_language, $date_from, $date_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178 getWalletCredits($customer_id, $accept_language, $date_from, $date_to)
 
 Get credits overview
 
-Get information about credits overview of the customer in the time interval
+Get information about credits overview of the customer in the time interval.
 
 ### Example
 ```php
@@ -36,10 +36,10 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
-$date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval *(YYYY-MM-DD)*
-$date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval *(YYYY-MM-DD)*
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+$date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)*
+$date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)*
 
 try {
     $result = $apiInstance->getWalletCredits($customer_id, $accept_language, $date_from, $date_to);
@@ -54,14 +54,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **date_from** | **string**| Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* | [optional]
- **date_to** | **string**| Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* | [optional]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **date_from** | **string**| Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* | [optional]
+ **date_to** | **string**| Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172**](../Model/InlineResponse200172.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178**](../Model/InlineResponse200178.md)
 
 ### Authorization
 
@@ -75,11 +75,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletCreditsExpiration**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173 getWalletCreditsExpiration($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179 getWalletCreditsExpiration($customer_id, $accept_language)
 
 Get credits expiration overview
 
-Get information about credits expiration overview of the customer
+Get information about credits expiration overview of the customer.
 
 ### Example
 ```php
@@ -100,8 +100,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getWalletCreditsExpiration($customer_id, $accept_language);
@@ -116,12 +116,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173**](../Model/InlineResponse200173.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179**](../Model/InlineResponse200179.md)
 
 ### Authorization
 
@@ -135,11 +135,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletPoints**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171 getWalletPoints($customer_id, $accept_language, $date_from, $date_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177 getWalletPoints($customer_id, $accept_language, $date_from, $date_to)
 
 Get points overview
 
-Get information about points overview of the customer in time interval
+Get information about points overview of the customer in time interval.
 
 ### Example
 ```php
@@ -160,10 +160,10 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
-$date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval *(YYYY-MM-DD)*
-$date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval *(YYYY-MM-DD)*
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+$date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)*
+$date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)*
 
 try {
     $result = $apiInstance->getWalletPoints($customer_id, $accept_language, $date_from, $date_to);
@@ -178,14 +178,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **date_from** | **string**| Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* | [optional]
- **date_to** | **string**| Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* | [optional]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **date_from** | **string**| Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* | [optional]
+ **date_to** | **string**| Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171**](../Model/InlineResponse200171.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177**](../Model/InlineResponse200177.md)
 
 ### Authorization
 
@@ -199,11 +199,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletPointsExpiration**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173 getWalletPointsExpiration($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179 getWalletPointsExpiration($customer_id, $accept_language)
 
 Get points expiration overview
 
-Get information about points expiration overview of the customer
+Get information about points expiration overview of the customer.
 
 ### Example
 ```php
@@ -224,8 +224,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getWalletPointsExpiration($customer_id, $accept_language);
@@ -240,12 +240,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173**](../Model/InlineResponse200173.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179**](../Model/InlineResponse200179.md)
 
 ### Authorization
 
@@ -259,11 +259,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletSalesTurnover**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170 getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176 getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to)
 
 Get sales turnover
 
-Get information about sales turnover of the customer in time interval
+Get information about sales turnover of the customer in time interval.
 
 ### Example
 ```php
@@ -284,10 +284,10 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\WalletApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
-$date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval *(YYYY-MM-DD)*
-$date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval *(YYYY-MM-DD)*
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+$date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)*
+$date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)*
 
 try {
     $result = $apiInstance->getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to);
@@ -302,14 +302,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **date_from** | **string**| Date (ISO 8601) start of the time interval *(YYYY-MM-DD)* | [optional]
- **date_to** | **string**| Date (ISO 8601) end of the time interval *(YYYY-MM-DD)* | [optional]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **date_from** | **string**| Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* | [optional]
+ **date_to** | **string**| Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170**](../Model/InlineResponse200170.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176**](../Model/InlineResponse200176.md)
 
 ### Authorization
 

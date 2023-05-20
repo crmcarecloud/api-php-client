@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**original_customer_id** | **string** | Id of the original points holder. | 
-**new_customer_id** | **string** | Id of the new points holder. | 
+**original_customer_id** | **string** | ID of the original points holder. | 
+**new_customer_id** | **string** | ID of the new points holder. | 
 **amount** | **float** | Number of the transferred points. | 
 **point_type_id** | **string** | Type of the transferred points. | 
 

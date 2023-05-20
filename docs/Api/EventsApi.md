@@ -10,11 +10,11 @@ Method | HTTP request | Description
 [**postEvent**](EventsApi.md#postevent) | **POST** /events | Create a new event
 
 # **getEvent**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064 getEvent($event_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20066 getEvent($event_id, $accept_language)
 
 Get an event
 
-Get information about a specific event
+Get information about a specific event.
 
 ### Example
 ```php
@@ -35,8 +35,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\EventsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$event_id = "event_id_example"; // string | The unique id of the event
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$event_id = "event_id_example"; // string | The unique ID of the event.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getEvent($event_id, $accept_language);
@@ -51,12 +51,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **event_id** | **string**| The unique id of the event |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **event_id** | **string**| The unique ID of the event. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
 
 ### Authorization
 
@@ -70,11 +70,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEvents**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 getEvents($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065 getEvents($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id)
 
 Get information about all events
 
-Get a list of events in CRM CareCloud
+Get a list of events in CRM CareCloud.
 
 ### Example
 ```php
@@ -95,14 +95,14 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\EventsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$event_type_id = "event_type_id_example"; // string | The unique id of the event type
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$external_id = "external_id_example"; // string | The unique external id. It may be id from the other system
+$event_type_id = "event_type_id_example"; // string | The unique ID of the event type.
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$external_id = "external_id_example"; // string | The unique external id. It may be ID from the other system.
 
 try {
     $result = $apiInstance->getEvents($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id);
@@ -117,74 +117,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **event_type_id** | **string**| The unique id of the event type | [optional]
- **customer_id** | **string**| The unique id of the customer | [optional]
- **external_id** | **string**| The unique external id. It may be id from the other system | [optional]
-
-### Return type
-
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
-
-### Authorization
-
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **getSubEventProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20065 getSubEventProperties($event_id, $accept_language)
-
-Get a collection of event properties records
-
-Get information about all property records on an event
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\EventsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$event_id = "event_id_example"; // string | The unique id of the event
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
-
-try {
-    $result = $apiInstance->getSubEventProperties($event_id, $accept_language);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling EventsApi->getSubEventProperties: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **event_id** | **string**| The unique id of the event |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **event_type_id** | **string**| The unique ID of the event type. | [optional]
+ **customer_id** | **string**| The unique ID of the customer. | [optional]
+ **external_id** | **string**| The unique external id. It may be ID from the other system. | [optional]
 
 ### Return type
 
@@ -201,12 +141,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getSubEventProperties**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067 getSubEventProperties($event_id, $accept_language)
+
+Get a collection of event properties records
+
+Get information about all property records on an event.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\EventsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$event_id = "event_id_example"; // string | The unique ID of the event.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->getSubEventProperties($event_id, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EventsApi->getSubEventProperties: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_id** | **string**| The unique ID of the event. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **postEvent**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114 postEvent($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113 postEvent($body, $accept_language)
 
 Create a new event
 
-Add a new event
+Add a new event.
 
 ### Example
 ```php
@@ -228,7 +228,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\EventsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\EventsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\EventsBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postEvent($body, $accept_language);
@@ -244,11 +244,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\EventsBody**](../Model/EventsBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114**](../Model/InlineResponse20114.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
 
 ### Authorization
 

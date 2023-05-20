@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**credits** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Credit[]**](Credit.md) | List of the credit records | [optional] 
-**total_items** | **int** | Count of all found credit records | [optional] 
+**communication_channels** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]**](CommunicationChannel.md) | Structure of the communication channel. | [optional] 
+**total_items** | **int** | Total count of found items of the resource communication channels. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

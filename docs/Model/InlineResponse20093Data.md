@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**products** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Product[]**](Product.md) | List of CareCloud products | [optional] 
-**total_items** | **int** | Count of all found products | [optional] 
+**point_history** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[]**](PointHistoryRecord.md) | List of the point history records. | [optional] 
+**total_items** | **int** | The number of all found point history records. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

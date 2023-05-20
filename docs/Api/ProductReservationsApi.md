@@ -10,11 +10,11 @@ Method | HTTP request | Description
 [**postProductReservationCancel**](ProductReservationsApi.md#postproductreservationcancel) | **POST** /product-reservations/{product_reservation_id}/actions/cancel-reservation | Cancel reservation
 
 # **getProductReservation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102 getProductReservation($product_reservation_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106 getProductReservation($product_reservation_id, $accept_language)
 
 Get a product-reservation
 
-Get information about a specific product-reservation
+Get information about a specific product-reservation.
 
 ### Example
 ```php
@@ -35,8 +35,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservation
     new GuzzleHttp\Client(),
     $config
 );
-$product_reservation_id = "product_reservation_id_example"; // string | The unique id of the product reservation
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$product_reservation_id = "product_reservation_id_example"; // string | The unique ID of the product reservation.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getProductReservation($product_reservation_id, $accept_language);
@@ -51,12 +51,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_reservation_id** | **string**| The unique id of the product reservation |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **product_reservation_id** | **string**| The unique ID of the product reservation. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102**](../Model/InlineResponse200102.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200106**](../Model/InlineResponse200106.md)
 
 ### Authorization
 
@@ -70,11 +70,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservations**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105 getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code)
 
 Get all product reservations
 
-Get a list of product reservations
+Get a list of product reservations.
 
 ### Example
 ```php
@@ -95,16 +95,16 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservation
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$store_id = "store_id_example"; // string | The unique id of the store in CareCloud
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
 $reservation_state = 56; // int | Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
-$external_reservation_list_type_id = "external_reservation_list_type_id_example"; // string | Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. If set, `external_reservation_code` has to be present in request too.
-$external_reservation_code = "external_reservation_code_example"; // string | Code of the reservation from external system (cashdesk, webshop, production system, others). If set, `external_reservation_list_type_id` has to be present in request too
+$external_reservation_list_type_id = "external_reservation_list_type_id_example"; // string | Every reservation can have more than one external code depends of the business requirements. This parameter allows to pick from witch list of external codes you want to choose. If set, `external_reservation_code` has to be present in request too.
+$external_reservation_code = "external_reservation_code_example"; // string | Code of the reservation from external system (cash-desk, web-shop, production system, others). If set, `external_reservation_list_type_id` has to be present in request too.
 
 try {
     $result = $apiInstance->getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code);
@@ -119,20 +119,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_id** | **string**| The unique id of the customer | [optional]
- **store_id** | **string**| The unique id of the store in CareCloud | [optional]
+ **customer_id** | **string**| The unique ID of the customer. | [optional]
+ **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
  **reservation_state** | **int**| Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional]
- **external_reservation_list_type_id** | **string**| Every reservation can have more than one external code depends of the bussiness requirements. This paramter allows to pick from witch list of external codes you want to choose. If set, &#x60;external_reservation_code&#x60; has to be present in request too. | [optional]
- **external_reservation_code** | **string**| Code of the reservation from external system (cashdesk, webshop, production system, others). If set, &#x60;external_reservation_list_type_id&#x60; has to be present in request too | [optional]
+ **external_reservation_list_type_id** | **string**| Every reservation can have more than one external code depends of the business requirements. This parameter allows to pick from witch list of external codes you want to choose. If set, &#x60;external_reservation_code&#x60; has to be present in request too. | [optional]
+ **external_reservation_code** | **string**| Code of the reservation from external system (cash-desk, web-shop, production system, others). If set, &#x60;external_reservation_list_type_id&#x60; has to be present in request too. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101**](../Model/InlineResponse200101.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105**](../Model/InlineResponse200105.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 Create a reservation
 
-Create a new product reservation in CRM CareCloud
+Create a new product reservation in CRM CareCloud.
 
 ### Example
 ```php
@@ -172,7 +172,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservation
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationsBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postProductReservation($body, $accept_language);
@@ -188,7 +188,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationsBody**](../Model/ProductreservationsBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -232,8 +232,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservation
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCancelreservationBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCancelreservationBody | 
-$product_reservation_id = "product_reservation_id_example"; // string | The unique id of the product reservation
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$product_reservation_id = "product_reservation_id_example"; // string | The unique ID of the product reservation.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postProductReservationCancel($body, $product_reservation_id, $accept_language);
@@ -248,8 +248,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCancelreservationBody**](../Model/ActionsCancelreservationBody.md)|  |
- **product_reservation_id** | **string**| The unique id of the product reservation |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **product_reservation_id** | **string**| The unique ID of the product reservation. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

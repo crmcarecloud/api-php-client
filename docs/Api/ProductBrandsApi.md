@@ -9,11 +9,11 @@ Method | HTTP request | Description
 [**postBulkProductBrands**](ProductBrandsApi.md#postbulkproductbrands) | **POST** /product-brands/batch | Create a batch of product brands
 
 # **getProductBrand**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097 getProductBrand($product_brand_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101 getProductBrand($product_brand_id, $accept_language)
 
 Get a product brand
 
-Get information about a specific product brand
+Get information about a specific product brand.
 
 ### Example
 ```php
@@ -34,8 +34,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductBrandsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$product_brand_id = "product_brand_id_example"; // string | The unique id of the product brand
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$product_brand_id = "product_brand_id_example"; // string | The unique ID of the product brand.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getProductBrand($product_brand_id, $accept_language);
@@ -50,12 +50,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_brand_id** | **string**| The unique id of the product brand |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **product_brand_id** | **string**| The unique ID of the product brand. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20097**](../Model/InlineResponse20097.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200101**](../Model/InlineResponse200101.md)
 
 ### Authorization
 
@@ -69,11 +69,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductBrands**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096 getProductBrands($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100 getProductBrands($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all product brand
 
-Get a list of all product brands
+Get a list of all product brands.
 
 ### Example
 ```php
@@ -94,12 +94,12 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductBrandsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$name = "name_example"; // string | Search record by name or a part of the name
+$name = "name_example"; // string | Search record by name or a part of the name.
 
 try {
     $result = $apiInstance->getProductBrands($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
@@ -114,16 +114,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **name** | **string**| Search record by name or a part of the name | [optional]
+ **name** | **string**| Search record by name or a part of the name. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20096**](../Model/InlineResponse20096.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200100**](../Model/InlineResponse200100.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 Create a batch of product brands
 
-Batch process helps to add multiple product brands in one request
+Batch process helps to add multiple product brands in one request.
 
 ### Example
 ```php
@@ -163,7 +163,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductBrandsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ProductbrandsBatchBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ProductbrandsBatchBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postBulkProductBrands($body, $accept_language);
@@ -178,7 +178,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductbrandsBatchBody**](../Model/ProductbrandsBatchBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

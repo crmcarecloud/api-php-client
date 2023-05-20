@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Delete a booking
 
-Delete selected booking
+Delete selected booking.
 
 ### Example
 ```php
@@ -36,8 +36,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$booking_id = "booking_id_example"; // string | The unique id of the booking
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$booking_id = "booking_id_example"; // string | The unique ID of the booking.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->deleteBooking($booking_id, $accept_language);
@@ -51,8 +51,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **booking_id** | **string**| The unique id of the booking |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **booking_id** | **string**| The unique ID of the booking. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -74,7 +74,7 @@ void (empty response body)
 
 Get a booking
 
-Get information about a specific booking
+Get information about a specific booking.
 
 ### Example
 ```php
@@ -95,8 +95,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$booking_id = "booking_id_example"; // string | The unique id of the booking
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$booking_id = "booking_id_example"; // string | The unique ID of the booking.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getBooking($booking_id, $accept_language);
@@ -111,8 +111,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **booking_id** | **string**| The unique id of the booking |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **booking_id** | **string**| The unique ID of the booking. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 Get all bookings
 
-Get information about all bookings
+Get information about all bookings.
 
 ### Example
 ```php
@@ -155,14 +155,14 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$booking_status = "booking_status_example"; // string | Current status of the booking from resource [booking-statuses](#tag/Booking-statuses)
-$add_booking_items = "none"; // string | Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items*
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$booking_status = "booking_status_example"; // string | Current status of the booking from resource [booking-statuses](#tag/Booking-statuses).
+$add_booking_items = "none"; // string | Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items*
 
 try {
     $result = $apiInstance->getBookings($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items);
@@ -177,14 +177,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_id** | **string**| The unique id of the customer | [optional]
- **booking_status** | **string**| Current status of the booking from resource [booking-statuses](#tag/Booking-statuses) | [optional]
- **add_booking_items** | **string**| Booking items are going to be return depends on the parameter value *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* | [optional] [default to none]
+ **customer_id** | **string**| The unique ID of the customer. | [optional]
+ **booking_status** | **string**| Current status of the booking from resource [booking-statuses](#tag/Booking-statuses). | [optional]
+ **add_booking_items** | **string**| Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* | [optional] [default to none]
 
 ### Return type
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 Create a new booking
 
-Add a new booking
+Add a new booking.
 
 ### Example
 ```php
@@ -228,7 +228,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\BookingsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\BookingsBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postBooking($body, $accept_language);
@@ -244,7 +244,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\BookingsBody**](../Model/BookingsBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 Update a booking
 
-Update a specific booking
+Update a specific booking.
 
 ### Example
 ```php
@@ -288,8 +288,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\BookingsBookingIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\BookingsBookingIdBody | 
-$booking_id = "booking_id_example"; // string | The unique id of the booking
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$booking_id = "booking_id_example"; // string | The unique ID of the booking.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->putBooking($body, $booking_id, $accept_language);
@@ -304,8 +304,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\BookingsBookingIdBody**](../Model/BookingsBookingIdBody.md)|  |
- **booking_id** | **string**| The unique id of the booking |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **booking_id** | **string**| The unique ID of the booking. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

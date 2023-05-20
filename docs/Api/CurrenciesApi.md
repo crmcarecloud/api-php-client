@@ -8,11 +8,11 @@ Method | HTTP request | Description
 [**getCurrency**](CurrenciesApi.md#getcurrency) | **GET** /currencies/{currency_id} | Detail of a currency
 
 # **getCurrencies**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031 getCurrencies($accept_language, $count, $offset, $sort_field, $sort_direction, $currency_name, $currency_code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032 getCurrencies($accept_language, $count, $offset, $sort_field, $sort_direction, $currency_name, $currency_code)
 
 Get all currencies
 
-Get a list of currencies accepted in CRM CareCloud
+Get a list of currencies accepted in CRM CareCloud.
 
 ### Example
 ```php
@@ -33,13 +33,13 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CurrenciesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$currency_name = "currency_name_example"; // string | Name or part of the name of the currency you looking for
-$currency_code = "currency_code_example"; // string | The unique code of a currency represented by ISO code
+$currency_name = "currency_name_example"; // string | Name or part of the name of the currency you looking for.
+$currency_code = "currency_code_example"; // string | The unique code of a currency represented by ISO code.
 
 try {
     $result = $apiInstance->getCurrencies($accept_language, $count, $offset, $sort_field, $sort_direction, $currency_name, $currency_code);
@@ -54,17 +54,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **currency_name** | **string**| Name or part of the name of the currency you looking for | [optional]
- **currency_code** | **string**| The unique code of a currency represented by ISO code | [optional]
+ **currency_name** | **string**| Name or part of the name of the currency you looking for. | [optional]
+ **currency_code** | **string**| The unique code of a currency represented by ISO code. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
 
 ### Authorization
 
@@ -78,11 +78,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCurrency**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032 getCurrency($currency_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033 getCurrency($currency_id, $accept_language)
 
 Detail of a currency
 
-Get information about a specific currency
+Get information about a specific currency.
 
 ### Example
 ```php
@@ -103,8 +103,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CurrenciesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$currency_id = "currency_id_example"; // string | The unique id of a currency in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$currency_id = "currency_id_example"; // string | The unique ID of a currency in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getCurrency($currency_id, $accept_language);
@@ -119,12 +119,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **currency_id** | **string**| The unique id of a currency in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **currency_id** | **string**| The unique ID of a currency in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033**](../Model/InlineResponse20033.md)
 
 ### Authorization
 

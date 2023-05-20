@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Get a card
 
-Get information about a specific customer card
+Get information about a specific customer card.
 
 ### Example
 ```php
@@ -38,8 +38,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$card_id = "card_id_example"; // string | The unique id of the card
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$card_id = "card_id_example"; // string | The unique ID of the card.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getCard($card_id, $accept_language);
@@ -54,8 +54,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **card_id** | **string**| The unique id of the card |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **card_id** | **string**| The unique ID of the card. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 Get all cards
 
-Get information about all customer cards
+Get information about all customer cards.
 
 ### Example
 ```php
@@ -98,15 +98,15 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$card_number = "card_number_example"; // string | Number of the customer card
-$card_type_id = "card_type_id_example"; // string | The unique id of the card type
-$state = 56; // int | State of the customer *Possible values are: 0 - deleted / 1 - active / 2 - non active*
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$card_number = "card_number_example"; // string | Number of the customer card.
+$card_type_id = "card_type_id_example"; // string | The unique ID of the card type.
+$state = 56; // int | State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 
 try {
@@ -122,15 +122,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_id** | **string**| The unique id of the customer | [optional]
- **card_number** | **string**| Number of the customer card | [optional]
- **card_type_id** | **string**| The unique id of the card type | [optional]
- **state** | **int**| State of the customer *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional]
+ **customer_id** | **string**| The unique ID of the customer. | [optional]
+ **card_number** | **string**| Number of the customer card. | [optional]
+ **card_type_id** | **string**| The unique ID of the card type. | [optional]
+ **state** | **int**| State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
 
 ### Return type
@@ -149,11 +149,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postAssignCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015 postAssignCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018 postAssignCard($body, $accept_language)
 
 Assign free card
 
-Assign a free card in order to the customer  <p class=\"warning\">⚠️ Action method is available only in Enterprise interface.</p>
+Assign a free card in order to the customer.  <p class=\"warning\">⚠️ Action method is available only in Enterprise interface.</p>
 
 ### Example
 ```php
@@ -175,7 +175,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignfreecardBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignfreecardBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postAssignCard($body, $accept_language);
@@ -191,11 +191,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignfreecardBody**](../Model/ActionsAssignfreecardBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
 
 ### Authorization
 
@@ -235,7 +235,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBatchBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBatchBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postBatchCards($body, $accept_language);
@@ -250,7 +250,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CardsBatchBody**](../Model/CardsBatchBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -272,7 +272,7 @@ void (empty response body)
 
 Create a card
 
-Add a new customer card
+Add a new customer card.
 
 ### Example
 ```php
@@ -294,7 +294,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CardsBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postCard($body, $accept_language);
@@ -310,7 +310,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CardsBody**](../Model/CardsBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postGenerateDigitalCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018 postGenerateDigitalCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019 postGenerateDigitalCard($body, $accept_language)
 
 Generate virtual card file
 
@@ -354,7 +354,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratedigitalcardfileBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratedigitalcardfileBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postGenerateDigitalCard($body, $accept_language);
@@ -370,11 +370,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratedigitalcardfileBody**](../Model/ActionsGeneratedigitalcardfileBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
 
 ### Authorization
 
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 
 Update a card
 
-Update a specific customer card
+Update a specific customer card.
 
 ### Example
 ```php
@@ -414,8 +414,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody | 
-$card_id = "card_id_example"; // string | The unique id of the card
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$card_id = "card_id_example"; // string | The unique ID of the card.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->putCard($body, $card_id, $accept_language);
@@ -430,8 +430,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CardsCardIdBody**](../Model/CardsCardIdBody.md)|  |
- **card_id** | **string**| The unique id of the card |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **card_id** | **string**| The unique ID of the card. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

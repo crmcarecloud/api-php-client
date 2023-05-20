@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**interest_record_id** | **string** | The unique id of the interest record | [optional] 
-**interest_id** | **string** | The unique id of the interest | 
-**customer_id** | **string** | The unique id of the customer | 
-**last_change** | **string** | Date and time of the last change *(YYYY-MM-DD HH:MM:SS)* | [optional] 
+**interest_record_id** | **string** | The unique ID of the interest record. | [optional] 
+**interest_id** | **string** | The unique ID of the interest. | 
+**customer_id** | **string** | The unique ID of the customer. | 
+**last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

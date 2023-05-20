@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Detail of a specific campaign product
 
-Get information about all details of a specific campaign product
+Get information about all details of a specific campaign product.
 
 ### Example
 ```php
@@ -36,8 +36,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsAp
     new GuzzleHttp\Client(),
     $config
 );
-$campaign_product_id = "campaign_product_id_example"; // string | The unique id of the campaign product in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$campaign_product_id = "campaign_product_id_example"; // string | The unique ID of the campaign product in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getCampaignProduct($campaign_product_id, $accept_language);
@@ -52,8 +52,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_product_id** | **string**| The unique id of the campaign product in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **campaign_product_id** | **string**| The unique ID of the campaign product in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -96,8 +96,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsAp
     new GuzzleHttp\Client(),
     $config
 );
-$campaign_product_id = "campaign_product_id_example"; // string | The unique id of the campaign product in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$campaign_product_id = "campaign_product_id_example"; // string | The unique ID of the campaign product in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -116,8 +116,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **campaign_product_id** | **string**| The unique id of the campaign product in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **campaign_product_id** | **string**| The unique ID of the campaign product in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 Collection of campaign products
 
-Get information about all available campaign products
+Get information about all available campaign products.
 
 ### Example
 ```php
@@ -164,17 +164,17 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsAp
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$name = "name_example"; // string | Search record by name or a part of the name
-$code = "code_example"; // string | Code of the product
+$name = "name_example"; // string | Search record by name or a part of the name.
+$code = "code_example"; // string | Code of the product.
 $display_in = "display_in_example"; // string | Place to display campaign product.
 $type_id = array("type_id_example"); // string[] | Type of the customer for a campaign product.
-$store_id = "store_id_example"; // string | Parameter filters all campaign products from [store](#tag/Stores) by store id
-$value_type_id = 56; // int | Type of value (1 - percentage discount value, 2 - final price)
+$store_id = "store_id_example"; // string | Parameter filters all campaign products from [store](#tag/Stores) by store ID.
+$value_type_id = 56; // int | Type of value (1 - percentage discount value, 2 - final price).
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $valid_from = "valid_from_example"; // string | Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)*
 $valid_to = "valid_to_example"; // string | Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)*
@@ -192,17 +192,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **name** | **string**| Search record by name or a part of the name | [optional]
- **code** | **string**| Code of the product | [optional]
+ **name** | **string**| Search record by name or a part of the name. | [optional]
+ **code** | **string**| Code of the product. | [optional]
  **display_in** | **string**| Place to display campaign product. | [optional]
  **type_id** | [**string[]**](../Model/string.md)| Type of the customer for a campaign product. | [optional]
- **store_id** | **string**| Parameter filters all campaign products from [store](#tag/Stores) by store id | [optional]
- **value_type_id** | **int**| Type of value (1 - percentage discount value, 2 - final price) | [optional]
+ **store_id** | **string**| Parameter filters all campaign products from [store](#tag/Stores) by store ID. | [optional]
+ **value_type_id** | **int**| Type of value (1 - percentage discount value, 2 - final price). | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **valid_from** | **string**| Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **valid_to** | **string**| Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 Create a campaign product
 
-Add a new campaign product
+Add a new campaign product.
 
 ### Example
 ```php
@@ -249,7 +249,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsAp
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postCampaignProduct($body, $accept_language);
@@ -265,7 +265,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignproductsBody**](../Model/CampaignproductsBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 Add a store to the campaign product
 
-Add one of the [stores](#tag/Stores) to a campaign product
+Add one of the [stores](#tag/Stores) to a campaign product.
 
 ### Example
 ```php
@@ -309,8 +309,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsAp
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody | 
-$campaign_product_id = "campaign_product_id_example"; // string | The unique id of the campaign product in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$campaign_product_id = "campaign_product_id_example"; // string | The unique ID of the campaign product in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postCampaignProductStoreRecord($body, $campaign_product_id, $accept_language);
@@ -326,8 +326,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignProductIdCampaignproductstorerecordsBody**](../Model/CampaignProductIdCampaignproductstorerecordsBody.md)|  |
- **campaign_product_id** | **string**| The unique id of the campaign product in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **campaign_product_id** | **string**| The unique ID of the campaign product in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**segment_groups** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\SegmentGroup[]**](SegmentGroup.md) | List of all segment groups | [optional] 
-**total_items** | **int** | Count of all found segments | [optional] 
+**reward_types** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RewardType[]**](RewardType.md) | List of all reward types. | [optional] 
+**total_items** | **int** | The number of all found reward types. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

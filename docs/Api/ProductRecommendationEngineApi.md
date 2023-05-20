@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create a batch of the third party recommendations
 
-Batch process helps to add multiple third party recommendations in one request
+Batch process helps to add multiple third party recommendations in one request. A third party may submit products recommended to a selected customer based on their previous shopping behavior or products recommended based on links to the current content of their shopping cart.
 
 ### Example
 ```php
@@ -39,7 +39,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductRecommendat
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ThirdpartyrecommendationsBatchBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ThirdpartyrecommendationsBatchBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postBulkThirdPartyRecommendations($body, $accept_language);
@@ -54,7 +54,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ThirdpartyrecommendationsBatchBody**](../Model/ThirdpartyrecommendationsBatchBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -72,7 +72,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationCartCombine**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119 postRecommendationCartCombine($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123 postRecommendationCartCombine($body, $accept_language)
 
 Get the best recommendation for shopping cart
 
@@ -98,7 +98,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductRecommendat
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody1(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody1 | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postRecommendationCartCombine($body, $accept_language);
@@ -114,11 +114,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody1**](../Model/ActionsCombineBody1.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119**](../Model/InlineResponse200119.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123**](../Model/InlineResponse200123.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationCartEliminate**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119 postRecommendationCartEliminate($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123 postRecommendationCartEliminate($body, $accept_language)
 
 Get the best recommendation with elimination for shopping cart
 
@@ -158,7 +158,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductRecommendat
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody1(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody1 | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postRecommendationCartEliminate($body, $accept_language);
@@ -174,11 +174,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody1**](../Model/ActionsEliminateBody1.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119**](../Model/InlineResponse200119.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123**](../Model/InlineResponse200123.md)
 
 ### Authorization
 
@@ -192,11 +192,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationCartOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119 postRecommendationCartOrder($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123 postRecommendationCartOrder($body, $accept_language)
 
 Order products for the best recommendation for a shopping cart
 
-The method returns the algorithm ordered products from the initial list (best first). Results depend on the customer's shopping cart and his previous shopping behavior. If needed, the initial parameter might define the number of results.
+The method returns the algorithm ordered products from the initial list (best first). Results depend on the customer  shopping cart and his previous shopping behavior. If needed, the initial parameter might define the number of results.
 
 ### Example
 ```php
@@ -218,7 +218,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductRecommendat
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody1(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody1 | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postRecommendationCartOrder($body, $accept_language);
@@ -234,11 +234,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody1**](../Model/ActionsOrderBody1.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119**](../Model/InlineResponse200119.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123**](../Model/InlineResponse200123.md)
 
 ### Authorization
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationProductCombine**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118 postRecommendationProductCombine($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122 postRecommendationProductCombine($body, $accept_language)
 
 Get the best recommendation
 
@@ -278,7 +278,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductRecommendat
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postRecommendationProductCombine($body, $accept_language);
@@ -294,11 +294,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCombineBody**](../Model/ActionsCombineBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118**](../Model/InlineResponse200118.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122**](../Model/InlineResponse200122.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationProductEliminate**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118 postRecommendationProductEliminate($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122 postRecommendationProductEliminate($body, $accept_language)
 
 Get the best recommendation with an elimination
 
@@ -338,7 +338,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductRecommendat
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postRecommendationProductEliminate($body, $accept_language);
@@ -354,11 +354,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsEliminateBody**](../Model/ActionsEliminateBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118**](../Model/InlineResponse200118.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122**](../Model/InlineResponse200122.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationProductOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118 postRecommendationProductOrder($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122 postRecommendationProductOrder($body, $accept_language)
 
 Order products for the best recommendation.
 
@@ -398,7 +398,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductRecommendat
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postRecommendationProductOrder($body, $accept_language);
@@ -414,11 +414,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsOrderBody**](../Model/ActionsOrderBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200118**](../Model/InlineResponse200118.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122**](../Model/InlineResponse200122.md)
 
 ### Authorization
 

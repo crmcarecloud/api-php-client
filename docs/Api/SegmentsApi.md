@@ -13,11 +13,11 @@ Method | HTTP request | Description
 [**postSegmentRemoveCustomer**](SegmentsApi.md#postsegmentremovecustomer) | **POST** /segments/{segment_id}/actions/remove-customer | Remove customer from a segment
 
 # **getSegment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132 getSegment($segment_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136 getSegment($segment_id, $accept_language)
 
 Get a segment
 
-Get information about a specific segment
+Get information about a specific segment.
 
 ### Example
 ```php
@@ -38,8 +38,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SegmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$segment_id = "segment_id_example"; // string | The unique id of the segment
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$segment_id = "segment_id_example"; // string | The unique ID of the segment.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getSegment($segment_id, $accept_language);
@@ -54,12 +54,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **segment_id** | **string**| The unique id of the segment |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **segment_id** | **string**| The unique ID of the segment. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132**](../Model/InlineResponse200132.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136**](../Model/InlineResponse200136.md)
 
 ### Authorization
 
@@ -73,11 +73,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegmentGroup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134 getSegmentGroup($segment_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138 getSegmentGroup($segment_group_id, $accept_language)
 
 Get a segment group
 
-Get information about a specific segment group
+Get information about a specific segment group.
 
 ### Example
 ```php
@@ -98,8 +98,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SegmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$segment_group_id = "segment_group_id_example"; // string | The unique ID of the segment group
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$segment_group_id = "segment_group_id_example"; // string | The unique ID of the segment group.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getSegmentGroup($segment_group_id, $accept_language);
@@ -114,12 +114,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **segment_group_id** | **string**| The unique ID of the segment group |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **segment_group_id** | **string**| The unique ID of the segment group. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134**](../Model/InlineResponse200134.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138**](../Model/InlineResponse200138.md)
 
 ### Authorization
 
@@ -133,11 +133,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegmentGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133 getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137 getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all segment groups
 
-Get information about segment groups
+Get information about segment groups.
 
 ### Example
 ```php
@@ -158,12 +158,12 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SegmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$name = "name_example"; // string | Name of the segmnt group
+$name = "name_example"; // string | Name of the segment group.
 
 try {
     $result = $apiInstance->getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
@@ -178,16 +178,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **name** | **string**| Name of the segmnt group | [optional]
+ **name** | **string**| Name of the segment group. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133**](../Model/InlineResponse200133.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137**](../Model/InlineResponse200137.md)
 
 ### Authorization
 
@@ -201,11 +201,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids)
 
 Get all segments
 
-Get information about segments as a list of all segments
+Get information about segments as a list of all segments.
 
 ### Example
 ```php
@@ -226,7 +226,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SegmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -246,7 +246,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131**](../Model/InlineResponse200131.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135**](../Model/InlineResponse200135.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubSegmentRecords**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038 getSubSegmentRecords($segment_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getSubSegmentRecords($segment_id, $accept_language)
 
 Get a collection of segment records
 
@@ -294,8 +294,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SegmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$segment_id = "segment_id_example"; // string | The unique id of the segment
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$segment_id = "segment_id_example"; // string | The unique ID of the segment.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getSubSegmentRecords($segment_id, $accept_language);
@@ -310,12 +310,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **segment_id** | **string**| The unique id of the segment |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **segment_id** | **string**| The unique ID of the segment. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
 
 ### Authorization
 
@@ -355,8 +355,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SegmentsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAddcustomerBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAddcustomerBody | 
-$segment_id = "segment_id_example"; // string | The unique id of the segment
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$segment_id = "segment_id_example"; // string | The unique ID of the segment.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postSegmentAddCustomer($body, $segment_id, $accept_language);
@@ -371,8 +371,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAddcustomerBody**](../Model/ActionsAddcustomerBody.md)|  |
- **segment_id** | **string**| The unique id of the segment |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **segment_id** | **string**| The unique ID of the segment. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -416,8 +416,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SegmentsApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsRemovecustomerBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsRemovecustomerBody | 
-$segment_id = "segment_id_example"; // string | The unique id of the segment
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$segment_id = "segment_id_example"; // string | The unique ID of the segment.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postSegmentRemoveCustomer($body, $segment_id, $accept_language);
@@ -432,8 +432,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsRemovecustomerBody**](../Model/ActionsRemovecustomerBody.md)|  |
- **segment_id** | **string**| The unique id of the segment |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **segment_id** | **string**| The unique ID of the segment. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

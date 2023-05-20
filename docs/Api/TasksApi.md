@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 Delete a task assignee from the task
 
-Delete a new assignee from the task
+Delete a new assignee from the task.
 
 ### Example
 ```php
@@ -47,9 +47,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$assignee_id = "assignee_id_example"; // string | The unique id of the task assignee in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$assignee_id = "assignee_id_example"; // string | The unique ID of the task assignee in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->deleteSubTasksAssignee($task_id, $assignee_id, $accept_language);
@@ -63,9 +63,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_id** | **string**| The unique id of the task in CareCloud |
- **assignee_id** | **string**| The unique id of the task assignee in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **assignee_id** | **string**| The unique ID of the task assignee in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -83,11 +83,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubTaskProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200158 getSubTaskProperties($task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162 getSubTaskProperties($task_id, $accept_language)
 
 Get a collection of task properties records
 
-Get information about all property records on a task
+Get information about all property records on a task.
 
 ### Example
 ```php
@@ -108,8 +108,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getSubTaskProperties($task_id, $accept_language);
@@ -124,12 +124,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_id** | **string**| The unique id of the task in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200158**](../Model/InlineResponse200158.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162**](../Model/InlineResponse200162.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTask**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148 getTask($task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152 getTask($task_id, $accept_language)
 
 Get a task
 
@@ -168,8 +168,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getTask($task_id, $accept_language);
@@ -184,12 +184,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_id** | **string**| The unique id of the task in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148**](../Model/InlineResponse200148.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152**](../Model/InlineResponse200152.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskAssignee**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152 getTaskAssignee($assignee_id, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200156 getTaskAssignee($assignee_id, $task_id, $accept_language)
 
 Get a task assignee
 
@@ -228,9 +228,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$assignee_id = "assignee_id_example"; // string | The unique id of the task assignee in CareCloud
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$assignee_id = "assignee_id_example"; // string | The unique ID of the task assignee in CareCloud.
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getTaskAssignee($assignee_id, $task_id, $accept_language);
@@ -245,13 +245,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assignee_id** | **string**| The unique id of the task assignee in CareCloud |
- **task_id** | **string**| The unique id of the task in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **assignee_id** | **string**| The unique ID of the task assignee in CareCloud. |
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152**](../Model/InlineResponse200152.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200156**](../Model/InlineResponse200156.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskAssignees**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151 getTaskAssignees($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200155 getTaskAssignees($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all task assignees
 
@@ -290,8 +290,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -310,8 +310,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_id** | **string**| The unique id of the task in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151**](../Model/InlineResponse200151.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200155**](../Model/InlineResponse200155.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskComment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150 getTaskComment($task_comment_id, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200154 getTaskComment($task_comment_id, $task_id, $accept_language)
 
 Get a task comment
 
@@ -358,9 +358,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_comment_id = "task_comment_id_example"; // string | The unique id of the task comment in CareCloud
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_comment_id = "task_comment_id_example"; // string | The unique ID of the task comment in CareCloud.
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getTaskComment($task_comment_id, $task_id, $accept_language);
@@ -375,13 +375,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_comment_id** | **string**| The unique id of the task comment in CareCloud |
- **task_id** | **string**| The unique id of the task in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_comment_id** | **string**| The unique ID of the task comment in CareCloud. |
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150**](../Model/InlineResponse200150.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200154**](../Model/InlineResponse200154.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskComments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149 getTaskComments($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153 getTaskComments($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text)
 
 Get all task comments
 
@@ -420,8 +420,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -441,8 +441,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_id** | **string**| The unique id of the task in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149**](../Model/InlineResponse200149.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153**](../Model/InlineResponse200153.md)
 
 ### Authorization
 
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskState**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200156 getTaskState($task_state_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160 getTaskState($task_state_id, $accept_language)
 
 Get a task state
 
@@ -490,8 +490,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_state_id = "task_state_id_example"; // string | The unique id of the task state in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_state_id = "task_state_id_example"; // string | The unique ID of the task state in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getTaskState($task_state_id, $accept_language);
@@ -506,12 +506,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_state_id** | **string**| The unique id of the task state in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_state_id** | **string**| The unique ID of the task state in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200156**](../Model/InlineResponse200156.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160**](../Model/InlineResponse200160.md)
 
 ### Authorization
 
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskStates**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200155 getTaskStates($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159 getTaskStates($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all task states
 
@@ -550,7 +550,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -569,7 +569,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200155**](../Model/InlineResponse200155.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200159**](../Model/InlineResponse200159.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200154 getTaskType($task_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200158 getTaskType($task_type_id, $accept_language)
 
 Get a task type
 
@@ -616,8 +616,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_type_id = "task_type_id_example"; // string | The unique id of the task type in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_type_id = "task_type_id_example"; // string | The unique ID of the task type in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getTaskType($task_type_id, $accept_language);
@@ -632,12 +632,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_type_id** | **string**| The unique id of the task type in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_type_id** | **string**| The unique ID of the task type in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200154**](../Model/InlineResponse200154.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200158**](../Model/InlineResponse200158.md)
 
 ### Authorization
 
@@ -651,7 +651,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153 getTaskTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200157 getTaskTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all task types
 
@@ -676,7 +676,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -695,7 +695,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -703,7 +703,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153**](../Model/InlineResponse200153.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200157**](../Model/InlineResponse200157.md)
 
 ### Authorization
 
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTasks**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147 getTasks($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151 getTasks($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note)
 
 Get all tasks
 
@@ -742,18 +742,18 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$task_type_id = "task_type_id_example"; // string | Task type id from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type.
-$task_state_id = "task_state_id_example"; // string | Task state id from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state.
-$customer_id = "customer_id_example"; // string | The unique id of the customer
+$task_type_id = "task_type_id_example"; // string | Task type ID from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type.
+$task_state_id = "task_state_id_example"; // string | Task state ID from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state.
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $priority = 56; // int | The parameter filters tasks by their priority. *Possible values are: 1 - Critical / 2 - Major / 3 - Normal / 4 - Minor.*
-$due_date = "due_date_example"; // string | Date (ISO 8601) when the task due *(YYYY-MM-DD)*
-$task_title = "task_title_example"; // string | Search record by the task summary or a part of the task summary
-$task_note = "task_note_example"; // string | Search record by the task note or a part of the task note
+$due_date = "due_date_example"; // string | Date (ISO 8601) when the task due. *(YYYY-MM-DD)*
+$task_title = "task_title_example"; // string | Search record by the task summary or a part of the task summary.
+$task_note = "task_note_example"; // string | Search record by the task note or a part of the task note.
 
 try {
     $result = $apiInstance->getTasks($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note);
@@ -768,22 +768,22 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **task_type_id** | **string**| Task type id from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. | [optional]
- **task_state_id** | **string**| Task state id from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state. | [optional]
- **customer_id** | **string**| The unique id of the customer | [optional]
+ **task_type_id** | **string**| Task type ID from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. | [optional]
+ **task_state_id** | **string**| Task state ID from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state. | [optional]
+ **customer_id** | **string**| The unique ID of the customer. | [optional]
  **priority** | **int**| The parameter filters tasks by their priority. *Possible values are: 1 - Critical / 2 - Major / 3 - Normal / 4 - Minor.* | [optional]
- **due_date** | **string**| Date (ISO 8601) when the task due *(YYYY-MM-DD)* | [optional]
- **task_title** | **string**| Search record by the task summary or a part of the task summary | [optional]
- **task_note** | **string**| Search record by the task note or a part of the task note | [optional]
+ **due_date** | **string**| Date (ISO 8601) when the task due. *(YYYY-MM-DD)* | [optional]
+ **task_title** | **string**| Search record by the task summary or a part of the task summary. | [optional]
+ **task_note** | **string**| Search record by the task note or a part of the task note. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147**](../Model/InlineResponse200147.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151**](../Model/InlineResponse200151.md)
 
 ### Authorization
 
@@ -801,7 +801,7 @@ Name | Type | Description  | Notes
 
 Create a task assignee
 
-Add a new assignee to the task
+Add a new assignee to the task.
 
 ### Example
 ```php
@@ -823,8 +823,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TaskIdAssigneesBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TaskIdAssigneesBody | 
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postTaskAssignee($body, $task_id, $accept_language);
@@ -840,8 +840,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TaskIdAssigneesBody**](../Model/TaskIdAssigneesBody.md)|  |
- **task_id** | **string**| The unique id of the task in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -863,7 +863,7 @@ Name | Type | Description  | Notes
 
 Create a task comment
 
-Add a new comment to the task
+Add a new comment to the task.
 
 ### Example
 ```php
@@ -885,8 +885,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TaskIdTaskcommentsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TaskIdTaskcommentsBody | 
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postTaskComment($body, $task_id, $accept_language);
@@ -902,8 +902,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TaskIdTaskcommentsBody**](../Model/TaskIdTaskcommentsBody.md)|  |
- **task_id** | **string**| The unique id of the task in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -947,7 +947,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TasksBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TasksBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postTasks($body, $accept_language);
@@ -963,7 +963,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TasksBody**](../Model/TasksBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -1007,8 +1007,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TasksTaskIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TasksTaskIdBody | 
-$task_id = "task_id_example"; // string | The unique id of the task in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->putTask($body, $task_id, $accept_language);
@@ -1023,8 +1023,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TasksTaskIdBody**](../Model/TasksTaskIdBody.md)|  |
- **task_id** | **string**| The unique id of the task in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_id** | **string**| The unique ID of the task in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

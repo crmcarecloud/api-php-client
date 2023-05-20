@@ -8,11 +8,11 @@ Method | HTTP request | Description
 [**getCustomerRelationTypes**](CustomerRelationTypesApi.md#getcustomerrelationtypes) | **GET** /customer-relation-types | Get all customer relation types
 
 # **getCustomerRelationType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20058 getCustomerRelationType($customer_relation_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060 getCustomerRelationType($customer_relation_type_id, $accept_language)
 
 Detail of a customer relation type
 
-Get information about a specific customer relation type
+Get information about a specific customer relation type.
 
 ### Example
 ```php
@@ -33,8 +33,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomerRelationTy
     new GuzzleHttp\Client(),
     $config
 );
-$customer_relation_type_id = "customer_relation_type_id_example"; // string | The unique id of a customer relation type in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_relation_type_id = "customer_relation_type_id_example"; // string | The unique ID of a customer relation type in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getCustomerRelationType($customer_relation_type_id, $accept_language);
@@ -49,12 +49,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_relation_type_id** | **string**| The unique id of a customer relation type in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_relation_type_id** | **string**| The unique ID of a customer relation type in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
 
 ### Authorization
 
@@ -68,11 +68,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerRelationTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057 getCustomerRelationTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059 getCustomerRelationTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all customer relation types
 
-Get a list of customer relation types from CareCloud
+Get a list of customer relation types from CareCloud.
 
 ### Example
 ```php
@@ -93,7 +93,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomerRelationTy
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -112,7 +112,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
 
 ### Authorization
 

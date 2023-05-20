@@ -7,15 +7,15 @@ Method | HTTP request | Description
 [**deleteSubCustomerInterest**](CustomersApi.md#deletesubcustomerinterest) | **DELETE** /customers/{customer_id}/interest-records/{interest_record_id} | Delete an interest record on an account
 [**deleteSubCustomerPartner**](CustomersApi.md#deletesubcustomerpartner) | **DELETE** /customers/{customer_id}/partner-records/{partner_record_id} | Delete a partner record from an account
 [**deleteSubCustomerProperty**](CustomersApi.md#deletesubcustomerproperty) | **DELETE** /customers/{customer_id}/property-records/{property_record_id} | Delete a property of a customer
-[**deleteSubCustomerRelatedCustomer**](CustomersApi.md#deletesubcustomerrelatedcustomer) | **DELETE** /customers/{customer_id}/related-customers/{customer_relation_id} | Delete a customer&#x27;s relation
+[**deleteSubCustomerRelatedCustomer**](CustomersApi.md#deletesubcustomerrelatedcustomer) | **DELETE** /customers/{customer_id}/related-customers/{customer_relation_id} | Delete the customer  relation
 [**getCustomer**](CustomersApi.md#getcustomer) | **GET** /customers/{customer_id} | Get information about a customer
 [**getCustomers**](CustomersApi.md#getcustomers) | **GET** /customers | Get all customers
 [**getSubCustomerAddress**](CustomersApi.md#getsubcustomeraddress) | **GET** /customers/{customer_id}/addresses/{additional_customer_address_id_path} | Get an additional customer address
 [**getSubCustomerAddresses**](CustomersApi.md#getsubcustomeraddresses) | **GET** /customers/{customer_id}/addresses | Get all additional customer addresses
 [**getSubCustomerCards**](CustomersApi.md#getsubcustomercards) | **GET** /customers/{customer_id}/cards | Get all customer cards
-[**getSubCustomerEvents**](CustomersApi.md#getsubcustomerevents) | **GET** /customers/{customer_id}/events | Get information about all customer&#x27;s events
+[**getSubCustomerEvents**](CustomersApi.md#getsubcustomerevents) | **GET** /customers/{customer_id}/events | Get information about all customer  events
 [**getSubCustomerInterests**](CustomersApi.md#getsubcustomerinterests) | **GET** /customers/{customer_id}/interest-records | Get a collection of interest records
-[**getSubCustomerPartners**](CustomersApi.md#getsubcustomerpartners) | **GET** /customers/{customer_id}/partner-records | Get information about all customer&#x27;s partners
+[**getSubCustomerPartners**](CustomersApi.md#getsubcustomerpartners) | **GET** /customers/{customer_id}/partner-records | Get information about all customer  partners
 [**getSubCustomerPoints**](CustomersApi.md#getsubcustomerpoints) | **GET** /customers/{customer_id}/points | Get all customer point records
 [**getSubCustomerProperties**](CustomersApi.md#getsubcustomerproperties) | **GET** /customers/{customer_id}/property-records | Get a collection of properties
 [**getSubCustomerPurchases**](CustomersApi.md#getsubcustomerpurchases) | **GET** /customers/{customer_id}/purchases | Get all customer purchases
@@ -33,7 +33,7 @@ Method | HTTP request | Description
 [**postSubCustomerPartnerRecord**](CustomersApi.md#postsubcustomerpartnerrecord) | **POST** /customers/{customer_id}/partner-records | Add a partner to the customer
 [**postSubCustomerProperties**](CustomersApi.md#postsubcustomerproperties) | **POST** /customers/{customer_id}/property-records | Add a property to a customer
 [**postSubCustomerPropertiesBatch**](CustomersApi.md#postsubcustomerpropertiesbatch) | **POST** /customers/{customer_id}/property-records/batch | Create a batch of property records for a customer
-[**postSubCustomerRelatedCustomers**](CustomersApi.md#postsubcustomerrelatedcustomers) | **POST** /customers/{customer_id}/related-customers | Create a customer&#x27;s relation
+[**postSubCustomerRelatedCustomers**](CustomersApi.md#postsubcustomerrelatedcustomers) | **POST** /customers/{customer_id}/related-customers | Create the customer  relation
 [**postSubCustomerSource**](CustomersApi.md#postsubcustomersource) | **POST** /customers/{customer_id}/customer-source-records | Add a customer source record to a customer
 [**putCustomer**](CustomersApi.md#putcustomer) | **PUT** /customers/{customer_id} | Update a customer
 [**putSubCustomerAddress**](CustomersApi.md#putsubcustomeraddress) | **PUT** /customers/{customer_id}/addresses/{additional_customer_address_id_path} | Update an additional customer address
@@ -45,7 +45,7 @@ Method | HTTP request | Description
 
 Delete an interest record on an account
 
-Delete a specific customer interest record on a customer account
+Delete a specific customer interest record on a customer account.
 
 ### Example
 ```php
@@ -66,9 +66,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$interest_record_id = "interest_record_id_example"; // string | The unique id of the interest record
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$interest_record_id = "interest_record_id_example"; // string | The unique ID of the interest record.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->deleteSubCustomerInterest($customer_id, $interest_record_id, $accept_language);
@@ -82,9 +82,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **interest_record_id** | **string**| The unique id of the interest record |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **interest_record_id** | **string**| The unique ID of the interest record. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -106,7 +106,7 @@ void (empty response body)
 
 Delete a partner record from an account
 
-Delete a specific customer partner record from a customer account
+Delete a specific customer partner record from a customer account.
 
 ### Example
 ```php
@@ -127,9 +127,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$partner_record_id = "partner_record_id_example"; // string | The unique id of the partner record from account
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$partner_record_id = "partner_record_id_example"; // string | The unique ID of the partner record from account.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->deleteSubCustomerPartner($customer_id, $partner_record_id, $accept_language);
@@ -143,9 +143,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **partner_record_id** | **string**| The unique id of the partner record from account |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **partner_record_id** | **string**| The unique ID of the partner record from account. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -167,7 +167,7 @@ void (empty response body)
 
 Delete a property of a customer
 
-Delete a specific customer property record on a customer account
+Delete a specific customer property record on a customer account.
 
 ### Example
 ```php
@@ -188,9 +188,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$property_record_id = "property_record_id_example"; // string | The unique id of the property record
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$property_record_id = "property_record_id_example"; // string | The unique ID of the property record.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->deleteSubCustomerProperty($customer_id, $property_record_id, $accept_language);
@@ -204,9 +204,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **property_record_id** | **string**| The unique id of the property record |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **property_record_id** | **string**| The unique ID of the property record. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -226,9 +226,9 @@ void (empty response body)
 # **deleteSubCustomerRelatedCustomer**
 > deleteSubCustomerRelatedCustomer($customer_id, $customer_relation_id, $accept_language)
 
-Delete a customer's relation
+Delete the customer  relation
 
-Delete a specific customer relation
+Delete a specific customer relation.
 
 ### Example
 ```php
@@ -249,9 +249,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$customer_relation_id = "customer_relation_id_example"; // string | The unique id of relation between two customers in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$customer_relation_id = "customer_relation_id_example"; // string | The unique ID of relation between two customers in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->deleteSubCustomerRelatedCustomer($customer_id, $customer_relation_id, $accept_language);
@@ -265,9 +265,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **customer_relation_id** | **string**| The unique id of relation between two customers in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **customer_relation_id** | **string**| The unique ID of relation between two customers in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -285,11 +285,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomer**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034 getCustomer($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035 getCustomer($customer_id, $accept_language)
 
 Get information about a customer
 
-Get information about a specific customer account
+Get information about a specific customer account.
 
 ### Example
 ```php
@@ -310,8 +310,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getCustomer($customer_id, $accept_language);
@@ -326,8 +326,86 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getCustomers**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034 getCustomers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $customer_source_id, $first_name, $last_name, $birthdate)
+
+Get all customers
+
+Get a list of all customers.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+$count = 100; // int | The number of records to return.
+$offset = 0; // int | The number of records from a collection to skip.
+$sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
+$sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
+$email = "email_example"; // string | Search by email.
+$phone = "phone_example"; // string | Phone number with international prefix (420000000).
+$customer_source_id = "customer_source_id_example"; // string | The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created.
+$first_name = "first_name_example"; // string | Search by first name.
+$last_name = "last_name_example"; // string | Search by last name.
+$birthdate = "birthdate_example"; // string | Customer's date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY*
+
+try {
+    $result = $apiInstance->getCustomers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $customer_source_id, $first_name, $last_name, $birthdate);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getCustomers: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **count** | **int**| The number of records to return. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
+ **sort_direction** | **string**| Direction of sorting the response list. | [optional]
+ **email** | **string**| Search by email. | [optional]
+ **phone** | **string**| Phone number with international prefix (420000000). | [optional]
+ **customer_source_id** | **string**| The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. | [optional]
+ **first_name** | **string**| Search by first name. | [optional]
+ **last_name** | **string**| Search by last name. | [optional]
+ **birthdate** | **string**| Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* | [optional]
 
 ### Return type
 
@@ -344,90 +422,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getCustomers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033 getCustomers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $customer_source_id, $first_name, $last_name, $birthdate)
-
-Get all customers
-
-Get a list of all customers
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
-$sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
-$sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$email = "email_example"; // string | Search by email
-$phone = "phone_example"; // string | Phone number with international prefix (420000000)
-$customer_source_id = "customer_source_id_example"; // string | The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created
-$first_name = "first_name_example"; // string | Search by first name
-$last_name = "last_name_example"; // string | Search by last name
-$birthdate = "birthdate_example"; // string | Customer's date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY*
-
-try {
-    $result = $apiInstance->getCustomers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $customer_source_id, $first_name, $last_name, $birthdate);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->getCustomers: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
- **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
- **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **email** | **string**| Search by email | [optional]
- **phone** | **string**| Phone number with international prefix (420000000) | [optional]
- **customer_source_id** | **string**| The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created | [optional]
- **first_name** | **string**| Search by first name | [optional]
- **last_name** | **string**| Search by last name | [optional]
- **birthdate** | **string**| Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* | [optional]
-
-### Return type
-
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033**](../Model/InlineResponse20033.md)
-
-### Authorization
-
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **getSubCustomerAddress**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045 getSubCustomerAddress($customer_id, $additional_customer_address_id_path, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046 getSubCustomerAddress($customer_id, $additional_customer_address_id_path, $accept_language)
 
 Get an additional customer address
 
-Get information about an additional customer address
+Get information about an additional customer address.
 
 ### Example
 ```php
@@ -448,9 +448,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$additional_customer_address_id_path = "additional_customer_address_id_path_example"; // string | Unique ID of the customer additional address
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$additional_customer_address_id_path = "additional_customer_address_id_path_example"; // string | Unique ID of the customer additional address.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getSubCustomerAddress($customer_id, $additional_customer_address_id_path, $accept_language);
@@ -465,13 +465,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **additional_customer_address_id_path** | **string**| Unique ID of the customer additional address |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **additional_customer_address_id_path** | **string**| Unique ID of the customer additional address. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045**](../Model/InlineResponse20045.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
 
 ### Authorization
 
@@ -485,7 +485,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerAddresses**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044 getSubCustomerAddresses($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_address_type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045 getSubCustomerAddresses($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_address_type_id)
 
 Get all additional customer addresses
 
@@ -510,13 +510,13 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_address_type_id = "customer_address_type_id_example"; // string | The unique id of the customer address type.
+$customer_address_type_id = "customer_address_type_id_example"; // string | The unique ID of the customer address type.
 
 try {
     $result = $apiInstance->getSubCustomerAddresses($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_address_type_id);
@@ -531,17 +531,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_address_type_id** | **string**| The unique id of the customer address type. | [optional]
+ **customer_address_type_id** | **string**| The unique ID of the customer address type. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045**](../Model/InlineResponse20045.md)
 
 ### Authorization
 
@@ -580,14 +580,14 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$card_number = "card_number_example"; // string | Number of the customer card
-$card_type_id = "card_type_id_example"; // string | The unique id of the card type
+$card_number = "card_number_example"; // string | Number of the customer card.
+$card_type_id = "card_type_id_example"; // string | The unique ID of the card type.
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 
 try {
@@ -603,14 +603,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **card_number** | **string**| Number of the customer card | [optional]
- **card_type_id** | **string**| The unique id of the card type | [optional]
+ **card_number** | **string**| Number of the customer card. | [optional]
+ **card_type_id** | **string**| The unique ID of the card type. | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
 
 ### Return type
@@ -629,11 +629,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerEvents**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046 getSubCustomerEvents($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $external_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047 getSubCustomerEvents($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $external_id)
 
-Get information about all customer's events
+Get information about all customer  events
 
-Get a list of customer's events in CRM CareCloud
+Get a list of customer  events in CRM CareCloud.
 
 ### Example
 ```php
@@ -654,14 +654,14 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$event_type_id = "event_type_id_example"; // string | The unique id of the event type
-$external_id = "external_id_example"; // string | The unique external id. It may be id from the other system
+$event_type_id = "event_type_id_example"; // string | The unique ID of the event type.
+$external_id = "external_id_example"; // string | The unique external id. It may be ID from the other system.
 
 try {
     $result = $apiInstance->getSubCustomerEvents($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $external_id);
@@ -676,18 +676,18 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **event_type_id** | **string**| The unique id of the event type | [optional]
- **external_id** | **string**| The unique external id. It may be id from the other system | [optional]
+ **event_type_id** | **string**| The unique ID of the event type. | [optional]
+ **external_id** | **string**| The unique external id. It may be ID from the other system. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -701,11 +701,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerInterests**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043 getSubCustomerInterests($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044 getSubCustomerInterests($customer_id, $accept_language)
 
 Get a collection of interest records
 
-Get information about all interest records on a customer account
+Get information about all interest records on a customer account.
 
 ### Example
 ```php
@@ -726,8 +726,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getSubCustomerInterests($customer_id, $accept_language);
@@ -742,12 +742,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
 
 ### Authorization
 
@@ -761,11 +761,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerPartners**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049 getSubCustomerPartners($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050 getSubCustomerPartners($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
-Get information about all customer's partners
+Get information about all customer  partners
 
-Get a list of customer's partners in CareCloud
+Get a list of customer  partners in CareCloud.
 
 ### Example
 ```php
@@ -786,8 +786,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -806,8 +806,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -815,7 +815,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
 
 ### Authorization
 
@@ -829,7 +829,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerPoints**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035 getSubCustomerPoints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getSubCustomerPoints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id)
 
 Get all customer point records
 
@@ -854,13 +854,13 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$point_type_id = "point_type_id_example"; // string | The unique id of a point type
+$point_type_id = "point_type_id_example"; // string | The unique ID of a point type.
 
 try {
     $result = $apiInstance->getSubCustomerPoints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id);
@@ -875,17 +875,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **point_type_id** | **string**| The unique id of a point type | [optional]
+ **point_type_id** | **string**| The unique ID of a point type. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
 
 ### Authorization
 
@@ -899,11 +899,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042 getSubCustomerProperties($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043 getSubCustomerProperties($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get a collection of properties
 
-Get information about all property records on a customer account
+Get information about all property records on a customer account.
 
 ### Example
 ```php
@@ -924,8 +924,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -944,8 +944,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -953,7 +953,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
 
 ### Authorization
 
@@ -967,7 +967,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerPurchases**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027 getSubCustomerPurchases($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028 getSubCustomerPurchases($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $type_id)
 
 Get all customer purchases
 
@@ -992,13 +992,13 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$store_id = "store_id_example"; // string | The unique id of the store in CareCloud
+$store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
 $type_id = "type_id_example"; // string | Purchase type
 
 try {
@@ -1014,18 +1014,18 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **store_id** | **string**| The unique id of the store in CareCloud | [optional]
+ **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
  **type_id** | **string**| Purchase type | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20027**](../Model/InlineResponse20027.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
 
 ### Authorization
 
@@ -1039,11 +1039,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRecommendation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040 getSubCustomerRecommendation($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041 getSubCustomerRecommendation($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get a collection of recommendation records
 
-Get information about all recommendation records on a customer account
+Get information about all recommendation records on a customer account.
 
 ### Example
 ```php
@@ -1064,13 +1064,13 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$name = "name_example"; // string | Search record by name or a part of the name
+$name = "name_example"; // string | Search record by name or a part of the name.
 
 try {
     $result = $apiInstance->getSubCustomerRecommendation($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name);
@@ -1085,17 +1085,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **name** | **string**| Search record by name or a part of the name | [optional]
+ **name** | **string**| Search record by name or a part of the name. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
 
 ### Authorization
 
@@ -1109,11 +1109,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRelatedCustomer**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048 getSubCustomerRelatedCustomer($customer_id, $customer_relation_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049 getSubCustomerRelatedCustomer($customer_id, $customer_relation_id, $accept_language)
 
 Detail of a relation between customers
 
-Get information about a specific customer relation
+Get information about a specific customer relation.
 
 ### Example
 ```php
@@ -1134,9 +1134,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$customer_relation_id = "customer_relation_id_example"; // string | The unique id of relation between two customers in CareCloud
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$customer_relation_id = "customer_relation_id_example"; // string | The unique ID of relation between two customers in CareCloud.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getSubCustomerRelatedCustomer($customer_id, $customer_relation_id, $accept_language);
@@ -1151,9 +1151,81 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **customer_relation_id** | **string**| The unique id of relation between two customers in CareCloud |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **customer_relation_id** | **string**| The unique ID of relation between two customers in CareCloud. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getSubCustomerRelatedCustomers**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048 getSubCustomerRelatedCustomers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $related_customer_id, $customer_relation_type_id)
+
+Get information about all related customers
+
+Get a list of customers' relations in CRM CareCloud.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+$count = 100; // int | The number of records to return.
+$offset = 0; // int | The number of records from a collection to skip.
+$sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
+$sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
+$related_customer_id = "related_customer_id_example"; // string | The unique ID of the related customer.
+$customer_relation_type_id = "customer_relation_type_id_example"; // string | The unique ID of the customer relation type in CareCloud.
+
+try {
+    $result = $apiInstance->getSubCustomerRelatedCustomers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $related_customer_id, $customer_relation_type_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersApi->getSubCustomerRelatedCustomers: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **count** | **int**| The number of records to return. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
+ **sort_direction** | **string**| Direction of sorting the response list. | [optional]
+ **related_customer_id** | **string**| The unique ID of the related customer. | [optional]
+ **customer_relation_type_id** | **string**| The unique ID of the customer relation type in CareCloud. | [optional]
 
 ### Return type
 
@@ -1170,80 +1242,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getSubCustomerRelatedCustomers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047 getSubCustomerRelatedCustomers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $related_customer_id, $customer_relation_type_id)
-
-Get information about all related customers
-
-Get a list of customers' relations in CRM CareCloud
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
-$sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
-$sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$related_customer_id = "related_customer_id_example"; // string | The unique id of the related customer
-$customer_relation_type_id = "customer_relation_type_id_example"; // string | The unique id of the customer relation type in CareCloud
-
-try {
-    $result = $apiInstance->getSubCustomerRelatedCustomers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $related_customer_id, $customer_relation_type_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->getSubCustomerRelatedCustomers: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
- **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
- **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **related_customer_id** | **string**| The unique id of the related customer | [optional]
- **customer_relation_type_id** | **string**| The unique id of the customer relation type in CareCloud | [optional]
-
-### Return type
-
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
-
-### Authorization
-
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **getSubCustomerRewards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037 getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038 getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids)
 
 Get all customer rewards
 
@@ -1268,23 +1268,23 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$name = "name_example"; // string | Search record by name or a part of the name
-$store_id = "store_id_example"; // string | The unique id of the store where customer can apply the reward
+$name = "name_example"; // string | Search record by name or a part of the name.
+$store_id = "store_id_example"; // string | The unique ID of the store where customer can apply the reward.
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $valid_from = "valid_from_example"; // string | Date from when is record already valid. *(YYYY-MM-DD)*
 $valid_to = "valid_to_example"; // string | Date to when is record still valid. *(YYYY-MM-DD)*
-$code = "code_example"; // string | Code of the reward
-$is_automated = true; // bool | Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)*
-$reward_group = 56; // int | The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward*
-$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. Logic OR is used between values
-$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture.
-$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag ids. Logic OR is used between values.
+$code = "code_example"; // string | Code of the reward.
+$is_automated = true; // bool | Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)*
+$reward_group = 56; // int | The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward*
+$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. Logic OR is used between values.
+$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure.
+$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values.
 
 try {
     $result = $apiInstance->getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids);
@@ -1299,27 +1299,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **name** | **string**| Search record by name or a part of the name | [optional]
- **store_id** | **string**| The unique id of the store where customer can apply the reward | [optional]
+ **name** | **string**| Search record by name or a part of the name. | [optional]
+ **store_id** | **string**| The unique ID of the store where customer can apply the reward. | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **valid_from** | **string**| Date from when is record already valid. *(YYYY-MM-DD)* | [optional]
  **valid_to** | **string**| Date to when is record still valid. *(YYYY-MM-DD)* | [optional]
- **code** | **string**| Code of the reward | [optional]
- **is_automated** | **bool**| Filter of the automated rewards *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* | [optional]
- **reward_group** | **int**| The unique id of the reward group *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* | [optional]
- **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. Logic OR is used between values | [optional]
- **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture. | [optional]
- **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag ids. Logic OR is used between values. | [optional]
+ **code** | **string**| Code of the reward. | [optional]
+ **is_automated** | **bool**| Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* | [optional]
+ **reward_group** | **int**| The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* | [optional]
+ **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. Logic OR is used between values. | [optional]
+ **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. | [optional]
+ **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
 
 ### Authorization
 
@@ -1333,11 +1333,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerSegments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038 getSubCustomerSegments($customer_id, $accept_language, $segment_group_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getSubCustomerSegments($customer_id, $accept_language, $segment_group_ids)
 
 Get a collection of segment records
 
-Get information about all segment records on a customer account
+Get information about all segment records on a customer account.
 
 ### Example
 ```php
@@ -1358,8 +1358,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $segment_group_ids = array("segment_group_ids_example"); // string[] | List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups).
 
 try {
@@ -1375,13 +1375,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **segment_group_ids** | [**string[]**](../Model/string.md)| List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
 
 ### Authorization
 
@@ -1395,7 +1395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041 getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $external_id, $customer_source_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042 getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $external_id, $customer_source_id)
 
 Get customer source records
 
@@ -1420,14 +1420,14 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $external_id = "external_id_example"; // string | The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems).
-$customer_source_id = "customer_source_id_example"; // string | The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created
+$customer_source_id = "customer_source_id_example"; // string | The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created.
 
 try {
     $result = $apiInstance->getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $external_id, $customer_source_id);
@@ -1442,18 +1442,18 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **external_id** | **string**| The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). | [optional]
- **customer_source_id** | **string**| The unique id of the customer source. It identifies the system where the customer belongs or the customer account was created | [optional]
+ **customer_source_id** | **string**| The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
 
 ### Authorization
 
@@ -1467,11 +1467,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerStatus**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getSubCustomerStatus($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $valid_now)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040 getSubCustomerStatus($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $valid_now)
 
 Get a collection of status records
 
-Get information about all status records on a customer account
+Get information about all status records on a customer account.
 
 ### Example
 ```php
@@ -1492,8 +1492,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -1513,8 +1513,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -1523,7 +1523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
 
 ### Authorization
 
@@ -1537,7 +1537,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerVouchers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getSubCustomerVouchers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $code, $store_id, $is_valid, $is_applied, $without_stores)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037 getSubCustomerVouchers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $code, $store_id, $is_valid, $is_applied, $without_stores)
 
 Get all customer vouchers
 
@@ -1562,17 +1562,17 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$code = "code_example"; // string | Unique code of the voucher
-$store_id = "store_id_example"; // string | The unique id of the store where customer can apply the reward
+$code = "code_example"; // string | Unique code of the voucher.
+$store_id = "store_id_example"; // string | The unique ID of the store where customer can apply the reward.
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $is_applied = true; // bool | Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers*
-$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture.
+$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure.
 
 try {
     $result = $apiInstance->getSubCustomerVouchers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $code, $store_id, $is_valid, $is_applied, $without_stores);
@@ -1587,21 +1587,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **code** | **string**| Unique code of the voucher | [optional]
- **store_id** | **string**| The unique id of the store where customer can apply the reward | [optional]
+ **code** | **string**| Unique code of the voucher. | [optional]
+ **store_id** | **string**| The unique ID of the store where customer can apply the reward. | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **is_applied** | **bool**| Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* | [optional]
- **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default strucuture. | [optional]
+ **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
 
 ### Authorization
 
@@ -1615,11 +1615,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomer**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postCustomer($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postCustomer($body, $accept_language)
 
 Create a new customer
 
-Add a new customer account in CRM CareCloud
+Add a new customer account in CRM CareCloud.
 
 ### Example
 ```php
@@ -1641,7 +1641,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomersBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomersBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postCustomer($body, $accept_language);
@@ -1657,11 +1657,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomersBody**](../Model/CustomersBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
 
 ### Authorization
 
@@ -1675,11 +1675,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerAddress**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111 postSubCustomerAddress($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110 postSubCustomerAddress($body, $customer_id, $accept_language)
 
 Create an additional customer address
 
-Add a new additional customer address
+Add a new additional customer address.
 
 ### Example
 ```php
@@ -1701,8 +1701,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdAddressesBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdAddressesBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postSubCustomerAddress($body, $customer_id, $accept_language);
@@ -1718,12 +1718,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdAddressesBody**](../Model/CustomerIdAddressesBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111**](../Model/InlineResponse20111.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110**](../Model/InlineResponse20110.md)
 
 ### Authorization
 
@@ -1737,11 +1737,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerInterest**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110 postSubCustomerInterest($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019 postSubCustomerInterest($body, $customer_id, $accept_language)
 
 Add an interest record to a customer
 
-Add a new specific customer interest record to a customer account
+Add a new specific customer interest record to a customer account.
 
 ### Example
 ```php
@@ -1763,8 +1763,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdInterestrecordsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdInterestrecordsBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postSubCustomerInterest($body, $customer_id, $accept_language);
@@ -1780,12 +1780,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdInterestrecordsBody**](../Model/CustomerIdInterestrecordsBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110**](../Model/InlineResponse20110.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019**](../Model/InlineResponse2019.md)
 
 ### Authorization
 
@@ -1799,11 +1799,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerPartnerRecord**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113 postSubCustomerPartnerRecord($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112 postSubCustomerPartnerRecord($body, $customer_id, $accept_language)
 
 Add a partner to the customer
 
-Add a new partner to the customer
+Add a new partner to the customer.
 
 ### Example
 ```php
@@ -1825,8 +1825,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPartnerrecordsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPartnerrecordsBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postSubCustomerPartnerRecord($body, $customer_id, $accept_language);
@@ -1842,12 +1842,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPartnerrecordsBody**](../Model/CustomerIdPartnerrecordsBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112**](../Model/InlineResponse20112.md)
 
 ### Authorization
 
@@ -1861,11 +1861,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019 postSubCustomerProperties($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postSubCustomerProperties($body, $customer_id, $accept_language)
 
 Add a property to a customer
 
-Add a new specific customer property record to a customer account
+Add a new specific customer property record to a customer account.
 
 ### Example
 ```php
@@ -1887,8 +1887,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPropertyrecordsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPropertyrecordsBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postSubCustomerProperties($body, $customer_id, $accept_language);
@@ -1904,12 +1904,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdPropertyrecordsBody**](../Model/CustomerIdPropertyrecordsBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019**](../Model/InlineResponse2019.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
 
 ### Authorization
 
@@ -1949,8 +1949,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsBatchBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsBatchBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postSubCustomerPropertiesBatch($body, $customer_id, $accept_language);
@@ -1965,8 +1965,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsBatchBody**](../Model/PropertyrecordsBatchBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -1984,11 +1984,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerRelatedCustomers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112 postSubCustomerRelatedCustomers($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111 postSubCustomerRelatedCustomers($body, $customer_id, $accept_language)
 
-Create a customer's relation
+Create the customer  relation
 
-Add a new customer's relation to a customer's account
+Add a new customer  relation to the customer  account.
 
 ### Example
 ```php
@@ -2010,8 +2010,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postSubCustomerRelatedCustomers($body, $customer_id, $accept_language);
@@ -2027,12 +2027,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody**](../Model/CustomerIdRelatedcustomersBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112**](../Model/InlineResponse20112.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111**](../Model/InlineResponse20111.md)
 
 ### Authorization
 
@@ -2046,11 +2046,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postSubCustomerSource($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postSubCustomerSource($body, $customer_id, $accept_language)
 
 Add a customer source record to a customer
 
-Add one of the [customer sources](/#tag/Customer-sources) to a customer account
+Add one of the [customer sources](/#tag/Customer-sources) to a customer account.
 
 ### Example
 ```php
@@ -2072,8 +2072,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdCustomersourcerecordsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdCustomersourcerecordsBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postSubCustomerSource($body, $customer_id, $accept_language);
@@ -2089,12 +2089,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdCustomersourcerecordsBody**](../Model/CustomerIdCustomersourcerecordsBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
 
 ### Authorization
 
@@ -2112,7 +2112,7 @@ Name | Type | Description  | Notes
 
 Update a customer
 
-Update the information on a specific customer account
+Update the information on a specific customer account.
 
 ### Example
 ```php
@@ -2134,8 +2134,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\CustomersCustomerIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\CustomersCustomerIdBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->putCustomer($body, $customer_id, $accept_language);
@@ -2150,8 +2150,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CustomersCustomerIdBody**](../Model/CustomersCustomerIdBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -2173,7 +2173,7 @@ void (empty response body)
 
 Update an additional customer address
 
-Update a specific additional customer address
+Update a specific additional customer address.
 
 ### Example
 ```php
@@ -2195,9 +2195,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\AddressesAdditionalCustomerAddressIdPathBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\AddressesAdditionalCustomerAddressIdPathBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$additional_customer_address_id_path = "additional_customer_address_id_path_example"; // string | Unique ID of the customer additional address
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$additional_customer_address_id_path = "additional_customer_address_id_path_example"; // string | Unique ID of the customer additional address.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->putSubCustomerAddress($body, $customer_id, $additional_customer_address_id_path, $accept_language);
@@ -2212,9 +2212,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\AddressesAdditionalCustomerAddressIdPathBody**](../Model/AddressesAdditionalCustomerAddressIdPathBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **additional_customer_address_id_path** | **string**| Unique ID of the customer additional address |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **additional_customer_address_id_path** | **string**| Unique ID of the customer additional address. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -2236,7 +2236,7 @@ void (empty response body)
 
 Update an interest record on an account
 
-Update a specific customer interest record on a customer account
+Update a specific customer interest record on a customer account.
 
 ### Example
 ```php
@@ -2258,9 +2258,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\InterestrecordsInterestRecordIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\InterestrecordsInterestRecordIdBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$interest_record_id = "interest_record_id_example"; // string | The unique id of the interest record
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$interest_record_id = "interest_record_id_example"; // string | The unique ID of the interest record.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->putSubCustomerInterest($body, $customer_id, $interest_record_id, $accept_language);
@@ -2275,9 +2275,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\InterestrecordsInterestRecordIdBody**](../Model/InterestrecordsInterestRecordIdBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **interest_record_id** | **string**| The unique id of the interest record |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **interest_record_id** | **string**| The unique ID of the interest record. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -2299,7 +2299,7 @@ void (empty response body)
 
 Update a property of a customer
 
-Update a specific customer property record on a customer account
+Update a specific customer property record on a customer account.
 
 ### Example
 ```php
@@ -2321,9 +2321,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsPropertyRecordIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsPropertyRecordIdBody | 
-$customer_id = "customer_id_example"; // string | The unique id of the customer
-$property_record_id = "property_record_id_example"; // string | The unique id of the property record
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
+$property_record_id = "property_record_id_example"; // string | The unique ID of the property record.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->putSubCustomerProperty($body, $customer_id, $property_record_id, $accept_language);
@@ -2338,9 +2338,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyrecordsPropertyRecordIdBody**](../Model/PropertyrecordsPropertyRecordIdBody.md)|  |
- **customer_id** | **string**| The unique id of the customer |
- **property_record_id** | **string**| The unique id of the property record |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **customer_id** | **string**| The unique ID of the customer. |
+ **property_record_id** | **string**| The unique ID of the property record. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

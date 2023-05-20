@@ -9,11 +9,11 @@ Method | HTTP request | Description
 [**postReservableProductsSearch**](ReservableProductsApi.md#postreservableproductssearch) | **POST** /reservable-products/actions/search-reservable-products | Search reservable products
 
 # **getReservableProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20095 getReservableProduct($reservable_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099 getReservableProduct($reservable_product_id, $accept_language)
 
 Get a reservable product
 
-Get information about a specific reservable product
+Get information about a specific reservable product.
 
 ### Example
 ```php
@@ -34,8 +34,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ReservableProducts
     new GuzzleHttp\Client(),
     $config
 );
-$reservable_product_id = "reservable_product_id_example"; // string | The unique id of the reservable product
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$reservable_product_id = "reservable_product_id_example"; // string | The unique ID of the reservable product.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getReservableProduct($reservable_product_id, $accept_language);
@@ -50,12 +50,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reservable_product_id** | **string**| The unique id of the reservable product |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **reservable_product_id** | **string**| The unique ID of the reservable product. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20095**](../Model/InlineResponse20095.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20099**](../Model/InlineResponse20099.md)
 
 ### Authorization
 
@@ -69,11 +69,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getReservableProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107 getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111 getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code)
 
 Get all reservable products
 
-Get the information as a list of reservable products
+Get the information as a list of reservable products.
 
 ### Example
 ```php
@@ -94,13 +94,13 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ReservableProducts
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$name = "name_example"; // string | Search record by name or a part of the name
-$code = "code_example"; // string | Code of the product
+$name = "name_example"; // string | Search record by name or a part of the name.
+$code = "code_example"; // string | Code of the product.
 
 try {
     $result = $apiInstance->getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code);
@@ -115,17 +115,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **name** | **string**| Search record by name or a part of the name | [optional]
- **code** | **string**| Code of the product | [optional]
+ **name** | **string**| Search record by name or a part of the name. | [optional]
+ **code** | **string**| Code of the product. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200107**](../Model/InlineResponse200107.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111**](../Model/InlineResponse200111.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postReservableProductsSearch**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108 postReservableProductsSearch($body, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112 postReservableProductsSearch($body, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Search reservable products
 
@@ -163,7 +163,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ReservableProducts
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
@@ -183,7 +183,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody**](../Model/ActionsSearchreservableproductsBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108**](../Model/InlineResponse200108.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112**](../Model/InlineResponse200112.md)
 
 ### Authorization
 

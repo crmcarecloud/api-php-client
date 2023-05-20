@@ -33,12 +33,12 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingTicketPrope
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$name = "name_example"; // string | Search record by name or a part of the name
+$name = "name_example"; // string | Search record by name or a part of the name.
 
 try {
     $result = $apiInstance->getBookingTicketProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
@@ -53,12 +53,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **name** | **string**| Search record by name or a part of the name | [optional]
+ **name** | **string**| Search record by name or a part of the name. | [optional]
 
 ### Return type
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 Get a booking ticket property
 
-Get information about a specific booking ticket property
+Get information about a specific booking ticket property.
 
 ### Example
 ```php
@@ -101,8 +101,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingTicketPrope
     new GuzzleHttp\Client(),
     $config
 );
-$booking_ticket_property_id = "booking_ticket_property_id_example"; // string | The unique id of the booking ticket property
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$booking_ticket_property_id = "booking_ticket_property_id_example"; // string | The unique ID of the booking ticket property.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getBookingTicketProperty($booking_ticket_property_id, $accept_language);
@@ -117,8 +117,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **booking_ticket_property_id** | **string**| The unique id of the booking ticket property |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **booking_ticket_property_id** | **string**| The unique ID of the booking ticket property. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

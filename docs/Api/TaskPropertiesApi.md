@@ -8,11 +8,11 @@ Method | HTTP request | Description
 [**getTaskProperty**](TaskPropertiesApi.md#gettaskproperty) | **GET** /task-properties/{task_property_id} | Get a task property
 
 # **getTaskProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200157 getTaskProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161 getTaskProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all task properties
 
-Get information about task properties
+Get information about task properties.
 
 ### Example
 ```php
@@ -33,12 +33,12 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TaskPropertiesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$name = "name_example"; // string | Search record by name or a part of the name
+$name = "name_example"; // string | Search record by name or a part of the name.
 
 try {
     $result = $apiInstance->getTaskProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
@@ -53,16 +53,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **name** | **string**| Search record by name or a part of the name | [optional]
+ **name** | **string**| Search record by name or a part of the name. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200157**](../Model/InlineResponse200157.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161**](../Model/InlineResponse200161.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 Get a task property
 
-Get information about a specific task property
+Get information about a specific task property.
 
 ### Example
 ```php
@@ -101,8 +101,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TaskPropertiesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$task_property_id = "task_property_id_example"; // string | The unique id of the task property
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$task_property_id = "task_property_id_example"; // string | The unique ID of the task property.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getTaskProperty($task_property_id, $accept_language);
@@ -117,8 +117,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **task_property_id** | **string**| The unique id of the task property |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **task_property_id** | **string**| The unique ID of the task property. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 

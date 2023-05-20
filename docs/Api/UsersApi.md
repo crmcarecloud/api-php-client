@@ -12,11 +12,11 @@ Method | HTTP request | Description
 [**postUserVerifyAuthToken**](UsersApi.md#postuserverifyauthtoken) | **POST** /users/actions/verify-auth-token | Verify user auth token
 
 # **getUser**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162 getUser($user_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167 getUser($user_id, $accept_language)
 
 Get information about a user
 
-Get information about a specific user
+Get information about a specific user.
 
 ### Example
 ```php
@@ -37,8 +37,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The unique id of the user
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$user_id = "user_id_example"; // string | The unique ID of the user.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->getUser($user_id, $accept_language);
@@ -53,12 +53,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **string**| The unique id of the user |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **user_id** | **string**| The unique ID of the user. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162**](../Model/InlineResponse200162.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167**](../Model/InlineResponse200167.md)
 
 ### Authorization
 
@@ -72,11 +72,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161 getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166 getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name)
 
 Get all users
 
-Get a list of all users in CareCloud
+Get a list of all users in CareCloud.
 
 ### Example
 ```php
@@ -97,16 +97,16 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$email = "email_example"; // string | Search by email
-$phone = "phone_example"; // string | Phone number with international prefix (420000000)
+$email = "email_example"; // string | Search by email.
+$phone = "phone_example"; // string | Phone number with international prefix (420000000).
 $login = "login_example"; // string | Search by login.
-$first_name = "first_name_example"; // string | Search by first name
-$last_name = "last_name_example"; // string | Search by last name
+$first_name = "first_name_example"; // string | Search by first name.
+$last_name = "last_name_example"; // string | Search by last name.
 
 try {
     $result = $apiInstance->getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name);
@@ -121,20 +121,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **count** | **int**| The number of records to return. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **email** | **string**| Search by email | [optional]
- **phone** | **string**| Phone number with international prefix (420000000) | [optional]
+ **email** | **string**| Search by email. | [optional]
+ **phone** | **string**| Phone number with international prefix (420000000). | [optional]
  **login** | **string**| Search by login. | [optional]
- **first_name** | **string**| Search by first name | [optional]
- **last_name** | **string**| Search by last name | [optional]
+ **first_name** | **string**| Search by first name. | [optional]
+ **last_name** | **string**| Search by last name. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161**](../Model/InlineResponse200161.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166**](../Model/InlineResponse200166.md)
 
 ### Authorization
 
@@ -148,11 +148,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164 postUserLogin($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169 postUserLogin($body, $accept_language)
 
 User login
 
-User login to external application
+User login to external application.
 
 ### Example
 ```php
@@ -165,7 +165,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\UsersApi(
     new GuzzleHttp\Client()
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody1(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody1 | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postUserLogin($body, $accept_language);
@@ -181,11 +181,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLoginBody1**](../Model/ActionsLoginBody1.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164**](../Model/InlineResponse200164.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169**](../Model/InlineResponse200169.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ No authorization required
 
 User logout
 
-User logout from external application
+User logout from external application.
 
 ### Example
 ```php
@@ -225,7 +225,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\UsersApi(
     $config
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLogoutBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLogoutBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $apiInstance->postUserLogout($body, $accept_language);
@@ -240,7 +240,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsLogoutBody**](../Model/ActionsLogoutBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
@@ -258,7 +258,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserSsoLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164 postUserSsoLogin($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170 postUserSsoLogin($body, $accept_language)
 
 User SSO login
 
@@ -275,7 +275,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\UsersApi(
     new GuzzleHttp\Client()
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSsologinBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSsologinBody | 
-$accept_language = "cs, en-gb;q=0.8"; // string | The unique id of the language code by ISO 639-1
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
     $result = $apiInstance->postUserSsoLogin($body, $accept_language);
@@ -291,11 +291,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSsologinBody**](../Model/ActionsSsologinBody.md)|  |
- **accept_language** | **string**| The unique id of the language code by ISO 639-1 | [optional] [default to cs, en-gb;q&#x3D;0.8]
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164**](../Model/InlineResponse200164.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170**](../Model/InlineResponse200170.md)
 
 ### Authorization
 
@@ -309,11 +309,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserVerifyAuthToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163 postUserVerifyAuthToken($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168 postUserVerifyAuthToken($body)
 
 Verify user auth token
 
-Verification of the user auth token
+Verification of the user auth token.
 
 ### Example
 ```php
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163**](../Model/InlineResponse200163.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168**](../Model/InlineResponse200168.md)
 
 ### Authorization
 
