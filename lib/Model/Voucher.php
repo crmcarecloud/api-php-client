@@ -67,7 +67,7 @@ class Voucher implements ModelInterface, ArrayAccess
 'valid_to' => 'string',
 'reward_group' => 'string',
 'note' => 'string',
-'reward' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Reward',
+'reward' => 'AllOfVoucherReward',
 'created_at' => 'string',
 'last_change' => 'string',
 'state' => 'int'    ];
@@ -275,29 +275,8 @@ self::STATE_2,        ];
     {
         $invalidProperties = [];
 
-        if ($this->container['voucher_id'] === null) {
-            $invalidProperties[] = "'voucher_id' can't be null";
-        }
         if ($this->container['customer_id'] === null) {
             $invalidProperties[] = "'customer_id' can't be null";
-        }
-        if ($this->container['store_id'] === null) {
-            $invalidProperties[] = "'store_id' can't be null";
-        }
-        if ($this->container['code'] === null) {
-            $invalidProperties[] = "'code' can't be null";
-        }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-        if ($this->container['valid_from'] === null) {
-            $invalidProperties[] = "'valid_from' can't be null";
-        }
-        if ($this->container['reward_group'] === null) {
-            $invalidProperties[] = "'reward_group' can't be null";
-        }
-        if ($this->container['reward'] === null) {
-            $invalidProperties[] = "'reward' can't be null";
         }
         $allowedValues = $this->getStateAllowableValues();
         if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
@@ -565,7 +544,7 @@ self::STATE_2,        ];
     /**
      * Gets reward
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Reward
+     * @return AllOfVoucherReward
      */
     public function getReward()
     {
@@ -575,7 +554,7 @@ self::STATE_2,        ];
     /**
      * Sets reward
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Reward $reward reward
+     * @param AllOfVoucherReward $reward reward
      *
      * @return $this
      */

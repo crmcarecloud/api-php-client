@@ -233,6 +233,9 @@ class VoucherBatch implements ModelInterface, ArrayAccess
         if ($this->container['reward_id'] === null) {
             $invalidProperties[] = "'reward_id' can't be null";
         }
+        if ($this->container['customer_id'] === null) {
+            $invalidProperties[] = "'customer_id' can't be null";
+        }
         return $invalidProperties;
     }
 

@@ -59,6 +59,7 @@ class MessageDetail implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'plain_text_body' => 'string',
 'html_body' => 'string',
+'attachments' => '\CrmCareCloud\Webservice\RestApi\Client\Model\AttachmentInfo[]',
 'last_change' => 'string'    ];
 
     /**
@@ -69,6 +70,7 @@ class MessageDetail implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'plain_text_body' => null,
 'html_body' => null,
+'attachments' => null,
 'last_change' => null    ];
 
     /**
@@ -100,6 +102,7 @@ class MessageDetail implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'plain_text_body' => 'plain_text_body',
 'html_body' => 'html_body',
+'attachments' => 'attachments',
 'last_change' => 'last_change'    ];
 
     /**
@@ -110,6 +113,7 @@ class MessageDetail implements ModelInterface, ArrayAccess
     protected static $setters = [
         'plain_text_body' => 'setPlainTextBody',
 'html_body' => 'setHtmlBody',
+'attachments' => 'setAttachments',
 'last_change' => 'setLastChange'    ];
 
     /**
@@ -120,6 +124,7 @@ class MessageDetail implements ModelInterface, ArrayAccess
     protected static $getters = [
         'plain_text_body' => 'getPlainTextBody',
 'html_body' => 'getHtmlBody',
+'attachments' => 'getAttachments',
 'last_change' => 'getLastChange'    ];
 
     /**
@@ -182,6 +187,7 @@ class MessageDetail implements ModelInterface, ArrayAccess
     {
         $this->container['plain_text_body'] = isset($data['plain_text_body']) ? $data['plain_text_body'] : null;
         $this->container['html_body'] = isset($data['html_body']) ? $data['html_body'] : null;
+        $this->container['attachments'] = isset($data['attachments']) ? $data['attachments'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
 
@@ -259,6 +265,30 @@ class MessageDetail implements ModelInterface, ArrayAccess
     public function setHtmlBody($html_body)
     {
         $this->container['html_body'] = $html_body;
+
+        return $this;
+    }
+
+    /**
+     * Gets attachments
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\AttachmentInfo[]
+     */
+    public function getAttachments()
+    {
+        return $this->container['attachments'];
+    }
+
+    /**
+     * Sets attachments
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\AttachmentInfo[] $attachments List of the attachments from the message.
+     *
+     * @return $this
+     */
+    public function setAttachments($attachments)
+    {
+        $this->container['attachments'] = $attachments;
 
         return $this;
     }

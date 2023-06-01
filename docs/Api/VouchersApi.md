@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getVouchers**](VouchersApi.md#getvouchers) | **GET** /vouchers | Get all vouchers
 [**postBulkVouchers**](VouchersApi.md#postbulkvouchers) | **POST** /vouchers/batch | Create a batch of vouchers.
 [**postVoucherApply**](VouchersApi.md#postvoucherapply) | **POST** /vouchers/{voucher_id}/actions/apply-voucher | Application of a voucher
+[**putVoucher**](VouchersApi.md#putvoucher) | **PUT** /vouchers/{voucher_id} | Update a voucher
 
 # **getSubVoucherProperties**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174 getSubVoucherProperties($voucher_id, $accept_language)
@@ -310,6 +311,67 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsApplyvoucherBody**](../Model/ActionsApplyvoucherBody.md)|  |
+ **voucher_id** | **string**| The unique ID of the voucher. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **putVoucher**
+> putVoucher($body, $voucher_id, $accept_language)
+
+Update a voucher
+
+This method updates a specific voucher.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\VouchersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\VouchersVoucherIdBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\VouchersVoucherIdBody | 
+$voucher_id = "voucher_id_example"; // string | The unique ID of the voucher.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $apiInstance->putVoucher($body, $voucher_id, $accept_language);
+} catch (Exception $e) {
+    echo 'Exception when calling VouchersApi->putVoucher: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\VouchersVoucherIdBody**](../Model/VouchersVoucherIdBody.md)|  |
  **voucher_id** | **string**| The unique ID of the voucher. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **mail_client_language** | **string** | Language of the mail client application where message was opened. | [optional] 
 **communication_channel_id** | **int** | The unique ID of the communication channel. *Possible values are: 1 - email / 2- SMS / 4 - PUSH notification (Apple or Google)/ 5 - internal system notification* | 
 **message_data** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Parameter[]**](Parameter.md) | Message data could contains array of customized parameters. They may have influence on message display or add values to message. | [optional] 
+**attachments** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Attachment[]**](Attachment.md) | List of the attachments for the message. A single attachment has a size limit of 1 MB. File type restrictions: .jpg, .jpeg, .png, .gif, and .pdf. | [optional] 
 **last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

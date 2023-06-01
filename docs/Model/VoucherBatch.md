@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **reward_id** | **string** | The unique ID of the reward. | 
-**customer_id** | **string** | The unique ID of the customer. | [optional] 
+**customer_id** | **string** | The unique ID of the customer. | 
 **store_id** | **string** | The unique ID of the store where voucher was applied. | [optional] 
 **code** | **string** | Code of the voucher. | [optional] 
 **value** | **float** | Value of the voucher when applied by the purchase. | [optional] 
