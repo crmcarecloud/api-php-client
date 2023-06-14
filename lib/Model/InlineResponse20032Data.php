@@ -56,7 +56,7 @@ class InlineResponse20032Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'currencies' => 'array',
+        'currencies' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Currency[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20032Data implements ModelInterface, ArrayAccess
     /**
      * Gets currencies
      *
-     * @return array
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[]
      */
     public function getCurrencies()
     {
@@ -215,7 +215,7 @@ class InlineResponse20032Data implements ModelInterface, ArrayAccess
     /**
      * Sets currencies
      *
-     * @param array $currencies Structure of currency.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[] $currencies Structure of currency.
      *
      * @return $this
      */

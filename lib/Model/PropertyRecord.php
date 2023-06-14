@@ -60,7 +60,7 @@ class PropertyRecord implements ModelInterface, ArrayAccess
         'property_record_id' => 'string',
 'property_id' => 'string',
 'property_name' => 'string',
-'property_value' => 'OneOfPropertyRecordPropertyValue',
+'property_value' => 'mixed',
 'last_change' => 'string'    ];
 
     /**
@@ -299,7 +299,7 @@ class PropertyRecord implements ModelInterface, ArrayAccess
     /**
      * Gets property_value
      *
-     * @return OneOfPropertyRecordPropertyValue
+     * @return mixed
      */
     public function getPropertyValue()
     {
@@ -309,7 +309,7 @@ class PropertyRecord implements ModelInterface, ArrayAccess
     /**
      * Sets property_value
      *
-     * @param OneOfPropertyRecordPropertyValue $property_value Value of the property.
+     * @param mixed $property_value Value of the property.
      *
      * @return $this
      */

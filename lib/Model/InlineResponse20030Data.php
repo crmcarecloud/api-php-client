@@ -56,7 +56,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'credit_types' => 'array',
+        'credit_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CreditType[]',
 'total_items' => 'int'    ];
 
     /**
@@ -205,7 +205,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
     /**
      * Gets credit_types
      *
-     * @return array
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CreditType[]
      */
     public function getCreditTypes()
     {
@@ -215,7 +215,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
     /**
      * Sets credit_types
      *
-     * @param array $credit_types List of the credit types.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CreditType[] $credit_types List of the credit types.
      *
      * @return $this
      */

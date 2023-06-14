@@ -64,7 +64,8 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
 'point_type_id' => 'string',
 'partner_id' => 'string',
 'store_id' => 'string',
-'point_history_record_time' => 'string'    ];
+'point_history_record_time' => 'string',
+'extended_data' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -79,7 +80,8 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
 'point_type_id' => null,
 'partner_id' => null,
 'store_id' => null,
-'point_history_record_time' => null    ];
+'point_history_record_time' => null,
+'extended_data' => 'json'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -115,7 +117,8 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
 'point_type_id' => 'point_type_id',
 'partner_id' => 'partner_id',
 'store_id' => 'store_id',
-'point_history_record_time' => 'point_history_record_time'    ];
+'point_history_record_time' => 'point_history_record_time',
+'extended_data' => 'extended_data'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -130,7 +133,8 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
 'point_type_id' => 'setPointTypeId',
 'partner_id' => 'setPartnerId',
 'store_id' => 'setStoreId',
-'point_history_record_time' => 'setPointHistoryRecordTime'    ];
+'point_history_record_time' => 'setPointHistoryRecordTime',
+'extended_data' => 'setExtendedData'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -145,7 +149,8 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
 'point_type_id' => 'getPointTypeId',
 'partner_id' => 'getPartnerId',
 'store_id' => 'getStoreId',
-'point_history_record_time' => 'getPointHistoryRecordTime'    ];
+'point_history_record_time' => 'getPointHistoryRecordTime',
+'extended_data' => 'getExtendedData'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -213,6 +218,7 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
         $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['point_history_record_time'] = isset($data['point_history_record_time']) ? $data['point_history_record_time'] : null;
+        $this->container['extended_data'] = isset($data['extended_data']) ? $data['extended_data'] : null;
     }
 
     /**
@@ -427,6 +433,30 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
     public function setPointHistoryRecordTime($point_history_record_time)
     {
         $this->container['point_history_record_time'] = $point_history_record_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets extended_data
+     *
+     * @return string
+     */
+    public function getExtendedData()
+    {
+        return $this->container['extended_data'];
+    }
+
+    /**
+     * Sets extended_data
+     *
+     * @param string $extended_data Extended data are related to the point history as details about the purchase, point expiration, and others. Several parameters depend on the type of point operation.
+     *
+     * @return $this
+     */
+    public function setExtendedData($extended_data)
+    {
+        $this->container['extended_data'] = $extended_data;
 
         return $this;
     }
