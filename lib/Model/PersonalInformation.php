@@ -561,7 +561,7 @@ self::GENDER_2,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique ID of the original customer account store of registration.
+     * @param string $store_id The unique ID of the original customer account store of registration. In case of the customer update, the request cant delete the parameter's value. Only updated.
      *
      * @return $this
      */

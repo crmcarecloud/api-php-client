@@ -796,14 +796,15 @@ class PointsApi
      * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
+     * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028
      */
-    public function getSubPointPurchases($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
+    public function getSubPointPurchases($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false', $external_purchase_id = null)
     {
-        list($response) = $this->getSubPointPurchasesWithHttpInfo($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension);
+        list($response) = $this->getSubPointPurchasesWithHttpInfo($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id);
         return $response;
     }
 
@@ -824,15 +825,16 @@ class PointsApi
      * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
+     * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSubPointPurchasesWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
+    public function getSubPointPurchasesWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false', $external_purchase_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
-        $request = $this->getSubPointPurchasesRequest($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension);
+        $request = $this->getSubPointPurchasesRequest($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -950,13 +952,14 @@ class PointsApi
      * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
+     * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubPointPurchasesAsync($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
+    public function getSubPointPurchasesAsync($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false', $external_purchase_id = null)
     {
-        return $this->getSubPointPurchasesAsyncWithHttpInfo($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension)
+        return $this->getSubPointPurchasesAsyncWithHttpInfo($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -981,14 +984,15 @@ class PointsApi
      * @param  string|null $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string|null $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  bool|null $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
+     * @param  string|null $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubPointPurchasesAsyncWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
+    public function getSubPointPurchasesAsyncWithHttpInfo($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false', $external_purchase_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028';
-        $request = $this->getSubPointPurchasesRequest($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension);
+        $request = $this->getSubPointPurchasesRequest($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1042,11 +1046,12 @@ class PointsApi
      * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
+     * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getSubPointPurchasesRequest($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
+    protected function getSubPointPurchasesRequest($point_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false', $external_purchase_id = null)
     {
         // verify the required parameter 'point_id' is set
         if ($point_id === null || (is_array($point_id) && count($point_id) === 0)) {
@@ -1101,6 +1106,10 @@ class PointsApi
         // query params
         if ($purchase_items_extension !== null) {
             $queryParams['purchase_items_extension'] = ObjectSerializer::toQueryValue($purchase_items_extension, null);
+        }
+        // query params
+        if ($external_purchase_id !== null) {
+            $queryParams['external_purchase_id'] = ObjectSerializer::toQueryValue($external_purchase_id, null);
         }
         // header params
         if ($accept_language !== null) {

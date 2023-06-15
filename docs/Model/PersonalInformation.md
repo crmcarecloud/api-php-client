@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **email** | **string** | Email of the customer. | [optional] 
 **phone** | **string** | Phone number of the customer with international prefix (420000000000). | [optional] 
 **language_id** | **string** | The unique ID of the language by ISO 639-1 code. | 
-**store_id** | **string** | The unique ID of the original customer account store of registration. | [optional] 
+**store_id** | **string** | The unique ID of the original customer account store of registration. In case of the customer update, the request cant delete the parameter&#x27;s value. Only updated. | [optional] 
 **photo_url** | **string** | URL address of the customer photo. If customer has no photo, this parameter is not send. | [optional] 
 **address** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Address**](Address.md) |  | [optional] 
 **agreement** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement**](Agreement.md) |  | [optional] 
