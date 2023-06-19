@@ -1,6 +1,6 @@
 # CrmCareCloud\Webservice\RestApi\Client\CustomerSourcesApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
+All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interface}/{version}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerSources**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061 getCustomerSources($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061 getCustomerSources($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_source_text_id)
 
 Get customer sources
 
@@ -98,9 +98,10 @@ $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
+$customer_source_text_id = "customer_source_text_id_example"; // string | The unique text representation of the ID of the customer source. It identifies the system where the customer belongs or the customer account was created.
 
 try {
-    $result = $apiInstance->getCustomerSources($accept_language, $count, $offset, $sort_field, $sort_direction);
+    $result = $apiInstance->getCustomerSources($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_source_text_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerSourcesApi->getCustomerSources: ', $e->getMessage(), PHP_EOL;
@@ -117,6 +118,7 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
+ **customer_source_text_id** | **string**| The unique text representation of the ID of the customer source. It identifies the system where the customer belongs or the customer account was created. | [optional]
 
 ### Return type
 

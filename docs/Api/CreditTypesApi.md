@@ -1,6 +1,6 @@
 # CrmCareCloud\Webservice\RestApi\Client\CreditTypesApi
 
-All URIs are relative to *https://&lt;projectURL&gt;/webservice/rest-api/enterprise-interface/v1.0*
+All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interface}/{version}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
