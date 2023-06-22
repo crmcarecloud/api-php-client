@@ -67,7 +67,7 @@ class Voucher implements ModelInterface, ArrayAccess
 'valid_to' => 'string',
 'reward_group' => 'string',
 'note' => 'string',
-'reward' => '\CrmCareCloud\Webservice\RestApi\Client\Model\AllOfVoucherReward',
+'reward' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Reward',
 'created_at' => 'string',
 'last_change' => 'string',
 'state' => 'int'    ];
@@ -544,7 +544,7 @@ self::STATE_2,        ];
     /**
      * Gets reward
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\AllOfVoucherReward
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Reward
      */
     public function getReward()
     {
@@ -554,7 +554,7 @@ self::STATE_2,        ];
     /**
      * Sets reward
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\AllOfVoucherReward $reward reward
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Reward $reward reward
      *
      * @return $this
      */

@@ -56,7 +56,8 @@ class VouchersBatchBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\VoucherBatch[]'    ];
+        'vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\VoucherBatch[]',
+'error_processing' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +65,8 @@ class VouchersBatchBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'vouchers' => null    ];
+        'vouchers' => null,
+'error_processing' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +95,8 @@ class VouchersBatchBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'vouchers' => 'vouchers'    ];
+        'vouchers' => 'vouchers',
+'error_processing' => 'error_processing'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +104,8 @@ class VouchersBatchBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'vouchers' => 'setVouchers'    ];
+        'vouchers' => 'setVouchers',
+'error_processing' => 'setErrorProcessing'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +113,8 @@ class VouchersBatchBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'vouchers' => 'getVouchers'    ];
+        'vouchers' => 'getVouchers',
+'error_processing' => 'getErrorProcessing'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -152,7 +157,20 @@ class VouchersBatchBody implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+    const ERROR_PROCESSING_1 = 1;
+const ERROR_PROCESSING_2 = 2;
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return array<int,int|string>
+     */
+    public function getErrorProcessingAllowableValues()
+    {
+        return [
+            self::ERROR_PROCESSING_1,
+self::ERROR_PROCESSING_2,        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -170,6 +188,7 @@ class VouchersBatchBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['vouchers'] = isset($data['vouchers']) ? $data['vouchers'] : null;
+        $this->container['error_processing'] = isset($data['error_processing']) ? $data['error_processing'] : null;
     }
 
     /**
@@ -184,6 +203,14 @@ class VouchersBatchBody implements ModelInterface, ArrayAccess
         if ($this->container['vouchers'] === null) {
             $invalidProperties[] = "'vouchers' can't be null";
         }
+        $allowedValues = $this->getErrorProcessingAllowableValues();
+        if (!is_null($this->container['error_processing']) && !in_array($this->container['error_processing'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'error_processing', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -219,6 +246,39 @@ class VouchersBatchBody implements ModelInterface, ArrayAccess
     public function setVouchers($vouchers)
     {
         $this->container['vouchers'] = $vouchers;
+
+        return $this;
+    }
+
+    /**
+     * Gets error_processing
+     *
+     * @return int
+     */
+    public function getErrorProcessing()
+    {
+        return $this->container['error_processing'];
+    }
+
+    /**
+     * Sets error_processing
+     *
+     * @param int $error_processing The parameter describes the batch method behavior in case of error occurs. *Possible values are: 1 - It returns the first error found and rollback all previous changes (this is also the default behavior if the parameter is not set) / 2 - It creates all valid records and creates an error report from failed attempts.*
+     *
+     * @return $this
+     */
+    public function setErrorProcessing($error_processing)
+    {
+        $allowedValues = $this->getErrorProcessingAllowableValues();
+        if (!is_null($error_processing) && !in_array($error_processing, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'error_processing', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['error_processing'] = $error_processing;
 
         return $this;
     }
