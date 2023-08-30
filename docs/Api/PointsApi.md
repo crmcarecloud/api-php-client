@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**postPointsTransfer**](PointsApi.md#postpointstransfer) | **POST** /points/actions/transfer-points | Transfer points
 
 # **getPoint**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092 getPoint($point_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093 getPoint($point_id, $accept_language)
 
 Get a point record
 
@@ -22,10 +22,6 @@ Get information about a specific point transaction.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -58,11 +54,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20092**](../Model/InlineResponse20092.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093**](../Model/InlineResponse20093.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -72,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPoints**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getPoints($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $point_type_id, $create_point_time_from, $create_point_time_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037 getPoints($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $point_type_id, $create_point_time_from, $create_point_time_to)
 
 Get all point records
 
@@ -82,10 +78,6 @@ Get a list of all point transactions and their current values.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -132,11 +124,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -146,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubPointPurchases**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028 getSubPointPurchases($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029 getSubPointPurchases($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id)
 
 Get a collection of purchases
 
@@ -156,10 +148,6 @@ Get information about all purchases by points resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -214,11 +202,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -228,20 +216,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPointsAssign**
-> postPointsAssign($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116 postPointsAssign($body, $accept_language)
 
 Assign of points
 
-Creates a new point collection record with the corresponding value.  <p class=\"warning\">⚠️ Action methods are available only in Enterprise interface.</p>
+Creates a new point collection record with the corresponding value. ⚠️ Action methods are available only in Enterprise interface.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -257,7 +241,8 @@ $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignpointsBod
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
-    $apiInstance->postPointsAssign($body, $accept_language);
+    $result = $apiInstance->postPointsAssign($body, $accept_language);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PointsApi->postPointsAssign: ', $e->getMessage(), PHP_EOL;
 }
@@ -273,11 +258,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116**](../Model/InlineResponse20116.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -291,16 +276,12 @@ void (empty response body)
 
 Points redemption
 
-New point redemption record is created.  <p class=\"warning\">⚠️ Action methods are available only in Enterprise interface.</p>
+New point redemption record is created. ⚠️ Action methods are available only in the Enterprise interface.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -337,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -357,10 +338,6 @@ Transfers points from one customer to another.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -396,7 +373,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

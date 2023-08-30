@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getSubPartnerProperties**](PartnersApi.md#getsubpartnerproperties) | **GET** /partners/{partner_id}/property-records | Get a collection of property records
 
 # **getPartner**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087 getPartner($partner_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088 getPartner($partner_id, $accept_language)
 
 Get a partner
 
@@ -19,10 +19,6 @@ Get information about a specific partner.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -55,11 +51,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087**](../Model/InlineResponse20087.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088**](../Model/InlineResponse20088.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -69,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPartners**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086 getPartners($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087 getPartners($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all partners
 
@@ -79,10 +75,6 @@ Get a list of partners accepted in CRM CareCloud.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -121,11 +113,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087**](../Model/InlineResponse20087.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -135,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubPartnerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088 getSubPartnerProperties($partner_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089 getSubPartnerProperties($partner_id, $accept_language)
 
 Get a collection of property records
 
@@ -145,10 +137,6 @@ Get information about all property records tied to the partner.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -181,11 +169,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088**](../Model/InlineResponse20088.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

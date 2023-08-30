@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**postVerifyOtp**](OneTimePasswordApi.md#postverifyotp) | **POST** /one-time-password/actions/verify | Verify a one-time password
 
 # **postSendOtp**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082 postSendOtp($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083 postSendOtp($body, $accept_language)
 
 Send a one-time password to a communication channel.
 
@@ -18,10 +18,6 @@ Action method sends generated password to the selected communication channel and
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -54,11 +50,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -68,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postVerifyOtp**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083 postVerifyOtp($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20084 postVerifyOtp($body, $accept_language)
 
 Verify a one-time password
 
@@ -78,10 +74,6 @@ Action method verify one time password. Resource provides a mechanism OTP for th
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -114,11 +106,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20084**](../Model/InlineResponse20084.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

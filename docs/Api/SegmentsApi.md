@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**postSegmentRemoveCustomer**](SegmentsApi.md#postsegmentremovecustomer) | **POST** /segments/{segment_id}/actions/remove-customer | Remove customer from a segment
 
 # **getSegment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136 getSegment($segment_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137 getSegment($segment_id, $accept_language)
 
 Get a segment
 
@@ -23,10 +23,6 @@ Get information about a specific segment.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -59,11 +55,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136**](../Model/InlineResponse200136.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137**](../Model/InlineResponse200137.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -73,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegmentGroup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138 getSegmentGroup($segment_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139 getSegmentGroup($segment_group_id, $accept_language)
 
 Get a segment group
 
@@ -83,10 +79,6 @@ Get information about a specific segment group.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -119,11 +111,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138**](../Model/InlineResponse200138.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139**](../Model/InlineResponse200139.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -133,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegmentGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137 getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138 getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all segment groups
 
@@ -143,10 +135,6 @@ Get information about segment groups.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -187,11 +175,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137**](../Model/InlineResponse200137.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138**](../Model/InlineResponse200138.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -201,7 +189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136 getSegments($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids)
 
 Get all segments
 
@@ -211,10 +199,6 @@ Get information about segments as a list of all segments.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -255,11 +239,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135**](../Model/InlineResponse200135.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136**](../Model/InlineResponse200136.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -269,7 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubSegmentRecords**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039 getSubSegmentRecords($segment_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040 getSubSegmentRecords($segment_id, $accept_language)
 
 Get a collection of segment records
 
@@ -279,10 +263,6 @@ Get information about all segment records on segments resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -315,11 +295,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -339,10 +319,6 @@ Action method that adds customer to specified segment.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -380,7 +356,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -400,10 +376,6 @@ Action method that removes customer from a specified segment.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -441,7 +413,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

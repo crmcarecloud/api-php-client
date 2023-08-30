@@ -8,20 +8,16 @@ Method | HTTP request | Description
 [**getUserRoles**](UserRolesApi.md#getuserroles) | **GET** /user-roles | Get all user roles
 
 # **getUserRole**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172 getUserRole($user_role_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173 getUserRole($user_role_id, $accept_language)
 
 Get information about a user role
 
-Get information about a specific user role.
+Get information about a specific user role.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -54,11 +50,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172**](../Model/InlineResponse200172.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173**](../Model/InlineResponse200173.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -68,20 +64,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserRoles**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171 getUserRoles($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172 getUserRoles($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all user roles
 
-Get a list of all user roles in CareCloud.
+Get a list of all user roles in CareCloud.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -120,11 +112,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171**](../Model/InlineResponse200171.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172**](../Model/InlineResponse200172.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

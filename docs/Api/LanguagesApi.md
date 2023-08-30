@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getLanguages**](LanguagesApi.md#getlanguages) | **GET** /languages | Get all languages
 
 # **getLanguages**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076 getLanguages($accept_language, $language_list_type)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077 getLanguages($accept_language, $language_list_type)
 
 Get all languages
 
@@ -17,10 +17,6 @@ Get a list of all languages accepted in CRM CareCloud.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -53,11 +49,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

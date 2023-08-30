@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **new_customer_id** | **string** | ID of the new points holder. | 
 **amount** | **float** | Number of the transferred points. | 
 **point_type_id** | **string** | Type of the transferred points. | 
+**note** | **string** | Note for the new point record. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**getBooking**](BookingsApi.md#getbooking) | **GET** /bookings/{booking_id} | Get a booking
 [**getBookings**](BookingsApi.md#getbookings) | **GET** /bookings | Get all bookings
 [**postBooking**](BookingsApi.md#postbooking) | **POST** /bookings | Create a new booking
+[**postBookingBusyTimes**](BookingsApi.md#postbookingbusytimes) | **POST** /bookings/actions/average-booking-busy-times | Get information about booking busy times
 [**putBooking**](BookingsApi.md#putbooking) | **PUT** /bookings/{booking_id} | Update a booking
 
 # **deleteBooking**
@@ -21,10 +22,6 @@ Delete selected booking.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -60,7 +57,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -80,10 +77,6 @@ Get information about a specific booking.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -120,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -140,10 +133,6 @@ Get information about all bookings.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -192,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -212,10 +201,6 @@ Add a new booking.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -252,7 +237,63 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postBookingBusyTimes**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009 postBookingBusyTimes($body, $accept_language)
+
+Get information about booking busy times
+
+The action method provides data on the busiest times of bookings in a period. The period can change depending on the parameters set up.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAveragebookingbusytimesBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAveragebookingbusytimesBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->postBookingBusyTimes($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling BookingsApi->postBookingBusyTimes: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAveragebookingbusytimesBody**](../Model/ActionsAveragebookingbusytimesBody.md)|  |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -272,10 +313,6 @@ Update a specific booking.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -313,7 +350,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

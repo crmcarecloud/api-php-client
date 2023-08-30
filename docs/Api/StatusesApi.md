@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getStatuses**](StatusesApi.md#getstatuses) | **GET** /statuses | Get all statuses
 
 # **getStatus**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143 getStatus($status_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200144 getStatus($status_id, $accept_language)
 
 Get a status
 
@@ -18,10 +18,6 @@ Get information about a specific status.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -54,11 +50,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143**](../Model/InlineResponse200143.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200144**](../Model/InlineResponse200144.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -68,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStatuses**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142 getStatuses($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143 getStatuses($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all statuses
 
@@ -78,10 +74,6 @@ Get information as a collection of all recent statuses.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -120,11 +112,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142**](../Model/InlineResponse200142.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143**](../Model/InlineResponse200143.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

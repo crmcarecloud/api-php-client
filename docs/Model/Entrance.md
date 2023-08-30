@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **resort_name** | **string** | Name of the resort where is an entrance charged. | [optional] 
 **customer_category_name** | **string** | Name of the customer category. | [optional] 
 **external_order_id** | **string** | ID of an external order creaded in POS system. | [optional] 
-**external_entrance_id** | **string** | External ID of the entrance. Structure can be different depends of POS system, that created entrance. | [optional] 
+**external_entrance_id** | **string** | External ID of the entrance. Structure can be different depends of the POS system, that created the entrance. | [optional] 
+**external_turnstile_permission_id** | **string** | External ID of the permission to open a turnstile. Structure can be different depends of the POS system, that created the permission. | [optional] 
 **entrance_type_id** | **int** | Type of the entrance *Possible values are: season ticket - 0/ one day ticket -1/ multiple day ticket - 2* | 
 **order_item_id** | **string** | Order ID item represents relation between entrance and order item from carecloud e-shop. | [optional] 
 **card_id** | **string** | ID of card used for charge entrance. | 

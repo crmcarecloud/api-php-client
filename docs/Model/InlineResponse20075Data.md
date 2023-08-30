@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**messages** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Message[]**](Message.md) | List of all messages | [optional] 
-**total_items** | **int** | Count of all found messages | [optional] 
+**interests** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]**](Interest.md) | List of all interests. | [optional] 
+**total_items** | **int** | The number of all found interests. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

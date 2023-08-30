@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**postSubCustomerSetPartners**](CustomersActionsApi.md#postsubcustomersetpartners) | **POST** /customers/actions/set-partners | Set one or multiple partners to the customer
 
 # **getCustomerSearch**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
 
 Search customers
 
@@ -23,10 +23,6 @@ Search all customers matching for parameters.  <p class=\"warning\">⚠️ Actio
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -67,11 +63,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -85,16 +81,12 @@ Name | Type | Description  | Notes
 
 Customer's credentials verification
 
-Verification of a customer account credentials.  <p class=\"warning\">⚠️ Action method for verification credentials is available only in Enterprise interface.</p>
+Verification of a customer account credentials. ⚠️ Action method for verification credentials is available only in the Enterprise interface.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -129,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -143,16 +135,12 @@ Name | Type | Description  | Notes
 
 Social network credentials verification
 
-Verification of a customer account's social network credentials.  <p class=\"warning\">⚠️ Action method for verification credentials is available only in Enterprise interface.</p>
+Verification of a customer account's social network credentials. ⚠️ Action method for verification credentials is available only in the Enterprise interface.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -187,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -197,20 +185,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersSetStatusRecord**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053 postCustomersSetStatusRecord($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054 postCustomersSetStatusRecord($body)
 
 Set a new customer status
 
-The method sets a new customer status. If another valid status exists, CareCloud deactivates it.  <p class=\"warning\">⚠️ Action method is available only in Enterprise interface.</p>
+The method sets a new customer status. If another valid status exists, CareCloud deactivates it.<br/> ⚠️ Action method is available only in the Enterprise interface.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -241,11 +225,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -265,10 +249,6 @@ Method uploads the customer  profile photo. In case if the customer already has 
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -302,7 +282,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -312,20 +292,16 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersVerifyAuthToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052 postCustomersVerifyAuthToken($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053 postCustomersVerifyAuthToken($body)
 
 Verify auth token
 
-Method verifies authentication token created by a specified application. There is the unique ID of the customer as a response.  <p class=\"warning\">⚠️ Action method is available only in Enterprise interface.</p>
+Method verifies authentication token created by a specified application. There is the unique ID of the customer as a response. <br/> ⚠️ Endpoint method is available only in the Enterprise interface.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -356,11 +332,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -374,16 +350,12 @@ Name | Type | Description  | Notes
 
 Set one or multiple partners to the customer
 
-Set one or multiple partners to the customer. The method will set all the partners from the request available to the CareCloud API user and delete all that are not present in the request. If customer has a partner that is unavailable to the user, this partner is not going to be modified or deleted.
+Set one or multiple partners to the customer.<br/> The method will set all the partners from the request available to the CareCloud API user and delete all that are not present in the request.<br/> If customer has a partner that is unavailable to the user, this partner is not going to be modified or deleted.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -419,7 +391,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

@@ -3,11 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**earned_points** | **float** | Amount of earned points of the purchase. | [optional] 
-**used_credits** | **float** | Amount of credits used to pay of the purchase. | [optional] 
-**used_points** | **float** | Amount of points used to pay of the purchase. | [optional] 
-**used_points_total** | **float** | Amount of points used to pay and used in vouchers of the purchase. | [optional] 
-**used_vouchers** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]**](Voucher.md) | List of used vouchers. | [optional] 
+**purchase_items** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItem[]**](PurchaseItem.md) | List of purchase items tied to a purchase. | [optional] 
+**total_items** | **int** | The number of all found purchase items. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

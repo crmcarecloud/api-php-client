@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getEventGroups**](EventGroupsApi.md#geteventgroups) | **GET** /event-groups | Get all event groups
 
 # **getEventGroup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069 getEventGroup($event_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070 getEventGroup($event_group_id, $accept_language)
 
 Get an event group
 
@@ -18,10 +18,6 @@ Get information about a specific event group.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -54,11 +50,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -68,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEventGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068 getEventGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069 getEventGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
 
 Get all event groups
 
@@ -78,10 +74,6 @@ Get a list of all event groups.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -124,11 +116,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

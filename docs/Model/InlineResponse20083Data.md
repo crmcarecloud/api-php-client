@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_valid** | **bool** | Result of the OTP verification. | [optional] 
+**request_id** | **string** | The parameter specifies the request that caused the OTP to be created. Request ID will be used as one of the parameter in method [/one-time-password/actions/verify](#operation/postVerifyOtp). | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

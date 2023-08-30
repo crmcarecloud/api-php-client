@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCustomerSourceRecords**](CustomerSourceRecordsApi.md#getcustomersourcerecords) | **GET** /customer-source-records | Get customer source records
 
 # **getCustomerSourceRecords**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042 getCustomerSourceRecords($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id, $customer_source_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043 getCustomerSourceRecords($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id, $customer_source_id, $external_ids)
 
 Get customer source records
 
@@ -17,10 +17,6 @@ Get information about all customer source records.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -38,11 +34,12 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
-$external_id = "external_id_example"; // string | The unique external id. It may be ID from the other system.
+$external_id = "external_id_example"; // string | The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems).
 $customer_source_id = "customer_source_id_example"; // string | The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created.
+$external_ids = array("external_ids_example"); // string[] | The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don't need to be necessary unique. Usage of other parameter could be required to return more specific results.
 
 try {
-    $result = $apiInstance->getCustomerSourceRecords($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id, $customer_source_id);
+    $result = $apiInstance->getCustomerSourceRecords($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id, $customer_source_id, $external_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerSourceRecordsApi->getCustomerSourceRecords: ', $e->getMessage(), PHP_EOL;
@@ -60,16 +57,17 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
- **external_id** | **string**| The unique external id. It may be ID from the other system. | [optional]
+ **external_id** | **string**| The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). | [optional]
  **customer_source_id** | **string**| The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. | [optional]
+ **external_ids** | [**string[]**](../Model/string.md)| The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

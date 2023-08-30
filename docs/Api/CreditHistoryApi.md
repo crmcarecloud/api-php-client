@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCreditHistory**](CreditHistoryApi.md#getcredithistory) | **GET** /credit-history | Get credit transaction history
 
 # **getCreditHistory**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029 getCreditHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $credit_operation_type, $credit_operation_note)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030 getCreditHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $credit_operation_type, $credit_operation_note)
 
 Get credit transaction history
 
@@ -17,10 +17,6 @@ Get a list of credit transactions of the customer.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -73,11 +69,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

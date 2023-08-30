@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **valid_to** | **string** | Date and time of the point record validity to. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the point record. *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 
 **created_at** | **string** | Date and time of point record creation. *Possible value: 2016-06-30T15:51:49+02:00* | [optional] 
+**note** | **string** | Note for the new point record. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

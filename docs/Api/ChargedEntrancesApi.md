@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**putEntrance**](ChargedEntrancesApi.md#putentrance) | **PUT** /entrances/{entrance_id} | Update an entrance
 
 # **getEntrance**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140 getEntrance($entrance_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141 getEntrance($entrance_id, $accept_language)
 
 Get an entrance
 
@@ -20,10 +20,6 @@ Get information about a specific entrance resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -56,11 +52,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140**](../Model/InlineResponse200140.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141**](../Model/InlineResponse200141.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -70,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEntrances**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139 getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140 getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id)
 
 Get all entrances
 
@@ -80,10 +76,6 @@ Get a list of entrances in CRM CareCloud.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -115,9 +107,10 @@ $is_cancelled = true; // bool | Filter for canceled entrances. *Possible values:
 $valid_from = "valid_from_example"; // string | Date from when is record already valid. *(YYYY-MM-DD)*
 $valid_to = "valid_to_example"; // string | Date to when is record still valid. *(YYYY-MM-DD)*
 $product_id = "product_id_example"; // string | ID of the product.
+$external_turnstile_permission_id = "external_turnstile_permission_id_example"; // string | External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission.
 
 try {
-    $result = $apiInstance->getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id);
+    $result = $apiInstance->getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChargedEntrancesApi->getEntrances: ', $e->getMessage(), PHP_EOL;
@@ -149,14 +142,15 @@ Name | Type | Description  | Notes
  **valid_from** | **string**| Date from when is record already valid. *(YYYY-MM-DD)* | [optional]
  **valid_to** | **string**| Date to when is record still valid. *(YYYY-MM-DD)* | [optional]
  **product_id** | **string**| ID of the product. | [optional]
+ **external_turnstile_permission_id** | **string**| External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139**](../Model/InlineResponse200139.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140**](../Model/InlineResponse200140.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -166,7 +160,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEntrancesOverview**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141 getEntrancesOverview($accept_language, $valid_from, $valid_to, $pos_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142 getEntrancesOverview($accept_language, $valid_from, $valid_to, $pos_id)
 
 Get entrances overview
 
@@ -176,10 +170,6 @@ Get information about entrances in time interval.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -216,11 +206,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141**](../Model/InlineResponse200141.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142**](../Model/InlineResponse200142.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -240,10 +230,6 @@ This method updates a specific entrance resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -281,7 +267,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

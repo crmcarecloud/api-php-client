@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getPointHistory**](PointHistoryApi.md#getpointhistory) | **GET** /point-history | Get point transaction history
 
 # **getPointHistory**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093 getPointHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $point_operation_type, $point_operation_note, $point_type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20094 getPointHistory($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $partner_id, $time_from, $time_to, $point_operation_type, $point_operation_note, $point_type_id)
 
 Get point transaction history
 
@@ -17,10 +17,6 @@ Get a list of point transactions of the customer.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -75,11 +71,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20093**](../Model/InlineResponse20093.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20094**](../Model/InlineResponse20094.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

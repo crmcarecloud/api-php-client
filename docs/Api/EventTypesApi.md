@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getSubEventTypeProperties**](EventTypesApi.md#getsubeventtypeproperties) | **GET** /event-types/{event_type_id}/event-properties | Get a collection of event type properties
 
 # **getEventType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072 getEventType($event_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073 getEventType($event_type_id, $accept_language)
 
 Get an event type
 
@@ -19,10 +19,6 @@ Get information about a specific event type.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -55,11 +51,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -69,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEventTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071 getEventTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072 getEventTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all event types
 
@@ -79,10 +75,6 @@ Get a list of all event types.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -123,11 +115,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -137,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubEventTypeProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073 getSubEventTypeProperties($event_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074 getSubEventTypeProperties($event_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get a collection of event type properties
 
@@ -147,10 +139,6 @@ Get information about all properties of event type.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -191,11 +179,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

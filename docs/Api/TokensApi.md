@@ -14,20 +14,16 @@ Method | HTTP request | Description
 [**putToken**](TokensApi.md#puttoken) | **PUT** /tokens/{token_id} | Edit a push token
 
 # **getTokenAuthentication**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
 
 Get authentication token
 
-Returns authentication token for specific external application.
+Returns authentication token for specific external application. <br/> ⚠️ Endpoint is available only in Customer interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -64,11 +60,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164**](../Model/InlineResponse200164.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165**](../Model/InlineResponse200165.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -78,27 +74,21 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124 postToken($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125 postToken($body, $accept_language)
 
 Create a token
 
-Create a token and setup of the client application. <p class=\"warning\">Note: When creating a new token, HTTP header doesn't contain token_id in authentication part.</p> <p class=\"warning\">⚠️ Warning: We highly recommend filling all identifications in tokens resource (device and application) to avoid problems if multiple applications use CareCloud REST API on one device.</p> <p class=\"warning\">The creation of a token is different from other API calls. HTTP Authorization header contains only a login name and no token. See [Use cases](#section/Use-cases/Authentication-and-login-process-for-customer-interface).</p>
+Create a token and setup of the client application. <br/> ⚠️ The endpoint is available only in the Customer interface.<br/> ⚠️ When creating a new token, the request doesn't need to contain an Authentication header.<br/> ⚠️ Warning: We highly recommend filling all identifications in the tokens resource (device and application) to avoid problems if multiple applications use the CareCloud REST API on one device.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-
 
 $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody | 
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
@@ -121,11 +111,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124**](../Model/InlineResponse20124.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125**](../Model/InlineResponse20125.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -135,20 +125,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052 postTokenLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053 postTokenLogin($body, $token_id, $accept_language)
 
 Login to the application
 
-Login of a customer account to client's application.
+Login of a customer account to client's application.<br/> ⚠️ Endpoint is available only in Customer interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -183,11 +169,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -207,10 +193,6 @@ Logout of a customer account to client's application.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -246,7 +228,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -260,16 +242,12 @@ void (empty response body)
 
 Send email for set up of the new customer password
 
-Send email, that contains link to set up a password.
+Send email, that contains link to set up a new customer password.<br/> ⚠️ Endpoint is available only in Customer interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -307,7 +285,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -321,16 +299,12 @@ void (empty response body)
 
 Login via social network
 
-Login of a customer account to client's application via social network.
+Login of a customer account to client's application via social network. <br/> ⚠️ Endpoint is available only in Customer interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -369,7 +343,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -379,20 +353,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenTestCustomerLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165 postTokenTestCustomerLogin($token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166 postTokenTestCustomerLogin($token_id, $accept_language)
 
 Login to the application for test customer
 
-Login of a test customer account to client's application.
+Login of a test customer account to client's application. <br/> ⚠️ Endpoint is available only in Customer interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -425,11 +395,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165**](../Model/InlineResponse200165.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166**](../Model/InlineResponse200166.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -443,16 +413,12 @@ Name | Type | Description  | Notes
 
 Edit a push token
 
-Update a push token and installation setup.
+Update a push token and installation setup. <br/> ⚠️ Endpoint is available only in Customer interface. <br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -490,7 +456,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

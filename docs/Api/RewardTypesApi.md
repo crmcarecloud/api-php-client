@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRewardtype**](RewardTypesApi.md#getrewardtype) | **GET** /reward-types/{reward_type_id} | Get a reward type
 
 # **getRewardTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133 getRewardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134 getRewardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all reward types
 
@@ -18,10 +18,6 @@ Get information about reward types.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -62,11 +58,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133**](../Model/InlineResponse200133.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134**](../Model/InlineResponse200134.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -76,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRewardtype**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134 getRewardtype($reward_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135 getRewardtype($reward_type_id, $accept_language)
 
 Get a reward type
 
@@ -86,10 +82,6 @@ Get information about a specific reward type.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -122,11 +114,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134**](../Model/InlineResponse200134.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135**](../Model/InlineResponse200135.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

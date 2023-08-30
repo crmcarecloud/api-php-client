@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCountries**](CountriesApi.md#getcountries) | **GET** /countries | Get all countries
 
 # **getCountries**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025 getCountries($accept_language, $count, $offset, $sort_field, $sort_direction, $country_id, $country_name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026 getCountries($accept_language, $count, $offset, $sort_field, $sort_direction, $country_id, $country_name)
 
 Get all countries
 
@@ -17,10 +17,6 @@ Get a list of countries accepted in CRM CareCloud.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -63,11 +59,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

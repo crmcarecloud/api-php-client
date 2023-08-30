@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**purchase_items** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItem[]**](PurchaseItem.md) | List of purchase items tied to a purchase | [optional] 
-**total_items** | **int** | Count of all found purchase items | [optional] 
+**product_reservation_external_list_types** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationExternalListType[]**](ProductReservationExternalListType.md) | List of the product reservation external list types. | [optional] 
+**total_items** | **int** | The number of all found product reservation external list types. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

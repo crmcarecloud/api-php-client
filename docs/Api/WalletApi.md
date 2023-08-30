@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**getWalletSalesTurnover**](WalletApi.md#getwalletsalesturnover) | **GET** /wallet/actions/sales-turnover | Get sales turnover
 
 # **getWalletCredits**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178 getWalletCredits($customer_id, $accept_language, $date_from, $date_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179 getWalletCredits($customer_id, $accept_language, $date_from, $date_to)
 
 Get credits overview
 
@@ -21,10 +21,6 @@ Get information about credits overview of the customer in the time interval.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -61,11 +57,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178**](../Model/InlineResponse200178.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179**](../Model/InlineResponse200179.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -75,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletCreditsExpiration**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179 getWalletCreditsExpiration($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180 getWalletCreditsExpiration($customer_id, $accept_language)
 
 Get credits expiration overview
 
@@ -85,10 +81,6 @@ Get information about credits expiration overview of the customer.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -121,11 +113,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179**](../Model/InlineResponse200179.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180**](../Model/InlineResponse200180.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -135,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletPoints**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177 getWalletPoints($customer_id, $accept_language, $date_from, $date_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178 getWalletPoints($customer_id, $accept_language, $date_from, $date_to)
 
 Get points overview
 
@@ -145,10 +137,6 @@ Get information about points overview of the customer in time interval.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -185,11 +173,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177**](../Model/InlineResponse200177.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178**](../Model/InlineResponse200178.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -199,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletPointsExpiration**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179 getWalletPointsExpiration($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180 getWalletPointsExpiration($customer_id, $accept_language)
 
 Get points expiration overview
 
@@ -209,10 +197,6 @@ Get information about points expiration overview of the customer.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -245,11 +229,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179**](../Model/InlineResponse200179.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180**](../Model/InlineResponse200180.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -259,7 +243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWalletSalesTurnover**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176 getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177 getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to)
 
 Get sales turnover
 
@@ -269,10 +253,6 @@ Get information about sales turnover of the customer in time interval.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -309,11 +289,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176**](../Model/InlineResponse200176.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177**](../Model/InlineResponse200177.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getPurchaseTypes**](PurchaseTypesApi.md#getpurchasetypes) | **GET** /purchase-types | Get all purchase types
 
 # **getPurchaseTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119 getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120 getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all purchase types
 
@@ -17,10 +17,6 @@ Get a list of purchase types accepted in CRM CareCloud.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -59,11 +55,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200119**](../Model/InlineResponse200119.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200120**](../Model/InlineResponse200120.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

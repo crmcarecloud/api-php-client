@@ -19,10 +19,6 @@ Get information about a specific booking ticket.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -59,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -79,10 +75,6 @@ Get information about all booking tickets.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -103,8 +95,8 @@ $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $valid_from = "valid_from_example"; // string | Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)*
 $valid_to = "valid_to_example"; // string | Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)*
 $valid_only = true; // bool | Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation*
-$booking_ticket_property_id = "booking_ticket_property_id_example"; // string | Booking ticket property ID from resource [booking-ticket-properties](#tag/Booking-ticket-properties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request.
-$booking_ticket_property_value = "booking_ticket_property_value_example"; // string | Booking ticket property record value from [booking-ticket-properties](#tag/Booking-ticket-properties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request.
+$booking_ticket_property_id = "booking_ticket_property_id_example"; // string | Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request.
+$booking_ticket_property_value = "booking_ticket_property_value_example"; // string | Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request.
 
 try {
     $result = $apiInstance->getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only, $booking_ticket_property_id, $booking_ticket_property_value);
@@ -128,8 +120,8 @@ Name | Type | Description  | Notes
  **valid_from** | **string**| Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **valid_to** | **string**| Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **valid_only** | **bool**| Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* | [optional]
- **booking_ticket_property_id** | **string**| Booking ticket property ID from resource [booking-ticket-properties](#tag/Booking-ticket-properties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. | [optional]
- **booking_ticket_property_value** | **string**| Booking ticket property record value from [booking-ticket-properties](#tag/Booking-ticket-properties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. | [optional]
+ **booking_ticket_property_id** | **string**| Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. | [optional]
+ **booking_ticket_property_value** | **string**| Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. | [optional]
 
 ### Return type
 
@@ -137,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -157,10 +149,6 @@ Get information about all time slots depends on booking ticket.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -181,8 +169,8 @@ $sort_direction = "sort_direction_example"; // string | Direction of sorting the
 $free_only = true; // bool | Parameter defines what kind of time slots is going to be return depends on the capacity. *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)*
 $time_from = "time_from_example"; // string | Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)*
 $time_to = "time_to_example"; // string | Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)*
-$booking_ticket_property_id = "booking_ticket_property_id_example"; // string | Booking ticket property ID from resource [booking-ticket-properties](#tag/Booking-ticket-properties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request.
-$booking_ticket_property_value = "booking_ticket_property_value_example"; // string | Booking ticket property record value from [booking-ticket-properties](#tag/Booking-ticket-properties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request.
+$booking_ticket_property_id = "booking_ticket_property_id_example"; // string | Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request.
+$booking_ticket_property_value = "booking_ticket_property_value_example"; // string | Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request.
 
 try {
     $result = $apiInstance->getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
@@ -206,8 +194,8 @@ Name | Type | Description  | Notes
  **free_only** | **bool**| Parameter defines what kind of time slots is going to be return depends on the capacity. *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* | [optional]
  **time_from** | **string**| Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **time_to** | **string**| Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
- **booking_ticket_property_id** | **string**| Booking ticket property ID from resource [booking-ticket-properties](#tag/Booking-ticket-properties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. | [optional]
- **booking_ticket_property_value** | **string**| Booking ticket property record value from [booking-ticket-properties](#tag/Booking-ticket-properties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. | [optional]
+ **booking_ticket_property_id** | **string**| Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. | [optional]
+ **booking_ticket_property_value** | **string**| Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. | [optional]
 
 ### Return type
 
@@ -215,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

@@ -12,20 +12,16 @@ Method | HTTP request | Description
 [**postUserVerifyAuthToken**](UsersApi.md#postuserverifyauthtoken) | **POST** /users/actions/verify-auth-token | Verify user auth token
 
 # **getUser**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167 getUser($user_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168 getUser($user_id, $accept_language)
 
 Get information about a user
 
-Get information about a specific user.
+Get information about a specific user.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -58,11 +54,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167**](../Model/InlineResponse200167.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168**](../Model/InlineResponse200168.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -72,20 +68,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166 getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167 getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name)
 
 Get all users
 
-Get a list of all users in CareCloud.
+Get a list of all users in CareCloud.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -134,11 +126,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166**](../Model/InlineResponse200166.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167**](../Model/InlineResponse200167.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -148,11 +140,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169 postUserLogin($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170 postUserLogin($body, $accept_language)
 
 User login
 
-User login to external application.
+User login to external application.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
@@ -185,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169**](../Model/InlineResponse200169.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170**](../Model/InlineResponse200170.md)
 
 ### Authorization
 
@@ -203,16 +195,12 @@ No authorization required
 
 User logout
 
-User logout from external application.
+User logout from external application.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -248,7 +236,7 @@ void (empty response body)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -258,11 +246,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserSsoLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170 postUserSsoLogin($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171 postUserSsoLogin($body, $accept_language)
 
 User SSO login
 
-User Signe sign-on login to external application. In this case it is necessary cary SSO token from CareCloud to login user.
+User Signe sign-on login to external application. In this case it is necessary cary SSO token from CareCloud to login user.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
@@ -295,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170**](../Model/InlineResponse200170.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171**](../Model/InlineResponse200171.md)
 
 ### Authorization
 
@@ -309,20 +297,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserVerifyAuthToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168 postUserVerifyAuthToken($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169 postUserVerifyAuthToken($body)
 
 Verify user auth token
 
-Verification of the user auth token.
+Verification of the user auth token.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
     // Configure HTTP bearer authorization: bearerAuth
     $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -353,11 +337,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168**](../Model/InlineResponse200168.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169**](../Model/InlineResponse200169.md)
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
