@@ -242,7 +242,7 @@ void (empty response body)
 
 Send email for set up of the new customer password
 
-Send email, that contains link to set up a new customer password.<br/> ⚠️ Endpoint is available only in Customer interface.<br/>
+Send email, that contains link to set up a new customer password.<br/> The use case [Forgotten password](https://www.crmcarecloud.com/build-a-mobile-app/) shows how to use this action method.<br/> ⚠️ Endpoint is available only in Customer interface.<br/> ⚠️ An extra setup of event type in CareCloud could be necessary to make this method work correctly. If so, don't hesitate to get in touch with the CareCloud administrator in your organization.<br/>
 
 ### Example
 ```php

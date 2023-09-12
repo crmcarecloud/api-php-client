@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBookings**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002 getBookings($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002 getBookings($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $booking_statuses, $add_booking_items)
 
 Get all bookings
 
@@ -150,11 +150,12 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
-$booking_status = "booking_status_example"; // string | Current status of the booking from resource [booking-statuses](#tag/Booking-statuses).
+$booking_status = "booking_status_example"; // string | This query parameter is deprecated, please use parameter `booking_statuses`.
+$booking_statuses = array("booking_statuses_example"); // string[] | List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses).
 $add_booking_items = "none"; // string | Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items*
 
 try {
-    $result = $apiInstance->getBookings($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items);
+    $result = $apiInstance->getBookings($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $booking_statuses, $add_booking_items);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingsApi->getBookings: ', $e->getMessage(), PHP_EOL;
@@ -172,7 +173,8 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
- **booking_status** | **string**| Current status of the booking from resource [booking-statuses](#tag/Booking-statuses). | [optional]
+ **booking_status** | **string**| This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. | [optional]
+ **booking_statuses** | [**string[]**](../Model/string.md)| List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). | [optional]
  **add_booking_items** | **string**| Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* | [optional] [default to none]
 
 ### Return type

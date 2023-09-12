@@ -708,16 +708,17 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
+     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002
      */
-    public function getBookings($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
+    public function getBookings($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $booking_statuses = null, $add_booking_items = 'none')
     {
-        list($response) = $this->getBookingsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items);
+        list($response) = $this->getBookingsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $booking_statuses, $add_booking_items);
         return $response;
     }
 
@@ -732,17 +733,18 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
+     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBookingsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
+    public function getBookingsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $booking_statuses = null, $add_booking_items = 'none')
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002';
-        $request = $this->getBookingsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items);
+        $request = $this->getBookingsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $booking_statuses, $add_booking_items);
 
         try {
             $options = $this->createHttpClientOption();
@@ -862,15 +864,16 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
+     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBookingsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
+    public function getBookingsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $booking_statuses = null, $add_booking_items = 'none')
     {
-        return $this->getBookingsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items)
+        return $this->getBookingsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $booking_statuses, $add_booking_items)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -889,16 +892,17 @@ class BookingsApi
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
-     * @param  string|null $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string|null $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
+     * @param  string[]|null $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
      * @param  string|null $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBookingsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
+    public function getBookingsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $booking_statuses = null, $add_booking_items = 'none')
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2002';
-        $request = $this->getBookingsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $add_booking_items);
+        $request = $this->getBookingsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $booking_status, $booking_statuses, $add_booking_items);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -946,13 +950,14 @@ class BookingsApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $booking_status Current status of the booking from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
+     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getBookingsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $add_booking_items = 'none')
+    protected function getBookingsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $booking_status = null, $booking_statuses = null, $add_booking_items = 'none')
     {
 
         $resourcePath = '/bookings';
@@ -985,6 +990,13 @@ class BookingsApi
         // query params
         if ($booking_status !== null) {
             $queryParams['booking_status'] = ObjectSerializer::toQueryValue($booking_status, null);
+        }
+        // query params
+        if (is_array($booking_statuses)) {
+            $booking_statuses = ObjectSerializer::serializeCollection($booking_statuses, 'multi', true);
+        }
+        if ($booking_statuses !== null) {
+            $queryParams['booking_statuses'] = ObjectSerializer::toQueryValue($booking_statuses, null);
         }
         // query params
         if ($add_booking_items !== null) {

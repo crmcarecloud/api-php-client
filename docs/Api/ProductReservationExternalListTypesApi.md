@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservationExternalListTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110 getProductReservationExternalListTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110 getProductReservationExternalListTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all product reservation external list types
 
@@ -90,9 +90,10 @@ $count = 100; // int | The number of records to return.
 $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
+$name = "name_example"; // string | Name of the External list type
 
 try {
-    $result = $apiInstance->getProductReservationExternalListTypes($accept_language, $count, $offset, $sort_field, $sort_direction);
+    $result = $apiInstance->getProductReservationExternalListTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductReservationExternalListTypesApi->getProductReservationExternalListTypes: ', $e->getMessage(), PHP_EOL;
@@ -109,6 +110,7 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
+ **name** | **string**| Name of the External list type | [optional]
 
 ### Return type
 
