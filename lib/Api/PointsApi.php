@@ -385,6 +385,10 @@ class PointsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -762,6 +766,10 @@ class PointsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -1185,6 +1193,10 @@ class PointsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -1501,6 +1513,10 @@ class PointsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -1817,6 +1833,10 @@ class PointsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -2096,6 +2116,10 @@ class PointsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
