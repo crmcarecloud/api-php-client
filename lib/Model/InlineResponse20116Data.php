@@ -56,7 +56,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'event_id' => 'string'    ];
+        'point_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +64,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'event_id' => null    ];
+        'point_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +93,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_id' => 'event_id'    ];
+        'point_id' => 'point_id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +101,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'event_id' => 'setEventId'    ];
+        'point_id' => 'setPointId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +109,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'event_id' => 'getEventId'    ];
+        'point_id' => 'getPointId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +169,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['event_id'] = isset($data['event_id']) ? $data['event_id'] : null;
+        $this->container['point_id'] = isset($data['point_id']) ? $data['point_id'] : null;
     }
 
     /**
@@ -197,25 +197,25 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets event_id
+     * Gets point_id
      *
      * @return string
      */
-    public function getEventId()
+    public function getPointId()
     {
-        return $this->container['event_id'];
+        return $this->container['point_id'];
     }
 
     /**
-     * Sets event_id
+     * Sets point_id
      *
-     * @param string $event_id The unique ID of the point record.
+     * @param string $point_id The unique ID of the point record.
      *
      * @return $this
      */
-    public function setEventId($event_id)
+    public function setPointId($point_id)
     {
-        $this->container['event_id'] = $event_id;
+        $this->container['point_id'] = $point_id;
 
         return $this;
     }

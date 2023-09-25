@@ -385,6 +385,10 @@ class RewardsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -401,7 +405,7 @@ class RewardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -775,7 +779,11 @@ class RewardsApi
         }
         // query params
         if (is_array($customer_type_id)) {
-            $customer_type_id = ObjectSerializer::serializeCollection($customer_type_id, 'multi', true);
+            $queryParams['customer_type_id'] = $customer_type_id;
+        } else {
+            if ($customer_type_id !== null) {
+                $queryParams['customer_type_id'] = ObjectSerializer::toQueryValue($customer_type_id, null);
+            }
         }
         if ($customer_type_id !== null) {
             $queryParams['customer_type_id'] = ObjectSerializer::toQueryValue($customer_type_id, null);
@@ -786,7 +794,11 @@ class RewardsApi
         }
         // query params
         if (is_array($tag_ids)) {
-            $tag_ids = ObjectSerializer::serializeCollection($tag_ids, 'multi', true);
+            $queryParams['tag_ids'] = $tag_ids;
+        } else {
+            if ($tag_ids !== null) {
+                $queryParams['tag_ids'] = ObjectSerializer::toQueryValue($tag_ids, null);
+            }
         }
         if ($tag_ids !== null) {
             $queryParams['tag_ids'] = ObjectSerializer::toQueryValue($tag_ids, null);
@@ -849,6 +861,10 @@ class RewardsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -865,7 +881,7 @@ class RewardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1209,6 +1225,10 @@ class RewardsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -1225,7 +1245,7 @@ class RewardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1569,6 +1589,10 @@ class RewardsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -1585,7 +1609,7 @@ class RewardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1929,6 +1953,10 @@ class RewardsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -1945,7 +1973,7 @@ class RewardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -2298,6 +2326,10 @@ class RewardsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -2314,7 +2346,7 @@ class RewardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -2657,6 +2689,10 @@ class RewardsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -2673,7 +2709,7 @@ class RewardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -3035,6 +3071,10 @@ class RewardsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -3051,7 +3091,7 @@ class RewardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -3370,6 +3410,10 @@ class RewardsApi
             }
         }
 
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
         // this endpoint requires Bearer token
         if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
             $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
@@ -3386,7 +3430,7 @@ class RewardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
