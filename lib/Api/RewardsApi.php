@@ -785,9 +785,6 @@ class RewardsApi
                 $queryParams['customer_type_id'] = ObjectSerializer::toQueryValue($customer_type_id, null);
             }
         }
-        if ($customer_type_id !== null) {
-            $queryParams['customer_type_id'] = ObjectSerializer::toQueryValue($customer_type_id, null);
-        }
         // query params
         if ($without_stores !== null) {
             $queryParams['without_stores'] = ObjectSerializer::toQueryValue($without_stores, null);
@@ -799,9 +796,6 @@ class RewardsApi
             if ($tag_ids !== null) {
                 $queryParams['tag_ids'] = ObjectSerializer::toQueryValue($tag_ids, null);
             }
-        }
-        if ($tag_ids !== null) {
-            $queryParams['tag_ids'] = ObjectSerializer::toQueryValue($tag_ids, null);
         }
         // query params
         if ($partner_id !== null) {

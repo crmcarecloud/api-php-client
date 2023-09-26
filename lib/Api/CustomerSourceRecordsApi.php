@@ -392,9 +392,6 @@ class CustomerSourceRecordsApi
                 $queryParams['external_ids'] = ObjectSerializer::toQueryValue($external_ids, null);
             }
         }
-        if ($external_ids !== null) {
-            $queryParams['external_ids'] = ObjectSerializer::toQueryValue($external_ids, null);
-        }
         // header params
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);

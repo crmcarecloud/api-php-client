@@ -1375,9 +1375,6 @@ class SegmentsApi
                 $queryParams['segment_group_ids'] = ObjectSerializer::toQueryValue($segment_group_ids, null);
             }
         }
-        if ($segment_group_ids !== null) {
-            $queryParams['segment_group_ids'] = ObjectSerializer::toQueryValue($segment_group_ids, null);
-        }
         // header params
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);

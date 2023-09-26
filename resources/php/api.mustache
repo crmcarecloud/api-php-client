@@ -364,9 +364,11 @@ use {{invokerPackage}}\ObjectSerializer;
             }
         }
         {{/collectionFormat}}
+        {{^collectionFormat}}
         if (${{paramName}} !== null) {
             $queryParams['{{baseName}}'] = ObjectSerializer::toQueryValue(${{paramName}}, {{#dataFormat}}'{{{dataFormat}}}'{{/dataFormat}}{{^dataFormat}}null{{/dataFormat}});
         }
+        {{/collectionFormat}}
         {{/queryParams}}
         {{#headerParams}}
         // header params

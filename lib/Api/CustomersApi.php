@@ -2006,9 +2006,6 @@ class CustomersApi
                 $queryParams['email_list'] = ObjectSerializer::toQueryValue($email_list, null);
             }
         }
-        if ($email_list !== null) {
-            $queryParams['email_list'] = ObjectSerializer::toQueryValue($email_list, null);
-        }
         // query params
         if (is_array($customer_ids)) {
             $queryParams['customer_ids'] = $customer_ids;
@@ -2016,9 +2013,6 @@ class CustomersApi
             if ($customer_ids !== null) {
                 $queryParams['customer_ids'] = ObjectSerializer::toQueryValue($customer_ids, null);
             }
-        }
-        if ($customer_ids !== null) {
-            $queryParams['customer_ids'] = ObjectSerializer::toQueryValue($customer_ids, null);
         }
         // query params
         if ($customer_short_salutation !== null) {
@@ -3139,9 +3133,6 @@ class CustomersApi
             if ($card_number_list !== null) {
                 $queryParams['card_number_list'] = ObjectSerializer::toQueryValue($card_number_list, null);
             }
-        }
-        if ($card_number_list !== null) {
-            $queryParams['card_number_list'] = ObjectSerializer::toQueryValue($card_number_list, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -6897,9 +6888,6 @@ class CustomersApi
                 $queryParams['customer_type_id'] = ObjectSerializer::toQueryValue($customer_type_id, null);
             }
         }
-        if ($customer_type_id !== null) {
-            $queryParams['customer_type_id'] = ObjectSerializer::toQueryValue($customer_type_id, null);
-        }
         // query params
         if ($without_stores !== null) {
             $queryParams['without_stores'] = ObjectSerializer::toQueryValue($without_stores, null);
@@ -6911,9 +6899,6 @@ class CustomersApi
             if ($tag_ids !== null) {
                 $queryParams['tag_ids'] = ObjectSerializer::toQueryValue($tag_ids, null);
             }
-        }
-        if ($tag_ids !== null) {
-            $queryParams['tag_ids'] = ObjectSerializer::toQueryValue($tag_ids, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -7255,9 +7240,6 @@ class CustomersApi
             if ($segment_group_ids !== null) {
                 $queryParams['segment_group_ids'] = ObjectSerializer::toQueryValue($segment_group_ids, null);
             }
-        }
-        if ($segment_group_ids !== null) {
-            $queryParams['segment_group_ids'] = ObjectSerializer::toQueryValue($segment_group_ids, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -7653,9 +7635,6 @@ class CustomersApi
             if ($external_ids !== null) {
                 $queryParams['external_ids'] = ObjectSerializer::toQueryValue($external_ids, null);
             }
-        }
-        if ($external_ids !== null) {
-            $queryParams['external_ids'] = ObjectSerializer::toQueryValue($external_ids, null);
         }
         // header params
         if ($accept_language !== null) {
