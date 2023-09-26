@@ -405,7 +405,7 @@ class CardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -732,7 +732,11 @@ class CardsApi
         }
         // query params
         if (is_array($card_number_list)) {
-            $card_number_list = ObjectSerializer::serializeCollection($card_number_list, 'multi', true);
+            $queryParams['card_number_list'] = $card_number_list;
+        } else {
+            if ($card_number_list !== null) {
+                $queryParams['card_number_list'] = ObjectSerializer::toQueryValue($card_number_list, null);
+            }
         }
         if ($card_number_list !== null) {
             $queryParams['card_number_list'] = ObjectSerializer::toQueryValue($card_number_list, null);
@@ -807,7 +811,7 @@ class CardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1127,7 +1131,7 @@ class CardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1410,7 +1414,7 @@ class CardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1730,7 +1734,7 @@ class CardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -2050,7 +2054,7 @@ class CardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -2352,7 +2356,7 @@ class CardsApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             'PUT',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),

@@ -327,4 +327,50 @@ class ObjectSerializer
             return $instance;
         }
     }
+
+    /**
+    * Build custom query, optimized for multidimensional array
+    *
+    * @param  array $params query params
+    * @param  string $parentKey key for parent param in case of mutlidimensional array
+    *
+    * @return string built query
+    */
+    public static function customBuildQuery(array $params, $parentKey = '')
+    {
+        $parts = [];
+
+        foreach ($params as $key => $value) {
+            $currentKey = $parentKey ? $parentKey . '[' . $key . ']' : $key;
+            if (is_array($value) && self::isMultiDimensional($value)) {
+                $parts[] = self::customBuildQuery($value, $currentKey);
+            } elseif (is_array($value)) {
+                foreach ($value as $val) {
+                    $parts[] = sprintf('%s[]=%s', $currentKey, urlencode($val));
+                }
+            } else {
+                $parts[] = sprintf('%s=%s', $currentKey, urlencode($value));
+            }
+        }
+
+        return implode('&', $parts);
+    }
+
+    /**
+    * Checks for multidimensional arrays for customBuildQuery method
+    *
+    * @param  array $array array of params
+    *
+    * @return bool whether the array is multidimensional or not
+    */
+    public static function isMultiDimensional(array $array)
+    {
+        foreach ($array as $value) {
+            if (is_array($value)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

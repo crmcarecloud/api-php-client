@@ -357,7 +357,11 @@ use {{invokerPackage}}\ObjectSerializer;
         // query params
         {{#collectionFormat}}
         if (is_array(${{paramName}})) {
-            ${{paramName}} = ObjectSerializer::serializeCollection(${{paramName}}, '{{collectionFormat}}', true);
+            $queryParams['{{paramName}}'] = ${{paramName}};
+        } else {
+            if (${{paramName}} !== null) {
+                $queryParams['{{baseName}}'] = ObjectSerializer::toQueryValue(${{paramName}}, {{#dataFormat}}'{{{dataFormat}}}'{{/dataFormat}}{{^dataFormat}}null{{/dataFormat}});
+            }
         }
         {{/collectionFormat}}
         if (${{paramName}} !== null) {
@@ -492,7 +496,7 @@ use {{invokerPackage}}\ObjectSerializer;
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = ObjectSerializer::customBuildQuery($queryParams);
         return new Request(
             '{{httpMethod}}',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
