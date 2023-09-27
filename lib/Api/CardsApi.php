@@ -738,9 +738,6 @@ class CardsApi
                 $queryParams['card_number_list'] = ObjectSerializer::toQueryValue($card_number_list, null);
             }
         }
-        if ($card_number_list !== null) {
-            $queryParams['card_number_list'] = ObjectSerializer::toQueryValue($card_number_list, null);
-        }
         // header params
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);

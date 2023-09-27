@@ -1007,9 +1007,6 @@ class BookingsApi
                 $queryParams['booking_statuses'] = ObjectSerializer::toQueryValue($booking_statuses, null);
             }
         }
-        if ($booking_statuses !== null) {
-            $queryParams['booking_statuses'] = ObjectSerializer::toQueryValue($booking_statuses, null);
-        }
         // query params
         if ($add_booking_items !== null) {
             $queryParams['add_booking_items'] = ObjectSerializer::toQueryValue($add_booking_items, null);

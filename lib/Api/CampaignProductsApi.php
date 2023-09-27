@@ -1109,9 +1109,6 @@ class CampaignProductsApi
                 $queryParams['type_id'] = ObjectSerializer::toQueryValue($type_id, null);
             }
         }
-        if ($type_id !== null) {
-            $queryParams['type_id'] = ObjectSerializer::toQueryValue($type_id, null);
-        }
         // query params
         if ($store_id !== null) {
             $queryParams['store_id'] = ObjectSerializer::toQueryValue($store_id, null);
