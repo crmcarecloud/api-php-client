@@ -61,6 +61,7 @@ class Card implements ModelInterface, ArrayAccess
 'customer_id' => 'string',
 'card_type_id' => 'string',
 'card_number' => 'string',
+'secondary_card_number' => 'string',
 'valid_from' => 'string',
 'valid_to' => 'string',
 'store_id' => 'string',
@@ -77,6 +78,7 @@ class Card implements ModelInterface, ArrayAccess
 'customer_id' => null,
 'card_type_id' => null,
 'card_number' => null,
+'secondary_card_number' => null,
 'valid_from' => null,
 'valid_to' => null,
 'store_id' => null,
@@ -114,6 +116,7 @@ class Card implements ModelInterface, ArrayAccess
 'customer_id' => 'customer_id',
 'card_type_id' => 'card_type_id',
 'card_number' => 'card_number',
+'secondary_card_number' => 'secondary_card_number',
 'valid_from' => 'valid_from',
 'valid_to' => 'valid_to',
 'store_id' => 'store_id',
@@ -130,6 +133,7 @@ class Card implements ModelInterface, ArrayAccess
 'customer_id' => 'setCustomerId',
 'card_type_id' => 'setCardTypeId',
 'card_number' => 'setCardNumber',
+'secondary_card_number' => 'setSecondaryCardNumber',
 'valid_from' => 'setValidFrom',
 'valid_to' => 'setValidTo',
 'store_id' => 'setStoreId',
@@ -146,6 +150,7 @@ class Card implements ModelInterface, ArrayAccess
 'customer_id' => 'getCustomerId',
 'card_type_id' => 'getCardTypeId',
 'card_number' => 'getCardNumber',
+'secondary_card_number' => 'getSecondaryCardNumber',
 'valid_from' => 'getValidFrom',
 'valid_to' => 'getValidTo',
 'store_id' => 'getStoreId',
@@ -227,6 +232,7 @@ self::STATE_1,        ];
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
         $this->container['card_type_id'] = isset($data['card_type_id']) ? $data['card_type_id'] : null;
         $this->container['card_number'] = isset($data['card_number']) ? $data['card_number'] : null;
+        $this->container['secondary_card_number'] = isset($data['secondary_card_number']) ? $data['secondary_card_number'] : null;
         $this->container['valid_from'] = isset($data['valid_from']) ? $data['valid_from'] : null;
         $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
@@ -367,6 +373,30 @@ self::STATE_1,        ];
     public function setCardNumber($card_number)
     {
         $this->container['card_number'] = $card_number;
+
+        return $this;
+    }
+
+    /**
+      * Gets secondary_card_number
+     *
+     * @return string
+     */
+    public function getSecondaryCardNumber()
+    {
+        return $this->container['secondary_card_number'];
+    }
+
+    /**
+     * Sets secondary_card_number
+     *
+     * @param string $secondary_card_number Secondary card number represents alternative card number of the card.
+     *
+     * @return $this
+     */
+    public function setSecondaryCardNumber($secondary_card_number)
+    {
+        $this->container['secondary_card_number'] = $secondary_card_number;
 
         return $this;
     }

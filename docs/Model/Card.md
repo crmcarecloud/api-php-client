@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **customer_id** | **string** | The unique ID of the card holder. | [optional] 
 **card_type_id** | **string** | The unique ID of the card type. | 
 **card_number** | **string** | Card number. | 
+**secondary_card_number** | **string** | Secondary card number represents alternative card number of the card. | [optional] 
 **valid_from** | **string** | Card validity from. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **valid_to** | **string** | Card validity to. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **store_id** | **string** | The unique ID of the store, where the card was assigned to a customer. | [optional] 

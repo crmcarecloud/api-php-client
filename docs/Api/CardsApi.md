@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017 getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017 getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number)
 
 Get all cards
 
@@ -109,9 +109,10 @@ $card_type_id = "card_type_id_example"; // string | The unique ID of the card ty
 $state = 56; // int | State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $card_number_list = array("card_number_list_example"); // string[] | List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud.
+$search_secondary_card_number = true; // bool | Include secondary card numbers in search for filters `card_number` and `card_number_list`. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers*
 
 try {
-    $result = $apiInstance->getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list);
+    $result = $apiInstance->getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CardsApi->getCards: ', $e->getMessage(), PHP_EOL;
@@ -134,6 +135,7 @@ Name | Type | Description  | Notes
  **state** | **int**| State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **card_number_list** | [**string[]**](../Model/string.md)| List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. | [optional]
+ **search_secondary_card_number** | **bool**| Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* | [optional]
 
 ### Return type
 

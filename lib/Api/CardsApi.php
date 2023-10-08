@@ -430,14 +430,15 @@ class CardsApi
      * @param  int $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  bool $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017
      */
-    public function getCards($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null)
+    public function getCards($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null, $search_secondary_card_number = null)
     {
-        list($response) = $this->getCardsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list);
+        list($response) = $this->getCardsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number);
         return $response;
     }
 
@@ -457,15 +458,16 @@ class CardsApi
      * @param  int $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  bool $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCardsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null)
+    public function getCardsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null, $search_secondary_card_number = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017';
-        $request = $this->getCardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list);
+        $request = $this->getCardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number);
 
         try {
             $options = $this->createHttpClientOption();
@@ -590,13 +592,14 @@ class CardsApi
      * @param  int $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  bool $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCardsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null)
+    public function getCardsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null, $search_secondary_card_number = null)
     {
-        return $this->getCardsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list)
+        return $this->getCardsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -620,14 +623,15 @@ class CardsApi
      * @param  int|null $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  string[]|null $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  bool|null $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCardsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null)
+    public function getCardsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null, $search_secondary_card_number = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017';
-        $request = $this->getCardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list);
+        $request = $this->getCardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -680,11 +684,12 @@ class CardsApi
      * @param  int $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  bool $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCardsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null)
+    protected function getCardsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null, $search_secondary_card_number = null)
     {
 
         $resourcePath = '/cards';
@@ -737,6 +742,10 @@ class CardsApi
             if ($card_number_list !== null) {
                 $queryParams['card_number_list'] = ObjectSerializer::toQueryValue($card_number_list, null);
             }
+        }
+        // query params
+        if ($search_secondary_card_number !== null) {
+            $queryParams['search_secondary_card_number'] = ObjectSerializer::toQueryValue($search_secondary_card_number, null);
         }
         // header params
         if ($accept_language !== null) {
