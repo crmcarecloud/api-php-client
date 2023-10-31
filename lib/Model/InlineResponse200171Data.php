@@ -221,7 +221,7 @@ class InlineResponse200171Data implements ModelInterface, ArrayAccess
     /**
      * Sets bearer_token
      *
-     * @param string $bearer_token Authentication bearer token for an user. Token can be used for authentication in REST API with Bearer Authentication (more information about it [here](#section/Authorization/bearerAuth))
+     * @param string $bearer_token Authentication bearer token for an user. Token can be used for authentication in REST API with Bearer Authentication (more information about it [here](#section/Authorization/bearerAuth)).
      *
      * @return $this
      */
@@ -245,7 +245,7 @@ class InlineResponse200171Data implements ModelInterface, ArrayAccess
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Date and time (local time zone of the project) of the token validity.  *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_to Date and time (local time zone of the project) of the token validity.   *(YYYY-MM-DD HH:MM:SS)*
      *
      * @return $this
      */

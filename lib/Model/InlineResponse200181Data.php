@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200153
+ * InlineResponse200181Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * InlineResponse200153 Class Doc Comment
+ * InlineResponse200181Data Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200153 implements ModelInterface, ArrayAccess
+class InlineResponse200181Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class InlineResponse200153 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_153';
+    protected static $swaggerModelName = 'inline_response_200_181_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,9 @@ class InlineResponse200153 implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153Data'    ];
+        'next_amount' => 'float',
+'next_date' => 'string',
+'current_month_amount' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -64,7 +66,9 @@ class InlineResponse200153 implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'data' => null    ];
+        'next_amount' => 'float',
+'next_date' => null,
+'current_month_amount' => 'float'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -93,7 +97,9 @@ class InlineResponse200153 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data'    ];
+        'next_amount' => 'next_amount',
+'next_date' => 'next_date',
+'current_month_amount' => 'current_month_amount'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -101,7 +107,9 @@ class InlineResponse200153 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData'    ];
+        'next_amount' => 'setNextAmount',
+'next_date' => 'setNextDate',
+'current_month_amount' => 'setCurrentMonthAmount'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -109,7 +117,9 @@ class InlineResponse200153 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData'    ];
+        'next_amount' => 'getNextAmount',
+'next_date' => 'getNextDate',
+'current_month_amount' => 'getCurrentMonthAmount'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -169,7 +179,9 @@ class InlineResponse200153 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['next_amount'] = isset($data['next_amount']) ? $data['next_amount'] : null;
+        $this->container['next_date'] = isset($data['next_date']) ? $data['next_date'] : null;
+        $this->container['current_month_amount'] = isset($data['current_month_amount']) ? $data['current_month_amount'] : null;
     }
 
     /**
@@ -197,25 +209,73 @@ class InlineResponse200153 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets data
+     * Gets next_amount
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153Data
+     * @return float
      */
-    public function getData()
+    public function getNextAmount()
     {
-        return $this->container['data'];
+        return $this->container['next_amount'];
     }
 
     /**
-     * Sets data
+     * Sets next_amount
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200153Data $data data
+     * @param float $next_amount Date (ISO 8601) when first points will expire.
      *
      * @return $this
      */
-    public function setData($data)
+    public function setNextAmount($next_amount)
     {
-        $this->container['data'] = $data;
+        $this->container['next_amount'] = $next_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_date
+     *
+     * @return string
+     */
+    public function getNextDate()
+    {
+        return $this->container['next_date'];
+    }
+
+    /**
+     * Sets next_date
+     *
+     * @param string $next_date Amount of redeemed points in time interval. *(YYYY-MM-DD)*
+     *
+     * @return $this
+     */
+    public function setNextDate($next_date)
+    {
+        $this->container['next_date'] = $next_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_month_amount
+     *
+     * @return float
+     */
+    public function getCurrentMonthAmount()
+    {
+        return $this->container['current_month_amount'];
+    }
+
+    /**
+     * Sets current_month_amount
+     *
+     * @param float $current_month_amount Amount of points that will expire in current month.
+     *
+     * @return $this
+     */
+    public function setCurrentMonthAmount($current_month_amount)
+    {
+        $this->container['current_month_amount'] = $current_month_amount;
 
         return $this;
     }

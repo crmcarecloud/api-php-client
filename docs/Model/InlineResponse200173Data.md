@@ -3,9 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**next_amount** | **float** | Date (ISO 8601) when first points will expire | [optional] 
-**next_date** | **string** | Amount of redeemed points in time interval *(YYYY-MM-DD)* | [optional] 
-**current_month_amount** | **float** | Amount of points that will expire in current month | [optional] 
+**user_roles** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]**](UserRole.md) | Array of user roles. | [optional] 
+**total_items** | **int** | The number of all found user roles. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

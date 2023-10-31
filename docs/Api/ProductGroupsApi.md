@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id)
 
 Get all product groups
 
@@ -102,9 +102,10 @@ $sort_direction = "sort_direction_example"; // string | Direction of sorting the
 $name = "name_example"; // string | Search record by name or a part of the name.
 $store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
 $code = "code_example"; // string | Code of the product group.
+$external_id = "external_id_example"; // string | The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn't need to be necessary unique. Usage of other parameter could be required to return more specific results.
 
 try {
-    $result = $apiInstance->getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code);
+    $result = $apiInstance->getProductGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductGroupsApi->getProductGroups: ', $e->getMessage(), PHP_EOL;
@@ -124,6 +125,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Search record by name or a part of the name. | [optional]
  **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
  **code** | **string**| Code of the product group. | [optional]
+ **external_id** | **string**| The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. | [optional]
 
 ### Return type
 

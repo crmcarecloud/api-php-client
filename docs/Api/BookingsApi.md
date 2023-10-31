@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 Get information about booking busy times
 
-The action method provides data on the busiest times of bookings in a period. The period can change depending on the parameters set up.
+The action method provides data on the busiest times of bookings in a period. The period can change depending on the parameters set up. The chart contains time intervals on the X axis and Percentage information about reserved time slots (70% of slots for the time is reserved) on the Y axis.
 
 ### Example
 ```php

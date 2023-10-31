@@ -378,7 +378,7 @@ self::STATE_1,        ];
     }
 
     /**
-      * Gets secondary_card_number
+     * Gets secondary_card_number
      *
      * @return string
      */

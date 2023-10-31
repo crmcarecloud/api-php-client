@@ -427,14 +427,15 @@ class ProductGroupsApi
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $code Code of the product group. (optional)
+     * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103
      */
-    public function getProductGroups($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null)
+    public function getProductGroups($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
     {
-        list($response) = $this->getProductGroupsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code);
+        list($response) = $this->getProductGroupsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id);
         return $response;
     }
 
@@ -451,15 +452,16 @@ class ProductGroupsApi
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $code Code of the product group. (optional)
+     * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductGroupsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null)
+    public function getProductGroupsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103';
-        $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code);
+        $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -581,13 +583,14 @@ class ProductGroupsApi
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $code Code of the product group. (optional)
+     * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductGroupsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null)
+    public function getProductGroupsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
     {
-        return $this->getProductGroupsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code)
+        return $this->getProductGroupsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -608,14 +611,15 @@ class ProductGroupsApi
      * @param  string|null $name Search record by name or a part of the name. (optional)
      * @param  string|null $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string|null $code Code of the product group. (optional)
+     * @param  string|null $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductGroupsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null)
+    public function getProductGroupsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103';
-        $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code);
+        $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -665,11 +669,12 @@ class ProductGroupsApi
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $code Code of the product group. (optional)
+     * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductGroupsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null)
+    protected function getProductGroupsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
     {
 
         $resourcePath = '/product-groups';
@@ -706,6 +711,10 @@ class ProductGroupsApi
         // query params
         if ($code !== null) {
             $queryParams['code'] = ObjectSerializer::toQueryValue($code, null);
+        }
+        // query params
+        if ($external_id !== null) {
+            $queryParams['external_id'] = ObjectSerializer::toQueryValue($external_id, null);
         }
         // header params
         if ($accept_language !== null) {

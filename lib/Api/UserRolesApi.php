@@ -96,7 +96,7 @@ class UserRolesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174
      */
     public function getUserRole($user_role_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class UserRolesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserRoleWithHttpInfo($user_role_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174';
         $request = $this->getUserRoleRequest($user_role_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class UserRolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class UserRolesApi
      */
     public function getUserRoleAsyncWithHttpInfo($user_role_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174';
         $request = $this->getUserRoleRequest($user_role_id, $accept_language);
 
         return $this->client
@@ -427,7 +427,7 @@ class UserRolesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173
      */
     public function getUserRoles($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -448,11 +448,11 @@ class UserRolesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserRolesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
         $request = $this->getUserRolesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -504,7 +504,7 @@ class UserRolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -602,7 +602,7 @@ class UserRolesApi
      */
     public function getUserRolesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
         $request = $this->getUserRolesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
