@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getPartnerProperty**](PartnerPropertiesApi.md#getpartnerproperty) | **GET** /partner-properties/{partner_property_id} | Get a partner property
 
 # **getPartnerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090 getPartnerProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091 getPartnerProperties($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all partner properties
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090**](../Model/InlineResponse20090.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20091**](../Model/InlineResponse20091.md)
 
 ### Authorization
 

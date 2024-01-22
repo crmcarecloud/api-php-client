@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getStoreGroups**](StoreGroupsApi.md#getstoregroups) | **GET** /store-groups | Get all store groups
 
 # **getStoreGroup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151 getStoreGroup($store_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152 getStoreGroup($store_group_id, $accept_language)
 
 Get a store group
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151**](../Model/InlineResponse200151.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152**](../Model/InlineResponse200152.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150 getStoreGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151 getStoreGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all store groups
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150**](../Model/InlineResponse200150.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151**](../Model/InlineResponse200151.md)
 
 ### Authorization
 

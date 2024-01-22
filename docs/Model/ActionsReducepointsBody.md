@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **float** | Number of redeemed points. | 
 **customer_id** | **string** | The unique ID of the customer. | 
-**partner_id** | **string** | The unique ID of the partner. | [optional] 
+**partner_id** | **string** | The unique ID of the partner. | 
 **point_type_id** | **string** | The unique ID of the point type. If the parameter is not set, a default point type is set. | [optional] 
 **note** | **string** | Note for the new point record. | [optional] 
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getSubPartnerProperties**](PartnersApi.md#getsubpartnerproperties) | **GET** /partners/{partner_id}/property-records | Get a collection of property records
 
 # **getPartner**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088 getPartner($partner_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089 getPartner($partner_id, $accept_language)
 
 Get a partner
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088**](../Model/InlineResponse20088.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPartners**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087 getPartners($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088 getPartners($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all partners
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20087**](../Model/InlineResponse20087.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088**](../Model/InlineResponse20088.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubPartnerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089 getSubPartnerProperties($partner_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090 getSubPartnerProperties($partner_id, $accept_language)
 
 Get a collection of property records
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20090**](../Model/InlineResponse20090.md)
 
 ### Authorization
 

@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubBookingTicketsTimeSlots**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006 getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006 getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value, $customer_id)
 
 Get a collection time slots depends on booking ticket
 
@@ -183,9 +183,10 @@ $time_from = "time_from_example"; // string | Filter results on the start of the
 $time_to = "time_to_example"; // string | Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)*
 $booking_ticket_property_id = "booking_ticket_property_id_example"; // string | Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request.
 $booking_ticket_property_value = "booking_ticket_property_value_example"; // string | Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request.
+$customer_id = "customer_id_example"; // string | The unique ID of the customer.
 
 try {
-    $result = $apiInstance->getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value);
+    $result = $apiInstance->getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value, $customer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BookingTicketsApi->getSubBookingTicketsTimeSlots: ', $e->getMessage(), PHP_EOL;
@@ -208,6 +209,7 @@ Name | Type | Description  | Notes
  **time_to** | **string**| Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **booking_ticket_property_id** | **string**| Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. | [optional]
  **booking_ticket_property_value** | **string**| Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. | [optional]
+ **customer_id** | **string**| The unique ID of the customer. | [optional]
 
 ### Return type
 

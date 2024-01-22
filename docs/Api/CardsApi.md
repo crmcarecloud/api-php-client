@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**postBatchCards**](CardsApi.md#postbatchcards) | **POST** /cards/batch | Create a batch of cards
 [**postCard**](CardsApi.md#postcard) | **POST** /cards | Create a card
 [**postGenerateDigitalCard**](CardsApi.md#postgeneratedigitalcard) | **POST** /cards/actions/generate-digital-card-file | Generate virtual card file
+[**postValidateFreeCard**](CardsApi.md#postvalidatefreecard) | **POST** /cards/actions/validate-free-card | Validate free card
 [**putCard**](CardsApi.md#putcard) | **PUT** /cards/{card_id} | Update a card
 
 # **getCard**
@@ -157,7 +158,7 @@ Name | Type | Description  | Notes
 
 Assign free card
 
-Assign a free card in order to the customer.  <p class=\"warning\">⚠️ Action method is available only in Enterprise interface.</p>
+Assign a free card in order to the customer.
 
 ### Example
 ```php
@@ -332,11 +333,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postGenerateDigitalCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020 postGenerateDigitalCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021 postGenerateDigitalCard($body, $accept_language)
 
 Generate virtual card file
 
-Generate file with virtual card. File can be generated as a PNG file or file for Apple Wallet.
+Generate file with virtual card. File can be generated as a PNG file (QR code or Barcode) or file for Apple Wallet.
 
 ### Example
 ```php
@@ -374,6 +375,66 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratedigitalcardfileBody**](../Model/ActionsGeneratedigitalcardfileBody.md)|  |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postValidateFreeCard**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020 postValidateFreeCard($body, $accept_language)
+
+Validate free card
+
+Method validates if a card is free to use(it is not blocked, used by somebody else or even not exists).
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsValidatefreecardBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsValidatefreecardBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->postValidateFreeCard($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CardsApi->postValidateFreeCard: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsValidatefreecardBody**](../Model/ActionsValidatefreecardBody.md)|  |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type

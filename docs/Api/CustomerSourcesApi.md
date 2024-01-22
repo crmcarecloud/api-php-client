@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCustomerSources**](CustomerSourcesApi.md#getcustomersources) | **GET** /customer-sources | Get customer sources
 
 # **getCustomerSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 getCustomerSource($customer_source_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064 getCustomerSource($customer_source_id, $accept_language)
 
 Detail of a customer source
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerSources**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062 getCustomerSources($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_source_text_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 getCustomerSources($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_source_text_id)
 
 Get customer sources
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
 
 ### Authorization
 

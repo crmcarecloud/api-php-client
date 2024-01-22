@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **salutation** | **string** | Customer&#x27;s salutation. If it is not set in POST or PUT calls, it will be generated automatically. | [optional] 
-**gender** | **int** | Gender of the customer *Possible values: 1 - male, 2 - female* | [optional] 
+**gender** | **int** | Gender of the customer *Possible values: 1 - Male / 2 - Female / 3 - Miss / 4 - Private / 5 - Other * | [optional] 
 **first_name** | **string** | First name of the customer. | [optional] 
 **last_name** | **string** | Last name of the customer. | [optional] 
 **pre_nominals** | **string** | Academic degrees, academic titles, other titles of customer placed before name. | [optional] 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getMessageTemplates**](MessageTemplatesApi.md#getmessagetemplates) | **GET** /message-templates | Get all message templates
 
 # **getMessageTemplate**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082 getMessageTemplate($message_template_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083 getMessageTemplate($message_template_id, $accept_language)
 
 Get a message template
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMessageTemplates**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081 getMessageTemplates($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $communication_channel_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082 getMessageTemplates($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $communication_channel_id)
 
 Get all message templates
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
 
 ### Authorization
 

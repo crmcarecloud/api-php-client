@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**stores** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]**](Store.md) | List of the all stores where customer can apply reward. | [optional] 
-**total_items** | **int** | The number of all found stores. | [optional] 
+**product_brands** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[]**](ProductBrand.md) | List of product brands tied to the reward. | [optional] 
+**total_items** | **int** | Number of all found product brands. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

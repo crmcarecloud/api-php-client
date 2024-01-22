@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **created_at** | **string** | Date and time of the event. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **secondary_external_id** | **string** | Additional external ID of the event. It&#x27;s used in case, when differentiation of external_id needed. | [optional] 
 **state** | **int** | State of the event type. *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 
+**property_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | Additional properties of the event. This parameter contain values only if &#x60;include_property_records&#x60; is set to true. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

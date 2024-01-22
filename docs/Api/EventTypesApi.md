@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getSubEventTypeProperties**](EventTypesApi.md#getsubeventtypeproperties) | **GET** /event-types/{event_type_id}/event-properties | Get a collection of event type properties
 
 # **getEventType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073 getEventType($event_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074 getEventType($event_type_id, $accept_language)
 
 Get an event type
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEventTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072 getEventTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073 getEventTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all event types
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubEventTypeProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074 getSubEventTypeProperties($event_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075 getSubEventTypeProperties($event_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get a collection of event type properties
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
 
 ### Authorization
 

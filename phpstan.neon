@@ -12,3 +12,7 @@ parameters:
         -
             message: '#Static call to instance method stdClass::getAllowableEnumValues#'
             path: lib/ObjectSerializer.php
+        -
+            message: "#^Method CrmCareCloud\\\\Webservice\\\\RestApi\\\\Client\\\\Model\\\\ErrorProcessing\\:\\:getAllowableEnumValues\\(\\) should return array\\<string\\> but returns array\\<int, int\\>\\.$#"
+            count: 1
+            path: lib/Model/ErrorProcessing.php

@@ -5,6 +5,9 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCustomerSearch**](CustomersActionsApi.md#getcustomersearch) | **GET** /customers/actions/search-customers | Search customers
+[**postCustomerCancelPushNotifications**](CustomersActionsApi.md#postcustomercancelpushnotifications) | **POST** /customers/actions/cancel-push-notifications | Cancel the customer&#x27;s push notifications subscription from all devices if push token not specified.
+[**postCustomerNewslettersSignUp**](CustomersActionsApi.md#postcustomernewsletterssignup) | **POST** /customers/actions/newsletters-sign-up | Sign up for newsletters
+[**postCustomerSetPushNotifications**](CustomersActionsApi.md#postcustomersetpushnotifications) | **POST** /customers/actions/set-push-notifications | Set the customer&#x27;s push notifications
 [**postCustomerVerifyCredentials**](CustomersActionsApi.md#postcustomerverifycredentials) | **POST** /customers/actions/verify-credentials | Customer&#x27;s credentials verification
 [**postCustomerVerifySocialNetworkCredentials**](CustomersActionsApi.md#postcustomerverifysocialnetworkcredentials) | **POST** /customers/actions/verify-social-network-credentials | Social network credentials verification
 [**postCustomersSetStatusRecord**](CustomersActionsApi.md#postcustomerssetstatusrecord) | **POST** /customers/actions/set-status-record | Set a new customer status
@@ -13,7 +16,7 @@ Method | HTTP request | Description
 [**postSubCustomerSetPartners**](CustomersActionsApi.md#postsubcustomersetpartners) | **POST** /customers/actions/set-partners | Set one or multiple partners to the customer
 
 # **getCustomerSearch**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
 
 Search customers
 
@@ -67,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
 
 ### Authorization
 
@@ -76,6 +79,177 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postCustomerCancelPushNotifications**
+> postCustomerCancelPushNotifications($body)
+
+Cancel the customer's push notifications subscription from all devices if push token not specified.
+
+⚠️ The endpoint is available only in the Enterprise interface.<br/>
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersActionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCancelpushnotificationsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCancelpushnotificationsBody | 
+
+try {
+    $apiInstance->postCustomerCancelPushNotifications($body);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersActionsApi->postCustomerCancelPushNotifications: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsCancelpushnotificationsBody**](../Model/ActionsCancelpushnotificationsBody.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postCustomerNewslettersSignUp**
+> postCustomerNewslettersSignUp($body)
+
+Sign up for newsletters
+
+Method sign up a contact for the newsletter. The contact does not need to be an existing customer.  ⚠️ While use this method we strongly recommend you to verify a contact with Captcha before sending a request to CareCloud API
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersActionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsNewsletterssignupBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsNewsletterssignupBody | 
+
+try {
+    $apiInstance->postCustomerNewslettersSignUp($body);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersActionsApi->postCustomerNewslettersSignUp: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsNewsletterssignupBody**](../Model/ActionsNewsletterssignupBody.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postCustomerSetPushNotifications**
+> postCustomerSetPushNotifications($body)
+
+Set the customer's push notifications
+
+⚠️ The endpoint is available only in the Enterprise interface.<br/> ⚠️ Please make sure the ID of the device is unique. You will avoid problems with signing off other devices.<br/> Method will set up customer's push notifications to specified application and device.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersActionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSetpushnotificationsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSetpushnotificationsBody | 
+
+try {
+    $apiInstance->postCustomerSetPushNotifications($body);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomersActionsApi->postCustomerSetPushNotifications: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSetpushnotificationsBody**](../Model/ActionsSetpushnotificationsBody.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -197,7 +371,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersSetStatusRecord**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054 postCustomersSetStatusRecord($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055 postCustomersSetStatusRecord($body)
 
 Set a new customer status
 
@@ -241,7 +415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
 
 ### Authorization
 
@@ -312,7 +486,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersVerifyAuthToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053 postCustomersVerifyAuthToken($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054 postCustomersVerifyAuthToken($body)
 
 Verify auth token
 
@@ -356,7 +530,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
 
 ### Authorization
 

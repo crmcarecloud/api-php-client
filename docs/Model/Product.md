@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **plu_ids** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PluId[]**](PluId.md) | An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique ID of every product across all POS systems)). | [optional] 
 **product_group_id** | **string** | The unique ID of the product group. | [optional] 
 **product_brand_id** | **string** | The unique ID of the product brand. | [optional] 
-**price** | **float** | Price of the product | [optional] 
+**prices** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Price[]**](Price.md) |  | [optional] 
 **additional_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of additional properties. | [optional] 
 **image_urls** | **string[]** | A list of an image URLs. | [optional] 
 **last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 

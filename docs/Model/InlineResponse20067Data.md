@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**property_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of property records. | [optional] 
-**total_items** | **int** | The number of all found event property records. | [optional] 
+**events** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Event[]**](Event.md) | Collection of all events. | [optional] 
+**total_items** | **int** | The number of all found events. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

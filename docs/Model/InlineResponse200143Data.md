@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**distance** | **float** | Amount of kilometers that customer skied in the date range. | [optional] 
-**elevation** | **float** | Elevation gained during skiing in the date range in meters. | [optional] 
-**skier_days** | **int** | Number of days in the date range that a customer used his entrance ticket | [optional] 
-**ski_achievement_text_id** | **string** | It represents a ski achievement text ID gained by the customer. | [optional] 
+**active_entrances** | **int** | Amount of active entrances in date range. Active entrances can be used by customers in their validity range. | [optional] 
+**canceled_entrances** | **int** | Amount of canceled entrances in date range. Canceled entrances in production systems and in CareCloud. Customers cannot use them anymore. | [optional] 
+**deactivated_entrances** | **int** | Amount of deactivated entrances in date range. Entrances deactivated in CareCloud only. These entrances are usually not sent to production systems. Deactivation have been done in system CareCloud. | [optional] 
+**sold_entrances** | **int** | Amount of sold entrances in date range. Entrances deactivated in CareCloud only. These entrances are usually not sent to production systems. Deactivation have been done in system CareCloud. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

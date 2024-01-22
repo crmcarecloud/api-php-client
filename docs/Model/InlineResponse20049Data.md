@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**related_customers** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RelatedCustomer[]**](RelatedCustomer.md) | Collection of all related customers. | [optional] 
-**total_items** | **int** | The number of all found related customers. | [optional] 
+**customer_events** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Event[]**](Event.md) | Collection of all events. | [optional] 
+**total_items** | **int** | The number of all found events. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

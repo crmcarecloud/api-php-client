@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**postUserVerifyAuthToken**](UsersApi.md#postuserverifyauthtoken) | **POST** /users/actions/verify-auth-token | Verify user auth token
 
 # **getUser**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169 getUser($user_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170 getUser($user_id, $accept_language)
 
 Get information about a user
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169**](../Model/InlineResponse200169.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170**](../Model/InlineResponse200170.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168 getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169 getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name)
 
 Get all users
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168**](../Model/InlineResponse200168.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169**](../Model/InlineResponse200169.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171 postUserLogin($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172 postUserLogin($body, $accept_language)
 
 User login
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171**](../Model/InlineResponse200171.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172**](../Model/InlineResponse200172.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserSsoLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172 postUserSsoLogin($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173 postUserSsoLogin($body, $accept_language)
 
 User SSO login
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200172**](../Model/InlineResponse200172.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173**](../Model/InlineResponse200173.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserVerifyAuthToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170 postUserVerifyAuthToken($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171 postUserVerifyAuthToken($body)
 
 Verify user auth token
 
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170**](../Model/InlineResponse200170.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171**](../Model/InlineResponse200171.md)
 
 ### Authorization
 
