@@ -62,7 +62,7 @@ class Booking implements ModelInterface, ArrayAccess
         'booking_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\BookingItem[]',
         'booking_status' => 'string',
         'utm' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UTM',
-        'data' => 'OneOfBookingData',
+        'data' => 'mixed',
         'created_at' => 'string',
         'last_change' => 'string',
         'state' => 'int'
@@ -402,7 +402,7 @@ self::STATE_2,        ];
     /**
      * Gets data
      *
-     * @return OneOfBookingData
+     * @return mixed
      */
     public function getData()
     {
@@ -412,7 +412,7 @@ self::STATE_2,        ];
     /**
      * Sets data
      *
-     * @param OneOfBookingData $data Additional data of the booking. Serialized data in JSON.
+     * @param mixed $data Additional data of the booking. Serialized data in JSON.
      *
      * @return $this
      */

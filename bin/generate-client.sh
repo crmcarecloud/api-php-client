@@ -14,6 +14,7 @@ docker run --rm\
   -c /local/client-config.json
 
 docker run --rm -v $PROJECT_DIRECTORY:/local php-server:7.4-fpm sed -i -e 's/OneOfEventData/mixed/g' /local/lib/Model/Event.php
+docker run --rm -v $PROJECT_DIRECTORY:/local php-server:7.4-fpm sed -i -e 's/OneOfBookingData/mixed/g' /local/lib/Model/Booking.php
 docker run --rm -v $PROJECT_DIRECTORY:/local php-server:7.4-fpm sed -i -e 's/AllOfVoucherReward/\\CrmCareCloud\\Webservice\\RestApi\\Client\\Model\\AllOfVoucherReward/g' /local/lib/Model/Voucher.php
 docker run --rm -v $PROJECT_DIRECTORY:/local php-server:7.4-fpm sed -i -e 's/OneOfPropertyRecordPropertyValue/mixed/g' /local/lib/Model/PropertyRecord.php
 docker run --rm -v $PROJECT_DIRECTORY:/local php-server:7.4-fpm sed -i -E 's/(self::[0-9A-Za-z_]+)\.([0-9A-Za-z_]+)/\1_\2/g' /local/lib/Model/ActionsSendBody.php
