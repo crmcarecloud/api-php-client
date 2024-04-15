@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125 postToken($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20127 postToken($body, $accept_language)
 
 Create a token
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125**](../Model/InlineResponse20125.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20127**](../Model/InlineResponse20127.md)
 
 ### Authorization
 
@@ -320,7 +320,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenSocialLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postTokenSocialLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postTokenSocialLogin($body, $token_id, $accept_language)
 
 Login via social network
 
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
 
 ### Authorization
 

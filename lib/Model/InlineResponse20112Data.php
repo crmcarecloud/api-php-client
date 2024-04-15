@@ -56,7 +56,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'partner_record_id' => 'string'
+        'additional_address_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'partner_record_id' => null
+        'additional_address_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'partner_record_id' => 'partner_record_id'
+        'additional_address_id' => 'additional_address_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'partner_record_id' => 'setPartnerRecordId'
+        'additional_address_id' => 'setAdditionalAddressId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'partner_record_id' => 'getPartnerRecordId'
+        'additional_address_id' => 'getAdditionalAddressId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['partner_record_id'] = isset($data['partner_record_id']) ? $data['partner_record_id'] : null;
+        $this->container['additional_address_id'] = isset($data['additional_address_id']) ? $data['additional_address_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20112Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets partner_record_id
+     * Gets additional_address_id
      *
      * @return string
      */
-    public function getPartnerRecordId()
+    public function getAdditionalAddressId()
     {
-        return $this->container['partner_record_id'];
+        return $this->container['additional_address_id'];
     }
 
     /**
-     * Sets partner_record_id
+     * Sets additional_address_id
      *
-     * @param string $partner_record_id The unique ID of the partner record on the customer.
+     * @param string $additional_address_id The unique ID of the additional customer address.
      *
      * @return $this
      */
-    public function setPartnerRecordId($partner_record_id)
+    public function setAdditionalAddressId($additional_address_id)
     {
-        $this->container['partner_record_id'] = $partner_record_id;
+        $this->container['additional_address_id'] = $additional_address_id;
 
         return $this;
     }

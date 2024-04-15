@@ -56,7 +56,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'voucher_id' => 'string'
+        'product_reservation_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'voucher_id' => null
+        'product_reservation_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'voucher_id' => 'voucher_id'
+        'product_reservation_id' => 'product_reservation_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'voucher_id' => 'setVoucherId'
+        'product_reservation_id' => 'setProductReservationId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'voucher_id' => 'getVoucherId'
+        'product_reservation_id' => 'getProductReservationId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['voucher_id'] = isset($data['voucher_id']) ? $data['voucher_id'] : null;
+        $this->container['product_reservation_id'] = isset($data['product_reservation_id']) ? $data['product_reservation_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20119Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets voucher_id
+     * Gets product_reservation_id
      *
      * @return string
      */
-    public function getVoucherId()
+    public function getProductReservationId()
     {
-        return $this->container['voucher_id'];
+        return $this->container['product_reservation_id'];
     }
 
     /**
-     * Sets voucher_id
+     * Sets product_reservation_id
      *
-     * @param string $voucher_id The unique ID of the voucher.
+     * @param string $product_reservation_id The unique ID of the product reservation.
      *
      * @return $this
      */
-    public function setVoucherId($voucher_id)
+    public function setProductReservationId($product_reservation_id)
     {
-        $this->container['voucher_id'] = $voucher_id;
+        $this->container['product_reservation_id'] = $product_reservation_id;
 
         return $this;
     }

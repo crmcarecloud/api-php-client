@@ -56,7 +56,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'point_id' => 'string'
+        'order_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'point_id' => null
+        'order_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'point_id' => 'point_id'
+        'order_id' => 'order_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'point_id' => 'setPointId'
+        'order_id' => 'setOrderId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'point_id' => 'getPointId'
+        'order_id' => 'getOrderId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['point_id'] = isset($data['point_id']) ? $data['point_id'] : null;
+        $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20116Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets point_id
+     * Gets order_id
      *
      * @return string
      */
-    public function getPointId()
+    public function getOrderId()
     {
-        return $this->container['point_id'];
+        return $this->container['order_id'];
     }
 
     /**
-     * Sets point_id
+     * Sets order_id
      *
-     * @param string $point_id The unique ID of the point record.
+     * @param string $order_id The unique ID of the order.
      *
      * @return $this
      */
-    public function setPointId($point_id)
+    public function setOrderId($order_id)
     {
-        $this->container['point_id'] = $point_id;
+        $this->container['order_id'] = $order_id;
 
         return $this;
     }

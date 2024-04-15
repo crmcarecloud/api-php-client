@@ -1232,7 +1232,7 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118
      */
     public function postPointsAssign($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1250,11 +1250,11 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118, HTTP status code, HTTP response headers (array of strings)
      */
     public function postPointsAssignWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118';
         $request = $this->postPointsAssignRequest($body, $accept_language);
 
         try {
@@ -1306,7 +1306,7 @@ class PointsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1398,7 +1398,7 @@ class PointsApi
      */
     public function postPointsAssignAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118';
         $request = $this->postPointsAssignRequest($body, $accept_language);
 
         return $this->client
@@ -1552,7 +1552,7 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117
      */
     public function postPointsRedemption($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1570,11 +1570,11 @@ class PointsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117, HTTP status code, HTTP response headers (array of strings)
      */
     public function postPointsRedemptionWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117';
         $request = $this->postPointsRedemptionRequest($body, $accept_language);
 
         try {
@@ -1626,7 +1626,7 @@ class PointsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1718,7 +1718,7 @@ class PointsApi
      */
     public function postPointsRedemptionAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117';
         $request = $this->postPointsRedemptionRequest($body, $accept_language);
 
         return $this->client

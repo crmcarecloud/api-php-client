@@ -56,7 +56,7 @@ class InlineResponse20123Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'task_comment_id' => 'string'
+        'property_record_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20123Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'task_comment_id' => null
+        'property_record_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20123Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'task_comment_id' => 'task_comment_id'
+        'property_record_id' => 'property_record_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20123Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'task_comment_id' => 'setTaskCommentId'
+        'property_record_id' => 'setPropertyRecordId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20123Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'task_comment_id' => 'getTaskCommentId'
+        'property_record_id' => 'getPropertyRecordId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20123Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['task_comment_id'] = isset($data['task_comment_id']) ? $data['task_comment_id'] : null;
+        $this->container['property_record_id'] = isset($data['property_record_id']) ? $data['property_record_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20123Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets task_comment_id
+     * Gets property_record_id
      *
      * @return string
      */
-    public function getTaskCommentId()
+    public function getPropertyRecordId()
     {
-        return $this->container['task_comment_id'];
+        return $this->container['property_record_id'];
     }
 
     /**
-     * Sets task_comment_id
+     * Sets property_record_id
      *
-     * @param string $task_comment_id The unique ID of the task comment in CareCloud.
+     * @param string $property_record_id The unique ID of the property record.
      *
      * @return $this
      */
-    public function setTaskCommentId($task_comment_id)
+    public function setPropertyRecordId($property_record_id)
     {
-        $this->container['task_comment_id'] = $task_comment_id;
+        $this->container['property_record_id'] = $property_record_id;
 
         return $this;
     }

@@ -56,7 +56,7 @@ class InlineResponse20125Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'token_id' => 'string'
+        'task_comment_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20125Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'token_id' => null
+        'task_comment_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20125Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token_id' => 'token_id'
+        'task_comment_id' => 'task_comment_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20125Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token_id' => 'setTokenId'
+        'task_comment_id' => 'setTaskCommentId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20125Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token_id' => 'getTokenId'
+        'task_comment_id' => 'getTaskCommentId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20125Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['token_id'] = isset($data['token_id']) ? $data['token_id'] : null;
+        $this->container['task_comment_id'] = isset($data['task_comment_id']) ? $data['task_comment_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20125Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets token_id
+     * Gets task_comment_id
      *
      * @return string
      */
-    public function getTokenId()
+    public function getTaskCommentId()
     {
-        return $this->container['token_id'];
+        return $this->container['task_comment_id'];
     }
 
     /**
-     * Sets token_id
+     * Sets task_comment_id
      *
-     * @param string $token_id The client application token.
+     * @param string $task_comment_id The unique ID of the task comment in CareCloud.
      *
      * @return $this
      */
-    public function setTokenId($token_id)
+    public function setTaskCommentId($task_comment_id)
     {
-        $this->container['token_id'] = $token_id;
+        $this->container['task_comment_id'] = $task_comment_id;
 
         return $this;
     }

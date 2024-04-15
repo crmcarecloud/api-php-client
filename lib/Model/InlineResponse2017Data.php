@@ -56,7 +56,7 @@ class InlineResponse2017Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_source_record_id' => 'string'
+        'credit_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse2017Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_source_record_id' => null
+        'credit_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse2017Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_source_record_id' => 'customer_source_record_id'
+        'credit_id' => 'credit_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse2017Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_source_record_id' => 'setCustomerSourceRecordId'
+        'credit_id' => 'setCreditId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse2017Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_source_record_id' => 'getCustomerSourceRecordId'
+        'credit_id' => 'getCreditId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse2017Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_source_record_id'] = isset($data['customer_source_record_id']) ? $data['customer_source_record_id'] : null;
+        $this->container['credit_id'] = isset($data['credit_id']) ? $data['credit_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse2017Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_source_record_id
+     * Gets credit_id
      *
      * @return string
      */
-    public function getCustomerSourceRecordId()
+    public function getCreditId()
     {
-        return $this->container['customer_source_record_id'];
+        return $this->container['credit_id'];
     }
 
     /**
-     * Sets customer_source_record_id
+     * Sets credit_id
      *
-     * @param string $customer_source_record_id The unique ID of the customer source record.
+     * @param string $credit_id The unique ID of the credit record.
      *
      * @return $this
      */
-    public function setCustomerSourceRecordId($customer_source_record_id)
+    public function setCreditId($credit_id)
     {
-        $this->container['customer_source_record_id'] = $customer_source_record_id;
+        $this->container['credit_id'] = $credit_id;
 
         return $this;
     }

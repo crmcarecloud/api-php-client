@@ -56,7 +56,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'point_id' => 'string'
+        'event_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'point_id' => null
+        'event_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'point_id' => 'point_id'
+        'event_id' => 'event_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'point_id' => 'setPointId'
+        'event_id' => 'setEventId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'point_id' => 'getPointId'
+        'event_id' => 'getEventId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['point_id'] = isset($data['point_id']) ? $data['point_id'] : null;
+        $this->container['event_id'] = isset($data['event_id']) ? $data['event_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20115Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets point_id
+     * Gets event_id
      *
      * @return string
      */
-    public function getPointId()
+    public function getEventId()
     {
-        return $this->container['point_id'];
+        return $this->container['event_id'];
     }
 
     /**
-     * Sets point_id
+     * Sets event_id
      *
-     * @param string $point_id The unique ID of the point redemption.
+     * @param string $event_id The unique ID of the event.
      *
      * @return $this
      */
-    public function setPointId($point_id)
+    public function setEventId($event_id)
     {
-        $this->container['point_id'] = $point_id;
+        $this->container['event_id'] = $event_id;
 
         return $this;
     }

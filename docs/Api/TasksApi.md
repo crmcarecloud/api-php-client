@@ -797,7 +797,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTaskAssignee**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124 postTaskAssignee($body, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20126 postTaskAssignee($body, $task_id, $accept_language)
 
 Create a task assignee
 
@@ -845,7 +845,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124**](../Model/InlineResponse20124.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20126**](../Model/InlineResponse20126.md)
 
 ### Authorization
 
@@ -859,7 +859,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTaskComment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20123 postTaskComment($body, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125 postTaskComment($body, $task_id, $accept_language)
 
 Create a task comment
 
@@ -907,7 +907,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20123**](../Model/InlineResponse20123.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125**](../Model/InlineResponse20125.md)
 
 ### Authorization
 
@@ -921,7 +921,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTasks**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20122 postTasks($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124 postTasks($body, $accept_language)
 
 Create a task
 
@@ -967,7 +967,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20122**](../Model/InlineResponse20122.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124**](../Model/InlineResponse20124.md)
 
 ### Authorization
 

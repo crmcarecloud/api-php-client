@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postProductReservation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117 postProductReservation($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20119 postProductReservation($body, $accept_language)
 
 Create a reservation
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117**](../Model/InlineResponse20117.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20119**](../Model/InlineResponse20119.md)
 
 ### Authorization
 

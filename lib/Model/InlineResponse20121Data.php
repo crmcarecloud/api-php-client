@@ -56,7 +56,7 @@ class InlineResponse20121Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'property_record_id' => 'string'
+        'voucher_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20121Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'property_record_id' => null
+        'voucher_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20121Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'property_record_id' => 'property_record_id'
+        'voucher_id' => 'voucher_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20121Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'property_record_id' => 'setPropertyRecordId'
+        'voucher_id' => 'setVoucherId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20121Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'property_record_id' => 'getPropertyRecordId'
+        'voucher_id' => 'getVoucherId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20121Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['property_record_id'] = isset($data['property_record_id']) ? $data['property_record_id'] : null;
+        $this->container['voucher_id'] = isset($data['voucher_id']) ? $data['voucher_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20121Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets property_record_id
+     * Gets voucher_id
      *
      * @return string
      */
-    public function getPropertyRecordId()
+    public function getVoucherId()
     {
-        return $this->container['property_record_id'];
+        return $this->container['voucher_id'];
     }
 
     /**
-     * Sets property_record_id
+     * Sets voucher_id
      *
-     * @param string $property_record_id The unique ID of the property record.
+     * @param string $voucher_id The unique ID of the voucher.
      *
      * @return $this
      */
-    public function setPropertyRecordId($property_record_id)
+    public function setVoucherId($voucher_id)
     {
-        $this->container['property_record_id'] = $property_record_id;
+        $this->container['voucher_id'] = $voucher_id;
 
         return $this;
     }

@@ -56,7 +56,7 @@ class InlineResponse20117Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'product_reservation_id' => 'string'
+        'point_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20117Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'product_reservation_id' => null
+        'point_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20117Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_reservation_id' => 'product_reservation_id'
+        'point_id' => 'point_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20117Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_reservation_id' => 'setProductReservationId'
+        'point_id' => 'setPointId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20117Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_reservation_id' => 'getProductReservationId'
+        'point_id' => 'getPointId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20117Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_reservation_id'] = isset($data['product_reservation_id']) ? $data['product_reservation_id'] : null;
+        $this->container['point_id'] = isset($data['point_id']) ? $data['point_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20117Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets product_reservation_id
+     * Gets point_id
      *
      * @return string
      */
-    public function getProductReservationId()
+    public function getPointId()
     {
-        return $this->container['product_reservation_id'];
+        return $this->container['point_id'];
     }
 
     /**
-     * Sets product_reservation_id
+     * Sets point_id
      *
-     * @param string $product_reservation_id The unique ID of the product reservation.
+     * @param string $point_id The unique ID of the point redemption.
      *
      * @return $this
      */
-    public function setProductReservationId($product_reservation_id)
+    public function setPointId($point_id)
     {
-        $this->container['product_reservation_id'] = $product_reservation_id;
+        $this->container['point_id'] = $point_id;
 
         return $this;
     }

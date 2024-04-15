@@ -56,7 +56,7 @@ class InlineResponse2019Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'interest_record_id' => 'string'
+        'customer_source_record_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse2019Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'interest_record_id' => null
+        'customer_source_record_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse2019Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'interest_record_id' => 'interest_record_id'
+        'customer_source_record_id' => 'customer_source_record_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse2019Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'interest_record_id' => 'setInterestRecordId'
+        'customer_source_record_id' => 'setCustomerSourceRecordId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse2019Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'interest_record_id' => 'getInterestRecordId'
+        'customer_source_record_id' => 'getCustomerSourceRecordId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse2019Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['interest_record_id'] = isset($data['interest_record_id']) ? $data['interest_record_id'] : null;
+        $this->container['customer_source_record_id'] = isset($data['customer_source_record_id']) ? $data['customer_source_record_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse2019Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets interest_record_id
+     * Gets customer_source_record_id
      *
      * @return string
      */
-    public function getInterestRecordId()
+    public function getCustomerSourceRecordId()
     {
-        return $this->container['interest_record_id'];
+        return $this->container['customer_source_record_id'];
     }
 
     /**
-     * Sets interest_record_id
+     * Sets customer_source_record_id
      *
-     * @param string $interest_record_id The unique ID of the interest record.
+     * @param string $customer_source_record_id The unique ID of the customer source record.
      *
      * @return $this
      */
-    public function setInterestRecordId($interest_record_id)
+    public function setCustomerSourceRecordId($customer_source_record_id)
     {
-        $this->container['interest_record_id'] = $interest_record_id;
+        $this->container['customer_source_record_id'] = $customer_source_record_id;
 
         return $this;
     }

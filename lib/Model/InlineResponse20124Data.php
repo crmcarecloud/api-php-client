@@ -56,7 +56,7 @@ class InlineResponse20124Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'task_assignee_id' => 'string'
+        'task_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20124Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'task_assignee_id' => null
+        'task_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20124Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'task_assignee_id' => 'task_assignee_id'
+        'task_id' => 'task_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20124Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'task_assignee_id' => 'setTaskAssigneeId'
+        'task_id' => 'setTaskId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20124Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'task_assignee_id' => 'getTaskAssigneeId'
+        'task_id' => 'getTaskId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20124Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['task_assignee_id'] = isset($data['task_assignee_id']) ? $data['task_assignee_id'] : null;
+        $this->container['task_id'] = isset($data['task_id']) ? $data['task_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20124Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets task_assignee_id
+     * Gets task_id
      *
      * @return string
      */
-    public function getTaskAssigneeId()
+    public function getTaskId()
     {
-        return $this->container['task_assignee_id'];
+        return $this->container['task_id'];
     }
 
     /**
-     * Sets task_assignee_id
+     * Sets task_id
      *
-     * @param string $task_assignee_id The unique ID of the task assignee in CareCloud.
+     * @param string $task_id The unique ID of the task in CareCloud
      *
      * @return $this
      */
-    public function setTaskAssigneeId($task_assignee_id)
+    public function setTaskId($task_id)
     {
-        $this->container['task_assignee_id'] = $task_assignee_id;
+        $this->container['task_id'] = $task_id;
 
         return $this;
     }

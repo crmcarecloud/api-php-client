@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **external_order_id** | **string** | ID of an external order creaded in POS system. | [optional] 
 **external_entrance_id** | **string** | External ID of the entrance. Structure can be different depends of the POS system, that created the entrance. | [optional] 
 **external_turnstile_permission_id** | **string** | External ID of the permission to open a turnstile. Structure can be different depends of the POS system, that created the permission. | [optional] 
-**entrance_type_id** | **int** | Type of the entrance *Possible values are: season ticket - 0/ one day ticket -1/ multiple day ticket - 2* | 
+**entrance_type_id** | **int** | Type of the entrance *Possible values are: season ticket - 0/ one day ticket -1/ multiple day ticket - 2* | [optional] 
 **order_item_id** | **string** | Order ID item represents relation between entrance and order item from carecloud e-shop. | [optional] 
 **card_id** | **string** | ID of card used for charge entrance. | 
 **created_at** | **string** | Date and time when entrance was created in CareCloud. *(YYYY-MM-DD HH:MM:SS)* | [optional] 

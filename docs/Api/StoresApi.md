@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postStore**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120 postStore($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20122 postStore($body, $accept_language)
 
 Create a store
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120**](../Model/InlineResponse20120.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20122**](../Model/InlineResponse20122.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubStoreProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20121 postSubStoreProperties($body, $store_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20123 postSubStoreProperties($body, $store_id, $accept_language)
 
 Add a property to a store
 
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20121**](../Model/InlineResponse20121.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20123**](../Model/InlineResponse20123.md)
 
 ### Authorization
 

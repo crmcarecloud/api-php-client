@@ -7,6 +7,9 @@ Method | HTTP request | Description
 [**getCredit**](CreditsApi.md#getcredit) | **GET** /credits/{credit_id} | Get a credit record
 [**getCredits**](CreditsApi.md#getcredits) | **GET** /credits | Get all credit records
 [**getSubCreditPurchases**](CreditsApi.md#getsubcreditpurchases) | **GET** /credits/{credit_id}/purchases | Get a collection of purchases
+[**postCreditDeposit**](CreditsApi.md#postcreditdeposit) | **POST** /credits/actions/deposit-credits | Deposit of credits
+[**postCreditReduction**](CreditsApi.md#postcreditreduction) | **POST** /credits/actions/reduce-credits | Credit reduction
+[**postCreditTransfer**](CreditsApi.md#postcredittransfer) | **POST** /credits/actions/transfer-credits | Transfer credits
 
 # **getCredit**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029 getCredit($credit_id, $accept_language)
@@ -218,6 +221,185 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postCreditDeposit**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017 postCreditDeposit($body, $accept_language)
+
+Deposit of credits
+
+Creates a new credit record with the corresponding value. ⚠️ This action method is disabled by default. Please contact the CareCloud administrator to allow usage of this method.  ⚠️ Action methods are available only in Enterprise interface.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CreditsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsDepositcreditsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsDepositcreditsBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->postCreditDeposit($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CreditsApi->postCreditDeposit: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsDepositcreditsBody**](../Model/ActionsDepositcreditsBody.md)|  |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017**](../Model/InlineResponse2017.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postCreditReduction**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postCreditReduction($body, $accept_language)
+
+Credit reduction
+
+Endpoint for reducing credits on the customer's account.  ⚠️ This action method is disabled by default. Please contact the CareCloud administrator to allow usage of this method.  ⚠️ Action methods are available only in the Enterprise interface.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CreditsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsReducecreditsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsReducecreditsBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->postCreditReduction($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CreditsApi->postCreditReduction: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsReducecreditsBody**](../Model/ActionsReducecreditsBody.md)|  |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postCreditTransfer**
+> postCreditTransfer($body, $accept_language)
+
+Transfer credits
+
+Transfers credits from one customer to another. ⚠️ This action method is disabled by default. Please contact the CareCloud administrator to allow usage of this method.  ⚠️ Action methods are available only in the Enterprise interface.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CreditsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsTransfercreditsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsTransfercreditsBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $apiInstance->postCreditTransfer($body, $accept_language);
+} catch (Exception $e) {
+    echo 'Exception when calling CreditsApi->postCreditTransfer: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsTransfercreditsBody**](../Model/ActionsTransfercreditsBody.md)|  |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

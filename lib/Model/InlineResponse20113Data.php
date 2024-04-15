@@ -56,7 +56,7 @@ class InlineResponse20113Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'event_id' => 'string'
+        'customer_relation_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20113Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'event_id' => null
+        'customer_relation_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20113Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_id' => 'event_id'
+        'customer_relation_id' => 'customer_relation_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20113Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'event_id' => 'setEventId'
+        'customer_relation_id' => 'setCustomerRelationId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20113Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'event_id' => 'getEventId'
+        'customer_relation_id' => 'getCustomerRelationId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20113Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['event_id'] = isset($data['event_id']) ? $data['event_id'] : null;
+        $this->container['customer_relation_id'] = isset($data['customer_relation_id']) ? $data['customer_relation_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20113Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets event_id
+     * Gets customer_relation_id
      *
      * @return string
      */
-    public function getEventId()
+    public function getCustomerRelationId()
     {
-        return $this->container['event_id'];
+        return $this->container['customer_relation_id'];
     }
 
     /**
-     * Sets event_id
+     * Sets customer_relation_id
      *
-     * @param string $event_id The unique ID of the event.
+     * @param string $customer_relation_id The unique ID of the customer  relation.
      *
      * @return $this
      */
-    public function setEventId($event_id)
+    public function setCustomerRelationId($customer_relation_id)
     {
-        $this->container['event_id'] = $event_id;
+        $this->container['customer_relation_id'] = $customer_relation_id;
 
         return $this;
     }

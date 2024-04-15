@@ -59,6 +59,7 @@ class AgreementList implements ModelInterface, ArrayAccess
         'agreement_id' => 'string',
         'name' => 'string',
         'text' => 'string',
+        'withdrawal_text' => 'string',
         'communication_channel_id' => 'string',
         'last_change' => 'string'
     ];
@@ -72,6 +73,7 @@ class AgreementList implements ModelInterface, ArrayAccess
         'agreement_id' => null,
         'name' => null,
         'text' => null,
+        'withdrawal_text' => null,
         'communication_channel_id' => null,
         'last_change' => null
     ];
@@ -106,6 +108,7 @@ class AgreementList implements ModelInterface, ArrayAccess
         'agreement_id' => 'agreement_id',
         'name' => 'name',
         'text' => 'text',
+        'withdrawal_text' => 'withdrawal_text',
         'communication_channel_id' => 'communication_channel_id',
         'last_change' => 'last_change'
     ];
@@ -119,6 +122,7 @@ class AgreementList implements ModelInterface, ArrayAccess
         'agreement_id' => 'setAgreementId',
         'name' => 'setName',
         'text' => 'setText',
+        'withdrawal_text' => 'setWithdrawalText',
         'communication_channel_id' => 'setCommunicationChannelId',
         'last_change' => 'setLastChange'
     ];
@@ -132,6 +136,7 @@ class AgreementList implements ModelInterface, ArrayAccess
         'agreement_id' => 'getAgreementId',
         'name' => 'getName',
         'text' => 'getText',
+        'withdrawal_text' => 'getWithdrawalText',
         'communication_channel_id' => 'getCommunicationChannelId',
         'last_change' => 'getLastChange'
     ];
@@ -197,6 +202,7 @@ class AgreementList implements ModelInterface, ArrayAccess
         $this->container['agreement_id'] = isset($data['agreement_id']) ? $data['agreement_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['withdrawal_text'] = isset($data['withdrawal_text']) ? $data['withdrawal_text'] : null;
         $this->container['communication_channel_id'] = isset($data['communication_channel_id']) ? $data['communication_channel_id'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
@@ -286,13 +292,37 @@ class AgreementList implements ModelInterface, ArrayAccess
     /**
      * Sets text
      *
-     * @param string $text Text of the agreement in CareCloud. Language version of text is returned by language setup in HTTP header of the request.
+     * @param string $text Text of the agreement in CareCloud. The language version of the text is returned by language setup in the HTTP header of the request.
      *
      * @return $this
      */
     public function setText($text)
     {
         $this->container['text'] = $text;
+
+        return $this;
+    }
+
+    /**
+     * Gets withdrawal_text
+     *
+     * @return string
+     */
+    public function getWithdrawalText()
+    {
+        return $this->container['withdrawal_text'];
+    }
+
+    /**
+     * Sets withdrawal_text
+     *
+     * @param string $withdrawal_text Text when a customer wants to withdraw his agreement. The language version of the text is returned by language setup in the HTTP header of the request.
+     *
+     * @return $this
+     */
+    public function setWithdrawalText($withdrawal_text)
+    {
+        $this->container['withdrawal_text'] = $withdrawal_text;
 
         return $this;
     }

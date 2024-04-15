@@ -56,7 +56,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'order_id' => 'string'
+        'partner_record_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'order_id' => null
+        'partner_record_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'order_id' => 'order_id'
+        'partner_record_id' => 'partner_record_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'order_id' => 'setOrderId'
+        'partner_record_id' => 'setPartnerRecordId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'order_id' => 'getOrderId'
+        'partner_record_id' => 'getPartnerRecordId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
+        $this->container['partner_record_id'] = isset($data['partner_record_id']) ? $data['partner_record_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20114Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets order_id
+     * Gets partner_record_id
      *
      * @return string
      */
-    public function getOrderId()
+    public function getPartnerRecordId()
     {
-        return $this->container['order_id'];
+        return $this->container['partner_record_id'];
     }
 
     /**
-     * Sets order_id
+     * Sets partner_record_id
      *
-     * @param string $order_id The unique ID of the order.
+     * @param string $partner_record_id The unique ID of the partner record on the customer.
      *
      * @return $this
      */
-    public function setOrderId($order_id)
+    public function setPartnerRecordId($partner_record_id)
     {
-        $this->container['order_id'] = $order_id;
+        $this->container['partner_record_id'] = $partner_record_id;
 
         return $this;
     }

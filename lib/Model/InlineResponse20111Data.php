@@ -56,7 +56,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_relation_id' => 'string'
+        'interest_record_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_relation_id' => null
+        'interest_record_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_relation_id' => 'customer_relation_id'
+        'interest_record_id' => 'interest_record_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_relation_id' => 'setCustomerRelationId'
+        'interest_record_id' => 'setInterestRecordId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_relation_id' => 'getCustomerRelationId'
+        'interest_record_id' => 'getInterestRecordId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_relation_id'] = isset($data['customer_relation_id']) ? $data['customer_relation_id'] : null;
+        $this->container['interest_record_id'] = isset($data['interest_record_id']) ? $data['interest_record_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20111Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_relation_id
+     * Gets interest_record_id
      *
      * @return string
      */
-    public function getCustomerRelationId()
+    public function getInterestRecordId()
     {
-        return $this->container['customer_relation_id'];
+        return $this->container['interest_record_id'];
     }
 
     /**
-     * Sets customer_relation_id
+     * Sets interest_record_id
      *
-     * @param string $customer_relation_id The unique ID of the customer  relation.
+     * @param string $interest_record_id The unique ID of the interest record.
      *
      * @return $this
      */
-    public function setCustomerRelationId($customer_relation_id)
+    public function setInterestRecordId($interest_record_id)
     {
-        $this->container['customer_relation_id'] = $customer_relation_id;
+        $this->container['interest_record_id'] = $interest_record_id;
 
         return $this;
     }

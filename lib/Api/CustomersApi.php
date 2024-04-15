@@ -8537,7 +8537,7 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018
      */
     public function postCustomer($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -8555,11 +8555,11 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCustomerWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018';
         $request = $this->postCustomerRequest($body, $accept_language);
 
         try {
@@ -8611,7 +8611,7 @@ class CustomersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8703,7 +8703,7 @@ class CustomersApi
      */
     public function postCustomerAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018';
         $request = $this->postCustomerRequest($body, $accept_language);
 
         return $this->client
@@ -8858,7 +8858,7 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112
      */
     public function postSubCustomerAddress($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -8877,11 +8877,11 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSubCustomerAddressWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112';
         $request = $this->postSubCustomerAddressRequest($body, $customer_id, $accept_language);
 
         try {
@@ -8933,7 +8933,7 @@ class CustomersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9027,7 +9027,7 @@ class CustomersApi
      */
     public function postSubCustomerAddressAsyncWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112';
         $request = $this->postSubCustomerAddressRequest($body, $customer_id, $accept_language);
 
         return $this->client
@@ -9197,7 +9197,7 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111
      */
     public function postSubCustomerInterest($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -9216,11 +9216,11 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSubCustomerInterestWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111';
         $request = $this->postSubCustomerInterestRequest($body, $customer_id, $accept_language);
 
         try {
@@ -9272,7 +9272,7 @@ class CustomersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9366,7 +9366,7 @@ class CustomersApi
      */
     public function postSubCustomerInterestAsyncWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111';
         $request = $this->postSubCustomerInterestRequest($body, $customer_id, $accept_language);
 
         return $this->client
@@ -9536,7 +9536,7 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114
      */
     public function postSubCustomerPartnerRecord($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -9555,11 +9555,11 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSubCustomerPartnerRecordWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114';
         $request = $this->postSubCustomerPartnerRecordRequest($body, $customer_id, $accept_language);
 
         try {
@@ -9611,7 +9611,7 @@ class CustomersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9705,7 +9705,7 @@ class CustomersApi
      */
     public function postSubCustomerPartnerRecordAsyncWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114';
         $request = $this->postSubCustomerPartnerRecordRequest($body, $customer_id, $accept_language);
 
         return $this->client
@@ -9875,7 +9875,7 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110
      */
     public function postSubCustomerProperties($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -9894,11 +9894,11 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSubCustomerPropertiesWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110';
         $request = $this->postSubCustomerPropertiesRequest($body, $customer_id, $accept_language);
 
         try {
@@ -9950,7 +9950,7 @@ class CustomersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10044,7 +10044,7 @@ class CustomersApi
      */
     public function postSubCustomerPropertiesAsyncWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110';
         $request = $this->postSubCustomerPropertiesRequest($body, $customer_id, $accept_language);
 
         return $this->client
@@ -10516,7 +10516,7 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113
      */
     public function postSubCustomerRelatedCustomers($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -10535,11 +10535,11 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSubCustomerRelatedCustomersWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113';
         $request = $this->postSubCustomerRelatedCustomersRequest($body, $customer_id, $accept_language);
 
         try {
@@ -10591,7 +10591,7 @@ class CustomersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10685,7 +10685,7 @@ class CustomersApi
      */
     public function postSubCustomerRelatedCustomersAsyncWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113';
         $request = $this->postSubCustomerRelatedCustomersRequest($body, $customer_id, $accept_language);
 
         return $this->client
@@ -10855,7 +10855,7 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019
      */
     public function postSubCustomerSource($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -10874,11 +10874,11 @@ class CustomersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019, HTTP status code, HTTP response headers (array of strings)
      */
     public function postSubCustomerSourceWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019';
         $request = $this->postSubCustomerSourceRequest($body, $customer_id, $accept_language);
 
         try {
@@ -10930,7 +10930,7 @@ class CustomersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11024,7 +11024,7 @@ class CustomersApi
      */
     public function postSubCustomerSourceAsyncWithHttpInfo($body, $customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019';
         $request = $this->postSubCustomerSourceRequest($body, $customer_id, $accept_language);
 
         return $this->client

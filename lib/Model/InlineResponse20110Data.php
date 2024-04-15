@@ -56,7 +56,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'additional_address_id' => 'string'
+        'property_record_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'additional_address_id' => null
+        'property_record_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'additional_address_id' => 'additional_address_id'
+        'property_record_id' => 'property_record_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'additional_address_id' => 'setAdditionalAddressId'
+        'property_record_id' => 'setPropertyRecordId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'additional_address_id' => 'getAdditionalAddressId'
+        'property_record_id' => 'getPropertyRecordId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['additional_address_id'] = isset($data['additional_address_id']) ? $data['additional_address_id'] : null;
+        $this->container['property_record_id'] = isset($data['property_record_id']) ? $data['property_record_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20110Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets additional_address_id
+     * Gets property_record_id
      *
      * @return string
      */
-    public function getAdditionalAddressId()
+    public function getPropertyRecordId()
     {
-        return $this->container['additional_address_id'];
+        return $this->container['property_record_id'];
     }
 
     /**
-     * Sets additional_address_id
+     * Sets property_record_id
      *
-     * @param string $additional_address_id The unique ID of the additional customer address.
+     * @param string $property_record_id The unique ID of the property record.
      *
      * @return $this
      */
-    public function setAdditionalAddressId($additional_address_id)
+    public function setPropertyRecordId($property_record_id)
     {
-        $this->container['additional_address_id'] = $additional_address_id;
+        $this->container['property_record_id'] = $property_record_id;
 
         return $this;
     }

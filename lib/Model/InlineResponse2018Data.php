@@ -56,7 +56,7 @@ class InlineResponse2018Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'property_record_id' => 'string'
+        'customer_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse2018Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'property_record_id' => null
+        'customer_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse2018Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'property_record_id' => 'property_record_id'
+        'customer_id' => 'customer_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse2018Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'property_record_id' => 'setPropertyRecordId'
+        'customer_id' => 'setCustomerId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse2018Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'property_record_id' => 'getPropertyRecordId'
+        'customer_id' => 'getCustomerId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse2018Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['property_record_id'] = isset($data['property_record_id']) ? $data['property_record_id'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse2018Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets property_record_id
+     * Gets customer_id
      *
      * @return string
      */
-    public function getPropertyRecordId()
+    public function getCustomerId()
     {
-        return $this->container['property_record_id'];
+        return $this->container['customer_id'];
     }
 
     /**
-     * Sets property_record_id
+     * Sets customer_id
      *
-     * @param string $property_record_id The unique ID of the property record.
+     * @param string $customer_id The unique ID of the customer.
      *
      * @return $this
      */
-    public function setPropertyRecordId($property_record_id)
+    public function setCustomerId($customer_id)
     {
-        $this->container['property_record_id'] = $property_record_id;
+        $this->container['customer_id'] = $customer_id;
 
         return $this;
     }

@@ -787,7 +787,7 @@ class OrdersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116
      */
     public function postOrder($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -805,11 +805,11 @@ class OrdersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116, HTTP status code, HTTP response headers (array of strings)
      */
     public function postOrderWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116';
         $request = $this->postOrderRequest($body, $accept_language);
 
         try {
@@ -861,7 +861,7 @@ class OrdersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -953,7 +953,7 @@ class OrdersApi
      */
     public function postOrderAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20116';
         $request = $this->postOrderRequest($body, $accept_language);
 
         return $this->client

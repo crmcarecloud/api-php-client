@@ -255,7 +255,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomerVerifyCredentials**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postCustomerVerifyCredentials($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postCustomerVerifyCredentials($body)
 
 Customer's credentials verification
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomerVerifySocialNetworkCredentials**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016 postCustomerVerifySocialNetworkCredentials($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postCustomerVerifySocialNetworkCredentials($body)
 
 Social network credentials verification
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016**](../Model/InlineResponse2016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
 
 ### Authorization
 

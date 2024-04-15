@@ -1146,7 +1146,7 @@ class EventsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115
      */
     public function postEvent($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1164,11 +1164,11 @@ class EventsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115, HTTP status code, HTTP response headers (array of strings)
      */
     public function postEventWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115';
         $request = $this->postEventRequest($body, $accept_language);
 
         try {
@@ -1220,7 +1220,7 @@ class EventsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1312,7 +1312,7 @@ class EventsApi
      */
     public function postEventAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20115';
         $request = $this->postEventRequest($body, $accept_language);
 
         return $this->client

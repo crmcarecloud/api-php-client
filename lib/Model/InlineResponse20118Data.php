@@ -56,7 +56,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'purchase_id' => 'string'
+        'point_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'purchase_id' => null
+        'point_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'purchase_id' => 'purchase_id'
+        'point_id' => 'point_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'purchase_id' => 'setPurchaseId'
+        'point_id' => 'setPointId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'purchase_id' => 'getPurchaseId'
+        'point_id' => 'getPointId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['purchase_id'] = isset($data['purchase_id']) ? $data['purchase_id'] : null;
+        $this->container['point_id'] = isset($data['point_id']) ? $data['point_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20118Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets purchase_id
+     * Gets point_id
      *
      * @return string
      */
-    public function getPurchaseId()
+    public function getPointId()
     {
-        return $this->container['purchase_id'];
+        return $this->container['point_id'];
     }
 
     /**
-     * Sets purchase_id
+     * Sets point_id
      *
-     * @param string $purchase_id The unique ID of the purchase.
+     * @param string $point_id The unique ID of the point record.
      *
      * @return $this
      */
-    public function setPurchaseId($purchase_id)
+    public function setPointId($point_id)
     {
-        $this->container['purchase_id'] = $purchase_id;
+        $this->container['point_id'] = $point_id;
 
         return $this;
     }

@@ -600,7 +600,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPurchaseSend**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118 postPurchaseSend($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120 postPurchaseSend($body, $accept_language)
 
 Send purchase
 
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118**](../Model/InlineResponse20118.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120**](../Model/InlineResponse20120.md)
 
 ### Authorization
 

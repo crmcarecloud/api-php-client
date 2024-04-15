@@ -3175,7 +3175,7 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120
      */
     public function postPurchaseSend($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -3193,11 +3193,11 @@ class PurchasesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120, HTTP status code, HTTP response headers (array of strings)
      */
     public function postPurchaseSendWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120';
         $request = $this->postPurchaseSendRequest($body, $accept_language);
 
         try {
@@ -3249,7 +3249,7 @@ class PurchasesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3341,7 +3341,7 @@ class PurchasesApi
      */
     public function postPurchaseSendAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20120';
         $request = $this->postPurchaseSendRequest($body, $accept_language);
 
         return $this->client

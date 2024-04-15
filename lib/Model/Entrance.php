@@ -366,9 +366,6 @@ self::STATE_1,        ];
             );
         }
 
-        if ($this->container['entrance_type_id'] === null) {
-            $invalidProperties[] = "'entrance_type_id' can't be null";
-        }
         $allowedValues = $this->getEntranceTypeIdAllowableValues();
         if (!is_null($this->container['entrance_type_id']) && !in_array($this->container['entrance_type_id'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -651,7 +648,7 @@ self::STATE_1,        ];
     public function setEntranceTypeId($entrance_type_id)
     {
         $allowedValues = $this->getEntranceTypeIdAllowableValues();
-        if (!in_array($entrance_type_id, $allowedValues, true)) {
+        if (!is_null($entrance_type_id) && !in_array($entrance_type_id, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'entrance_type_id', must be one of '%s'",

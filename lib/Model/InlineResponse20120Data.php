@@ -56,7 +56,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'store_id' => 'string'
+        'purchase_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'store_id' => null
+        'purchase_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'store_id'
+        'purchase_id' => 'purchase_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId'
+        'purchase_id' => 'setPurchaseId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId'
+        'purchase_id' => 'getPurchaseId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['purchase_id'] = isset($data['purchase_id']) ? $data['purchase_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20120Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
+     * Gets purchase_id
      *
      * @return string
      */
-    public function getStoreId()
+    public function getPurchaseId()
     {
-        return $this->container['store_id'];
+        return $this->container['purchase_id'];
     }
 
     /**
-     * Sets store_id
+     * Sets purchase_id
      *
-     * @param string $store_id The unique ID of the store in CareCloud.
+     * @param string $purchase_id The unique ID of the purchase.
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setPurchaseId($purchase_id)
     {
-        $this->container['store_id'] = $store_id;
+        $this->container['purchase_id'] = $purchase_id;
 
         return $this;
     }

@@ -56,7 +56,7 @@ class InlineResponse2016Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_id' => 'string'
+        'credit_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse2016Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_id' => null
+        'credit_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse2016Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_id' => 'customer_id'
+        'credit_id' => 'credit_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse2016Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_id' => 'setCustomerId'
+        'credit_id' => 'setCreditId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse2016Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_id' => 'getCustomerId'
+        'credit_id' => 'getCreditId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse2016Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
+        $this->container['credit_id'] = isset($data['credit_id']) ? $data['credit_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse2016Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_id
+     * Gets credit_id
      *
      * @return string
      */
-    public function getCustomerId()
+    public function getCreditId()
     {
-        return $this->container['customer_id'];
+        return $this->container['credit_id'];
     }
 
     /**
-     * Sets customer_id
+     * Sets credit_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $credit_id The unique ID of the credit reduction.
      *
      * @return $this
      */
-    public function setCustomerId($customer_id)
+    public function setCreditId($credit_id)
     {
-        $this->container['customer_id'] = $customer_id;
+        $this->container['credit_id'] = $credit_id;
 
         return $this;
     }

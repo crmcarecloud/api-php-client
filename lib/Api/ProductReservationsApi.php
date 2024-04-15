@@ -814,7 +814,7 @@ class ProductReservationsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20119
      */
     public function postProductReservation($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -832,11 +832,11 @@ class ProductReservationsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20119, HTTP status code, HTTP response headers (array of strings)
      */
     public function postProductReservationWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20119';
         $request = $this->postProductReservationRequest($body, $accept_language);
 
         try {
@@ -888,7 +888,7 @@ class ProductReservationsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20119',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -980,7 +980,7 @@ class ProductReservationsApi
      */
     public function postProductReservationAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20119';
         $request = $this->postProductReservationRequest($body, $accept_language);
 
         return $this->client
