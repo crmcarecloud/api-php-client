@@ -57,7 +57,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'contact' => 'string',
-        'customer_source_id' => 'string'
+        'customer_source_id' => 'string',
+        'agreements' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement'
     ];
 
     /**
@@ -67,7 +68,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'contact' => null,
-        'customer_source_id' => null
+        'customer_source_id' => null,
+        'agreements' => null
     ];
 
     /**
@@ -98,7 +100,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'contact' => 'contact',
-        'customer_source_id' => 'customer_source_id'
+        'customer_source_id' => 'customer_source_id',
+        'agreements' => 'agreements'
     ];
 
     /**
@@ -108,7 +111,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'contact' => 'setContact',
-        'customer_source_id' => 'setCustomerSourceId'
+        'customer_source_id' => 'setCustomerSourceId',
+        'agreements' => 'setAgreements'
     ];
 
     /**
@@ -118,7 +122,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'contact' => 'getContact',
-        'customer_source_id' => 'getCustomerSourceId'
+        'customer_source_id' => 'getCustomerSourceId',
+        'agreements' => 'getAgreements'
     ];
 
     /**
@@ -181,6 +186,7 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
     {
         $this->container['contact'] = isset($data['contact']) ? $data['contact'] : null;
         $this->container['customer_source_id'] = isset($data['customer_source_id']) ? $data['customer_source_id'] : null;
+        $this->container['agreements'] = isset($data['agreements']) ? $data['agreements'] : null;
     }
 
     /**
@@ -257,6 +263,30 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
     public function setCustomerSourceId($customer_source_id)
     {
         $this->container['customer_source_id'] = $customer_source_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets agreements
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Agreement
+     */
+    public function getAgreements()
+    {
+        return $this->container['agreements'];
+    }
+
+    /**
+     * Sets agreements
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Agreement $agreements agreements
+     *
+     * @return $this
+     */
+    public function setAgreements($agreements)
+    {
+        $this->container['agreements'] = $agreements;
 
         return $this;
     }

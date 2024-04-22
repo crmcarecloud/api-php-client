@@ -60,6 +60,7 @@ class ActionsDepositcreditsBody implements ModelInterface, ArrayAccess
         'customer_id' => 'string',
         'partner_id' => 'string',
         'credit_type_id' => 'string',
+        'currency_id' => 'string',
         'note' => 'string'
     ];
 
@@ -73,6 +74,7 @@ class ActionsDepositcreditsBody implements ModelInterface, ArrayAccess
         'customer_id' => null,
         'partner_id' => null,
         'credit_type_id' => null,
+        'currency_id' => null,
         'note' => null
     ];
 
@@ -107,6 +109,7 @@ class ActionsDepositcreditsBody implements ModelInterface, ArrayAccess
         'customer_id' => 'customer_id',
         'partner_id' => 'partner_id',
         'credit_type_id' => 'credit_type_id',
+        'currency_id' => 'currency_id',
         'note' => 'note'
     ];
 
@@ -120,6 +123,7 @@ class ActionsDepositcreditsBody implements ModelInterface, ArrayAccess
         'customer_id' => 'setCustomerId',
         'partner_id' => 'setPartnerId',
         'credit_type_id' => 'setCreditTypeId',
+        'currency_id' => 'setCurrencyId',
         'note' => 'setNote'
     ];
 
@@ -133,6 +137,7 @@ class ActionsDepositcreditsBody implements ModelInterface, ArrayAccess
         'customer_id' => 'getCustomerId',
         'partner_id' => 'getPartnerId',
         'credit_type_id' => 'getCreditTypeId',
+        'currency_id' => 'getCurrencyId',
         'note' => 'getNote'
     ];
 
@@ -198,6 +203,7 @@ class ActionsDepositcreditsBody implements ModelInterface, ArrayAccess
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
         $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['credit_type_id'] = isset($data['credit_type_id']) ? $data['credit_type_id'] : null;
+        $this->container['currency_id'] = isset($data['currency_id']) ? $data['currency_id'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
     }
 
@@ -326,6 +332,30 @@ class ActionsDepositcreditsBody implements ModelInterface, ArrayAccess
     public function setCreditTypeId($credit_type_id)
     {
         $this->container['credit_type_id'] = $credit_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency_id
+     *
+     * @return string
+     */
+    public function getCurrencyId()
+    {
+        return $this->container['currency_id'];
+    }
+
+    /**
+     * Sets currency_id
+     *
+     * @param string $currency_id ID of the currency from resource [currencies](#tag/Currencies). If not set, the default currency of the project is used.
+     *
+     * @return $this
+     */
+    public function setCurrencyId($currency_id)
+    {
+        $this->container['currency_id'] = $currency_id;
 
         return $this;
     }

@@ -425,7 +425,7 @@ class OrdersApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  int $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
+     * @param  int $state State of the resource. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -448,7 +448,7 @@ class OrdersApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  int $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
+     * @param  int $state State of the resource. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -577,7 +577,7 @@ class OrdersApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  int $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
+     * @param  int $state State of the resource. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -603,7 +603,7 @@ class OrdersApi
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
-     * @param  int|null $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
+     * @param  int|null $state State of the resource. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -659,7 +659,7 @@ class OrdersApi
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  int $state State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
+     * @param  int $state State of the resource. *Possible values are: 0 - deleted / 1 - active / 2 - non active* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -107,7 +107,7 @@ $sort_direction = "sort_direction_example"; // string | Direction of sorting the
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $card_number = "card_number_example"; // string | Number of the customer card.
 $card_type_id = "card_type_id_example"; // string | The unique ID of the card type.
-$state = 56; // int | State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
+$state = 56; // int | State of the card. *Possible values are: 0 - blocked / 1 - active*
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $card_number_list = array("card_number_list_example"); // string[] | List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud.
 $search_secondary_card_number = true; // bool | Include secondary card numbers in search for filters `card_number` and `card_number_list`. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers*
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
  **customer_id** | **string**| The unique ID of the customer. | [optional]
  **card_number** | **string**| Number of the customer card. | [optional]
  **card_type_id** | **string**| The unique ID of the card type. | [optional]
- **state** | **int**| State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional]
+ **state** | **int**| State of the card. *Possible values are: 0 - blocked / 1 - active* | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **card_number_list** | [**string[]**](../Model/string.md)| List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. | [optional]
  **search_secondary_card_number** | **bool**| Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* | [optional]

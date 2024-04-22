@@ -100,7 +100,7 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
-$state = 56; // int | State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
+$state = 56; // int | State of the resource. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
 
 try {
     $result = $apiInstance->getOrders($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $state);
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
- **state** | **int**| State of the customer. *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional]
+ **state** | **int**| State of the resource. *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional]
 
 ### Return type
 

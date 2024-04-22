@@ -60,6 +60,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
         'new_customer_id' => 'string',
         'amount' => 'float',
         'credit_type_id' => 'string',
+        'currency_id' => 'string',
         'note' => 'string'
     ];
 
@@ -73,6 +74,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
         'new_customer_id' => null,
         'amount' => 'float',
         'credit_type_id' => null,
+        'currency_id' => null,
         'note' => null
     ];
 
@@ -107,6 +109,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
         'new_customer_id' => 'new_customer_id',
         'amount' => 'amount',
         'credit_type_id' => 'credit_type_id',
+        'currency_id' => 'currency_id',
         'note' => 'note'
     ];
 
@@ -120,6 +123,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
         'new_customer_id' => 'setNewCustomerId',
         'amount' => 'setAmount',
         'credit_type_id' => 'setCreditTypeId',
+        'currency_id' => 'setCurrencyId',
         'note' => 'setNote'
     ];
 
@@ -133,6 +137,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
         'new_customer_id' => 'getNewCustomerId',
         'amount' => 'getAmount',
         'credit_type_id' => 'getCreditTypeId',
+        'currency_id' => 'getCurrencyId',
         'note' => 'getNote'
     ];
 
@@ -198,6 +203,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
         $this->container['new_customer_id'] = isset($data['new_customer_id']) ? $data['new_customer_id'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['credit_type_id'] = isset($data['credit_type_id']) ? $data['credit_type_id'] : null;
+        $this->container['currency_id'] = isset($data['currency_id']) ? $data['currency_id'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
     }
 
@@ -329,6 +335,30 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
     public function setCreditTypeId($credit_type_id)
     {
         $this->container['credit_type_id'] = $credit_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency_id
+     *
+     * @return string
+     */
+    public function getCurrencyId()
+    {
+        return $this->container['currency_id'];
+    }
+
+    /**
+     * Sets currency_id
+     *
+     * @param string $currency_id ID of the currency from resource [currencies](#tag/Currencies). If not set, the default currency of the project is used.
+     *
+     * @return $this
+     */
+    public function setCurrencyId($currency_id)
+    {
+        $this->container['currency_id'] = $currency_id;
 
         return $this;
     }

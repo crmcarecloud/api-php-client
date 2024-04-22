@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEntrances**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141 getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141 getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id, $order_item_id)
 
 Get all entrances
 
@@ -117,9 +117,10 @@ $valid_from = "valid_from_example"; // string | Date from when is record already
 $valid_to = "valid_to_example"; // string | Date to when is record still valid. *(YYYY-MM-DD)*
 $product_id = "product_id_example"; // string | ID of the product.
 $external_turnstile_permission_id = "external_turnstile_permission_id_example"; // string | External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission.
+$order_item_id = "order_item_id_example"; // string | ID of an item from e-shop order.
 
 try {
-    $result = $apiInstance->getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id);
+    $result = $apiInstance->getEntrances($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id, $order_item_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChargedEntrancesApi->getEntrances: ', $e->getMessage(), PHP_EOL;
@@ -152,6 +153,7 @@ Name | Type | Description  | Notes
  **valid_to** | **string**| Date to when is record still valid. *(YYYY-MM-DD)* | [optional]
  **product_id** | **string**| ID of the product. | [optional]
  **external_turnstile_permission_id** | **string**| External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. | [optional]
+ **order_item_id** | **string**| ID of an item from e-shop order. | [optional]
 
 ### Return type
 

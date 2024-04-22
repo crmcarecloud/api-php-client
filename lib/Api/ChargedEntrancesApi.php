@@ -440,14 +440,15 @@ class ChargedEntrancesApi
      * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string $product_id ID of the product. (optional)
      * @param  string $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
+     * @param  string $order_item_id ID of an item from e-shop order. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141
      */
-    public function getEntrances($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null)
+    public function getEntrances($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null, $order_item_id = null)
     {
-        list($response) = $this->getEntrancesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id);
+        list($response) = $this->getEntrancesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id, $order_item_id);
         return $response;
     }
 
@@ -477,15 +478,16 @@ class ChargedEntrancesApi
      * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string $product_id ID of the product. (optional)
      * @param  string $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
+     * @param  string $order_item_id ID of an item from e-shop order. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getEntrancesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null)
+    public function getEntrancesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null, $order_item_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141';
-        $request = $this->getEntrancesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id);
+        $request = $this->getEntrancesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id, $order_item_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -620,13 +622,14 @@ class ChargedEntrancesApi
      * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string $product_id ID of the product. (optional)
      * @param  string $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
+     * @param  string $order_item_id ID of an item from e-shop order. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEntrancesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null)
+    public function getEntrancesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null, $order_item_id = null)
     {
-        return $this->getEntrancesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id)
+        return $this->getEntrancesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id, $order_item_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -660,14 +663,15 @@ class ChargedEntrancesApi
      * @param  string|null $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string|null $product_id ID of the product. (optional)
      * @param  string|null $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
+     * @param  string|null $order_item_id ID of an item from e-shop order. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEntrancesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null)
+    public function getEntrancesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null, $order_item_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141';
-        $request = $this->getEntrancesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id);
+        $request = $this->getEntrancesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $pos_id, $external_order_id, $name, $resort_name, $customer_category_name, $card_id, $customer_id, $entrance_type_id, $state, $external_entrance_id, $is_valid, $is_cancelled, $valid_from, $valid_to, $product_id, $external_turnstile_permission_id, $order_item_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -730,11 +734,12 @@ class ChargedEntrancesApi
      * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
      * @param  string $product_id ID of the product. (optional)
      * @param  string $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
+     * @param  string $order_item_id ID of an item from e-shop order. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getEntrancesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null)
+    protected function getEntrancesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $pos_id = null, $external_order_id = null, $name = null, $resort_name = null, $customer_category_name = null, $card_id = null, $customer_id = null, $entrance_type_id = null, $state = null, $external_entrance_id = null, $is_valid = null, $is_cancelled = null, $valid_from = null, $valid_to = null, $product_id = null, $external_turnstile_permission_id = null, $order_item_id = null)
     {
 
         $resourcePath = '/entrances';
@@ -823,6 +828,10 @@ class ChargedEntrancesApi
         // query params
         if ($external_turnstile_permission_id !== null) {
             $queryParams['external_turnstile_permission_id'] = ObjectSerializer::toQueryValue($external_turnstile_permission_id, null);
+        }
+        // query params
+        if ($order_item_id !== null) {
+            $queryParams['order_item_id'] = ObjectSerializer::toQueryValue($order_item_id, null);
         }
         // header params
         if ($accept_language !== null) {
