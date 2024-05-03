@@ -5,7 +5,7 @@ docker run --rm -v $PROJECT_DIRECTORY/deps:/local -e https_proxy=$https_proxy ph
 
 docker run --rm\
   --platform linux/amd64\
-  -v $PROJECT_DIRECTORY:/local swaggerapi/swagger-codegen-cli-v3:3.0.46\
+  -v $PROJECT_DIRECTORY:/local swaggerapi/swagger-codegen-cli-v3:3.0.55\
   generate\
   -i /local/deps/vendor/crmcarecloud/api-spec/_build/openapi.yaml\
   -l php\
