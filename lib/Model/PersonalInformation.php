@@ -347,7 +347,7 @@ self::GENDER_5,        ];
     /**
      * Sets gender
      *
-     * @param int $gender Gender of the customer *Possible values: 1 - Male / 2 - Female / 3 - Miss / 4 - Private / 5 - Other *
+     * @param int $gender Gender of the customer *Possible values: 1 - Male / 2 - Female / 3 - Miss / 4 - Private / 5 - Other / null - Not set *
      *
      * @return $this
      */
