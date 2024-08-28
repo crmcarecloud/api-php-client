@@ -96,7 +96,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200127
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137
      */
     public function getReward($reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200127, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRewardWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200127';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->getRewardRequest($reward_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200127',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class RewardsApi
      */
     public function getRewardAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200127';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->getRewardRequest($reward_id, $accept_language);
 
         return $this->client
@@ -415,6 +415,473 @@ class RewardsApi
     }
 
     /**
+     * Operation getRewardRecommendations
+     *
+     * Recommend the best rewards for the customer
+     *
+     * @param  string $customer_id The unique ID of the customer. (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $name Search record by name or a part of the name. (optional)
+     * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
+     * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $code Code of the reward. (optional)
+     * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
+     * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
+     * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
+     * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046
+     */
+    public function getRewardRecommendations($customer_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null, $partner_id = null, $reward_type_id = null)
+    {
+        list($response) = $this->getRewardRecommendationsWithHttpInfo($customer_id, $accept_language, $count, $offset, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id, $reward_type_id);
+        return $response;
+    }
+
+    /**
+     * Operation getRewardRecommendationsWithHttpInfo
+     *
+     * Recommend the best rewards for the customer
+     *
+     * @param  string $customer_id The unique ID of the customer. (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $name Search record by name or a part of the name. (optional)
+     * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
+     * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $code Code of the reward. (optional)
+     * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
+     * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
+     * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
+     * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getRewardRecommendationsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null, $partner_id = null, $reward_type_id = null)
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046';
+        $request = $this->getRewardRecommendationsRequest($customer_id, $accept_language, $count, $offset, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id, $reward_type_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse403',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getRewardRecommendationsAsync
+     *
+     * Recommend the best rewards for the customer
+     *
+     * @param  string $customer_id The unique ID of the customer. (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $name Search record by name or a part of the name. (optional)
+     * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
+     * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $code Code of the reward. (optional)
+     * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
+     * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
+     * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
+     * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getRewardRecommendationsAsync($customer_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null, $partner_id = null, $reward_type_id = null)
+    {
+        return $this->getRewardRecommendationsAsyncWithHttpInfo($customer_id, $accept_language, $count, $offset, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id, $reward_type_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getRewardRecommendationsAsyncWithHttpInfo
+     *
+     * Recommend the best rewards for the customer
+     *
+     * @param  string $customer_id The unique ID of the customer. (required)
+     * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     * @param  int|null $count The number of records to return. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string|null $name Search record by name or a part of the name. (optional)
+     * @param  string|null $store_id The unique ID of the store where customer can apply the reward. (optional)
+     * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
+     * @param  string|null $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $code Code of the reward. (optional)
+     * @param  bool|null $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
+     * @param  int|null $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
+     * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
+     * @param  bool|null $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
+     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string|null $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
+     * @param  string|null $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getRewardRecommendationsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null, $partner_id = null, $reward_type_id = null)
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046';
+        $request = $this->getRewardRecommendationsRequest($customer_id, $accept_language, $count, $offset, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id, $reward_type_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getRewardRecommendations'
+     *
+     * @param  string $customer_id The unique ID of the customer. (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     * @param  int $count The number of records to return. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  string $name Search record by name or a part of the name. (optional)
+     * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
+     * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
+     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $code Code of the reward. (optional)
+     * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
+     * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
+     * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
+     * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getRewardRecommendationsRequest($customer_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null, $partner_id = null, $reward_type_id = null)
+    {
+        // verify the required parameter 'customer_id' is set
+        if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $customer_id when calling getRewardRecommendations'
+            );
+        }
+
+        $resourcePath = '/rewards/actions/reward-recommendations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($count !== null) {
+            $queryParams['count'] = ObjectSerializer::toQueryValue($count, null);
+        }
+        // query params
+        if ($offset !== null) {
+            $queryParams['offset'] = ObjectSerializer::toQueryValue($offset, null);
+        }
+        // query params
+        if ($name !== null) {
+            $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);
+        }
+        // query params
+        if ($store_id !== null) {
+            $queryParams['store_id'] = ObjectSerializer::toQueryValue($store_id, null);
+        }
+        // query params
+        if ($is_valid !== null) {
+            $queryParams['is_valid'] = ObjectSerializer::toQueryValue($is_valid, null);
+        }
+        // query params
+        if ($valid_from !== null) {
+            $queryParams['valid_from'] = ObjectSerializer::toQueryValue($valid_from, null);
+        }
+        // query params
+        if ($valid_to !== null) {
+            $queryParams['valid_to'] = ObjectSerializer::toQueryValue($valid_to, null);
+        }
+        // query params
+        if ($code !== null) {
+            $queryParams['code'] = ObjectSerializer::toQueryValue($code, null);
+        }
+        // query params
+        if ($is_automated !== null) {
+            $queryParams['is_automated'] = ObjectSerializer::toQueryValue($is_automated, null);
+        }
+        // query params
+        if ($reward_group !== null) {
+            $queryParams['reward_group'] = ObjectSerializer::toQueryValue($reward_group, null);
+        }
+        // query params
+        if (is_array($customer_type_id)) {
+            $queryParams['customer_type_id'] = $customer_type_id;
+        } else {
+            if ($customer_type_id !== null) {
+                $queryParams['customer_type_id'] = ObjectSerializer::toQueryValue($customer_type_id, null);
+            }
+        }
+        // query params
+        if ($without_stores !== null) {
+            $queryParams['without_stores'] = ObjectSerializer::toQueryValue($without_stores, null);
+        }
+        // query params
+        if (is_array($tag_ids)) {
+            $queryParams['tag_ids'] = $tag_ids;
+        } else {
+            if ($tag_ids !== null) {
+                $queryParams['tag_ids'] = ObjectSerializer::toQueryValue($tag_ids, null);
+            }
+        }
+        // query params
+        if ($partner_id !== null) {
+            $queryParams['partner_id'] = ObjectSerializer::toQueryValue($partner_id, null);
+        }
+        // query params
+        if ($reward_type_id !== null) {
+            $queryParams['reward_type_id'] = ObjectSerializer::toQueryValue($reward_type_id, null);
+        }
+        // query params
+        if ($customer_id !== null) {
+            $queryParams['customer_id'] = ObjectSerializer::toQueryValue($customer_id, null);
+        }
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::customBuildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getRewards
      *
      * Get all rewards
@@ -440,7 +907,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200126
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136
      */
     public function getRewards($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null, $partner_id = null, $reward_type_id = null)
     {
@@ -474,11 +941,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200126, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRewardsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null, $partner_id = null, $reward_type_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200126';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->getRewardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id, $reward_type_id);
 
         try {
@@ -530,7 +997,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200126',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -654,7 +1121,7 @@ class RewardsApi
      */
     public function getRewardsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $is_valid = null, $valid_from = null, $valid_to = null, $code = null, $is_automated = null, $reward_group = null, $customer_type_id = null, $without_stores = null, $tag_ids = null, $partner_id = null, $reward_type_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200126';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->getRewardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id, $reward_type_id);
 
         return $this->client
@@ -898,7 +1365,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141
      */
     public function getSubRewardProductBrands($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -920,11 +1387,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardProductBrandsWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141';
         $request = $this->getSubRewardProductBrandsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -976,7 +1443,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1076,7 +1543,7 @@ class RewardsApi
      */
     public function getSubRewardProductBrandsAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200131';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200141';
         $request = $this->getSubRewardProductBrandsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1262,7 +1729,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140
      */
     public function getSubRewardProductGroups($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -1284,11 +1751,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardProductGroupsWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140';
         $request = $this->getSubRewardProductGroupsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -1340,7 +1807,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1440,7 +1907,7 @@ class RewardsApi
      */
     public function getSubRewardProductGroupsAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200130';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200140';
         $request = $this->getSubRewardProductGroupsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1626,7 +2093,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139
      */
     public function getSubRewardProducts($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -1648,11 +2115,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardProductsWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139';
         $request = $this->getSubRewardProductsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -1704,7 +2171,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1804,7 +2271,7 @@ class RewardsApi
      */
     public function getSubRewardProductsAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200129';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200139';
         $request = $this->getSubRewardProductsRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1991,7 +2458,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142
      */
     public function getSubRewardStores($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null)
     {
@@ -2014,11 +2481,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardStoresWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142';
         $request = $this->getSubRewardStoresRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer);
 
         try {
@@ -2070,7 +2537,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2172,7 +2639,7 @@ class RewardsApi
      */
     public function getSubRewardStoresAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $visible_for_customer = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200142';
         $request = $this->getSubRewardStoresRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer);
 
         return $this->client
@@ -2364,7 +2831,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143
      */
     public function getSubRewardTags($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
     {
@@ -2387,11 +2854,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardTagsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143';
         $request = $this->getSubRewardTagsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
 
         try {
@@ -2443,7 +2910,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2545,7 +3012,7 @@ class RewardsApi
      */
     public function getSubRewardTagsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200133';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200143';
         $request = $this->getSubRewardTagsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
 
         return $this->client
@@ -2728,7 +3195,7 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138
      */
     public function getSubRewardVouchers($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null)
     {
@@ -2752,11 +3219,11 @@ class RewardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubRewardVouchersWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138';
         $request = $this->getSubRewardVouchersRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id);
 
         try {
@@ -2808,7 +3275,7 @@ class RewardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2912,7 +3379,7 @@ class RewardsApi
      */
     public function getSubRewardVouchersAsyncWithHttpInfo($reward_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $store_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200128';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200138';
         $request = $this->getSubRewardVouchersRequest($reward_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id);
 
         return $this->client

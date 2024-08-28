@@ -56,7 +56,8 @@ class InlineResponse200166Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'test_string' => 'string'
+        'task_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\TaskType[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -65,7 +66,8 @@ class InlineResponse200166Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'test_string' => null
+        'task_types' => null,
+        'total_items' => null
     ];
 
     /**
@@ -95,7 +97,8 @@ class InlineResponse200166Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'test_string' => 'test_string'
+        'task_types' => 'task_types',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -104,7 +107,8 @@ class InlineResponse200166Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'test_string' => 'setTestString'
+        'task_types' => 'setTaskTypes',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -113,7 +117,8 @@ class InlineResponse200166Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'test_string' => 'getTestString'
+        'task_types' => 'getTaskTypes',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -174,7 +179,8 @@ class InlineResponse200166Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['test_string'] = isset($data['test_string']) ? $data['test_string'] : null;
+        $this->container['task_types'] = isset($data['task_types']) ? $data['task_types'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -202,25 +208,49 @@ class InlineResponse200166Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets test_string
+     * Gets task_types
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\TaskType[]
      */
-    public function getTestString()
+    public function getTaskTypes()
     {
-        return $this->container['test_string'];
+        return $this->container['task_types'];
     }
 
     /**
-     * Sets test_string
+     * Sets task_types
      *
-     * @param string $test_string Reverted value of input parameters.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\TaskType[] $task_types List of all task types.
      *
      * @return $this
      */
-    public function setTestString($test_string)
+    public function setTaskTypes($task_types)
     {
-        $this->container['test_string'] = $test_string;
+        $this->container['task_types'] = $task_types;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items The number of all found task types.
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

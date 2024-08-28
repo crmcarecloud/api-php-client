@@ -56,7 +56,7 @@ class InlineResponse20098Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'point_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PointType[]',
+        'partners' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Partner[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20098Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'point_types' => null,
+        'partners' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20098Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'point_types' => 'point_types',
+        'partners' => 'partners',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20098Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'point_types' => 'setPointTypes',
+        'partners' => 'setPartners',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20098Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'point_types' => 'getPointTypes',
+        'partners' => 'getPartners',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20098Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['point_types'] = isset($data['point_types']) ? $data['point_types'] : null;
+        $this->container['partners'] = isset($data['partners']) ? $data['partners'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20098Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets point_types
+     * Gets partners
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PointType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Partner[]
      */
-    public function getPointTypes()
+    public function getPartners()
     {
-        return $this->container['point_types'];
+        return $this->container['partners'];
     }
 
     /**
-     * Sets point_types
+     * Sets partners
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PointType[] $point_types List of the point types.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Partner[] $partners List of a partners.
      *
      * @return $this
      */
-    public function setPointTypes($point_types)
+    public function setPartners($partners)
     {
-        $this->container['point_types'] = $point_types;
+        $this->container['partners'] = $partners;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20098Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found point types.
+     * @param int $total_items The number of all found partners.
      *
      * @return $this
      */

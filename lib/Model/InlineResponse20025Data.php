@@ -56,7 +56,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'communication_channels' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]',
+        'cards' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Card[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'communication_channels' => null,
+        'cards' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'communication_channels' => 'communication_channels',
+        'cards' => 'cards',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'communication_channels' => 'setCommunicationChannels',
+        'cards' => 'setCards',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'communication_channels' => 'getCommunicationChannels',
+        'cards' => 'getCards',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['communication_channels'] = isset($data['communication_channels']) ? $data['communication_channels'] : null;
+        $this->container['cards'] = isset($data['cards']) ? $data['cards'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets communication_channels
+     * Gets cards
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Card[]
      */
-    public function getCommunicationChannels()
+    public function getCards()
     {
-        return $this->container['communication_channels'];
+        return $this->container['cards'];
     }
 
     /**
-     * Sets communication_channels
+     * Sets cards
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[] $communication_channels Structure of the communication channel.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Card[] $cards List of cards.
      *
      * @return $this
      */
-    public function setCommunicationChannels($communication_channels)
+    public function setCards($cards)
     {
-        $this->container['communication_channels'] = $communication_channels;
+        $this->container['cards'] = $cards;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20025Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Total count of found items of the resource communication channels.
+     * @param int $total_items The number of all found cards.
      *
      * @return $this
      */

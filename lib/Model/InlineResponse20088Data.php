@@ -56,7 +56,7 @@ class InlineResponse20088Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'partners' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Partner[]',
+        'languages' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Language[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20088Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'partners' => null,
+        'languages' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20088Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'partners' => 'partners',
+        'languages' => 'languages',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20088Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'partners' => 'setPartners',
+        'languages' => 'setLanguages',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20088Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'partners' => 'getPartners',
+        'languages' => 'getLanguages',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20088Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['partners'] = isset($data['partners']) ? $data['partners'] : null;
+        $this->container['languages'] = isset($data['languages']) ? $data['languages'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20088Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets partners
+     * Gets languages
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Partner[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Language[]
      */
-    public function getPartners()
+    public function getLanguages()
     {
-        return $this->container['partners'];
+        return $this->container['languages'];
     }
 
     /**
-     * Sets partners
+     * Sets languages
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Partner[] $partners List of a partners.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Language[] $languages List of the language codes by ISO 639-1.
      *
      * @return $this
      */
-    public function setPartners($partners)
+    public function setLanguages($languages)
     {
-        $this->container['partners'] = $partners;
+        $this->container['languages'] = $languages;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20088Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found partners.
+     * @param int $total_items The number of all found languages.
      *
      * @return $this
      */

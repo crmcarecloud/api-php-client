@@ -56,7 +56,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]',
+        'currencies' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Currency[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'vouchers' => null,
+        'currencies' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'vouchers' => 'vouchers',
+        'currencies' => 'currencies',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'vouchers' => 'setVouchers',
+        'currencies' => 'setCurrencies',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'vouchers' => 'getVouchers',
+        'currencies' => 'getCurrencies',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['vouchers'] = isset($data['vouchers']) ? $data['vouchers'] : null;
+        $this->container['currencies'] = isset($data['currencies']) ? $data['currencies'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets vouchers
+     * Gets currencies
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[]
      */
-    public function getVouchers()
+    public function getCurrencies()
     {
-        return $this->container['vouchers'];
+        return $this->container['currencies'];
     }
 
     /**
-     * Sets vouchers
+     * Sets currencies
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[] $vouchers List of all recent vouchers.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[] $currencies Structure of currency.
      *
      * @return $this
      */
-    public function setVouchers($vouchers)
+    public function setCurrencies($currencies)
     {
-        $this->container['vouchers'] = $vouchers;
+        $this->container['currencies'] = $currencies;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20039Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all recent vouchers.
+     * @param int $total_items Total count of found items of resource currencies.
      *
      * @return $this
      */

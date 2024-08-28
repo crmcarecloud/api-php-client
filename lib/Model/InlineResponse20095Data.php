@@ -56,8 +56,7 @@ class InlineResponse20095Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'point_history' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[]',
-        'total_items' => 'int'
+        'is_valid' => 'bool'
     ];
 
     /**
@@ -66,8 +65,7 @@ class InlineResponse20095Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'point_history' => null,
-        'total_items' => null
+        'is_valid' => null
     ];
 
     /**
@@ -97,8 +95,7 @@ class InlineResponse20095Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'point_history' => 'point_history',
-        'total_items' => 'total_items'
+        'is_valid' => 'is_valid'
     ];
 
     /**
@@ -107,8 +104,7 @@ class InlineResponse20095Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'point_history' => 'setPointHistory',
-        'total_items' => 'setTotalItems'
+        'is_valid' => 'setIsValid'
     ];
 
     /**
@@ -117,8 +113,7 @@ class InlineResponse20095Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'point_history' => 'getPointHistory',
-        'total_items' => 'getTotalItems'
+        'is_valid' => 'getIsValid'
     ];
 
     /**
@@ -179,8 +174,7 @@ class InlineResponse20095Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['point_history'] = isset($data['point_history']) ? $data['point_history'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['is_valid'] = isset($data['is_valid']) ? $data['is_valid'] : null;
     }
 
     /**
@@ -208,49 +202,25 @@ class InlineResponse20095Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets point_history
+     * Gets is_valid
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[]
+     * @return bool
      */
-    public function getPointHistory()
+    public function getIsValid()
     {
-        return $this->container['point_history'];
+        return $this->container['is_valid'];
     }
 
     /**
-     * Sets point_history
+     * Sets is_valid
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PointHistoryRecord[] $point_history List of the point history records.
+     * @param bool $is_valid Result of the OTP verification.
      *
      * @return $this
      */
-    public function setPointHistory($point_history)
+    public function setIsValid($is_valid)
     {
-        $this->container['point_history'] = $point_history;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_items
-     *
-     * @return int
-     */
-    public function getTotalItems()
-    {
-        return $this->container['total_items'];
-    }
-
-    /**
-     * Sets total_items
-     *
-     * @param int $total_items The number of all found point history records.
-     *
-     * @return $this
-     */
-    public function setTotalItems($total_items)
-    {
-        $this->container['total_items'] = $total_items;
+        $this->container['is_valid'] = $is_valid;
 
         return $this;
     }

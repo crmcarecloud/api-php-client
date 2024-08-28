@@ -56,7 +56,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'search_results' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SearchResult[]',
+        'product_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'search_results' => null,
+        'product_groups' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'search_results' => 'search_results',
+        'product_groups' => 'product_groups',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'search_results' => 'setSearchResults',
+        'product_groups' => 'setProductGroups',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'search_results' => 'getSearchResults',
+        'product_groups' => 'getProductGroups',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['search_results'] = isset($data['search_results']) ? $data['search_results'] : null;
+        $this->container['product_groups'] = isset($data['product_groups']) ? $data['product_groups'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets search_results
+     * Gets product_groups
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SearchResult[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]
      */
-    public function getSearchResults()
+    public function getProductGroups()
     {
-        return $this->container['search_results'];
+        return $this->container['product_groups'];
     }
 
     /**
-     * Sets search_results
+     * Sets product_groups
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SearchResult[] $search_results List of the results.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[] $product_groups List of all product groups.
      *
      * @return $this
      */
-    public function setSearchResults($search_results)
+    public function setProductGroups($product_groups)
     {
-        $this->container['search_results'] = $search_results;
+        $this->container['product_groups'] = $product_groups;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200114Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items Count of the results.
+     * @param int $total_items The number of all found product groups.
      *
      * @return $this
      */

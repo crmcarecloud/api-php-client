@@ -56,8 +56,7 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'card_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CardType[]',
-        'total_items' => 'int'
+        'file_url' => 'string'
     ];
 
     /**
@@ -66,8 +65,7 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'card_types' => null,
-        'total_items' => null
+        'file_url' => null
     ];
 
     /**
@@ -97,8 +95,7 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'card_types' => 'card_types',
-        'total_items' => 'total_items'
+        'file_url' => 'file_url'
     ];
 
     /**
@@ -107,8 +104,7 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'card_types' => 'setCardTypes',
-        'total_items' => 'setTotalItems'
+        'file_url' => 'setFileUrl'
     ];
 
     /**
@@ -117,8 +113,7 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'card_types' => 'getCardTypes',
-        'total_items' => 'getTotalItems'
+        'file_url' => 'getFileUrl'
     ];
 
     /**
@@ -179,8 +174,7 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['card_types'] = isset($data['card_types']) ? $data['card_types'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['file_url'] = isset($data['file_url']) ? $data['file_url'] : null;
     }
 
     /**
@@ -208,49 +202,25 @@ class InlineResponse20022Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets card_types
+     * Gets file_url
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CardType[]
+     * @return string
      */
-    public function getCardTypes()
+    public function getFileUrl()
     {
-        return $this->container['card_types'];
+        return $this->container['file_url'];
     }
 
     /**
-     * Sets card_types
+     * Sets file_url
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CardType[] $card_types Collection of all card types.
+     * @param string $file_url URL address of the PassMachine card.
      *
      * @return $this
      */
-    public function setCardTypes($card_types)
+    public function setFileUrl($file_url)
     {
-        $this->container['card_types'] = $card_types;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_items
-     *
-     * @return int
-     */
-    public function getTotalItems()
-    {
-        return $this->container['total_items'];
-    }
-
-    /**
-     * Sets total_items
-     *
-     * @param int $total_items The number of all found card types.
-     *
-     * @return $this
-     */
-    public function setTotalItems($total_items)
-    {
-        $this->container['total_items'] = $total_items;
+        $this->container['file_url'] = $file_url;
 
         return $this;
     }

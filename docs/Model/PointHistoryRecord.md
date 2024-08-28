@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **customer_id** | **string** | The unique ID of the customer. | [optional] 
-**amount** | **float** | The number of points used in the point operation record. | [optional] 
+**point_amount** | **float** | The number of points used in the point operation record. | [optional] 
 **point_operation_type** | **string** | Type of the point operation record. | [optional] 
 **point_operation_note** | **string** | Note of the point operation record. | [optional] 
 **point_type_id** | **string** | Type of the point record. | [optional] 

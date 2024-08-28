@@ -56,7 +56,8 @@ class InlineResponse20055Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'status_record_id' => 'string'
+        'customer_events' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Event[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -65,7 +66,8 @@ class InlineResponse20055Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'status_record_id' => null
+        'customer_events' => null,
+        'total_items' => null
     ];
 
     /**
@@ -95,7 +97,8 @@ class InlineResponse20055Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status_record_id' => 'status_record_id'
+        'customer_events' => 'customer_events',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -104,7 +107,8 @@ class InlineResponse20055Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status_record_id' => 'setStatusRecordId'
+        'customer_events' => 'setCustomerEvents',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -113,7 +117,8 @@ class InlineResponse20055Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status_record_id' => 'getStatusRecordId'
+        'customer_events' => 'getCustomerEvents',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -174,7 +179,8 @@ class InlineResponse20055Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['status_record_id'] = isset($data['status_record_id']) ? $data['status_record_id'] : null;
+        $this->container['customer_events'] = isset($data['customer_events']) ? $data['customer_events'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -202,25 +208,49 @@ class InlineResponse20055Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets status_record_id
+     * Gets customer_events
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Event[]
      */
-    public function getStatusRecordId()
+    public function getCustomerEvents()
     {
-        return $this->container['status_record_id'];
+        return $this->container['customer_events'];
     }
 
     /**
-     * Sets status_record_id
+     * Sets customer_events
      *
-     * @param string $status_record_id The unique ID of the customer status record.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Event[] $customer_events Collection of all events.
      *
      * @return $this
      */
-    public function setStatusRecordId($status_record_id)
+    public function setCustomerEvents($customer_events)
     {
-        $this->container['status_record_id'] = $status_record_id;
+        $this->container['customer_events'] = $customer_events;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items The number of all found events.
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

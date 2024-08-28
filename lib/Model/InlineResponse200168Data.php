@@ -56,7 +56,8 @@ class InlineResponse200168Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_id' => 'string'
+        'task_states' => '\CrmCareCloud\Webservice\RestApi\Client\Model\TaskState[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -65,7 +66,8 @@ class InlineResponse200168Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_id' => null
+        'task_states' => null,
+        'total_items' => null
     ];
 
     /**
@@ -95,7 +97,8 @@ class InlineResponse200168Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_id' => 'customer_id'
+        'task_states' => 'task_states',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -104,7 +107,8 @@ class InlineResponse200168Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_id' => 'setCustomerId'
+        'task_states' => 'setTaskStates',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -113,7 +117,8 @@ class InlineResponse200168Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_id' => 'getCustomerId'
+        'task_states' => 'getTaskStates',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -174,7 +179,8 @@ class InlineResponse200168Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
+        $this->container['task_states'] = isset($data['task_states']) ? $data['task_states'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -202,25 +208,49 @@ class InlineResponse200168Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_id
+     * Gets task_states
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\TaskState[]
      */
-    public function getCustomerId()
+    public function getTaskStates()
     {
-        return $this->container['customer_id'];
+        return $this->container['task_states'];
     }
 
     /**
-     * Sets customer_id
+     * Sets task_states
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\TaskState[] $task_states List of all task states.
      *
      * @return $this
      */
-    public function setCustomerId($customer_id)
+    public function setTaskStates($task_states)
     {
-        $this->container['customer_id'] = $customer_id;
+        $this->container['task_states'] = $task_states;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items The number of all found task states.
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

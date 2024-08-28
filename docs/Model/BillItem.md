@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **price** | **float** | Value of parameter \&quot;paid_amount\&quot;. In the case of a pharmaceutical client, add to the value of \&quot;paid_amount\&quot; a value of money covered by the customer  health insurance. | 
 **bill_item_id** | **string** | ID of the bill item. | 
 **loyalty_off** | **bool** | Switch off all loyalty benefits (points, discounts- instant and campaign prices, vouchers) on the item. | 
-**purchase_item_type_id** | **string** | Type of the purchase item from resource [purchase-item-types](#tag/Purchase-item-types). | 
+**purchase_item_type_id** | **string** | Type of the purchase item from resource [purchase-item-types](https://carecloud.readme.io/reference/getpurchaseitemtypes).There is a distinction between a purchase in an e-shop, in a brick-and-mortar store, a mobile application, or a cancellation of the purchase. It also differentiates purchases without the possibility of applying loyalty benefits from ordinary purchases or from purchases with the application of loyalty points. | 
 **customer_id** | **string** | The ID of the customer. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

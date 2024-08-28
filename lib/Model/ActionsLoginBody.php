@@ -167,8 +167,9 @@ class ActionsLoginBody implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const LOGIN_TYPE_CARD = 'card';
-const LOGIN_TYPE_EMAIL = 'email';
+    const LOGIN_TYPE_EMAIL = 'email';
+const LOGIN_TYPE_PHONE = 'phone';
+const LOGIN_TYPE_CARD = 'card';
 
     /**
      * Gets allowable values of the enum
@@ -178,8 +179,9 @@ const LOGIN_TYPE_EMAIL = 'email';
     public function getLoginTypeAllowableValues()
     {
         return [
-            self::LOGIN_TYPE_CARD,
-self::LOGIN_TYPE_EMAIL,        ];
+            self::LOGIN_TYPE_EMAIL,
+self::LOGIN_TYPE_PHONE,
+self::LOGIN_TYPE_CARD,        ];
     }
 
     /**

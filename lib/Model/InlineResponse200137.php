@@ -56,7 +56,7 @@ class InlineResponse200137 implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137Data'
+        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Reward'
     ];
 
     /**
@@ -204,7 +204,7 @@ class InlineResponse200137 implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137Data
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Reward
      */
     public function getData()
     {
@@ -214,7 +214,7 @@ class InlineResponse200137 implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137Data $data data
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Reward $data data
      *
      * @return $this
      */

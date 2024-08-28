@@ -56,8 +56,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_sources' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSource[]',
-        'total_items' => 'int'
+        'registration_ability' => 'bool'
     ];
 
     /**
@@ -66,8 +65,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_sources' => null,
-        'total_items' => null
+        'registration_ability' => null
     ];
 
     /**
@@ -97,8 +95,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_sources' => 'customer_sources',
-        'total_items' => 'total_items'
+        'registration_ability' => 'registration_ability'
     ];
 
     /**
@@ -107,8 +104,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_sources' => 'setCustomerSources',
-        'total_items' => 'setTotalItems'
+        'registration_ability' => 'setRegistrationAbility'
     ];
 
     /**
@@ -117,8 +113,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_sources' => 'getCustomerSources',
-        'total_items' => 'getTotalItems'
+        'registration_ability' => 'getRegistrationAbility'
     ];
 
     /**
@@ -179,8 +174,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_sources'] = isset($data['customer_sources']) ? $data['customer_sources'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['registration_ability'] = isset($data['registration_ability']) ? $data['registration_ability'] : null;
     }
 
     /**
@@ -208,49 +202,25 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_sources
+     * Gets registration_ability
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSource[]
+     * @return bool
      */
-    public function getCustomerSources()
+    public function getRegistrationAbility()
     {
-        return $this->container['customer_sources'];
+        return $this->container['registration_ability'];
     }
 
     /**
-     * Sets customer_sources
+     * Sets registration_ability
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSource[] $customer_sources List of the customer sources.
+     * @param bool $registration_ability Result of the possibility to register a customer with his identifier. *Possible results are: false - The identifier cannot be use for the registration / true - Identifier can be use for the registration *
      *
      * @return $this
      */
-    public function setCustomerSources($customer_sources)
+    public function setRegistrationAbility($registration_ability)
     {
-        $this->container['customer_sources'] = $customer_sources;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_items
-     *
-     * @return int
-     */
-    public function getTotalItems()
-    {
-        return $this->container['total_items'];
-    }
-
-    /**
-     * Sets total_items
-     *
-     * @param int $total_items The number of all found customer sources.
-     *
-     * @return $this
-     */
-    public function setTotalItems($total_items)
-    {
-        $this->container['total_items'] = $total_items;
+        $this->container['registration_ability'] = $registration_ability;
 
         return $this;
     }

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getUserRoles**](UserRolesApi.md#getuserroles) | **GET** /user-roles | Get all user roles
 
 # **getUserRole**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175 getUserRole($user_role_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182 getUserRole($user_role_id, $accept_language)
 
 Get information about a user role
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175**](../Model/InlineResponse200175.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182**](../Model/InlineResponse200182.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserRoles**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174 getUserRoles($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181 getUserRoles($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all user roles
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174**](../Model/InlineResponse200174.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181**](../Model/InlineResponse200181.md)
 
 ### Authorization
 

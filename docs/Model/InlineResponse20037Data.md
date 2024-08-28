@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**points** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Point[]**](Point.md) | List of the point records. | [optional] 
-**total_items** | **int** | The number of all found point records. | [optional] 
+**credit_types** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CreditType[]**](CreditType.md) | List of the credit types. | [optional] 
+**total_items** | **int** | The number of all found credit types. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

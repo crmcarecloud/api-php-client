@@ -56,7 +56,9 @@ class InlineResponse200179Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]'
+        'bearer_token' => 'string',
+        'valid_to' => 'string',
+        'user' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User'
     ];
 
     /**
@@ -65,7 +67,9 @@ class InlineResponse200179Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'turnover' => null
+        'bearer_token' => null,
+        'valid_to' => null,
+        'user' => null
     ];
 
     /**
@@ -95,7 +99,9 @@ class InlineResponse200179Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'turnover' => 'turnover'
+        'bearer_token' => 'bearer_token',
+        'valid_to' => 'valid_to',
+        'user' => 'user'
     ];
 
     /**
@@ -104,7 +110,9 @@ class InlineResponse200179Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'turnover' => 'setTurnover'
+        'bearer_token' => 'setBearerToken',
+        'valid_to' => 'setValidTo',
+        'user' => 'setUser'
     ];
 
     /**
@@ -113,7 +121,9 @@ class InlineResponse200179Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'turnover' => 'getTurnover'
+        'bearer_token' => 'getBearerToken',
+        'valid_to' => 'getValidTo',
+        'user' => 'getUser'
     ];
 
     /**
@@ -174,7 +184,9 @@ class InlineResponse200179Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['turnover'] = isset($data['turnover']) ? $data['turnover'] : null;
+        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
+        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -202,25 +214,73 @@ class InlineResponse200179Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets turnover
+     * Gets bearer_token
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
+     * @return string
      */
-    public function getTurnover()
+    public function getBearerToken()
     {
-        return $this->container['turnover'];
+        return $this->container['bearer_token'];
     }
 
     /**
-     * Sets turnover
+     * Sets bearer_token
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $turnover List of all turnover by currency in time interval.
+     * @param string $bearer_token Authentication bearer token for an user. Token can be used for authentication in REST API with Bearer Authentication (more information about it [here](#section/Authorization/bearerAuth)).
      *
      * @return $this
      */
-    public function setTurnover($turnover)
+    public function setBearerToken($bearer_token)
     {
-        $this->container['turnover'] = $turnover;
+        $this->container['bearer_token'] = $bearer_token;
+
+        return $this;
+    }
+
+    /**
+     * Gets valid_to
+     *
+     * @return string
+     */
+    public function getValidTo()
+    {
+        return $this->container['valid_to'];
+    }
+
+    /**
+     * Sets valid_to
+     *
+     * @param string $valid_to Date and time (local time zone of the project) of the token validity.   *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setValidTo($valid_to)
+    {
+        $this->container['valid_to'] = $valid_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets user
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User
+     */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+     * Sets user
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User $user user
+     *
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
 
         return $this;
     }

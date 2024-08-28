@@ -56,7 +56,7 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'task_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'task_assignees' => '\CrmCareCloud\Webservice\RestApi\Client\Model\TaskAssignee[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'task_properties' => null,
+        'task_assignees' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'task_properties' => 'task_properties',
+        'task_assignees' => 'task_assignees',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'task_properties' => 'setTaskProperties',
+        'task_assignees' => 'setTaskAssignees',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'task_properties' => 'getTaskProperties',
+        'task_assignees' => 'getTaskAssignees',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['task_properties'] = isset($data['task_properties']) ? $data['task_properties'] : null;
+        $this->container['task_assignees'] = isset($data['task_assignees']) ? $data['task_assignees'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets task_properties
+     * Gets task_assignees
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\TaskAssignee[]
      */
-    public function getTaskProperties()
+    public function getTaskAssignees()
     {
-        return $this->container['task_properties'];
+        return $this->container['task_assignees'];
     }
 
     /**
-     * Sets task_properties
+     * Sets task_assignees
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $task_properties List of all task properties.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\TaskAssignee[] $task_assignees List of all task assignees.
      *
      * @return $this
      */
-    public function setTaskProperties($task_properties)
+    public function setTaskAssignees($task_assignees)
     {
-        $this->container['task_properties'] = $task_properties;
+        $this->container['task_assignees'] = $task_assignees;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200164Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found task properties.
+     * @param int $total_items The number of all found task assignees.
      *
      * @return $this
      */

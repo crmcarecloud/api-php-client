@@ -6,15 +6,16 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getTokenAuthentication**](TokensApi.md#gettokenauthentication) | **GET** /tokens/{token_id}/actions/auth-token | Get authentication token
 [**postToken**](TokensApi.md#posttoken) | **POST** /tokens | Create a token
+[**postTokenAuthTokenLogin**](TokensApi.md#posttokenauthtokenlogin) | **POST** /tokens/{token_id}/actions/authentication-token-login | Login via authentication token
 [**postTokenLogin**](TokensApi.md#posttokenlogin) | **POST** /tokens/{token_id}/actions/login | Login to the application
 [**postTokenLogout**](TokensApi.md#posttokenlogout) | **POST** /tokens/{token_id}/actions/logout | Logout from the application
-[**postTokenSendPasswordSetup**](TokensApi.md#posttokensendpasswordsetup) | **POST** /tokens/{token_id}/actions/send-password-setup-email | Send email for set up of the new customer password
+[**postTokenSendPasswordSetup**](TokensApi.md#posttokensendpasswordsetup) | **POST** /tokens/{token_id}/actions/send-password-setup-email | Send the message for the setup of a new customer&#x27;s password
 [**postTokenSocialLogin**](TokensApi.md#posttokensociallogin) | **POST** /tokens/{token_id}/actions/social-network-login | Login via social network
 [**postTokenTestCustomerLogin**](TokensApi.md#posttokentestcustomerlogin) | **POST** /tokens/{token_id}/actions/login-test-customer | Login to the application for test customer
 [**putToken**](TokensApi.md#puttoken) | **PUT** /tokens/{token_id} | Edit a push token
 
 # **getTokenAuthentication**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
 
 Get authentication token
 
@@ -40,7 +41,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     $config
 );
 $token_id = "token_id_example"; // string | A client application token.
-$external_application_id = "external_application_id_example"; // string | ID of external application. For ID of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications).
+$external_application_id = "external_application_id_example"; // string | ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator.
 $token_type = 1; // int | Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric*
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
@@ -58,13 +59,13 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token_id** | **string**| A client application token. |
- **external_application_id** | **string**| ID of external application. For ID of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications). |
+ **external_application_id** | **string**| ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. |
  **token_type** | **int**| Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* | [default to 1]
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167**](../Model/InlineResponse200167.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174**](../Model/InlineResponse200174.md)
 
 ### Authorization
 
@@ -137,8 +138,70 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **postTokenAuthTokenLogin**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173 postTokenAuthTokenLogin($body, $token_id, $accept_language)
+
+Login via authentication token
+
+Log in the customer using the provided authentication token for a seamless and secure login experience. <br/> The authentication token can be provided in the method [GET /tokens/{token_id}/actions/auth-token](https://carecloud.readme.io/reference/gettokenauthentication) <br/> ⚠️ Endpoint is available only in Customer interface.<br/>
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAuthenticationtokenloginBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAuthenticationtokenloginBody | 
+$token_id = "token_id_example"; // string | A client application token.
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->postTokenAuthTokenLogin($body, $token_id, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TokensApi->postTokenAuthTokenLogin: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAuthenticationtokenloginBody**](../Model/ActionsAuthenticationtokenloginBody.md)|  |
+ **token_id** | **string**| A client application token. |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173**](../Model/InlineResponse200173.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **postTokenLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054 postTokenLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059 postTokenLogin($body, $token_id, $accept_language)
 
 Login to the application
 
@@ -186,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
 
 ### Authorization
 
@@ -261,9 +324,9 @@ void (empty response body)
 # **postTokenSendPasswordSetup**
 > postTokenSendPasswordSetup($body, $token_id, $accept_language)
 
-Send email for set up of the new customer password
+Send the message for the setup of a new customer's password
 
-Send email, that contains link to set up a new customer password.<br/> The use case [Forgotten password](https://www.crmcarecloud.com/build-a-mobile-app/) shows how to use this action method.<br/> ⚠️ Endpoint is available only in Customer interface.<br/> ⚠️ An extra setup of event type in CareCloud could be necessary to make this method work correctly. If so, don't hesitate to get in touch with the CareCloud administrator in your organization.<br/>
+Send a message, that contains a link to set up a new customer password.<br/> The use case [Forgotten password](https://www.crmcarecloud.com/build-a-mobile-app/#accordion-customer-use-case-customer-account-operations-4) shows how to use this action method.<br/> ⚠️ Endpoint is available only in the Customer interface.<br/> ⚠️ An extra setup of the event type in CareCloud could be necessary to make the endpoint work correctly. If so, don't hesitate to get in touch with the CareCloud administrator in your organization.<br/>
 
 ### Example
 ```php
@@ -382,7 +445,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenTestCustomerLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168 postTokenTestCustomerLogin($token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175 postTokenTestCustomerLogin($token_id, $accept_language)
 
 Login to the application for test customer
 
@@ -428,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168**](../Model/InlineResponse200168.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175**](../Model/InlineResponse200175.md)
 
 ### Authorization
 

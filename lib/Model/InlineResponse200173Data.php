@@ -56,9 +56,7 @@ class InlineResponse200173Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'bearer_token' => 'string',
-        'valid_to' => 'string',
-        'user' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User'
+        'customer_id' => 'string'
     ];
 
     /**
@@ -67,9 +65,7 @@ class InlineResponse200173Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'bearer_token' => null,
-        'valid_to' => null,
-        'user' => null
+        'customer_id' => null
     ];
 
     /**
@@ -99,9 +95,7 @@ class InlineResponse200173Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bearer_token' => 'bearer_token',
-        'valid_to' => 'valid_to',
-        'user' => 'user'
+        'customer_id' => 'customer_id'
     ];
 
     /**
@@ -110,9 +104,7 @@ class InlineResponse200173Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bearer_token' => 'setBearerToken',
-        'valid_to' => 'setValidTo',
-        'user' => 'setUser'
+        'customer_id' => 'setCustomerId'
     ];
 
     /**
@@ -121,9 +113,7 @@ class InlineResponse200173Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bearer_token' => 'getBearerToken',
-        'valid_to' => 'getValidTo',
-        'user' => 'getUser'
+        'customer_id' => 'getCustomerId'
     ];
 
     /**
@@ -184,9 +174,7 @@ class InlineResponse200173Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
-        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
     }
 
     /**
@@ -214,73 +202,25 @@ class InlineResponse200173Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bearer_token
+     * Gets customer_id
      *
      * @return string
      */
-    public function getBearerToken()
+    public function getCustomerId()
     {
-        return $this->container['bearer_token'];
+        return $this->container['customer_id'];
     }
 
     /**
-     * Sets bearer_token
+     * Sets customer_id
      *
-     * @param string $bearer_token Authentication bearer token for an user. Token can be used for authentication in REST API with Bearer Authentication (more information about it [here](#section/Authorization/bearerAuth))
+     * @param string $customer_id The unique ID of the logged in customer.
      *
      * @return $this
      */
-    public function setBearerToken($bearer_token)
+    public function setCustomerId($customer_id)
     {
-        $this->container['bearer_token'] = $bearer_token;
-
-        return $this;
-    }
-
-    /**
-     * Gets valid_to
-     *
-     * @return string
-     */
-    public function getValidTo()
-    {
-        return $this->container['valid_to'];
-    }
-
-    /**
-     * Sets valid_to
-     *
-     * @param string $valid_to Date and time (local time zone of the project) of the token validity.  *(YYYY-MM-DD HH:MM:SS)*
-     *
-     * @return $this
-     */
-    public function setValidTo($valid_to)
-    {
-        $this->container['valid_to'] = $valid_to;
-
-        return $this;
-    }
-
-    /**
-     * Gets user
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User
-     */
-    public function getUser()
-    {
-        return $this->container['user'];
-    }
-
-    /**
-     * Sets user
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User $user user
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        $this->container['user'] = $user;
+        $this->container['customer_id'] = $customer_id;
 
         return $this;
     }

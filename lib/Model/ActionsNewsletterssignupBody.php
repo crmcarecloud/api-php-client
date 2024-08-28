@@ -58,7 +58,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'contact' => 'string',
         'customer_source_id' => 'string',
-        'agreements' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement'
+        'agreements' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement',
+        'language_id' => 'string'
     ];
 
     /**
@@ -69,7 +70,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'contact' => null,
         'customer_source_id' => null,
-        'agreements' => null
+        'agreements' => null,
+        'language_id' => null
     ];
 
     /**
@@ -101,7 +103,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'contact' => 'contact',
         'customer_source_id' => 'customer_source_id',
-        'agreements' => 'agreements'
+        'agreements' => 'agreements',
+        'language_id' => 'language_id'
     ];
 
     /**
@@ -112,7 +115,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
     protected static $setters = [
         'contact' => 'setContact',
         'customer_source_id' => 'setCustomerSourceId',
-        'agreements' => 'setAgreements'
+        'agreements' => 'setAgreements',
+        'language_id' => 'setLanguageId'
     ];
 
     /**
@@ -123,7 +127,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
     protected static $getters = [
         'contact' => 'getContact',
         'customer_source_id' => 'getCustomerSourceId',
-        'agreements' => 'getAgreements'
+        'agreements' => 'getAgreements',
+        'language_id' => 'getLanguageId'
     ];
 
     /**
@@ -187,6 +192,7 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
         $this->container['contact'] = isset($data['contact']) ? $data['contact'] : null;
         $this->container['customer_source_id'] = isset($data['customer_source_id']) ? $data['customer_source_id'] : null;
         $this->container['agreements'] = isset($data['agreements']) ? $data['agreements'] : null;
+        $this->container['language_id'] = isset($data['language_id']) ? $data['language_id'] : null;
     }
 
     /**
@@ -287,6 +293,30 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
     public function setAgreements($agreements)
     {
         $this->container['agreements'] = $agreements;
+
+        return $this;
+    }
+
+    /**
+     * Gets language_id
+     *
+     * @return string
+     */
+    public function getLanguageId()
+    {
+        return $this->container['language_id'];
+    }
+
+    /**
+     * Sets language_id
+     *
+     * @param string $language_id The unique ID of the language by ISO 639-1 code.
+     *
+     * @return $this
+     */
+    public function setLanguageId($language_id)
+    {
+        $this->container['language_id'] = $language_id;
 
         return $this;
     }

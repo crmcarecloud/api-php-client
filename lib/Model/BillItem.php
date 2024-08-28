@@ -518,7 +518,7 @@ class BillItem implements ModelInterface, ArrayAccess
     /**
      * Sets purchase_item_type_id
      *
-     * @param string $purchase_item_type_id Type of the purchase item from resource [purchase-item-types](#tag/Purchase-item-types).
+     * @param string $purchase_item_type_id Type of the purchase item from resource [purchase-item-types](https://carecloud.readme.io/reference/getpurchaseitemtypes).There is a distinction between a purchase in an e-shop, in a brick-and-mortar store, a mobile application, or a cancellation of the purchase. It also differentiates purchases without the possibility of applying loyalty benefits from ordinary purchases or from purchases with the application of loyalty points.
      *
      * @return $this
      */

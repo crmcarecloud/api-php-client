@@ -56,7 +56,9 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'email' => 'string'
+        'email' => 'string',
+        'communication_channel_id' => 'string',
+        'recipient' => 'string'
     ];
 
     /**
@@ -65,7 +67,9 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'email' => null
+        'email' => null,
+        'communication_channel_id' => null,
+        'recipient' => null
     ];
 
     /**
@@ -95,7 +99,9 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email' => 'email'
+        'email' => 'email',
+        'communication_channel_id' => 'communication_channel_id',
+        'recipient' => 'recipient'
     ];
 
     /**
@@ -104,7 +110,9 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'communication_channel_id' => 'setCommunicationChannelId',
+        'recipient' => 'setRecipient'
     ];
 
     /**
@@ -113,7 +121,9 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'communication_channel_id' => 'getCommunicationChannelId',
+        'recipient' => 'getRecipient'
     ];
 
     /**
@@ -175,6 +185,8 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['communication_channel_id'] = isset($data['communication_channel_id']) ? $data['communication_channel_id'] : null;
+        $this->container['recipient'] = isset($data['recipient']) ? $data['recipient'] : null;
     }
 
     /**
@@ -186,9 +198,6 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,13 +226,61 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Message with a setup password link will be delivered to this email address.
+     * @param string $email Message with a setup password link will be delivered to this email address. <br/> ⚠️This parameter is deprecated and will be removed in the future versions of CareCloud API.If possible do not use it.
      *
      * @return $this
      */
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication_channel_id
+     *
+     * @return string
+     */
+    public function getCommunicationChannelId()
+    {
+        return $this->container['communication_channel_id'];
+    }
+
+    /**
+     * Sets communication_channel_id
+     *
+     * @param string $communication_channel_id ID of communication channels that will be used for password setup. Parameter is required if `email` parameter is not set.The list of all available channels is provided here: [GET /communication-channels](https://carecloud.readme.io/reference/getcommunicationchannels) <br/> The possibility of a password setup message from a channel may vary depending on the project setup. For more information, please contact the CareCloud administrator.
+     *
+     * @return $this
+     */
+    public function setCommunicationChannelId($communication_channel_id)
+    {
+        $this->container['communication_channel_id'] = $communication_channel_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipient
+     *
+     * @return string
+     */
+    public function getRecipient()
+    {
+        return $this->container['recipient'];
+    }
+
+    /**
+     * Sets recipient
+     *
+     * @param string $recipient Recipient of the message with a password setup. The value of a parameter depending on `communication_channel_id`. Parameter is required if `email` parameter is not set.
+     *
+     * @return $this
+     */
+    public function setRecipient($recipient)
+    {
+        $this->container['recipient'] = $recipient;
 
         return $this;
     }

@@ -56,7 +56,7 @@ class InlineResponse20086Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'orders' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Order[]',
+        'interests' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20086Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'orders' => null,
+        'interests' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20086Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'orders' => 'orders',
+        'interests' => 'interests',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20086Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'orders' => 'setOrders',
+        'interests' => 'setInterests',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20086Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'orders' => 'getOrders',
+        'interests' => 'getInterests',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20086Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
+        $this->container['interests'] = isset($data['interests']) ? $data['interests'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20086Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets orders
+     * Gets interests
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Order[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]
      */
-    public function getOrders()
+    public function getInterests()
     {
-        return $this->container['orders'];
+        return $this->container['interests'];
     }
 
     /**
-     * Sets orders
+     * Sets interests
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Order[] $orders Collection of the customer orders.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[] $interests List of all interests.
      *
      * @return $this
      */
-    public function setOrders($orders)
+    public function setInterests($interests)
     {
-        $this->container['orders'] = $orders;
+        $this->container['interests'] = $interests;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20086Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found customer orders.
+     * @param int $total_items The number of all found interests.
      *
      * @return $this
      */

@@ -95,14 +95,15 @@ class WalletApi
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200188
      */
-    public function getWalletCredits($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
+    public function getWalletCredits($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null, $credit_type_id = null)
     {
-        list($response) = $this->getWalletCreditsWithHttpInfo($customer_id, $accept_language, $date_from, $date_to);
+        list($response) = $this->getWalletCreditsWithHttpInfo($customer_id, $accept_language, $date_from, $date_to, $credit_type_id);
         return $response;
     }
 
@@ -115,15 +116,16 @@ class WalletApi
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200188, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWalletCreditsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
+    public function getWalletCreditsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null, $credit_type_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181';
-        $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200188';
+        $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to, $credit_type_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -174,7 +176,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200188',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -241,13 +243,14 @@ class WalletApi
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWalletCreditsAsync($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
+    public function getWalletCreditsAsync($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null, $credit_type_id = null)
     {
-        return $this->getWalletCreditsAsyncWithHttpInfo($customer_id, $accept_language, $date_from, $date_to)
+        return $this->getWalletCreditsAsyncWithHttpInfo($customer_id, $accept_language, $date_from, $date_to, $credit_type_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -264,14 +267,15 @@ class WalletApi
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string|null $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
      * @param  string|null $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWalletCreditsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
+    public function getWalletCreditsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null, $credit_type_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181';
-        $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200188';
+        $request = $this->getWalletCreditsRequest($customer_id, $accept_language, $date_from, $date_to, $credit_type_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -317,11 +321,12 @@ class WalletApi
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
      * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getWalletCreditsRequest($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
+    protected function getWalletCreditsRequest($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null, $credit_type_id = null)
     {
         // verify the required parameter 'customer_id' is set
         if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
@@ -348,6 +353,10 @@ class WalletApi
         // query params
         if ($date_to !== null) {
             $queryParams['date_to'] = ObjectSerializer::toQueryValue($date_to, null);
+        }
+        // query params
+        if ($credit_type_id !== null) {
+            $queryParams['credit_type_id'] = ObjectSerializer::toQueryValue($credit_type_id, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -438,7 +447,7 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189
      */
     public function getWalletCreditsExpiration($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -456,11 +465,11 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletCreditsExpirationWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189';
         $request = $this->getWalletCreditsExpirationRequest($customer_id, $accept_language);
 
         try {
@@ -512,7 +521,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -604,7 +613,7 @@ class WalletApi
      */
     public function getWalletCreditsExpirationAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189';
         $request = $this->getWalletCreditsExpirationRequest($customer_id, $accept_language);
 
         return $this->client
@@ -764,7 +773,7 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200187
      */
     public function getWalletPoints($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -784,11 +793,11 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200187, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletPointsWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200187';
         $request = $this->getWalletPointsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -840,7 +849,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200187',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -936,7 +945,7 @@ class WalletApi
      */
     public function getWalletPointsAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200187';
         $request = $this->getWalletPointsRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client
@@ -1104,7 +1113,7 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189
      */
     public function getWalletPointsExpiration($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1122,11 +1131,11 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletPointsExpirationWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189';
         $request = $this->getWalletPointsExpirationRequest($customer_id, $accept_language);
 
         try {
@@ -1178,7 +1187,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1270,7 +1279,7 @@ class WalletApi
      */
     public function getWalletPointsExpirationAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200189';
         $request = $this->getWalletPointsExpirationRequest($customer_id, $accept_language);
 
         return $this->client
@@ -1430,7 +1439,7 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186
      */
     public function getWalletSalesTurnover($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
@@ -1450,11 +1459,11 @@ class WalletApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWalletSalesTurnoverWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186';
         $request = $this->getWalletSalesTurnoverRequest($customer_id, $accept_language, $date_from, $date_to);
 
         try {
@@ -1506,7 +1515,7 @@ class WalletApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1602,7 +1611,7 @@ class WalletApi
      */
     public function getWalletSalesTurnoverAsyncWithHttpInfo($customer_id, $accept_language = 'cs, en-gb;q=0.8', $date_from = null, $date_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186';
         $request = $this->getWalletSalesTurnoverRequest($customer_id, $accept_language, $date_from, $date_to);
 
         return $this->client

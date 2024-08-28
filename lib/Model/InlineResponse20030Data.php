@@ -56,7 +56,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'purchases' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[]',
+        'communication_channels' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'purchases' => null,
+        'communication_channels' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'purchases' => 'purchases',
+        'communication_channels' => 'communication_channels',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'purchases' => 'setPurchases',
+        'communication_channels' => 'setCommunicationChannels',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'purchases' => 'getPurchases',
+        'communication_channels' => 'getCommunicationChannels',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['purchases'] = isset($data['purchases']) ? $data['purchases'] : null;
+        $this->container['communication_channels'] = isset($data['communication_channels']) ? $data['communication_channels'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets purchases
+     * Gets communication_channels
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]
      */
-    public function getPurchases()
+    public function getCommunicationChannels()
     {
-        return $this->container['purchases'];
+        return $this->container['communication_channels'];
     }
 
     /**
-     * Sets purchases
+     * Sets communication_channels
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[] $purchases List of purchases.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[] $communication_channels Structure of the communication channel.
      *
      * @return $this
      */
-    public function setPurchases($purchases)
+    public function setCommunicationChannels($communication_channels)
     {
-        $this->container['purchases'] = $purchases;
+        $this->container['communication_channels'] = $communication_channels;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found purchases.
+     * @param int $total_items Total count of found items of the resource communication channels.
      *
      * @return $this
      */

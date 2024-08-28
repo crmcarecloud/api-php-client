@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**postBatchCards**](CardsApi.md#postbatchcards) | **POST** /cards/batch | Create a batch of cards
 [**postCard**](CardsApi.md#postcard) | **POST** /cards | Create a card
 [**postGenerateDigitalCard**](CardsApi.md#postgeneratedigitalcard) | **POST** /cards/actions/generate-digital-card-file | Generate virtual card file
+[**postGeneratePassMachine**](CardsApi.md#postgeneratepassmachine) | **POST** /cards/actions/generate-pass-machine-card | Get a PassMachine digital card
 [**postValidateFreeCard**](CardsApi.md#postvalidatefreecard) | **POST** /cards/actions/validate-free-card | Validate free card
 [**putCard**](CardsApi.md#putcard) | **PUT** /cards/{card_id} | Update a card
 
@@ -380,6 +381,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postGeneratePassMachine**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022 postGeneratePassMachine($body, $accept_language)
+
+Get a PassMachine digital card
+
+Generate a link for a PassMachine digital card.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratepassmachinecardBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratepassmachinecardBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->postGeneratePassMachine($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CardsApi->postGeneratePassMachine: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGeneratepassmachinecardBody**](../Model/ActionsGeneratepassmachinecardBody.md)|  |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 

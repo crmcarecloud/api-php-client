@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entrances** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Entrance[]**](Entrance.md) | List of available entrances. | [optional] 
-**total_items** | **int** | The number of all found entrances. | [optional] 
+**product_brands** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[]**](ProductBrand.md) | List of product brands tied to the reward. | [optional] 
+**total_items** | **int** | Number of all found product brands. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

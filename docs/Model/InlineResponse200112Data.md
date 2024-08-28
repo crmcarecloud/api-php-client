@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reservable_products** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Product[]**](Product.md) | List of reservable products. | [optional] 
-**total_items** | **int** | The number of all found reservable products. | [optional] 
+**product_brands** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[]**](ProductBrand.md) | List of all product brands. | [optional] 
+**total_items** | **int** | The number of all found product brands. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -56,10 +56,8 @@ class InlineResponse200143Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'active_entrances' => 'int',
-        'canceled_entrances' => 'int',
-        'deactivated_entrances' => 'int',
-        'sold_entrances' => 'int'
+        'tags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -68,10 +66,8 @@ class InlineResponse200143Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'active_entrances' => null,
-        'canceled_entrances' => null,
-        'deactivated_entrances' => null,
-        'sold_entrances' => null
+        'tags' => null,
+        'total_items' => null
     ];
 
     /**
@@ -101,10 +97,8 @@ class InlineResponse200143Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'active_entrances' => 'active_entrances',
-        'canceled_entrances' => 'canceled_entrances',
-        'deactivated_entrances' => 'deactivated_entrances',
-        'sold_entrances' => 'sold_entrances'
+        'tags' => 'tags',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -113,10 +107,8 @@ class InlineResponse200143Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'active_entrances' => 'setActiveEntrances',
-        'canceled_entrances' => 'setCanceledEntrances',
-        'deactivated_entrances' => 'setDeactivatedEntrances',
-        'sold_entrances' => 'setSoldEntrances'
+        'tags' => 'setTags',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -125,10 +117,8 @@ class InlineResponse200143Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'active_entrances' => 'getActiveEntrances',
-        'canceled_entrances' => 'getCanceledEntrances',
-        'deactivated_entrances' => 'getDeactivatedEntrances',
-        'sold_entrances' => 'getSoldEntrances'
+        'tags' => 'getTags',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -189,10 +179,8 @@ class InlineResponse200143Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['active_entrances'] = isset($data['active_entrances']) ? $data['active_entrances'] : null;
-        $this->container['canceled_entrances'] = isset($data['canceled_entrances']) ? $data['canceled_entrances'] : null;
-        $this->container['deactivated_entrances'] = isset($data['deactivated_entrances']) ? $data['deactivated_entrances'] : null;
-        $this->container['sold_entrances'] = isset($data['sold_entrances']) ? $data['sold_entrances'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -220,97 +208,49 @@ class InlineResponse200143Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets active_entrances
+     * Gets tags
      *
-     * @return int
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]
      */
-    public function getActiveEntrances()
+    public function getTags()
     {
-        return $this->container['active_entrances'];
+        return $this->container['tags'];
     }
 
     /**
-     * Sets active_entrances
+     * Sets tags
      *
-     * @param int $active_entrances Amount of active entrances in date range. Active entrances can be used by customers in their validity range.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[] $tags List of the all tags assigned to the resource rewards.
      *
      * @return $this
      */
-    public function setActiveEntrances($active_entrances)
+    public function setTags($tags)
     {
-        $this->container['active_entrances'] = $active_entrances;
+        $this->container['tags'] = $tags;
 
         return $this;
     }
 
     /**
-     * Gets canceled_entrances
+     * Gets total_items
      *
      * @return int
      */
-    public function getCanceledEntrances()
+    public function getTotalItems()
     {
-        return $this->container['canceled_entrances'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets canceled_entrances
+     * Sets total_items
      *
-     * @param int $canceled_entrances Amount of canceled entrances in date range. Canceled entrances in production systems and in CareCloud. Customers cannot use them anymore.
+     * @param int $total_items The number of all found tags.
      *
      * @return $this
      */
-    public function setCanceledEntrances($canceled_entrances)
+    public function setTotalItems($total_items)
     {
-        $this->container['canceled_entrances'] = $canceled_entrances;
-
-        return $this;
-    }
-
-    /**
-     * Gets deactivated_entrances
-     *
-     * @return int
-     */
-    public function getDeactivatedEntrances()
-    {
-        return $this->container['deactivated_entrances'];
-    }
-
-    /**
-     * Sets deactivated_entrances
-     *
-     * @param int $deactivated_entrances Amount of deactivated entrances in date range. Entrances deactivated in CareCloud only. These entrances are usually not sent to production systems. Deactivation have been done in system CareCloud.
-     *
-     * @return $this
-     */
-    public function setDeactivatedEntrances($deactivated_entrances)
-    {
-        $this->container['deactivated_entrances'] = $deactivated_entrances;
-
-        return $this;
-    }
-
-    /**
-     * Gets sold_entrances
-     *
-     * @return int
-     */
-    public function getSoldEntrances()
-    {
-        return $this->container['sold_entrances'];
-    }
-
-    /**
-     * Sets sold_entrances
-     *
-     * @param int $sold_entrances Amount of sold entrances in date range. Entrances deactivated in CareCloud only. These entrances are usually not sent to production systems. Deactivation have been done in system CareCloud.
-     *
-     * @return $this
-     */
-    public function setSoldEntrances($sold_entrances)
-    {
-        $this->container['sold_entrances'] = $sold_entrances;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

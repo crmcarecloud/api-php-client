@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**postCreditTransfer**](CreditsApi.md#postcredittransfer) | **POST** /credits/actions/transfer-credits | Transfer credits
 
 # **getCredit**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029 getCredit($credit_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034 getCredit($credit_id, $accept_language)
 
 Get a credit record
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20029**](../Model/InlineResponse20029.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCredits**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028 getCredits($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $credit_type_id, $create_credit_time_from, $create_credit_time_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033 getCredits($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $credit_type_id, $create_credit_time_from, $create_credit_time_to)
 
 Get all credit records
 
@@ -103,7 +103,7 @@ $offset = 0; // int | The number of records from a collection to skip.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
-$credit_type_id = "credit_type_id_example"; // string | The unique ID of a credit type.
+$credit_type_id = "credit_type_id_example"; // string | The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. <br/> In case you want to filter multiple options use array syntax : `credit_type_id[]=8bc8ca16f9c5039951021700a2&credit_type_id[]=82c06812c0756528660784fef`
 $create_credit_time_from = "create_credit_time_from_example"; // string | Date and time from of the create credit record. *(YYYY-MM-DD HH:MM:SS)*
 $create_credit_time_to = "create_credit_time_to_example"; // string | Date and time to of the create credit record. *(YYYY-MM-DD HH:MM:SS)*
 
@@ -126,13 +126,13 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
- **credit_type_id** | **string**| The unique ID of a credit type. | [optional]
+ **credit_type_id** | **string**| The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
  **create_credit_time_from** | **string**| Date and time from of the create credit record. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **create_credit_time_to** | **string**| Date and time to of the create credit record. *(YYYY-MM-DD HH:MM:SS)* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20028**](../Model/InlineResponse20028.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20033**](../Model/InlineResponse20033.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCreditPurchases**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030 getSubCreditPurchases($credit_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035 getSubCreditPurchases($credit_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension)
 
 Get a collection of purchases
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
 
 ### Authorization
 

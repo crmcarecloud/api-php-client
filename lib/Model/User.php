@@ -63,8 +63,9 @@ class User implements ModelInterface, ArrayAccess
         'last_name' => 'string',
         'email' => 'string',
         'phone' => 'string',
-        'user_role_id' => 'string',
-        'store_id' => 'string'
+        'user_role_ids' => 'array',
+        'store_id' => 'string',
+        'last_login' => 'string'
     ];
 
     /**
@@ -79,8 +80,9 @@ class User implements ModelInterface, ArrayAccess
         'last_name' => null,
         'email' => null,
         'phone' => null,
-        'user_role_id' => null,
-        'store_id' => null
+        'user_role_ids' => null,
+        'store_id' => null,
+        'last_login' => null
     ];
 
     /**
@@ -116,8 +118,9 @@ class User implements ModelInterface, ArrayAccess
         'last_name' => 'last_name',
         'email' => 'email',
         'phone' => 'phone',
-        'user_role_id' => 'user_role_id',
-        'store_id' => 'store_id'
+        'user_role_ids' => 'user_role_ids',
+        'store_id' => 'store_id',
+        'last_login' => 'last_login'
     ];
 
     /**
@@ -132,8 +135,9 @@ class User implements ModelInterface, ArrayAccess
         'last_name' => 'setLastName',
         'email' => 'setEmail',
         'phone' => 'setPhone',
-        'user_role_id' => 'setUserRoleId',
-        'store_id' => 'setStoreId'
+        'user_role_ids' => 'setUserRoleIds',
+        'store_id' => 'setStoreId',
+        'last_login' => 'setLastLogin'
     ];
 
     /**
@@ -148,8 +152,9 @@ class User implements ModelInterface, ArrayAccess
         'last_name' => 'getLastName',
         'email' => 'getEmail',
         'phone' => 'getPhone',
-        'user_role_id' => 'getUserRoleId',
-        'store_id' => 'getStoreId'
+        'user_role_ids' => 'getUserRoleIds',
+        'store_id' => 'getStoreId',
+        'last_login' => 'getLastLogin'
     ];
 
     /**
@@ -216,8 +221,9 @@ class User implements ModelInterface, ArrayAccess
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
-        $this->container['user_role_id'] = isset($data['user_role_id']) ? $data['user_role_id'] : null;
+        $this->container['user_role_ids'] = isset($data['user_role_ids']) ? $data['user_role_ids'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['last_login'] = isset($data['last_login']) ? $data['last_login'] : null;
     }
 
     /**
@@ -401,25 +407,25 @@ class User implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets user_role_id
+     * Gets user_role_ids
      *
-     * @return string
+     * @return array
      */
-    public function getUserRoleId()
+    public function getUserRoleIds()
     {
-        return $this->container['user_role_id'];
+        return $this->container['user_role_ids'];
     }
 
     /**
-     * Sets user_role_id
+     * Sets user_role_ids
      *
-     * @param string $user_role_id The unique ID of the user role.
+     * @param array $user_role_ids The list of the user role IDs.
      *
      * @return $this
      */
-    public function setUserRoleId($user_role_id)
+    public function setUserRoleIds($user_role_ids)
     {
-        $this->container['user_role_id'] = $user_role_id;
+        $this->container['user_role_ids'] = $user_role_ids;
 
         return $this;
     }
@@ -444,6 +450,30 @@ class User implements ModelInterface, ArrayAccess
     public function setStoreId($store_id)
     {
         $this->container['store_id'] = $store_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_login
+     *
+     * @return string
+     */
+    public function getLastLogin()
+    {
+        return $this->container['last_login'];
+    }
+
+    /**
+     * Sets last_login
+     *
+     * @param string $last_login Date and time of the last user login. *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setLastLogin($last_login)
+    {
+        $this->container['last_login'] = $last_login;
 
         return $this;
     }

@@ -96,7 +96,7 @@ class EventsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078
      */
     public function getEvent($event_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class EventsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventWithHttpInfo($event_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078';
         $request = $this->getEventRequest($event_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class EventsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class EventsApi
      */
     public function getEventAsyncWithHttpInfo($event_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20078';
         $request = $this->getEventRequest($event_id, $accept_language);
 
         return $this->client
@@ -429,14 +429,16 @@ class EventsApi
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
+     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077
      */
-    public function getEvents($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null)
+    public function getEvents($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null, $time_from = null, $time_to = null)
     {
-        list($response) = $this->getEventsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records);
+        list($response) = $this->getEventsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records, $time_from, $time_to);
         return $response;
     }
 
@@ -455,15 +457,17 @@ class EventsApi
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
+     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getEventsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null)
+    public function getEventsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null, $time_from = null, $time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067';
-        $request = $this->getEventsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077';
+        $request = $this->getEventsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records, $time_from, $time_to);
 
         try {
             $options = $this->createHttpClientOption();
@@ -514,7 +518,7 @@ class EventsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -587,13 +591,15 @@ class EventsApi
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
+     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEventsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null)
+    public function getEventsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null, $time_from = null, $time_to = null)
     {
-        return $this->getEventsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records)
+        return $this->getEventsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records, $time_from, $time_to)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -616,14 +622,16 @@ class EventsApi
      * @param  string|null $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[]|null $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool|null $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
+     * @param  string|null $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEventsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null)
+    public function getEventsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null, $time_from = null, $time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067';
-        $request = $this->getEventsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20077';
+        $request = $this->getEventsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records, $time_from, $time_to);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -675,11 +683,13 @@ class EventsApi
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
+     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getEventsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null)
+    protected function getEventsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $event_type_id = null, $customer_id = null, $external_id = null, $event_type_ids = null, $include_property_records = null, $time_from = null, $time_to = null)
     {
 
         $resourcePath = '/events';
@@ -728,6 +738,14 @@ class EventsApi
         // query params
         if ($include_property_records !== null) {
             $queryParams['include_property_records'] = ObjectSerializer::toQueryValue($include_property_records, null);
+        }
+        // query params
+        if ($time_from !== null) {
+            $queryParams['time_from'] = ObjectSerializer::toQueryValue($time_from, null);
+        }
+        // query params
+        if ($time_to !== null) {
+            $queryParams['time_to'] = ObjectSerializer::toQueryValue($time_to, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -818,7 +836,7 @@ class EventsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079
      */
     public function getSubEventProperties($event_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -836,11 +854,11 @@ class EventsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubEventPropertiesWithHttpInfo($event_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079';
         $request = $this->getSubEventPropertiesRequest($event_id, $accept_language);
 
         try {
@@ -892,7 +910,7 @@ class EventsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -984,7 +1002,7 @@ class EventsApi
      */
     public function getSubEventPropertiesAsyncWithHttpInfo($event_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20079';
         $request = $this->getSubEventPropertiesRequest($event_id, $accept_language);
 
         return $this->client

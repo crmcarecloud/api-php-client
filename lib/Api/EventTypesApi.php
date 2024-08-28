@@ -96,7 +96,7 @@ class EventTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20084
      */
     public function getEventType($event_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class EventTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20084, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventTypeWithHttpInfo($event_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20084';
         $request = $this->getEventTypeRequest($event_type_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class EventTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20084',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class EventTypesApi
      */
     public function getEventTypeAsyncWithHttpInfo($event_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20084';
         $request = $this->getEventTypeRequest($event_type_id, $accept_language);
 
         return $this->client
@@ -428,7 +428,7 @@ class EventTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083
      */
     public function getEventTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -450,11 +450,11 @@ class EventTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083';
         $request = $this->getEventTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -506,7 +506,7 @@ class EventTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -606,7 +606,7 @@ class EventTypesApi
      */
     public function getEventTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20073';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20083';
         $request = $this->getEventTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client
@@ -782,7 +782,7 @@ class EventTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085
      */
     public function getSubEventTypeProperties($event_type_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -804,11 +804,11 @@ class EventTypesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubEventTypePropertiesWithHttpInfo($event_type_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085';
         $request = $this->getSubEventTypePropertiesRequest($event_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -860,7 +860,7 @@ class EventTypesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -960,7 +960,7 @@ class EventTypesApi
      */
     public function getSubEventTypePropertiesAsyncWithHttpInfo($event_type_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20085';
         $request = $this->getSubEventTypePropertiesRequest($event_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client

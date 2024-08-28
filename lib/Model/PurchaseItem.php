@@ -59,6 +59,11 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'purchase_item_id' => 'string',
         'product_id' => 'string',
+        'product_name' => 'string',
+        'product_group_id' => 'string',
+        'product_group_name' => 'string',
+        'product_brand_id' => 'string',
+        'product_brand_name' => 'string',
         'external_id' => 'string',
         'purchase_item_type_id' => 'string',
         'price' => 'float',
@@ -75,6 +80,11 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'purchase_item_id' => null,
         'product_id' => null,
+        'product_name' => null,
+        'product_group_id' => null,
+        'product_group_name' => null,
+        'product_brand_id' => null,
+        'product_brand_name' => null,
         'external_id' => null,
         'purchase_item_type_id' => null,
         'price' => 'float',
@@ -112,6 +122,11 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'purchase_item_id' => 'purchase_item_id',
         'product_id' => 'product_id',
+        'product_name' => 'product_name',
+        'product_group_id' => 'product_group_id',
+        'product_group_name' => 'product_group_name',
+        'product_brand_id' => 'product_brand_id',
+        'product_brand_name' => 'product_brand_name',
         'external_id' => 'external_id',
         'purchase_item_type_id' => 'purchase_item_type_id',
         'price' => 'price',
@@ -128,6 +143,11 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     protected static $setters = [
         'purchase_item_id' => 'setPurchaseItemId',
         'product_id' => 'setProductId',
+        'product_name' => 'setProductName',
+        'product_group_id' => 'setProductGroupId',
+        'product_group_name' => 'setProductGroupName',
+        'product_brand_id' => 'setProductBrandId',
+        'product_brand_name' => 'setProductBrandName',
         'external_id' => 'setExternalId',
         'purchase_item_type_id' => 'setPurchaseItemTypeId',
         'price' => 'setPrice',
@@ -144,6 +164,11 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     protected static $getters = [
         'purchase_item_id' => 'getPurchaseItemId',
         'product_id' => 'getProductId',
+        'product_name' => 'getProductName',
+        'product_group_id' => 'getProductGroupId',
+        'product_group_name' => 'getProductGroupName',
+        'product_brand_id' => 'getProductBrandId',
+        'product_brand_name' => 'getProductBrandName',
         'external_id' => 'getExternalId',
         'purchase_item_type_id' => 'getPurchaseItemTypeId',
         'price' => 'getPrice',
@@ -212,6 +237,11 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     {
         $this->container['purchase_item_id'] = isset($data['purchase_item_id']) ? $data['purchase_item_id'] : null;
         $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
+        $this->container['product_name'] = isset($data['product_name']) ? $data['product_name'] : null;
+        $this->container['product_group_id'] = isset($data['product_group_id']) ? $data['product_group_id'] : null;
+        $this->container['product_group_name'] = isset($data['product_group_name']) ? $data['product_group_name'] : null;
+        $this->container['product_brand_id'] = isset($data['product_brand_id']) ? $data['product_brand_id'] : null;
+        $this->container['product_brand_name'] = isset($data['product_brand_name']) ? $data['product_brand_name'] : null;
         $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
         $this->container['purchase_item_type_id'] = isset($data['purchase_item_type_id']) ? $data['purchase_item_type_id'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
@@ -296,13 +326,133 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     /**
      * Sets product_id
      *
-     * @param string $product_id The unique ID of the [product](#tag/Product).
+     * @param string $product_id The unique ID of the [product](https://carecloud.readme.io/reference/getproducts).
      *
      * @return $this
      */
     public function setProductId($product_id)
     {
         $this->container['product_id'] = $product_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_name
+     *
+     * @return string
+     */
+    public function getProductName()
+    {
+        return $this->container['product_name'];
+    }
+
+    /**
+     * Sets product_name
+     *
+     * @param string $product_name The unique name of the [product](https://carecloud.readme.io/reference/getproducts).
+     *
+     * @return $this
+     */
+    public function setProductName($product_name)
+    {
+        $this->container['product_name'] = $product_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_group_id
+     *
+     * @return string
+     */
+    public function getProductGroupId()
+    {
+        return $this->container['product_group_id'];
+    }
+
+    /**
+     * Sets product_group_id
+     *
+     * @param string $product_group_id The unique ID of the product group.
+     *
+     * @return $this
+     */
+    public function setProductGroupId($product_group_id)
+    {
+        $this->container['product_group_id'] = $product_group_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_group_name
+     *
+     * @return string
+     */
+    public function getProductGroupName()
+    {
+        return $this->container['product_group_name'];
+    }
+
+    /**
+     * Sets product_group_name
+     *
+     * @param string $product_group_name The unique ID of the product group.
+     *
+     * @return $this
+     */
+    public function setProductGroupName($product_group_name)
+    {
+        $this->container['product_group_name'] = $product_group_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_brand_id
+     *
+     * @return string
+     */
+    public function getProductBrandId()
+    {
+        return $this->container['product_brand_id'];
+    }
+
+    /**
+     * Sets product_brand_id
+     *
+     * @param string $product_brand_id The unique ID of the product brand.
+     *
+     * @return $this
+     */
+    public function setProductBrandId($product_brand_id)
+    {
+        $this->container['product_brand_id'] = $product_brand_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets product_brand_name
+     *
+     * @return string
+     */
+    public function getProductBrandName()
+    {
+        return $this->container['product_brand_name'];
+    }
+
+    /**
+     * Sets product_brand_name
+     *
+     * @param string $product_brand_name The unique ID of the product brand.
+     *
+     * @return $this
+     */
+    public function setProductBrandName($product_brand_name)
+    {
+        $this->container['product_brand_name'] = $product_brand_name;
 
         return $this;
     }
@@ -344,7 +494,7 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     /**
      * Sets purchase_item_type_id
      *
-     * @param string $purchase_item_type_id Type of the purchase item.
+     * @param string $purchase_item_type_id Type of the purchase item.There is a distinction between a purchase in an e-shop, in a brick-and-mortar store, a mobile application, or a cancellation of the purchase. It also differentiates purchases without the possibility of applying loyalty benefits from ordinary purchases or from purchases with the application of loyalty points.
      *
      * @return $this
      */

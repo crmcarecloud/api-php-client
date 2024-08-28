@@ -56,7 +56,7 @@ class InlineResponse20058Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_external_applications' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[]',
+        'partner_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20058Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_external_applications' => null,
+        'partner_records' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20058Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_external_applications' => 'customer_external_applications',
+        'partner_records' => 'partner_records',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20058Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_external_applications' => 'setCustomerExternalApplications',
+        'partner_records' => 'setPartnerRecords',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20058Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_external_applications' => 'getCustomerExternalApplications',
+        'partner_records' => 'getPartnerRecords',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20058Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_external_applications'] = isset($data['customer_external_applications']) ? $data['customer_external_applications'] : null;
+        $this->container['partner_records'] = isset($data['partner_records']) ? $data['partner_records'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20058Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_external_applications
+     * Gets partner_records
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[]
      */
-    public function getCustomerExternalApplications()
+    public function getPartnerRecords()
     {
-        return $this->container['customer_external_applications'];
+        return $this->container['partner_records'];
     }
 
     /**
-     * Sets customer_external_applications
+     * Sets partner_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ExternalApplication[] $customer_external_applications List of the customer external applications.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[] $partner_records Collection of all customer  partner records.
      *
      * @return $this
      */
-    public function setCustomerExternalApplications($customer_external_applications)
+    public function setPartnerRecords($partner_records)
     {
-        $this->container['customer_external_applications'] = $customer_external_applications;
+        $this->container['partner_records'] = $partner_records;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20058Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found customer external applications.
+     * @param int $total_items The number of all found customer  partners.
      *
      * @return $this
      */

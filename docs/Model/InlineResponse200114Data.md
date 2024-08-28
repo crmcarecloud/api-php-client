@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**search_results** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\SearchResult[]**](SearchResult.md) | List of the results. | [optional] 
-**total_items** | **int** | Count of the results. | [optional] 
+**product_groups** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]**](ProductGroup.md) | List of all product groups. | [optional] 
+**total_items** | **int** | The number of all found product groups. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

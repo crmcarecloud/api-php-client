@@ -56,7 +56,7 @@ class InlineResponse200141Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'entrances' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Entrance[]',
+        'product_brands' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200141Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'entrances' => null,
+        'product_brands' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200141Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'entrances' => 'entrances',
+        'product_brands' => 'product_brands',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200141Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'entrances' => 'setEntrances',
+        'product_brands' => 'setProductBrands',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200141Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'entrances' => 'getEntrances',
+        'product_brands' => 'getProductBrands',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200141Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['entrances'] = isset($data['entrances']) ? $data['entrances'] : null;
+        $this->container['product_brands'] = isset($data['product_brands']) ? $data['product_brands'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200141Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets entrances
+     * Gets product_brands
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Entrance[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[]
      */
-    public function getEntrances()
+    public function getProductBrands()
     {
-        return $this->container['entrances'];
+        return $this->container['product_brands'];
     }
 
     /**
-     * Sets entrances
+     * Sets product_brands
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Entrance[] $entrances List of available entrances.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductBrand[] $product_brands List of product brands tied to the reward.
      *
      * @return $this
      */
-    public function setEntrances($entrances)
+    public function setProductBrands($product_brands)
     {
-        $this->container['entrances'] = $entrances;
+        $this->container['product_brands'] = $product_brands;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200141Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found entrances.
+     * @param int $total_items Number of all found product brands.
      *
      * @return $this
      */

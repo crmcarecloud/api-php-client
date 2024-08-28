@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**recommendations** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Recommendation[]**](Recommendation.md) | List of recommendation records. | [optional] 
-**total_items** | **int** | The number of all found recommendation records. | [optional] 
+**points** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Point[]**](Point.md) | List of the point records. | [optional] 
+**total_items** | **int** | The number of all found point records. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

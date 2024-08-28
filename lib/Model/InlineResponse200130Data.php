@@ -56,7 +56,7 @@ class InlineResponse200130Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'product_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]',
+        'purchase_item_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200130Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'product_groups' => null,
+        'purchase_item_types' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200130Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_groups' => 'product_groups',
+        'purchase_item_types' => 'purchase_item_types',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200130Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_groups' => 'setProductGroups',
+        'purchase_item_types' => 'setPurchaseItemTypes',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200130Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_groups' => 'getProductGroups',
+        'purchase_item_types' => 'getPurchaseItemTypes',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200130Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_groups'] = isset($data['product_groups']) ? $data['product_groups'] : null;
+        $this->container['purchase_item_types'] = isset($data['purchase_item_types']) ? $data['purchase_item_types'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200130Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets product_groups
+     * Gets purchase_item_types
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[]
      */
-    public function getProductGroups()
+    public function getPurchaseItemTypes()
     {
-        return $this->container['product_groups'];
+        return $this->container['purchase_item_types'];
     }
 
     /**
-     * Sets product_groups
+     * Sets purchase_item_types
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductGroup[] $product_groups List of product groups tied to the reward.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[] $purchase_item_types List of the purchase item types.
      *
      * @return $this
      */
-    public function setProductGroups($product_groups)
+    public function setPurchaseItemTypes($purchase_item_types)
     {
-        $this->container['product_groups'] = $product_groups;
+        $this->container['purchase_item_types'] = $purchase_item_types;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200130Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found product groups.
+     * @param int $total_items The number of all found purchase types.
      *
      * @return $this
      */

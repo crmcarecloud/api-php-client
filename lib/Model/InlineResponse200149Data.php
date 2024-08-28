@@ -56,7 +56,7 @@ class InlineResponse200149Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
+        'segment_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SegmentGroup[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200149Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'property_records' => null,
+        'segment_groups' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200149Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'property_records' => 'property_records',
+        'segment_groups' => 'segment_groups',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200149Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'property_records' => 'setPropertyRecords',
+        'segment_groups' => 'setSegmentGroups',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200149Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'property_records' => 'getPropertyRecords',
+        'segment_groups' => 'getSegmentGroups',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200149Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
+        $this->container['segment_groups'] = isset($data['segment_groups']) ? $data['segment_groups'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200149Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets property_records
+     * Gets segment_groups
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentGroup[]
      */
-    public function getPropertyRecords()
+    public function getSegmentGroups()
     {
-        return $this->container['property_records'];
+        return $this->container['segment_groups'];
     }
 
     /**
-     * Sets property_records
+     * Sets segment_groups
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentGroup[] $segment_groups List of all segment groups.
      *
      * @return $this
      */
-    public function setPropertyRecords($property_records)
+    public function setSegmentGroups($segment_groups)
     {
-        $this->container['property_records'] = $property_records;
+        $this->container['segment_groups'] = $segment_groups;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200149Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found store property records.
+     * @param int $total_items The number of all found segments.
      *
      * @return $this
      */

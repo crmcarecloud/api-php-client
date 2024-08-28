@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**store_groups** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]**](StoreGroup.md) | List of all store groups. | [optional] 
-**total_items** | **int** | The number of all found store groups. | [optional] 
+**statuses** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Status[]**](Status.md) | List of recent statuses. | [optional] 
+**total_items** | **int** | The number of all found statuses. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

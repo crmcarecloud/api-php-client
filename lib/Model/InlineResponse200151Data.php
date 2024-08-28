@@ -56,7 +56,7 @@ class InlineResponse200151Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'store_groups' => '\CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]',
+        'statuses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Status[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200151Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'store_groups' => null,
+        'statuses' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200151Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_groups' => 'store_groups',
+        'statuses' => 'statuses',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200151Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_groups' => 'setStoreGroups',
+        'statuses' => 'setStatuses',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200151Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_groups' => 'getStoreGroups',
+        'statuses' => 'getStatuses',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200151Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_groups'] = isset($data['store_groups']) ? $data['store_groups'] : null;
+        $this->container['statuses'] = isset($data['statuses']) ? $data['statuses'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200151Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_groups
+     * Gets statuses
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Status[]
      */
-    public function getStoreGroups()
+    public function getStatuses()
     {
-        return $this->container['store_groups'];
+        return $this->container['statuses'];
     }
 
     /**
-     * Sets store_groups
+     * Sets statuses
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\StoreGroup[] $store_groups List of all store groups.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Status[] $statuses List of recent statuses.
      *
      * @return $this
      */
-    public function setStoreGroups($store_groups)
+    public function setStatuses($statuses)
     {
-        $this->container['store_groups'] = $store_groups;
+        $this->container['statuses'] = $statuses;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200151Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found store groups.
+     * @param int $total_items The number of all found statuses.
      *
      * @return $this
      */

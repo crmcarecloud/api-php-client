@@ -56,7 +56,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_source_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord[]',
+        'vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_source_records' => null,
+        'vouchers' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_source_records' => 'customer_source_records',
+        'vouchers' => 'vouchers',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_source_records' => 'setCustomerSourceRecords',
+        'vouchers' => 'setVouchers',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_source_records' => 'getCustomerSourceRecords',
+        'vouchers' => 'getVouchers',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_source_records'] = isset($data['customer_source_records']) ? $data['customer_source_records'] : null;
+        $this->container['vouchers'] = isset($data['vouchers']) ? $data['vouchers'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_source_records
+     * Gets vouchers
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]
      */
-    public function getCustomerSourceRecords()
+    public function getVouchers()
     {
-        return $this->container['customer_source_records'];
+        return $this->container['vouchers'];
     }
 
     /**
-     * Sets customer_source_records
+     * Sets vouchers
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerSourceRecord[] $customer_source_records List of the customer source records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[] $vouchers List of all recent vouchers.
      *
      * @return $this
      */
-    public function setCustomerSourceRecords($customer_source_records)
+    public function setVouchers($vouchers)
     {
-        $this->container['customer_source_records'] = $customer_source_records;
+        $this->container['vouchers'] = $vouchers;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found customer source records.
+     * @param int $total_items The number of all recent vouchers.
      *
      * @return $this
      */

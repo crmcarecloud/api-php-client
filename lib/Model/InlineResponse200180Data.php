@@ -56,10 +56,9 @@ class InlineResponse200180Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'earned_points' => 'float',
-        'redeemed_points' => 'float',
-        'available_points' => 'float',
-        'available_points_money_value' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]'
+        'bearer_token' => 'string',
+        'valid_to' => 'string',
+        'user' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User'
     ];
 
     /**
@@ -68,10 +67,9 @@ class InlineResponse200180Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'earned_points' => 'float',
-        'redeemed_points' => 'float',
-        'available_points' => 'float',
-        'available_points_money_value' => null
+        'bearer_token' => null,
+        'valid_to' => null,
+        'user' => null
     ];
 
     /**
@@ -101,10 +99,9 @@ class InlineResponse200180Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'earned_points' => 'earned_points',
-        'redeemed_points' => 'redeemed_points',
-        'available_points' => 'available_points',
-        'available_points_money_value' => 'available_points_money_value'
+        'bearer_token' => 'bearer_token',
+        'valid_to' => 'valid_to',
+        'user' => 'user'
     ];
 
     /**
@@ -113,10 +110,9 @@ class InlineResponse200180Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'earned_points' => 'setEarnedPoints',
-        'redeemed_points' => 'setRedeemedPoints',
-        'available_points' => 'setAvailablePoints',
-        'available_points_money_value' => 'setAvailablePointsMoneyValue'
+        'bearer_token' => 'setBearerToken',
+        'valid_to' => 'setValidTo',
+        'user' => 'setUser'
     ];
 
     /**
@@ -125,10 +121,9 @@ class InlineResponse200180Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'earned_points' => 'getEarnedPoints',
-        'redeemed_points' => 'getRedeemedPoints',
-        'available_points' => 'getAvailablePoints',
-        'available_points_money_value' => 'getAvailablePointsMoneyValue'
+        'bearer_token' => 'getBearerToken',
+        'valid_to' => 'getValidTo',
+        'user' => 'getUser'
     ];
 
     /**
@@ -189,10 +184,9 @@ class InlineResponse200180Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['earned_points'] = isset($data['earned_points']) ? $data['earned_points'] : null;
-        $this->container['redeemed_points'] = isset($data['redeemed_points']) ? $data['redeemed_points'] : null;
-        $this->container['available_points'] = isset($data['available_points']) ? $data['available_points'] : null;
-        $this->container['available_points_money_value'] = isset($data['available_points_money_value']) ? $data['available_points_money_value'] : null;
+        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
+        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -220,97 +214,73 @@ class InlineResponse200180Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets earned_points
+     * Gets bearer_token
      *
-     * @return float
+     * @return string
      */
-    public function getEarnedPoints()
+    public function getBearerToken()
     {
-        return $this->container['earned_points'];
+        return $this->container['bearer_token'];
     }
 
     /**
-     * Sets earned_points
+     * Sets bearer_token
      *
-     * @param float $earned_points Amount of earned points in time interval.
+     * @param string $bearer_token Authentication bearer token for an user. Token can be used for authentication in REST API with Bearer Authentication (more information about it [here](#section/Authorization/bearerAuth))
      *
      * @return $this
      */
-    public function setEarnedPoints($earned_points)
+    public function setBearerToken($bearer_token)
     {
-        $this->container['earned_points'] = $earned_points;
+        $this->container['bearer_token'] = $bearer_token;
 
         return $this;
     }
 
     /**
-     * Gets redeemed_points
+     * Gets valid_to
      *
-     * @return float
+     * @return string
      */
-    public function getRedeemedPoints()
+    public function getValidTo()
     {
-        return $this->container['redeemed_points'];
+        return $this->container['valid_to'];
     }
 
     /**
-     * Sets redeemed_points
+     * Sets valid_to
      *
-     * @param float $redeemed_points Amount of redeemed points in time interval.
+     * @param string $valid_to Date and time (local time zone of the project) of the token validity.  *(YYYY-MM-DD HH:MM:SS)*
      *
      * @return $this
      */
-    public function setRedeemedPoints($redeemed_points)
+    public function setValidTo($valid_to)
     {
-        $this->container['redeemed_points'] = $redeemed_points;
+        $this->container['valid_to'] = $valid_to;
 
         return $this;
     }
 
     /**
-     * Gets available_points
+     * Gets user
      *
-     * @return float
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User
      */
-    public function getAvailablePoints()
+    public function getUser()
     {
-        return $this->container['available_points'];
+        return $this->container['user'];
     }
 
     /**
-     * Sets available_points
+     * Sets user
      *
-     * @param float $available_points Amount of available points in the moment. Time interval has no influence to the result.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User $user user
      *
      * @return $this
      */
-    public function setAvailablePoints($available_points)
+    public function setUser($user)
     {
-        $this->container['available_points'] = $available_points;
-
-        return $this;
-    }
-
-    /**
-     * Gets available_points_money_value
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]
-     */
-    public function getAvailablePointsMoneyValue()
-    {
-        return $this->container['available_points_money_value'];
-    }
-
-    /**
-     * Sets available_points_money_value
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[] $available_points_money_value Parameter shows money representation of the 'available_points' parameter. CareCloud calculates money value for every system currency. The calculation is available only if the customer  status allows a point payment. This setup is possible in CareCloud administration.
-     *
-     * @return $this
-     */
-    public function setAvailablePointsMoneyValue($available_points_money_value)
-    {
-        $this->container['available_points_money_value'] = $available_points_money_value;
+        $this->container['user'] = $user;
 
         return $this;
     }

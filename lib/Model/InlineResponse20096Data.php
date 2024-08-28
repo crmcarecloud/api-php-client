@@ -56,7 +56,7 @@ class InlineResponse20096Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'point_reservations' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PointReservation[]',
+        'orders' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Order[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20096Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'point_reservations' => null,
+        'orders' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20096Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'point_reservations' => 'point_reservations',
+        'orders' => 'orders',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20096Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'point_reservations' => 'setPointReservations',
+        'orders' => 'setOrders',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20096Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'point_reservations' => 'getPointReservations',
+        'orders' => 'getOrders',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20096Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['point_reservations'] = isset($data['point_reservations']) ? $data['point_reservations'] : null;
+        $this->container['orders'] = isset($data['orders']) ? $data['orders'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20096Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets point_reservations
+     * Gets orders
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PointReservation[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Order[]
      */
-    public function getPointReservations()
+    public function getOrders()
     {
-        return $this->container['point_reservations'];
+        return $this->container['orders'];
     }
 
     /**
-     * Sets point_reservations
+     * Sets orders
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PointReservation[] $point_reservations List of the point reservations.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Order[] $orders Collection of the customer orders.
      *
      * @return $this
      */
-    public function setPointReservations($point_reservations)
+    public function setOrders($orders)
     {
-        $this->container['point_reservations'] = $point_reservations;
+        $this->container['orders'] = $orders;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20096Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found point reservations.
+     * @param int $total_items The number of all found customer orders.
      *
      * @return $this
      */

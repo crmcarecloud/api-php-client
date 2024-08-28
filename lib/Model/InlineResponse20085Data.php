@@ -56,7 +56,8 @@ class InlineResponse20085Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'is_valid' => 'bool'
+        'event_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -65,7 +66,8 @@ class InlineResponse20085Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'is_valid' => null
+        'event_properties' => null,
+        'total_items' => null
     ];
 
     /**
@@ -95,7 +97,8 @@ class InlineResponse20085Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_valid' => 'is_valid'
+        'event_properties' => 'event_properties',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -104,7 +107,8 @@ class InlineResponse20085Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'is_valid' => 'setIsValid'
+        'event_properties' => 'setEventProperties',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -113,7 +117,8 @@ class InlineResponse20085Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'is_valid' => 'getIsValid'
+        'event_properties' => 'getEventProperties',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -174,7 +179,8 @@ class InlineResponse20085Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_valid'] = isset($data['is_valid']) ? $data['is_valid'] : null;
+        $this->container['event_properties'] = isset($data['event_properties']) ? $data['event_properties'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -202,25 +208,49 @@ class InlineResponse20085Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets is_valid
+     * Gets event_properties
      *
-     * @return bool
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getIsValid()
+    public function getEventProperties()
     {
-        return $this->container['is_valid'];
+        return $this->container['event_properties'];
     }
 
     /**
-     * Sets is_valid
+     * Sets event_properties
      *
-     * @param bool $is_valid Result of the OTP verification.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $event_properties List of event properties.
      *
      * @return $this
      */
-    public function setIsValid($is_valid)
+    public function setEventProperties($event_properties)
     {
-        $this->container['is_valid'] = $is_valid;
+        $this->container['event_properties'] = $event_properties;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items The number of all found event properties.
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

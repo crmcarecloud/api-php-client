@@ -92,13 +92,13 @@ class TokensApi
      * Get authentication token
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of external application. For ID of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications). (required)
+     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174
      */
     public function getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -112,17 +112,17 @@ class TokensApi
      * Get authentication token
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of external application. For ID of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications). (required)
+     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTokenAuthenticationWithHttpInfo($token_id, $external_application_id, $token_type, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174';
         $request = $this->getTokenAuthenticationRequest($token_id, $external_application_id, $token_type, $accept_language);
 
         try {
@@ -174,7 +174,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -238,7 +238,7 @@ class TokensApi
      * Get authentication token
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of external application. For ID of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications). (required)
+     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
@@ -261,7 +261,7 @@ class TokensApi
      * Get authentication token
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of external application. For ID of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications). (required)
+     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
@@ -270,7 +270,7 @@ class TokensApi
      */
     public function getTokenAuthenticationAsyncWithHttpInfo($token_id, $external_application_id, $token_type, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174';
         $request = $this->getTokenAuthenticationRequest($token_id, $external_application_id, $token_type, $accept_language);
 
         return $this->client
@@ -314,7 +314,7 @@ class TokensApi
      * Create request for operation 'getTokenAuthentication'
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of external application. For ID of external application, please contact your account manager or look to resource [customer-external-applications](#tag/Customer-external-applications). (required)
+     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
@@ -765,6 +765,345 @@ class TokensApi
     }
 
     /**
+     * Operation postTokenAuthTokenLogin
+     *
+     * Login via authentication token
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAuthenticationtokenloginBody $body body (required)
+     * @param  string $token_id A client application token. (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173
+     */
+    public function postTokenAuthTokenLogin($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        list($response) = $this->postTokenAuthTokenLoginWithHttpInfo($body, $token_id, $accept_language);
+        return $response;
+    }
+
+    /**
+     * Operation postTokenAuthTokenLoginWithHttpInfo
+     *
+     * Login via authentication token
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAuthenticationtokenloginBody $body (required)
+     * @param  string $token_id A client application token. (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postTokenAuthTokenLoginWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
+        $request = $this->postTokenAuthTokenLoginRequest($body, $token_id, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse403',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postTokenAuthTokenLoginAsync
+     *
+     * Login via authentication token
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAuthenticationtokenloginBody $body (required)
+     * @param  string $token_id A client application token. (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postTokenAuthTokenLoginAsync($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->postTokenAuthTokenLoginAsyncWithHttpInfo($body, $token_id, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postTokenAuthTokenLoginAsyncWithHttpInfo
+     *
+     * Login via authentication token
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAuthenticationtokenloginBody $body (required)
+     * @param  string $token_id A client application token. (required)
+     * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postTokenAuthTokenLoginAsyncWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
+        $request = $this->postTokenAuthTokenLoginRequest($body, $token_id, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postTokenAuthTokenLogin'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAuthenticationtokenloginBody $body (required)
+     * @param  string $token_id A client application token. (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postTokenAuthTokenLoginRequest($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postTokenAuthTokenLogin'
+            );
+        }
+        // verify the required parameter 'token_id' is set
+        if ($token_id === null || (is_array($token_id) && count($token_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $token_id when calling postTokenAuthTokenLogin'
+            );
+        }
+
+        $resourcePath = '/tokens/{token_id}/actions/authentication-token-login';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
+        }
+
+        // path params
+        if ($token_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'token_id' . '}',
+                ObjectSerializer::toPathValue($token_id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // body params
+        $_tempBody = $body;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
+        }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::customBuildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation postTokenLogin
      *
      * Login to the application
@@ -775,7 +1114,7 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059
      */
     public function postTokenLogin($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -794,11 +1133,11 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTokenLoginWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059';
         $request = $this->postTokenLoginRequest($body, $token_id, $accept_language);
 
         try {
@@ -850,7 +1189,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -944,7 +1283,7 @@ class TokensApi
      */
     public function postTokenLoginAsyncWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059';
         $request = $this->postTokenLoginRequest($body, $token_id, $accept_language);
 
         return $this->client
@@ -1397,7 +1736,7 @@ class TokensApi
     /**
      * Operation postTokenSendPasswordSetup
      *
-     * Send email for set up of the new customer password
+     * Send the message for the setup of a new customer's password
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body body (required)
      * @param  string $token_id A client application token. (required)
@@ -1415,7 +1754,7 @@ class TokensApi
     /**
      * Operation postTokenSendPasswordSetupWithHttpInfo
      *
-     * Send email for set up of the new customer password
+     * Send the message for the setup of a new customer's password
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body (required)
      * @param  string $token_id A client application token. (required)
@@ -1518,7 +1857,7 @@ class TokensApi
     /**
      * Operation postTokenSendPasswordSetupAsync
      *
-     * Send email for set up of the new customer password
+     * Send the message for the setup of a new customer's password
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body (required)
      * @param  string $token_id A client application token. (required)
@@ -1540,7 +1879,7 @@ class TokensApi
     /**
      * Operation postTokenSendPasswordSetupAsyncWithHttpInfo
      *
-     * Send email for set up of the new customer password
+     * Send the message for the setup of a new customer's password
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSendpasswordsetupemailBody $body (required)
      * @param  string $token_id A client application token. (required)
@@ -2045,7 +2384,7 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175
      */
     public function postTokenTestCustomerLogin($token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2063,11 +2402,11 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTokenTestCustomerLoginWithHttpInfo($token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175';
         $request = $this->postTokenTestCustomerLoginRequest($token_id, $accept_language);
 
         try {
@@ -2119,7 +2458,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2211,7 +2550,7 @@ class TokensApi
      */
     public function postTokenTestCustomerLoginAsyncWithHttpInfo($token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175';
         $request = $this->postTokenTestCustomerLoginRequest($token_id, $accept_language);
 
         return $this->client

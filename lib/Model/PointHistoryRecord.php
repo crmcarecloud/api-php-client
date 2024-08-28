@@ -58,7 +58,7 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'customer_id' => 'string',
-        'amount' => 'float',
+        'point_amount' => 'float',
         'point_operation_type' => 'string',
         'point_operation_note' => 'string',
         'point_type_id' => 'string',
@@ -75,7 +75,7 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'customer_id' => null,
-        'amount' => 'float',
+        'point_amount' => 'float',
         'point_operation_type' => null,
         'point_operation_note' => null,
         'point_type_id' => null,
@@ -113,7 +113,7 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'customer_id' => 'customer_id',
-        'amount' => 'amount',
+        'point_amount' => 'point_amount',
         'point_operation_type' => 'point_operation_type',
         'point_operation_note' => 'point_operation_note',
         'point_type_id' => 'point_type_id',
@@ -130,7 +130,7 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'customer_id' => 'setCustomerId',
-        'amount' => 'setAmount',
+        'point_amount' => 'setPointAmount',
         'point_operation_type' => 'setPointOperationType',
         'point_operation_note' => 'setPointOperationNote',
         'point_type_id' => 'setPointTypeId',
@@ -147,7 +147,7 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'customer_id' => 'getCustomerId',
-        'amount' => 'getAmount',
+        'point_amount' => 'getPointAmount',
         'point_operation_type' => 'getPointOperationType',
         'point_operation_note' => 'getPointOperationNote',
         'point_type_id' => 'getPointTypeId',
@@ -216,7 +216,7 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['point_amount'] = isset($data['point_amount']) ? $data['point_amount'] : null;
         $this->container['point_operation_type'] = isset($data['point_operation_type']) ? $data['point_operation_type'] : null;
         $this->container['point_operation_note'] = isset($data['point_operation_note']) ? $data['point_operation_note'] : null;
         $this->container['point_type_id'] = isset($data['point_type_id']) ? $data['point_type_id'] : null;
@@ -275,25 +275,25 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets amount
+     * Gets point_amount
      *
      * @return float
      */
-    public function getAmount()
+    public function getPointAmount()
     {
-        return $this->container['amount'];
+        return $this->container['point_amount'];
     }
 
     /**
-     * Sets amount
+     * Sets point_amount
      *
-     * @param float $amount The number of points used in the point operation record.
+     * @param float $point_amount The number of points used in the point operation record.
      *
      * @return $this
      */
-    public function setAmount($amount)
+    public function setPointAmount($point_amount)
     {
-        $this->container['amount'] = $amount;
+        $this->container['point_amount'] = $point_amount;
 
         return $this;
     }

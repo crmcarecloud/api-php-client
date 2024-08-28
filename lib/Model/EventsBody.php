@@ -247,7 +247,7 @@ class EventsBody implements ModelInterface, ArrayAccess
     /**
      * Sets property_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of an event property records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records Additional properties of the event. This parameter contain values in GET response only if query parameter `include_property_records` is set to true.
      *
      * @return $this
      */

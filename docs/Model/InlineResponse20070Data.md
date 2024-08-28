@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**event_groups** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\EventGroup[]**](EventGroup.md) | List of all event groups. | [optional] 
-**total_items** | **int** | The number of all found event groups. | [optional] 
+**customer_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]**](Property.md) | List of all customer properties. | [optional] 
+**total_items** | **int** | The number of all found customer properties. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

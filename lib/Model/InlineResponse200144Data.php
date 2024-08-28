@@ -56,10 +56,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'distance' => 'float',
-        'elevation' => 'float',
-        'skier_days' => 'int',
-        'ski_achievement_text_id' => 'string'
+        'rewards_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -68,10 +66,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'distance' => null,
-        'elevation' => null,
-        'skier_days' => null,
-        'ski_achievement_text_id' => null
+        'rewards_properties' => null,
+        'total_items' => null
     ];
 
     /**
@@ -101,10 +97,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'distance' => 'distance',
-        'elevation' => 'elevation',
-        'skier_days' => 'skier_days',
-        'ski_achievement_text_id' => 'ski_achievement_text_id'
+        'rewards_properties' => 'rewards_properties',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -113,10 +107,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'distance' => 'setDistance',
-        'elevation' => 'setElevation',
-        'skier_days' => 'setSkierDays',
-        'ski_achievement_text_id' => 'setSkiAchievementTextId'
+        'rewards_properties' => 'setRewardsProperties',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -125,10 +117,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'distance' => 'getDistance',
-        'elevation' => 'getElevation',
-        'skier_days' => 'getSkierDays',
-        'ski_achievement_text_id' => 'getSkiAchievementTextId'
+        'rewards_properties' => 'getRewardsProperties',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -189,10 +179,8 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['distance'] = isset($data['distance']) ? $data['distance'] : null;
-        $this->container['elevation'] = isset($data['elevation']) ? $data['elevation'] : null;
-        $this->container['skier_days'] = isset($data['skier_days']) ? $data['skier_days'] : null;
-        $this->container['ski_achievement_text_id'] = isset($data['ski_achievement_text_id']) ? $data['ski_achievement_text_id'] : null;
+        $this->container['rewards_properties'] = isset($data['rewards_properties']) ? $data['rewards_properties'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -220,97 +208,49 @@ class InlineResponse200144Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets distance
+     * Gets rewards_properties
      *
-     * @return float
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getDistance()
+    public function getRewardsProperties()
     {
-        return $this->container['distance'];
+        return $this->container['rewards_properties'];
     }
 
     /**
-     * Sets distance
+     * Sets rewards_properties
      *
-     * @param float $distance Amount of kilometers that customer skied in the date range.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $rewards_properties List of all reward properties.
      *
      * @return $this
      */
-    public function setDistance($distance)
+    public function setRewardsProperties($rewards_properties)
     {
-        $this->container['distance'] = $distance;
+        $this->container['rewards_properties'] = $rewards_properties;
 
         return $this;
     }
 
     /**
-     * Gets elevation
-     *
-     * @return float
-     */
-    public function getElevation()
-    {
-        return $this->container['elevation'];
-    }
-
-    /**
-     * Sets elevation
-     *
-     * @param float $elevation Elevation gained during skiing in the date range in meters.
-     *
-     * @return $this
-     */
-    public function setElevation($elevation)
-    {
-        $this->container['elevation'] = $elevation;
-
-        return $this;
-    }
-
-    /**
-     * Gets skier_days
+     * Gets total_items
      *
      * @return int
      */
-    public function getSkierDays()
+    public function getTotalItems()
     {
-        return $this->container['skier_days'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets skier_days
+     * Sets total_items
      *
-     * @param int $skier_days Number of days in the date range that a customer used his entrance ticket
+     * @param int $total_items The number of all found reward properties.
      *
      * @return $this
      */
-    public function setSkierDays($skier_days)
+    public function setTotalItems($total_items)
     {
-        $this->container['skier_days'] = $skier_days;
-
-        return $this;
-    }
-
-    /**
-     * Gets ski_achievement_text_id
-     *
-     * @return string
-     */
-    public function getSkiAchievementTextId()
-    {
-        return $this->container['ski_achievement_text_id'];
-    }
-
-    /**
-     * Sets ski_achievement_text_id
-     *
-     * @param string $ski_achievement_text_id It represents a ski achievement text ID gained by the customer.
-     *
-     * @return $this
-     */
-    public function setSkiAchievementTextId($ski_achievement_text_id)
-    {
-        $this->container['ski_achievement_text_id'] = $ski_achievement_text_id;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

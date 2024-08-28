@@ -235,7 +235,7 @@ class ActionsVerifyauthtokenBody implements ModelInterface, ArrayAccess
     /**
      * Sets application_id
      *
-     * @param string $application_id ID of the application. Application is the source of the token.
+     * @param string $application_id ID of the original external application.The ID represents the external application where the token was created.
      *
      * @return $this
      */

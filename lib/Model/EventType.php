@@ -60,6 +60,7 @@ class EventType implements ModelInterface, ArrayAccess
         'event_type_id' => 'string',
         'event_group_id' => 'string',
         'name' => 'string',
+        'icon_name' => 'string',
         'state' => 'int'
     ];
 
@@ -72,6 +73,7 @@ class EventType implements ModelInterface, ArrayAccess
         'event_type_id' => null,
         'event_group_id' => null,
         'name' => null,
+        'icon_name' => null,
         'state' => null
     ];
 
@@ -105,6 +107,7 @@ class EventType implements ModelInterface, ArrayAccess
         'event_type_id' => 'event_type_id',
         'event_group_id' => 'event_group_id',
         'name' => 'name',
+        'icon_name' => 'icon_name',
         'state' => 'state'
     ];
 
@@ -117,6 +120,7 @@ class EventType implements ModelInterface, ArrayAccess
         'event_type_id' => 'setEventTypeId',
         'event_group_id' => 'setEventGroupId',
         'name' => 'setName',
+        'icon_name' => 'setIconName',
         'state' => 'setState'
     ];
 
@@ -129,6 +133,7 @@ class EventType implements ModelInterface, ArrayAccess
         'event_type_id' => 'getEventTypeId',
         'event_group_id' => 'getEventGroupId',
         'name' => 'getName',
+        'icon_name' => 'getIconName',
         'state' => 'getState'
     ];
 
@@ -208,6 +213,7 @@ self::STATE_2,        ];
         $this->container['event_type_id'] = isset($data['event_type_id']) ? $data['event_type_id'] : null;
         $this->container['event_group_id'] = isset($data['event_group_id']) ? $data['event_group_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['icon_name'] = isset($data['icon_name']) ? $data['icon_name'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
     }
 
@@ -317,6 +323,30 @@ self::STATE_2,        ];
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets icon_name
+     *
+     * @return string
+     */
+    public function getIconName()
+    {
+        return $this->container['icon_name'];
+    }
+
+    /**
+     * Sets icon_name
+     *
+     * @param string $icon_name Icon name from [Google Fonts Icons](https://fonts.google.com/icons).
+     *
+     * @return $this
+     */
+    public function setIconName($icon_name)
+    {
+        $this->container['icon_name'] = $icon_name;
 
         return $this;
     }

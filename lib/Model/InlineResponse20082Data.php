@@ -56,7 +56,7 @@ class InlineResponse20082Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'message_templates' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]',
+        'event_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20082Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'message_templates' => null,
+        'event_properties' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20082Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'message_templates' => 'message_templates',
+        'event_properties' => 'event_properties',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20082Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'message_templates' => 'setMessageTemplates',
+        'event_properties' => 'setEventProperties',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20082Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'message_templates' => 'getMessageTemplates',
+        'event_properties' => 'getEventProperties',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20082Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['message_templates'] = isset($data['message_templates']) ? $data['message_templates'] : null;
+        $this->container['event_properties'] = isset($data['event_properties']) ? $data['event_properties'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20082Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets message_templates
+     * Gets event_properties
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getMessageTemplates()
+    public function getEventProperties()
     {
-        return $this->container['message_templates'];
+        return $this->container['event_properties'];
     }
 
     /**
-     * Sets message_templates
+     * Sets event_properties
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MessageTemplate[] $message_templates List of all message templates.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $event_properties List of all event properties.
      *
      * @return $this
      */
-    public function setMessageTemplates($message_templates)
+    public function setEventProperties($event_properties)
     {
-        $this->container['message_templates'] = $message_templates;
+        $this->container['event_properties'] = $event_properties;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20082Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found message templates.
+     * @param int $total_items The number of all found event properties.
      *
      * @return $this
      */

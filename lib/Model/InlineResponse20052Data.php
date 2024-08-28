@@ -56,7 +56,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'partner_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[]',
+        'interest_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\InterestRecord[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'partner_records' => null,
+        'interest_records' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'partner_records' => 'partner_records',
+        'interest_records' => 'interest_records',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'partner_records' => 'setPartnerRecords',
+        'interest_records' => 'setInterestRecords',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'partner_records' => 'getPartnerRecords',
+        'interest_records' => 'getInterestRecords',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['partner_records'] = isset($data['partner_records']) ? $data['partner_records'] : null;
+        $this->container['interest_records'] = isset($data['interest_records']) ? $data['interest_records'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets partner_records
+     * Gets interest_records
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InterestRecord[]
      */
-    public function getPartnerRecords()
+    public function getInterestRecords()
     {
-        return $this->container['partner_records'];
+        return $this->container['interest_records'];
     }
 
     /**
-     * Sets partner_records
+     * Sets interest_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[] $partner_records Collection of all customer  partner records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\InterestRecord[] $interest_records List of interest records.
      *
      * @return $this
      */
-    public function setPartnerRecords($partner_records)
+    public function setInterestRecords($interest_records)
     {
-        $this->container['partner_records'] = $partner_records;
+        $this->container['interest_records'] = $interest_records;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20052Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found customer  partners.
+     * @param int $total_items The number of all found interest records.
      *
      * @return $this
      */

@@ -56,10 +56,8 @@ class InlineResponse200181Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'earned_credits' => 'float',
-        'redeemed_credits' => 'float',
-        'available_credits' => 'float',
-        'split_by_currency' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]'
+        'user_roles' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -68,10 +66,8 @@ class InlineResponse200181Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'earned_credits' => 'float',
-        'redeemed_credits' => 'float',
-        'available_credits' => 'float',
-        'split_by_currency' => null
+        'user_roles' => null,
+        'total_items' => null
     ];
 
     /**
@@ -101,10 +97,8 @@ class InlineResponse200181Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'earned_credits' => 'earned_credits',
-        'redeemed_credits' => 'redeemed_credits',
-        'available_credits' => 'available_credits',
-        'split_by_currency' => 'split_by_currency'
+        'user_roles' => 'user_roles',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -113,10 +107,8 @@ class InlineResponse200181Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'earned_credits' => 'setEarnedCredits',
-        'redeemed_credits' => 'setRedeemedCredits',
-        'available_credits' => 'setAvailableCredits',
-        'split_by_currency' => 'setSplitByCurrency'
+        'user_roles' => 'setUserRoles',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -125,10 +117,8 @@ class InlineResponse200181Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'earned_credits' => 'getEarnedCredits',
-        'redeemed_credits' => 'getRedeemedCredits',
-        'available_credits' => 'getAvailableCredits',
-        'split_by_currency' => 'getSplitByCurrency'
+        'user_roles' => 'getUserRoles',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -189,10 +179,8 @@ class InlineResponse200181Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['earned_credits'] = isset($data['earned_credits']) ? $data['earned_credits'] : null;
-        $this->container['redeemed_credits'] = isset($data['redeemed_credits']) ? $data['redeemed_credits'] : null;
-        $this->container['available_credits'] = isset($data['available_credits']) ? $data['available_credits'] : null;
-        $this->container['split_by_currency'] = isset($data['split_by_currency']) ? $data['split_by_currency'] : null;
+        $this->container['user_roles'] = isset($data['user_roles']) ? $data['user_roles'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -220,97 +208,49 @@ class InlineResponse200181Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets earned_credits
+     * Gets user_roles
      *
-     * @return float
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[]
      */
-    public function getEarnedCredits()
+    public function getUserRoles()
     {
-        return $this->container['earned_credits'];
+        return $this->container['user_roles'];
     }
 
     /**
-     * Sets earned_credits
+     * Sets user_roles
      *
-     * @param float $earned_credits Amount of earned credits in time interval.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\UserRole[] $user_roles Array of user roles.
      *
      * @return $this
      */
-    public function setEarnedCredits($earned_credits)
+    public function setUserRoles($user_roles)
     {
-        $this->container['earned_credits'] = $earned_credits;
+        $this->container['user_roles'] = $user_roles;
 
         return $this;
     }
 
     /**
-     * Gets redeemed_credits
+     * Gets total_items
      *
-     * @return float
+     * @return int
      */
-    public function getRedeemedCredits()
+    public function getTotalItems()
     {
-        return $this->container['redeemed_credits'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets redeemed_credits
+     * Sets total_items
      *
-     * @param float $redeemed_credits Amount of redeemed credits in time interval.
+     * @param int $total_items The number of all found user roles.
      *
      * @return $this
      */
-    public function setRedeemedCredits($redeemed_credits)
+    public function setTotalItems($total_items)
     {
-        $this->container['redeemed_credits'] = $redeemed_credits;
-
-        return $this;
-    }
-
-    /**
-     * Gets available_credits
-     *
-     * @return float
-     */
-    public function getAvailableCredits()
-    {
-        return $this->container['available_credits'];
-    }
-
-    /**
-     * Sets available_credits
-     *
-     * @param float $available_credits Amount of available credits in the moment. Time interval has no influence to the result.
-     *
-     * @return $this
-     */
-    public function setAvailableCredits($available_credits)
-    {
-        $this->container['available_credits'] = $available_credits;
-
-        return $this;
-    }
-
-    /**
-     * Gets split_by_currency
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]
-     */
-    public function getSplitByCurrency()
-    {
-        return $this->container['split_by_currency'];
-    }
-
-    /**
-     * Sets split_by_currency
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[] $split_by_currency The credit overview split by currency.
-     *
-     * @return $this
-     */
-    public function setSplitByCurrency($split_by_currency)
-    {
-        $this->container['split_by_currency'] = $split_by_currency;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }
