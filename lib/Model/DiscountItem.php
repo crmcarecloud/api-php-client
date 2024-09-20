@@ -58,8 +58,8 @@ class DiscountItem implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'discount_code' => 'string',
-        'discount_value' => 'string',
-        'discount_percent' => 'string',
+        'discount_value' => 'float',
+        'discount_percent' => 'float',
         'description' => 'string',
         'bill_item_id' => 'string'
     ];
@@ -71,8 +71,8 @@ class DiscountItem implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'discount_code' => null,
-        'discount_value' => null,
-        'discount_percent' => null,
+        'discount_value' => 'float',
+        'discount_percent' => 'float',
         'description' => null,
         'bill_item_id' => null
     ];
@@ -256,7 +256,7 @@ class DiscountItem implements ModelInterface, ArrayAccess
     /**
      * Gets discount_value
      *
-     * @return string
+     * @return float
      */
     public function getDiscountValue()
     {
@@ -266,7 +266,7 @@ class DiscountItem implements ModelInterface, ArrayAccess
     /**
      * Sets discount_value
      *
-     * @param string $discount_value Value of discount in the currency of the bill.
+     * @param float $discount_value Value of discount in the currency of the bill.
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class DiscountItem implements ModelInterface, ArrayAccess
     /**
      * Gets discount_percent
      *
-     * @return string
+     * @return float
      */
     public function getDiscountPercent()
     {
@@ -290,7 +290,7 @@ class DiscountItem implements ModelInterface, ArrayAccess
     /**
      * Sets discount_percent
      *
-     * @param string $discount_percent Discount percentage of the bill.
+     * @param float $discount_percent Discount percentage of the bill.
      *
      * @return $this
      */

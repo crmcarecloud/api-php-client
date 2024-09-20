@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomersCustomerIdBody
+ * InlineResponse200189Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomersCustomerIdBody Class Doc Comment
+ * InlineResponse200189Data Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
+class InlineResponse200189Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'customers_customer_id_body';
+    protected static $swaggerModelName = 'inline_response_200_189_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
-        'password' => 'string',
-        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'
+        'next_amount' => 'float',
+        'next_date' => 'string',
+        'current_month_amount' => 'float'
     ];
 
     /**
@@ -67,9 +67,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer' => null,
-        'password' => 'password',
-        'social_network_credentials' => null
+        'next_amount' => 'float',
+        'next_date' => null,
+        'current_month_amount' => 'float'
     ];
 
     /**
@@ -99,9 +99,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer' => 'customer',
-        'password' => 'password',
-        'social_network_credentials' => 'social_network_credentials'
+        'next_amount' => 'next_amount',
+        'next_date' => 'next_date',
+        'current_month_amount' => 'current_month_amount'
     ];
 
     /**
@@ -110,9 +110,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer' => 'setCustomer',
-        'password' => 'setPassword',
-        'social_network_credentials' => 'setSocialNetworkCredentials'
+        'next_amount' => 'setNextAmount',
+        'next_date' => 'setNextDate',
+        'current_month_amount' => 'setCurrentMonthAmount'
     ];
 
     /**
@@ -121,9 +121,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer' => 'getCustomer',
-        'password' => 'getPassword',
-        'social_network_credentials' => 'getSocialNetworkCredentials'
+        'next_amount' => 'getNextAmount',
+        'next_date' => 'getNextDate',
+        'current_month_amount' => 'getCurrentMonthAmount'
     ];
 
     /**
@@ -184,9 +184,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['next_amount'] = isset($data['next_amount']) ? $data['next_amount'] : null;
+        $this->container['next_date'] = isset($data['next_date']) ? $data['next_date'] : null;
+        $this->container['current_month_amount'] = isset($data['current_month_amount']) ? $data['current_month_amount'] : null;
     }
 
     /**
@@ -198,9 +198,6 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customer'] === null) {
-            $invalidProperties[] = "'customer' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,73 +214,73 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer
+     * Gets next_amount
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
+     * @return float
      */
-    public function getCustomer()
+    public function getNextAmount()
     {
-        return $this->container['customer'];
+        return $this->container['next_amount'];
     }
 
     /**
-     * Sets customer
+     * Sets next_amount
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
+     * @param float $next_amount Date (ISO 8601) when first points will expire.
      *
      * @return $this
      */
-    public function setCustomer($customer)
+    public function setNextAmount($next_amount)
     {
-        $this->container['customer'] = $customer;
+        $this->container['next_amount'] = $next_amount;
 
         return $this;
     }
 
     /**
-     * Gets password
+     * Gets next_date
      *
      * @return string
      */
-    public function getPassword()
+    public function getNextDate()
     {
-        return $this->container['password'];
+        return $this->container['next_date'];
     }
 
     /**
-     * Sets password
+     * Sets next_date
      *
-     * @param string $password This is the customer’s password. The parameter does not follow the usual PUT request rules. If you do not include it, the password will not change.
+     * @param string $next_date Amount of redeemed points in time interval. *(YYYY-MM-DD)*
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setNextDate($next_date)
     {
-        $this->container['password'] = $password;
+        $this->container['next_date'] = $next_date;
 
         return $this;
     }
 
     /**
-     * Gets social_network_credentials
+     * Gets current_month_amount
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
+     * @return float
      */
-    public function getSocialNetworkCredentials()
+    public function getCurrentMonthAmount()
     {
-        return $this->container['social_network_credentials'];
+        return $this->container['current_month_amount'];
     }
 
     /**
-     * Sets social_network_credentials
+     * Sets current_month_amount
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param float $current_month_amount Amount of points that will expire in current month.
      *
      * @return $this
      */
-    public function setSocialNetworkCredentials($social_network_credentials)
+    public function setCurrentMonthAmount($current_month_amount)
     {
-        $this->container['social_network_credentials'] = $social_network_credentials;
+        $this->container['current_month_amount'] = $current_month_amount;
 
         return $this;
     }

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fiscal** | **bool** | Information, whether it is a fiscal bill. | 
+**fiscal** | **bool** | Information, whether it is a fiscal bill. | [optional] 
 **purchase_type_id** | **string** | Type of the purchase. Values are available in resource [purchase-types](#tag/Purchase-types). | 
 **canceled** | **bool** | Information, whether it is the cancellation of the purchase. It is the only parameter that identifies the canceled purchase. All other values are the same as in the original bill. No different values like totalPrice, quantity, paidAmount, and itemPrice are changed nor inverted. | 
 **payment_type** | **string** | Payment type changes the checkout process depending on the value of the parameter you can allow/deny the use of benefits. *Possible values are: \&quot;S\&quot; - with standard setup checkout process allows you to collect points, but isn&#x27;t possible to apply overall discounts  / \&quot;A\&quot;- checkout process allows you to collect points and apply overall discounts too / \&quot;C\&quot; - use credits for payment, allows you to collect points, but isn&#x27;t possible to apply overall discounts / \&quot;D\&quot;- will enable you to use overall discounts, but you are not able to collect points with this setup* | 

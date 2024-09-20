@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomersCustomerIdBody
+ * InlineResponse200187Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomersCustomerIdBody Class Doc Comment
+ * InlineResponse200187Data Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
+class InlineResponse200187Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'customers_customer_id_body';
+    protected static $swaggerModelName = 'inline_response_200_187_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
-        'password' => 'string',
-        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'
+        'earned_points' => 'float',
+        'redeemed_points' => 'float',
+        'available_points' => 'float',
+        'available_points_money_value' => '\CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]'
     ];
 
     /**
@@ -67,9 +68,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer' => null,
-        'password' => 'password',
-        'social_network_credentials' => null
+        'earned_points' => 'float',
+        'redeemed_points' => 'float',
+        'available_points' => 'float',
+        'available_points_money_value' => null
     ];
 
     /**
@@ -99,9 +101,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer' => 'customer',
-        'password' => 'password',
-        'social_network_credentials' => 'social_network_credentials'
+        'earned_points' => 'earned_points',
+        'redeemed_points' => 'redeemed_points',
+        'available_points' => 'available_points',
+        'available_points_money_value' => 'available_points_money_value'
     ];
 
     /**
@@ -110,9 +113,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer' => 'setCustomer',
-        'password' => 'setPassword',
-        'social_network_credentials' => 'setSocialNetworkCredentials'
+        'earned_points' => 'setEarnedPoints',
+        'redeemed_points' => 'setRedeemedPoints',
+        'available_points' => 'setAvailablePoints',
+        'available_points_money_value' => 'setAvailablePointsMoneyValue'
     ];
 
     /**
@@ -121,9 +125,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer' => 'getCustomer',
-        'password' => 'getPassword',
-        'social_network_credentials' => 'getSocialNetworkCredentials'
+        'earned_points' => 'getEarnedPoints',
+        'redeemed_points' => 'getRedeemedPoints',
+        'available_points' => 'getAvailablePoints',
+        'available_points_money_value' => 'getAvailablePointsMoneyValue'
     ];
 
     /**
@@ -184,9 +189,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['earned_points'] = isset($data['earned_points']) ? $data['earned_points'] : null;
+        $this->container['redeemed_points'] = isset($data['redeemed_points']) ? $data['redeemed_points'] : null;
+        $this->container['available_points'] = isset($data['available_points']) ? $data['available_points'] : null;
+        $this->container['available_points_money_value'] = isset($data['available_points_money_value']) ? $data['available_points_money_value'] : null;
     }
 
     /**
@@ -198,9 +204,6 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customer'] === null) {
-            $invalidProperties[] = "'customer' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,73 +220,97 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer
+     * Gets earned_points
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
+     * @return float
      */
-    public function getCustomer()
+    public function getEarnedPoints()
     {
-        return $this->container['customer'];
+        return $this->container['earned_points'];
     }
 
     /**
-     * Sets customer
+     * Sets earned_points
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
+     * @param float $earned_points Amount of earned points in time interval.
      *
      * @return $this
      */
-    public function setCustomer($customer)
+    public function setEarnedPoints($earned_points)
     {
-        $this->container['customer'] = $customer;
+        $this->container['earned_points'] = $earned_points;
 
         return $this;
     }
 
     /**
-     * Gets password
+     * Gets redeemed_points
      *
-     * @return string
+     * @return float
      */
-    public function getPassword()
+    public function getRedeemedPoints()
     {
-        return $this->container['password'];
+        return $this->container['redeemed_points'];
     }
 
     /**
-     * Sets password
+     * Sets redeemed_points
      *
-     * @param string $password This is the customer’s password. The parameter does not follow the usual PUT request rules. If you do not include it, the password will not change.
+     * @param float $redeemed_points Amount of redeemed points in time interval.
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setRedeemedPoints($redeemed_points)
     {
-        $this->container['password'] = $password;
+        $this->container['redeemed_points'] = $redeemed_points;
 
         return $this;
     }
 
     /**
-     * Gets social_network_credentials
+     * Gets available_points
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
+     * @return float
      */
-    public function getSocialNetworkCredentials()
+    public function getAvailablePoints()
     {
-        return $this->container['social_network_credentials'];
+        return $this->container['available_points'];
     }
 
     /**
-     * Sets social_network_credentials
+     * Sets available_points
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param float $available_points Amount of available points in the moment. Time interval has no influence to the result.
      *
      * @return $this
      */
-    public function setSocialNetworkCredentials($social_network_credentials)
+    public function setAvailablePoints($available_points)
     {
-        $this->container['social_network_credentials'] = $social_network_credentials;
+        $this->container['available_points'] = $available_points;
+
+        return $this;
+    }
+
+    /**
+     * Gets available_points_money_value
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[]
+     */
+    public function getAvailablePointsMoneyValue()
+    {
+        return $this->container['available_points_money_value'];
+    }
+
+    /**
+     * Sets available_points_money_value
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[] $available_points_money_value Parameter shows money representation of the 'available_points' parameter. CareCloud calculates money value for every system currency. The calculation is available only if the customer  status allows a point payment. This setup is possible in CareCloud administration.
+     *
+     * @return $this
+     */
+    public function setAvailablePointsMoneyValue($available_points_money_value)
+    {
+        $this->container['available_points_money_value'] = $available_points_money_value;
 
         return $this;
     }

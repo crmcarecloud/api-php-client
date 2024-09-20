@@ -63,7 +63,7 @@ class User implements ModelInterface, ArrayAccess
         'last_name' => 'string',
         'email' => 'string',
         'phone' => 'string',
-        'user_role_ids' => 'array',
+        'user_role_ids' => 'string[]',
         'store_id' => 'string',
         'last_login' => 'string'
     ];
@@ -409,7 +409,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Gets user_role_ids
      *
-     * @return array
+     * @return string[]
      */
     public function getUserRoleIds()
     {
@@ -419,7 +419,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets user_role_ids
      *
-     * @param array $user_role_ids The list of the user role IDs.
+     * @param string[] $user_role_ids The list of the user role IDs.
      *
      * @return $this
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomersCustomerIdBody
+ * ActionsValidatecustomerdataBody
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomersCustomerIdBody Class Doc Comment
+ * ActionsValidatecustomerdataBody Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
+class ActionsValidatecustomerdataBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'customers_customer_id_body';
+    protected static $swaggerModelName = 'actions_validatecustomerdata_body';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
-        'password' => 'string',
-        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'
+        'type' => 'string',
+        'value' => 'string'
     ];
 
     /**
@@ -67,9 +66,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer' => null,
-        'password' => 'password',
-        'social_network_credentials' => null
+        'type' => null,
+        'value' => null
     ];
 
     /**
@@ -99,9 +97,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer' => 'customer',
-        'password' => 'password',
-        'social_network_credentials' => 'social_network_credentials'
+        'type' => 'type',
+        'value' => 'value'
     ];
 
     /**
@@ -110,9 +107,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer' => 'setCustomer',
-        'password' => 'setPassword',
-        'social_network_credentials' => 'setSocialNetworkCredentials'
+        'type' => 'setType',
+        'value' => 'setValue'
     ];
 
     /**
@@ -121,9 +117,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer' => 'getCustomer',
-        'password' => 'getPassword',
-        'social_network_credentials' => 'getSocialNetworkCredentials'
+        'type' => 'getType',
+        'value' => 'getValue'
     ];
 
     /**
@@ -167,7 +162,18 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+    const TYPE_PASSWORD = 'password';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return array<int,int|string>
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_PASSWORD,        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -184,9 +190,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -198,8 +203,19 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customer'] === null) {
-            $invalidProperties[] = "'customer' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
         }
         return $invalidProperties;
     }
@@ -217,73 +233,58 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
-     */
-    public function getCustomer()
-    {
-        return $this->container['customer'];
-    }
-
-    /**
-     * Sets customer
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
-     *
-     * @return $this
-     */
-    public function setCustomer($customer)
-    {
-        $this->container['customer'] = $customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets password
+     * Gets type
      *
      * @return string
      */
-    public function getPassword()
+    public function getType()
     {
-        return $this->container['password'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets password
+     * Sets type
      *
-     * @param string $password This is the customer’s password. The parameter does not follow the usual PUT request rules. If you do not include it, the password will not change.
+     * @param string $type Type of the customer data for the CareCloud validation.
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setType($type)
     {
-        $this->container['password'] = $password;
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets social_network_credentials
+     * Gets value
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
+     * @return string
      */
-    public function getSocialNetworkCredentials()
+    public function getValue()
     {
-        return $this->container['social_network_credentials'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets social_network_credentials
+     * Sets value
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param string $value Value of the customer data for the CareCloud validation.
      *
      * @return $this
      */
-    public function setSocialNetworkCredentials($social_network_credentials)
+    public function setValue($value)
     {
-        $this->container['social_network_credentials'] = $social_network_credentials;
+        $this->container['value'] = $value;
 
         return $this;
     }

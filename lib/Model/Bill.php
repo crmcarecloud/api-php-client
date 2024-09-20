@@ -362,7 +362,7 @@ class Bill implements ModelInterface, ArrayAccess
     /**
      * Sets currency_id
      *
-     * @param string $currency_id ID of the currency from resource [currencies](#tag/Currencies).
+     * @param string $currency_id ID of the currency from resource [currencies](https://carecloud.readme.io/reference/getcurrencies).
      *
      * @return $this
      */

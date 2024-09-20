@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomersCustomerIdBody
+ * InlineResponse200186Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomersCustomerIdBody Class Doc Comment
+ * InlineResponse200186Data Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
+class InlineResponse200186Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'customers_customer_id_body';
+    protected static $swaggerModelName = 'inline_response_200_186_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
-        'password' => 'string',
-        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'
+        'turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]'
     ];
 
     /**
@@ -67,9 +65,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer' => null,
-        'password' => 'password',
-        'social_network_credentials' => null
+        'turnover' => null
     ];
 
     /**
@@ -99,9 +95,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer' => 'customer',
-        'password' => 'password',
-        'social_network_credentials' => 'social_network_credentials'
+        'turnover' => 'turnover'
     ];
 
     /**
@@ -110,9 +104,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer' => 'setCustomer',
-        'password' => 'setPassword',
-        'social_network_credentials' => 'setSocialNetworkCredentials'
+        'turnover' => 'setTurnover'
     ];
 
     /**
@@ -121,9 +113,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer' => 'getCustomer',
-        'password' => 'getPassword',
-        'social_network_credentials' => 'getSocialNetworkCredentials'
+        'turnover' => 'getTurnover'
     ];
 
     /**
@@ -184,9 +174,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['turnover'] = isset($data['turnover']) ? $data['turnover'] : null;
     }
 
     /**
@@ -198,9 +186,6 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customer'] === null) {
-            $invalidProperties[] = "'customer' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,73 +202,25 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer
+     * Gets turnover
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
      */
-    public function getCustomer()
+    public function getTurnover()
     {
-        return $this->container['customer'];
+        return $this->container['turnover'];
     }
 
     /**
-     * Sets customer
+     * Sets turnover
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $turnover List of all turnover by currency in time interval.
      *
      * @return $this
      */
-    public function setCustomer($customer)
+    public function setTurnover($turnover)
     {
-        $this->container['customer'] = $customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets password
-     *
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->container['password'];
-    }
-
-    /**
-     * Sets password
-     *
-     * @param string $password This is the customer’s password. The parameter does not follow the usual PUT request rules. If you do not include it, the password will not change.
-     *
-     * @return $this
-     */
-    public function setPassword($password)
-    {
-        $this->container['password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * Gets social_network_credentials
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
-     */
-    public function getSocialNetworkCredentials()
-    {
-        return $this->container['social_network_credentials'];
-    }
-
-    /**
-     * Sets social_network_credentials
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
-     *
-     * @return $this
-     */
-    public function setSocialNetworkCredentials($social_network_credentials)
-    {
-        $this->container['social_network_credentials'] = $social_network_credentials;
+        $this->container['turnover'] = $turnover;
 
         return $this;
     }

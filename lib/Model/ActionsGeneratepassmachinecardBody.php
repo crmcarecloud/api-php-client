@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomersCustomerIdBody
+ * ActionsGeneratepassmachinecardBody
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomersCustomerIdBody Class Doc Comment
+ * ActionsGeneratepassmachinecardBody Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
+class ActionsGeneratepassmachinecardBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'customers_customer_id_body';
+    protected static $swaggerModelName = 'actions_generatepassmachinecard_body';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
-        'password' => 'string',
-        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'
+        'customer_id' => 'string',
+        'passmachine_template_id' => 'string'
     ];
 
     /**
@@ -67,9 +66,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer' => null,
-        'password' => 'password',
-        'social_network_credentials' => null
+        'customer_id' => null,
+        'passmachine_template_id' => null
     ];
 
     /**
@@ -99,9 +97,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer' => 'customer',
-        'password' => 'password',
-        'social_network_credentials' => 'social_network_credentials'
+        'customer_id' => 'customer_id',
+        'passmachine_template_id' => 'passmachine_template_id'
     ];
 
     /**
@@ -110,9 +107,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer' => 'setCustomer',
-        'password' => 'setPassword',
-        'social_network_credentials' => 'setSocialNetworkCredentials'
+        'customer_id' => 'setCustomerId',
+        'passmachine_template_id' => 'setPassmachineTemplateId'
     ];
 
     /**
@@ -121,9 +117,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer' => 'getCustomer',
-        'password' => 'getPassword',
-        'social_network_credentials' => 'getSocialNetworkCredentials'
+        'customer_id' => 'getCustomerId',
+        'passmachine_template_id' => 'getPassmachineTemplateId'
     ];
 
     /**
@@ -184,9 +179,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
+        $this->container['passmachine_template_id'] = isset($data['passmachine_template_id']) ? $data['passmachine_template_id'] : null;
     }
 
     /**
@@ -198,8 +192,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customer'] === null) {
-            $invalidProperties[] = "'customer' can't be null";
+        if ($this->container['customer_id'] === null) {
+            $invalidProperties[] = "'customer_id' can't be null";
         }
         return $invalidProperties;
     }
@@ -217,73 +211,49 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
-     */
-    public function getCustomer()
-    {
-        return $this->container['customer'];
-    }
-
-    /**
-     * Sets customer
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
-     *
-     * @return $this
-     */
-    public function setCustomer($customer)
-    {
-        $this->container['customer'] = $customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets password
+     * Gets customer_id
      *
      * @return string
      */
-    public function getPassword()
+    public function getCustomerId()
     {
-        return $this->container['password'];
+        return $this->container['customer_id'];
     }
 
     /**
-     * Sets password
+     * Sets customer_id
      *
-     * @param string $password This is the customer’s password. The parameter does not follow the usual PUT request rules. If you do not include it, the password will not change.
+     * @param string $customer_id The unique ID of the customer with PassMachine.
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setCustomerId($customer_id)
     {
-        $this->container['password'] = $password;
+        $this->container['customer_id'] = $customer_id;
 
         return $this;
     }
 
     /**
-     * Gets social_network_credentials
+     * Gets passmachine_template_id
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
+     * @return string
      */
-    public function getSocialNetworkCredentials()
+    public function getPassmachineTemplateId()
     {
-        return $this->container['social_network_credentials'];
+        return $this->container['passmachine_template_id'];
     }
 
     /**
-     * Sets social_network_credentials
+     * Sets passmachine_template_id
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param string $passmachine_template_id ID of a template from PassMachine. The ID is available in administration environment of PassMachine. If the parameter is not set, the default template is used.
      *
      * @return $this
      */
-    public function setSocialNetworkCredentials($social_network_credentials)
+    public function setPassmachineTemplateId($passmachine_template_id)
     {
-        $this->container['social_network_credentials'] = $social_network_credentials;
+        $this->container['passmachine_template_id'] = $passmachine_template_id;
 
         return $this;
     }

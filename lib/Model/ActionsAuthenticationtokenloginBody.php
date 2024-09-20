@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomersCustomerIdBody
+ * ActionsAuthenticationtokenloginBody
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomersCustomerIdBody Class Doc Comment
+ * ActionsAuthenticationtokenloginBody Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
+class ActionsAuthenticationtokenloginBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'customers_customer_id_body';
+    protected static $swaggerModelName = 'actions_authenticationtokenlogin_body';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
-        'password' => 'string',
-        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'
+        'application_id' => 'string',
+        'token' => 'string',
+        'token_request_id' => 'string'
     ];
 
     /**
@@ -67,9 +67,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer' => null,
-        'password' => 'password',
-        'social_network_credentials' => null
+        'application_id' => null,
+        'token' => null,
+        'token_request_id' => null
     ];
 
     /**
@@ -99,9 +99,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer' => 'customer',
-        'password' => 'password',
-        'social_network_credentials' => 'social_network_credentials'
+        'application_id' => 'application_id',
+        'token' => 'token',
+        'token_request_id' => 'token_request_id'
     ];
 
     /**
@@ -110,9 +110,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer' => 'setCustomer',
-        'password' => 'setPassword',
-        'social_network_credentials' => 'setSocialNetworkCredentials'
+        'application_id' => 'setApplicationId',
+        'token' => 'setToken',
+        'token_request_id' => 'setTokenRequestId'
     ];
 
     /**
@@ -121,9 +121,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer' => 'getCustomer',
-        'password' => 'getPassword',
-        'social_network_credentials' => 'getSocialNetworkCredentials'
+        'application_id' => 'getApplicationId',
+        'token' => 'getToken',
+        'token_request_id' => 'getTokenRequestId'
     ];
 
     /**
@@ -184,9 +184,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
+        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['token_request_id'] = isset($data['token_request_id']) ? $data['token_request_id'] : null;
     }
 
     /**
@@ -198,8 +198,14 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customer'] === null) {
-            $invalidProperties[] = "'customer' can't be null";
+        if ($this->container['application_id'] === null) {
+            $invalidProperties[] = "'application_id' can't be null";
+        }
+        if ($this->container['token'] === null) {
+            $invalidProperties[] = "'token' can't be null";
+        }
+        if ($this->container['token_request_id'] === null) {
+            $invalidProperties[] = "'token_request_id' can't be null";
         }
         return $invalidProperties;
     }
@@ -217,73 +223,73 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
-     */
-    public function getCustomer()
-    {
-        return $this->container['customer'];
-    }
-
-    /**
-     * Sets customer
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
-     *
-     * @return $this
-     */
-    public function setCustomer($customer)
-    {
-        $this->container['customer'] = $customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets password
+     * Gets application_id
      *
      * @return string
      */
-    public function getPassword()
+    public function getApplicationId()
     {
-        return $this->container['password'];
+        return $this->container['application_id'];
     }
 
     /**
-     * Sets password
+     * Sets application_id
      *
-     * @param string $password This is the customer’s password. The parameter does not follow the usual PUT request rules. If you do not include it, the password will not change.
+     * @param string $application_id ID of the external application.The ID represents the application where customer wants to login.
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setApplicationId($application_id)
     {
-        $this->container['password'] = $password;
+        $this->container['application_id'] = $application_id;
 
         return $this;
     }
 
     /**
-     * Gets social_network_credentials
+     * Gets token
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
+     * @return string
      */
-    public function getSocialNetworkCredentials()
+    public function getToken()
     {
-        return $this->container['social_network_credentials'];
+        return $this->container['token'];
     }
 
     /**
-     * Sets social_network_credentials
+     * Sets token
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param string $token Authentication token
      *
      * @return $this
      */
-    public function setSocialNetworkCredentials($social_network_credentials)
+    public function setToken($token)
     {
-        $this->container['social_network_credentials'] = $social_network_credentials;
+        $this->container['token'] = $token;
+
+        return $this;
+    }
+
+    /**
+     * Gets token_request_id
+     *
+     * @return string
+     */
+    public function getTokenRequestId()
+    {
+        return $this->container['token_request_id'];
+    }
+
+    /**
+     * Sets token_request_id
+     *
+     * @param string $token_request_id The parameter specifies the request that caused the token to be created. If two customers generated an authentication token at the same time and in the same application, the token_request_id parameter represents doubled verification to identify the correct token. In case you dont need to have two factor authentication, please send both parameters (token and token_request_id) one way. For example in HTTP Authentication header.
+     *
+     * @return $this
+     */
+    public function setTokenRequestId($token_request_id)
+    {
+        $this->container['token_request_id'] = $token_request_id;
 
         return $this;
     }

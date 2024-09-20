@@ -276,9 +276,6 @@ self::PAYMENT_TYPE_D,        ];
     {
         $invalidProperties = [];
 
-        if ($this->container['fiscal'] === null) {
-            $invalidProperties[] = "'fiscal' can't be null";
-        }
         if ($this->container['purchase_type_id'] === null) {
             $invalidProperties[] = "'purchase_type_id' can't be null";
         }

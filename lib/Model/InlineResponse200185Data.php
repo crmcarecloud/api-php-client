@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomersCustomerIdBody
+ * InlineResponse200185Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomersCustomerIdBody Class Doc Comment
+ * InlineResponse200185Data Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
+class InlineResponse200185Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'customers_customer_id_body';
+    protected static $swaggerModelName = 'inline_response_200_185_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
-        'password' => 'string',
-        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'
+        'voucher_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -67,9 +66,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer' => null,
-        'password' => 'password',
-        'social_network_credentials' => null
+        'voucher_properties' => null,
+        'total_items' => null
     ];
 
     /**
@@ -99,9 +97,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer' => 'customer',
-        'password' => 'password',
-        'social_network_credentials' => 'social_network_credentials'
+        'voucher_properties' => 'voucher_properties',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -110,9 +107,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer' => 'setCustomer',
-        'password' => 'setPassword',
-        'social_network_credentials' => 'setSocialNetworkCredentials'
+        'voucher_properties' => 'setVoucherProperties',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -121,9 +117,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer' => 'getCustomer',
-        'password' => 'getPassword',
-        'social_network_credentials' => 'getSocialNetworkCredentials'
+        'voucher_properties' => 'getVoucherProperties',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -184,9 +179,8 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['voucher_properties'] = isset($data['voucher_properties']) ? $data['voucher_properties'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -198,9 +192,6 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customer'] === null) {
-            $invalidProperties[] = "'customer' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,73 +208,49 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer
+     * Gets voucher_properties
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getCustomer()
+    public function getVoucherProperties()
     {
-        return $this->container['customer'];
+        return $this->container['voucher_properties'];
     }
 
     /**
-     * Sets customer
+     * Sets voucher_properties
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $voucher_properties List of all voucher properties.
      *
      * @return $this
      */
-    public function setCustomer($customer)
+    public function setVoucherProperties($voucher_properties)
     {
-        $this->container['customer'] = $customer;
+        $this->container['voucher_properties'] = $voucher_properties;
 
         return $this;
     }
 
     /**
-     * Gets password
+     * Gets total_items
      *
-     * @return string
+     * @return int
      */
-    public function getPassword()
+    public function getTotalItems()
     {
-        return $this->container['password'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets password
+     * Sets total_items
      *
-     * @param string $password This is the customer’s password. The parameter does not follow the usual PUT request rules. If you do not include it, the password will not change.
+     * @param int $total_items The number of all found voucher properties.
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setTotalItems($total_items)
     {
-        $this->container['password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * Gets social_network_credentials
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
-     */
-    public function getSocialNetworkCredentials()
-    {
-        return $this->container['social_network_credentials'];
-    }
-
-    /**
-     * Sets social_network_credentials
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
-     *
-     * @return $this
-     */
-    public function setSocialNetworkCredentials($social_network_credentials)
-    {
-        $this->container['social_network_credentials'] = $social_network_credentials;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

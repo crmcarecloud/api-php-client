@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomersCustomerIdBody
+ * InlineResponse200188Data
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomersCustomerIdBody Class Doc Comment
+ * InlineResponse200188Data Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
+class InlineResponse200188Data implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'customers_customer_id_body';
+    protected static $swaggerModelName = 'inline_response_200_188_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
-        'password' => 'string',
-        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'
+        'earned_credits' => 'float',
+        'redeemed_credits' => 'float',
+        'available_credits' => 'float',
+        'split_by_currency' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]'
     ];
 
     /**
@@ -67,9 +68,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer' => null,
-        'password' => 'password',
-        'social_network_credentials' => null
+        'earned_credits' => 'float',
+        'redeemed_credits' => 'float',
+        'available_credits' => 'float',
+        'split_by_currency' => null
     ];
 
     /**
@@ -99,9 +101,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer' => 'customer',
-        'password' => 'password',
-        'social_network_credentials' => 'social_network_credentials'
+        'earned_credits' => 'earned_credits',
+        'redeemed_credits' => 'redeemed_credits',
+        'available_credits' => 'available_credits',
+        'split_by_currency' => 'split_by_currency'
     ];
 
     /**
@@ -110,9 +113,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer' => 'setCustomer',
-        'password' => 'setPassword',
-        'social_network_credentials' => 'setSocialNetworkCredentials'
+        'earned_credits' => 'setEarnedCredits',
+        'redeemed_credits' => 'setRedeemedCredits',
+        'available_credits' => 'setAvailableCredits',
+        'split_by_currency' => 'setSplitByCurrency'
     ];
 
     /**
@@ -121,9 +125,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer' => 'getCustomer',
-        'password' => 'getPassword',
-        'social_network_credentials' => 'getSocialNetworkCredentials'
+        'earned_credits' => 'getEarnedCredits',
+        'redeemed_credits' => 'getRedeemedCredits',
+        'available_credits' => 'getAvailableCredits',
+        'split_by_currency' => 'getSplitByCurrency'
     ];
 
     /**
@@ -184,9 +189,10 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['earned_credits'] = isset($data['earned_credits']) ? $data['earned_credits'] : null;
+        $this->container['redeemed_credits'] = isset($data['redeemed_credits']) ? $data['redeemed_credits'] : null;
+        $this->container['available_credits'] = isset($data['available_credits']) ? $data['available_credits'] : null;
+        $this->container['split_by_currency'] = isset($data['split_by_currency']) ? $data['split_by_currency'] : null;
     }
 
     /**
@@ -198,9 +204,6 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customer'] === null) {
-            $invalidProperties[] = "'customer' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,73 +220,97 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer
+     * Gets earned_credits
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
+     * @return float
      */
-    public function getCustomer()
+    public function getEarnedCredits()
     {
-        return $this->container['customer'];
+        return $this->container['earned_credits'];
     }
 
     /**
-     * Sets customer
+     * Sets earned_credits
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
+     * @param float $earned_credits Amount of earned credits in time interval.
      *
      * @return $this
      */
-    public function setCustomer($customer)
+    public function setEarnedCredits($earned_credits)
     {
-        $this->container['customer'] = $customer;
+        $this->container['earned_credits'] = $earned_credits;
 
         return $this;
     }
 
     /**
-     * Gets password
+     * Gets redeemed_credits
      *
-     * @return string
+     * @return float
      */
-    public function getPassword()
+    public function getRedeemedCredits()
     {
-        return $this->container['password'];
+        return $this->container['redeemed_credits'];
     }
 
     /**
-     * Sets password
+     * Sets redeemed_credits
      *
-     * @param string $password This is the customer’s password. The parameter does not follow the usual PUT request rules. If you do not include it, the password will not change.
+     * @param float $redeemed_credits Amount of redeemed credits in time interval.
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setRedeemedCredits($redeemed_credits)
     {
-        $this->container['password'] = $password;
+        $this->container['redeemed_credits'] = $redeemed_credits;
 
         return $this;
     }
 
     /**
-     * Gets social_network_credentials
+     * Gets available_credits
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
+     * @return float
      */
-    public function getSocialNetworkCredentials()
+    public function getAvailableCredits()
     {
-        return $this->container['social_network_credentials'];
+        return $this->container['available_credits'];
     }
 
     /**
-     * Sets social_network_credentials
+     * Sets available_credits
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param float $available_credits Amount of available credits in the moment. Time interval has no influence to the result.
      *
      * @return $this
      */
-    public function setSocialNetworkCredentials($social_network_credentials)
+    public function setAvailableCredits($available_credits)
     {
-        $this->container['social_network_credentials'] = $social_network_credentials;
+        $this->container['available_credits'] = $available_credits;
+
+        return $this;
+    }
+
+    /**
+     * Gets split_by_currency
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]
+     */
+    public function getSplitByCurrency()
+    {
+        return $this->container['split_by_currency'];
+    }
+
+    /**
+     * Sets split_by_currency
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[] $split_by_currency The credit overview split by currency.
+     *
+     * @return $this
+     */
+    public function setSplitByCurrency($split_by_currency)
+    {
+        $this->container['split_by_currency'] = $split_by_currency;
 
         return $this;
     }

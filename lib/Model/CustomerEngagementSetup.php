@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomersCustomerIdBody
+ * CustomerEngagementSetup
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomersCustomerIdBody Class Doc Comment
+ * CustomerEngagementSetup Class Doc Comment
  *
  * @category Class
+ * @description Customer engagement setup structure.
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
+class CustomerEngagementSetup implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +49,7 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'customers_customer_id_body';
+    protected static $swaggerModelName = 'CustomerEngagementSetup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +57,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer',
-        'password' => 'string',
-        'social_network_credentials' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials'
+        'setup_id' => 'string',
+        'setup' => 'string',
+        'state' => 'int'
     ];
 
     /**
@@ -67,9 +68,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer' => null,
-        'password' => 'password',
-        'social_network_credentials' => null
+        'setup_id' => null,
+        'setup' => null,
+        'state' => null
     ];
 
     /**
@@ -99,9 +100,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer' => 'customer',
-        'password' => 'password',
-        'social_network_credentials' => 'social_network_credentials'
+        'setup_id' => 'setup_id',
+        'setup' => 'setup',
+        'state' => 'state'
     ];
 
     /**
@@ -110,9 +111,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer' => 'setCustomer',
-        'password' => 'setPassword',
-        'social_network_credentials' => 'setSocialNetworkCredentials'
+        'setup_id' => 'setSetupId',
+        'setup' => 'setSetup',
+        'state' => 'setState'
     ];
 
     /**
@@ -121,9 +122,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer' => 'getCustomer',
-        'password' => 'getPassword',
-        'social_network_credentials' => 'getSocialNetworkCredentials'
+        'setup_id' => 'getSetupId',
+        'setup' => 'getSetup',
+        'state' => 'getState'
     ];
 
     /**
@@ -167,7 +168,22 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+    const STATE_0 = 0;
+const STATE_1 = 1;
+const STATE_2 = 2;
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return array<int,int|string>
+     */
+    public function getStateAllowableValues()
+    {
+        return [
+            self::STATE_0,
+self::STATE_1,
+self::STATE_2,        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -184,9 +200,9 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['social_network_credentials'] = isset($data['social_network_credentials']) ? $data['social_network_credentials'] : null;
+        $this->container['setup_id'] = isset($data['setup_id']) ? $data['setup_id'] : null;
+        $this->container['setup'] = isset($data['setup']) ? $data['setup'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
     }
 
     /**
@@ -198,9 +214,14 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customer'] === null) {
-            $invalidProperties[] = "'customer' can't be null";
+        $allowedValues = $this->getStateAllowableValues();
+        if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'state', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
         }
+
         return $invalidProperties;
     }
 
@@ -217,73 +238,82 @@ class CustomersCustomerIdBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer
-     */
-    public function getCustomer()
-    {
-        return $this->container['customer'];
-    }
-
-    /**
-     * Sets customer
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer $customer customer
-     *
-     * @return $this
-     */
-    public function setCustomer($customer)
-    {
-        $this->container['customer'] = $customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets password
+     * Gets setup_id
      *
      * @return string
      */
-    public function getPassword()
+    public function getSetupId()
     {
-        return $this->container['password'];
+        return $this->container['setup_id'];
     }
 
     /**
-     * Sets password
+     * Sets setup_id
      *
-     * @param string $password This is the customer’s password. The parameter does not follow the usual PUT request rules. If you do not include it, the password will not change.
+     * @param string $setup_id The unique ID of the customer engagement setup.
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setSetupId($setup_id)
     {
-        $this->container['password'] = $password;
+        $this->container['setup_id'] = $setup_id;
 
         return $this;
     }
 
     /**
-     * Gets social_network_credentials
+     * Gets setup
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials
+     * @return string
      */
-    public function getSocialNetworkCredentials()
+    public function getSetup()
     {
-        return $this->container['social_network_credentials'];
+        return $this->container['setup'];
     }
 
     /**
-     * Sets social_network_credentials
+     * Sets setup
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SocialNetworkCredentials $social_network_credentials social_network_credentials
+     * @param string $setup Serialized JSON contains the customer engagement setup for the application
      *
      * @return $this
      */
-    public function setSocialNetworkCredentials($social_network_credentials)
+    public function setSetup($setup)
     {
-        $this->container['social_network_credentials'] = $social_network_credentials;
+        $this->container['setup'] = $setup;
+
+        return $this;
+    }
+
+    /**
+     * Gets state
+     *
+     * @return int
+     */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+     * Sets state
+     *
+     * @param int $state State of the customer engagement setup. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
+     *
+     * @return $this
+     */
+    public function setState($state)
+    {
+        $allowedValues = $this->getStateAllowableValues();
+        if (!is_null($state) && !in_array($state, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'state', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['state'] = $state;
 
         return $this;
     }

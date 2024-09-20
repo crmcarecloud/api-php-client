@@ -326,7 +326,7 @@ void (empty response body)
 
 Send the message for the setup of a new customer's password
 
-Send a message, that contains a link to set up a new customer password.<br/> The use case [Forgotten password](https://www.crmcarecloud.com/build-a-mobile-app/#accordion-customer-use-case-customer-account-operations-4) shows how to use this action method.<br/> ⚠️ Endpoint is available only in the Customer interface.<br/> ⚠️ An extra setup of the event type in CareCloud could be necessary to make the endpoint work correctly. If so, don't hesitate to get in touch with the CareCloud administrator in your organization.<br/>
+Send a message, that contains a link to set up a new customer password.<br/> The use case [Forgotten password](https://www.crmcarecloud.com/build-a-mobile-app/#accordion-customer-use-case-customer-account-operations-4) shows how to use this action method.<br/> ⚠️ Endpoint is available only in the Customer interface.<br/> ⚠️ An extra setup of the Marketing Automation scenario in CareCloud could be necessary to make the endpoint work correctly. If so, don't hesitate to get in touch with the CareCloud administrator in your organization.<br/>
 
 ### Example
 ```php
