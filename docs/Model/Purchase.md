@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **card_number** | **string** | Purchasing customer card number. | [optional] 
 **cashdesk_number** | **string** | Number of the cash-desk | 
 **last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
+**purchase_property_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of purchase property records. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getProductReservationExternalListTypes**](ProductReservationExternalListTypesApi.md#getproductreservationexternallisttypes) | **GET** /product-reservation-external-list-types | Get all product reservation external list types
 
 # **getProductReservationExternalListType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122 getProductReservationExternalListType($product_reservation_external_list_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123 getProductReservationExternalListType($product_reservation_external_list_type_id, $accept_language)
 
 Detail of a product reservation external list type
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122**](../Model/InlineResponse200122.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200123**](../Model/InlineResponse200123.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservationExternalListTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121 getProductReservationExternalListTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122 getProductReservationExternalListTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all product reservation external list types
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200121**](../Model/InlineResponse200121.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200122**](../Model/InlineResponse200122.md)
 
 ### Authorization
 

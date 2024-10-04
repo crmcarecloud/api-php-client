@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCustomerEngagementSetups**](CustomerEngagementApi.md#getcustomerengagementsetups) | **GET** /customer-engagement-setups | Get all customer engagement setups
 
 # **getCustomerEngagementSetup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067 getCustomerEngagementSetup($customer_engagement_setup_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068 getCustomerEngagementSetup($customer_engagement_setup_id, $accept_language)
 
 Get a customer engagement setup
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerEngagementSetups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20066 getCustomerEngagementSetups($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067 getCustomerEngagementSetups($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all customer engagement setups
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
 
 ### Authorization
 

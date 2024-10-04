@@ -56,7 +56,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'payment_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PaymentType[]',
+        'partner_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'payment_types' => null,
+        'partner_properties' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'payment_types' => 'payment_types',
+        'partner_properties' => 'partner_properties',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'payment_types' => 'setPaymentTypes',
+        'partner_properties' => 'setPartnerProperties',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'payment_types' => 'getPaymentTypes',
+        'partner_properties' => 'getPartnerProperties',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['payment_types'] = isset($data['payment_types']) ? $data['payment_types'] : null;
+        $this->container['partner_properties'] = isset($data['partner_properties']) ? $data['partner_properties'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets payment_types
+     * Gets partner_properties
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getPaymentTypes()
+    public function getPartnerProperties()
     {
-        return $this->container['payment_types'];
+        return $this->container['partner_properties'];
     }
 
     /**
-     * Sets payment_types
+     * Sets partner_properties
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentType[] $payment_types List of the payment types.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $partner_properties List of all partner properties.
      *
      * @return $this
      */
-    public function setPaymentTypes($payment_types)
+    public function setPartnerProperties($partner_properties)
     {
-        $this->container['payment_types'] = $payment_types;
+        $this->container['partner_properties'] = $partner_properties;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200102Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found payment types.
+     * @param int $total_items The number of all found partner properties.
      *
      * @return $this
      */

@@ -56,7 +56,7 @@ class InlineResponse200120Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'purchase_item_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[]',
+        'product_reservation_sources' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationSource[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200120Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'purchase_item_types' => null,
+        'product_reservation_sources' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200120Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'purchase_item_types' => 'purchase_item_types',
+        'product_reservation_sources' => 'product_reservation_sources',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200120Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'purchase_item_types' => 'setPurchaseItemTypes',
+        'product_reservation_sources' => 'setProductReservationSources',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200120Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'purchase_item_types' => 'getPurchaseItemTypes',
+        'product_reservation_sources' => 'getProductReservationSources',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200120Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['purchase_item_types'] = isset($data['purchase_item_types']) ? $data['purchase_item_types'] : null;
+        $this->container['product_reservation_sources'] = isset($data['product_reservation_sources']) ? $data['product_reservation_sources'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200120Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets purchase_item_types
+     * Gets product_reservation_sources
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationSource[]
      */
-    public function getPurchaseItemTypes()
+    public function getProductReservationSources()
     {
-        return $this->container['purchase_item_types'];
+        return $this->container['product_reservation_sources'];
     }
 
     /**
-     * Sets purchase_item_types
+     * Sets product_reservation_sources
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PurchaseItemType[] $purchase_item_types List of the purchase item types.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationSource[] $product_reservation_sources List of the product reservation sources.
      *
      * @return $this
      */
-    public function setPurchaseItemTypes($purchase_item_types)
+    public function setProductReservationSources($product_reservation_sources)
     {
-        $this->container['purchase_item_types'] = $purchase_item_types;
+        $this->container['product_reservation_sources'] = $product_reservation_sources;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200120Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found purchase types.
+     * @param int $total_items The number of all found product reservation sources.
      *
      * @return $this
      */

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getPaymentTypes**](PaymentTypesApi.md#getpaymenttypes) | **GET** /payment-types | Get all payment types
 
 # **getPaymentType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getPaymentType($payment_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104 getPaymentType($payment_type_id, $accept_language)
 
 Detail of an payment type
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200104**](../Model/InlineResponse200104.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPaymentTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102 getPaymentTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103 getPaymentTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all payment types
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200102**](../Model/InlineResponse200102.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
 
 ### Authorization
 

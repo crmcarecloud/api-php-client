@@ -56,8 +56,10 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'communication_channels' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]',
-        'total_items' => 'int'
+        'distance' => 'float',
+        'elevation' => 'float',
+        'skier_days' => 'int',
+        'ski_achievement_text_id' => 'string'
     ];
 
     /**
@@ -66,8 +68,10 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'communication_channels' => null,
-        'total_items' => null
+        'distance' => null,
+        'elevation' => null,
+        'skier_days' => null,
+        'ski_achievement_text_id' => null
     ];
 
     /**
@@ -97,8 +101,10 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'communication_channels' => 'communication_channels',
-        'total_items' => 'total_items'
+        'distance' => 'distance',
+        'elevation' => 'elevation',
+        'skier_days' => 'skier_days',
+        'ski_achievement_text_id' => 'ski_achievement_text_id'
     ];
 
     /**
@@ -107,8 +113,10 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'communication_channels' => 'setCommunicationChannels',
-        'total_items' => 'setTotalItems'
+        'distance' => 'setDistance',
+        'elevation' => 'setElevation',
+        'skier_days' => 'setSkierDays',
+        'ski_achievement_text_id' => 'setSkiAchievementTextId'
     ];
 
     /**
@@ -117,8 +125,10 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'communication_channels' => 'getCommunicationChannels',
-        'total_items' => 'getTotalItems'
+        'distance' => 'getDistance',
+        'elevation' => 'getElevation',
+        'skier_days' => 'getSkierDays',
+        'ski_achievement_text_id' => 'getSkiAchievementTextId'
     ];
 
     /**
@@ -179,8 +189,10 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['communication_channels'] = isset($data['communication_channels']) ? $data['communication_channels'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['distance'] = isset($data['distance']) ? $data['distance'] : null;
+        $this->container['elevation'] = isset($data['elevation']) ? $data['elevation'] : null;
+        $this->container['skier_days'] = isset($data['skier_days']) ? $data['skier_days'] : null;
+        $this->container['ski_achievement_text_id'] = isset($data['ski_achievement_text_id']) ? $data['ski_achievement_text_id'] : null;
     }
 
     /**
@@ -208,49 +220,97 @@ class InlineResponse20030Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets communication_channels
+     * Gets distance
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]
+     * @return float
      */
-    public function getCommunicationChannels()
+    public function getDistance()
     {
-        return $this->container['communication_channels'];
+        return $this->container['distance'];
     }
 
     /**
-     * Sets communication_channels
+     * Sets distance
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[] $communication_channels Structure of the communication channel.
+     * @param float $distance Amount of kilometers that customer skied in the date range.
      *
      * @return $this
      */
-    public function setCommunicationChannels($communication_channels)
+    public function setDistance($distance)
     {
-        $this->container['communication_channels'] = $communication_channels;
+        $this->container['distance'] = $distance;
 
         return $this;
     }
 
     /**
-     * Gets total_items
+     * Gets elevation
      *
-     * @return int
+     * @return float
      */
-    public function getTotalItems()
+    public function getElevation()
     {
-        return $this->container['total_items'];
+        return $this->container['elevation'];
     }
 
     /**
-     * Sets total_items
+     * Sets elevation
      *
-     * @param int $total_items Total count of found items of the resource communication channels.
+     * @param float $elevation Elevation gained during skiing in the date range in meters.
      *
      * @return $this
      */
-    public function setTotalItems($total_items)
+    public function setElevation($elevation)
     {
-        $this->container['total_items'] = $total_items;
+        $this->container['elevation'] = $elevation;
+
+        return $this;
+    }
+
+    /**
+     * Gets skier_days
+     *
+     * @return int
+     */
+    public function getSkierDays()
+    {
+        return $this->container['skier_days'];
+    }
+
+    /**
+     * Sets skier_days
+     *
+     * @param int $skier_days Number of days in the date range that a customer used his entrance ticket
+     *
+     * @return $this
+     */
+    public function setSkierDays($skier_days)
+    {
+        $this->container['skier_days'] = $skier_days;
+
+        return $this;
+    }
+
+    /**
+     * Gets ski_achievement_text_id
+     *
+     * @return string
+     */
+    public function getSkiAchievementTextId()
+    {
+        return $this->container['ski_achievement_text_id'];
+    }
+
+    /**
+     * Sets ski_achievement_text_id
+     *
+     * @param string $ski_achievement_text_id It represents a ski achievement text ID gained by the customer.
+     *
+     * @return $this
+     */
+    public function setSkiAchievementTextId($ski_achievement_text_id)
+    {
+        $this->container['ski_achievement_text_id'] = $ski_achievement_text_id;
 
         return $this;
     }

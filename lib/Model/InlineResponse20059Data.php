@@ -56,7 +56,8 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_id' => 'string'
+        'partner_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -65,7 +66,8 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_id' => null
+        'partner_records' => null,
+        'total_items' => null
     ];
 
     /**
@@ -95,7 +97,8 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_id' => 'customer_id'
+        'partner_records' => 'partner_records',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -104,7 +107,8 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_id' => 'setCustomerId'
+        'partner_records' => 'setPartnerRecords',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -113,7 +117,8 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_id' => 'getCustomerId'
+        'partner_records' => 'getPartnerRecords',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -174,7 +179,8 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
+        $this->container['partner_records'] = isset($data['partner_records']) ? $data['partner_records'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -202,25 +208,49 @@ class InlineResponse20059Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_id
+     * Gets partner_records
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[]
      */
-    public function getCustomerId()
+    public function getPartnerRecords()
     {
-        return $this->container['customer_id'];
+        return $this->container['partner_records'];
     }
 
     /**
-     * Sets customer_id
+     * Sets partner_records
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[] $partner_records Collection of all customer  partner records.
      *
      * @return $this
      */
-    public function setCustomerId($customer_id)
+    public function setPartnerRecords($partner_records)
     {
-        $this->container['customer_id'] = $customer_id;
+        $this->container['partner_records'] = $partner_records;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items The number of all found customer  partners.
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

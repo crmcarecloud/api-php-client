@@ -56,10 +56,10 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'distance' => 'float',
-        'elevation' => 'float',
-        'skier_days' => 'int',
-        'ski_achievement_text_id' => 'string'
+        'active_entrances' => 'int',
+        'canceled_entrances' => 'int',
+        'deactivated_entrances' => 'int',
+        'sold_entrances' => 'int'
     ];
 
     /**
@@ -68,10 +68,10 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'distance' => null,
-        'elevation' => null,
-        'skier_days' => null,
-        'ski_achievement_text_id' => null
+        'active_entrances' => null,
+        'canceled_entrances' => null,
+        'deactivated_entrances' => null,
+        'sold_entrances' => null
     ];
 
     /**
@@ -101,10 +101,10 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'distance' => 'distance',
-        'elevation' => 'elevation',
-        'skier_days' => 'skier_days',
-        'ski_achievement_text_id' => 'ski_achievement_text_id'
+        'active_entrances' => 'active_entrances',
+        'canceled_entrances' => 'canceled_entrances',
+        'deactivated_entrances' => 'deactivated_entrances',
+        'sold_entrances' => 'sold_entrances'
     ];
 
     /**
@@ -113,10 +113,10 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'distance' => 'setDistance',
-        'elevation' => 'setElevation',
-        'skier_days' => 'setSkierDays',
-        'ski_achievement_text_id' => 'setSkiAchievementTextId'
+        'active_entrances' => 'setActiveEntrances',
+        'canceled_entrances' => 'setCanceledEntrances',
+        'deactivated_entrances' => 'setDeactivatedEntrances',
+        'sold_entrances' => 'setSoldEntrances'
     ];
 
     /**
@@ -125,10 +125,10 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'distance' => 'getDistance',
-        'elevation' => 'getElevation',
-        'skier_days' => 'getSkierDays',
-        'ski_achievement_text_id' => 'getSkiAchievementTextId'
+        'active_entrances' => 'getActiveEntrances',
+        'canceled_entrances' => 'getCanceledEntrances',
+        'deactivated_entrances' => 'getDeactivatedEntrances',
+        'sold_entrances' => 'getSoldEntrances'
     ];
 
     /**
@@ -189,10 +189,10 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['distance'] = isset($data['distance']) ? $data['distance'] : null;
-        $this->container['elevation'] = isset($data['elevation']) ? $data['elevation'] : null;
-        $this->container['skier_days'] = isset($data['skier_days']) ? $data['skier_days'] : null;
-        $this->container['ski_achievement_text_id'] = isset($data['ski_achievement_text_id']) ? $data['ski_achievement_text_id'] : null;
+        $this->container['active_entrances'] = isset($data['active_entrances']) ? $data['active_entrances'] : null;
+        $this->container['canceled_entrances'] = isset($data['canceled_entrances']) ? $data['canceled_entrances'] : null;
+        $this->container['deactivated_entrances'] = isset($data['deactivated_entrances']) ? $data['deactivated_entrances'] : null;
+        $this->container['sold_entrances'] = isset($data['sold_entrances']) ? $data['sold_entrances'] : null;
     }
 
     /**
@@ -220,97 +220,97 @@ class InlineResponse20029Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets distance
-     *
-     * @return float
-     */
-    public function getDistance()
-    {
-        return $this->container['distance'];
-    }
-
-    /**
-     * Sets distance
-     *
-     * @param float $distance Amount of kilometers that customer skied in the date range.
-     *
-     * @return $this
-     */
-    public function setDistance($distance)
-    {
-        $this->container['distance'] = $distance;
-
-        return $this;
-    }
-
-    /**
-     * Gets elevation
-     *
-     * @return float
-     */
-    public function getElevation()
-    {
-        return $this->container['elevation'];
-    }
-
-    /**
-     * Sets elevation
-     *
-     * @param float $elevation Elevation gained during skiing in the date range in meters.
-     *
-     * @return $this
-     */
-    public function setElevation($elevation)
-    {
-        $this->container['elevation'] = $elevation;
-
-        return $this;
-    }
-
-    /**
-     * Gets skier_days
+     * Gets active_entrances
      *
      * @return int
      */
-    public function getSkierDays()
+    public function getActiveEntrances()
     {
-        return $this->container['skier_days'];
+        return $this->container['active_entrances'];
     }
 
     /**
-     * Sets skier_days
+     * Sets active_entrances
      *
-     * @param int $skier_days Number of days in the date range that a customer used his entrance ticket
+     * @param int $active_entrances Amount of active entrances in date range. Active entrances can be used by customers in their validity range.
      *
      * @return $this
      */
-    public function setSkierDays($skier_days)
+    public function setActiveEntrances($active_entrances)
     {
-        $this->container['skier_days'] = $skier_days;
+        $this->container['active_entrances'] = $active_entrances;
 
         return $this;
     }
 
     /**
-     * Gets ski_achievement_text_id
+     * Gets canceled_entrances
      *
-     * @return string
+     * @return int
      */
-    public function getSkiAchievementTextId()
+    public function getCanceledEntrances()
     {
-        return $this->container['ski_achievement_text_id'];
+        return $this->container['canceled_entrances'];
     }
 
     /**
-     * Sets ski_achievement_text_id
+     * Sets canceled_entrances
      *
-     * @param string $ski_achievement_text_id It represents a ski achievement text ID gained by the customer.
+     * @param int $canceled_entrances Amount of canceled entrances in date range. Canceled entrances in production systems and in CareCloud. Customers cannot use them anymore.
      *
      * @return $this
      */
-    public function setSkiAchievementTextId($ski_achievement_text_id)
+    public function setCanceledEntrances($canceled_entrances)
     {
-        $this->container['ski_achievement_text_id'] = $ski_achievement_text_id;
+        $this->container['canceled_entrances'] = $canceled_entrances;
+
+        return $this;
+    }
+
+    /**
+     * Gets deactivated_entrances
+     *
+     * @return int
+     */
+    public function getDeactivatedEntrances()
+    {
+        return $this->container['deactivated_entrances'];
+    }
+
+    /**
+     * Sets deactivated_entrances
+     *
+     * @param int $deactivated_entrances Amount of deactivated entrances in date range. Entrances deactivated in CareCloud only. These entrances are usually not sent to production systems. Deactivation have been done in system CareCloud.
+     *
+     * @return $this
+     */
+    public function setDeactivatedEntrances($deactivated_entrances)
+    {
+        $this->container['deactivated_entrances'] = $deactivated_entrances;
+
+        return $this;
+    }
+
+    /**
+     * Gets sold_entrances
+     *
+     * @return int
+     */
+    public function getSoldEntrances()
+    {
+        return $this->container['sold_entrances'];
+    }
+
+    /**
+     * Sets sold_entrances
+     *
+     * @param int $sold_entrances Amount of sold entrances in date range. Entrances deactivated in CareCloud only. These entrances are usually not sent to production systems. Deactivation have been done in system CareCloud.
+     *
+     * @return $this
+     */
+    public function setSoldEntrances($sold_entrances)
+    {
+        $this->container['sold_entrances'] = $sold_entrances;
 
         return $this;
     }

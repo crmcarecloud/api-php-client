@@ -56,7 +56,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'status_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\StatusRecord[]',
+        'segment_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\SegmentRecord[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'status_records' => null,
+        'segment_records' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status_records' => 'status_records',
+        'segment_records' => 'segment_records',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status_records' => 'setStatusRecords',
+        'segment_records' => 'setSegmentRecords',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status_records' => 'getStatusRecords',
+        'segment_records' => 'getSegmentRecords',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['status_records'] = isset($data['status_records']) ? $data['status_records'] : null;
+        $this->container['segment_records'] = isset($data['segment_records']) ? $data['segment_records'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets status_records
+     * Gets segment_records
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\StatusRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentRecord[]
      */
-    public function getStatusRecords()
+    public function getSegmentRecords()
     {
-        return $this->container['status_records'];
+        return $this->container['segment_records'];
     }
 
     /**
-     * Sets status_records
+     * Sets segment_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\StatusRecord[] $status_records List of status records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentRecord[] $segment_records List of segment records.
      *
      * @return $this
      */
-    public function setStatusRecords($status_records)
+    public function setSegmentRecords($segment_records)
     {
-        $this->container['status_records'] = $status_records;
+        $this->container['segment_records'] = $segment_records;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20048Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found status records.
+     * @param int $total_items The number of all found segment records.
      *
      * @return $this
      */

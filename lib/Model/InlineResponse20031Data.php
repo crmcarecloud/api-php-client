@@ -56,7 +56,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'credit_history' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CreditHistoryRecord[]',
+        'communication_channels' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'credit_history' => null,
+        'communication_channels' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'credit_history' => 'credit_history',
+        'communication_channels' => 'communication_channels',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'credit_history' => 'setCreditHistory',
+        'communication_channels' => 'setCommunicationChannels',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'credit_history' => 'getCreditHistory',
+        'communication_channels' => 'getCommunicationChannels',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['credit_history'] = isset($data['credit_history']) ? $data['credit_history'] : null;
+        $this->container['communication_channels'] = isset($data['communication_channels']) ? $data['communication_channels'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets credit_history
+     * Gets communication_channels
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CreditHistoryRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]
      */
-    public function getCreditHistory()
+    public function getCommunicationChannels()
     {
-        return $this->container['credit_history'];
+        return $this->container['communication_channels'];
     }
 
     /**
-     * Sets credit_history
+     * Sets communication_channels
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CreditHistoryRecord[] $credit_history List of the credit history records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[] $communication_channels Structure of the communication channel.
      *
      * @return $this
      */
-    public function setCreditHistory($credit_history)
+    public function setCommunicationChannels($communication_channels)
     {
-        $this->container['credit_history'] = $credit_history;
+        $this->container['communication_channels'] = $communication_channels;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20031Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found credit history records.
+     * @param int $total_items Total count of found items of the resource communication channels.
      *
      * @return $this
      */

@@ -75,6 +75,11 @@ class Reward implements ModelInterface, ArrayAccess
         'has_product_condition' => 'bool',
         'has_group_condition' => 'bool',
         'has_brand_condition' => 'bool',
+        'has_product_bonus' => 'bool',
+        'has_group_bonus' => 'bool',
+        'has_brand_bonus' => 'bool',
+        'reward_product_relation_conditions' => '\CrmCareCloud\Webservice\RestApi\Client\Model\RewardProductRelationCondition[]',
+        'reward_product_relation_bonuses' => '\CrmCareCloud\Webservice\RestApi\Client\Model\RewardProductRelationBonus[]',
         'is_automated' => 'bool',
         'tags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]',
         'last_change' => 'string',
@@ -105,6 +110,11 @@ class Reward implements ModelInterface, ArrayAccess
         'has_product_condition' => null,
         'has_group_condition' => null,
         'has_brand_condition' => null,
+        'has_product_bonus' => null,
+        'has_group_bonus' => null,
+        'has_brand_bonus' => null,
+        'reward_product_relation_conditions' => null,
+        'reward_product_relation_bonuses' => null,
         'is_automated' => null,
         'tags' => null,
         'last_change' => null,
@@ -156,6 +166,11 @@ class Reward implements ModelInterface, ArrayAccess
         'has_product_condition' => 'has_product_condition',
         'has_group_condition' => 'has_group_condition',
         'has_brand_condition' => 'has_brand_condition',
+        'has_product_bonus' => 'has_product_bonus',
+        'has_group_bonus' => 'has_group_bonus',
+        'has_brand_bonus' => 'has_brand_bonus',
+        'reward_product_relation_conditions' => 'reward_product_relation_conditions',
+        'reward_product_relation_bonuses' => 'reward_product_relation_bonuses',
         'is_automated' => 'is_automated',
         'tags' => 'tags',
         'last_change' => 'last_change',
@@ -186,6 +201,11 @@ class Reward implements ModelInterface, ArrayAccess
         'has_product_condition' => 'setHasProductCondition',
         'has_group_condition' => 'setHasGroupCondition',
         'has_brand_condition' => 'setHasBrandCondition',
+        'has_product_bonus' => 'setHasProductBonus',
+        'has_group_bonus' => 'setHasGroupBonus',
+        'has_brand_bonus' => 'setHasBrandBonus',
+        'reward_product_relation_conditions' => 'setRewardProductRelationConditions',
+        'reward_product_relation_bonuses' => 'setRewardProductRelationBonuses',
         'is_automated' => 'setIsAutomated',
         'tags' => 'setTags',
         'last_change' => 'setLastChange',
@@ -216,6 +236,11 @@ class Reward implements ModelInterface, ArrayAccess
         'has_product_condition' => 'getHasProductCondition',
         'has_group_condition' => 'getHasGroupCondition',
         'has_brand_condition' => 'getHasBrandCondition',
+        'has_product_bonus' => 'getHasProductBonus',
+        'has_group_bonus' => 'getHasGroupBonus',
+        'has_brand_bonus' => 'getHasBrandBonus',
+        'reward_product_relation_conditions' => 'getRewardProductRelationConditions',
+        'reward_product_relation_bonuses' => 'getRewardProductRelationBonuses',
         'is_automated' => 'getIsAutomated',
         'tags' => 'getTags',
         'last_change' => 'getLastChange',
@@ -357,6 +382,11 @@ self::STATE_2,        ];
         $this->container['has_product_condition'] = isset($data['has_product_condition']) ? $data['has_product_condition'] : null;
         $this->container['has_group_condition'] = isset($data['has_group_condition']) ? $data['has_group_condition'] : null;
         $this->container['has_brand_condition'] = isset($data['has_brand_condition']) ? $data['has_brand_condition'] : null;
+        $this->container['has_product_bonus'] = isset($data['has_product_bonus']) ? $data['has_product_bonus'] : null;
+        $this->container['has_group_bonus'] = isset($data['has_group_bonus']) ? $data['has_group_bonus'] : null;
+        $this->container['has_brand_bonus'] = isset($data['has_brand_bonus']) ? $data['has_brand_bonus'] : null;
+        $this->container['reward_product_relation_conditions'] = isset($data['reward_product_relation_conditions']) ? $data['reward_product_relation_conditions'] : null;
+        $this->container['reward_product_relation_bonuses'] = isset($data['reward_product_relation_bonuses']) ? $data['reward_product_relation_bonuses'] : null;
         $this->container['is_automated'] = isset($data['is_automated']) ? $data['is_automated'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
@@ -869,6 +899,126 @@ self::STATE_2,        ];
     public function setHasBrandCondition($has_brand_condition)
     {
         $this->container['has_brand_condition'] = $has_brand_condition;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_product_bonus
+     *
+     * @return bool
+     */
+    public function getHasProductBonus()
+    {
+        return $this->container['has_product_bonus'];
+    }
+
+    /**
+     * Sets has_product_bonus
+     *
+     * @param bool $has_product_bonus Parameter says, if there is product bonus on reward.
+     *
+     * @return $this
+     */
+    public function setHasProductBonus($has_product_bonus)
+    {
+        $this->container['has_product_bonus'] = $has_product_bonus;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_group_bonus
+     *
+     * @return bool
+     */
+    public function getHasGroupBonus()
+    {
+        return $this->container['has_group_bonus'];
+    }
+
+    /**
+     * Sets has_group_bonus
+     *
+     * @param bool $has_group_bonus Parameter says, if there is group bonus on reward.
+     *
+     * @return $this
+     */
+    public function setHasGroupBonus($has_group_bonus)
+    {
+        $this->container['has_group_bonus'] = $has_group_bonus;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_brand_bonus
+     *
+     * @return bool
+     */
+    public function getHasBrandBonus()
+    {
+        return $this->container['has_brand_bonus'];
+    }
+
+    /**
+     * Sets has_brand_bonus
+     *
+     * @param bool $has_brand_bonus Parameter says, if there is brand bonus on reward.
+     *
+     * @return $this
+     */
+    public function setHasBrandBonus($has_brand_bonus)
+    {
+        $this->container['has_brand_bonus'] = $has_brand_bonus;
+
+        return $this;
+    }
+
+    /**
+     * Gets reward_product_relation_conditions
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\RewardProductRelationCondition[]
+     */
+    public function getRewardProductRelationConditions()
+    {
+        return $this->container['reward_product_relation_conditions'];
+    }
+
+    /**
+     * Sets reward_product_relation_conditions
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\RewardProductRelationCondition[] $reward_product_relation_conditions Conditions between reward and product.
+     *
+     * @return $this
+     */
+    public function setRewardProductRelationConditions($reward_product_relation_conditions)
+    {
+        $this->container['reward_product_relation_conditions'] = $reward_product_relation_conditions;
+
+        return $this;
+    }
+
+    /**
+     * Gets reward_product_relation_bonuses
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\RewardProductRelationBonus[]
+     */
+    public function getRewardProductRelationBonuses()
+    {
+        return $this->container['reward_product_relation_bonuses'];
+    }
+
+    /**
+     * Sets reward_product_relation_bonuses
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\RewardProductRelationBonus[] $reward_product_relation_bonuses Bonuses between reward and product.
+     *
+     * @return $this
+     */
+    public function setRewardProductRelationBonuses($reward_product_relation_bonuses)
+    {
+        $this->container['reward_product_relation_bonuses'] = $reward_product_relation_bonuses;
 
         return $this;
     }

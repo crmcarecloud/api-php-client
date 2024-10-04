@@ -93,14 +93,15 @@ class LanguagesApi
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string $language_list_type Type of language list. All lists can be managed from the CareCloud administration interface. *Possible values: customer-communication - list of languages used for communication with the customer (emails, notifications or text messages) / web-portal - list of languages for CareCloud web portal / carecloud-api - languages supported by CareCloud REST API (API communicates in these languages).* (optional, default to carecloud-api)
+     * @param  bool $default_language Default language of the project. If true, the endpoint returns only default language of the project. (optional, default to false)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089
      */
-    public function getLanguages($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api')
+    public function getLanguages($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api', $default_language = 'false')
     {
-        list($response) = $this->getLanguagesWithHttpInfo($accept_language, $language_list_type);
+        list($response) = $this->getLanguagesWithHttpInfo($accept_language, $language_list_type, $default_language);
         return $response;
     }
 
@@ -111,15 +112,16 @@ class LanguagesApi
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string $language_list_type Type of language list. All lists can be managed from the CareCloud administration interface. *Possible values: customer-communication - list of languages used for communication with the customer (emails, notifications or text messages) / web-portal - list of languages for CareCloud web portal / carecloud-api - languages supported by CareCloud REST API (API communicates in these languages).* (optional, default to carecloud-api)
+     * @param  bool $default_language Default language of the project. If true, the endpoint returns only default language of the project. (optional, default to false)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLanguagesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api')
+    public function getLanguagesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api', $default_language = 'false')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088';
-        $request = $this->getLanguagesRequest($accept_language, $language_list_type);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089';
+        $request = $this->getLanguagesRequest($accept_language, $language_list_type, $default_language);
 
         try {
             $options = $this->createHttpClientOption();
@@ -170,7 +172,7 @@ class LanguagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -235,13 +237,14 @@ class LanguagesApi
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string $language_list_type Type of language list. All lists can be managed from the CareCloud administration interface. *Possible values: customer-communication - list of languages used for communication with the customer (emails, notifications or text messages) / web-portal - list of languages for CareCloud web portal / carecloud-api - languages supported by CareCloud REST API (API communicates in these languages).* (optional, default to carecloud-api)
+     * @param  bool $default_language Default language of the project. If true, the endpoint returns only default language of the project. (optional, default to false)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLanguagesAsync($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api')
+    public function getLanguagesAsync($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api', $default_language = 'false')
     {
-        return $this->getLanguagesAsyncWithHttpInfo($accept_language, $language_list_type)
+        return $this->getLanguagesAsyncWithHttpInfo($accept_language, $language_list_type, $default_language)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -256,14 +259,15 @@ class LanguagesApi
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string|null $language_list_type Type of language list. All lists can be managed from the CareCloud administration interface. *Possible values: customer-communication - list of languages used for communication with the customer (emails, notifications or text messages) / web-portal - list of languages for CareCloud web portal / carecloud-api - languages supported by CareCloud REST API (API communicates in these languages).* (optional, default to carecloud-api)
+     * @param  bool|null $default_language Default language of the project. If true, the endpoint returns only default language of the project. (optional, default to false)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLanguagesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api')
+    public function getLanguagesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api', $default_language = 'false')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088';
-        $request = $this->getLanguagesRequest($accept_language, $language_list_type);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089';
+        $request = $this->getLanguagesRequest($accept_language, $language_list_type, $default_language);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -307,11 +311,12 @@ class LanguagesApi
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  string $language_list_type Type of language list. All lists can be managed from the CareCloud administration interface. *Possible values: customer-communication - list of languages used for communication with the customer (emails, notifications or text messages) / web-portal - list of languages for CareCloud web portal / carecloud-api - languages supported by CareCloud REST API (API communicates in these languages).* (optional, default to carecloud-api)
+     * @param  bool $default_language Default language of the project. If true, the endpoint returns only default language of the project. (optional, default to false)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getLanguagesRequest($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api')
+    protected function getLanguagesRequest($accept_language = 'cs, en-gb;q=0.8', $language_list_type = 'carecloud-api', $default_language = 'false')
     {
 
         $resourcePath = '/languages';
@@ -324,6 +329,10 @@ class LanguagesApi
         // query params
         if ($language_list_type !== null) {
             $queryParams['language_list_type'] = ObjectSerializer::toQueryValue($language_list_type, null);
+        }
+        // query params
+        if ($default_language !== null) {
+            $queryParams['default_language'] = ObjectSerializer::toQueryValue($default_language, null);
         }
         // header params
         if ($accept_language !== null) {

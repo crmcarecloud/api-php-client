@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**postGenerateDigitalCard**](CardsApi.md#postgeneratedigitalcard) | **POST** /cards/actions/generate-digital-card-file | Generate virtual card file
 [**postGeneratePassMachine**](CardsApi.md#postgeneratepassmachine) | **POST** /cards/actions/generate-pass-machine-card | Get a PassMachine digital card
 [**postValidateFreeCard**](CardsApi.md#postvalidatefreecard) | **POST** /cards/actions/validate-free-card | Validate free card
+[**postValidateIsicCard**](CardsApi.md#postvalidateisiccard) | **POST** /cards/actions/validate-isic-card | Validate ISIC card
 [**putCard**](CardsApi.md#putcard) | **PUT** /cards/{card_id} | Update a card
 
 # **getCard**
@@ -398,7 +399,7 @@ Name | Type | Description  | Notes
 
 Get a PassMachine digital card
 
-Generate a link for a PassMachine digital card.
+Generate a link for a PassMachine digital card. This endpoint generate PassMachine from an existing customer card. If the card is missing, the PassMachine link can't be generated.
 
 ### Example
 ```php
@@ -501,6 +502,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postValidateIsicCard**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023 postValidateIsicCard($body, $accept_language)
+
+Validate ISIC card
+
+Method validates if a card is valid ISIC card and there is a possibility to check if the card is already present in CareCloud database.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsValidateisiccardBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsValidateisiccardBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->postValidateIsicCard($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CardsApi->postValidateIsicCard: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsValidateisiccardBody**](../Model/ActionsValidateisiccardBody.md)|  |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
 
 ### Authorization
 

@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**turnover** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]**](QualificationTurnover.md) | List of all turnover by currency in time interval. | [optional] 
+**property_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of property records. | [optional] 
+**total_items** | **int** | The number of all found voucher property records. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

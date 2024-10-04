@@ -54,7 +54,8 @@ class RewardProduct extends Product
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'minimum_number_of_products' => 'int'
+        'minimum_number_of_products' => 'int',
+        'reward_product_relation_type' => 'string'
     ];
 
     /**
@@ -63,7 +64,8 @@ class RewardProduct extends Product
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'minimum_number_of_products' => null
+        'minimum_number_of_products' => null,
+        'reward_product_relation_type' => null
     ];
 
     /**
@@ -93,7 +95,8 @@ class RewardProduct extends Product
      * @var string[]
      */
     protected static $attributeMap = [
-        'minimum_number_of_products' => 'minimum_number_of_products'
+        'minimum_number_of_products' => 'minimum_number_of_products',
+        'reward_product_relation_type' => 'reward_product_relation_type'
     ];
 
     /**
@@ -102,7 +105,8 @@ class RewardProduct extends Product
      * @var string[]
      */
     protected static $setters = [
-        'minimum_number_of_products' => 'setMinimumNumberOfProducts'
+        'minimum_number_of_products' => 'setMinimumNumberOfProducts',
+        'reward_product_relation_type' => 'setRewardProductRelationType'
     ];
 
     /**
@@ -111,7 +115,8 @@ class RewardProduct extends Product
      * @var string[]
      */
     protected static $getters = [
-        'minimum_number_of_products' => 'getMinimumNumberOfProducts'
+        'minimum_number_of_products' => 'getMinimumNumberOfProducts',
+        'reward_product_relation_type' => 'getRewardProductRelationType'
     ];
 
     /**
@@ -155,7 +160,20 @@ class RewardProduct extends Product
         return self::$swaggerModelName;
     }
 
-    
+    const REWARD_PRODUCT_RELATION_TYPE_CONDITION = 'condition';
+const REWARD_PRODUCT_RELATION_TYPE_BONUS = 'bonus';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return array<int,int|string>
+     */
+    public function getRewardProductRelationTypeAllowableValues()
+    {
+        return [
+            self::REWARD_PRODUCT_RELATION_TYPE_CONDITION,
+self::REWARD_PRODUCT_RELATION_TYPE_BONUS,        ];
+    }
 
 
     /**
@@ -169,6 +187,7 @@ class RewardProduct extends Product
         parent::__construct($data);
 
         $this->container['minimum_number_of_products'] = isset($data['minimum_number_of_products']) ? $data['minimum_number_of_products'] : null;
+        $this->container['reward_product_relation_type'] = isset($data['reward_product_relation_type']) ? $data['reward_product_relation_type'] : null;
     }
 
     /**
@@ -179,6 +198,14 @@ class RewardProduct extends Product
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
+
+        $allowedValues = $this->getRewardProductRelationTypeAllowableValues();
+        if (!is_null($this->container['reward_product_relation_type']) && !in_array($this->container['reward_product_relation_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'reward_product_relation_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -215,6 +242,39 @@ class RewardProduct extends Product
     public function setMinimumNumberOfProducts($minimum_number_of_products)
     {
         $this->container['minimum_number_of_products'] = $minimum_number_of_products;
+
+        return $this;
+    }
+
+    /**
+     * Gets reward_product_relation_type
+     *
+     * @return string
+     */
+    public function getRewardProductRelationType()
+    {
+        return $this->container['reward_product_relation_type'];
+    }
+
+    /**
+     * Sets reward_product_relation_type
+     *
+     * @param string $reward_product_relation_type Parameter identify type of the relation between reward and product.
+     *
+     * @return $this
+     */
+    public function setRewardProductRelationType($reward_product_relation_type)
+    {
+        $allowedValues = $this->getRewardProductRelationTypeAllowableValues();
+        if (!is_null($reward_product_relation_type) && !in_array($reward_product_relation_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'reward_product_relation_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['reward_product_relation_type'] = $reward_product_relation_type;
 
         return $this;
     }

@@ -56,8 +56,9 @@ class InlineResponse200176Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'users' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User[]',
-        'total_items' => 'int'
+        'authentication_token' => 'string',
+        'token_request_id' => 'string',
+        'valid_to' => 'string'
     ];
 
     /**
@@ -66,8 +67,9 @@ class InlineResponse200176Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'users' => null,
-        'total_items' => null
+        'authentication_token' => null,
+        'token_request_id' => null,
+        'valid_to' => null
     ];
 
     /**
@@ -97,8 +99,9 @@ class InlineResponse200176Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'users' => 'users',
-        'total_items' => 'total_items'
+        'authentication_token' => 'authentication_token',
+        'token_request_id' => 'token_request_id',
+        'valid_to' => 'valid_to'
     ];
 
     /**
@@ -107,8 +110,9 @@ class InlineResponse200176Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'users' => 'setUsers',
-        'total_items' => 'setTotalItems'
+        'authentication_token' => 'setAuthenticationToken',
+        'token_request_id' => 'setTokenRequestId',
+        'valid_to' => 'setValidTo'
     ];
 
     /**
@@ -117,8 +121,9 @@ class InlineResponse200176Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'users' => 'getUsers',
-        'total_items' => 'getTotalItems'
+        'authentication_token' => 'getAuthenticationToken',
+        'token_request_id' => 'getTokenRequestId',
+        'valid_to' => 'getValidTo'
     ];
 
     /**
@@ -179,8 +184,9 @@ class InlineResponse200176Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['authentication_token'] = isset($data['authentication_token']) ? $data['authentication_token'] : null;
+        $this->container['token_request_id'] = isset($data['token_request_id']) ? $data['token_request_id'] : null;
+        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
     }
 
     /**
@@ -208,49 +214,73 @@ class InlineResponse200176Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets users
+     * Gets authentication_token
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User[]
+     * @return string
      */
-    public function getUsers()
+    public function getAuthenticationToken()
     {
-        return $this->container['users'];
+        return $this->container['authentication_token'];
     }
 
     /**
-     * Sets users
+     * Sets authentication_token
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User[] $users A list of all users.
+     * @param string $authentication_token Authentication token allows customer to log in into another external application.
      *
      * @return $this
      */
-    public function setUsers($users)
+    public function setAuthenticationToken($authentication_token)
     {
-        $this->container['users'] = $users;
+        $this->container['authentication_token'] = $authentication_token;
 
         return $this;
     }
 
     /**
-     * Gets total_items
+     * Gets token_request_id
      *
-     * @return int
+     * @return string
      */
-    public function getTotalItems()
+    public function getTokenRequestId()
     {
-        return $this->container['total_items'];
+        return $this->container['token_request_id'];
     }
 
     /**
-     * Sets total_items
+     * Sets token_request_id
      *
-     * @param int $total_items The number of all found users.
+     * @param string $token_request_id The parameter specifies the request that caused the token to be created. If two customers generated an authentication token at the same time and in the same application, the token_request_id parameter represents additional verification to identify the correct token.
      *
      * @return $this
      */
-    public function setTotalItems($total_items)
+    public function setTokenRequestId($token_request_id)
     {
-        $this->container['total_items'] = $total_items;
+        $this->container['token_request_id'] = $token_request_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets valid_to
+     *
+     * @return string
+     */
+    public function getValidTo()
+    {
+        return $this->container['valid_to'];
+    }
+
+    /**
+     * Sets valid_to
+     *
+     * @param string $valid_to Date and time of the token validity. *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setValidTo($valid_to)
+    {
+        $this->container['valid_to'] = $valid_to;
 
         return $this;
     }

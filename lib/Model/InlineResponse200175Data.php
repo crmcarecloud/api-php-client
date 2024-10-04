@@ -214,7 +214,7 @@ class InlineResponse200175Data implements ModelInterface, ArrayAccess
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $customer_id The unique ID of the logged in customer.
      *
      * @return $this
      */

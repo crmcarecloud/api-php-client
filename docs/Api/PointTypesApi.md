@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getPointsTypes**](PointTypesApi.md#getpointstypes) | **GET** /point-types | Get all point types
 
 # **getPointType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109 getPointType($point_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110 getPointType($point_type_id, $accept_language)
 
 Get a point type
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109**](../Model/InlineResponse200109.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200110**](../Model/InlineResponse200110.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPointsTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108 getPointsTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109 getPointsTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all point types
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200108**](../Model/InlineResponse200108.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200109**](../Model/InlineResponse200109.md)
 
 ### Authorization
 

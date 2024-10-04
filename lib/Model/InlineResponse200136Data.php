@@ -56,7 +56,7 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'rewards' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Reward[]',
+        'recommended_products_list' => '\CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedProduct[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'rewards' => null,
+        'recommended_products_list' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'rewards' => 'rewards',
+        'recommended_products_list' => 'recommended_products_list',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'rewards' => 'setRewards',
+        'recommended_products_list' => 'setRecommendedProductsList',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'rewards' => 'getRewards',
+        'recommended_products_list' => 'getRecommendedProductsList',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['rewards'] = isset($data['rewards']) ? $data['rewards'] : null;
+        $this->container['recommended_products_list'] = isset($data['recommended_products_list']) ? $data['recommended_products_list'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets rewards
+     * Gets recommended_products_list
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Reward[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedProduct[]
      */
-    public function getRewards()
+    public function getRecommendedProductsList()
     {
-        return $this->container['rewards'];
+        return $this->container['recommended_products_list'];
     }
 
     /**
-     * Sets rewards
+     * Sets recommended_products_list
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Reward[] $rewards List of all rewards.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedProduct[] $recommended_products_list List of the recommended products.
      *
      * @return $this
      */
-    public function setRewards($rewards)
+    public function setRecommendedProductsList($recommended_products_list)
     {
-        $this->container['rewards'] = $rewards;
+        $this->container['recommended_products_list'] = $recommended_products_list;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200136Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found rewards.
+     * @param int $total_items The number of all found product IDs.
      *
      * @return $this
      */

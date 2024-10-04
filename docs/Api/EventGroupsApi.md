@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getEventGroups**](EventGroupsApi.md#geteventgroups) | **GET** /event-groups | Get all event groups
 
 # **getEventGroup**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081 getEventGroup($event_group_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082 getEventGroup($event_group_id, $accept_language)
 
 Get an event group
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEventGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20080 getEventGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081 getEventGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
 
 Get all event groups
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20080**](../Model/InlineResponse20080.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
 
 ### Authorization
 

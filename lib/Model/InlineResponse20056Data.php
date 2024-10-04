@@ -56,7 +56,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'related_customers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\RelatedCustomer[]',
+        'customer_events' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Event[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'related_customers' => null,
+        'customer_events' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'related_customers' => 'related_customers',
+        'customer_events' => 'customer_events',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'related_customers' => 'setRelatedCustomers',
+        'customer_events' => 'setCustomerEvents',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'related_customers' => 'getRelatedCustomers',
+        'customer_events' => 'getCustomerEvents',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['related_customers'] = isset($data['related_customers']) ? $data['related_customers'] : null;
+        $this->container['customer_events'] = isset($data['customer_events']) ? $data['customer_events'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets related_customers
+     * Gets customer_events
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\RelatedCustomer[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Event[]
      */
-    public function getRelatedCustomers()
+    public function getCustomerEvents()
     {
-        return $this->container['related_customers'];
+        return $this->container['customer_events'];
     }
 
     /**
-     * Sets related_customers
+     * Sets customer_events
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\RelatedCustomer[] $related_customers Collection of all related customers.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Event[] $customer_events Collection of all events.
      *
      * @return $this
      */
-    public function setRelatedCustomers($related_customers)
+    public function setCustomerEvents($customer_events)
     {
-        $this->container['related_customers'] = $related_customers;
+        $this->container['customer_events'] = $customer_events;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20056Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found related customers.
+     * @param int $total_items The number of all found events.
      *
      * @return $this
      */

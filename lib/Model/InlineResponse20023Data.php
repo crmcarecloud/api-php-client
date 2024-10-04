@@ -56,8 +56,8 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'card_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CardType[]',
-        'total_items' => 'int'
+        'valid_isic' => 'bool',
+        'is_free_to_use' => 'bool'
     ];
 
     /**
@@ -66,8 +66,8 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'card_types' => null,
-        'total_items' => null
+        'valid_isic' => null,
+        'is_free_to_use' => null
     ];
 
     /**
@@ -97,8 +97,8 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'card_types' => 'card_types',
-        'total_items' => 'total_items'
+        'valid_isic' => 'valid_isic',
+        'is_free_to_use' => 'is_free_to_use'
     ];
 
     /**
@@ -107,8 +107,8 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'card_types' => 'setCardTypes',
-        'total_items' => 'setTotalItems'
+        'valid_isic' => 'setValidIsic',
+        'is_free_to_use' => 'setIsFreeToUse'
     ];
 
     /**
@@ -117,8 +117,8 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'card_types' => 'getCardTypes',
-        'total_items' => 'getTotalItems'
+        'valid_isic' => 'getValidIsic',
+        'is_free_to_use' => 'getIsFreeToUse'
     ];
 
     /**
@@ -179,8 +179,8 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['card_types'] = isset($data['card_types']) ? $data['card_types'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['valid_isic'] = isset($data['valid_isic']) ? $data['valid_isic'] : null;
+        $this->container['is_free_to_use'] = isset($data['is_free_to_use']) ? $data['is_free_to_use'] : null;
     }
 
     /**
@@ -208,49 +208,49 @@ class InlineResponse20023Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets card_types
+     * Gets valid_isic
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CardType[]
+     * @return bool
      */
-    public function getCardTypes()
+    public function getValidIsic()
     {
-        return $this->container['card_types'];
+        return $this->container['valid_isic'];
     }
 
     /**
-     * Sets card_types
+     * Sets valid_isic
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CardType[] $card_types Collection of all card types.
+     * @param bool $valid_isic An information if ISIC card is valid.
      *
      * @return $this
      */
-    public function setCardTypes($card_types)
+    public function setValidIsic($valid_isic)
     {
-        $this->container['card_types'] = $card_types;
+        $this->container['valid_isic'] = $valid_isic;
 
         return $this;
     }
 
     /**
-     * Gets total_items
+     * Gets is_free_to_use
      *
-     * @return int
+     * @return bool
      */
-    public function getTotalItems()
+    public function getIsFreeToUse()
     {
-        return $this->container['total_items'];
+        return $this->container['is_free_to_use'];
     }
 
     /**
-     * Sets total_items
+     * Sets is_free_to_use
      *
-     * @param int $total_items The number of all found card types.
+     * @param bool $is_free_to_use An information if the card is free to use in CareCloud. If the request parameter `check_usage` is not set or false, the value is not set.
      *
      * @return $this
      */
-    public function setTotalItems($total_items)
+    public function setIsFreeToUse($is_free_to_use)
     {
-        $this->container['total_items'] = $total_items;
+        $this->container['is_free_to_use'] = $is_free_to_use;
 
         return $this;
     }

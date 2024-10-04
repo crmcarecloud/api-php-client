@@ -96,7 +96,7 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150
      */
     public function getSegment($segment_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSegmentWithHttpInfo($segment_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150';
         $request = $this->getSegmentRequest($segment_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class SegmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class SegmentsApi
      */
     public function getSegmentAsyncWithHttpInfo($segment_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150';
         $request = $this->getSegmentRequest($segment_id, $accept_language);
 
         return $this->client
@@ -424,7 +424,7 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152
      */
     public function getSegmentGroup($segment_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -442,11 +442,11 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSegmentGroupWithHttpInfo($segment_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152';
         $request = $this->getSegmentGroupRequest($segment_group_id, $accept_language);
 
         try {
@@ -498,7 +498,7 @@ class SegmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -590,7 +590,7 @@ class SegmentsApi
      */
     public function getSegmentGroupAsyncWithHttpInfo($segment_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200150';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200152';
         $request = $this->getSegmentGroupRequest($segment_group_id, $accept_language);
 
         return $this->client
@@ -756,7 +756,7 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151
      */
     public function getSegmentGroups($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -778,11 +778,11 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSegmentGroupsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151';
         $request = $this->getSegmentGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -834,7 +834,7 @@ class SegmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -934,7 +934,7 @@ class SegmentsApi
      */
     public function getSegmentGroupsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200151';
         $request = $this->getSegmentGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client
@@ -1110,7 +1110,7 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149
      */
     public function getSegments($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $segment_group_ids = null)
     {
@@ -1132,11 +1132,11 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSegmentsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $segment_group_ids = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149';
         $request = $this->getSegmentsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids);
 
         try {
@@ -1188,7 +1188,7 @@ class SegmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1288,7 +1288,7 @@ class SegmentsApi
      */
     public function getSegmentsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $segment_group_ids = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200149';
         $request = $this->getSegmentsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids);
 
         return $this->client
@@ -1465,7 +1465,7 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048
      */
     public function getSubSegmentRecords($segment_id, $accept_language = 'cs, en-gb;q=0.8', $segment_group_ids = null)
     {
@@ -1484,11 +1484,11 @@ class SegmentsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubSegmentRecordsWithHttpInfo($segment_id, $accept_language = 'cs, en-gb;q=0.8', $segment_group_ids = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048';
         $request = $this->getSubSegmentRecordsRequest($segment_id, $accept_language, $segment_group_ids);
 
         try {
@@ -1540,7 +1540,7 @@ class SegmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1634,7 +1634,7 @@ class SegmentsApi
      */
     public function getSubSegmentRecordsAsyncWithHttpInfo($segment_id, $accept_language = 'cs, en-gb;q=0.8', $segment_group_ids = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048';
         $request = $this->getSubSegmentRecordsRequest($segment_id, $accept_language, $segment_group_ids);
 
         return $this->client

@@ -69,7 +69,8 @@ class Purchase implements ModelInterface, ArrayAccess
         'currency_id' => 'string',
         'card_number' => 'string',
         'cashdesk_number' => 'string',
-        'last_change' => 'string'
+        'last_change' => 'string',
+        'purchase_property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]'
     ];
 
     /**
@@ -90,7 +91,8 @@ class Purchase implements ModelInterface, ArrayAccess
         'currency_id' => null,
         'card_number' => null,
         'cashdesk_number' => null,
-        'last_change' => null
+        'last_change' => null,
+        'purchase_property_records' => null
     ];
 
     /**
@@ -132,7 +134,8 @@ class Purchase implements ModelInterface, ArrayAccess
         'currency_id' => 'currency_id',
         'card_number' => 'card_number',
         'cashdesk_number' => 'cashdesk_number',
-        'last_change' => 'last_change'
+        'last_change' => 'last_change',
+        'purchase_property_records' => 'purchase_property_records'
     ];
 
     /**
@@ -153,7 +156,8 @@ class Purchase implements ModelInterface, ArrayAccess
         'currency_id' => 'setCurrencyId',
         'card_number' => 'setCardNumber',
         'cashdesk_number' => 'setCashdeskNumber',
-        'last_change' => 'setLastChange'
+        'last_change' => 'setLastChange',
+        'purchase_property_records' => 'setPurchasePropertyRecords'
     ];
 
     /**
@@ -174,7 +178,8 @@ class Purchase implements ModelInterface, ArrayAccess
         'currency_id' => 'getCurrencyId',
         'card_number' => 'getCardNumber',
         'cashdesk_number' => 'getCashdeskNumber',
-        'last_change' => 'getLastChange'
+        'last_change' => 'getLastChange',
+        'purchase_property_records' => 'getPurchasePropertyRecords'
     ];
 
     /**
@@ -248,6 +253,7 @@ class Purchase implements ModelInterface, ArrayAccess
         $this->container['card_number'] = isset($data['card_number']) ? $data['card_number'] : null;
         $this->container['cashdesk_number'] = isset($data['cashdesk_number']) ? $data['cashdesk_number'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
+        $this->container['purchase_property_records'] = isset($data['purchase_property_records']) ? $data['purchase_property_records'] : null;
     }
 
     /**
@@ -609,6 +615,30 @@ class Purchase implements ModelInterface, ArrayAccess
     public function setLastChange($last_change)
     {
         $this->container['last_change'] = $last_change;
+
+        return $this;
+    }
+
+    /**
+     * Gets purchase_property_records
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     */
+    public function getPurchasePropertyRecords()
+    {
+        return $this->container['purchase_property_records'];
+    }
+
+    /**
+     * Sets purchase_property_records
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $purchase_property_records List of purchase property records.
+     *
+     * @return $this
+     */
+    public function setPurchasePropertyRecords($purchase_property_records)
+    {
+        $this->container['purchase_property_records'] = $purchase_property_records;
 
         return $this;
     }

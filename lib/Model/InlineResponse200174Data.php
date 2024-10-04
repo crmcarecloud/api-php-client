@@ -56,9 +56,7 @@ class InlineResponse200174Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'authentication_token' => 'string',
-        'token_request_id' => 'string',
-        'valid_to' => 'string'
+        'test_string' => 'string'
     ];
 
     /**
@@ -67,9 +65,7 @@ class InlineResponse200174Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'authentication_token' => null,
-        'token_request_id' => null,
-        'valid_to' => null
+        'test_string' => null
     ];
 
     /**
@@ -99,9 +95,7 @@ class InlineResponse200174Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'authentication_token' => 'authentication_token',
-        'token_request_id' => 'token_request_id',
-        'valid_to' => 'valid_to'
+        'test_string' => 'test_string'
     ];
 
     /**
@@ -110,9 +104,7 @@ class InlineResponse200174Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'authentication_token' => 'setAuthenticationToken',
-        'token_request_id' => 'setTokenRequestId',
-        'valid_to' => 'setValidTo'
+        'test_string' => 'setTestString'
     ];
 
     /**
@@ -121,9 +113,7 @@ class InlineResponse200174Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'authentication_token' => 'getAuthenticationToken',
-        'token_request_id' => 'getTokenRequestId',
-        'valid_to' => 'getValidTo'
+        'test_string' => 'getTestString'
     ];
 
     /**
@@ -184,9 +174,7 @@ class InlineResponse200174Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['authentication_token'] = isset($data['authentication_token']) ? $data['authentication_token'] : null;
-        $this->container['token_request_id'] = isset($data['token_request_id']) ? $data['token_request_id'] : null;
-        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
+        $this->container['test_string'] = isset($data['test_string']) ? $data['test_string'] : null;
     }
 
     /**
@@ -214,73 +202,25 @@ class InlineResponse200174Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets authentication_token
+     * Gets test_string
      *
      * @return string
      */
-    public function getAuthenticationToken()
+    public function getTestString()
     {
-        return $this->container['authentication_token'];
+        return $this->container['test_string'];
     }
 
     /**
-     * Sets authentication_token
+     * Sets test_string
      *
-     * @param string $authentication_token Authentication token allows customer to log in into another external application.
+     * @param string $test_string Reverted value of input parameters.
      *
      * @return $this
      */
-    public function setAuthenticationToken($authentication_token)
+    public function setTestString($test_string)
     {
-        $this->container['authentication_token'] = $authentication_token;
-
-        return $this;
-    }
-
-    /**
-     * Gets token_request_id
-     *
-     * @return string
-     */
-    public function getTokenRequestId()
-    {
-        return $this->container['token_request_id'];
-    }
-
-    /**
-     * Sets token_request_id
-     *
-     * @param string $token_request_id The parameter specifies the request that caused the token to be created. If two customers generated an authentication token at the same time and in the same application, the token_request_id parameter represents additional verification to identify the correct token.
-     *
-     * @return $this
-     */
-    public function setTokenRequestId($token_request_id)
-    {
-        $this->container['token_request_id'] = $token_request_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets valid_to
-     *
-     * @return string
-     */
-    public function getValidTo()
-    {
-        return $this->container['valid_to'];
-    }
-
-    /**
-     * Sets valid_to
-     *
-     * @param string $valid_to Date and time of the token validity. *(YYYY-MM-DD HH:MM:SS)*
-     *
-     * @return $this
-     */
-    public function setValidTo($valid_to)
-    {
-        $this->container['valid_to'] = $valid_to;
+        $this->container['test_string'] = $test_string;
 
         return $this;
     }

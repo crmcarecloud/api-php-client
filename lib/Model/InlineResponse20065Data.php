@@ -56,7 +56,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[]',
+        'customer_address_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerAddressType[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_types' => null,
+        'customer_address_types' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_types' => 'customer_types',
+        'customer_address_types' => 'customer_address_types',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_types' => 'setCustomerTypes',
+        'customer_address_types' => 'setCustomerAddressTypes',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_types' => 'getCustomerTypes',
+        'customer_address_types' => 'getCustomerAddressTypes',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_types'] = isset($data['customer_types']) ? $data['customer_types'] : null;
+        $this->container['customer_address_types'] = isset($data['customer_address_types']) ? $data['customer_address_types'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_types
+     * Gets customer_address_types
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerAddressType[]
      */
-    public function getCustomerTypes()
+    public function getCustomerAddressTypes()
     {
-        return $this->container['customer_types'];
+        return $this->container['customer_address_types'];
     }
 
     /**
-     * Sets customer_types
+     * Sets customer_address_types
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[] $customer_types List of the customer types.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerAddressType[] $customer_address_types List of the customer address types.
      *
      * @return $this
      */
-    public function setCustomerTypes($customer_types)
+    public function setCustomerAddressTypes($customer_address_types)
     {
-        $this->container['customer_types'] = $customer_types;
+        $this->container['customer_address_types'] = $customer_address_types;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20065Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found customer types.
+     * @param int $total_items The number of all found customer address types.
      *
      * @return $this
      */

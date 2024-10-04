@@ -56,7 +56,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'credits' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Credit[]',
+        'countries' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Country[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'credits' => null,
+        'countries' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'credits' => 'credits',
+        'countries' => 'countries',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'credits' => 'setCredits',
+        'countries' => 'setCountries',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'credits' => 'getCredits',
+        'countries' => 'getCountries',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['credits'] = isset($data['credits']) ? $data['credits'] : null;
+        $this->container['countries'] = isset($data['countries']) ? $data['countries'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets credits
+     * Gets countries
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Credit[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Country[]
      */
-    public function getCredits()
+    public function getCountries()
     {
-        return $this->container['credits'];
+        return $this->container['countries'];
     }
 
     /**
-     * Sets credits
+     * Sets countries
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Credit[] $credits List of the credit records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Country[] $countries List of the countries.
      *
      * @return $this
      */
-    public function setCredits($credits)
+    public function setCountries($countries)
     {
-        $this->container['credits'] = $credits;
+        $this->container['countries'] = $countries;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20033Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found credit records.
+     * @param int $total_items The number of all found countries.
      *
      * @return $this
      */

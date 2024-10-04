@@ -56,7 +56,7 @@ class InlineResponse20036Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'credit_history' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CreditHistoryRecord[]',
+        'purchases' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20036Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'credit_history' => null,
+        'purchases' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20036Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'credit_history' => 'credit_history',
+        'purchases' => 'purchases',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20036Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'credit_history' => 'setCreditHistory',
+        'purchases' => 'setPurchases',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20036Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'credit_history' => 'getCreditHistory',
+        'purchases' => 'getPurchases',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20036Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['credit_history'] = isset($data['credit_history']) ? $data['credit_history'] : null;
+        $this->container['purchases'] = isset($data['purchases']) ? $data['purchases'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20036Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets credit_history
+     * Gets purchases
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CreditHistoryRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[]
      */
-    public function getCreditHistory()
+    public function getPurchases()
     {
-        return $this->container['credit_history'];
+        return $this->container['purchases'];
     }
 
     /**
-     * Sets credit_history
+     * Sets purchases
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CreditHistoryRecord[] $credit_history List of the credit history records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Purchase[] $purchases List of purchases.
      *
      * @return $this
      */
-    public function setCreditHistory($credit_history)
+    public function setPurchases($purchases)
     {
-        $this->container['credit_history'] = $credit_history;
+        $this->container['purchases'] = $purchases;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20036Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found credit history records.
+     * @param int $total_items The number of all found purchases.
      *
      * @return $this
      */

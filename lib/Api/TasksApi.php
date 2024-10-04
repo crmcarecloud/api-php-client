@@ -406,7 +406,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173
      */
     public function getSubTaskProperties($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -424,11 +424,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubTaskPropertiesWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
         $request = $this->getSubTaskPropertiesRequest($task_id, $accept_language);
 
         try {
@@ -480,7 +480,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -572,7 +572,7 @@ class TasksApi
      */
     public function getSubTaskPropertiesAsyncWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
         $request = $this->getSubTaskPropertiesRequest($task_id, $accept_language);
 
         return $this->client
@@ -734,7 +734,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163
      */
     public function getTask($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -752,11 +752,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163';
         $request = $this->getTaskRequest($task_id, $accept_language);
 
         try {
@@ -808,7 +808,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -900,7 +900,7 @@ class TasksApi
      */
     public function getTaskAsyncWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200161';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163';
         $request = $this->getTaskRequest($task_id, $accept_language);
 
         return $this->client
@@ -1063,7 +1063,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167
      */
     public function getTaskAssignee($assignee_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1082,11 +1082,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskAssigneeWithHttpInfo($assignee_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167';
         $request = $this->getTaskAssigneeRequest($assignee_id, $task_id, $accept_language);
 
         try {
@@ -1138,7 +1138,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1232,7 +1232,7 @@ class TasksApi
      */
     public function getTaskAssigneeAsyncWithHttpInfo($assignee_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167';
         $request = $this->getTaskAssigneeRequest($assignee_id, $task_id, $accept_language);
 
         return $this->client
@@ -1413,7 +1413,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166
      */
     public function getTaskAssignees($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -1435,11 +1435,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskAssigneesWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166';
         $request = $this->getTaskAssigneesRequest($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -1491,7 +1491,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1591,7 +1591,7 @@ class TasksApi
      */
     public function getTaskAssigneesAsyncWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166';
         $request = $this->getTaskAssigneesRequest($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1774,7 +1774,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165
      */
     public function getTaskComment($task_comment_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1793,11 +1793,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskCommentWithHttpInfo($task_comment_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165';
         $request = $this->getTaskCommentRequest($task_comment_id, $task_id, $accept_language);
 
         try {
@@ -1849,7 +1849,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1943,7 +1943,7 @@ class TasksApi
      */
     public function getTaskCommentAsyncWithHttpInfo($task_comment_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165';
         $request = $this->getTaskCommentRequest($task_comment_id, $task_id, $accept_language);
 
         return $this->client
@@ -2125,7 +2125,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164
      */
     public function getTaskComments($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_comment_text = null)
     {
@@ -2148,11 +2148,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskCommentsWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_comment_text = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
         $request = $this->getTaskCommentsRequest($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text);
 
         try {
@@ -2204,7 +2204,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2306,7 +2306,7 @@ class TasksApi
      */
     public function getTaskCommentsAsyncWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_comment_text = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
         $request = $this->getTaskCommentsRequest($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text);
 
         return $this->client
@@ -2493,7 +2493,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171
      */
     public function getTaskState($task_state_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2511,11 +2511,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskStateWithHttpInfo($task_state_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171';
         $request = $this->getTaskStateRequest($task_state_id, $accept_language);
 
         try {
@@ -2567,7 +2567,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2659,7 +2659,7 @@ class TasksApi
      */
     public function getTaskStateAsyncWithHttpInfo($task_state_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171';
         $request = $this->getTaskStateRequest($task_state_id, $accept_language);
 
         return $this->client
@@ -2824,7 +2824,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170
      */
     public function getTaskStates($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -2845,11 +2845,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskStatesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170';
         $request = $this->getTaskStatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -2901,7 +2901,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2999,7 +2999,7 @@ class TasksApi
      */
     public function getTaskStatesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170';
         $request = $this->getTaskStatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -3166,7 +3166,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169
      */
     public function getTaskType($task_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -3184,11 +3184,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskTypeWithHttpInfo($task_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169';
         $request = $this->getTaskTypeRequest($task_type_id, $accept_language);
 
         try {
@@ -3240,7 +3240,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3332,7 +3332,7 @@ class TasksApi
      */
     public function getTaskTypeAsyncWithHttpInfo($task_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169';
         $request = $this->getTaskTypeRequest($task_type_id, $accept_language);
 
         return $this->client
@@ -3497,7 +3497,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168
      */
     public function getTaskTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -3518,11 +3518,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168';
         $request = $this->getTaskTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -3574,7 +3574,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3672,7 +3672,7 @@ class TasksApi
      */
     public function getTaskTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168';
         $request = $this->getTaskTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -3849,7 +3849,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162
      */
     public function getTasks($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_type_id = null, $task_state_id = null, $customer_id = null, $priority = null, $due_date = null, $task_title = null, $task_note = null)
     {
@@ -3877,11 +3877,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTasksWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_type_id = null, $task_state_id = null, $customer_id = null, $priority = null, $due_date = null, $task_title = null, $task_note = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
         $request = $this->getTasksRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note);
 
         try {
@@ -3933,7 +3933,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4045,7 +4045,7 @@ class TasksApi
      */
     public function getTasksAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_type_id = null, $task_state_id = null, $customer_id = null, $priority = null, $due_date = null, $task_title = null, $task_note = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200160';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
         $request = $this->getTasksRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note);
 
         return $this->client

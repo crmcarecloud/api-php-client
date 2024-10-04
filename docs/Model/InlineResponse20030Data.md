@@ -3,8 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**communication_channels** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[]**](CommunicationChannel.md) | Structure of the communication channel. | [optional] 
-**total_items** | **int** | Total count of found items of the resource communication channels. | [optional] 
+**distance** | **float** | Amount of kilometers that customer skied in the date range. | [optional] 
+**elevation** | **float** | Elevation gained during skiing in the date range in meters. | [optional] 
+**skier_days** | **int** | Number of days in the date range that a customer used his entrance ticket | [optional] 
+**ski_achievement_text_id** | **string** | It represents a ski achievement text ID gained by the customer. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

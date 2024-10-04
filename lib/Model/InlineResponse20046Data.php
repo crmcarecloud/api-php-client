@@ -220,7 +220,7 @@ class InlineResponse20046Data implements ModelInterface, ArrayAccess
     /**
      * Sets rewards
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Reward[] $rewards List of recommended best rewards for the customer.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Reward[] $rewards List of all recent rewards.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class InlineResponse20046Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found rewards.
+     * @param int $total_items The number of all recent rewards.
      *
      * @return $this
      */

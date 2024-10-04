@@ -379,7 +379,7 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137
      */
     public function postRecommendationCartCombine($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -397,11 +397,11 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137, HTTP status code, HTTP response headers (array of strings)
      */
     public function postRecommendationCartCombineWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->postRecommendationCartCombineRequest($body, $accept_language);
 
         try {
@@ -453,7 +453,7 @@ class ProductRecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -545,7 +545,7 @@ class ProductRecommendationEngineApi
      */
     public function postRecommendationCartCombineAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->postRecommendationCartCombineRequest($body, $accept_language);
 
         return $this->client
@@ -699,7 +699,7 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137
      */
     public function postRecommendationCartEliminate($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -717,11 +717,11 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137, HTTP status code, HTTP response headers (array of strings)
      */
     public function postRecommendationCartEliminateWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->postRecommendationCartEliminateRequest($body, $accept_language);
 
         try {
@@ -773,7 +773,7 @@ class ProductRecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -865,7 +865,7 @@ class ProductRecommendationEngineApi
      */
     public function postRecommendationCartEliminateAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->postRecommendationCartEliminateRequest($body, $accept_language);
 
         return $this->client
@@ -1019,7 +1019,7 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137
      */
     public function postRecommendationCartOrder($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1037,11 +1037,11 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137, HTTP status code, HTTP response headers (array of strings)
      */
     public function postRecommendationCartOrderWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->postRecommendationCartOrderRequest($body, $accept_language);
 
         try {
@@ -1093,7 +1093,7 @@ class ProductRecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1185,7 +1185,7 @@ class ProductRecommendationEngineApi
      */
     public function postRecommendationCartOrderAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200135';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137';
         $request = $this->postRecommendationCartOrderRequest($body, $accept_language);
 
         return $this->client
@@ -1339,7 +1339,7 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136
      */
     public function postRecommendationProductCombine($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1357,11 +1357,11 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136, HTTP status code, HTTP response headers (array of strings)
      */
     public function postRecommendationProductCombineWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->postRecommendationProductCombineRequest($body, $accept_language);
 
         try {
@@ -1413,7 +1413,7 @@ class ProductRecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1505,7 +1505,7 @@ class ProductRecommendationEngineApi
      */
     public function postRecommendationProductCombineAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->postRecommendationProductCombineRequest($body, $accept_language);
 
         return $this->client
@@ -1659,7 +1659,7 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136
      */
     public function postRecommendationProductEliminate($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1677,11 +1677,11 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136, HTTP status code, HTTP response headers (array of strings)
      */
     public function postRecommendationProductEliminateWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->postRecommendationProductEliminateRequest($body, $accept_language);
 
         try {
@@ -1733,7 +1733,7 @@ class ProductRecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1825,7 +1825,7 @@ class ProductRecommendationEngineApi
      */
     public function postRecommendationProductEliminateAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->postRecommendationProductEliminateRequest($body, $accept_language);
 
         return $this->client
@@ -1979,7 +1979,7 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136
      */
     public function postRecommendationProductOrder($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1997,11 +1997,11 @@ class ProductRecommendationEngineApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136, HTTP status code, HTTP response headers (array of strings)
      */
     public function postRecommendationProductOrderWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->postRecommendationProductOrderRequest($body, $accept_language);
 
         try {
@@ -2053,7 +2053,7 @@ class ProductRecommendationEngineApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2145,7 +2145,7 @@ class ProductRecommendationEngineApi
      */
     public function postRecommendationProductOrderAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200134';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136';
         $request = $this->postRecommendationProductOrderRequest($body, $accept_language);
 
         return $this->client

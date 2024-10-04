@@ -56,7 +56,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'tags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]',
+        'purchase_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'tags' => null,
+        'purchase_properties' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'tags' => 'tags',
+        'purchase_properties' => 'purchase_properties',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'tags' => 'setTags',
+        'purchase_properties' => 'setPurchaseProperties',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'tags' => 'getTags',
+        'purchase_properties' => 'getPurchaseProperties',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['purchase_properties'] = isset($data['purchase_properties']) ? $data['purchase_properties'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets tags
+     * Gets purchase_properties
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getTags()
+    public function getPurchaseProperties()
     {
-        return $this->container['tags'];
+        return $this->container['purchase_properties'];
     }
 
     /**
-     * Sets tags
+     * Sets purchase_properties
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[] $tags List of the all tags assigned to the resource rewards.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $purchase_properties List of all purchase properties.
      *
      * @return $this
      */
-    public function setTags($tags)
+    public function setPurchaseProperties($purchase_properties)
     {
-        $this->container['tags'] = $tags;
+        $this->container['purchase_properties'] = $purchase_properties;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200133Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found tags.
+     * @param int $total_items The number of all found purchase properties.
      *
      * @return $this
      */

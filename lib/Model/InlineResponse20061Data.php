@@ -56,8 +56,7 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'customer_relation_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerRelationType[]',
-        'total_items' => 'int'
+        'is_valid' => 'bool'
     ];
 
     /**
@@ -66,8 +65,7 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'customer_relation_types' => null,
-        'total_items' => null
+        'is_valid' => null
     ];
 
     /**
@@ -97,8 +95,7 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_relation_types' => 'customer_relation_types',
-        'total_items' => 'total_items'
+        'is_valid' => 'is_valid'
     ];
 
     /**
@@ -107,8 +104,7 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'customer_relation_types' => 'setCustomerRelationTypes',
-        'total_items' => 'setTotalItems'
+        'is_valid' => 'setIsValid'
     ];
 
     /**
@@ -117,8 +113,7 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'customer_relation_types' => 'getCustomerRelationTypes',
-        'total_items' => 'getTotalItems'
+        'is_valid' => 'getIsValid'
     ];
 
     /**
@@ -179,8 +174,7 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_relation_types'] = isset($data['customer_relation_types']) ? $data['customer_relation_types'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['is_valid'] = isset($data['is_valid']) ? $data['is_valid'] : null;
     }
 
     /**
@@ -208,49 +202,25 @@ class InlineResponse20061Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets customer_relation_types
+     * Gets is_valid
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerRelationType[]
+     * @return bool
      */
-    public function getCustomerRelationTypes()
+    public function getIsValid()
     {
-        return $this->container['customer_relation_types'];
+        return $this->container['is_valid'];
     }
 
     /**
-     * Sets customer_relation_types
+     * Sets is_valid
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerRelationType[] $customer_relation_types List of the customer relation types.
+     * @param bool $is_valid Result of the CareCloud validation. *Possible results are: false - The parameter has not valid value by CareCloud standard / true - The parameter has value value by CareCloud standard *
      *
      * @return $this
      */
-    public function setCustomerRelationTypes($customer_relation_types)
+    public function setIsValid($is_valid)
     {
-        $this->container['customer_relation_types'] = $customer_relation_types;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_items
-     *
-     * @return int
-     */
-    public function getTotalItems()
-    {
-        return $this->container['total_items'];
-    }
-
-    /**
-     * Sets total_items
-     *
-     * @param int $total_items The number of all found customer relation types.
-     *
-     * @return $this
-     */
-    public function setTotalItems($total_items)
-    {
-        $this->container['total_items'] = $total_items;
+        $this->container['is_valid'] = $is_valid;
 
         return $this;
     }

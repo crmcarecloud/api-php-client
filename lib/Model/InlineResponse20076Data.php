@@ -56,7 +56,7 @@ class InlineResponse20076Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'interests' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]',
+        'customer_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20076Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'interests' => null,
+        'customer_types' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20076Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'interests' => 'interests',
+        'customer_types' => 'customer_types',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20076Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'interests' => 'setInterests',
+        'customer_types' => 'setCustomerTypes',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20076Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'interests' => 'getInterests',
+        'customer_types' => 'getCustomerTypes',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20076Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['interests'] = isset($data['interests']) ? $data['interests'] : null;
+        $this->container['customer_types'] = isset($data['customer_types']) ? $data['customer_types'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20076Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets interests
+     * Gets customer_types
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[]
      */
-    public function getInterests()
+    public function getCustomerTypes()
     {
-        return $this->container['interests'];
+        return $this->container['customer_types'];
     }
 
     /**
-     * Sets interests
+     * Sets customer_types
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Interest[] $interests List of all interests.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerType[] $customer_types List of the customer types.
      *
      * @return $this
      */
-    public function setInterests($interests)
+    public function setCustomerTypes($customer_types)
     {
-        $this->container['interests'] = $interests;
+        $this->container['customer_types'] = $customer_types;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20076Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found interests.
+     * @param int $total_items The number of all found customer types.
      *
      * @return $this
      */

@@ -103,7 +103,7 @@ class CustomerSourceRecordsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051
      */
     public function getCustomerSourceRecords($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $external_id = null, $customer_source_id = null, $external_ids = null)
     {
@@ -128,11 +128,11 @@ class CustomerSourceRecordsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerSourceRecordsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $external_id = null, $customer_source_id = null, $external_ids = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051';
         $request = $this->getCustomerSourceRecordsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id, $customer_source_id, $external_ids);
 
         try {
@@ -184,7 +184,7 @@ class CustomerSourceRecordsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -290,7 +290,7 @@ class CustomerSourceRecordsApi
      */
     public function getCustomerSourceRecordsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $external_id = null, $customer_source_id = null, $external_ids = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051';
         $request = $this->getCustomerSourceRecordsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id, $customer_source_id, $external_ids);
 
         return $this->client

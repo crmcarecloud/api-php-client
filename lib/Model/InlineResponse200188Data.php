@@ -56,10 +56,7 @@ class InlineResponse200188Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'earned_credits' => 'float',
-        'redeemed_credits' => 'float',
-        'available_credits' => 'float',
-        'split_by_currency' => '\CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]'
+        'turnover' => '\CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]'
     ];
 
     /**
@@ -68,10 +65,7 @@ class InlineResponse200188Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'earned_credits' => 'float',
-        'redeemed_credits' => 'float',
-        'available_credits' => 'float',
-        'split_by_currency' => null
+        'turnover' => null
     ];
 
     /**
@@ -101,10 +95,7 @@ class InlineResponse200188Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'earned_credits' => 'earned_credits',
-        'redeemed_credits' => 'redeemed_credits',
-        'available_credits' => 'available_credits',
-        'split_by_currency' => 'split_by_currency'
+        'turnover' => 'turnover'
     ];
 
     /**
@@ -113,10 +104,7 @@ class InlineResponse200188Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'earned_credits' => 'setEarnedCredits',
-        'redeemed_credits' => 'setRedeemedCredits',
-        'available_credits' => 'setAvailableCredits',
-        'split_by_currency' => 'setSplitByCurrency'
+        'turnover' => 'setTurnover'
     ];
 
     /**
@@ -125,10 +113,7 @@ class InlineResponse200188Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'earned_credits' => 'getEarnedCredits',
-        'redeemed_credits' => 'getRedeemedCredits',
-        'available_credits' => 'getAvailableCredits',
-        'split_by_currency' => 'getSplitByCurrency'
+        'turnover' => 'getTurnover'
     ];
 
     /**
@@ -189,10 +174,7 @@ class InlineResponse200188Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['earned_credits'] = isset($data['earned_credits']) ? $data['earned_credits'] : null;
-        $this->container['redeemed_credits'] = isset($data['redeemed_credits']) ? $data['redeemed_credits'] : null;
-        $this->container['available_credits'] = isset($data['available_credits']) ? $data['available_credits'] : null;
-        $this->container['split_by_currency'] = isset($data['split_by_currency']) ? $data['split_by_currency'] : null;
+        $this->container['turnover'] = isset($data['turnover']) ? $data['turnover'] : null;
     }
 
     /**
@@ -220,97 +202,25 @@ class InlineResponse200188Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets earned_credits
+     * Gets turnover
      *
-     * @return float
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[]
      */
-    public function getEarnedCredits()
+    public function getTurnover()
     {
-        return $this->container['earned_credits'];
+        return $this->container['turnover'];
     }
 
     /**
-     * Sets earned_credits
+     * Sets turnover
      *
-     * @param float $earned_credits Amount of earned credits in time interval.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\QualificationTurnover[] $turnover List of all turnover by currency in time interval.
      *
      * @return $this
      */
-    public function setEarnedCredits($earned_credits)
+    public function setTurnover($turnover)
     {
-        $this->container['earned_credits'] = $earned_credits;
-
-        return $this;
-    }
-
-    /**
-     * Gets redeemed_credits
-     *
-     * @return float
-     */
-    public function getRedeemedCredits()
-    {
-        return $this->container['redeemed_credits'];
-    }
-
-    /**
-     * Sets redeemed_credits
-     *
-     * @param float $redeemed_credits Amount of redeemed credits in time interval.
-     *
-     * @return $this
-     */
-    public function setRedeemedCredits($redeemed_credits)
-    {
-        $this->container['redeemed_credits'] = $redeemed_credits;
-
-        return $this;
-    }
-
-    /**
-     * Gets available_credits
-     *
-     * @return float
-     */
-    public function getAvailableCredits()
-    {
-        return $this->container['available_credits'];
-    }
-
-    /**
-     * Sets available_credits
-     *
-     * @param float $available_credits Amount of available credits in the moment. Time interval has no influence to the result.
-     *
-     * @return $this
-     */
-    public function setAvailableCredits($available_credits)
-    {
-        $this->container['available_credits'] = $available_credits;
-
-        return $this;
-    }
-
-    /**
-     * Gets split_by_currency
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[]
-     */
-    public function getSplitByCurrency()
-    {
-        return $this->container['split_by_currency'];
-    }
-
-    /**
-     * Sets split_by_currency
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CreditWalletSummary[] $split_by_currency The credit overview split by currency.
-     *
-     * @return $this
-     */
-    public function setSplitByCurrency($split_by_currency)
-    {
-        $this->container['split_by_currency'] = $split_by_currency;
+        $this->container['turnover'] = $turnover;
 
         return $this;
     }

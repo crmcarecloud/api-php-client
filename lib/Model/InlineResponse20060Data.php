@@ -56,7 +56,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'is_valid' => 'bool'
+        'customer_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'is_valid' => null
+        'customer_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_valid' => 'is_valid'
+        'customer_id' => 'customer_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'is_valid' => 'setIsValid'
+        'customer_id' => 'setCustomerId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'is_valid' => 'getIsValid'
+        'customer_id' => 'getCustomerId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_valid'] = isset($data['is_valid']) ? $data['is_valid'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20060Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets is_valid
+     * Gets customer_id
      *
-     * @return bool
+     * @return string
      */
-    public function getIsValid()
+    public function getCustomerId()
     {
-        return $this->container['is_valid'];
+        return $this->container['customer_id'];
     }
 
     /**
-     * Sets is_valid
+     * Sets customer_id
      *
-     * @param bool $is_valid Result of the CareCloud validation. *Possible results are: false - The parameter has not valid value by CareCloud standard / true - The parameter has value value by CareCloud standard *
+     * @param string $customer_id The unique ID of the customer.
      *
      * @return $this
      */
-    public function setIsValid($is_valid)
+    public function setCustomerId($customer_id)
     {
-        $this->container['is_valid'] = $is_valid;
+        $this->container['customer_id'] = $customer_id;
 
         return $this;
     }

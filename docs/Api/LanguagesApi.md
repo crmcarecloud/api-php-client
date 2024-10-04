@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getLanguages**](LanguagesApi.md#getlanguages) | **GET** /languages | Get all languages
 
 # **getLanguages**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088 getLanguages($accept_language, $language_list_type)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089 getLanguages($accept_language, $language_list_type, $default_language)
 
 Get all languages
 
@@ -34,9 +34,10 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\LanguagesApi(
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 $language_list_type = "carecloud-api"; // string | Type of language list. All lists can be managed from the CareCloud administration interface. *Possible values: customer-communication - list of languages used for communication with the customer (emails, notifications or text messages) / web-portal - list of languages for CareCloud web portal / carecloud-api - languages supported by CareCloud REST API (API communicates in these languages).*
+$default_language = false; // bool | Default language of the project. If true, the endpoint returns only default language of the project.
 
 try {
-    $result = $apiInstance->getLanguages($accept_language, $language_list_type);
+    $result = $apiInstance->getLanguages($accept_language, $language_list_type, $default_language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LanguagesApi->getLanguages: ', $e->getMessage(), PHP_EOL;
@@ -50,10 +51,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
  **language_list_type** | **string**| Type of language list. All lists can be managed from the CareCloud administration interface. *Possible values: customer-communication - list of languages used for communication with the customer (emails, notifications or text messages) / web-portal - list of languages for CareCloud web portal / carecloud-api - languages supported by CareCloud REST API (API communicates in these languages).* | [optional] [default to carecloud-api]
+ **default_language** | **bool**| Default language of the project. If true, the endpoint returns only default language of the project. | [optional] [default to false]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20088**](../Model/InlineResponse20088.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
 
 ### Authorization
 

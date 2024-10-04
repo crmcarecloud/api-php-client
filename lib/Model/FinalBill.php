@@ -69,7 +69,8 @@ class FinalBill implements ModelInterface, ArrayAccess
         'currency_id' => 'string',
         'total_price' => 'float',
         'utm' => '\CrmCareCloud\Webservice\RestApi\Client\Model\UTM',
-        'bill_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\BillItem[]'
+        'bill_items' => '\CrmCareCloud\Webservice\RestApi\Client\Model\BillItem[]',
+        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]'
     ];
 
     /**
@@ -90,7 +91,8 @@ class FinalBill implements ModelInterface, ArrayAccess
         'currency_id' => null,
         'total_price' => 'float',
         'utm' => null,
-        'bill_items' => null
+        'bill_items' => null,
+        'property_records' => null
     ];
 
     /**
@@ -132,7 +134,8 @@ class FinalBill implements ModelInterface, ArrayAccess
         'currency_id' => 'currency_id',
         'total_price' => 'total_price',
         'utm' => 'utm',
-        'bill_items' => 'bill_items'
+        'bill_items' => 'bill_items',
+        'property_records' => 'property_records'
     ];
 
     /**
@@ -153,7 +156,8 @@ class FinalBill implements ModelInterface, ArrayAccess
         'currency_id' => 'setCurrencyId',
         'total_price' => 'setTotalPrice',
         'utm' => 'setUtm',
-        'bill_items' => 'setBillItems'
+        'bill_items' => 'setBillItems',
+        'property_records' => 'setPropertyRecords'
     ];
 
     /**
@@ -174,7 +178,8 @@ class FinalBill implements ModelInterface, ArrayAccess
         'currency_id' => 'getCurrencyId',
         'total_price' => 'getTotalPrice',
         'utm' => 'getUtm',
-        'bill_items' => 'getBillItems'
+        'bill_items' => 'getBillItems',
+        'property_records' => 'getPropertyRecords'
     ];
 
     /**
@@ -265,6 +270,7 @@ self::PAYMENT_TYPE_D,        ];
         $this->container['total_price'] = isset($data['total_price']) ? $data['total_price'] : null;
         $this->container['utm'] = isset($data['utm']) ? $data['utm'] : null;
         $this->container['bill_items'] = isset($data['bill_items']) ? $data['bill_items'] : null;
+        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
     }
 
     /**
@@ -640,6 +646,30 @@ self::PAYMENT_TYPE_D,        ];
     public function setBillItems($bill_items)
     {
         $this->container['bill_items'] = $bill_items;
+
+        return $this;
+    }
+
+    /**
+     * Gets property_records
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     */
+    public function getPropertyRecords()
+    {
+        return $this->container['property_records'];
+    }
+
+    /**
+     * Sets property_records
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of a purchase property records
+     *
+     * @return $this
+     */
+    public function setPropertyRecords($property_records)
+    {
+        $this->container['property_records'] = $property_records;
 
         return $this;
     }

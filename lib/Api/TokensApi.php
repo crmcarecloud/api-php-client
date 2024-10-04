@@ -98,7 +98,7 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176
      */
     public function getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -118,11 +118,11 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTokenAuthenticationWithHttpInfo($token_id, $external_application_id, $token_type, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176';
         $request = $this->getTokenAuthenticationRequest($token_id, $external_application_id, $token_type, $accept_language);
 
         try {
@@ -174,7 +174,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -270,7 +270,7 @@ class TokensApi
      */
     public function getTokenAuthenticationAsyncWithHttpInfo($token_id, $external_application_id, $token_type, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176';
         $request = $this->getTokenAuthenticationRequest($token_id, $external_application_id, $token_type, $accept_language);
 
         return $this->client
@@ -775,7 +775,7 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175
      */
     public function postTokenAuthTokenLogin($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -794,11 +794,11 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTokenAuthTokenLoginWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175';
         $request = $this->postTokenAuthTokenLoginRequest($body, $token_id, $accept_language);
 
         try {
@@ -850,7 +850,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -944,7 +944,7 @@ class TokensApi
      */
     public function postTokenAuthTokenLoginAsyncWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175';
         $request = $this->postTokenAuthTokenLoginRequest($body, $token_id, $accept_language);
 
         return $this->client
@@ -1114,7 +1114,7 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060
      */
     public function postTokenLogin($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1133,11 +1133,11 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTokenLoginWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060';
         $request = $this->postTokenLoginRequest($body, $token_id, $accept_language);
 
         try {
@@ -1189,7 +1189,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1283,7 +1283,7 @@ class TokensApi
      */
     public function postTokenLoginAsyncWithHttpInfo($body, $token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060';
         $request = $this->postTokenLoginRequest($body, $token_id, $accept_language);
 
         return $this->client
@@ -2384,7 +2384,7 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177
      */
     public function postTokenTestCustomerLogin($token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2402,11 +2402,11 @@ class TokensApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTokenTestCustomerLoginWithHttpInfo($token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177';
         $request = $this->postTokenTestCustomerLoginRequest($token_id, $accept_language);
 
         try {
@@ -2458,7 +2458,7 @@ class TokensApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2550,7 +2550,7 @@ class TokensApi
      */
     public function postTokenTestCustomerLoginAsyncWithHttpInfo($token_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177';
         $request = $this->postTokenTestCustomerLoginRequest($token_id, $accept_language);
 
         return $this->client

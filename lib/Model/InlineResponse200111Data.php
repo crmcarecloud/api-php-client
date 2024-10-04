@@ -56,7 +56,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'product_reservation_external_list_types' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationExternalListType[]',
+        'products' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Product[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'product_reservation_external_list_types' => null,
+        'products' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_reservation_external_list_types' => 'product_reservation_external_list_types',
+        'products' => 'products',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_reservation_external_list_types' => 'setProductReservationExternalListTypes',
+        'products' => 'setProducts',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_reservation_external_list_types' => 'getProductReservationExternalListTypes',
+        'products' => 'getProducts',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_reservation_external_list_types'] = isset($data['product_reservation_external_list_types']) ? $data['product_reservation_external_list_types'] : null;
+        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets product_reservation_external_list_types
+     * Gets products
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationExternalListType[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Product[]
      */
-    public function getProductReservationExternalListTypes()
+    public function getProducts()
     {
-        return $this->container['product_reservation_external_list_types'];
+        return $this->container['products'];
     }
 
     /**
-     * Sets product_reservation_external_list_types
+     * Sets products
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductReservationExternalListType[] $product_reservation_external_list_types List of the product reservation external list types.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Product[] $products List of CareCloud products.
      *
      * @return $this
      */
-    public function setProductReservationExternalListTypes($product_reservation_external_list_types)
+    public function setProducts($products)
     {
-        $this->container['product_reservation_external_list_types'] = $product_reservation_external_list_types;
+        $this->container['products'] = $products;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200111Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found product reservation external list types.
+     * @param int $total_items The number of all found products.
      *
      * @return $this
      */

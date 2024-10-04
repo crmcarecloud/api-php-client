@@ -96,7 +96,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179
      */
     public function getUser($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserWithHttpInfo($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179';
         $request = $this->getUserRequest($user_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class UsersApi
      */
     public function getUserAsyncWithHttpInfo($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179';
         $request = $this->getUserRequest($user_id, $accept_language);
 
         return $this->client
@@ -433,7 +433,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178
      */
     public function getUsers($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null, $store_id = null)
     {
@@ -460,11 +460,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUsersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null, $store_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178';
         $request = $this->getUsersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name, $store_id);
 
         try {
@@ -516,7 +516,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -626,7 +626,7 @@ class UsersApi
      */
     public function getUsersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null, $store_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178';
         $request = $this->getUsersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name, $store_id);
 
         return $this->client
@@ -823,7 +823,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181
      */
     public function postUserLogin($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -841,11 +841,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserLoginWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181';
         $request = $this->postUserLoginRequest($body, $accept_language);
 
         try {
@@ -897,7 +897,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -981,7 +981,7 @@ class UsersApi
      */
     public function postUserLoginAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181';
         $request = $this->postUserLoginRequest($body, $accept_language);
 
         return $this->client
@@ -1410,7 +1410,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182
      */
     public function postUserSsoLogin($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1428,11 +1428,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserSsoLoginWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182';
         $request = $this->postUserSsoLoginRequest($body, $accept_language);
 
         try {
@@ -1484,7 +1484,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1576,7 +1576,7 @@ class UsersApi
      */
     public function postUserSsoLoginAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182';
         $request = $this->postUserSsoLoginRequest($body, $accept_language);
 
         return $this->client
@@ -1721,7 +1721,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180
      */
     public function postUserVerifyAuthToken($body)
     {
@@ -1738,11 +1738,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserVerifyAuthTokenWithHttpInfo($body)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180';
         $request = $this->postUserVerifyAuthTokenRequest($body);
 
         try {
@@ -1794,7 +1794,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1884,7 +1884,7 @@ class UsersApi
      */
     public function postUserVerifyAuthTokenAsyncWithHttpInfo($body)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180';
         $request = $this->postUserVerifyAuthTokenRequest($body);
 
         return $this->client

@@ -56,7 +56,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'registration_ability' => 'bool'
+        'status_record_id' => 'string'
     ];
 
     /**
@@ -65,7 +65,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'registration_ability' => null
+        'status_record_id' => null
     ];
 
     /**
@@ -95,7 +95,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'registration_ability' => 'registration_ability'
+        'status_record_id' => 'status_record_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'registration_ability' => 'setRegistrationAbility'
+        'status_record_id' => 'setStatusRecordId'
     ];
 
     /**
@@ -113,7 +113,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'registration_ability' => 'getRegistrationAbility'
+        'status_record_id' => 'getStatusRecordId'
     ];
 
     /**
@@ -174,7 +174,7 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['registration_ability'] = isset($data['registration_ability']) ? $data['registration_ability'] : null;
+        $this->container['status_record_id'] = isset($data['status_record_id']) ? $data['status_record_id'] : null;
     }
 
     /**
@@ -202,25 +202,25 @@ class InlineResponse20063Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets registration_ability
+     * Gets status_record_id
      *
-     * @return bool
+     * @return string
      */
-    public function getRegistrationAbility()
+    public function getStatusRecordId()
     {
-        return $this->container['registration_ability'];
+        return $this->container['status_record_id'];
     }
 
     /**
-     * Sets registration_ability
+     * Sets status_record_id
      *
-     * @param bool $registration_ability Result of the possibility to register a customer with his identifier. *Possible results are: false - The identifier cannot be use for the registration / true - Identifier can be use for the registration *
+     * @param string $status_record_id The unique ID of the customer status record.
      *
      * @return $this
      */
-    public function setRegistrationAbility($registration_ability)
+    public function setStatusRecordId($status_record_id)
     {
-        $this->container['registration_ability'] = $registration_ability;
+        $this->container['status_record_id'] = $status_record_id;
 
         return $this;
     }

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**statuses** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Status[]**](Status.md) | List of recent statuses. | [optional] 
-**total_items** | **int** | The number of all found statuses. | [optional] 
+**segment_groups** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\SegmentGroup[]**](SegmentGroup.md) | List of all segment groups. | [optional] 
+**total_items** | **int** | The number of all found segments. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

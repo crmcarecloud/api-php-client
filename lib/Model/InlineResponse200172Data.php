@@ -56,7 +56,8 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'test_string' => 'string'
+        'task_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Property[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -65,7 +66,8 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'test_string' => null
+        'task_properties' => null,
+        'total_items' => null
     ];
 
     /**
@@ -95,7 +97,8 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'test_string' => 'test_string'
+        'task_properties' => 'task_properties',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -104,7 +107,8 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'test_string' => 'setTestString'
+        'task_properties' => 'setTaskProperties',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -113,7 +117,8 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'test_string' => 'getTestString'
+        'task_properties' => 'getTaskProperties',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -174,7 +179,8 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['test_string'] = isset($data['test_string']) ? $data['test_string'] : null;
+        $this->container['task_properties'] = isset($data['task_properties']) ? $data['task_properties'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -202,25 +208,49 @@ class InlineResponse200172Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets test_string
+     * Gets task_properties
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Property[]
      */
-    public function getTestString()
+    public function getTaskProperties()
     {
-        return $this->container['test_string'];
+        return $this->container['task_properties'];
     }
 
     /**
-     * Sets test_string
+     * Sets task_properties
      *
-     * @param string $test_string Reverted value of input parameters.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Property[] $task_properties List of all task properties.
      *
      * @return $this
      */
-    public function setTestString($test_string)
+    public function setTaskProperties($task_properties)
     {
-        $this->container['test_string'] = $test_string;
+        $this->container['task_properties'] = $task_properties;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_items
+     *
+     * @return int
+     */
+    public function getTotalItems()
+    {
+        return $this->container['total_items'];
+    }
+
+    /**
+     * Sets total_items
+     *
+     * @param int $total_items The number of all found task properties.
+     *
+     * @return $this
+     */
+    public function setTotalItems($total_items)
+    {
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

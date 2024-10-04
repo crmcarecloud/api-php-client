@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCustomerExternalApps**](CustomerExternalApplicationsApi.md#getcustomerexternalapps) | **GET** /customer-external-applications | Get all customer external applications
 
 # **getCustomerExternalApp**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069 getCustomerExternalApp($customer_external_application_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070 getCustomerExternalApp($customer_external_application_id, $accept_language)
 
 Detail of a customer external application
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerExternalApps**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068 getCustomerExternalApps($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069 getCustomerExternalApps($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all customer external applications
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
 
 ### Authorization
 

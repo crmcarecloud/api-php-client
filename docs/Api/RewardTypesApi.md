@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getRewardtype**](RewardTypesApi.md#getrewardtype) | **GET** /reward-types/{reward_type_id} | Get a reward type
 
 # **getRewardTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200145 getRewardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147 getRewardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get all reward types
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200145**](../Model/InlineResponse200145.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200147**](../Model/InlineResponse200147.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRewardtype**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146 getRewardtype($reward_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148 getRewardtype($reward_type_id, $accept_language)
 
 Get a reward type
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200146**](../Model/InlineResponse200146.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200148**](../Model/InlineResponse200148.md)
 
 ### Authorization
 

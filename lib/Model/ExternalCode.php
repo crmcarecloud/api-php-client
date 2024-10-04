@@ -57,7 +57,7 @@ class ExternalCode implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'external_code_type_id' => 'int',
+        'external_code_type_id' => 'string',
         'value' => 'string'
     ];
 
@@ -217,7 +217,7 @@ class ExternalCode implements ModelInterface, ArrayAccess
     /**
      * Gets external_code_type_id
      *
-     * @return int
+     * @return string
      */
     public function getExternalCodeTypeId()
     {
@@ -227,7 +227,7 @@ class ExternalCode implements ModelInterface, ArrayAccess
     /**
      * Sets external_code_type_id
      *
-     * @param int $external_code_type_id The unique ID of the external code type (provided in [GET /product-reservation-external-list-types](https://carecloud.readme.io/reference/getproductreservationexternallisttypes)).
+     * @param string $external_code_type_id The unique ID of the external code type (provided in [GET /product-reservation-external-list-types](https://carecloud.readme.io/reference/getproductreservationexternallisttypes)).
      *
      * @return $this
      */

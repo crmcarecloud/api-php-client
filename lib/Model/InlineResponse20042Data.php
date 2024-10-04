@@ -56,7 +56,7 @@ class InlineResponse20042Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'status_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\StatusRecord[]',
+        'customers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Customer[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20042Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'status_records' => null,
+        'customers' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20042Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status_records' => 'status_records',
+        'customers' => 'customers',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20042Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status_records' => 'setStatusRecords',
+        'customers' => 'setCustomers',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20042Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status_records' => 'getStatusRecords',
+        'customers' => 'getCustomers',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20042Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['status_records'] = isset($data['status_records']) ? $data['status_records'] : null;
+        $this->container['customers'] = isset($data['customers']) ? $data['customers'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20042Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets status_records
+     * Gets customers
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\StatusRecord[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Customer[]
      */
-    public function getStatusRecords()
+    public function getCustomers()
     {
-        return $this->container['status_records'];
+        return $this->container['customers'];
     }
 
     /**
-     * Sets status_records
+     * Sets customers
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\StatusRecord[] $status_records List of status records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Customer[] $customers Array of customers.
      *
      * @return $this
      */
-    public function setStatusRecords($status_records)
+    public function setCustomers($customers)
     {
-        $this->container['status_records'] = $status_records;
+        $this->container['customers'] = $customers;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20042Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found status records.
+     * @param int $total_items The number of all found customers.
      *
      * @return $this
      */

@@ -56,7 +56,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]',
+        'points' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Point[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'vouchers' => null,
+        'points' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'vouchers' => 'vouchers',
+        'points' => 'points',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'vouchers' => 'setVouchers',
+        'points' => 'setPoints',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'vouchers' => 'getVouchers',
+        'points' => 'getPoints',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['vouchers'] = isset($data['vouchers']) ? $data['vouchers'] : null;
+        $this->container['points'] = isset($data['points']) ? $data['points'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets vouchers
+     * Gets points
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Point[]
      */
-    public function getVouchers()
+    public function getPoints()
     {
-        return $this->container['vouchers'];
+        return $this->container['points'];
     }
 
     /**
-     * Sets vouchers
+     * Sets points
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[] $vouchers List of all recent vouchers.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Point[] $points List of the point records.
      *
      * @return $this
      */
-    public function setVouchers($vouchers)
+    public function setPoints($points)
     {
-        $this->container['vouchers'] = $vouchers;
+        $this->container['points'] = $points;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse20044Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all recent vouchers.
+     * @param int $total_items The number of all found point records.
      *
      * @return $this
      */

@@ -387,7 +387,7 @@ class VouchersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200184
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186
      */
     public function getSubVoucherProperties($voucher_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -405,11 +405,11 @@ class VouchersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200184, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubVoucherPropertiesWithHttpInfo($voucher_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200184';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186';
         $request = $this->getSubVoucherPropertiesRequest($voucher_id, $accept_language);
 
         try {
@@ -461,7 +461,7 @@ class VouchersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200184',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class VouchersApi
      */
     public function getSubVoucherPropertiesAsyncWithHttpInfo($voucher_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200184';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200186';
         $request = $this->getSubVoucherPropertiesRequest($voucher_id, $accept_language);
 
         return $this->client
@@ -715,7 +715,7 @@ class VouchersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200183
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200185
      */
     public function getVoucher($voucher_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -733,11 +733,11 @@ class VouchersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200183, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200185, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVoucherWithHttpInfo($voucher_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200183';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200185';
         $request = $this->getVoucherRequest($voucher_id, $accept_language);
 
         try {
@@ -789,7 +789,7 @@ class VouchersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200183',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200185',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class VouchersApi
      */
     public function getVoucherAsyncWithHttpInfo($voucher_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200183';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200185';
         $request = $this->getVoucherRequest($voucher_id, $accept_language);
 
         return $this->client
@@ -1053,7 +1053,7 @@ class VouchersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045
      */
     public function getVouchers($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null)
     {
@@ -1081,11 +1081,11 @@ class VouchersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVouchersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045';
         $request = $this->getVouchersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id);
 
         try {
@@ -1137,7 +1137,7 @@ class VouchersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1249,7 +1249,7 @@ class VouchersApi
      */
     public function getVouchersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045';
         $request = $this->getVouchersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id);
 
         return $this->client

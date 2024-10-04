@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCommunicationChannels**](CommunicationChannelsApi.md#getcommunicationchannels) | **GET** /communication-channels | Get all communication channels
 
 # **getCommunicationChannel**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031 getCommunicationChannel($communication_channel_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032 getCommunicationChannel($communication_channel_id, $accept_language)
 
 Detail of a communication channel
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20032**](../Model/InlineResponse20032.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCommunicationChannels**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030 getCommunicationChannels($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031 getCommunicationChannels($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all communication channels
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20030**](../Model/InlineResponse20030.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20031**](../Model/InlineResponse20031.md)
 
 ### Authorization
 

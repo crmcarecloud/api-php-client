@@ -56,8 +56,7 @@ class InlineResponse200177Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
-        'total_items' => 'int'
+        'customer_id' => 'string'
     ];
 
     /**
@@ -66,8 +65,7 @@ class InlineResponse200177Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'property_records' => null,
-        'total_items' => null
+        'customer_id' => null
     ];
 
     /**
@@ -97,8 +95,7 @@ class InlineResponse200177Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'property_records' => 'property_records',
-        'total_items' => 'total_items'
+        'customer_id' => 'customer_id'
     ];
 
     /**
@@ -107,8 +104,7 @@ class InlineResponse200177Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'property_records' => 'setPropertyRecords',
-        'total_items' => 'setTotalItems'
+        'customer_id' => 'setCustomerId'
     ];
 
     /**
@@ -117,8 +113,7 @@ class InlineResponse200177Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'property_records' => 'getPropertyRecords',
-        'total_items' => 'getTotalItems'
+        'customer_id' => 'getCustomerId'
     ];
 
     /**
@@ -179,8 +174,7 @@ class InlineResponse200177Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
-        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
     }
 
     /**
@@ -208,49 +202,25 @@ class InlineResponse200177Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets property_records
+     * Gets customer_id
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     * @return string
      */
-    public function getPropertyRecords()
+    public function getCustomerId()
     {
-        return $this->container['property_records'];
+        return $this->container['customer_id'];
     }
 
     /**
-     * Sets property_records
+     * Sets customer_id
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of property records.
+     * @param string $customer_id The unique ID of the customer.
      *
      * @return $this
      */
-    public function setPropertyRecords($property_records)
+    public function setCustomerId($customer_id)
     {
-        $this->container['property_records'] = $property_records;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_items
-     *
-     * @return int
-     */
-    public function getTotalItems()
-    {
-        return $this->container['total_items'];
-    }
-
-    /**
-     * Sets total_items
-     *
-     * @param int $total_items The number of all found voucher property records.
-     *
-     * @return $this
-     */
-    public function setTotalItems($total_items)
-    {
-        $this->container['total_items'] = $total_items;
+        $this->container['customer_id'] = $customer_id;
 
         return $this;
     }

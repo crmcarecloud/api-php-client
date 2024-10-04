@@ -56,7 +56,7 @@ class InlineResponse200138Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]',
+        'rewards' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Reward[]',
         'total_items' => 'int'
     ];
 
@@ -66,7 +66,7 @@ class InlineResponse200138Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'vouchers' => null,
+        'rewards' => null,
         'total_items' => null
     ];
 
@@ -97,7 +97,7 @@ class InlineResponse200138Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'vouchers' => 'vouchers',
+        'rewards' => 'rewards',
         'total_items' => 'total_items'
     ];
 
@@ -107,7 +107,7 @@ class InlineResponse200138Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'vouchers' => 'setVouchers',
+        'rewards' => 'setRewards',
         'total_items' => 'setTotalItems'
     ];
 
@@ -117,7 +117,7 @@ class InlineResponse200138Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'vouchers' => 'getVouchers',
+        'rewards' => 'getRewards',
         'total_items' => 'getTotalItems'
     ];
 
@@ -179,7 +179,7 @@ class InlineResponse200138Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['vouchers'] = isset($data['vouchers']) ? $data['vouchers'] : null;
+        $this->container['rewards'] = isset($data['rewards']) ? $data['rewards'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
@@ -208,25 +208,25 @@ class InlineResponse200138Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets vouchers
+     * Gets rewards
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[]
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Reward[]
      */
-    public function getVouchers()
+    public function getRewards()
     {
-        return $this->container['vouchers'];
+        return $this->container['rewards'];
     }
 
     /**
-     * Sets vouchers
+     * Sets rewards
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Voucher[] $vouchers List of vouchers tied to the reward
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Reward[] $rewards List of all rewards.
      *
      * @return $this
      */
-    public function setVouchers($vouchers)
+    public function setRewards($rewards)
     {
-        $this->container['vouchers'] = $vouchers;
+        $this->container['rewards'] = $rewards;
 
         return $this;
     }
@@ -244,7 +244,7 @@ class InlineResponse200138Data implements ModelInterface, ArrayAccess
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found vouchers.
+     * @param int $total_items The number of all found rewards.
      *
      * @return $this
      */

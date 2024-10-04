@@ -56,9 +56,9 @@ class InlineResponse200182Data implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'next_amount' => 'float',
-        'next_date' => 'string',
-        'current_month_amount' => 'float'
+        'bearer_token' => 'string',
+        'valid_to' => 'string',
+        'user' => '\CrmCareCloud\Webservice\RestApi\Client\Model\User'
     ];
 
     /**
@@ -67,9 +67,9 @@ class InlineResponse200182Data implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'next_amount' => 'float',
-        'next_date' => null,
-        'current_month_amount' => 'float'
+        'bearer_token' => null,
+        'valid_to' => null,
+        'user' => null
     ];
 
     /**
@@ -99,9 +99,9 @@ class InlineResponse200182Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'next_amount' => 'next_amount',
-        'next_date' => 'next_date',
-        'current_month_amount' => 'current_month_amount'
+        'bearer_token' => 'bearer_token',
+        'valid_to' => 'valid_to',
+        'user' => 'user'
     ];
 
     /**
@@ -110,9 +110,9 @@ class InlineResponse200182Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'next_amount' => 'setNextAmount',
-        'next_date' => 'setNextDate',
-        'current_month_amount' => 'setCurrentMonthAmount'
+        'bearer_token' => 'setBearerToken',
+        'valid_to' => 'setValidTo',
+        'user' => 'setUser'
     ];
 
     /**
@@ -121,9 +121,9 @@ class InlineResponse200182Data implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'next_amount' => 'getNextAmount',
-        'next_date' => 'getNextDate',
-        'current_month_amount' => 'getCurrentMonthAmount'
+        'bearer_token' => 'getBearerToken',
+        'valid_to' => 'getValidTo',
+        'user' => 'getUser'
     ];
 
     /**
@@ -184,9 +184,9 @@ class InlineResponse200182Data implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['next_amount'] = isset($data['next_amount']) ? $data['next_amount'] : null;
-        $this->container['next_date'] = isset($data['next_date']) ? $data['next_date'] : null;
-        $this->container['current_month_amount'] = isset($data['current_month_amount']) ? $data['current_month_amount'] : null;
+        $this->container['bearer_token'] = isset($data['bearer_token']) ? $data['bearer_token'] : null;
+        $this->container['valid_to'] = isset($data['valid_to']) ? $data['valid_to'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -214,73 +214,73 @@ class InlineResponse200182Data implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets next_amount
-     *
-     * @return float
-     */
-    public function getNextAmount()
-    {
-        return $this->container['next_amount'];
-    }
-
-    /**
-     * Sets next_amount
-     *
-     * @param float $next_amount Date (ISO 8601) when first points will expire.
-     *
-     * @return $this
-     */
-    public function setNextAmount($next_amount)
-    {
-        $this->container['next_amount'] = $next_amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets next_date
+     * Gets bearer_token
      *
      * @return string
      */
-    public function getNextDate()
+    public function getBearerToken()
     {
-        return $this->container['next_date'];
+        return $this->container['bearer_token'];
     }
 
     /**
-     * Sets next_date
+     * Sets bearer_token
      *
-     * @param string $next_date Amount of redeemed points in time interval. *(YYYY-MM-DD)*
+     * @param string $bearer_token Authentication bearer token for an user. Token can be used for authentication in REST API with Bearer Authentication (more information about it [here](#section/Authorization/bearerAuth))
      *
      * @return $this
      */
-    public function setNextDate($next_date)
+    public function setBearerToken($bearer_token)
     {
-        $this->container['next_date'] = $next_date;
+        $this->container['bearer_token'] = $bearer_token;
 
         return $this;
     }
 
     /**
-     * Gets current_month_amount
+     * Gets valid_to
      *
-     * @return float
+     * @return string
      */
-    public function getCurrentMonthAmount()
+    public function getValidTo()
     {
-        return $this->container['current_month_amount'];
+        return $this->container['valid_to'];
     }
 
     /**
-     * Sets current_month_amount
+     * Sets valid_to
      *
-     * @param float $current_month_amount Amount of points that will expire in current month.
+     * @param string $valid_to Date and time (local time zone of the project) of the token validity.  *(YYYY-MM-DD HH:MM:SS)*
      *
      * @return $this
      */
-    public function setCurrentMonthAmount($current_month_amount)
+    public function setValidTo($valid_to)
     {
-        $this->container['current_month_amount'] = $current_month_amount;
+        $this->container['valid_to'] = $valid_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets user
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\User
+     */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+     * Sets user
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\User $user user
+     *
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
 
         return $this;
     }
