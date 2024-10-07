@@ -96,7 +96,7 @@ class CustomerSourcesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSource200Response
      */
     public function getCustomerSource($customer_source_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class CustomerSourcesApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSource200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerSourceWithHttpInfo($customer_source_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSource200Response';
         $request = $this->getCustomerSourceRequest($customer_source_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CustomerSourcesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSource200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class CustomerSourcesApi
      */
     public function getCustomerSourceAsyncWithHttpInfo($customer_source_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20075';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSource200Response';
         $request = $this->getCustomerSourceRequest($customer_source_id, $accept_language);
 
         return $this->client
@@ -420,15 +420,15 @@ class CustomerSourcesApi
      * Get customer sources
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_source_text_id The unique text representation of the ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSources200Response
      */
     public function getCustomerSources($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_source_text_id = null)
     {
@@ -442,19 +442,19 @@ class CustomerSourcesApi
      * Get customer sources
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_source_text_id The unique text representation of the ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSources200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerSourcesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_source_text_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSources200Response';
         $request = $this->getCustomerSourcesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_source_text_id);
 
         try {
@@ -506,7 +506,7 @@ class CustomerSourcesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSources200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -570,8 +570,8 @@ class CustomerSourcesApi
      * Get customer sources
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_source_text_id The unique text representation of the ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
@@ -595,8 +595,8 @@ class CustomerSourcesApi
      * Get customer sources
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_source_text_id The unique text representation of the ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
@@ -606,7 +606,7 @@ class CustomerSourcesApi
      */
     public function getCustomerSourcesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_source_text_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20074';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSources200Response';
         $request = $this->getCustomerSourcesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_source_text_id);
 
         return $this->client
@@ -650,8 +650,8 @@ class CustomerSourcesApi
      * Create request for operation 'getCustomerSources'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_source_text_id The unique text representation of the ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)

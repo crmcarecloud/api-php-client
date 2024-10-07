@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getTestsConnection**](TestsApi.md#gettestsconnection) | **GET** /tests/connection | Connection test
 
 # **getTestsConnection**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174 getTestsConnection($test_string)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetConnection200Response getTestsConnection($test_string)
 
 Connection test
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200174**](../Model/InlineResponse200174.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetConnection200Response**](../Model/GetConnection200Response.md)
 
 ### Authorization
 

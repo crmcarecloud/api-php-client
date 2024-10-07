@@ -96,7 +96,7 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetCard200Response
      */
     public function getCard($card_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetCard200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCardWithHttpInfo($card_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCard200Response';
         $request = $this->getCardRequest($card_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCard200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class CardsApi
      */
     public function getCardAsyncWithHttpInfo($card_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCard200Response';
         $request = $this->getCardRequest($card_id, $accept_language);
 
         return $this->client
@@ -420,8 +420,8 @@ class CardsApi
      * Get all cards
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -434,7 +434,7 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetCards200Response
      */
     public function getCards($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null, $search_secondary_card_number = null)
     {
@@ -448,8 +448,8 @@ class CardsApi
      * Get all cards
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -462,11 +462,11 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetCards200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCardsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null, $search_secondary_card_number = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCards200Response';
         $request = $this->getCardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number);
 
         try {
@@ -518,7 +518,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCards200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -582,8 +582,8 @@ class CardsApi
      * Get all cards
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -613,8 +613,8 @@ class CardsApi
      * Get all cards
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
@@ -630,7 +630,7 @@ class CardsApi
      */
     public function getCardsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $card_number = null, $card_type_id = null, $state = null, $is_valid = null, $card_number_list = null, $search_secondary_card_number = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCards200Response';
         $request = $this->getCardsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number);
 
         return $this->client
@@ -674,8 +674,8 @@ class CardsApi
      * Create request for operation 'getCards'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -836,7 +836,7 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardAssign200Response
      */
     public function postAssignCard($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -854,11 +854,11 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardAssign200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postAssignCardWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardAssign200Response';
         $request = $this->postAssignCardRequest($body, $accept_language);
 
         try {
@@ -910,7 +910,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardAssign200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1002,7 +1002,7 @@ class CardsApi
      */
     public function postAssignCardAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardAssign200Response';
         $request = $this->postAssignCardRequest($body, $accept_language);
 
         return $this->client
@@ -1439,7 +1439,7 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostCards201Response
      */
     public function postCard($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1457,11 +1457,11 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostCards201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCardWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCards201Response';
         $request = $this->postCardRequest($body, $accept_language);
 
         try {
@@ -1513,7 +1513,7 @@ class CardsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCards201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1605,7 +1605,7 @@ class CardsApi
      */
     public function postCardAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCards201Response';
         $request = $this->postCardRequest($body, $accept_language);
 
         return $this->client
@@ -1759,7 +1759,7 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGenerateDigital200Response
      */
     public function postGenerateDigitalCard($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1777,11 +1777,11 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGenerateDigital200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postGenerateDigitalCardWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGenerateDigital200Response';
         $request = $this->postGenerateDigitalCardRequest($body, $accept_language);
 
         try {
@@ -1833,7 +1833,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGenerateDigital200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1925,7 +1925,7 @@ class CardsApi
      */
     public function postGenerateDigitalCardAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGenerateDigital200Response';
         $request = $this->postGenerateDigitalCardRequest($body, $accept_language);
 
         return $this->client
@@ -2079,7 +2079,7 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGeneratePassMachine200Response
      */
     public function postGeneratePassMachine($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2097,11 +2097,11 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGeneratePassMachine200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postGeneratePassMachineWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGeneratePassMachine200Response';
         $request = $this->postGeneratePassMachineRequest($body, $accept_language);
 
         try {
@@ -2153,7 +2153,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGeneratePassMachine200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2245,7 +2245,7 @@ class CardsApi
      */
     public function postGeneratePassMachineAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGeneratePassMachine200Response';
         $request = $this->postGeneratePassMachineRequest($body, $accept_language);
 
         return $this->client
@@ -2399,7 +2399,7 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateFree200Response
      */
     public function postValidateFreeCard($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2417,11 +2417,11 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateFree200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postValidateFreeCardWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateFree200Response';
         $request = $this->postValidateFreeCardRequest($body, $accept_language);
 
         try {
@@ -2473,7 +2473,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateFree200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2565,7 +2565,7 @@ class CardsApi
      */
     public function postValidateFreeCardAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateFree200Response';
         $request = $this->postValidateFreeCardRequest($body, $accept_language);
 
         return $this->client
@@ -2719,7 +2719,7 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateIsic200Response
      */
     public function postValidateIsicCard($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2737,11 +2737,11 @@ class CardsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateIsic200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postValidateIsicCardWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateIsic200Response';
         $request = $this->postValidateIsicCardRequest($body, $accept_language);
 
         try {
@@ -2793,7 +2793,7 @@ class CardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateIsic200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2885,7 +2885,7 @@ class CardsApi
      */
     public function postValidateIsicCardAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateIsic200Response';
         $request = $this->postValidateIsicCardRequest($body, $accept_language);
 
         return $this->client

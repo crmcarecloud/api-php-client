@@ -410,7 +410,7 @@ self::AGREEMENT_MARKETING_COMMUNICATION_2,        ];
     /**
      * Sets custom_agreements
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomAgreements[] $custom_agreements Custom agreements.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CustomAgreements[] $custom_agreements Custom consents.
      *
      * @return $this
      */

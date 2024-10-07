@@ -96,7 +96,7 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetCredit200Response
      */
     public function getCredit($credit_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetCredit200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditWithHttpInfo($credit_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCredit200Response';
         $request = $this->getCreditRequest($credit_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CreditsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCredit200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class CreditsApi
      */
     public function getCreditAsyncWithHttpInfo($credit_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20035';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCredit200Response';
         $request = $this->getCreditRequest($credit_id, $accept_language);
 
         return $this->client
@@ -420,8 +420,8 @@ class CreditsApi
      * Get all credit records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -431,7 +431,7 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetCredits200Response
      */
     public function getCredits($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $credit_type_id = null, $create_credit_time_from = null, $create_credit_time_to = null)
     {
@@ -445,8 +445,8 @@ class CreditsApi
      * Get all credit records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -456,11 +456,11 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetCredits200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCreditsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $credit_type_id = null, $create_credit_time_from = null, $create_credit_time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCredits200Response';
         $request = $this->getCreditsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $credit_type_id, $create_credit_time_from, $create_credit_time_to);
 
         try {
@@ -512,7 +512,7 @@ class CreditsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCredits200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -576,8 +576,8 @@ class CreditsApi
      * Get all credit records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -604,8 +604,8 @@ class CreditsApi
      * Get all credit records
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
@@ -618,7 +618,7 @@ class CreditsApi
      */
     public function getCreditsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $credit_type_id = null, $create_credit_time_from = null, $create_credit_time_to = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20034';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCredits200Response';
         $request = $this->getCreditsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $credit_type_id, $create_credit_time_from, $create_credit_time_to);
 
         return $this->client
@@ -662,8 +662,8 @@ class CreditsApi
      * Create request for operation 'getCredits'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -802,8 +802,8 @@ class CreditsApi
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
@@ -815,7 +815,7 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCreditPurchases200Response
      */
     public function getSubCreditPurchases($credit_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
     {
@@ -830,8 +830,8 @@ class CreditsApi
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
@@ -843,11 +843,11 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCreditPurchases200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubCreditPurchasesWithHttpInfo($credit_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCreditPurchases200Response';
         $request = $this->getSubCreditPurchasesRequest($credit_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension);
 
         try {
@@ -899,7 +899,7 @@ class CreditsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCreditPurchases200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -964,8 +964,8 @@ class CreditsApi
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
@@ -995,8 +995,8 @@ class CreditsApi
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $store_id The unique ID of the store in CareCloud. (optional)
@@ -1011,7 +1011,7 @@ class CreditsApi
      */
     public function getSubCreditPurchasesAsyncWithHttpInfo($credit_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $store_id = null, $customer_id = null, $type_id = null, $payment_time_from = null, $payment_time_to = null, $purchase_items_extension = 'false')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCreditPurchases200Response';
         $request = $this->getSubCreditPurchasesRequest($credit_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension);
 
         return $this->client
@@ -1056,8 +1056,8 @@ class CreditsApi
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
@@ -1223,7 +1223,7 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditDeposit201Response
      */
     public function postCreditDeposit($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1241,11 +1241,11 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditDeposit201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCreditDepositWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditDeposit201Response';
         $request = $this->postCreditDepositRequest($body, $accept_language);
 
         try {
@@ -1297,7 +1297,7 @@ class CreditsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditDeposit201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1389,7 +1389,7 @@ class CreditsApi
      */
     public function postCreditDepositAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2017';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditDeposit201Response';
         $request = $this->postCreditDepositRequest($body, $accept_language);
 
         return $this->client
@@ -1543,7 +1543,7 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditReduce201Response
      */
     public function postCreditReduction($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1561,11 +1561,11 @@ class CreditsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditReduce201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCreditReductionWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditReduce201Response';
         $request = $this->postCreditReductionRequest($body, $accept_language);
 
         try {
@@ -1617,7 +1617,7 @@ class CreditsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditReduce201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1709,7 +1709,7 @@ class CreditsApi
      */
     public function postCreditReductionAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2016';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCreditReduce201Response';
         $request = $this->postCreditReductionRequest($body, $accept_language);
 
         return $this->client

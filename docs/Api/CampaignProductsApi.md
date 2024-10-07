@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**postCampaignProductStoreRecord**](CampaignProductsApi.md#postcampaignproductstorerecord) | **POST** /campaign-products/{campaign_product_id}/campaign-product-store-records | Add a store to the campaign product
 
 # **getCampaignProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015 getCampaignProduct($campaign_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaignProduct200Response getCampaignProduct($campaign_product_id, $accept_language)
 
 Detail of a specific campaign product
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaignProduct200Response**](../Model/GetCampaignProduct200Response.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaignProductStoreRecords**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016 getCampaignProductStoreRecords($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCampaignProductStoreRecords200Response getCampaignProductStoreRecords($campaign_product_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get a campaign product store records
 
@@ -98,8 +98,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsAp
 );
 $campaign_product_id = "campaign_product_id_example"; // string | The unique ID of the campaign product in CareCloud.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 
@@ -118,14 +118,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **campaign_product_id** | **string**| The unique ID of the campaign product in CareCloud. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCampaignProductStoreRecords200Response**](../Model/GetSubCampaignProductStoreRecords200Response.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaignProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014 getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaignProducts200Response getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to)
 
 Collection of campaign products
 
@@ -165,8 +165,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignProductsAp
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
@@ -193,8 +193,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaignProducts200Response**](../Model/GetCampaignProducts200Response.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCampaignProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012 postCampaignProduct($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCampaignProduct201Response postCampaignProduct($body, $accept_language)
 
 Create a campaign product
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2012**](../Model/InlineResponse2012.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCampaignProduct201Response**](../Model/PostCampaignProduct201Response.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCampaignProductStoreRecord**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013 postCampaignProductStoreRecord($body, $campaign_product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCampaignProductStoreRecords201Response postCampaignProductStoreRecord($body, $campaign_product_id, $accept_language)
 
 Add a store to the campaign product
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2013**](../Model/InlineResponse2013.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCampaignProductStoreRecords201Response**](../Model/PostSubCampaignProductStoreRecords201Response.md)
 
 ### Authorization
 

@@ -96,7 +96,7 @@ class ProductGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroup200Response
      */
     public function getProductGroup($product_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class ProductGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroup200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductGroupWithHttpInfo($product_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroup200Response';
         $request = $this->getProductGroupRequest($product_group_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class ProductGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroup200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class ProductGroupsApi
      */
     public function getProductGroupAsyncWithHttpInfo($product_group_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200116';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroup200Response';
         $request = $this->getProductGroupRequest($product_group_id, $accept_language);
 
         return $this->client
@@ -420,8 +420,8 @@ class ProductGroupsApi
      * Get all product groups
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
@@ -431,7 +431,7 @@ class ProductGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroups200Response
      */
     public function getProductGroups($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
     {
@@ -445,8 +445,8 @@ class ProductGroupsApi
      * Get all product groups
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
@@ -456,11 +456,11 @@ class ProductGroupsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroups200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductGroupsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroups200Response';
         $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id);
 
         try {
@@ -512,7 +512,7 @@ class ProductGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroups200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -576,8 +576,8 @@ class ProductGroupsApi
      * Get all product groups
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
@@ -604,8 +604,8 @@ class ProductGroupsApi
      * Get all product groups
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $name Search record by name or a part of the name. (optional)
@@ -618,7 +618,7 @@ class ProductGroupsApi
      */
     public function getProductGroupsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200115';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroups200Response';
         $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id);
 
         return $this->client
@@ -662,8 +662,8 @@ class ProductGroupsApi
      * Create request for operation 'getProductGroups'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)

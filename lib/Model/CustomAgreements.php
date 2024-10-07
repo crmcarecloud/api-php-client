@@ -35,7 +35,7 @@ use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
  * CustomAgreements Class Doc Comment
  *
  * @category Class
- * @description Custom agreements.
+ * @description Custom consents.
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -250,7 +250,7 @@ self::AGREEMENT_VALUE_2,        ];
     /**
      * Sets agreement_id
      *
-     * @param string $agreement_id The unique ID of the agreement in CareCloud from [agreements](#tag/Agreements) resource.
+     * @param string $agreement_id The unique ID of the consent in CareCloud from [consents](https://carecloud.readme.io/reference/getconsents) resource.
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ self::AGREEMENT_VALUE_2,        ];
     /**
      * Sets agreement_value
      *
-     * @param int $agreement_value Value of the specific agreement. *Possible values: 0 - no, consent canceled / 1 - yes, consent given / 2 - consent not set*
+     * @param int $agreement_value Value of the specific consent. *Possible values: 0 - no, consent canceled / 1 - yes, consent given / 2 - consent not set*
      *
      * @return $this
      */

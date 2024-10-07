@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **plu_ids** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PluId[]**](PluId.md) | An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique ID of every product across all POS systems)). | 
 **plu_name** | **string** | Product name. | 
-**category_plu_id** | **string** | Product category ID from Global product list (consist cleaned data - unique ID of every category across all POS systems). | [optional] 
+**category_plu_id** | **string** | Product group ID identify the product group in the system outside of CareCloud (POS, e-shop, etc.). Consist cleaned data - unique ID of every product group across all POS systems. This parameter needs to be set only if product learning is activated. If not set during product learning the default product group will be used. | [optional] 
 **vat_rate** | **float** | VAT rate of the item. | 
 **quantity** | **float** | Quantity of product. | 
 **paid_amount** | **float** | Real money value (unit price * quantity) paid by the customer (The value for a pharmaceutical client could have a copayment for drug prescription or money value of drugs not covered by an insurer). | 

@@ -96,7 +96,7 @@ class CampaignsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaign200Response
      */
     public function getCampaign($campaign_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class CampaignsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaign200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCampaignWithHttpInfo($campaign_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaign200Response';
         $request = $this->getCampaignRequest($campaign_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaign200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class CampaignsApi
      */
     public function getCampaignAsyncWithHttpInfo($campaign_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20013';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaign200Response';
         $request = $this->getCampaignRequest($campaign_id, $accept_language);
 
         return $this->client
@@ -420,15 +420,15 @@ class CampaignsApi
      * Collection of campaigns
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaigns200Response
      */
     public function getCampaigns($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
@@ -442,19 +442,19 @@ class CampaignsApi
      * Collection of campaigns
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaigns200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCampaignsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaigns200Response';
         $request = $this->getCampaignsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         try {
@@ -506,7 +506,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaigns200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -570,8 +570,8 @@ class CampaignsApi
      * Collection of campaigns
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
@@ -595,8 +595,8 @@ class CampaignsApi
      * Collection of campaigns
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $name Search record by name or a part of the name. (optional)
@@ -606,7 +606,7 @@ class CampaignsApi
      */
     public function getCampaignsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20012';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaigns200Response';
         $request = $this->getCampaignsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
 
         return $this->client
@@ -650,8 +650,8 @@ class CampaignsApi
      * Create request for operation 'getCampaigns'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
@@ -778,7 +778,7 @@ class CampaignsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostCampaigns201Response
      */
     public function postCampaign($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -796,11 +796,11 @@ class CampaignsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostCampaigns201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postCampaignWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCampaigns201Response';
         $request = $this->postCampaignRequest($body, $accept_language);
 
         try {
@@ -852,7 +852,7 @@ class CampaignsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCampaigns201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -944,7 +944,7 @@ class CampaignsApi
      */
     public function postCampaignAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2011';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostCampaigns201Response';
         $request = $this->postCampaignRequest($body, $accept_language);
 
         return $this->client

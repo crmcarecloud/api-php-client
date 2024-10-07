@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**putCardType**](CardTypesApi.md#putcardtype) | **PUT** /card-types/{card_type_id} | Update a card type
 
 # **getCardType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025 getCardType($card_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCardType200Response getCardType($card_type_id, $accept_language)
 
 Get a card type
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCardType200Response**](../Model/GetCardType200Response.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCardTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024 getCardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCardTypes200Response getCardTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get information about all card types
 
@@ -97,8 +97,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
@@ -117,15 +117,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCardTypes200Response**](../Model/GetCardTypes200Response.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCardTypeCards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026 getSubCardTypeCards($card_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $is_valid)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCardTypeCards200Response getSubCardTypeCards($card_type_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $is_valid)
 
 Get a collection of cards
 
@@ -166,8 +166,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardTypesApi(
 );
 $card_type_id = "card_type_id_example"; // string | The unique ID of the card type.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
@@ -188,8 +188,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **card_type_id** | **string**| The unique ID of the card type. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20026**](../Model/InlineResponse20026.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCardTypeCards200Response**](../Model/GetSubCardTypeCards200Response.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCardType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015 postCardType($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardTypes201Response postCardType($body, $accept_language)
 
 Create a new card type
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardTypes201Response**](../Model/PostCardTypes201Response.md)
 
 ### Authorization
 

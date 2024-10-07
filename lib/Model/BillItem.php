@@ -350,7 +350,7 @@ class BillItem implements ModelInterface, ArrayAccess
     /**
      * Sets category_plu_id
      *
-     * @param string $category_plu_id Product category ID from Global product list (consist cleaned data - unique ID of every category across all POS systems).
+     * @param string $category_plu_id Product group ID identify the product group in the system outside of CareCloud (POS, e-shop, etc.). Consist cleaned data - unique ID of every product group across all POS systems. This parameter needs to be set only if product learning is activated. If not set during product learning the default product group will be used.
      *
      * @return $this
      */

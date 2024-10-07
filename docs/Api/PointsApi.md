@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**postPointsTransfer**](PointsApi.md#postpointstransfer) | **POST** /points/actions/transfer-points | Transfer points
 
 # **getPoint**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105 getPoint($point_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetPoint200Response getPoint($point_id, $accept_language)
 
 Get a point record
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200105**](../Model/InlineResponse200105.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetPoint200Response**](../Model/GetPoint200Response.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPoints**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044 getPoints($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $point_type_id, $create_point_time_from, $create_point_time_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetPoints200Response getPoints($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $point_type_id, $create_point_time_from, $create_point_time_to)
 
 Get all point records
 
@@ -99,8 +99,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PointsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
@@ -122,8 +122,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetPoints200Response**](../Model/GetPoints200Response.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubPointPurchases**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getSubPointPurchases($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubPointPurchases200Response getSubPointPurchases($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id)
 
 Get a collection of purchases
 
@@ -174,8 +174,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PointsApi(
 );
 $point_id = "point_id_example"; // string | The unique ID of the point record.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
@@ -201,8 +201,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **point_id** | **string**| The unique ID of the point record. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubPointPurchases200Response**](../Model/GetSubPointPurchases200Response.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPointsAssign**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118 postPointsAssign($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostPointsAssign201Response postPointsAssign($body, $accept_language)
 
 Assign of points
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20118**](../Model/InlineResponse20118.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostPointsAssign201Response**](../Model/PostPointsAssign201Response.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPointsRedemption**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117 postPointsRedemption($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostPointsRedemption201Response postPointsRedemption($body, $accept_language)
 
 Points redemption
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20117**](../Model/InlineResponse20117.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostPointsRedemption201Response**](../Model/PostPointsRedemption201Response.md)
 
 ### Authorization
 

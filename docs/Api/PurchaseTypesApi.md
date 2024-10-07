@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getPurchaseTypes**](PurchaseTypesApi.md#getpurchasetypes) | **GET** /purchase-types | Get all purchase types
 
 # **getPurchaseTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132 getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetPurchaseTypes200Response getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all purchase types
 
@@ -33,8 +33,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PurchaseTypesApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 
@@ -52,14 +52,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200132**](../Model/InlineResponse200132.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetPurchaseTypes200Response**](../Model/GetPurchaseTypes200Response.md)
 
 ### Authorization
 

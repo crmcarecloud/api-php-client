@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**putCard**](CardsApi.md#putcard) | **PUT** /cards/{card_id} | Update a card
 
 # **getCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018 getCard($card_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCard200Response getCard($card_id, $accept_language)
 
 Get a card
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCard200Response**](../Model/GetCard200Response.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017 getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCards200Response getCards($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $card_number, $card_type_id, $state, $is_valid, $card_number_list, $search_secondary_card_number)
 
 Get all cards
 
@@ -102,8 +102,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
@@ -128,8 +128,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCards200Response**](../Model/GetCards200Response.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postAssignCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019 postAssignCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardAssign200Response postAssignCard($body, $accept_language)
 
 Assign free card
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20019**](../Model/InlineResponse20019.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardAssign200Response**](../Model/PostCardAssign200Response.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014 postCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCards201Response postCard($body, $accept_language)
 
 Create a card
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2014**](../Model/InlineResponse2014.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCards201Response**](../Model/PostCards201Response.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postGenerateDigitalCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021 postGenerateDigitalCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGenerateDigital200Response postGenerateDigitalCard($body, $accept_language)
 
 Generate virtual card file
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGenerateDigital200Response**](../Model/PostCardGenerateDigital200Response.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postGeneratePassMachine**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022 postGeneratePassMachine($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGeneratePassMachine200Response postGeneratePassMachine($body, $accept_language)
 
 Get a PassMachine digital card
 
@@ -441,7 +441,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardGeneratePassMachine200Response**](../Model/PostCardGeneratePassMachine200Response.md)
 
 ### Authorization
 
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postValidateFreeCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020 postValidateFreeCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateFree200Response postValidateFreeCard($body, $accept_language)
 
 Validate free card
 
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateFree200Response**](../Model/PostCardValidateFree200Response.md)
 
 ### Authorization
 
@@ -515,7 +515,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postValidateIsicCard**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023 postValidateIsicCard($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateIsic200Response postValidateIsicCard($body, $accept_language)
 
 Validate ISIC card
 
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCardValidateIsic200Response**](../Model/PostCardValidateIsic200Response.md)
 
 ### Authorization
 

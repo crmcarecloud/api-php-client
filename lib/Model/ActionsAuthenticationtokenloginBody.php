@@ -235,7 +235,7 @@ class ActionsAuthenticationtokenloginBody implements ModelInterface, ArrayAccess
     /**
      * Sets application_id
      *
-     * @param string $application_id ID of the external application.The ID represents the application where customer wants to login.
+     * @param string $application_id The ID of the application you need to login to with an authentication token. For the ID of an external application, please contact your CareCloud administrator.
      *
      * @return $this
      */

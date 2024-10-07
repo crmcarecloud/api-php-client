@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**putToken**](TokensApi.md#puttoken) | **PUT** /tokens/{token_id} | Edit a push token
 
 # **getTokenAuthentication**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176 getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetTokenAuthentication200Response getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
 
 Get authentication token
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200176**](../Model/InlineResponse200176.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetTokenAuthentication200Response**](../Model/GetTokenAuthentication200Response.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20127 postToken($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostTokens201Response postToken($body, $accept_language)
 
 Create a token
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20127**](../Model/InlineResponse20127.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostTokens201Response**](../Model/PostTokens201Response.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenAuthTokenLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175 postTokenAuthTokenLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostTokenAuthTokenLogin200Response postTokenAuthTokenLogin($body, $token_id, $accept_language)
 
 Login via authentication token
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200175**](../Model/InlineResponse200175.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostTokenAuthTokenLogin200Response**](../Model/PostTokenAuthTokenLogin200Response.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060 postTokenLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostTokenLogin200Response postTokenLogin($body, $token_id, $accept_language)
 
 Login to the application
 
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostTokenLogin200Response**](../Model/PostTokenLogin200Response.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenSocialLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postTokenSocialLogin($body, $token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetTokenSocialLogin200Response postTokenSocialLogin($body, $token_id, $accept_language)
 
 Login via social network
 
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetTokenSocialLogin200Response**](../Model/GetTokenSocialLogin200Response.md)
 
 ### Authorization
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTokenTestCustomerLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177 postTokenTestCustomerLogin($token_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetTokenTestCustomerLogin200Response postTokenTestCustomerLogin($token_id, $accept_language)
 
 Login to the application for test customer
 
@@ -491,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200177**](../Model/InlineResponse200177.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetTokenTestCustomerLogin200Response**](../Model/GetTokenTestCustomerLogin200Response.md)
 
 ### Authorization
 

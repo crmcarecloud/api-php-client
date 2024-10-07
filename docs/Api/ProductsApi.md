@@ -6,10 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getProduct**](ProductsApi.md#getproduct) | **GET** /products/{product_id} | Detail of a product
 [**getProducts**](ProductsApi.md#getproducts) | **GET** /products | Collection of available products
-[**postBulkProducts**](ProductsApi.md#postbulkproducts) | **POST** /products/batch | Create a batch of products. If a product already exists, an update is applied.
+[**postBulkProducts**](ProductsApi.md#postbulkproducts) | **POST** /products/batch | Create a batch of products
 
 # **getProduct**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112 getProduct($product_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetProduct200Response getProduct($product_id, $accept_language)
 
 Detail of a product
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112**](../Model/InlineResponse200112.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetProduct200Response**](../Model/GetProduct200Response.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111 getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code)
 
 Collection of available products
 
@@ -95,8 +95,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
@@ -118,8 +118,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111**](../Model/InlineResponse200111.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response**](../Model/GetProducts200Response.md)
 
 ### Authorization
 
@@ -145,9 +145,9 @@ Name | Type | Description  | Notes
 # **postBulkProducts**
 > postBulkProducts($body, $accept_language)
 
-Create a batch of products. If a product already exists, an update is applied.
+Create a batch of products
 
-Batch process helps to add multiple products in one request.<br/>  ⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+Batch process helps to add multiple products in one request.<br/>  ⚠️ If a product already exists, an update is applied. Missing parameters (first level parameters) in update will be erased from existing product.<br/> ⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php

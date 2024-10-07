@@ -96,7 +96,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetUser200Response
      */
     public function getUser($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetUser200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserWithHttpInfo($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetUser200Response';
         $request = $this->getUserRequest($user_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetUser200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class UsersApi
      */
     public function getUserAsyncWithHttpInfo($user_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetUser200Response';
         $request = $this->getUserRequest($user_id, $accept_language);
 
         return $this->client
@@ -420,8 +420,8 @@ class UsersApi
      * Get all users
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
@@ -433,7 +433,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetUsers200Response
      */
     public function getUsers($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null, $store_id = null)
     {
@@ -447,8 +447,8 @@ class UsersApi
      * Get all users
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
@@ -460,11 +460,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetUsers200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUsersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null, $store_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetUsers200Response';
         $request = $this->getUsersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name, $store_id);
 
         try {
@@ -516,7 +516,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetUsers200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -580,8 +580,8 @@ class UsersApi
      * Get all users
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
@@ -610,8 +610,8 @@ class UsersApi
      * Get all users
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $email Search by email. (optional)
@@ -626,7 +626,7 @@ class UsersApi
      */
     public function getUsersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $email = null, $phone = null, $login = null, $first_name = null, $last_name = null, $store_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetUsers200Response';
         $request = $this->getUsersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name, $store_id);
 
         return $this->client
@@ -670,8 +670,8 @@ class UsersApi
      * Create request for operation 'getUsers'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
@@ -823,7 +823,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostUserLogin200Response
      */
     public function postUserLogin($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -841,11 +841,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostUserLogin200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserLoginWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserLogin200Response';
         $request = $this->postUserLoginRequest($body, $accept_language);
 
         try {
@@ -897,7 +897,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserLogin200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -981,7 +981,7 @@ class UsersApi
      */
     public function postUserLoginAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserLogin200Response';
         $request = $this->postUserLoginRequest($body, $accept_language);
 
         return $this->client
@@ -1410,7 +1410,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostUserSsoLogin200Response
      */
     public function postUserSsoLogin($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1428,11 +1428,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostUserSsoLogin200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserSsoLoginWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserSsoLogin200Response';
         $request = $this->postUserSsoLoginRequest($body, $accept_language);
 
         try {
@@ -1484,7 +1484,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserSsoLogin200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1576,7 +1576,7 @@ class UsersApi
      */
     public function postUserSsoLoginAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserSsoLogin200Response';
         $request = $this->postUserSsoLoginRequest($body, $accept_language);
 
         return $this->client
@@ -1721,7 +1721,7 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostUserVerifyAuthToken200Response
      */
     public function postUserVerifyAuthToken($body)
     {
@@ -1738,11 +1738,11 @@ class UsersApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostUserVerifyAuthToken200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUserVerifyAuthTokenWithHttpInfo($body)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserVerifyAuthToken200Response';
         $request = $this->postUserVerifyAuthTokenRequest($body);
 
         try {
@@ -1794,7 +1794,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserVerifyAuthToken200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1884,7 +1884,7 @@ class UsersApi
      */
     public function postUserVerifyAuthTokenAsyncWithHttpInfo($body)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserVerifyAuthToken200Response';
         $request = $this->postUserVerifyAuthTokenRequest($body);
 
         return $this->client

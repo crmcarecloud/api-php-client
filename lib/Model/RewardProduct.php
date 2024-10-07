@@ -55,7 +55,7 @@ class RewardProduct extends Product
       */
     protected static $swaggerTypes = [
         'minimum_number_of_products' => 'int',
-        'reward_product_relation_type' => 'string'
+        'reward_product_relation_types' => 'string[]'
     ];
 
     /**
@@ -65,7 +65,7 @@ class RewardProduct extends Product
       */
     protected static $swaggerFormats = [
         'minimum_number_of_products' => null,
-        'reward_product_relation_type' => null
+        'reward_product_relation_types' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class RewardProduct extends Product
      */
     protected static $attributeMap = [
         'minimum_number_of_products' => 'minimum_number_of_products',
-        'reward_product_relation_type' => 'reward_product_relation_type'
+        'reward_product_relation_types' => 'reward_product_relation_types'
     ];
 
     /**
@@ -106,7 +106,7 @@ class RewardProduct extends Product
      */
     protected static $setters = [
         'minimum_number_of_products' => 'setMinimumNumberOfProducts',
-        'reward_product_relation_type' => 'setRewardProductRelationType'
+        'reward_product_relation_types' => 'setRewardProductRelationTypes'
     ];
 
     /**
@@ -116,7 +116,7 @@ class RewardProduct extends Product
      */
     protected static $getters = [
         'minimum_number_of_products' => 'getMinimumNumberOfProducts',
-        'reward_product_relation_type' => 'getRewardProductRelationType'
+        'reward_product_relation_types' => 'getRewardProductRelationTypes'
     ];
 
     /**
@@ -160,20 +160,7 @@ class RewardProduct extends Product
         return self::$swaggerModelName;
     }
 
-    const REWARD_PRODUCT_RELATION_TYPE_CONDITION = 'condition';
-const REWARD_PRODUCT_RELATION_TYPE_BONUS = 'bonus';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return array<int,int|string>
-     */
-    public function getRewardProductRelationTypeAllowableValues()
-    {
-        return [
-            self::REWARD_PRODUCT_RELATION_TYPE_CONDITION,
-self::REWARD_PRODUCT_RELATION_TYPE_BONUS,        ];
-    }
+    
 
 
     /**
@@ -187,7 +174,7 @@ self::REWARD_PRODUCT_RELATION_TYPE_BONUS,        ];
         parent::__construct($data);
 
         $this->container['minimum_number_of_products'] = isset($data['minimum_number_of_products']) ? $data['minimum_number_of_products'] : null;
-        $this->container['reward_product_relation_type'] = isset($data['reward_product_relation_type']) ? $data['reward_product_relation_type'] : null;
+        $this->container['reward_product_relation_types'] = isset($data['reward_product_relation_types']) ? $data['reward_product_relation_types'] : null;
     }
 
     /**
@@ -198,14 +185,6 @@ self::REWARD_PRODUCT_RELATION_TYPE_BONUS,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
-
-        $allowedValues = $this->getRewardProductRelationTypeAllowableValues();
-        if (!is_null($this->container['reward_product_relation_type']) && !in_array($this->container['reward_product_relation_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'reward_product_relation_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -235,7 +214,7 @@ self::REWARD_PRODUCT_RELATION_TYPE_BONUS,        ];
     /**
      * Sets minimum_number_of_products
      *
-     * @param int $minimum_number_of_products A minimal amount of purchase products to apply reward.
+     * @param int $minimum_number_of_products A minimal amount of purchase products to apply reward. This parameter is deprecated, for minimal amount of product in the reward condition, please look at [GET /rewards](https://carecloud.readme.io/reference/getrewards) structure `reward_product_relation_conditions`. If the query parameter `reward_product_relation_type` is not set. The amount of product for condition is returned.
      *
      * @return $this
      */
@@ -247,34 +226,25 @@ self::REWARD_PRODUCT_RELATION_TYPE_BONUS,        ];
     }
 
     /**
-     * Gets reward_product_relation_type
+     * Gets reward_product_relation_types
      *
-     * @return string
+     * @return string[]
      */
-    public function getRewardProductRelationType()
+    public function getRewardProductRelationTypes()
     {
-        return $this->container['reward_product_relation_type'];
+        return $this->container['reward_product_relation_types'];
     }
 
     /**
-     * Sets reward_product_relation_type
+     * Sets reward_product_relation_types
      *
-     * @param string $reward_product_relation_type Parameter identify type of the relation between reward and product.
+     * @param string[] $reward_product_relation_types Parameter identify type of the relation between reward and product.  *Possible values are: `condition` - product is part of a reward condition / `bonus` - product is part of a reward condition*
      *
      * @return $this
      */
-    public function setRewardProductRelationType($reward_product_relation_type)
+    public function setRewardProductRelationTypes($reward_product_relation_types)
     {
-        $allowedValues = $this->getRewardProductRelationTypeAllowableValues();
-        if (!is_null($reward_product_relation_type) && !in_array($reward_product_relation_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'reward_product_relation_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['reward_product_relation_type'] = $reward_product_relation_type;
+        $this->container['reward_product_relation_types'] = $reward_product_relation_types;
 
         return $this;
     }

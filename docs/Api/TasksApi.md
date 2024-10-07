@@ -83,7 +83,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubTaskProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173 getSubTaskProperties($task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskProperties200Response getSubTaskProperties($task_id, $accept_language)
 
 Get a collection of task properties records
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173**](../Model/InlineResponse200173.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskProperties200Response**](../Model/GetSubTaskProperties200Response.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTask**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163 getTask($task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetTask200Response getTask($task_id, $accept_language)
 
 Get a task
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163**](../Model/InlineResponse200163.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetTask200Response**](../Model/GetTask200Response.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskAssignee**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167 getTaskAssignee($assignee_id, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignee200Response getTaskAssignee($assignee_id, $task_id, $accept_language)
 
 Get a task assignee
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167**](../Model/InlineResponse200167.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignee200Response**](../Model/GetSubTaskAssignee200Response.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskAssignees**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166 getTaskAssignees($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignees200Response getTaskAssignees($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all task assignees
 
@@ -292,8 +292,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
 );
 $task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 
@@ -312,14 +312,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **string**| The unique ID of the task in CareCloud. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166**](../Model/InlineResponse200166.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignees200Response**](../Model/GetSubTaskAssignees200Response.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskComment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165 getTaskComment($task_comment_id, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComment200Response getTaskComment($task_comment_id, $task_id, $accept_language)
 
 Get a task comment
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165**](../Model/InlineResponse200165.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComment200Response**](../Model/GetSubTaskComment200Response.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskComments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164 getTaskComments($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComments200Response getTaskComments($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text)
 
 Get all task comments
 
@@ -422,8 +422,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
 );
 $task_id = "task_id_example"; // string | The unique ID of the task in CareCloud.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $task_comment_text = "task_comment_text_example"; // string | Search record by the task comment text or a part of the task comment text.
@@ -443,15 +443,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **string**| The unique ID of the task in CareCloud. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **task_comment_text** | **string**| Search record by the task comment text or a part of the task comment text. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164**](../Model/InlineResponse200164.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComments200Response**](../Model/GetSubTaskComments200Response.md)
 
 ### Authorization
 
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskState**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171 getTaskState($task_state_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskState200Response getTaskState($task_state_id, $accept_language)
 
 Get a task state
 
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171**](../Model/InlineResponse200171.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskState200Response**](../Model/GetTaskState200Response.md)
 
 ### Authorization
 
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskStates**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170 getTaskStates($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskStates200Response getTaskStates($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all task states
 
@@ -551,8 +551,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 
@@ -570,14 +570,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170**](../Model/InlineResponse200170.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskStates200Response**](../Model/GetTaskStates200Response.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskType**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169 getTaskType($task_type_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskType200Response getTaskType($task_type_id, $accept_language)
 
 Get a task type
 
@@ -637,7 +637,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169**](../Model/InlineResponse200169.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskType200Response**](../Model/GetTaskType200Response.md)
 
 ### Authorization
 
@@ -651,7 +651,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTaskTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168 getTaskTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskTypes200Response getTaskTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get all task types
 
@@ -677,8 +677,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 
@@ -696,14 +696,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168**](../Model/InlineResponse200168.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskTypes200Response**](../Model/GetTaskTypes200Response.md)
 
 ### Authorization
 
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTasks**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162 getTasks($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetTasks200Response getTasks($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note)
 
 Get all tasks
 
@@ -743,8 +743,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TasksApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $task_type_id = "task_type_id_example"; // string | Task type ID from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type.
@@ -769,8 +769,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **task_type_id** | **string**| Task type ID from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. | [optional]
@@ -783,7 +783,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162**](../Model/InlineResponse200162.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetTasks200Response**](../Model/GetTasks200Response.md)
 
 ### Authorization
 
@@ -797,7 +797,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTaskAssignee**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20126 postTaskAssignee($body, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskAssignees201Response postTaskAssignee($body, $task_id, $accept_language)
 
 Create a task assignee
 
@@ -845,7 +845,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20126**](../Model/InlineResponse20126.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskAssignees201Response**](../Model/PostSubTaskAssignees201Response.md)
 
 ### Authorization
 
@@ -859,7 +859,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTaskComment**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125 postTaskComment($body, $task_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskComments201Response postTaskComment($body, $task_id, $accept_language)
 
 Create a task comment
 
@@ -907,7 +907,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125**](../Model/InlineResponse20125.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskComments201Response**](../Model/PostSubTaskComments201Response.md)
 
 ### Authorization
 
@@ -921,7 +921,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTasks**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124 postTasks($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostTasks201Response postTasks($body, $accept_language)
 
 Create a task
 
@@ -967,7 +967,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124**](../Model/InlineResponse20124.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostTasks201Response**](../Model/PostTasks201Response.md)
 
 ### Authorization
 

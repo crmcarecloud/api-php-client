@@ -96,7 +96,7 @@ class ProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetProduct200Response
      */
     public function getProduct($product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -114,11 +114,11 @@ class ProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetProduct200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductWithHttpInfo($product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProduct200Response';
         $request = $this->getProductRequest($product_id, $accept_language);
 
         try {
@@ -170,7 +170,7 @@ class ProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProduct200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class ProductsApi
      */
     public function getProductAsyncWithHttpInfo($product_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200112';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProduct200Response';
         $request = $this->getProductRequest($product_id, $accept_language);
 
         return $this->client
@@ -420,8 +420,8 @@ class ProductsApi
      * Collection of available products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
@@ -431,7 +431,7 @@ class ProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response
      */
     public function getProducts($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null)
     {
@@ -445,8 +445,8 @@ class ProductsApi
      * Collection of available products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
@@ -456,11 +456,11 @@ class ProductsApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response';
         $request = $this->getProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code);
 
         try {
@@ -512,7 +512,7 @@ class ProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -576,8 +576,8 @@ class ProductsApi
      * Collection of available products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
@@ -604,8 +604,8 @@ class ProductsApi
      * Collection of available products
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $name Search record by name or a part of the name. (optional)
@@ -618,7 +618,7 @@ class ProductsApi
      */
     public function getProductsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200111';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response';
         $request = $this->getProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code);
 
         return $this->client
@@ -662,8 +662,8 @@ class ProductsApi
      * Create request for operation 'getProducts'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
@@ -798,7 +798,7 @@ class ProductsApi
     /**
      * Operation postBulkProducts
      *
-     * Create a batch of products. If a product already exists, an update is applied.
+     * Create a batch of products
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductsBatchBody $body body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -815,7 +815,7 @@ class ProductsApi
     /**
      * Operation postBulkProductsWithHttpInfo
      *
-     * Create a batch of products. If a product already exists, an update is applied.
+     * Create a batch of products
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductsBatchBody $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -917,7 +917,7 @@ class ProductsApi
     /**
      * Operation postBulkProductsAsync
      *
-     * Create a batch of products. If a product already exists, an update is applied.
+     * Create a batch of products
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductsBatchBody $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -938,7 +938,7 @@ class ProductsApi
     /**
      * Operation postBulkProductsAsyncWithHttpInfo
      *
-     * Create a batch of products. If a product already exists, an update is applied.
+     * Create a batch of products
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductsBatchBody $body (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)

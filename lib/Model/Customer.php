@@ -59,6 +59,8 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'customer_id' => 'string',
         'personal_information' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PersonalInformation',
+        'doi_email' => 'string',
+        'doi_phone' => 'string',
         'last_change' => 'string',
         'state' => 'int'
     ];
@@ -71,6 +73,8 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'customer_id' => null,
         'personal_information' => null,
+        'doi_email' => null,
+        'doi_phone' => null,
         'last_change' => null,
         'state' => null
     ];
@@ -104,6 +108,8 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'customer_id' => 'customer_id',
         'personal_information' => 'personal_information',
+        'doi_email' => 'doi_email',
+        'doi_phone' => 'doi_phone',
         'last_change' => 'last_change',
         'state' => 'state'
     ];
@@ -116,6 +122,8 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $setters = [
         'customer_id' => 'setCustomerId',
         'personal_information' => 'setPersonalInformation',
+        'doi_email' => 'setDoiEmail',
+        'doi_phone' => 'setDoiPhone',
         'last_change' => 'setLastChange',
         'state' => 'setState'
     ];
@@ -128,6 +136,8 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $getters = [
         'customer_id' => 'getCustomerId',
         'personal_information' => 'getPersonalInformation',
+        'doi_email' => 'getDoiEmail',
+        'doi_phone' => 'getDoiPhone',
         'last_change' => 'getLastChange',
         'state' => 'getState'
     ];
@@ -207,6 +217,8 @@ self::STATE_2,        ];
     {
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
         $this->container['personal_information'] = isset($data['personal_information']) ? $data['personal_information'] : null;
+        $this->container['doi_email'] = isset($data['doi_email']) ? $data['doi_email'] : null;
+        $this->container['doi_phone'] = isset($data['doi_phone']) ? $data['doi_phone'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
     }
@@ -290,6 +302,54 @@ self::STATE_2,        ];
     public function setPersonalInformation($personal_information)
     {
         $this->container['personal_information'] = $personal_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets doi_email
+     *
+     * @return string
+     */
+    public function getDoiEmail()
+    {
+        return $this->container['doi_email'];
+    }
+
+    /**
+     * Sets doi_email
+     *
+     * @param string $doi_email Date and time of obtaining the customer's email consent (Double opt-in confirmation). *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setDoiEmail($doi_email)
+    {
+        $this->container['doi_email'] = $doi_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets doi_phone
+     *
+     * @return string
+     */
+    public function getDoiPhone()
+    {
+        return $this->container['doi_phone'];
+    }
+
+    /**
+     * Sets doi_phone
+     *
+     * @param string $doi_phone Date and time of obtaining the customer's phone consent (Double opt-in confirmation). *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setDoiPhone($doi_phone)
+    {
+        $this->container['doi_phone'] = $doi_phone;
 
         return $this;
     }

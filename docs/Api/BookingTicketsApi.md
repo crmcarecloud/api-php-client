@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getSubBookingTicketsTimeSlots**](BookingTicketsApi.md#getsubbookingticketstimeslots) | **GET** /booking-tickets/{booking_ticket_id}/time-slots | Get a collection time slots depends on booking ticket
 
 # **getBookingTicket**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005 getBookingTicket($booking_ticket_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetBookingTicket200Response getBookingTicket($booking_ticket_id, $accept_language)
 
 Get a booking ticket
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetBookingTicket200Response**](../Model/GetBookingTicket200Response.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBookingTickets**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004 getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only, $booking_ticket_property_id, $booking_ticket_property_value)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetBookingTickets200Response getBookingTickets($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $valid_from, $valid_to, $valid_only, $booking_ticket_property_id, $booking_ticket_property_value)
 
 Get all booking tickets
 
@@ -95,8 +95,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingTicketsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
@@ -120,8 +120,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetBookingTickets200Response**](../Model/GetBookingTickets200Response.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubBookingTicketsTimeSlots**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006 getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value, $customer_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubBookingTicketsTimeSlots200Response getSubBookingTicketsTimeSlots($booking_ticket_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $free_only, $time_from, $time_to, $booking_ticket_property_id, $booking_ticket_property_value, $customer_id)
 
 Get a collection time slots depends on booking ticket
 
@@ -174,8 +174,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingTicketsApi(
 );
 $booking_ticket_id = "booking_ticket_id_example"; // string | The unique ID of the booking ticket.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $free_only = true; // bool | Parameter defines what kind of time slots is going to be return depends on the capacity. *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)*
@@ -200,8 +200,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **booking_ticket_id** | **string**| The unique ID of the booking ticket. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **free_only** | **bool**| Parameter defines what kind of time slots is going to be return depends on the capacity. *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* | [optional]
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubBookingTicketsTimeSlots200Response**](../Model/GetSubBookingTicketsTimeSlots200Response.md)
 
 ### Authorization
 

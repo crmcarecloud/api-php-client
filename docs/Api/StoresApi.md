@@ -76,7 +76,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStore**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200156 getStore($store_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetStore200Response getStore($store_id, $accept_language)
 
 Get a store
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200156**](../Model/InlineResponse200156.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetStore200Response**](../Model/GetStore200Response.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStores**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200155 getStores($accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer, $property_id, $property_value, $system_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetStores200Response getStores($accept_language, $count, $offset, $sort_field, $sort_direction, $visible_for_customer, $property_id, $property_value, $system_id)
 
 Get all stores
 
@@ -162,8 +162,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\StoresApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $visible_for_customer = 56; // int | State of the visibility of the customer. *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.*
@@ -185,8 +185,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **visible_for_customer** | **int**| State of the visibility of the customer. *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* | [optional]
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200155**](../Model/InlineResponse200155.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetStores200Response**](../Model/GetStores200Response.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubStoreGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200158 getSubStoreGroups($store_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubStoreGroups200Response getSubStoreGroups($store_id, $accept_language)
 
 Get a collection of store group records
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200158**](../Model/InlineResponse200158.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubStoreGroups200Response**](../Model/GetSubStoreGroups200Response.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubStoreProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200157 getSubStoreProperties($store_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubStoreProperties200Response getSubStoreProperties($store_id, $accept_language)
 
 Get a collection of properties
 
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200157**](../Model/InlineResponse200157.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubStoreProperties200Response**](../Model/GetSubStoreProperties200Response.md)
 
 ### Authorization
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postStore**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20122 postStore($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostStores201Response postStore($body, $accept_language)
 
 Create a store
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20122**](../Model/InlineResponse20122.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostStores201Response**](../Model/PostStores201Response.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubStoreProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20123 postSubStoreProperties($body, $store_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubStoreProperties201Response postSubStoreProperties($body, $store_id, $accept_language)
 
 Add a property to a store
 
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20123**](../Model/InlineResponse20123.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubStoreProperties201Response**](../Model/PostSubStoreProperties201Response.md)
 
 ### Authorization
 

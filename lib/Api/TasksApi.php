@@ -406,7 +406,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskProperties200Response
      */
     public function getSubTaskProperties($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -424,11 +424,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskProperties200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubTaskPropertiesWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskProperties200Response';
         $request = $this->getSubTaskPropertiesRequest($task_id, $accept_language);
 
         try {
@@ -480,7 +480,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskProperties200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -572,7 +572,7 @@ class TasksApi
      */
     public function getSubTaskPropertiesAsyncWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200173';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskProperties200Response';
         $request = $this->getSubTaskPropertiesRequest($task_id, $accept_language);
 
         return $this->client
@@ -734,7 +734,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetTask200Response
      */
     public function getTask($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -752,11 +752,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetTask200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTask200Response';
         $request = $this->getTaskRequest($task_id, $accept_language);
 
         try {
@@ -808,7 +808,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTask200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -900,7 +900,7 @@ class TasksApi
      */
     public function getTaskAsyncWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200163';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTask200Response';
         $request = $this->getTaskRequest($task_id, $accept_language);
 
         return $this->client
@@ -1063,7 +1063,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignee200Response
      */
     public function getTaskAssignee($assignee_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1082,11 +1082,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignee200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskAssigneeWithHttpInfo($assignee_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignee200Response';
         $request = $this->getTaskAssigneeRequest($assignee_id, $task_id, $accept_language);
 
         try {
@@ -1138,7 +1138,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignee200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1232,7 +1232,7 @@ class TasksApi
      */
     public function getTaskAssigneeAsyncWithHttpInfo($assignee_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200167';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignee200Response';
         $request = $this->getTaskAssigneeRequest($assignee_id, $task_id, $accept_language);
 
         return $this->client
@@ -1406,14 +1406,14 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignees200Response
      */
     public function getTaskAssignees($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -1428,18 +1428,18 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignees200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskAssigneesWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignees200Response';
         $request = $this->getTaskAssigneesRequest($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -1491,7 +1491,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignees200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1556,8 +1556,8 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
@@ -1581,8 +1581,8 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      *
@@ -1591,7 +1591,7 @@ class TasksApi
      */
     public function getTaskAssigneesAsyncWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200166';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskAssignees200Response';
         $request = $this->getTaskAssigneesRequest($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -1636,8 +1636,8 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
@@ -1774,7 +1774,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComment200Response
      */
     public function getTaskComment($task_comment_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -1793,11 +1793,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComment200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskCommentWithHttpInfo($task_comment_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComment200Response';
         $request = $this->getTaskCommentRequest($task_comment_id, $task_id, $accept_language);
 
         try {
@@ -1849,7 +1849,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComment200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1943,7 +1943,7 @@ class TasksApi
      */
     public function getTaskCommentAsyncWithHttpInfo($task_comment_id, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200165';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComment200Response';
         $request = $this->getTaskCommentRequest($task_comment_id, $task_id, $accept_language);
 
         return $this->client
@@ -2117,15 +2117,15 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $task_comment_text Search record by the task comment text or a part of the task comment text. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComments200Response
      */
     public function getTaskComments($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_comment_text = null)
     {
@@ -2140,19 +2140,19 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $task_comment_text Search record by the task comment text or a part of the task comment text. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComments200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskCommentsWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_comment_text = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComments200Response';
         $request = $this->getTaskCommentsRequest($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text);
 
         try {
@@ -2204,7 +2204,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComments200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2269,8 +2269,8 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $task_comment_text Search record by the task comment text or a part of the task comment text. (optional)
@@ -2295,8 +2295,8 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $task_comment_text Search record by the task comment text or a part of the task comment text. (optional)
@@ -2306,7 +2306,7 @@ class TasksApi
      */
     public function getTaskCommentsAsyncWithHttpInfo($task_id, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_comment_text = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200164';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubTaskComments200Response';
         $request = $this->getTaskCommentsRequest($task_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $task_comment_text);
 
         return $this->client
@@ -2351,8 +2351,8 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $task_comment_text Search record by the task comment text or a part of the task comment text. (optional)
@@ -2493,7 +2493,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskState200Response
      */
     public function getTaskState($task_state_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -2511,11 +2511,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskState200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskStateWithHttpInfo($task_state_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskState200Response';
         $request = $this->getTaskStateRequest($task_state_id, $accept_language);
 
         try {
@@ -2567,7 +2567,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskState200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2659,7 +2659,7 @@ class TasksApi
      */
     public function getTaskStateAsyncWithHttpInfo($task_state_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200171';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskState200Response';
         $request = $this->getTaskStateRequest($task_state_id, $accept_language);
 
         return $this->client
@@ -2817,14 +2817,14 @@ class TasksApi
      * Get all task states
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskStates200Response
      */
     public function getTaskStates($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -2838,18 +2838,18 @@ class TasksApi
      * Get all task states
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskStates200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskStatesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskStates200Response';
         $request = $this->getTaskStatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -2901,7 +2901,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskStates200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2965,8 +2965,8 @@ class TasksApi
      * Get all task states
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
@@ -2989,8 +2989,8 @@ class TasksApi
      * Get all task states
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      *
@@ -2999,7 +2999,7 @@ class TasksApi
      */
     public function getTaskStatesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200170';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskStates200Response';
         $request = $this->getTaskStatesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -3043,8 +3043,8 @@ class TasksApi
      * Create request for operation 'getTaskStates'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
@@ -3166,7 +3166,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskType200Response
      */
     public function getTaskType($task_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -3184,11 +3184,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskType200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskTypeWithHttpInfo($task_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskType200Response';
         $request = $this->getTaskTypeRequest($task_type_id, $accept_language);
 
         try {
@@ -3240,7 +3240,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskType200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3332,7 +3332,7 @@ class TasksApi
      */
     public function getTaskTypeAsyncWithHttpInfo($task_type_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200169';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskType200Response';
         $request = $this->getTaskTypeRequest($task_type_id, $accept_language);
 
         return $this->client
@@ -3490,14 +3490,14 @@ class TasksApi
      * Get all task types
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskTypes200Response
      */
     public function getTaskTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
@@ -3511,18 +3511,18 @@ class TasksApi
      * Get all task types
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskTypes200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskTypes200Response';
         $request = $this->getTaskTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         try {
@@ -3574,7 +3574,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskTypes200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3638,8 +3638,8 @@ class TasksApi
      * Get all task types
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
@@ -3662,8 +3662,8 @@ class TasksApi
      * Get all task types
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      *
@@ -3672,7 +3672,7 @@ class TasksApi
      */
     public function getTaskTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200168';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTaskTypes200Response';
         $request = $this->getTaskTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
 
         return $this->client
@@ -3716,8 +3716,8 @@ class TasksApi
      * Create request for operation 'getTaskTypes'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
@@ -3835,8 +3835,8 @@ class TasksApi
      * Get all tasks
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $task_type_id Task type ID from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. (optional)
@@ -3849,7 +3849,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetTasks200Response
      */
     public function getTasks($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_type_id = null, $task_state_id = null, $customer_id = null, $priority = null, $due_date = null, $task_title = null, $task_note = null)
     {
@@ -3863,8 +3863,8 @@ class TasksApi
      * Get all tasks
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $task_type_id Task type ID from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. (optional)
@@ -3877,11 +3877,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetTasks200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTasksWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_type_id = null, $task_state_id = null, $customer_id = null, $priority = null, $due_date = null, $task_title = null, $task_note = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTasks200Response';
         $request = $this->getTasksRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note);
 
         try {
@@ -3933,7 +3933,7 @@ class TasksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTasks200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3997,8 +3997,8 @@ class TasksApi
      * Get all tasks
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $task_type_id Task type ID from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. (optional)
@@ -4028,8 +4028,8 @@ class TasksApi
      * Get all tasks
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $task_type_id Task type ID from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. (optional)
@@ -4045,7 +4045,7 @@ class TasksApi
      */
     public function getTasksAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $task_type_id = null, $task_state_id = null, $customer_id = null, $priority = null, $due_date = null, $task_title = null, $task_note = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200162';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetTasks200Response';
         $request = $this->getTasksRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $task_type_id, $task_state_id, $customer_id, $priority, $due_date, $task_title, $task_note);
 
         return $this->client
@@ -4089,8 +4089,8 @@ class TasksApi
      * Create request for operation 'getTasks'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. (optional, default to 0)
+     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $task_type_id Task type ID from the resource [task-types](#tag/Task-states). The parameter filters tasks by their type. (optional)
@@ -4248,7 +4248,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20126
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskAssignees201Response
      */
     public function postTaskAssignee($body, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -4267,11 +4267,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20126, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskAssignees201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTaskAssigneeWithHttpInfo($body, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20126';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskAssignees201Response';
         $request = $this->postTaskAssigneeRequest($body, $task_id, $accept_language);
 
         try {
@@ -4323,7 +4323,7 @@ class TasksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20126',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskAssignees201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4417,7 +4417,7 @@ class TasksApi
      */
     public function postTaskAssigneeAsyncWithHttpInfo($body, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20126';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskAssignees201Response';
         $request = $this->postTaskAssigneeRequest($body, $task_id, $accept_language);
 
         return $this->client
@@ -4587,7 +4587,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskComments201Response
      */
     public function postTaskComment($body, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -4606,11 +4606,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskComments201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTaskCommentWithHttpInfo($body, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskComments201Response';
         $request = $this->postTaskCommentRequest($body, $task_id, $accept_language);
 
         try {
@@ -4662,7 +4662,7 @@ class TasksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskComments201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4756,7 +4756,7 @@ class TasksApi
      */
     public function postTaskCommentAsyncWithHttpInfo($body, $task_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20125';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubTaskComments201Response';
         $request = $this->postTaskCommentRequest($body, $task_id, $accept_language);
 
         return $this->client
@@ -4925,7 +4925,7 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostTasks201Response
      */
     public function postTasks($body, $accept_language = 'cs, en-gb;q=0.8')
     {
@@ -4943,11 +4943,11 @@ class TasksApi
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostTasks201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTasksWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostTasks201Response';
         $request = $this->postTasksRequest($body, $accept_language);
 
         try {
@@ -4999,7 +4999,7 @@ class TasksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostTasks201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5091,7 +5091,7 @@ class TasksApi
      */
     public function postTasksAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20124';
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostTasks201Response';
         $request = $this->postTasksRequest($body, $accept_language);
 
         return $this->client

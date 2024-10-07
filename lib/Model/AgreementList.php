@@ -244,7 +244,7 @@ class AgreementList implements ModelInterface, ArrayAccess
     /**
      * Sets agreement_id
      *
-     * @param string $agreement_id The unique ID of the agreement in CareCloud.
+     * @param string $agreement_id The unique ID of the consents in CareCloud.
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class AgreementList implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Name of the agreement in CareCloud.
+     * @param string $name Name of the consent in CareCloud.
      *
      * @return $this
      */
@@ -292,7 +292,7 @@ class AgreementList implements ModelInterface, ArrayAccess
     /**
      * Sets text
      *
-     * @param string $text Text of the agreement in CareCloud. The language version of the text is returned by language setup in the HTTP header of the request.
+     * @param string $text Text of the consent in CareCloud. The language version of the text is returned by language setup in the HTTP header of the request.
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class AgreementList implements ModelInterface, ArrayAccess
     /**
      * Sets withdrawal_text
      *
-     * @param string $withdrawal_text Text when a customer wants to withdraw his agreement. The language version of the text is returned by language setup in the HTTP header of the request.
+     * @param string $withdrawal_text Text when a customer wants to withdraw his consent. The language version of the text is returned by language setup in the HTTP header of the request.
      *
      * @return $this
      */

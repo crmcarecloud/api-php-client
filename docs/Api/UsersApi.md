@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**postUserVerifyAuthToken**](UsersApi.md#postuserverifyauthtoken) | **POST** /users/actions/verify-auth-token | Verify user auth token
 
 # **getUser**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179 getUser($user_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetUser200Response getUser($user_id, $accept_language)
 
 Get information about a user
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200179**](../Model/InlineResponse200179.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetUser200Response**](../Model/GetUser200Response.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178 getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name, $store_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetUsers200Response getUsers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $login, $first_name, $last_name, $store_id)
 
 Get all users
 
@@ -98,8 +98,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\UsersApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $email = "email_example"; // string | Search by email.
@@ -123,8 +123,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **email** | **string**| Search by email. | [optional]
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200178**](../Model/InlineResponse200178.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetUsers200Response**](../Model/GetUsers200Response.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181 postUserLogin($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostUserLogin200Response postUserLogin($body, $accept_language)
 
 User login
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200181**](../Model/InlineResponse200181.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserLogin200Response**](../Model/PostUserLogin200Response.md)
 
 ### Authorization
 
@@ -260,7 +260,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserSsoLogin**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182 postUserSsoLogin($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostUserSsoLogin200Response postUserSsoLogin($body, $accept_language)
 
 User SSO login
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200182**](../Model/InlineResponse200182.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserSsoLogin200Response**](../Model/PostUserSsoLogin200Response.md)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUserVerifyAuthToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180 postUserVerifyAuthToken($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostUserVerifyAuthToken200Response postUserVerifyAuthToken($body)
 
 Verify user auth token
 
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200180**](../Model/InlineResponse200180.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserVerifyAuthToken200Response**](../Model/PostUserVerifyAuthToken200Response.md)
 
 ### Authorization
 

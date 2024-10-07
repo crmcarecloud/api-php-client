@@ -286,7 +286,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomer**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043 getCustomer($customer_id, $accept_language, $customer_short_salutation)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomer200Response getCustomer($customer_id, $accept_language, $customer_short_salutation)
 
 Get information about a customer
 
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomer200Response**](../Model/GetCustomer200Response.md)
 
 ### Authorization
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042 getCustomers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $customer_source_id, $first_name, $last_name, $birthdate, $email_list, $customer_ids, $customer_short_salutation)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomers200Response getCustomers($accept_language, $count, $offset, $sort_field, $sort_direction, $email, $phone, $customer_source_id, $first_name, $last_name, $birthdate, $email_list, $customer_ids, $customer_short_salutation)
 
 Get all customers
 
@@ -374,8 +374,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $email = "email_example"; // string | Search by email.
@@ -402,8 +402,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **email** | **string**| Search by email. | [optional]
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomers200Response**](../Model/GetCustomers200Response.md)
 
 ### Authorization
 
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerAddress**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055 getSubCustomerAddress($customer_id, $additional_customer_address_id_path, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerAddress200Response getSubCustomerAddress($customer_id, $additional_customer_address_id_path, $accept_language)
 
 Get an additional customer address
 
@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerAddress200Response**](../Model/GetSubCustomerAddress200Response.md)
 
 ### Authorization
 
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerAddresses**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054 getSubCustomerAddresses($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_address_type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerAddresses200Response getSubCustomerAddresses($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $customer_address_type_id)
 
 Get all additional customer addresses
 
@@ -521,8 +521,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_address_type_id = "customer_address_type_id_example"; // string | The unique ID of the customer address type.
@@ -542,15 +542,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_address_type_id** | **string**| The unique ID of the customer address type. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerAddresses200Response**](../Model/GetSubCustomerAddresses200Response.md)
 
 ### Authorization
 
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerCards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017 getSubCustomerCards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $card_number, $card_type_id, $is_valid, $card_number_list)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerCards200Response getSubCustomerCards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $card_number, $card_type_id, $is_valid, $card_number_list)
 
 Get all customer cards
 
@@ -591,8 +591,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $card_number = "card_number_example"; // string | Number of the customer card.
@@ -615,8 +615,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **card_number** | **string**| Number of the customer card. | [optional]
@@ -626,7 +626,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerCards200Response**](../Model/GetSubCustomerCards200Response.md)
 
 ### Authorization
 
@@ -640,7 +640,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerEvents**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056 getSubCustomerEvents($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $external_id, $event_type_ids, $include_property_records)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerEvents200Response getSubCustomerEvents($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $external_id, $event_type_ids, $include_property_records, $time_from, $time_to)
 
 Get information about all customer  events
 
@@ -667,17 +667,19 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $event_type_id = "event_type_id_example"; // string | The unique ID of the event type.
 $external_id = "external_id_example"; // string | The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn't need to be necessary unique. Usage of other parameter could be required to return more specific results.
 $event_type_ids = array("event_type_ids_example"); // string[] | List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes).
 $include_property_records = true; // bool | If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won't be included, and parameter will return null value
+$time_from = "time_from_example"; // string | Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)*
+$time_to = "time_to_example"; // string | Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)*
 
 try {
-    $result = $apiInstance->getSubCustomerEvents($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $external_id, $event_type_ids, $include_property_records);
+    $result = $apiInstance->getSubCustomerEvents($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $external_id, $event_type_ids, $include_property_records, $time_from, $time_to);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->getSubCustomerEvents: ', $e->getMessage(), PHP_EOL;
@@ -691,18 +693,20 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **event_type_id** | **string**| The unique ID of the event type. | [optional]
  **external_id** | **string**| The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. | [optional]
  **event_type_ids** | [**string[]**](../Model/string.md)| List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). | [optional]
  **include_property_records** | **bool**| If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value | [optional]
+ **time_from** | **string**| Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **time_to** | **string**| Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerEvents200Response**](../Model/GetSubCustomerEvents200Response.md)
 
 ### Authorization
 
@@ -716,7 +720,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerHintRecords**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050 getSubCustomerHintRecords($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRecommendation200Response getSubCustomerHintRecords($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name)
 
 Get a collection of Hint records
 
@@ -743,8 +747,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
@@ -764,15 +768,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20050**](../Model/InlineResponse20050.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRecommendation200Response**](../Model/GetSubCustomerRecommendation200Response.md)
 
 ### Authorization
 
@@ -786,7 +790,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerInterests**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053 getSubCustomerInterests($customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerInterests200Response getSubCustomerInterests($customer_id, $accept_language)
 
 Get a collection of interest records
 
@@ -832,7 +836,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerInterests200Response**](../Model/GetSubCustomerInterests200Response.md)
 
 ### Authorization
 
@@ -846,7 +850,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerPartners**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059 getSubCustomerPartners($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerPartners200Response getSubCustomerPartners($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get information about all customer  partners
 
@@ -873,8 +877,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 
@@ -893,14 +897,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20059**](../Model/InlineResponse20059.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerPartners200Response**](../Model/GetSubCustomerPartners200Response.md)
 
 ### Authorization
 
@@ -914,7 +918,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerPoints**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044 getSubCustomerPoints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerPoints200Response getSubCustomerPoints($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $point_type_id)
 
 Get all customer point records
 
@@ -941,8 +945,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $point_type_id = "point_type_id_example"; // string | The unique ID of a point type.
@@ -962,15 +966,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **point_type_id** | **string**| The unique ID of a point type. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerPoints200Response**](../Model/GetSubCustomerPoints200Response.md)
 
 ### Authorization
 
@@ -984,7 +988,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052 getSubCustomerProperties($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerProperties200Response getSubCustomerProperties($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction)
 
 Get a collection of properties
 
@@ -1011,8 +1015,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 
@@ -1031,14 +1035,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerProperties200Response**](../Model/GetSubCustomerProperties200Response.md)
 
 ### Authorization
 
@@ -1052,7 +1056,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerPurchases**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036 getSubCustomerPurchases($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerPurchases200Response getSubCustomerPurchases($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id)
 
 Get all customer purchases
 
@@ -1079,8 +1083,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
@@ -1105,8 +1109,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
@@ -1118,7 +1122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerPurchases200Response**](../Model/GetSubCustomerPurchases200Response.md)
 
 ### Authorization
 
@@ -1132,7 +1136,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRelatedCustomer**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20058 getSubCustomerRelatedCustomer($customer_id, $customer_relation_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRelatedCustomer200Response getSubCustomerRelatedCustomer($customer_id, $customer_relation_id, $accept_language)
 
 Detail of a relation between customers
 
@@ -1180,7 +1184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRelatedCustomer200Response**](../Model/GetSubCustomerRelatedCustomer200Response.md)
 
 ### Authorization
 
@@ -1194,7 +1198,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRelatedCustomers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057 getSubCustomerRelatedCustomers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $related_customer_id, $customer_relation_type_id, $all_customer_relations)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRelatedCustomers200Response getSubCustomerRelatedCustomers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $related_customer_id, $customer_relation_type_id, $all_customer_relations)
 
 Get information about all related customers
 
@@ -1221,8 +1225,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $related_customer_id = "related_customer_id_example"; // string | The unique ID of the related customer.
@@ -1244,8 +1248,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **related_customer_id** | **string**| The unique ID of the related customer. | [optional]
@@ -1254,7 +1258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRelatedCustomers200Response**](../Model/GetSubCustomerRelatedCustomers200Response.md)
 
 ### Authorization
 
@@ -1268,7 +1272,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRewards**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046 getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRewards200Response getSubCustomerRewards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids)
 
 Get all customer rewards
 
@@ -1295,8 +1299,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
@@ -1326,8 +1330,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
@@ -1344,7 +1348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRewards200Response**](../Model/GetSubCustomerRewards200Response.md)
 
 ### Authorization
 
@@ -1358,7 +1362,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerRewardsRecommendation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047 getSubCustomerRewardsRecommendation($customer_id, $accept_language, $count, $offset, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id, $reward_type_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRewardRecommendations200Response getSubCustomerRewardsRecommendation($customer_id, $accept_language, $count, $offset, $name, $store_id, $is_valid, $valid_from, $valid_to, $code, $is_automated, $reward_group, $customer_type_id, $without_stores, $tag_ids, $partner_id, $reward_type_id)
 
 Recommend the best rewards for the customer
 
@@ -1385,8 +1389,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $name = "name_example"; // string | Search record by name or a part of the name.
 $store_id = "store_id_example"; // string | The unique ID of the store where customer can apply the reward.
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
@@ -1416,8 +1420,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **name** | **string**| Search record by name or a part of the name. | [optional]
  **store_id** | **string**| The unique ID of the store where customer can apply the reward. | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
@@ -1434,7 +1438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerRewardRecommendations200Response**](../Model/GetSubCustomerRewardRecommendations200Response.md)
 
 ### Authorization
 
@@ -1448,7 +1452,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerSegments**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048 getSubCustomerSegments($customer_id, $accept_language, $segment_group_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerSegment200Response getSubCustomerSegments($customer_id, $accept_language, $segment_group_ids)
 
 Get a collection of segment records
 
@@ -1496,7 +1500,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerSegment200Response**](../Model/GetSubCustomerSegment200Response.md)
 
 ### Authorization
 
@@ -1510,7 +1514,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051 getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $external_id, $customer_source_id, $external_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerSource200Response getSubCustomerSource($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $external_id, $customer_source_id, $external_ids)
 
 Get customer source records
 
@@ -1537,8 +1541,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $external_id = "external_id_example"; // string | The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems).
@@ -1560,8 +1564,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **external_id** | **string**| The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). | [optional]
@@ -1570,7 +1574,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerSource200Response**](../Model/GetSubCustomerSource200Response.md)
 
 ### Authorization
 
@@ -1584,7 +1588,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerStatus**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049 getSubCustomerStatus($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $valid_now)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerStatus200Response getSubCustomerStatus($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $valid_now)
 
 Get a collection of status records
 
@@ -1611,8 +1615,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $valid_now = true; // bool | Status validity. Just one status can be valid in the time. *Possible values are: True for valid status / False for status not valid*
@@ -1632,15 +1636,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **valid_now** | **bool**| Status validity. Just one status can be valid in the time. *Possible values are: True for valid status / False for status not valid* | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerStatus200Response**](../Model/GetSubCustomerStatus200Response.md)
 
 ### Authorization
 
@@ -1654,7 +1658,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubCustomerVouchers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045 getSubCustomerVouchers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerVouchers200Response getSubCustomerVouchers($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id)
 
 Get all customer vouchers
 
@@ -1681,8 +1685,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return.
-$offset = 0; // int | The number of records from a collection to skip.
+$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $code = "code_example"; // string | Unique code of the voucher.
@@ -1707,8 +1711,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return. | [optional] [default to 100]
- **offset** | **int**| The number of records from a collection to skip. | [optional] [default to 0]
+ **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **code** | **string**| Unique code of the voucher. | [optional]
@@ -1720,7 +1724,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20045**](../Model/InlineResponse20045.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerVouchers200Response**](../Model/GetSubCustomerVouchers200Response.md)
 
 ### Authorization
 
@@ -1734,7 +1738,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomer**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postCustomer($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomers201Response postCustomer($body, $accept_language)
 
 Create a new customer
 
@@ -1780,7 +1784,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomers201Response**](../Model/PostCustomers201Response.md)
 
 ### Authorization
 
@@ -1794,7 +1798,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerAddress**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112 postSubCustomerAddress($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerAddresses201Response postSubCustomerAddress($body, $customer_id, $accept_language)
 
 Create an additional customer address
 
@@ -1842,7 +1846,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20112**](../Model/InlineResponse20112.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerAddresses201Response**](../Model/PostSubCustomerAddresses201Response.md)
 
 ### Authorization
 
@@ -1856,7 +1860,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerInterest**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111 postSubCustomerInterest($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerInterests201Response postSubCustomerInterest($body, $customer_id, $accept_language)
 
 Add an interest record to a customer
 
@@ -1904,7 +1908,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20111**](../Model/InlineResponse20111.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerInterests201Response**](../Model/PostSubCustomerInterests201Response.md)
 
 ### Authorization
 
@@ -1918,7 +1922,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerPartnerRecord**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114 postSubCustomerPartnerRecord($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerPartners201Response postSubCustomerPartnerRecord($body, $customer_id, $accept_language)
 
 Add a partner to the customer
 
@@ -1966,7 +1970,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20114**](../Model/InlineResponse20114.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerPartners201Response**](../Model/PostSubCustomerPartners201Response.md)
 
 ### Authorization
 
@@ -1980,7 +1984,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerProperties**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110 postSubCustomerProperties($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerProperties201Response postSubCustomerProperties($body, $customer_id, $accept_language)
 
 Add a property to a customer
 
@@ -2028,7 +2032,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20110**](../Model/InlineResponse20110.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerProperties201Response**](../Model/PostSubCustomerProperties201Response.md)
 
 ### Authorization
 
@@ -2103,7 +2107,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerRelatedCustomers**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113 postSubCustomerRelatedCustomers($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerRelatedCustomers201Response postSubCustomerRelatedCustomers($body, $customer_id, $accept_language)
 
 Create the customer  relation
 
@@ -2151,7 +2155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerRelatedCustomers201Response**](../Model/PostSubCustomerRelatedCustomers201Response.md)
 
 ### Authorization
 
@@ -2165,7 +2169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postSubCustomerSource**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019 postSubCustomerSource($body, $customer_id, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerSource201Response postSubCustomerSource($body, $customer_id, $accept_language)
 
 Add a customer source record to a customer
 
@@ -2213,7 +2217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2019**](../Model/InlineResponse2019.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSubCustomerSource201Response**](../Model/PostSubCustomerSource201Response.md)
 
 ### Authorization
 

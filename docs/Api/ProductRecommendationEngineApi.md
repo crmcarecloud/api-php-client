@@ -72,7 +72,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationCartCombine**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137 postRecommendationCartCombine($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationCartCombine200Response postRecommendationCartCombine($body, $accept_language)
 
 Get the best recommendation for shopping cart
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137**](../Model/InlineResponse200137.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationCartCombine200Response**](../Model/PostRecommendationCartCombine200Response.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationCartEliminate**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137 postRecommendationCartEliminate($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationCartEliminate200Response postRecommendationCartEliminate($body, $accept_language)
 
 Get the best recommendation with elimination for shopping cart
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137**](../Model/InlineResponse200137.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationCartEliminate200Response**](../Model/PostRecommendationCartEliminate200Response.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationCartOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137 postRecommendationCartOrder($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationCartOrder200Response postRecommendationCartOrder($body, $accept_language)
 
 Order products for the best recommendation for a shopping cart
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200137**](../Model/InlineResponse200137.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationCartOrder200Response**](../Model/PostRecommendationCartOrder200Response.md)
 
 ### Authorization
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationProductCombine**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136 postRecommendationProductCombine($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationProductCombine200Response postRecommendationProductCombine($body, $accept_language)
 
 Get the best recommendation
 
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136**](../Model/InlineResponse200136.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationProductCombine200Response**](../Model/PostRecommendationProductCombine200Response.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationProductEliminate**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136 postRecommendationProductEliminate($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationProductEliminate200Response postRecommendationProductEliminate($body, $accept_language)
 
 Get the best recommendation with an elimination
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136**](../Model/InlineResponse200136.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationProductEliminate200Response**](../Model/PostRecommendationProductEliminate200Response.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postRecommendationProductOrder**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136 postRecommendationProductOrder($body, $accept_language)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationProductOrder200Response postRecommendationProductOrder($body, $accept_language)
 
 Order products for the best recommendation.
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse200136**](../Model/InlineResponse200136.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostRecommendationProductOrder200Response**](../Model/PostRecommendationProductOrder200Response.md)
 
 ### Authorization
 

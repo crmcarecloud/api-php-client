@@ -18,7 +18,7 @@ Method | HTTP request | Description
 [**postSubCustomerSetPartners**](CustomersActionsApi.md#postsubcustomersetpartners) | **POST** /customers/actions/set-partners | Set one or multiple partners to the customer
 
 # **getCustomerSearch**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062 getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomersSearch200Response getCustomerSearch($accept_language, $first_name, $last_name, $birthdate, $card_number, $mode)
 
 Search customers
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomersSearch200Response**](../Model/GetCustomersSearch200Response.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomerVerifyCredentials**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postCustomerVerifyCredentials($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomerVerifyCredentials200Response postCustomerVerifyCredentials($body)
 
 Customer's credentials verification
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomerVerifyCredentials200Response**](../Model/PostCustomerVerifyCredentials200Response.md)
 
 ### Authorization
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomerVerifySocialNetworkCredentials**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018 postCustomerVerifySocialNetworkCredentials($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomerVerifySocialNetworkCredentials200Response postCustomerVerifySocialNetworkCredentials($body)
 
 Social network credentials verification
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse2018**](../Model/InlineResponse2018.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomerVerifySocialNetworkCredentials200Response**](../Model/PostCustomerVerifySocialNetworkCredentials200Response.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersCheckRegistrationAbility**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064 postCustomersCheckRegistrationAbility($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerCheckRegistrationAbility200Response postCustomersCheckRegistrationAbility($body)
 
 Check ability to register a customer
 
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerCheckRegistrationAbility200Response**](../Model/GetCustomerCheckRegistrationAbility200Response.md)
 
 ### Authorization
 
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersSetStatusRecord**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063 postCustomersSetStatusRecord($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomersSetStatusRecord200Response postCustomersSetStatusRecord($body)
 
 Set a new customer status
 
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomersSetStatusRecord200Response**](../Model/PostCustomersSetStatusRecord200Response.md)
 
 ### Authorization
 
@@ -546,7 +546,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersValidateCustomerData**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061 postCustomersValidateCustomerData($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomerValidateCustomerData200Response postCustomersValidateCustomerData($body)
 
 Validation of the customer data
 
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomerValidateCustomerData200Response**](../Model/PostCustomerValidateCustomerData200Response.md)
 
 ### Authorization
 
@@ -604,7 +604,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCustomersVerifyAuthToken**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060 postCustomersVerifyAuthToken($body)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomerVerifyAuthToken200Response postCustomersVerifyAuthToken($body)
 
 Verify auth token
 
@@ -648,7 +648,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostCustomerVerifyAuthToken200Response**](../Model/PostCustomerVerifyAuthToken200Response.md)
 
 ### Authorization
 
