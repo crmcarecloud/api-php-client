@@ -1,6 +1,6 @@
 <?php
 /**
- * ActionsReservepointsBody
+ * GetSubProductTags200ResponseData
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * ActionsReservepointsBody Class Doc Comment
+ * GetSubProductTags200ResponseData Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ActionsReservepointsBody implements ModelInterface, ArrayAccess
+class GetSubProductTags200ResponseData implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'actions_reservepoints_body';
+    protected static $swaggerModelName = 'GetSubProductTags200Response_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,10 +56,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'external_id' => 'string',
-        'customer_id' => 'string',
-        'amount' => 'float',
-        'expiration_time' => 'string'
+        'tags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]',
+        'total_items' => 'int'
     ];
 
     /**
@@ -68,10 +66,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'external_id' => null,
-        'customer_id' => null,
-        'amount' => 'float',
-        'expiration_time' => null
+        'tags' => null,
+        'total_items' => null
     ];
 
     /**
@@ -101,10 +97,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'external_id' => 'external_id',
-        'customer_id' => 'customer_id',
-        'amount' => 'amount',
-        'expiration_time' => 'expiration_time'
+        'tags' => 'tags',
+        'total_items' => 'total_items'
     ];
 
     /**
@@ -113,10 +107,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'external_id' => 'setExternalId',
-        'customer_id' => 'setCustomerId',
-        'amount' => 'setAmount',
-        'expiration_time' => 'setExpirationTime'
+        'tags' => 'setTags',
+        'total_items' => 'setTotalItems'
     ];
 
     /**
@@ -125,10 +117,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'external_id' => 'getExternalId',
-        'customer_id' => 'getCustomerId',
-        'amount' => 'getAmount',
-        'expiration_time' => 'getExpirationTime'
+        'tags' => 'getTags',
+        'total_items' => 'getTotalItems'
     ];
 
     /**
@@ -189,10 +179,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
-        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['expiration_time'] = isset($data['expiration_time']) ? $data['expiration_time'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
     }
 
     /**
@@ -204,15 +192,6 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['external_id'] === null) {
-            $invalidProperties[] = "'external_id' can't be null";
-        }
-        if ($this->container['customer_id'] === null) {
-            $invalidProperties[] = "'customer_id' can't be null";
-        }
-        if ($this->container['amount'] === null) {
-            $invalidProperties[] = "'amount' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -229,97 +208,49 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets external_id
+     * Gets tags
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]
      */
-    public function getExternalId()
+    public function getTags()
     {
-        return $this->container['external_id'];
+        return $this->container['tags'];
     }
 
     /**
-     * Sets external_id
+     * Sets tags
      *
-     * @param string $external_id The external unique ID of the point reservation. You can use your own ID (could be an order ID or reservation ID from your system/application) that will help you identify and filter the point reservation later.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[] $tags List of the all tags assigned to the resource products.
      *
      * @return $this
      */
-    public function setExternalId($external_id)
+    public function setTags($tags)
     {
-        $this->container['external_id'] = $external_id;
+        $this->container['tags'] = $tags;
 
         return $this;
     }
 
     /**
-     * Gets customer_id
+     * Gets total_items
      *
-     * @return string
+     * @return int
      */
-    public function getCustomerId()
+    public function getTotalItems()
     {
-        return $this->container['customer_id'];
+        return $this->container['total_items'];
     }
 
     /**
-     * Sets customer_id
+     * Sets total_items
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param int $total_items The number of all found tags.
      *
      * @return $this
      */
-    public function setCustomerId($customer_id)
+    public function setTotalItems($total_items)
     {
-        $this->container['customer_id'] = $customer_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets amount
-     *
-     * @return float
-     */
-    public function getAmount()
-    {
-        return $this->container['amount'];
-    }
-
-    /**
-     * Sets amount
-     *
-     * @param float $amount The number of reserved points.
-     *
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        $this->container['amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets expiration_time
-     *
-     * @return string
-     */
-    public function getExpirationTime()
-    {
-        return $this->container['expiration_time'];
-    }
-
-    /**
-     * Sets expiration_time
-     *
-     * @param string $expiration_time Date and time of the point reservation expiration. *(YYYY-MM-DD HH:MM:SS)*
-     *
-     * @return $this
-     */
-    public function setExpirationTime($expiration_time)
-    {
-        $this->container['expiration_time'] = $expiration_time;
+        $this->container['total_items'] = $total_items;
 
         return $this;
     }

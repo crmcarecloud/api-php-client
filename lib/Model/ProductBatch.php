@@ -67,7 +67,8 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_external_id' => 'string',
         'store_id' => 'string',
         'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
-        'prices' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Price[]'
+        'prices' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Price[]',
+        'tags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]'
     ];
 
     /**
@@ -86,7 +87,8 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_external_id' => null,
         'store_id' => null,
         'property_records' => null,
-        'prices' => null
+        'prices' => null,
+        'tags' => null
     ];
 
     /**
@@ -126,7 +128,8 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_external_id' => 'product_brand_external_id',
         'store_id' => 'store_id',
         'property_records' => 'property_records',
-        'prices' => 'prices'
+        'prices' => 'prices',
+        'tags' => 'tags'
     ];
 
     /**
@@ -145,7 +148,8 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_external_id' => 'setProductBrandExternalId',
         'store_id' => 'setStoreId',
         'property_records' => 'setPropertyRecords',
-        'prices' => 'setPrices'
+        'prices' => 'setPrices',
+        'tags' => 'setTags'
     ];
 
     /**
@@ -164,7 +168,8 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_external_id' => 'getProductBrandExternalId',
         'store_id' => 'getStoreId',
         'property_records' => 'getPropertyRecords',
-        'prices' => 'getPrices'
+        'prices' => 'getPrices',
+        'tags' => 'getTags'
     ];
 
     /**
@@ -236,6 +241,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
         $this->container['prices'] = isset($data['prices']) ? $data['prices'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -528,6 +534,30 @@ class ProductBatch implements ModelInterface, ArrayAccess
     public function setPrices($prices)
     {
         $this->container['prices'] = $prices;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[] $tags List of tags assigned to the product.
+     *
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
 
         return $this;
     }

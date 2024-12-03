@@ -1,6 +1,6 @@
 <?php
 /**
- * PointReservation
+ * ActionsChangereservationstateBody
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * PointReservation Class Doc Comment
+ * ActionsChangereservationstateBody Class Doc Comment
  *
  * @category Class
- * @description Points reservation resource.
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PointReservation implements ModelInterface, ArrayAccess
+class ActionsChangereservationstateBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +48,7 @@ class PointReservation implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PointReservation';
+    protected static $swaggerModelName = 'actions_changereservationstate_body';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +56,8 @@ class PointReservation implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'points_reservation_id' => 'string',
-        'customer_id' => 'string',
-        'external_id' => 'string',
-        'quantity' => 'float',
-        'state' => 'int',
-        'expiration' => 'string'
+        'product_reservation_id' => 'string',
+        'state' => 'int'
     ];
 
     /**
@@ -71,12 +66,8 @@ class PointReservation implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'points_reservation_id' => null,
-        'customer_id' => null,
-        'external_id' => null,
-        'quantity' => 'float',
-        'state' => null,
-        'expiration' => null
+        'product_reservation_id' => null,
+        'state' => null
     ];
 
     /**
@@ -106,12 +97,8 @@ class PointReservation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'points_reservation_id' => 'points_reservation_id',
-        'customer_id' => 'customer_id',
-        'external_id' => 'external_id',
-        'quantity' => 'quantity',
-        'state' => 'state',
-        'expiration' => 'expiration'
+        'product_reservation_id' => 'product_reservation_id',
+        'state' => 'state'
     ];
 
     /**
@@ -120,12 +107,8 @@ class PointReservation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'points_reservation_id' => 'setPointsReservationId',
-        'customer_id' => 'setCustomerId',
-        'external_id' => 'setExternalId',
-        'quantity' => 'setQuantity',
-        'state' => 'setState',
-        'expiration' => 'setExpiration'
+        'product_reservation_id' => 'setProductReservationId',
+        'state' => 'setState'
     ];
 
     /**
@@ -134,12 +117,8 @@ class PointReservation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'points_reservation_id' => 'getPointsReservationId',
-        'customer_id' => 'getCustomerId',
-        'external_id' => 'getExternalId',
-        'quantity' => 'getQuantity',
-        'state' => 'getState',
-        'expiration' => 'getExpiration'
+        'product_reservation_id' => 'getProductReservationId',
+        'state' => 'getState'
     ];
 
     /**
@@ -186,6 +165,12 @@ class PointReservation implements ModelInterface, ArrayAccess
     const STATE_0 = 0;
 const STATE_1 = 1;
 const STATE_2 = 2;
+const STATE_2_3 = 2;
+const STATE_4 = 4;
+const STATE_5 = 5;
+const STATE_6 = 6;
+const STATE_7 = 7;
+const STATE_8 = 8;
 
     /**
      * Gets allowable values of the enum
@@ -197,7 +182,13 @@ const STATE_2 = 2;
         return [
             self::STATE_0,
 self::STATE_1,
-self::STATE_2,        ];
+self::STATE_2,
+self::STATE_2_3,
+self::STATE_4,
+self::STATE_5,
+self::STATE_6,
+self::STATE_7,
+self::STATE_8,        ];
     }
 
     /**
@@ -215,12 +206,8 @@ self::STATE_2,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['points_reservation_id'] = isset($data['points_reservation_id']) ? $data['points_reservation_id'] : null;
-        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
-        $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
-        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['product_reservation_id'] = isset($data['product_reservation_id']) ? $data['product_reservation_id'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['expiration'] = isset($data['expiration']) ? $data['expiration'] : null;
     }
 
     /**
@@ -232,14 +219,11 @@ self::STATE_2,        ];
     {
         $invalidProperties = [];
 
-        if ($this->container['customer_id'] === null) {
-            $invalidProperties[] = "'customer_id' can't be null";
+        if ($this->container['product_reservation_id'] === null) {
+            $invalidProperties[] = "'product_reservation_id' can't be null";
         }
-        if ($this->container['external_id'] === null) {
-            $invalidProperties[] = "'external_id' can't be null";
-        }
-        if ($this->container['quantity'] === null) {
-            $invalidProperties[] = "'quantity' can't be null";
+        if ($this->container['state'] === null) {
+            $invalidProperties[] = "'state' can't be null";
         }
         $allowedValues = $this->getStateAllowableValues();
         if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
@@ -265,97 +249,25 @@ self::STATE_2,        ];
 
 
     /**
-     * Gets points_reservation_id
+     * Gets product_reservation_id
      *
      * @return string
      */
-    public function getPointsReservationId()
+    public function getProductReservationId()
     {
-        return $this->container['points_reservation_id'];
+        return $this->container['product_reservation_id'];
     }
 
     /**
-     * Sets points_reservation_id
+     * Sets product_reservation_id
      *
-     * @param string $points_reservation_id The unique ID of the point reservation record.
+     * @param string $product_reservation_id The unique ID of the product reservation.
      *
      * @return $this
      */
-    public function setPointsReservationId($points_reservation_id)
+    public function setProductReservationId($product_reservation_id)
     {
-        $this->container['points_reservation_id'] = $points_reservation_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets customer_id
-     *
-     * @return string
-     */
-    public function getCustomerId()
-    {
-        return $this->container['customer_id'];
-    }
-
-    /**
-     * Sets customer_id
-     *
-     * @param string $customer_id The unique ID of the customer.
-     *
-     * @return $this
-     */
-    public function setCustomerId($customer_id)
-    {
-        $this->container['customer_id'] = $customer_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets external_id
-     *
-     * @return string
-     */
-    public function getExternalId()
-    {
-        return $this->container['external_id'];
-    }
-
-    /**
-     * Sets external_id
-     *
-     * @param string $external_id The external unique ID of the point reservation. You can use your own ID (could be an order ID or reservation ID from your system/application) that will help you identify and filter the point reservation later.
-     *
-     * @return $this
-     */
-    public function setExternalId($external_id)
-    {
-        $this->container['external_id'] = $external_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets quantity
-     *
-     * @return float
-     */
-    public function getQuantity()
-    {
-        return $this->container['quantity'];
-    }
-
-    /**
-     * Sets quantity
-     *
-     * @param float $quantity The number of reserved points.
-     *
-     * @return $this
-     */
-    public function setQuantity($quantity)
-    {
-        $this->container['quantity'] = $quantity;
+        $this->container['product_reservation_id'] = $product_reservation_id;
 
         return $this;
     }
@@ -373,14 +285,14 @@ self::STATE_2,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the point record. *Possible values are: 0 - deleted / 1 - active / 2 - non active(expired)*
+     * @param int $state A new state of the product reservation. If the reservation is canceled, it won't appear in the reservation list only in the reservation detail. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
      *
      * @return $this
      */
     public function setState($state)
     {
         $allowedValues = $this->getStateAllowableValues();
-        if (!is_null($state) && !in_array($state, $allowedValues, true)) {
+        if (!in_array($state, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'state', must be one of '%s'",
@@ -389,30 +301,6 @@ self::STATE_2,        ];
             );
         }
         $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets expiration
-     *
-     * @return string
-     */
-    public function getExpiration()
-    {
-        return $this->container['expiration'];
-    }
-
-    /**
-     * Sets expiration
-     *
-     * @param string $expiration Date and time of the point reservation expiration. *(YYYY-MM-DD HH:MM:SS)*
-     *
-     * @return $this
-     */
-    public function setExpiration($expiration)
-    {
-        $this->container['expiration'] = $expiration;
 
         return $this;
     }

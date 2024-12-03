@@ -1,6 +1,6 @@
 <?php
 /**
- * ActionsReservepointsBody
+ * ProductreservationpricesBatchBody1
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * ActionsReservepointsBody Class Doc Comment
+ * ProductreservationpricesBatchBody1 Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ActionsReservepointsBody implements ModelInterface, ArrayAccess
+class ProductreservationpricesBatchBody1 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'actions_reservepoints_body';
+    protected static $swaggerModelName = 'productreservationprices_batch_body_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,10 +56,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'external_id' => 'string',
-        'customer_id' => 'string',
-        'amount' => 'float',
-        'expiration_time' => 'string'
+        'products_reservation_prices' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesbatchProductsReservationPrices[]',
+        'error_processing' => '\CrmCareCloud\Webservice\RestApi\Client\Model\ErrorProcessing'
     ];
 
     /**
@@ -68,10 +66,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'external_id' => null,
-        'customer_id' => null,
-        'amount' => 'float',
-        'expiration_time' => null
+        'products_reservation_prices' => null,
+        'error_processing' => null
     ];
 
     /**
@@ -101,10 +97,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'external_id' => 'external_id',
-        'customer_id' => 'customer_id',
-        'amount' => 'amount',
-        'expiration_time' => 'expiration_time'
+        'products_reservation_prices' => 'products_reservation_prices',
+        'error_processing' => 'error_processing'
     ];
 
     /**
@@ -113,10 +107,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'external_id' => 'setExternalId',
-        'customer_id' => 'setCustomerId',
-        'amount' => 'setAmount',
-        'expiration_time' => 'setExpirationTime'
+        'products_reservation_prices' => 'setProductsReservationPrices',
+        'error_processing' => 'setErrorProcessing'
     ];
 
     /**
@@ -125,10 +117,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'external_id' => 'getExternalId',
-        'customer_id' => 'getCustomerId',
-        'amount' => 'getAmount',
-        'expiration_time' => 'getExpirationTime'
+        'products_reservation_prices' => 'getProductsReservationPrices',
+        'error_processing' => 'getErrorProcessing'
     ];
 
     /**
@@ -189,10 +179,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
-        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['expiration_time'] = isset($data['expiration_time']) ? $data['expiration_time'] : null;
+        $this->container['products_reservation_prices'] = isset($data['products_reservation_prices']) ? $data['products_reservation_prices'] : null;
+        $this->container['error_processing'] = isset($data['error_processing']) ? $data['error_processing'] : null;
     }
 
     /**
@@ -204,14 +192,8 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['external_id'] === null) {
-            $invalidProperties[] = "'external_id' can't be null";
-        }
-        if ($this->container['customer_id'] === null) {
-            $invalidProperties[] = "'customer_id' can't be null";
-        }
-        if ($this->container['amount'] === null) {
-            $invalidProperties[] = "'amount' can't be null";
+        if ($this->container['products_reservation_prices'] === null) {
+            $invalidProperties[] = "'products_reservation_prices' can't be null";
         }
         return $invalidProperties;
     }
@@ -229,97 +211,49 @@ class ActionsReservepointsBody implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets external_id
+     * Gets products_reservation_prices
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesbatchProductsReservationPrices[]
      */
-    public function getExternalId()
+    public function getProductsReservationPrices()
     {
-        return $this->container['external_id'];
+        return $this->container['products_reservation_prices'];
     }
 
     /**
-     * Sets external_id
+     * Sets products_reservation_prices
      *
-     * @param string $external_id The external unique ID of the point reservation. You can use your own ID (could be an order ID or reservation ID from your system/application) that will help you identify and filter the point reservation later.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesbatchProductsReservationPrices[] $products_reservation_prices List of the product reservation prices.
      *
      * @return $this
      */
-    public function setExternalId($external_id)
+    public function setProductsReservationPrices($products_reservation_prices)
     {
-        $this->container['external_id'] = $external_id;
+        $this->container['products_reservation_prices'] = $products_reservation_prices;
 
         return $this;
     }
 
     /**
-     * Gets customer_id
+     * Gets error_processing
      *
-     * @return string
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\ErrorProcessing
      */
-    public function getCustomerId()
+    public function getErrorProcessing()
     {
-        return $this->container['customer_id'];
+        return $this->container['error_processing'];
     }
 
     /**
-     * Sets customer_id
+     * Sets error_processing
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\ErrorProcessing $error_processing error_processing
      *
      * @return $this
      */
-    public function setCustomerId($customer_id)
+    public function setErrorProcessing($error_processing)
     {
-        $this->container['customer_id'] = $customer_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets amount
-     *
-     * @return float
-     */
-    public function getAmount()
-    {
-        return $this->container['amount'];
-    }
-
-    /**
-     * Sets amount
-     *
-     * @param float $amount The number of reserved points.
-     *
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        $this->container['amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets expiration_time
-     *
-     * @return string
-     */
-    public function getExpirationTime()
-    {
-        return $this->container['expiration_time'];
-    }
-
-    /**
-     * Sets expiration_time
-     *
-     * @param string $expiration_time Date and time of the point reservation expiration. *(YYYY-MM-DD HH:MM:SS)*
-     *
-     * @return $this
-     */
-    public function setExpirationTime($expiration_time)
-    {
-        $this->container['expiration_time'] = $expiration_time;
+        $this->container['error_processing'] = $error_processing;
 
         return $this;
     }

@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getReservableProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProducts200Response getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProducts200Response getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $store_id, $tag_ids)
 
 Get all reservable products
 
@@ -101,9 +101,11 @@ $sort_field = "sort_field_example"; // string | Name of the sorting parameter. Y
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
 $code = "code_example"; // string | Code of the product.
+$store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
+$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values. <br/> In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
 
 try {
-    $result = $apiInstance->getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code);
+    $result = $apiInstance->getReservableProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $store_id, $tag_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReservableProductsApi->getReservableProducts: ', $e->getMessage(), PHP_EOL;
@@ -122,6 +124,8 @@ Name | Type | Description  | Notes
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
  **code** | **string**| Code of the product. | [optional]
+ **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
+ **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
 
 ### Return type
 

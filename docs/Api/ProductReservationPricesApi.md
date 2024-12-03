@@ -1,20 +1,20 @@
-# CrmCareCloud\Webservice\RestApi\Client\PointReservationApi
+# CrmCareCloud\Webservice\RestApi\Client\ProductReservationPricesApi
 
 All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interface}/{version}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPointReservation**](PointReservationApi.md#getpointreservation) | **GET** /point-reservations/{point_reservation_id} | Get a point reservation
-[**getPointReservations**](PointReservationApi.md#getpointreservations) | **GET** /point-reservations | Get all point reservations
-[**postPointReservationCreate**](PointReservationApi.md#postpointreservationcreate) | **POST** /point-reservations/actions/reserve-points | Create point reservation
-[**postPointReservationRelease**](PointReservationApi.md#postpointreservationrelease) | **POST** /point-reservations/actions/free-points | Free points from reservation
+[**getProductReservationPrice**](ProductReservationPricesApi.md#getproductreservationprice) | **GET** /product-reservationprices/{product_reservation_price_id} | Get a detail of product reservation price
+[**getProductReservationPrices**](ProductReservationPricesApi.md#getproductreservationprices) | **GET** /product-reservation-prices | Get all product reservation prices
+[**postBulkDeleteProductReservationPrices**](ProductReservationPricesApi.md#postbulkdeleteproductreservationprices) | **DELETE** /product-reservation-prices/batch | Delete a batch of product reservation prices
+[**postBulkProductReservationPrices**](ProductReservationPricesApi.md#postbulkproductreservationprices) | **POST** /product-reservation-prices/batch | Create a batch of product reservation prices
 
-# **getPointReservation**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetPointReservation200Response getPointReservation($point_reservation_id, $accept_language)
+# **getProductReservationPrice**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrice200Response getProductReservationPrice($product_reservation_price_id, $accept_language)
 
-Get a point reservation
+Get a detail of product reservation price
 
-Get information about a specific point reservation.
+Get information about a specific product reservation price. The price represents the value of the product for the reservation for a specific store and currency.
 
 ### Example
 ```php
@@ -29,20 +29,20 @@ $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfig
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PointReservationApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservationPricesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$point_reservation_id = "point_reservation_id_example"; // string | The unique ID of the point reservations.
+$product_reservation_price_id = "product_reservation_price_id_example"; // string | The unique ID of the product reservation price.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
-    $result = $apiInstance->getPointReservation($point_reservation_id, $accept_language);
+    $result = $apiInstance->getProductReservationPrice($product_reservation_price_id, $accept_language);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PointReservationApi->getPointReservation: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductReservationPricesApi->getProductReservationPrice: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -51,12 +51,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **point_reservation_id** | **string**| The unique ID of the point reservations. |
+ **product_reservation_price_id** | **string**| The unique ID of the product reservation price. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetPointReservation200Response**](../Model/GetPointReservation200Response.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrice200Response**](../Model/GetProductReservationPrice200Response.md)
 
 ### Authorization
 
@@ -69,12 +69,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getPointReservations**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetPointReservations200Response getPointReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id)
+# **getProductReservationPrices**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrices200Response getProductReservationPrices($accept_language, $count, $offset, $sort_field, $sort_direction, $reservable_product_id, $store_id, $currency_id)
 
-Get all point reservations
+Get all product reservation prices
 
-Get a list of all point reservations.
+Get a list of product reservation prices. Each price represents the value of the product for the reservation for a specific store and currency.
 
 ### Example
 ```php
@@ -89,7 +89,7 @@ $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfig
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PointReservationApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservationPricesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -100,14 +100,15 @@ $count = 100; // int | The number of records to return in API response. <br/>⚠
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$customer_id = "customer_id_example"; // string | The unique ID of the customer.
-$external_id = "external_id_example"; // string | The external ID of the point reservation.
+$reservable_product_id = "reservable_product_id_example"; // string | The unique ID of the reservable product. In case you want to filter multiple options use array syntax : `reservable_product_id[]=8bc8ca16f9c5039951021700a2&reservable_product_id[]=82c06812c0756528660784fef`
+$store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
+$currency_id = "currency_id_example"; // string | The unique ID of a currency from [Currencies resource](https://carecloud.readme.io/reference/getcurrencies).
 
 try {
-    $result = $apiInstance->getPointReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id);
+    $result = $apiInstance->getProductReservationPrices($accept_language, $count, $offset, $sort_field, $sort_direction, $reservable_product_id, $store_id, $currency_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PointReservationApi->getPointReservations: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductReservationPricesApi->getProductReservationPrices: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -121,12 +122,13 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **customer_id** | **string**| The unique ID of the customer. | [optional]
- **external_id** | **string**| The external ID of the point reservation. | [optional]
+ **reservable_product_id** | **string**| The unique ID of the reservable product. In case you want to filter multiple options use array syntax : &#x60;reservable_product_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reservable_product_id[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
+ **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
+ **currency_id** | **string**| The unique ID of a currency from [Currencies resource](https://carecloud.readme.io/reference/getcurrencies). | [optional]
 
 ### Return type
 
-[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetPointReservations200Response**](../Model/GetPointReservations200Response.md)
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrices200Response**](../Model/GetProductReservationPrices200Response.md)
 
 ### Authorization
 
@@ -139,12 +141,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **postPointReservationCreate**
-> postPointReservationCreate($body, $accept_language)
+# **postBulkDeleteProductReservationPrices**
+> postBulkDeleteProductReservationPrices($body, $accept_language)
 
-Create point reservation
+Delete a batch of product reservation prices
 
-This endpoint allows you to reserve customer points. It is usually used when you are not sure if a customer will really use the point or when you waiting for his confirmation of the point usage. It prevents point frauds.
+Batch process helps to remove multiple product reservation prices in one request.<br/>  ⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
@@ -159,19 +161,19 @@ $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfig
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PointReservationApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservationPricesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsReservepointsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsReservepointsBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody1(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody1 | 
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
-    $apiInstance->postPointReservationCreate($body, $accept_language);
+    $apiInstance->postBulkDeleteProductReservationPrices($body, $accept_language);
 } catch (Exception $e) {
-    echo 'Exception when calling PointReservationApi->postPointReservationCreate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductReservationPricesApi->postBulkDeleteProductReservationPrices: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -180,7 +182,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsReservepointsBody**](../Model/ActionsReservepointsBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody1**](../Model/ProductreservationpricesBatchBody1.md)|  |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type
@@ -198,12 +200,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **postPointReservationRelease**
-> postPointReservationRelease($body, $accept_language)
+# **postBulkProductReservationPrices**
+> postBulkProductReservationPrices($body, $accept_language)
 
-Free points from reservation
+Create a batch of product reservation prices
 
-Release reserved points.
+Batch process helps to add and synchronize multiple product reservation prices in one request.<br/>  ⚠️ If a product reservation price already exists, an update is applied. Missing parameters in update will be ignored and will not change. Erasing values is not possible here.<br/> ⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
 
 ### Example
 ```php
@@ -218,19 +220,19 @@ $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfig
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PointReservationApi(
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservationPricesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsFreepointsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsFreepointsBody | 
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody | 
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
 try {
-    $apiInstance->postPointReservationRelease($body, $accept_language);
+    $apiInstance->postBulkProductReservationPrices($body, $accept_language);
 } catch (Exception $e) {
-    echo 'Exception when calling PointReservationApi->postPointReservationRelease: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductReservationPricesApi->postBulkProductReservationPrices: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -239,7 +241,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsFreepointsBody**](../Model/ActionsFreepointsBody.md)|  |
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody**](../Model/ProductreservationpricesBatchBody.md)|  |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
 ### Return type

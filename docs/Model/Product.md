@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **image_urls** | **string[]** | A list of an image URLs. | [optional] 
 **last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the product. *Possible values are: 0 - deleted / 1 - active* | [optional] 
+**tags** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]**](Tag.md) | List of tags assigned to the product. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

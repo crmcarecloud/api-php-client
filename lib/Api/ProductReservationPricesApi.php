@@ -1,6 +1,6 @@
 <?php
 /**
- * ReservableProductsApi
+ * ProductReservationPricesApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use CrmCareCloud\Webservice\RestApi\Client\HeaderSelector;
 use CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * ReservableProductsApi Class Doc Comment
+ * ProductReservationPricesApi Class Doc Comment
  *
  * @category Class
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ReservableProductsApi
+class ProductReservationPricesApi
 {
     /**
      * @var ClientInterface
@@ -87,39 +87,39 @@ class ReservableProductsApi
     }
 
     /**
-     * Operation getReservableProduct
+     * Operation getProductReservationPrice
      *
-     * Get a reservable product
+     * Get a detail of product reservation price
      *
-     * @param  string $reservable_product_id The unique ID of the reservable product. (required)
+     * @param  string $product_reservation_price_id The unique ID of the product reservation price. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProduct200Response
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrice200Response
      */
-    public function getReservableProduct($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
+    public function getProductReservationPrice($product_reservation_price_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        list($response) = $this->getReservableProductWithHttpInfo($reservable_product_id, $accept_language);
+        list($response) = $this->getProductReservationPriceWithHttpInfo($product_reservation_price_id, $accept_language);
         return $response;
     }
 
     /**
-     * Operation getReservableProductWithHttpInfo
+     * Operation getProductReservationPriceWithHttpInfo
      *
-     * Get a reservable product
+     * Get a detail of product reservation price
      *
-     * @param  string $reservable_product_id The unique ID of the reservable product. (required)
+     * @param  string $product_reservation_price_id The unique ID of the product reservation price. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProduct200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrice200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getReservableProductWithHttpInfo($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
+    public function getProductReservationPriceWithHttpInfo($product_reservation_price_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProduct200Response';
-        $request = $this->getReservableProductRequest($reservable_product_id, $accept_language);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrice200Response';
+        $request = $this->getProductReservationPriceRequest($product_reservation_price_id, $accept_language);
 
         try {
             $options = $this->createHttpClientOption();
@@ -170,7 +170,7 @@ class ReservableProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProduct200Response',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrice200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -229,19 +229,19 @@ class ReservableProductsApi
     }
 
     /**
-     * Operation getReservableProductAsync
+     * Operation getProductReservationPriceAsync
      *
-     * Get a reservable product
+     * Get a detail of product reservation price
      *
-     * @param  string $reservable_product_id The unique ID of the reservable product. (required)
+     * @param  string $product_reservation_price_id The unique ID of the product reservation price. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getReservableProductAsync($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
+    public function getProductReservationPriceAsync($product_reservation_price_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        return $this->getReservableProductAsyncWithHttpInfo($reservable_product_id, $accept_language)
+        return $this->getProductReservationPriceAsyncWithHttpInfo($product_reservation_price_id, $accept_language)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -250,20 +250,20 @@ class ReservableProductsApi
     }
 
     /**
-     * Operation getReservableProductAsyncWithHttpInfo
+     * Operation getProductReservationPriceAsyncWithHttpInfo
      *
-     * Get a reservable product
+     * Get a detail of product reservation price
      *
-     * @param  string $reservable_product_id The unique ID of the reservable product. (required)
+     * @param  string $product_reservation_price_id The unique ID of the product reservation price. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getReservableProductAsyncWithHttpInfo($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
+    public function getProductReservationPriceAsyncWithHttpInfo($product_reservation_price_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProduct200Response';
-        $request = $this->getReservableProductRequest($reservable_product_id, $accept_language);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrice200Response';
+        $request = $this->getProductReservationPriceRequest($product_reservation_price_id, $accept_language);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -303,24 +303,24 @@ class ReservableProductsApi
     }
 
     /**
-     * Create request for operation 'getReservableProduct'
+     * Create request for operation 'getProductReservationPrice'
      *
-     * @param  string $reservable_product_id The unique ID of the reservable product. (required)
+     * @param  string $product_reservation_price_id The unique ID of the product reservation price. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getReservableProductRequest($reservable_product_id, $accept_language = 'cs, en-gb;q=0.8')
+    protected function getProductReservationPriceRequest($product_reservation_price_id, $accept_language = 'cs, en-gb;q=0.8')
     {
-        // verify the required parameter 'reservable_product_id' is set
-        if ($reservable_product_id === null || (is_array($reservable_product_id) && count($reservable_product_id) === 0)) {
+        // verify the required parameter 'product_reservation_price_id' is set
+        if ($product_reservation_price_id === null || (is_array($product_reservation_price_id) && count($product_reservation_price_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $reservable_product_id when calling getReservableProduct'
+                'Missing the required parameter $product_reservation_price_id when calling getProductReservationPrice'
             );
         }
 
-        $resourcePath = '/reservable-products/{reservable_product_id}';
+        $resourcePath = '/product-reservationprices/{product_reservation_price_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -333,10 +333,10 @@ class ReservableProductsApi
         }
 
         // path params
-        if ($reservable_product_id !== null) {
+        if ($product_reservation_price_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'reservable_product_id' . '}',
-                ObjectSerializer::toPathValue($reservable_product_id),
+                '{' . 'product_reservation_price_id' . '}',
+                ObjectSerializer::toPathValue($product_reservation_price_id),
                 $resourcePath
             );
         }
@@ -415,53 +415,51 @@ class ReservableProductsApi
     }
 
     /**
-     * Operation getReservableProducts
+     * Operation getProductReservationPrices
      *
-     * Get all reservable products
+     * Get all product reservation prices
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $name Search record by name or a part of the name. (optional)
-     * @param  string $code Code of the product. (optional)
+     * @param  string $reservable_product_id The unique ID of the reservable product. In case you want to filter multiple options use array syntax : &#x60;reservable_product_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reservable_product_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $currency_id The unique ID of a currency from [Currencies resource](https://carecloud.readme.io/reference/getcurrencies). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProducts200Response
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrices200Response
      */
-    public function getReservableProducts($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $store_id = null, $tag_ids = null)
+    public function getProductReservationPrices($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservable_product_id = null, $store_id = null, $currency_id = null)
     {
-        list($response) = $this->getReservableProductsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $store_id, $tag_ids);
+        list($response) = $this->getProductReservationPricesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $reservable_product_id, $store_id, $currency_id);
         return $response;
     }
 
     /**
-     * Operation getReservableProductsWithHttpInfo
+     * Operation getProductReservationPricesWithHttpInfo
      *
-     * Get all reservable products
+     * Get all product reservation prices
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $name Search record by name or a part of the name. (optional)
-     * @param  string $code Code of the product. (optional)
+     * @param  string $reservable_product_id The unique ID of the reservable product. In case you want to filter multiple options use array syntax : &#x60;reservable_product_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reservable_product_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $currency_id The unique ID of a currency from [Currencies resource](https://carecloud.readme.io/reference/getcurrencies). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProducts200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrices200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getReservableProductsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $store_id = null, $tag_ids = null)
+    public function getProductReservationPricesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservable_product_id = null, $store_id = null, $currency_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProducts200Response';
-        $request = $this->getReservableProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $store_id, $tag_ids);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrices200Response';
+        $request = $this->getProductReservationPricesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $reservable_product_id, $store_id, $currency_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -512,7 +510,7 @@ class ReservableProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProducts200Response',
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrices200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -571,26 +569,25 @@ class ReservableProductsApi
     }
 
     /**
-     * Operation getReservableProductsAsync
+     * Operation getProductReservationPricesAsync
      *
-     * Get all reservable products
+     * Get all product reservation prices
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $name Search record by name or a part of the name. (optional)
-     * @param  string $code Code of the product. (optional)
+     * @param  string $reservable_product_id The unique ID of the reservable product. In case you want to filter multiple options use array syntax : &#x60;reservable_product_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reservable_product_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $currency_id The unique ID of a currency from [Currencies resource](https://carecloud.readme.io/reference/getcurrencies). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getReservableProductsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $store_id = null, $tag_ids = null)
+    public function getProductReservationPricesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservable_product_id = null, $store_id = null, $currency_id = null)
     {
-        return $this->getReservableProductsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $store_id, $tag_ids)
+        return $this->getProductReservationPricesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $reservable_product_id, $store_id, $currency_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -599,27 +596,26 @@ class ReservableProductsApi
     }
 
     /**
-     * Operation getReservableProductsAsyncWithHttpInfo
+     * Operation getProductReservationPricesAsyncWithHttpInfo
      *
-     * Get all reservable products
+     * Get all product reservation prices
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
-     * @param  string|null $name Search record by name or a part of the name. (optional)
-     * @param  string|null $code Code of the product. (optional)
+     * @param  string|null $reservable_product_id The unique ID of the reservable product. In case you want to filter multiple options use array syntax : &#x60;reservable_product_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reservable_product_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string|null $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string|null $currency_id The unique ID of a currency from [Currencies resource](https://carecloud.readme.io/reference/getcurrencies). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getReservableProductsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $store_id = null, $tag_ids = null)
+    public function getProductReservationPricesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservable_product_id = null, $store_id = null, $currency_id = null)
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetReservableProducts200Response';
-        $request = $this->getReservableProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $store_id, $tag_ids);
+        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservationPrices200Response';
+        $request = $this->getProductReservationPricesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $reservable_product_id, $store_id, $currency_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -659,25 +655,24 @@ class ReservableProductsApi
     }
 
     /**
-     * Create request for operation 'getReservableProducts'
+     * Create request for operation 'getProductReservationPrices'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $name Search record by name or a part of the name. (optional)
-     * @param  string $code Code of the product. (optional)
+     * @param  string $reservable_product_id The unique ID of the reservable product. In case you want to filter multiple options use array syntax : &#x60;reservable_product_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reservable_product_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $currency_id The unique ID of a currency from [Currencies resource](https://carecloud.readme.io/reference/getcurrencies). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getReservableProductsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $store_id = null, $tag_ids = null)
+    protected function getProductReservationPricesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $reservable_product_id = null, $store_id = null, $currency_id = null)
     {
 
-        $resourcePath = '/reservable-products';
+        $resourcePath = '/product-reservation-prices';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -701,24 +696,16 @@ class ReservableProductsApi
             $queryParams['sort_direction'] = ObjectSerializer::toQueryValue($sort_direction, null);
         }
         // query params
-        if ($name !== null) {
-            $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);
-        }
-        // query params
-        if ($code !== null) {
-            $queryParams['code'] = ObjectSerializer::toQueryValue($code, null);
+        if ($reservable_product_id !== null) {
+            $queryParams['reservable_product_id'] = ObjectSerializer::toQueryValue($reservable_product_id, null);
         }
         // query params
         if ($store_id !== null) {
             $queryParams['store_id'] = ObjectSerializer::toQueryValue($store_id, null);
         }
         // query params
-        if (is_array($tag_ids)) {
-            $queryParams['tag_ids'] = $tag_ids;
-        } else {
-            if ($tag_ids !== null) {
-                $queryParams['tag_ids'] = ObjectSerializer::toQueryValue($tag_ids, null);
-            }
+        if ($currency_id !== null) {
+            $queryParams['currency_id'] = ObjectSerializer::toQueryValue($currency_id, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -800,47 +787,38 @@ class ReservableProductsApi
     }
 
     /**
-     * Operation postReservableProductsSearch
+     * Operation postBulkDeleteProductReservationPrices
      *
-     * Search reservable products
+     * Delete a batch of product reservation prices
      *
-     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody1 $body body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostReservableProductsSearch200Response
+     * @return void
      */
-    public function postReservableProductsSearch($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function postBulkDeleteProductReservationPrices($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        list($response) = $this->postReservableProductsSearchWithHttpInfo($body, $accept_language, $count, $offset, $sort_field, $sort_direction);
-        return $response;
+        $this->postBulkDeleteProductReservationPricesWithHttpInfo($body, $accept_language);
     }
 
     /**
-     * Operation postReservableProductsSearchWithHttpInfo
+     * Operation postBulkDeleteProductReservationPricesWithHttpInfo
      *
-     * Search reservable products
+     * Delete a batch of product reservation prices
      *
-     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody1 $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\PostReservableProductsSearch200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postReservableProductsSearchWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function postBulkDeleteProductReservationPricesWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostReservableProductsSearch200Response';
-        $request = $this->postReservableProductsSearchRequest($body, $accept_language, $count, $offset, $sort_field, $sort_direction);
+        $returnType = '';
+        $request = $this->postBulkDeleteProductReservationPricesRequest($body, $accept_language);
 
         try {
             $options = $this->createHttpClientOption();
@@ -870,32 +848,10 @@ class ReservableProductsApi
                 );
             }
 
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = (string) $responseBody;
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
+            return [null, $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostReservableProductsSearch200Response',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -950,23 +906,19 @@ class ReservableProductsApi
     }
 
     /**
-     * Operation postReservableProductsSearchAsync
+     * Operation postBulkDeleteProductReservationPricesAsync
      *
-     * Search reservable products
+     * Delete a batch of product reservation prices
      *
-     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody1 $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postReservableProductsSearchAsync($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function postBulkDeleteProductReservationPricesAsync($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        return $this->postReservableProductsSearchAsyncWithHttpInfo($body, $accept_language, $count, $offset, $sort_field, $sort_direction)
+        return $this->postBulkDeleteProductReservationPricesAsyncWithHttpInfo($body, $accept_language)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -975,44 +927,26 @@ class ReservableProductsApi
     }
 
     /**
-     * Operation postReservableProductsSearchAsyncWithHttpInfo
+     * Operation postBulkDeleteProductReservationPricesAsyncWithHttpInfo
      *
-     * Search reservable products
+     * Delete a batch of product reservation prices
      *
-     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody1 $body (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
-     * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
-     * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postReservableProductsSearchAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function postBulkDeleteProductReservationPricesAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
     {
-        $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\PostReservableProductsSearch200Response';
-        $request = $this->postReservableProductsSearchRequest($body, $accept_language, $count, $offset, $sort_field, $sort_direction);
+        $returnType = '';
+        $request = $this->postBulkDeleteProductReservationPricesRequest($body, $accept_language);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = (string) $responseBody;
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                function ($response) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1032,50 +966,313 @@ class ReservableProductsApi
     }
 
     /**
-     * Create request for operation 'postReservableProductsSearch'
+     * Create request for operation 'postBulkDeleteProductReservationPrices'
      *
-     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody1 $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
-     * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
-     * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
-     * @param  string $sort_direction Direction of sorting the response list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function postReservableProductsSearchRequest($body, $accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    protected function postBulkDeleteProductReservationPricesRequest($body, $accept_language = 'cs, en-gb;q=0.8')
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling postReservableProductsSearch'
+                'Missing the required parameter $body when calling postBulkDeleteProductReservationPrices'
             );
         }
 
-        $resourcePath = '/reservable-products/actions/search-reservable-products';
+        $resourcePath = '/product-reservation-prices/batch';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($count !== null) {
-            $queryParams['count'] = ObjectSerializer::toQueryValue($count, null);
+        // header params
+        if ($accept_language !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
         }
-        // query params
-        if ($offset !== null) {
-            $queryParams['offset'] = ObjectSerializer::toQueryValue($offset, null);
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
         }
-        // query params
-        if ($sort_field !== null) {
-            $queryParams['sort_field'] = ObjectSerializer::toQueryValue($sort_field, null);
+
+        // body params
+        $_tempBody = $body;
+
+        // for model (json/xml)
+        if ($_tempBody !== null) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
         }
-        // query params
-        if ($sort_direction !== null) {
-            $queryParams['sort_direction'] = ObjectSerializer::toQueryValue($sort_direction, null);
+
+        // this endpoint requires HTTP basic authentication
+        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
         }
+        // this endpoint requires Bearer token
+        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
+            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->getConfig()->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->getConfig()->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::customBuildQuery($queryParams);
+        return new Request(
+            'DELETE',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation postBulkProductReservationPrices
+     *
+     * Create a batch of product reservation prices
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody $body body (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function postBulkProductReservationPrices($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $this->postBulkProductReservationPricesWithHttpInfo($body, $accept_language);
+    }
+
+    /**
+     * Operation postBulkProductReservationPricesWithHttpInfo
+     *
+     * Create a batch of product reservation prices
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody $body (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postBulkProductReservationPricesWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '';
+        $request = $this->postBulkProductReservationPricesRequest($body, $accept_language);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse403',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse404',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse405',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postBulkProductReservationPricesAsync
+     *
+     * Create a batch of product reservation prices
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody $body (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postBulkProductReservationPricesAsync($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        return $this->postBulkProductReservationPricesAsyncWithHttpInfo($body, $accept_language)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postBulkProductReservationPricesAsyncWithHttpInfo
+     *
+     * Create a batch of product reservation prices
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody $body (required)
+     * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postBulkProductReservationPricesAsyncWithHttpInfo($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        $returnType = '';
+        $request = $this->postBulkProductReservationPricesRequest($body, $accept_language);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postBulkProductReservationPrices'
+     *
+     * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ProductreservationpricesBatchBody $body (required)
+     * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postBulkProductReservationPricesRequest($body, $accept_language = 'cs, en-gb;q=0.8')
+    {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling postBulkProductReservationPrices'
+            );
+        }
+
+        $resourcePath = '/product-reservation-prices/batch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
         // header params
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);

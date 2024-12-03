@@ -99,7 +99,7 @@ $offset = 0; // int | The number of records from a collection to skip. Default v
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
-$text_id = "text_id_example"; // string | Text ID of an event group.
+$text_id = "text_id_example"; // string | You can filter resource results depending on his text ID.
 
 try {
     $result = $apiInstance->getEventGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
- **text_id** | **string**| Text ID of an event group. | [optional]
+ **text_id** | **string**| You can filter resource results depending on his text ID. | [optional]
 
 ### Return type
 

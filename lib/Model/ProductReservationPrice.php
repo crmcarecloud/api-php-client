@@ -1,6 +1,6 @@
 <?php
 /**
- * Product
+ * ProductReservationPrice
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * Product Class Doc Comment
+ * ProductReservationPrice Class Doc Comment
  *
  * @category Class
- * @description Product resource.
+ * @description Product reservation price resource.
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Product implements ModelInterface, ArrayAccess
+class ProductReservationPrice implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Product implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Product';
+    protected static $swaggerModelName = 'ProductReservationPrice';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,19 +57,14 @@ class Product implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'product_id' => 'string',
-        'name' => 'string',
-        'code' => 'string',
-        'external_id' => 'string',
+        'product_reservation_price_id' => 'string',
+        'reservable_product_id' => 'string',
         'plu_ids' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PluId[]',
-        'product_group_id' => 'string',
-        'product_brand_id' => 'string',
-        'prices' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Price[]',
-        'additional_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
-        'image_urls' => 'string[]',
+        'value' => 'float',
+        'currency_id' => 'string',
+        'store_id' => 'string',
         'last_change' => 'string',
-        'state' => 'int',
-        'tags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]'
+        'state' => 'int'
     ];
 
     /**
@@ -78,19 +73,14 @@ class Product implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'product_id' => null,
-        'name' => null,
-        'code' => null,
-        'external_id' => null,
+        'product_reservation_price_id' => null,
+        'reservable_product_id' => null,
         'plu_ids' => null,
-        'product_group_id' => null,
-        'product_brand_id' => null,
-        'prices' => null,
-        'additional_properties' => null,
-        'image_urls' => null,
+        'value' => 'float',
+        'currency_id' => null,
+        'store_id' => null,
         'last_change' => null,
-        'state' => null,
-        'tags' => null
+        'state' => null
     ];
 
     /**
@@ -120,19 +110,14 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_id' => 'product_id',
-        'name' => 'name',
-        'code' => 'code',
-        'external_id' => 'external_id',
+        'product_reservation_price_id' => 'product_reservation_price_id',
+        'reservable_product_id' => 'reservable_product_id',
         'plu_ids' => 'plu_ids',
-        'product_group_id' => 'product_group_id',
-        'product_brand_id' => 'product_brand_id',
-        'prices' => 'prices',
-        'additional_properties' => 'additional_properties',
-        'image_urls' => 'image_urls',
+        'value' => 'value',
+        'currency_id' => 'currency_id',
+        'store_id' => 'store_id',
         'last_change' => 'last_change',
-        'state' => 'state',
-        'tags' => 'tags'
+        'state' => 'state'
     ];
 
     /**
@@ -141,19 +126,14 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_id' => 'setProductId',
-        'name' => 'setName',
-        'code' => 'setCode',
-        'external_id' => 'setExternalId',
+        'product_reservation_price_id' => 'setProductReservationPriceId',
+        'reservable_product_id' => 'setReservableProductId',
         'plu_ids' => 'setPluIds',
-        'product_group_id' => 'setProductGroupId',
-        'product_brand_id' => 'setProductBrandId',
-        'prices' => 'setPrices',
-        'additional_properties' => 'setAdditionalProperties',
-        'image_urls' => 'setImageUrls',
+        'value' => 'setValue',
+        'currency_id' => 'setCurrencyId',
+        'store_id' => 'setStoreId',
         'last_change' => 'setLastChange',
-        'state' => 'setState',
-        'tags' => 'setTags'
+        'state' => 'setState'
     ];
 
     /**
@@ -162,19 +142,14 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_id' => 'getProductId',
-        'name' => 'getName',
-        'code' => 'getCode',
-        'external_id' => 'getExternalId',
+        'product_reservation_price_id' => 'getProductReservationPriceId',
+        'reservable_product_id' => 'getReservableProductId',
         'plu_ids' => 'getPluIds',
-        'product_group_id' => 'getProductGroupId',
-        'product_brand_id' => 'getProductBrandId',
-        'prices' => 'getPrices',
-        'additional_properties' => 'getAdditionalProperties',
-        'image_urls' => 'getImageUrls',
+        'value' => 'getValue',
+        'currency_id' => 'getCurrencyId',
+        'store_id' => 'getStoreId',
         'last_change' => 'getLastChange',
-        'state' => 'getState',
-        'tags' => 'getTags'
+        'state' => 'getState'
     ];
 
     /**
@@ -250,19 +225,14 @@ self::STATE_2,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
+        $this->container['product_reservation_price_id'] = isset($data['product_reservation_price_id']) ? $data['product_reservation_price_id'] : null;
+        $this->container['reservable_product_id'] = isset($data['reservable_product_id']) ? $data['reservable_product_id'] : null;
         $this->container['plu_ids'] = isset($data['plu_ids']) ? $data['plu_ids'] : null;
-        $this->container['product_group_id'] = isset($data['product_group_id']) ? $data['product_group_id'] : null;
-        $this->container['product_brand_id'] = isset($data['product_brand_id']) ? $data['product_brand_id'] : null;
-        $this->container['prices'] = isset($data['prices']) ? $data['prices'] : null;
-        $this->container['additional_properties'] = isset($data['additional_properties']) ? $data['additional_properties'] : null;
-        $this->container['image_urls'] = isset($data['image_urls']) ? $data['image_urls'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['currency_id'] = isset($data['currency_id']) ? $data['currency_id'] : null;
+        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -274,6 +244,12 @@ self::STATE_2,        ];
     {
         $invalidProperties = [];
 
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
+        if ($this->container['currency_id'] === null) {
+            $invalidProperties[] = "'currency_id' can't be null";
+        }
         $allowedValues = $this->getStateAllowableValues();
         if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -298,97 +274,49 @@ self::STATE_2,        ];
 
 
     /**
-     * Gets product_id
+     * Gets product_reservation_price_id
      *
      * @return string
      */
-    public function getProductId()
+    public function getProductReservationPriceId()
     {
-        return $this->container['product_id'];
+        return $this->container['product_reservation_price_id'];
     }
 
     /**
-     * Sets product_id
+     * Sets product_reservation_price_id
      *
-     * @param string $product_id The unique ID of the product.
+     * @param string $product_reservation_price_id The unique ID of the product reservation price.
      *
      * @return $this
      */
-    public function setProductId($product_id)
+    public function setProductReservationPriceId($product_reservation_price_id)
     {
-        $this->container['product_id'] = $product_id;
+        $this->container['product_reservation_price_id'] = $product_reservation_price_id;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets reservable_product_id
      *
      * @return string
      */
-    public function getName()
+    public function getReservableProductId()
     {
-        return $this->container['name'];
+        return $this->container['reservable_product_id'];
     }
 
     /**
-     * Sets name
+     * Sets reservable_product_id
      *
-     * @param string $name Name of the product.
+     * @param string $reservable_product_id The unique ID of the reservable product. This represents relation in between price and product. Required if `plu_ids` is not set.
      *
      * @return $this
      */
-    public function setName($name)
+    public function setReservableProductId($reservable_product_id)
     {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets code
-     *
-     * @return string
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param string $code Code of the product.
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets external_id
-     *
-     * @return string
-     */
-    public function getExternalId()
-    {
-        return $this->container['external_id'];
-    }
-
-    /**
-     * Sets external_id
-     *
-     * @param string $external_id The external unique ID of the product. This parameter is deprecated. Please use parameter `plu_ids`.
-     *
-     * @return $this
-     */
-    public function setExternalId($external_id)
-    {
-        $this->container['external_id'] = $external_id;
+        $this->container['reservable_product_id'] = $reservable_product_id;
 
         return $this;
     }
@@ -406,7 +334,7 @@ self::STATE_2,        ];
     /**
      * Sets plu_ids
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[] $plu_ids An array of all available pluIds from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique ID of every product across all POS systems)).
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PluId[] $plu_ids An array of all available pluIDs from the particular product lists (default is Product ID from Global product list (consist cleaned data - unique ID of every product across all POS systems)).  This is an alternative to  `reservable_product_id`. It will accept only products that could be reserved.  Required if `reservable_product_id` is not set.
      *
      * @return $this
      */
@@ -418,121 +346,73 @@ self::STATE_2,        ];
     }
 
     /**
-     * Gets product_group_id
+     * Gets value
+     *
+     * @return float
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param float $value Value of a price for store and currency.
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency_id
      *
      * @return string
      */
-    public function getProductGroupId()
+    public function getCurrencyId()
     {
-        return $this->container['product_group_id'];
+        return $this->container['currency_id'];
     }
 
     /**
-     * Sets product_group_id
+     * Sets currency_id
      *
-     * @param string $product_group_id The unique ID of the product group.
+     * @param string $currency_id ID of the currency. If total_price is set, then currency_id is mandatory.
      *
      * @return $this
      */
-    public function setProductGroupId($product_group_id)
+    public function setCurrencyId($currency_id)
     {
-        $this->container['product_group_id'] = $product_group_id;
+        $this->container['currency_id'] = $currency_id;
 
         return $this;
     }
 
     /**
-     * Gets product_brand_id
+     * Gets store_id
      *
      * @return string
      */
-    public function getProductBrandId()
+    public function getStoreId()
     {
-        return $this->container['product_brand_id'];
+        return $this->container['store_id'];
     }
 
     /**
-     * Sets product_brand_id
+     * Sets store_id
      *
-     * @param string $product_brand_id The unique ID of the product brand.
+     * @param string $store_id The unique ID of the store tied to the product reservation price. Prices of product can vary depending on the store.
      *
      * @return $this
      */
-    public function setProductBrandId($product_brand_id)
+    public function setStoreId($store_id)
     {
-        $this->container['product_brand_id'] = $product_brand_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets prices
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Price[]
-     */
-    public function getPrices()
-    {
-        return $this->container['prices'];
-    }
-
-    /**
-     * Sets prices
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Price[] $prices prices
-     *
-     * @return $this
-     */
-    public function setPrices($prices)
-    {
-        $this->container['prices'] = $prices;
-
-        return $this;
-    }
-
-    /**
-     * Gets additional_properties
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
-     */
-    public function getAdditionalProperties()
-    {
-        return $this->container['additional_properties'];
-    }
-
-    /**
-     * Sets additional_properties
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $additional_properties List of additional properties.
-     *
-     * @return $this
-     */
-    public function setAdditionalProperties($additional_properties)
-    {
-        $this->container['additional_properties'] = $additional_properties;
-
-        return $this;
-    }
-
-    /**
-     * Gets image_urls
-     *
-     * @return string[]
-     */
-    public function getImageUrls()
-    {
-        return $this->container['image_urls'];
-    }
-
-    /**
-     * Sets image_urls
-     *
-     * @param string[] $image_urls A list of an image URLs.
-     *
-     * @return $this
-     */
-    public function setImageUrls($image_urls)
-    {
-        $this->container['image_urls'] = $image_urls;
+        $this->container['store_id'] = $store_id;
 
         return $this;
     }
@@ -574,7 +454,7 @@ self::STATE_2,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the product. *Possible values are: 0 - deleted / 1 - active*
+     * @param int $state State of the product reservation. *Possible values are: 0 - deleted / 1 - active *
      *
      * @return $this
      */
@@ -590,30 +470,6 @@ self::STATE_2,        ];
             );
         }
         $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets tags
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]
-     */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-     * Sets tags
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Tag[] $tags List of tags assigned to the product.
-     *
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        $this->container['tags'] = $tags;
 
         return $this;
     }

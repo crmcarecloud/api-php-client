@@ -6622,7 +6622,7 @@ class CustomersApi
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6655,7 +6655,7 @@ class CustomersApi
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6794,7 +6794,7 @@ class CustomersApi
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6830,7 +6830,7 @@ class CustomersApi
      * @param  int|null $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool|null $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6896,7 +6896,7 @@ class CustomersApi
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7091,7 +7091,7 @@ class CustomersApi
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
      * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
@@ -7124,7 +7124,7 @@ class CustomersApi
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
      * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
@@ -7263,7 +7263,7 @@ class CustomersApi
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
      * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
@@ -7299,7 +7299,7 @@ class CustomersApi
      * @param  int|null $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool|null $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string|null $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
      * @param  string|null $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
@@ -7365,7 +7365,7 @@ class CustomersApi
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. Logic OR is used between values. (optional)
      * @param  bool $without_stores If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](/#tag/Partners). (optional)
      * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
