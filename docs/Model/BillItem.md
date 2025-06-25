@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **loyalty_off** | **bool** | Switch off all loyalty benefits (points, discounts- instant and campaign prices, vouchers) on the item. | 
 **purchase_item_type_id** | **string** | Type of the purchase item from resource [purchase-item-types](https://carecloud.readme.io/reference/getpurchaseitemtypes).There is a distinction between a purchase in an e-shop, in a brick-and-mortar store, a mobile application, or a cancellation of the purchase. It also differentiates purchases without the possibility of applying loyalty benefits from ordinary purchases or from purchases with the application of loyalty points. | 
 **customer_id** | **string** | The ID of the customer. | [optional] 
+**purchase_item_property_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of properties for the purchase item. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

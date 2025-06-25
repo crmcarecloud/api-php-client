@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**partner_id** | **string** | The unique ID of the company. | [optional] 
+**partner_id** | **string** | The unique ID of the partner. Partner represents business, company, or organization in the CareCloud domain. CareCloud allows single partner setup or multiple partner setup depending on the business setup. | [optional] 
 **name** | **string** | Name of the company. | 
 **address** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Address**](Address.md) |  | [optional] 
 **registration_id** | **string** | Company registration number. National Registration unique ID of the company. | [optional] 

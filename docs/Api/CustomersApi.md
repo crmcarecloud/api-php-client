@@ -1311,8 +1311,8 @@ $valid_to = "valid_to_example"; // string | Date to when is record still valid. 
 $code = "code_example"; // string | Code of the reward.
 $is_automated = true; // bool | Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)*
 $reward_group = 56; // int | The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward*
-$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. Logic OR is used between values.
-$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure.
+$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values.
+$without_stores = true; // bool | If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores.
 $tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values. <br/> In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
 
 try {
@@ -1342,8 +1342,8 @@ Name | Type | Description  | Notes
  **code** | **string**| Code of the reward. | [optional]
  **is_automated** | **bool**| Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* | [optional]
  **reward_group** | **int**| The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* | [optional]
- **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. Logic OR is used between values. | [optional]
- **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. | [optional]
+ **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. | [optional]
+ **without_stores** | **bool**| If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. | [optional]
  **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
 
 ### Return type
@@ -1399,10 +1399,10 @@ $valid_to = "valid_to_example"; // string | Date to when is record still valid. 
 $code = "code_example"; // string | Code of the reward.
 $is_automated = true; // bool | Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)*
 $reward_group = 56; // int | The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward*
-$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. Logic OR is used between values.
-$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure.
+$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values.
+$without_stores = true; // bool | If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores.
 $tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values. <br/> In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
-$partner_id = "partner_id_example"; // string | Unique ID of the partner from the resource [GET /partners](/#tag/Partners).
+$partner_id = "partner_id_example"; // string | Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners).
 $reward_type_id = "reward_type_id_example"; // string | The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others.
 
 try {
@@ -1430,10 +1430,10 @@ Name | Type | Description  | Notes
  **code** | **string**| Code of the reward. | [optional]
  **is_automated** | **bool**| Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* | [optional]
  **reward_group** | **int**| The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward* | [optional]
- **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. Logic OR is used between values. | [optional]
- **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. | [optional]
+ **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. | [optional]
+ **without_stores** | **bool**| If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. | [optional]
  **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
- **partner_id** | **string**| Unique ID of the partner from the resource [GET /partners](/#tag/Partners). | [optional]
+ **partner_id** | **string**| Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). | [optional]
  **reward_type_id** | **string**| The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. | [optional]
 
 ### Return type
@@ -1693,7 +1693,7 @@ $code = "code_example"; // string | Unique code of the voucher.
 $store_id = "store_id_example"; // string | The unique ID of the store where customer can apply the reward.
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $is_applied = true; // bool | Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers*
-$without_stores = true; // bool | If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure.
+$without_stores = true; // bool | If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores.
 $reward_id = "reward_id_example"; // string | The unique ID of the reward in CareCloud. In case you want to filter multiple options use array syntax : `reward_id[]=8bc8ca16f9c5039951021700a2&reward_id[]=82c06812c0756528660784fef`
 
 try {
@@ -1719,7 +1719,7 @@ Name | Type | Description  | Notes
  **store_id** | **string**| The unique ID of the store where customer can apply the reward. | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **is_applied** | **bool**| Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* | [optional]
- **without_stores** | **bool**| If true, the data will not contain information about business units (stores). If false, or not set resource returns default structure. | [optional]
+ **without_stores** | **bool**| If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. | [optional]
  **reward_id** | **string**| The unique ID of the reward in CareCloud. In case you want to filter multiple options use array syntax : &#x60;reward_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reward_id[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
 
 ### Return type

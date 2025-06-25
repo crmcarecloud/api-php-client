@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 Set a new customer status
 
-The method sets a new customer status. If another valid status exists, CareCloud deactivates it.<br/> ⚠️ Action method is available only in the Enterprise interface.
+The method sets a new customer status. If another valid status exists, CareCloud deactivates it. ⚠️ Action method is available only in the Enterprise interface.
 
 ### Example
 ```php

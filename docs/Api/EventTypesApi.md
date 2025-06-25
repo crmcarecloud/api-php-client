@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEventTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetEventTypes200Response getEventTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetEventTypes200Response getEventTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
 
 Get all event types
 
@@ -100,9 +100,10 @@ $offset = 0; // int | The number of records from a collection to skip. Default v
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
+$text_id = "text_id_example"; // string | You can filter resource results depending on his text ID.
 
 try {
-    $result = $apiInstance->getEventTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
+    $result = $apiInstance->getEventTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventTypesApi->getEventTypes: ', $e->getMessage(), PHP_EOL;
@@ -120,6 +121,7 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
+ **text_id** | **string**| You can filter resource results depending on his text ID. | [optional]
 
 ### Return type
 

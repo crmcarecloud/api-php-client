@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaignProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaignProducts200Response getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaignProducts200Response getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to, $campaign_id, $include_property_records)
 
 Collection of campaign products
 
@@ -172,15 +172,17 @@ $sort_direction = "sort_direction_example"; // string | Direction of sorting the
 $name = "name_example"; // string | Search record by name or a part of the name.
 $code = "code_example"; // string | Code of the product.
 $display_in = "display_in_example"; // string | Place to display campaign product.
-$type_id = array("type_id_example"); // string[] | Type of the customer for a campaign product.
+$type_id = array("type_id_example"); // string[] | Type of the customer for a campaign product. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes).
 $store_id = "store_id_example"; // string | Parameter filters all campaign products from [store](#tag/Stores) by store ID.
 $value_type_id = 56; // int | Type of value (1 - percentage discount value, 2 - final price).
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $valid_from = "valid_from_example"; // string | Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)*
 $valid_to = "valid_to_example"; // string | Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)*
+$campaign_id = "campaign_id_example"; // string | The unique ID of the campaign in CareCloud. The list of campaigns is available in [GET /campaigns](https://carecloud.readme.io/reference/getcampaigns).
+$include_property_records = true; // bool | If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won't be included, and parameter will return null value
 
 try {
-    $result = $apiInstance->getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to);
+    $result = $apiInstance->getCampaignProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $display_in, $type_id, $store_id, $value_type_id, $is_valid, $valid_from, $valid_to, $campaign_id, $include_property_records);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignProductsApi->getCampaignProducts: ', $e->getMessage(), PHP_EOL;
@@ -200,12 +202,14 @@ Name | Type | Description  | Notes
  **name** | **string**| Search record by name or a part of the name. | [optional]
  **code** | **string**| Code of the product. | [optional]
  **display_in** | **string**| Place to display campaign product. | [optional]
- **type_id** | [**string[]**](../Model/string.md)| Type of the customer for a campaign product. | [optional]
+ **type_id** | [**string[]**](../Model/string.md)| Type of the customer for a campaign product. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). | [optional]
  **store_id** | **string**| Parameter filters all campaign products from [store](#tag/Stores) by store ID. | [optional]
  **value_type_id** | **int**| Type of value (1 - percentage discount value, 2 - final price). | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **valid_from** | **string**| Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
  **valid_to** | **string**| Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **campaign_id** | **string**| The unique ID of the campaign in CareCloud. The list of campaigns is available in [GET /campaigns](https://carecloud.readme.io/reference/getcampaigns). | [optional]
+ **include_property_records** | **bool**| If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value | [optional]
 
 ### Return type
 

@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 Assign free card
 
-Assign a free card in order to the customer.
+Assign a free card in order to the customer. The method is currently limited. You can assign one card of a certain type to one customer. In case of your project allows customers with multiple cards of one type, please use [PUT /cards](https://carecloud.readme.io/reference/putcard)
 
 ### Example
 ```php

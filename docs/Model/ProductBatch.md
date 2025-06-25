@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **property_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of an additional properties. | [optional] 
 **prices** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Price[]**](Price.md) |  | [optional] 
 **tags** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]**](Tag.md) | List of tags assigned to the product. | [optional] 
+**state** | **int** | State of the product. If not set, the product is synchronized as active(&#x60;state&#x3D;1&#x60;). *Possible values are: 0 - deleted / 1 - active* | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

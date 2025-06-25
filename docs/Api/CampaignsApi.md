@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCampaigns**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaigns200Response getCampaigns($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaigns200Response getCampaigns($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $external_id)
 
 Collection of campaigns
 
@@ -100,9 +100,10 @@ $offset = 0; // int | The number of records from a collection to skip. Default v
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
+$external_id = "external_id_example"; // string | The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn't need to be necessary unique. Usage of other parameter could be required to return more specific results.
 
 try {
-    $result = $apiInstance->getCampaigns($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
+    $result = $apiInstance->getCampaigns($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $external_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignsApi->getCampaigns: ', $e->getMessage(), PHP_EOL;
@@ -120,6 +121,7 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
+ **external_id** | **string**| The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. | [optional]
 
 ### Return type
 

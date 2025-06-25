@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 Create a batch of products
 
-Batch process helps to add multiple products in one request.<br/>  ⚠️ If a product already exists, an update is applied. Missing parameters in update will be ignored and will not change. Erasing values is not possible<br/> ⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+Batch process helps to add multiple products in one request.  ⚠️ If a product already exists, an update is applied. Missing parameters in update will be ignored and will not change. Erasing values is not possible. ⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php

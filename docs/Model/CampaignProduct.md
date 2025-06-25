@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **display_in** | **string[]** | List of possible display places. | [optional] 
 **type_id** | **string** | Type of a campaign product. | 
 **presentation_data** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\CampaignPresentationData**](CampaignPresentationData.md) |  | 
+**campaign_product_property_records** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | List of campaign product property records. | [optional] 
 **last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the card. *Possible values are: 0 - blocked / 1 - active* | [optional] 
 

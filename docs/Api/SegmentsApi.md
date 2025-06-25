@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getSegmentGroups**](SegmentsApi.md#getsegmentgroups) | **GET** /segment-groups | Get all segment groups
 [**getSegments**](SegmentsApi.md#getsegments) | **GET** /segments | Get all segments
 [**getSubSegmentRecords**](SegmentsApi.md#getsubsegmentrecords) | **GET** /segments/{segment_id}/segment-records | Get a collection of segment records
+[**postSegment**](SegmentsApi.md#postsegment) | **POST** /segments | Create an empty segment
 [**postSegmentAddCustomer**](SegmentsApi.md#postsegmentaddcustomer) | **POST** /segments/{segment_id}/actions/add-customer | Add customer to a segment
 [**postSegmentRemoveCustomer**](SegmentsApi.md#postsegmentremovecustomer) | **POST** /segments/{segment_id}/actions/remove-customer | Remove customer from a segment
 
@@ -133,7 +134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSegmentGroups**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSegmentGroups200Response getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetSegmentGroups200Response getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
 
 Get all segment groups
 
@@ -164,9 +165,10 @@ $offset = 0; // int | The number of records from a collection to skip. Default v
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Name of the segment group.
+$text_id = "text_id_example"; // string | You can filter resource results depending on his text ID.
 
 try {
-    $result = $apiInstance->getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name);
+    $result = $apiInstance->getSegmentGroups($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SegmentsApi->getSegmentGroups: ', $e->getMessage(), PHP_EOL;
@@ -184,6 +186,7 @@ Name | Type | Description  | Notes
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Name of the segment group. | [optional]
+ **text_id** | **string**| You can filter resource results depending on his text ID. | [optional]
 
 ### Return type
 
@@ -326,6 +329,66 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postSegment**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostSegments201Response postSegment($body, $accept_language)
+
+Create an empty segment
+
+Create an empty segment.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SegmentsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentsBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\SegmentsBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->postSegment($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SegmentsApi->postSegment: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\SegmentsBody**](../Model/SegmentsBody.md)|  |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostSegments201Response**](../Model/PostSegments201Response.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

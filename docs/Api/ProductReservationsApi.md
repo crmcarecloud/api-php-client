@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductReservations**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservations200Response getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservations200Response getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code, $include_reservation_progress_history)
 
 Get all product reservations
 
@@ -107,9 +107,10 @@ $store_id = "store_id_example"; // string | The unique ID of the store in CareCl
 $reservation_state = 56; // int | Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_*
 $external_reservation_list_type_id = "external_reservation_list_type_id_example"; // string | Every reservation can have more than one external code depends of the business requirements. This parameter allows to pick from witch list of external codes you want to choose. If set, `external_reservation_code` has to be present in request too.
 $external_reservation_code = "external_reservation_code_example"; // string | Code of the reservation from external system (cash-desk, web-shop, production system, others). If set, `external_reservation_list_type_id` has to be present in request too.
+$include_reservation_progress_history = true; // bool | If true, the response will contain information about the reservation progress history. If false, or not set the response will not return this structure.
 
 try {
-    $result = $apiInstance->getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code);
+    $result = $apiInstance->getProductReservations($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $store_id, $reservation_state, $external_reservation_list_type_id, $external_reservation_code, $include_reservation_progress_history);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductReservationsApi->getProductReservations: ', $e->getMessage(), PHP_EOL;
@@ -131,6 +132,7 @@ Name | Type | Description  | Notes
  **reservation_state** | **int**| Current state of the product reservation. *Possible values: 0 - Canceled / 1 - Entered / 2 - Accepted / 3 - Ready / 4 - Delivered / 5 - In progress / 6 - Not Picked up / 7 - Ordered / 8 - Being solved /_* | [optional]
  **external_reservation_list_type_id** | **string**| Every reservation can have more than one external code depends of the business requirements. This parameter allows to pick from witch list of external codes you want to choose. If set, &#x60;external_reservation_code&#x60; has to be present in request too. | [optional]
  **external_reservation_code** | **string**| Code of the reservation from external system (cash-desk, web-shop, production system, others). If set, &#x60;external_reservation_list_type_id&#x60; has to be present in request too. | [optional]
+ **include_reservation_progress_history** | **bool**| If true, the response will contain information about the reservation progress history. If false, or not set the response will not return this structure. | [optional]
 
 ### Return type
 

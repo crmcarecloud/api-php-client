@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**idcampaign** | **string** | The unique ID of the campaign. | [optional] 
+**idcampaign** | **string** | The unique ID of the campaign.  ⚠️ This parameter is deprecated, please use &#x60;campaign_id&#x60; instead. Please be aware this parameter can be referred in different endpoints as &#x60;campaign_id&#x60;. | [optional] 
+**campaign_id** | **string** | The unique ID of the campaign. | [optional] 
 **external_id** | **string** | The external ID of the campaign. | [optional] 
 **parent_id** | **string** | ID of the parent campaign. | [optional] 
 **name** | **string** | Name of the campaign. | 

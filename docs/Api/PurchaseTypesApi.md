@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getPurchaseTypes**](PurchaseTypesApi.md#getpurchasetypes) | **GET** /purchase-types | Get all purchase types
 
 # **getPurchaseTypes**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetPurchaseTypes200Response getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetPurchaseTypes200Response getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id)
 
 Get all purchase types
 
@@ -37,9 +37,10 @@ $count = 100; // int | The number of records to return in API response. <br/>⚠
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
+$text_id = "text_id_example"; // string | You can filter resource results depending on his text ID.
 
 try {
-    $result = $apiInstance->getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction);
+    $result = $apiInstance->getPurchaseTypes($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PurchaseTypesApi->getPurchaseTypes: ', $e->getMessage(), PHP_EOL;
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
+ **text_id** | **string**| You can filter resource results depending on his text ID. | [optional]
 
 ### Return type
 
