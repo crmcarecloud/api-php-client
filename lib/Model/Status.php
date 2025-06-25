@@ -71,6 +71,7 @@ class Status implements ModelInterface, ArrayAccess
         'qualification_type' => 'int',
         'discount' => 'int',
         'overall_discount_on_discounted_purchase_items' => 'bool',
+        'text_id' => 'string',
         'last_change' => 'string'
     ];
 
@@ -94,6 +95,7 @@ class Status implements ModelInterface, ArrayAccess
         'qualification_type' => null,
         'discount' => null,
         'overall_discount_on_discounted_purchase_items' => null,
+        'text_id' => null,
         'last_change' => null
     ];
 
@@ -138,6 +140,7 @@ class Status implements ModelInterface, ArrayAccess
         'qualification_type' => 'qualification_type',
         'discount' => 'discount',
         'overall_discount_on_discounted_purchase_items' => 'overall_discount_on_discounted_purchase_items',
+        'text_id' => 'text_id',
         'last_change' => 'last_change'
     ];
 
@@ -161,6 +164,7 @@ class Status implements ModelInterface, ArrayAccess
         'qualification_type' => 'setQualificationType',
         'discount' => 'setDiscount',
         'overall_discount_on_discounted_purchase_items' => 'setOverallDiscountOnDiscountedPurchaseItems',
+        'text_id' => 'setTextId',
         'last_change' => 'setLastChange'
     ];
 
@@ -184,6 +188,7 @@ class Status implements ModelInterface, ArrayAccess
         'qualification_type' => 'getQualificationType',
         'discount' => 'getDiscount',
         'overall_discount_on_discounted_purchase_items' => 'getOverallDiscountOnDiscountedPurchaseItems',
+        'text_id' => 'getTextId',
         'last_change' => 'getLastChange'
     ];
 
@@ -259,6 +264,7 @@ class Status implements ModelInterface, ArrayAccess
         $this->container['qualification_type'] = isset($data['qualification_type']) ? $data['qualification_type'] : null;
         $this->container['discount'] = isset($data['discount']) ? $data['discount'] : null;
         $this->container['overall_discount_on_discounted_purchase_items'] = isset($data['overall_discount_on_discounted_purchase_items']) ? $data['overall_discount_on_discounted_purchase_items'] : null;
+        $this->container['text_id'] = isset($data['text_id']) ? $data['text_id'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
 
@@ -639,6 +645,30 @@ class Status implements ModelInterface, ArrayAccess
     public function setOverallDiscountOnDiscountedPurchaseItems($overall_discount_on_discounted_purchase_items)
     {
         $this->container['overall_discount_on_discounted_purchase_items'] = $overall_discount_on_discounted_purchase_items;
+
+        return $this;
+    }
+
+    /**
+     * Gets text_id
+     *
+     * @return string
+     */
+    public function getTextId()
+    {
+        return $this->container['text_id'];
+    }
+
+    /**
+     * Sets text_id
+     *
+     * @param string $text_id Text identification of the status.
+     *
+     * @return $this
+     */
+    public function setTextId($text_id)
+    {
+        $this->container['text_id'] = $text_id;
 
         return $this;
     }

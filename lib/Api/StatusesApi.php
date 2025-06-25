@@ -424,14 +424,15 @@ class StatusesApi
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string $text_id You can filter resource results depending on his text ID. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetStatuses200Response
      */
-    public function getStatuses($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function getStatuses($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
-        list($response) = $this->getStatusesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction);
+        list($response) = $this->getStatusesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id);
         return $response;
     }
 
@@ -445,15 +446,16 @@ class StatusesApi
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string $text_id You can filter resource results depending on his text ID. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetStatuses200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStatusesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function getStatusesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetStatuses200Response';
-        $request = $this->getStatusesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
+        $request = $this->getStatusesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -572,13 +574,14 @@ class StatusesApi
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string $text_id You can filter resource results depending on his text ID. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStatusesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function getStatusesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
-        return $this->getStatusesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction)
+        return $this->getStatusesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -596,14 +599,15 @@ class StatusesApi
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $text_id You can filter resource results depending on his text ID. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStatusesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function getStatusesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetStatuses200Response';
-        $request = $this->getStatusesRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
+        $request = $this->getStatusesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -650,11 +654,12 @@ class StatusesApi
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string $text_id You can filter resource results depending on his text ID. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getStatusesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    protected function getStatusesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
 
         $resourcePath = '/statuses';
@@ -679,6 +684,10 @@ class StatusesApi
         // query params
         if ($sort_direction !== null) {
             $queryParams['sort_direction'] = ObjectSerializer::toQueryValue($sort_direction, null);
+        }
+        // query params
+        if ($text_id !== null) {
+            $queryParams['text_id'] = ObjectSerializer::toQueryValue($text_id, null);
         }
         // header params
         if ($accept_language !== null) {

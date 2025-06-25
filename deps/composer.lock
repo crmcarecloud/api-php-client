@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/crmcarecloud/api-spec.git",
-                "reference": "7c614fa19e4840c0a87990aeaa1d7194250afa3a"
+                "reference": "2eacd2f9ebec9620869dc5f8b1a12863438a3609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/crmcarecloud/api-spec/zipball/7c614fa19e4840c0a87990aeaa1d7194250afa3a",
-                "reference": "7c614fa19e4840c0a87990aeaa1d7194250afa3a",
+                "url": "https://api.github.com/repos/crmcarecloud/api-spec/zipball/2eacd2f9ebec9620869dc5f8b1a12863438a3609",
+                "reference": "2eacd2f9ebec9620869dc5f8b1a12863438a3609",
                 "shasum": ""
             },
             "default-branch": true,
@@ -27,7 +27,7 @@
                 "issues": "https://github.com/crmcarecloud/api-spec/issues",
                 "source": "https://github.com/crmcarecloud/api-spec/tree/master"
             },
-            "time": "2025-06-24T13:39:16+00:00"
+            "time": "2025-06-25T11:57:39+00:00"
         }
     ],
     "packages-dev": [],
