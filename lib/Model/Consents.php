@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomAgreements
+ * Consents
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * CustomAgreements Class Doc Comment
+ * Consents Class Doc Comment
  *
  * @category Class
  * @description Consents.
@@ -40,7 +40,7 @@ use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomAgreements implements ModelInterface, ArrayAccess
+class Consents implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class CustomAgreements implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CustomAgreements';
+    protected static $swaggerModelName = 'Consents';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class CustomAgreements implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'agreement_id' => 'string',
-        'agreement_value' => 'int'
+        'consent_id' => 'string',
+        'consent_value' => 'int',
+        'last_change' => 'string'
     ];
 
     /**
@@ -67,8 +68,9 @@ class CustomAgreements implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'agreement_id' => null,
-        'agreement_value' => null
+        'consent_id' => null,
+        'consent_value' => null,
+        'last_change' => null
     ];
 
     /**
@@ -98,8 +100,9 @@ class CustomAgreements implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'agreement_id' => 'agreement_id',
-        'agreement_value' => 'agreement_value'
+        'consent_id' => 'consent_id',
+        'consent_value' => 'consent_value',
+        'last_change' => 'last_change'
     ];
 
     /**
@@ -108,8 +111,9 @@ class CustomAgreements implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'agreement_id' => 'setAgreementId',
-        'agreement_value' => 'setAgreementValue'
+        'consent_id' => 'setConsentId',
+        'consent_value' => 'setConsentValue',
+        'last_change' => 'setLastChange'
     ];
 
     /**
@@ -118,8 +122,9 @@ class CustomAgreements implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'agreement_id' => 'getAgreementId',
-        'agreement_value' => 'getAgreementValue'
+        'consent_id' => 'getConsentId',
+        'consent_value' => 'getConsentValue',
+        'last_change' => 'getLastChange'
     ];
 
     /**
@@ -163,21 +168,21 @@ class CustomAgreements implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const AGREEMENT_VALUE_0 = 0;
-const AGREEMENT_VALUE_1 = 1;
-const AGREEMENT_VALUE_2 = 2;
+    const CONSENT_VALUE_0 = 0;
+const CONSENT_VALUE_1 = 1;
+const CONSENT_VALUE_2 = 2;
 
     /**
      * Gets allowable values of the enum
      *
      * @return array<int,int|string>
      */
-    public function getAgreementValueAllowableValues()
+    public function getConsentValueAllowableValues()
     {
         return [
-            self::AGREEMENT_VALUE_0,
-self::AGREEMENT_VALUE_1,
-self::AGREEMENT_VALUE_2,        ];
+            self::CONSENT_VALUE_0,
+self::CONSENT_VALUE_1,
+self::CONSENT_VALUE_2,        ];
     }
 
     /**
@@ -195,8 +200,9 @@ self::AGREEMENT_VALUE_2,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['agreement_id'] = isset($data['agreement_id']) ? $data['agreement_id'] : null;
-        $this->container['agreement_value'] = isset($data['agreement_value']) ? $data['agreement_value'] : null;
+        $this->container['consent_id'] = isset($data['consent_id']) ? $data['consent_id'] : null;
+        $this->container['consent_value'] = isset($data['consent_value']) ? $data['consent_value'] : null;
+        $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
 
     /**
@@ -208,16 +214,16 @@ self::AGREEMENT_VALUE_2,        ];
     {
         $invalidProperties = [];
 
-        if ($this->container['agreement_id'] === null) {
-            $invalidProperties[] = "'agreement_id' can't be null";
+        if ($this->container['consent_id'] === null) {
+            $invalidProperties[] = "'consent_id' can't be null";
         }
-        if ($this->container['agreement_value'] === null) {
-            $invalidProperties[] = "'agreement_value' can't be null";
+        if ($this->container['consent_value'] === null) {
+            $invalidProperties[] = "'consent_value' can't be null";
         }
-        $allowedValues = $this->getAgreementValueAllowableValues();
-        if (!is_null($this->container['agreement_value']) && !in_array($this->container['agreement_value'], $allowedValues, true)) {
+        $allowedValues = $this->getConsentValueAllowableValues();
+        if (!is_null($this->container['consent_value']) && !in_array($this->container['consent_value'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'agreement_value', must be one of '%s'",
+                "invalid value for 'consent_value', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -238,58 +244,82 @@ self::AGREEMENT_VALUE_2,        ];
 
 
     /**
-     * Gets agreement_id
+     * Gets consent_id
      *
      * @return string
      */
-    public function getAgreementId()
+    public function getConsentId()
     {
-        return $this->container['agreement_id'];
+        return $this->container['consent_id'];
     }
 
     /**
-     * Sets agreement_id
+     * Sets consent_id
      *
-     * @param string $agreement_id The unique ID of the consent in CareCloud from [consents](https://carecloud.readme.io/reference/getconsents) resource.
+     * @param string $consent_id The unique ID of the consent in CareCloud from [consents](https://carecloud.readme.io/reference/getconsents) resource.
      *
      * @return $this
      */
-    public function setAgreementId($agreement_id)
+    public function setConsentId($consent_id)
     {
-        $this->container['agreement_id'] = $agreement_id;
+        $this->container['consent_id'] = $consent_id;
 
         return $this;
     }
 
     /**
-     * Gets agreement_value
+     * Gets consent_value
      *
      * @return int
      */
-    public function getAgreementValue()
+    public function getConsentValue()
     {
-        return $this->container['agreement_value'];
+        return $this->container['consent_value'];
     }
 
     /**
-     * Sets agreement_value
+     * Sets consent_value
      *
-     * @param int $agreement_value Value of the specific consent. *Possible values: 0 - no, consent canceled / 1 - yes, consent given / 2 - consent not set*
+     * @param int $consent_value Value of the specific consent. *Possible values: 0 - no, consent canceled / 1 - yes, consent given / 2 - consent not set*
      *
      * @return $this
      */
-    public function setAgreementValue($agreement_value)
+    public function setConsentValue($consent_value)
     {
-        $allowedValues = $this->getAgreementValueAllowableValues();
-        if (!in_array($agreement_value, $allowedValues, true)) {
+        $allowedValues = $this->getConsentValueAllowableValues();
+        if (!in_array($consent_value, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'agreement_value', must be one of '%s'",
+                    "Invalid value for 'consent_value', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['agreement_value'] = $agreement_value;
+        $this->container['consent_value'] = $consent_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_change
+     *
+     * @return string
+     */
+    public function getLastChange()
+    {
+        return $this->container['last_change'];
+    }
+
+    /**
+     * Sets last_change
+     *
+     * @param string $last_change Date and time of the last change of the record. *(YYYY-MM-DD HH:MM:SS)*
+     *
+     * @return $this
+     */
+    public function setLastChange($last_change)
+    {
+        $this->container['last_change'] = $last_change;
 
         return $this;
     }

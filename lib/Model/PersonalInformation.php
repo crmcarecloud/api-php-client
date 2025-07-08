@@ -70,7 +70,8 @@ class PersonalInformation implements ModelInterface, ArrayAccess
         'store_id' => 'string',
         'photo_url' => 'string',
         'address' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Address',
-        'agreement' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement'
+        'agreement' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement',
+        'consents' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Consents[]'
     ];
 
     /**
@@ -92,7 +93,8 @@ class PersonalInformation implements ModelInterface, ArrayAccess
         'store_id' => null,
         'photo_url' => null,
         'address' => null,
-        'agreement' => null
+        'agreement' => null,
+        'consents' => null
     ];
 
     /**
@@ -135,7 +137,8 @@ class PersonalInformation implements ModelInterface, ArrayAccess
         'store_id' => 'store_id',
         'photo_url' => 'photo_url',
         'address' => 'address',
-        'agreement' => 'agreement'
+        'agreement' => 'agreement',
+        'consents' => 'consents'
     ];
 
     /**
@@ -157,7 +160,8 @@ class PersonalInformation implements ModelInterface, ArrayAccess
         'store_id' => 'setStoreId',
         'photo_url' => 'setPhotoUrl',
         'address' => 'setAddress',
-        'agreement' => 'setAgreement'
+        'agreement' => 'setAgreement',
+        'consents' => 'setConsents'
     ];
 
     /**
@@ -179,7 +183,8 @@ class PersonalInformation implements ModelInterface, ArrayAccess
         'store_id' => 'getStoreId',
         'photo_url' => 'getPhotoUrl',
         'address' => 'getAddress',
-        'agreement' => 'getAgreement'
+        'agreement' => 'getAgreement',
+        'consents' => 'getConsents'
     ];
 
     /**
@@ -273,6 +278,7 @@ self::GENDER_5,        ];
         $this->container['photo_url'] = isset($data['photo_url']) ? $data['photo_url'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['agreement'] = isset($data['agreement']) ? $data['agreement'] : null;
+        $this->container['consents'] = isset($data['consents']) ? $data['consents'] : null;
     }
 
     /**
@@ -651,6 +657,30 @@ self::GENDER_5,        ];
     public function setAgreement($agreement)
     {
         $this->container['agreement'] = $agreement;
+
+        return $this;
+    }
+
+    /**
+     * Gets consents
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Consents[]
+     */
+    public function getConsents()
+    {
+        return $this->container['consents'];
+    }
+
+    /**
+     * Sets consents
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Consents[] $consents The list of all customer consents. The list of consents is available in the [Consents resource](https://carecloud.readme.io/reference/getconsents) If both parameters are set (`agreement` and `consents`), the `consents` has priority while creating or updating the record.
+     *
+     * @return $this
+     */
+    public function setConsents($consents)
+    {
+        $this->container['consents'] = $consents;
 
         return $this;
     }

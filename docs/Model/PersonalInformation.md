@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **photo_url** | **string** | URL address of the customer photo. If customer has no photo, this parameter is not send. | [optional] 
 **address** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Address**](Address.md) |  | [optional] 
 **agreement** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement**](Agreement.md) |  | [optional] 
+**consents** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Consents[]**](Consents.md) | The list of all customer consents. The list of consents is available in the [Consents resource](https://carecloud.readme.io/reference/getconsents) If both parameters are set (&#x60;agreement&#x60; and &#x60;consents&#x60;), the &#x60;consents&#x60; has priority while creating or updating the record. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
