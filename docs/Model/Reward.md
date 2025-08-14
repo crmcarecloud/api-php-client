@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **points_cost** | **float** | Number of points, that will be spent by the voucher redemption. | [optional] 
 **valid_time_from** | **string** | Time the reward is valid from. *(HH:MM:SS)* | [optional] 
 **valid_time_to** | **string** | Time the reward is valid to. *(HH:MM:SS)* | [optional] 
-**reward_group** | **int** | The unique ID of the reward group. *Possible values: 0 - party time voucher / 1 - catalog voucher / 2 - campaign voucher/ 4 - simple reward* | 
+**reward_group** | **int** | The unique ID of the reward group. *Possible values: 0 - party time voucher / 1 - catalog voucher / 2 - campaign voucher/ 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* | 
 **reward_type_id** | **string** | The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. | [optional] 
 **store_list** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]**](Store.md) | List of the stores where the reward can be redeemed. | 
 **additional_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | Additional properties. | [optional] 

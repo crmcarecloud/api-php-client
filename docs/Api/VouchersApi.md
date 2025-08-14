@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getVouchers**](VouchersApi.md#getvouchers) | **GET** /vouchers | Get all vouchers
 [**postBulkVouchers**](VouchersApi.md#postbulkvouchers) | **POST** /vouchers/batch | Create a batch of vouchers.
 [**postVoucherApply**](VouchersApi.md#postvoucherapply) | **POST** /vouchers/{voucher_id}/actions/apply-voucher | Application of a voucher
+[**postVoucherGiftCardBalance**](VouchersApi.md#postvouchergiftcardbalance) | **POST** /vouchers/actions/gift-card-balance | Gift Card Balance
 [**putVoucher**](VouchersApi.md#putvoucher) | **PUT** /vouchers/{voucher_id} | Update a voucher
 
 # **deleteVoucher**
@@ -379,6 +380,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postVoucherGiftCardBalance**
+> \CrmCareCloud\Webservice\RestApi\Client\Model\PostVoucherGiftCardBalance200Response postVoucherGiftCardBalance($body, $accept_language)
+
+Gift Card Balance
+
+The endpoint returns information about the balance of the Gift Card (Multi purpose reward).
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: basicAuth
+$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+    // Configure HTTP bearer authorization: bearerAuth
+    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\VouchersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGiftcardbalanceBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGiftcardbalanceBody | 
+$accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
+
+try {
+    $result = $apiInstance->postVoucherGiftCardBalance($body, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling VouchersApi->postVoucherGiftCardBalance: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\ActionsGiftcardbalanceBody**](../Model/ActionsGiftcardbalanceBody.md)|  |
+ **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
+
+### Return type
+
+[**\CrmCareCloud\Webservice\RestApi\Client\Model\PostVoucherGiftCardBalance200Response**](../Model/PostVoucherGiftCardBalance200Response.md)
 
 ### Authorization
 

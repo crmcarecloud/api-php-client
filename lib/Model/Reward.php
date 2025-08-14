@@ -658,7 +658,7 @@ self::STATE_2,        ];
     /**
      * Sets reward_group
      *
-     * @param int $reward_group The unique ID of the reward group. *Possible values: 0 - party time voucher / 1 - catalog voucher / 2 - campaign voucher/ 4 - simple reward*
+     * @param int $reward_group The unique ID of the reward group. *Possible values: 0 - party time voucher / 1 - catalog voucher / 2 - campaign voucher/ 4 - simple reward / 5 - gift reward (Multi Purpose Reward)*
      *
      * @return $this
      */

@@ -229,6 +229,7 @@ const STATUS_MINUS_1 = -1;
 const STATUS_MINUS_2 = -2;
 const STATUS_2 = 2;
 const STATUS_4 = 4;
+const STATUS_5 = 5;
 const COMMUNICATION_CHANNEL_ID_1 = 1;
 const COMMUNICATION_CHANNEL_ID_2 = 2;
 const COMMUNICATION_CHANNEL_ID_4 = 4;
@@ -247,7 +248,8 @@ self::STATUS_1,
 self::STATUS_MINUS_1,
 self::STATUS_MINUS_2,
 self::STATUS_2,
-self::STATUS_4,        ];
+self::STATUS_4,
+self::STATUS_5,        ];
     }
     /**
      * Gets allowable values of the enum
@@ -380,7 +382,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets status
      *
-     * @param int $status The status ID of the message. *Possible values are: 0 - message was not send / 1 - message was send successfully / -1 - message was not received (it was returned) / -2 - message was not received (soft bounce) / 2 - an error occurred while sending / 4 - customer has no agreements (GDPR)*
+     * @param int $status The status ID of the message. *Possible values are: 0 - message was not send / 1 - message was send successfully / -1 - message was not received (it was returned) / -2 - message was not received (soft bounce) / 2 - an error occurred while sending / 4 - customer has no agreements (GDPR) / 5 -Scheduled for retry (the message was not delivered because of an error and will be sent repeatedly. If not successful, the status won't change.)*
      *
      * @return $this
      */

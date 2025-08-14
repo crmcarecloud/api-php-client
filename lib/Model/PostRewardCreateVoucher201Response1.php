@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentRecap
+ * PostRewardCreateVoucher201Response1
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ use \ArrayAccess;
 use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
 
 /**
- * PaymentRecap Class Doc Comment
+ * PostRewardCreateVoucher201Response1 Class Doc Comment
  *
  * @category Class
- * @description Alternative payment methods summary. ⚠️ Ensure that all relevant parameters received in the response from the &#x60;POST /accept-payment&#x60; endpoint are correctly transferred to the &#x60;payment_recap&#x60; structure. This is essential for accurate calculation of rewards, discounts, and other customer benefits.
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PaymentRecap implements ModelInterface, ArrayAccess
+class PostRewardCreateVoucher201Response1 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +48,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PaymentRecap';
+    protected static $swaggerModelName = 'PostRewardCreateVoucher201Response_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +56,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'credit_points' => 'float',
-        'amount_for_credit' => 'float',
-        'vouchers' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[]',
-        'recommended_discounts' => '\CrmCareCloud\Webservice\RestApi\Client\Model\DiscountItem[]'
+        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PostRewardCreateVoucher201Response1Data'
     ];
 
     /**
@@ -69,10 +65,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'credit_points' => 'float',
-        'amount_for_credit' => 'float',
-        'vouchers' => null,
-        'recommended_discounts' => null
+        'data' => null
     ];
 
     /**
@@ -102,10 +95,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'credit_points' => 'credit_points',
-        'amount_for_credit' => 'amount_for_credit',
-        'vouchers' => 'vouchers',
-        'recommended_discounts' => 'recommended_discounts'
+        'data' => 'data'
     ];
 
     /**
@@ -114,10 +104,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'credit_points' => 'setCreditPoints',
-        'amount_for_credit' => 'setAmountForCredit',
-        'vouchers' => 'setVouchers',
-        'recommended_discounts' => 'setRecommendedDiscounts'
+        'data' => 'setData'
     ];
 
     /**
@@ -126,10 +113,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'credit_points' => 'getCreditPoints',
-        'amount_for_credit' => 'getAmountForCredit',
-        'vouchers' => 'getVouchers',
-        'recommended_discounts' => 'getRecommendedDiscounts'
+        'data' => 'getData'
     ];
 
     /**
@@ -190,10 +174,7 @@ class PaymentRecap implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['credit_points'] = isset($data['credit_points']) ? $data['credit_points'] : null;
-        $this->container['amount_for_credit'] = isset($data['amount_for_credit']) ? $data['amount_for_credit'] : null;
-        $this->container['vouchers'] = isset($data['vouchers']) ? $data['vouchers'] : null;
-        $this->container['recommended_discounts'] = isset($data['recommended_discounts']) ? $data['recommended_discounts'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -221,97 +202,25 @@ class PaymentRecap implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets credit_points
+     * Gets data
      *
-     * @return float
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PostRewardCreateVoucher201Response1Data
      */
-    public function getCreditPoints()
+    public function getData()
     {
-        return $this->container['credit_points'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets credit_points
+     * Sets data
      *
-     * @param float $credit_points Amount of the points used for payment of the purchase.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PostRewardCreateVoucher201Response1Data $data data
      *
      * @return $this
      */
-    public function setCreditPoints($credit_points)
+    public function setData($data)
     {
-        $this->container['credit_points'] = $credit_points;
-
-        return $this;
-    }
-
-    /**
-     * Gets amount_for_credit
-     *
-     * @return float
-     */
-    public function getAmountForCredit()
-    {
-        return $this->container['amount_for_credit'];
-    }
-
-    /**
-     * Sets amount_for_credit
-     *
-     * @param float $amount_for_credit Amount of the credits used for payment of the purchase.
-     *
-     * @return $this
-     */
-    public function setAmountForCredit($amount_for_credit)
-    {
-        $this->container['amount_for_credit'] = $amount_for_credit;
-
-        return $this;
-    }
-
-    /**
-     * Gets vouchers
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[]
-     */
-    public function getVouchers()
-    {
-        return $this->container['vouchers'];
-    }
-
-    /**
-     * Sets vouchers
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PaymentVoucher[] $vouchers List of used vouchers/rewards for the payment of purchases.
-     *
-     * @return $this
-     */
-    public function setVouchers($vouchers)
-    {
-        $this->container['vouchers'] = $vouchers;
-
-        return $this;
-    }
-
-    /**
-     * Gets recommended_discounts
-     *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\DiscountItem[]
-     */
-    public function getRecommendedDiscounts()
-    {
-        return $this->container['recommended_discounts'];
-    }
-
-    /**
-     * Sets recommended_discounts
-     *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\DiscountItem[] $recommended_discounts List of applied discounts where the service did not use the voucher/reward.
-     *
-     * @return $this
-     */
-    public function setRecommendedDiscounts($recommended_discounts)
-    {
-        $this->container['recommended_discounts'] = $recommended_discounts;
+        $this->container['data'] = $data;
 
         return $this;
     }

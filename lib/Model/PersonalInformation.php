@@ -674,7 +674,7 @@ self::GENDER_5,        ];
     /**
      * Sets consents
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Consents[] $consents The list of all customer consents. The list of consents is available in the [Consents resource](https://carecloud.readme.io/reference/getconsents) If both parameters are set (`agreement` and `consents`), the `consents` has priority while creating or updating the record.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Consents[] $consents The list of all customer consents. The list of consents is available in the [Consents resource](https://carecloud.readme.io/reference/getconsents) This parameter replacing parameter `agreement`. If both parameters are set (`agreement` and `consents`), the `consents` has priority while creating or updating the record.
      *
      * @return $this
      */
