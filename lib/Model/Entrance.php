@@ -497,7 +497,7 @@ self::STATE_1,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -521,7 +521,7 @@ self::STATE_1,        ];
     /**
      * Sets resort_name
      *
-     * @param string $resort_name Name of the resort where is an entrance charged.
+     * @param string $resort_name Name of the resort where the entrance is charged.
      *
      * @return $this
      */
@@ -569,7 +569,7 @@ self::STATE_1,        ];
     /**
      * Sets external_order_id
      *
-     * @param string $external_order_id ID of an external order creaded in POS system.
+     * @param string $external_order_id ID of an external order created in the POS system.
      *
      * @return $this
      */
@@ -593,7 +593,7 @@ self::STATE_1,        ];
     /**
      * Sets external_entrance_id
      *
-     * @param string $external_entrance_id External ID of the entrance. Structure can be different depends of the POS system, that created the entrance.
+     * @param string $external_entrance_id External ID of the entrance. Structure can be different depending on the POS system that created the entrance.
      *
      * @return $this
      */
@@ -617,7 +617,7 @@ self::STATE_1,        ];
     /**
      * Sets external_turnstile_permission_id
      *
-     * @param string $external_turnstile_permission_id External ID of the permission to open a turnstile. Structure can be different depends of the POS system, that created the permission.
+     * @param string $external_turnstile_permission_id External ID of the permission to open a turnstile. Structure can be different depending on the POS system that created the permission.
      *
      * @return $this
      */
@@ -641,7 +641,7 @@ self::STATE_1,        ];
     /**
      * Sets entrance_type_id
      *
-     * @param int $entrance_type_id Type of the entrance *Possible values are: season ticket - 0/ one day ticket -1/ multiple day ticket - 2*
+     * @param int $entrance_type_id Type of the entrance. *Possible values are: season ticket - 0 / one day ticket - 1 / multiple day ticket - 2*
      *
      * @return $this
      */
@@ -698,7 +698,7 @@ self::STATE_1,        ];
     /**
      * Sets card_id
      *
-     * @param string $card_id ID of card used for charge entrance.
+     * @param string $card_id The unique ID of the card used to charge the entrance. [GET /cards](https://carecloud.readme.io/reference/getcards)
      *
      * @return $this
      */
@@ -722,7 +722,7 @@ self::STATE_1,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time when entrance was created in CareCloud. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Timestamp of the entrance creation in CareCloud. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -746,7 +746,7 @@ self::STATE_1,        ];
     /**
      * Sets cancelled_at
      *
-     * @param string $cancelled_at Date and time when entrance was cancelled in CareCloud. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $cancelled_at Timestamp of the entrance cancellation in CareCloud. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -794,7 +794,7 @@ self::STATE_1,        ];
     /**
      * Sets product_ids
      *
-     * @param string $product_ids The unique ID of the product.
+     * @param string $product_ids The unique ID of the product. [GET /products](https://carecloud.readme.io/reference/getproducts)
      *
      * @return $this
      */
@@ -818,7 +818,7 @@ self::STATE_1,        ];
     /**
      * Sets charge_date
      *
-     * @param string $charge_date Date and time when entrance will be/was charged to the POS system. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $charge_date Timestamp when the entrance will be or was charged to the POS system. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -842,7 +842,7 @@ self::STATE_1,        ];
     /**
      * Sets valid_from
      *
-     * @param string $valid_from Date of the first day when customer can use entrance. *(YYYY-MM-DD)*
+     * @param string $valid_from Date of the first day when the customer can use the entrance in ISO-8601 format (`YYYY-MM-DD`).
      *
      * @return $this
      */
@@ -866,7 +866,7 @@ self::STATE_1,        ];
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Date of the last day when customer can use entrance. *(YYYY-MM-DD)*
+     * @param string $valid_to Date of the last day when the customer can use the entrance in ISO-8601 format (`YYYY-MM-DD`).
      *
      * @return $this
      */
@@ -890,7 +890,7 @@ self::STATE_1,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -914,7 +914,7 @@ self::STATE_1,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the event type. *Possible values are: 0 - cancelled / 1- active*
+     * @param int $state State of the entrance. *Possible values are: 0 - cancelled / 1 - active*
      *
      * @return $this
      */

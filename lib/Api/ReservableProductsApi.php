@@ -420,14 +420,14 @@ class ReservableProductsApi
      * Get all reservable products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $code Code of the product. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -445,14 +445,14 @@ class ReservableProductsApi
      * Get all reservable products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $code Code of the product. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -576,14 +576,14 @@ class ReservableProductsApi
      * Get all reservable products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $code Code of the product. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -604,14 +604,14 @@ class ReservableProductsApi
      * Get all reservable products
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $name Search record by name or a part of the name. (optional)
      * @param  string|null $code Code of the product. (optional)
      * @param  string|null $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -662,14 +662,14 @@ class ReservableProductsApi
      * Create request for operation 'getReservableProducts'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $code Code of the product. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -806,7 +806,7 @@ class ReservableProductsApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -828,7 +828,7 @@ class ReservableProductsApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -956,7 +956,7 @@ class ReservableProductsApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -981,7 +981,7 @@ class ReservableProductsApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -1036,7 +1036,7 @@ class ReservableProductsApi
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsSearchreservableproductsBody $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)

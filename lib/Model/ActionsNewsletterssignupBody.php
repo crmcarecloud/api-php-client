@@ -59,7 +59,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
         'contact' => 'string',
         'customer_source_id' => 'string',
         'agreements' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Agreement',
-        'language_id' => 'string'
+        'language_id' => 'string',
+        'partner_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[]'
     ];
 
     /**
@@ -71,7 +72,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
         'contact' => null,
         'customer_source_id' => null,
         'agreements' => null,
-        'language_id' => null
+        'language_id' => null,
+        'partner_records' => null
     ];
 
     /**
@@ -104,7 +106,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
         'contact' => 'contact',
         'customer_source_id' => 'customer_source_id',
         'agreements' => 'agreements',
-        'language_id' => 'language_id'
+        'language_id' => 'language_id',
+        'partner_records' => 'partner_records'
     ];
 
     /**
@@ -116,7 +119,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
         'contact' => 'setContact',
         'customer_source_id' => 'setCustomerSourceId',
         'agreements' => 'setAgreements',
-        'language_id' => 'setLanguageId'
+        'language_id' => 'setLanguageId',
+        'partner_records' => 'setPartnerRecords'
     ];
 
     /**
@@ -128,7 +132,8 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
         'contact' => 'getContact',
         'customer_source_id' => 'getCustomerSourceId',
         'agreements' => 'getAgreements',
-        'language_id' => 'getLanguageId'
+        'language_id' => 'getLanguageId',
+        'partner_records' => 'getPartnerRecords'
     ];
 
     /**
@@ -193,6 +198,7 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
         $this->container['customer_source_id'] = isset($data['customer_source_id']) ? $data['customer_source_id'] : null;
         $this->container['agreements'] = isset($data['agreements']) ? $data['agreements'] : null;
         $this->container['language_id'] = isset($data['language_id']) ? $data['language_id'] : null;
+        $this->container['partner_records'] = isset($data['partner_records']) ? $data['partner_records'] : null;
     }
 
     /**
@@ -317,6 +323,30 @@ class ActionsNewsletterssignupBody implements ModelInterface, ArrayAccess
     public function setLanguageId($language_id)
     {
         $this->container['language_id'] = $language_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_records
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[]
+     */
+    public function getPartnerRecords()
+    {
+        return $this->container['partner_records'];
+    }
+
+    /**
+     * Sets partner_records
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[] $partner_records List of partners to associate with the signed-up contact. When provided as a non-empty array, partner assignment is based solely on this list. An empty array is treated the same as omitting this field. See the partner assignment rules in the endpoint description for the full precedence logic. [GET /partners](https://carecloud.readme.io/reference/getpartners)
+     *
+     * @return $this
+     */
+    public function setPartnerRecords($partner_records)
+    {
+        $this->container['partner_records'] = $partner_records;
 
         return $this;
     }

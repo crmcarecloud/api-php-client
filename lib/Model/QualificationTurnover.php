@@ -281,7 +281,7 @@ class QualificationTurnover implements ModelInterface, ArrayAccess
     /**
      * Sets due_date
      *
-     * @param string $due_date Date until the turnover conditions need to be fulfilled. If the value is null, the date is unlimited.
+     * @param string $due_date Due date by which the turnover conditions must be fulfilled in ISO-8601 format (`YYYY-MM-DD`). If the value is null, the date is unlimited.
      *
      * @return $this
      */

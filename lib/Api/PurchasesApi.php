@@ -748,15 +748,15 @@ class PurchasesApi
      * Get all purchases
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
@@ -777,15 +777,15 @@ class PurchasesApi
      * Get all purchases
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
@@ -912,15 +912,15 @@ class PurchasesApi
      * Get all purchases
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
@@ -944,15 +944,15 @@ class PurchasesApi
      * Get all purchases
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
      * @param  string|null $type_id Purchase type (optional)
-     * @param  string|null $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool|null $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string|null $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      * @param  bool|null $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
@@ -1006,15 +1006,15 @@ class PurchasesApi
      * Create request for operation 'getPurchases'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
@@ -1166,7 +1166,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1188,7 +1188,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1316,7 +1316,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1341,7 +1341,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -1396,7 +1396,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1530,7 +1530,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1552,7 +1552,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1680,7 +1680,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1705,7 +1705,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -1760,7 +1760,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1894,7 +1894,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1916,7 +1916,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2044,7 +2044,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2069,7 +2069,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -2124,7 +2124,7 @@ class PurchasesApi
      *
      * @param  string $purchase_id The unique ID of the purchase. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2857,7 +2857,7 @@ class PurchasesApi
     /**
      * Operation postPurchaseRecommendedRewards
      *
-     * Best rewards for purchase
+     * Provides a list of rewards and vouchers available for purchase closure
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsRecommendedbestrewardsBody $body body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -2875,7 +2875,7 @@ class PurchasesApi
     /**
      * Operation postPurchaseRecommendedRewardsWithHttpInfo
      *
-     * Best rewards for purchase
+     * Provides a list of rewards and vouchers available for purchase closure
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsRecommendedbestrewardsBody $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -2999,7 +2999,7 @@ class PurchasesApi
     /**
      * Operation postPurchaseRecommendedRewardsAsync
      *
-     * Best rewards for purchase
+     * Provides a list of rewards and vouchers available for purchase closure
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsRecommendedbestrewardsBody $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -3020,7 +3020,7 @@ class PurchasesApi
     /**
      * Operation postPurchaseRecommendedRewardsAsyncWithHttpInfo
      *
-     * Best rewards for purchase
+     * Provides a list of rewards and vouchers available for purchase closure
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsRecommendedbestrewardsBody $body (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)

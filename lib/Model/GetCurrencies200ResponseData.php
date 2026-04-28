@@ -220,7 +220,7 @@ class GetCurrencies200ResponseData implements ModelInterface, ArrayAccess
     /**
      * Sets currencies
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[] $currencies Structure of currency.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Currency[] $currencies List of currencies.
      *
      * @return $this
      */

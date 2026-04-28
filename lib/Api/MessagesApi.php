@@ -420,15 +420,15 @@ class MessagesApi
      * Get all messages
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $contact Email of phone number that was used as a contact in message. (optional)
      * @param  string $communication_channel_id The unique ID of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels). (optional)
-     * @param  string $send_time_from Start date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
-     * @param  string $send_time_to End date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
+     * @param  string $send_time_from Start of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $send_time_to End of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -446,15 +446,15 @@ class MessagesApi
      * Get all messages
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $contact Email of phone number that was used as a contact in message. (optional)
      * @param  string $communication_channel_id The unique ID of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels). (optional)
-     * @param  string $send_time_from Start date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
-     * @param  string $send_time_to End date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
+     * @param  string $send_time_from Start of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $send_time_to End of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -578,15 +578,15 @@ class MessagesApi
      * Get all messages
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $contact Email of phone number that was used as a contact in message. (optional)
      * @param  string $communication_channel_id The unique ID of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels). (optional)
-     * @param  string $send_time_from Start date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
-     * @param  string $send_time_to End date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
+     * @param  string $send_time_from Start of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $send_time_to End of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -607,15 +607,15 @@ class MessagesApi
      * Get all messages
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
      * @param  string|null $contact Email of phone number that was used as a contact in message. (optional)
      * @param  string|null $communication_channel_id The unique ID of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels). (optional)
-     * @param  string|null $send_time_from Start date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
-     * @param  string|null $send_time_to End date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
+     * @param  string|null $send_time_from Start of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $send_time_to End of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -666,15 +666,15 @@ class MessagesApi
      * Create request for operation 'getMessages'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $contact Email of phone number that was used as a contact in message. (optional)
      * @param  string $communication_channel_id The unique ID of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels). (optional)
-     * @param  string $send_time_from Start date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
-     * @param  string $send_time_to End date and time of the time interval. *YYYY-MM-DD HH:MM:SS* (optional)
+     * @param  string $send_time_from Start of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $send_time_to End of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

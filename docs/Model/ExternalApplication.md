@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **external_application_id** | **string** | The unique ID of the client external application. | 
+**text_id** | **string** | The unique text identifier of the external application. | [optional] 
 **name** | **string** | The name of the external application. | 
 **last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the external application. *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 

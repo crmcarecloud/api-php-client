@@ -257,7 +257,7 @@ class CreditHistoryRecord implements ModelInterface, ArrayAccess
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -353,7 +353,7 @@ class CreditHistoryRecord implements ModelInterface, ArrayAccess
     /**
      * Sets partner_id
      *
-     * @param string $partner_id The unique ID of the partner company.
+     * @param string $partner_id The unique ID of the partner company. [GET /partners](https://carecloud.readme.io/reference/getpartners)
      *
      * @return $this
      */
@@ -377,7 +377,7 @@ class CreditHistoryRecord implements ModelInterface, ArrayAccess
     /**
      * Sets currency_id
      *
-     * @param string $currency_id The unique ID of the currency.
+     * @param string $currency_id The unique ID of the currency. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies)
      *
      * @return $this
      */
@@ -401,7 +401,7 @@ class CreditHistoryRecord implements ModelInterface, ArrayAccess
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique ID of the store in CareCloud.
+     * @param string $store_id The unique ID of the store. [GET /stores](https://carecloud.readme.io/reference/getstores)
      *
      * @return $this
      */
@@ -425,7 +425,7 @@ class CreditHistoryRecord implements ModelInterface, ArrayAccess
     /**
      * Sets credit_history_record_time
      *
-     * @param string $credit_history_record_time Date and time of the credit record from the credit history. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $credit_history_record_time Timestamp of the credit record in the credit history. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

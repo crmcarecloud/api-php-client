@@ -233,7 +233,7 @@ class CreditWalletSummary implements ModelInterface, ArrayAccess
     /**
      * Sets currency_id
      *
-     * @param string $currency_id The unique ID of the currency from the API resource [GET /currencies](#tag/Currencies).
+     * @param string $currency_id The unique ID of the currency. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies)
      *
      * @return $this
      */

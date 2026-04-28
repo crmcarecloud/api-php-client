@@ -92,14 +92,14 @@ class CustomerSourceRecordsApi
      * Get customer source records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[] $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[] $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -117,14 +117,14 @@ class CustomerSourceRecordsApi
      * Get customer source records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[] $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[] $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -248,14 +248,14 @@ class CustomerSourceRecordsApi
      * Get customer source records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[] $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[] $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -276,14 +276,14 @@ class CustomerSourceRecordsApi
      * Get customer source records
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
-     * @param  string|null $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string|null $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string|null $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[]|null $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[]|null $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -334,14 +334,14 @@ class CustomerSourceRecordsApi
      * Create request for operation 'getCustomerSourceRecords'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[] $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[] $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

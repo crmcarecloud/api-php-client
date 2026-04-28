@@ -4,15 +4,15 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerSource**](CustomerSourcesApi.md#getcustomersource) | **GET** /customer-sources/{customer_source_id} | Detail of a customer source
+[**getCustomerSource**](CustomerSourcesApi.md#getcustomersource) | **GET** /customer-sources/{customer_source_id} | Get a customer source
 [**getCustomerSources**](CustomerSourcesApi.md#getcustomersources) | **GET** /customer-sources | Get customer sources
 
 # **getCustomerSource**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerSource200Response getCustomerSource($customer_source_id, $accept_language)
 
-Detail of a customer source
+Get a customer source
 
-Get information about a specific customer source.
+Get information about a specific customer source.  Returns the detail of a single customer source record. Customer sources identify the external systems or applications where customer accounts originate. To retrieve all sources, use [GET /customer-sources](https://carecloud.readme.io/reference/getcustomersources).
 
 ### Example
 ```php
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 Get customer sources
 
-Get information about all customer account sources.
+Get information about all customer account sources.  Customer sources identify the external systems or applications where customer accounts originate or are tracked - for example, a mobile application, e-commerce platform, POS system, or web portal. Each customer account is assigned to at least one source, and the source record can carry one or more external IDs from that system.  Related: [GET /customers/{customer_id}/sources](https://carecloud.readme.io/reference/getsubcustomersource)
 
 ### Example
 ```php
@@ -94,7 +94,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomerSourcesApi
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -114,7 +114,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]

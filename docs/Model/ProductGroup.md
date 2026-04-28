@@ -9,8 +9,9 @@ Name | Type | Description | Notes
 **parent_external_id** | **string** | The unique external ID of the parent product group. If &#x60;parent_product_group_id&#x60; is also set, both parameters have to represent the same product group. | [optional] 
 **code** | **string** | Code of the product group. | [optional] 
 **external_id** | **string** | The external unique ID of the product group. | 
-**store_id** | **string** | The unique ID of the store where the product group is valid. The product group is global if this value is not set. | [optional] 
-**last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
+**store_id** | **string** | The unique ID of the store where the product group is valid. The product group is global if this value is not set. [GET /stores](https://carecloud.readme.io/reference/getstores) | [optional] 
+**partner_id** | **string** | The unique ID of the partner. If the partner is not set, the partner is selected from the logged in user. [GET /partners](https://carecloud.readme.io/reference/getpartners) | [optional] 
+**last_change** | **string** | Timestamp of the last change. Format: &#x60;YYYY-MM-DD HH:MM:SS&#x60;. All times are in the local timezone. | [optional] 
 **state** | **int** | State of the product group. *Possible values are: 0 - deleted / 1 - active* | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

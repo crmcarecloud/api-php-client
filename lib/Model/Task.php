@@ -509,7 +509,7 @@ self::STATE_2,        ];
     /**
      * Sets due_date
      *
-     * @param \DateTime $due_date Due date of the task. *(YYYY-MM-DD)*
+     * @param \DateTime $due_date Due date of the task in ISO-8601 format (`YYYY-MM-DD`).
      *
      * @return $this
      */
@@ -533,7 +533,7 @@ self::STATE_2,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time when task was created. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Timestamp of the task creation. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -557,7 +557,7 @@ self::STATE_2,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the event type. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
+     * @param int $state State of the task. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
      *
      * @return $this
      */

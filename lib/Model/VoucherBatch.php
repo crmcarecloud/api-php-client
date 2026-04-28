@@ -389,7 +389,7 @@ class VoucherBatch implements ModelInterface, ArrayAccess
     /**
      * Sets applied_date
      *
-     * @param string $applied_date Voucher application date. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $applied_date Timestamp of the voucher application. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -413,7 +413,7 @@ class VoucherBatch implements ModelInterface, ArrayAccess
     /**
      * Sets valid_from
      *
-     * @param string $valid_from Date from the voucher is valid. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_from Timestamp from which the voucher is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -437,7 +437,7 @@ class VoucherBatch implements ModelInterface, ArrayAccess
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Date to the voucher is valid. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_to Timestamp until which the voucher is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */

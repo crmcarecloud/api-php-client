@@ -428,7 +428,7 @@ self::STATE_1,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time when stamper card was created. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Timestamp of the stamper card creation. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -452,7 +452,7 @@ self::STATE_1,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

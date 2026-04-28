@@ -38,9 +38,9 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\WalletApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)*
-$date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)*
-$credit_type_id = "credit_type_id_example"; // string | The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. <br/> In case you want to filter multiple options use array syntax : `credit_type_id[]=8bc8ca16f9c5039951021700a2&credit_type_id[]=82c06812c0756528660784fef`
+$date_from = "date_from_example"; // string | Start of the time interval in ISO-8601 format (`YYYY-MM-DD`).
+$date_to = "date_to_example"; // string | End of the time interval in ISO-8601 format (`YYYY-MM-DD`).
+$credit_type_id = "credit_type_id_example"; // string | The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : `credit_type_id[]=8bc8ca16f9c5039951021700a2&credit_type_id[]=82c06812c0756528660784fef`
 
 try {
     $result = $apiInstance->getWalletCredits($customer_id, $accept_language, $date_from, $date_to, $credit_type_id);
@@ -57,9 +57,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **date_from** | **string**| Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* | [optional]
- **date_to** | **string**| Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* | [optional]
- **credit_type_id** | **string**| The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
+ **date_from** | **string**| Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
+ **date_to** | **string**| End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
+ **credit_type_id** | **string**| The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
 
 ### Return type
 
@@ -164,8 +164,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\WalletApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)*
-$date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)*
+$date_from = "date_from_example"; // string | Start of the time interval in ISO-8601 format (`YYYY-MM-DD`).
+$date_to = "date_to_example"; // string | End of the time interval in ISO-8601 format (`YYYY-MM-DD`).
 
 try {
     $result = $apiInstance->getWalletPoints($customer_id, $accept_language, $date_from, $date_to);
@@ -182,8 +182,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **date_from** | **string**| Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* | [optional]
- **date_to** | **string**| Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* | [optional]
+ **date_from** | **string**| Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
+ **date_to** | **string**| End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
 
 ### Return type
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 Get points expiration overview
 
-Get information about points expiration overview of the customer.
+Get information about points of the customer that will expire in the future. You can communicate this information to the customer or you can active him to use these points.
 
 ### Example
 ```php
@@ -288,8 +288,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\WalletApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$date_from = "date_from_example"; // string | Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)*
-$date_to = "date_to_example"; // string | Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)*
+$date_from = "date_from_example"; // string | Start of the time interval in ISO-8601 format (`YYYY-MM-DD`).
+$date_to = "date_to_example"; // string | End of the time interval in ISO-8601 format (`YYYY-MM-DD`).
 
 try {
     $result = $apiInstance->getWalletSalesTurnover($customer_id, $accept_language, $date_from, $date_to);
@@ -306,8 +306,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **date_from** | **string**| Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* | [optional]
- **date_to** | **string**| Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* | [optional]
+ **date_from** | **string**| Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
+ **date_to** | **string**| End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
 
 ### Return type
 

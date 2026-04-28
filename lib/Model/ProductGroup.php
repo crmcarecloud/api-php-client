@@ -64,6 +64,7 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'code' => 'string',
         'external_id' => 'string',
         'store_id' => 'string',
+        'partner_id' => 'string',
         'last_change' => 'string',
         'state' => 'int'
     ];
@@ -81,6 +82,7 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'code' => null,
         'external_id' => null,
         'store_id' => null,
+        'partner_id' => null,
         'last_change' => null,
         'state' => null
     ];
@@ -119,6 +121,7 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'code' => 'code',
         'external_id' => 'external_id',
         'store_id' => 'store_id',
+        'partner_id' => 'partner_id',
         'last_change' => 'last_change',
         'state' => 'state'
     ];
@@ -136,6 +139,7 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'code' => 'setCode',
         'external_id' => 'setExternalId',
         'store_id' => 'setStoreId',
+        'partner_id' => 'setPartnerId',
         'last_change' => 'setLastChange',
         'state' => 'setState'
     ];
@@ -153,6 +157,7 @@ class ProductGroup implements ModelInterface, ArrayAccess
         'code' => 'getCode',
         'external_id' => 'getExternalId',
         'store_id' => 'getStoreId',
+        'partner_id' => 'getPartnerId',
         'last_change' => 'getLastChange',
         'state' => 'getState'
     ];
@@ -237,6 +242,7 @@ self::STATE_2,        ];
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
     }
@@ -436,13 +442,37 @@ self::STATE_2,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique ID of the store where the product group is valid. The product group is global if this value is not set.
+     * @param string $store_id The unique ID of the store where the product group is valid. The product group is global if this value is not set. [GET /stores](https://carecloud.readme.io/reference/getstores)
      *
      * @return $this
      */
     public function setStoreId($store_id)
     {
         $this->container['store_id'] = $store_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_id
+     *
+     * @return string
+     */
+    public function getPartnerId()
+    {
+        return $this->container['partner_id'];
+    }
+
+    /**
+     * Sets partner_id
+     *
+     * @param string $partner_id The unique ID of the partner. If the partner is not set, the partner is selected from the logged in user. [GET /partners](https://carecloud.readme.io/reference/getpartners)
+     *
+     * @return $this
+     */
+    public function setPartnerId($partner_id)
+    {
+        $this->container['partner_id'] = $partner_id;
 
         return $this;
     }
@@ -460,7 +490,7 @@ self::STATE_2,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

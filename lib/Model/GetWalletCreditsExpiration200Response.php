@@ -56,7 +56,7 @@ class GetWalletCreditsExpiration200Response implements ModelInterface, ArrayAcce
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\GetWalletPointsExpiration200ResponseData'
+        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\GetWalletCreditsExpiration200ResponseData'
     ];
 
     /**
@@ -204,7 +204,7 @@ class GetWalletCreditsExpiration200Response implements ModelInterface, ArrayAcce
     /**
      * Gets data
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetWalletPointsExpiration200ResponseData
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetWalletCreditsExpiration200ResponseData
      */
     public function getData()
     {
@@ -214,7 +214,7 @@ class GetWalletCreditsExpiration200Response implements ModelInterface, ArrayAcce
     /**
      * Sets data
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\GetWalletPointsExpiration200ResponseData $data data
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\GetWalletCreditsExpiration200ResponseData $data data
      *
      * @return $this
      */

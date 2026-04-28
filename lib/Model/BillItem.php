@@ -452,7 +452,7 @@ class BillItem implements ModelInterface, ArrayAccess
     /**
      * Sets price
      *
-     * @param float $price Value of parameter \"paid_amount\". In the case of a pharmaceutical client, add to the value of \"paid_amount\" a value of money covered by the customer  health insurance.
+     * @param float $price Value of parameter \"paid_amount\". In the case of a pharmaceutical client, add to the value of \"paid_amount\" a value of money covered by the customer health insurance.
      *
      * @return $this
      */

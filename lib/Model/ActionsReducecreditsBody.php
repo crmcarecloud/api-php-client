@@ -277,7 +277,7 @@ class ActionsReducecreditsBody implements ModelInterface, ArrayAccess
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -301,7 +301,7 @@ class ActionsReducecreditsBody implements ModelInterface, ArrayAccess
     /**
      * Sets partner_id
      *
-     * @param string $partner_id The unique ID of the partner.
+     * @param string $partner_id The unique ID of the partner. [GET /partners](https://carecloud.readme.io/reference/getpartners)
      *
      * @return $this
      */
@@ -325,7 +325,7 @@ class ActionsReducecreditsBody implements ModelInterface, ArrayAccess
     /**
      * Sets credit_type_id
      *
-     * @param string $credit_type_id The unique ID of the credit type. If the parameter is not set, a default credit type is set.
+     * @param string $credit_type_id The unique ID of the credit type. If the parameter is not set, a default credit type is set. [GET /credit-types](https://carecloud.readme.io/reference/getcredittypes)
      *
      * @return $this
      */
@@ -349,7 +349,7 @@ class ActionsReducecreditsBody implements ModelInterface, ArrayAccess
     /**
      * Sets currency_id
      *
-     * @param string $currency_id ID of the currency from resource [currencies](#tag/Currencies). If not set, the default currency of the project is used.
+     * @param string $currency_id The unique ID of the currency. If not set, the default currency of the project is used. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies)
      *
      * @return $this
      */

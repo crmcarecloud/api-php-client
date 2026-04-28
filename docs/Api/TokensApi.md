@@ -4,7 +4,7 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getTokenAuthentication**](TokensApi.md#gettokenauthentication) | **GET** /tokens/{token_id}/actions/auth-token | Get authentication token
+[**getTokenAuthentication**](TokensApi.md#gettokenauthentication) | **GET** /tokens/{token_id}/actions/auth-token | Get authentication token that allows customer to log in or verified in other applications.
 [**postToken**](TokensApi.md#posttoken) | **POST** /tokens | Create a token
 [**postTokenAuthTokenLogin**](TokensApi.md#posttokenauthtokenlogin) | **POST** /tokens/{token_id}/actions/authentication-token-login | Login via authentication token
 [**postTokenLogin**](TokensApi.md#posttokenlogin) | **POST** /tokens/{token_id}/actions/login | Login to the application
@@ -17,9 +17,9 @@ Method | HTTP request | Description
 # **getTokenAuthentication**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetTokenAuthentication200Response getTokenAuthentication($token_id, $external_application_id, $token_type, $accept_language)
 
-Get authentication token
+Get authentication token that allows customer to log in or verified in other applications.
 
-Returns authentication token for specific external application. <br/> ⚠️ Endpoint is available only in Customer interface.<br/>
+This endpoint returns an authentication token. Another application that uses the CareCloud API can use this token to verify the customer or sign the customer in. Typical uses include redirecting a logged-in customer from one app to another, or completing sign-in in an in-app browser for a different application or portal. ⚠️ Endpoint is available only in Customer interface.
 
 ### Example
 ```php
@@ -41,7 +41,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     $config
 );
 $token_id = "token_id_example"; // string | A client application token.
-$external_application_id = "external_application_id_example"; // string | ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator.
+$external_application_id = "external_application_id_example"; // string | ID of the destination external application. Please provide the destination external application ID, not the token-issuing external application ID. Need a destination external application ID? Please contact your CareCloud administrator.
 $token_type = 1; // int | Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric*
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
 
@@ -59,7 +59,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token_id** | **string**| A client application token. |
- **external_application_id** | **string**| ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. |
+ **external_application_id** | **string**| ID of the destination external application. Please provide the destination external application ID, not the token-issuing external application ID. Need a destination external application ID? Please contact your CareCloud administrator. |
  **token_type** | **int**| Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* | [default to 1]
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
 
@@ -83,26 +83,17 @@ Name | Type | Description  | Notes
 
 Create a token
 
-Create a token and setup of the client application. <br/> ⚠️ The endpoint is available only in the Customer interface.<br/> ⚠️ When creating a new token, the request doesn't need to contain an Authentication header.<br/> ⚠️ Warning: We highly recommend filling all identifications in the tokens resource (device and application) to avoid problems if multiple applications use the CareCloud REST API on one device.<br/>
+Create a token and setup of the client application. ⚠️ The endpoint is available only in the Customer interface. ⚠️ When creating a new token, the request doesn't need to contain an Authentication header. ⚠️ Warning: We highly recommend filling all identifications in the tokens resource (device and application) to avoid problems if multiple applications use the CareCloud REST API on one device.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure HTTP basic authorization: basicAuth
-$config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-              ->setUsername('YOUR_USERNAME')
-              ->setPassword('YOUR_PASSWORD');
-    // Configure HTTP bearer authorization: bearerAuth
-    $config = CrmCareCloud\Webservice\RestApi\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $body = new \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody(); // \CrmCareCloud\Webservice\RestApi\Client\Model\TokensBody | 
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
@@ -129,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basicAuth](../../README.md#basicAuth), [bearerAuth](../../README.md#bearerAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -143,7 +134,7 @@ Name | Type | Description  | Notes
 
 Login via authentication token
 
-Log in the customer using the provided authentication token for a seamless and secure login experience. <br/> The authentication token can be provided in the method [GET /tokens/{token_id}/actions/auth-token](https://carecloud.readme.io/reference/gettokenauthentication) <br/> ⚠️ Endpoint is available only in Customer interface.<br/>
+Log in the customer using the provided authentication token for a seamless and secure login experience. The authentication token can be provided in the method [GET /tokens/{token_id}/actions/auth-token](https://carecloud.readme.io/reference/gettokenauthentication) ⚠️ Endpoint is available only in Customer interface.
 
 ### Example
 ```php
@@ -205,7 +196,7 @@ Name | Type | Description  | Notes
 
 Login to the application
 
-Login of a customer account to client's application.<br/> ⚠️ Endpoint is available only in Customer interface.<br/>
+Login of a customer account to client's application. ⚠️ Endpoint is available only in Customer interface.
 
 ### Example
 ```php
@@ -326,7 +317,7 @@ void (empty response body)
 
 Send the message for the setup of a new customer's password
 
-Send a message, that contains a link to set up a new customer password.<br/> The use case [Forgotten password](https://www.crmcarecloud.com/build-a-mobile-app/#accordion-customer-use-case-customer-account-operations-4) shows how to use this action method.<br/> ⚠️ Endpoint is available only in the Customer interface.<br/> ⚠️ An extra setup of the Marketing Automation scenario in CareCloud could be necessary to make the endpoint work correctly. If so, don't hesitate to get in touch with the CareCloud administrator in your organization.<br/>
+Send a message, that contains a link to set up a new customer password. The use case [Forgotten password](https://www.crmcarecloud.com/build-a-mobile-app/#accordion-customer-use-case-customer-account-operations-4) shows how to use this action method. ⚠️ Endpoint is available only in the Customer interface. ⚠️ An extra setup of the Marketing Automation scenario in CareCloud could be necessary to make the endpoint work correctly. If so, don't hesitate to get in touch with the CareCloud administrator in your organization.
 
 ### Example
 ```php
@@ -387,7 +378,7 @@ void (empty response body)
 
 Login via social network
 
-Login of a customer account to client's application via social network. <br/> ⚠️ Endpoint is available only in Customer interface.<br/>
+Login of a customer account to client's application via social network. ⚠️ Endpoint is available only in Customer interface.
 
 ### Example
 ```php
@@ -449,7 +440,7 @@ Name | Type | Description  | Notes
 
 Login to the application for test customer
 
-Login of a test customer account to client's application. <br/> ⚠️ Endpoint is available only in Customer interface.<br/>
+Login of a test customer account to client's application. ⚠️ Endpoint is available only in Customer interface.
 
 ### Example
 ```php
@@ -509,7 +500,7 @@ Name | Type | Description  | Notes
 
 Edit a push token
 
-Update a push token and installation setup. <br/> ⚠️ Endpoint is available only in Customer interface. <br/>
+Update a push token and installation setup. ⚠️ Endpoint is available only in Customer interface.
 
 ### Example
 ```php

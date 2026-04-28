@@ -64,6 +64,7 @@ class Product implements ModelInterface, ArrayAccess
         'plu_ids' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PluId[]',
         'product_group_id' => 'string',
         'product_brand_id' => 'string',
+        'partner_id' => 'string',
         'prices' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Price[]',
         'additional_properties' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
         'image_urls' => 'string[]',
@@ -85,6 +86,7 @@ class Product implements ModelInterface, ArrayAccess
         'plu_ids' => null,
         'product_group_id' => null,
         'product_brand_id' => null,
+        'partner_id' => null,
         'prices' => null,
         'additional_properties' => null,
         'image_urls' => null,
@@ -127,6 +129,7 @@ class Product implements ModelInterface, ArrayAccess
         'plu_ids' => 'plu_ids',
         'product_group_id' => 'product_group_id',
         'product_brand_id' => 'product_brand_id',
+        'partner_id' => 'partner_id',
         'prices' => 'prices',
         'additional_properties' => 'additional_properties',
         'image_urls' => 'image_urls',
@@ -148,6 +151,7 @@ class Product implements ModelInterface, ArrayAccess
         'plu_ids' => 'setPluIds',
         'product_group_id' => 'setProductGroupId',
         'product_brand_id' => 'setProductBrandId',
+        'partner_id' => 'setPartnerId',
         'prices' => 'setPrices',
         'additional_properties' => 'setAdditionalProperties',
         'image_urls' => 'setImageUrls',
@@ -169,6 +173,7 @@ class Product implements ModelInterface, ArrayAccess
         'plu_ids' => 'getPluIds',
         'product_group_id' => 'getProductGroupId',
         'product_brand_id' => 'getProductBrandId',
+        'partner_id' => 'getPartnerId',
         'prices' => 'getPrices',
         'additional_properties' => 'getAdditionalProperties',
         'image_urls' => 'getImageUrls',
@@ -257,6 +262,7 @@ self::STATE_2,        ];
         $this->container['plu_ids'] = isset($data['plu_ids']) ? $data['plu_ids'] : null;
         $this->container['product_group_id'] = isset($data['product_group_id']) ? $data['product_group_id'] : null;
         $this->container['product_brand_id'] = isset($data['product_brand_id']) ? $data['product_brand_id'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['prices'] = isset($data['prices']) ? $data['prices'] : null;
         $this->container['additional_properties'] = isset($data['additional_properties']) ? $data['additional_properties'] : null;
         $this->container['image_urls'] = isset($data['image_urls']) ? $data['image_urls'] : null;
@@ -430,7 +436,7 @@ self::STATE_2,        ];
     /**
      * Sets product_group_id
      *
-     * @param string $product_group_id The unique ID of the product group.
+     * @param string $product_group_id The unique ID of the product group. [GET /product-groups](https://carecloud.readme.io/reference/getproductgroups)
      *
      * @return $this
      */
@@ -454,13 +460,37 @@ self::STATE_2,        ];
     /**
      * Sets product_brand_id
      *
-     * @param string $product_brand_id The unique ID of the product brand.
+     * @param string $product_brand_id The unique ID of the product brand. [GET /product-brands](https://carecloud.readme.io/reference/getproductbrands)
      *
      * @return $this
      */
     public function setProductBrandId($product_brand_id)
     {
         $this->container['product_brand_id'] = $product_brand_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets partner_id
+     *
+     * @return string
+     */
+    public function getPartnerId()
+    {
+        return $this->container['partner_id'];
+    }
+
+    /**
+     * Sets partner_id
+     *
+     * @param string $partner_id The unique ID of the partner. [GET /partners](https://carecloud.readme.io/reference/getpartners)
+     *
+     * @return $this
+     */
+    public function setPartnerId($partner_id)
+    {
+        $this->container['partner_id'] = $partner_id;
 
         return $this;
     }
@@ -526,7 +556,7 @@ self::STATE_2,        ];
     /**
      * Sets image_urls
      *
-     * @param string[] $image_urls A list of an image URLs.
+     * @param string[] $image_urls A list of image URLs.
      *
      * @return $this
      */
@@ -550,7 +580,7 @@ self::STATE_2,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

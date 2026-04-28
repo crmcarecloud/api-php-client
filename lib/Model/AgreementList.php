@@ -346,7 +346,7 @@ class AgreementList implements ModelInterface, ArrayAccess
     /**
      * Sets communication_channel_id
      *
-     * @param string $communication_channel_id The unique ID of the communication channel from resource [GET /communication-channels](#tag/Communication-channels).
+     * @param string $communication_channel_id The unique ID of the communication channel. [GET /communication-channels](https://carecloud.readme.io/reference/getcommunicationchannels)
      *
      * @return $this
      */
@@ -394,7 +394,7 @@ class AgreementList implements ModelInterface, ArrayAccess
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

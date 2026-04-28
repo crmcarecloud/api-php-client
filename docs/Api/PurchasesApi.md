@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**getSubPurchaseVouchers**](PurchasesApi.md#getsubpurchasevouchers) | **GET** /purchases/{purchase_id}/vouchers | Get vouchers tied to a purchase
 [**postPurchaseAcceptPayment**](PurchasesApi.md#postpurchaseacceptpayment) | **POST** /purchases/actions/accept-payment | Accept payment
 [**postPurchaseAssignCustomer**](PurchasesApi.md#postpurchaseassigncustomer) | **POST** /purchases/actions/assign-customer | Assign customer
-[**postPurchaseRecommendedRewards**](PurchasesApi.md#postpurchaserecommendedrewards) | **POST** /purchases/actions/recommended-best-rewards | Best rewards for purchase
+[**postPurchaseRecommendedRewards**](PurchasesApi.md#postpurchaserecommendedrewards) | **POST** /purchases/actions/recommended-best-rewards | Provides a list of rewards and vouchers available for purchase closure
 [**postPurchaseSend**](PurchasesApi.md#postpurchasesend) | **POST** /purchases/actions/send-purchase | Send purchase
 [**putPurchase**](PurchasesApi.md#putpurchase) | **PUT** /purchases/{purchase_id} | Update a purchase
 
@@ -163,15 +163,15 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PurchasesApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $type_id = "type_id_example"; // string | Purchase type
-$payment_time_from = "payment_time_from_example"; // string | Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)*
-$payment_time_to = "payment_time_to_example"; // string | Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)*
+$payment_time_from = "payment_time_from_example"; // string | Start of the time interval for filtering purchases by payment time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
+$payment_time_to = "payment_time_to_example"; // string | End of the time interval for filtering purchases by payment time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
 $purchase_items_extension = false; // bool | If true, resource returns extended response with purchase items. If false, the resource won't be extended. If the parameter is not set, the default value is false.
 $external_purchase_id = "external_purchase_id_example"; // string | ID of the purchase from external (e-shop, POS) system. This ID should have unique value.
 $include_property_records = true; // bool | If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won't be included, and parameter will return null value
@@ -190,15 +190,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
  **type_id** | **string**| Purchase type | [optional]
- **payment_time_from** | **string**| Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* | [optional]
- **payment_time_to** | **string**| Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **payment_time_from** | **string**| Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
+ **payment_time_to** | **string**| End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
  **purchase_items_extension** | **bool**| If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. | [optional] [default to false]
  **external_purchase_id** | **string**| ID of the purchase from external (e-shop, POS) system. This ID should have unique value. | [optional]
  **include_property_records** | **bool**| If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value | [optional]
@@ -246,7 +246,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PurchasesApi(
 );
 $purchase_id = "purchase_id_example"; // string | The unique ID of the purchase.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **purchase_id** | **string**| The unique ID of the purchase. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -314,7 +314,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PurchasesApi(
 );
 $purchase_id = "purchase_id_example"; // string | The unique ID of the purchase.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **purchase_id** | **string**| The unique ID of the purchase. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -382,7 +382,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PurchasesApi(
 );
 $purchase_id = "purchase_id_example"; // string | The unique ID of the purchase.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **purchase_id** | **string**| The unique ID of the purchase. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 Assign customer
 
-The method assigns customer to the existing purchase. If customer could collect points, he is going to gain corresponding amount of points.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+The method assigns customer to the existing purchase. If customer could collect points, he is going to gain corresponding amount of points. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php
@@ -544,9 +544,9 @@ void (empty response body)
 # **postPurchaseRecommendedRewards**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\PostPurchaseRecommendedRewards200Response postPurchaseRecommendedRewards($body, $accept_language)
 
-Best rewards for purchase
+Provides a list of rewards and vouchers available for purchase closure
 
-Method returns all available rewards for POS installation. The output contains list of all available and valid rewards. Each reward contains a parameter of maximum usage of rewards in a purchase. If amount equals zero, reward can not be applied. Rewards are always connected to products through bill items.
+Method returns all rewards and vouchers available for a specific client application (e-commerce, POS, etc.). The response includes reward definitions and customer-specific vouchers that are valid at the time of the request. For each item, a parameter defines the maximum usage per purchase. If the value of this parameter is zero, the item cannot be applied.  Each item in the response can represent one of two types:  - Reward definition - a catalog-level reward identified by an alphanumeric code (for example, `PTV12`).  - Voucher - a reward issued to a specific customer, identified by a numeric code generated by CareCloud or a custom code syntax defined by the client.  Rewards are always associated with products via bill items.
 
 ### Example
 ```php
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 
 Update a purchase
 
-Update a specific purchase.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+Update a specific purchase. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php

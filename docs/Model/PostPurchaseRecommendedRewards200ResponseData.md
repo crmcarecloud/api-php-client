@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**recommended_best_rewards** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedReward[]**](RecommendedReward.md) | List of the best rewards for POS. | [optional] 
+**recommended_best_rewards** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedReward[]**](RecommendedReward.md) | List of the best rewards for a specific client application (e-commerce, POS, etc.). | [optional] 
 **total_items** | **int** | The number of all found rewards. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

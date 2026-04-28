@@ -386,7 +386,7 @@ self::STATE_1,        ];
     /**
      * Sets product_id
      *
-     * @param string $product_id The unique ID of the product.
+     * @param string $product_id The unique ID of the product. [GET /products](https://carecloud.readme.io/reference/getproducts)
      *
      * @return $this
      */
@@ -410,7 +410,7 @@ self::STATE_1,        ];
     /**
      * Sets currency_id
      *
-     * @param string $currency_id The unique ID of the currency.
+     * @param string $currency_id The unique ID of the currency. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies)
      *
      * @return $this
      */
@@ -434,7 +434,7 @@ self::STATE_1,        ];
     /**
      * Sets campaign_id
      *
-     * @param string $campaign_id The unique ID of the campaign.
+     * @param string $campaign_id The unique ID of the campaign. [GET /campaigns](https://carecloud.readme.io/reference/getcampaigns)
      *
      * @return $this
      */
@@ -515,7 +515,7 @@ self::STATE_1,        ];
     /**
      * Sets valid_from
      *
-     * @param string $valid_from Validity of the campaign product from the date. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_from Timestamp from which the campaign product is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -539,7 +539,7 @@ self::STATE_1,        ];
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Validity of the campaign product to the date. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_to Timestamp until which the campaign product is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -659,7 +659,7 @@ self::STATE_1,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -683,7 +683,7 @@ self::STATE_1,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the card. *Possible values are: 0 - blocked / 1 - active*
+     * @param int $state State of the campaign product. *Possible values are: 0 - blocked / 1 - active*
      *
      * @return $this
      */

@@ -4,16 +4,16 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCampaign**](CampaignsApi.md#getcampaign) | **GET** /campaigns/{campaign_id} | Detail of a specific campaign
-[**getCampaigns**](CampaignsApi.md#getcampaigns) | **GET** /campaigns | Collection of campaigns
+[**getCampaign**](CampaignsApi.md#getcampaign) | **GET** /campaigns/{campaign_id} | Get a campaign
+[**getCampaigns**](CampaignsApi.md#getcampaigns) | **GET** /campaigns | Get all campaigns
 [**postCampaign**](CampaignsApi.md#postcampaign) | **POST** /campaigns | Create a campaign
 
 # **getCampaign**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaign200Response getCampaign($campaign_id, $accept_language)
 
-Detail of a specific campaign
+Get a campaign
 
-Get information about a specific campaign.
+Get information about a specific campaign, including its name, external ID, and parent campaign if applicable.
 
 ### Example
 ```php
@@ -71,9 +71,9 @@ Name | Type | Description  | Notes
 # **getCampaigns**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetCampaigns200Response getCampaigns($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $external_id)
 
-Collection of campaigns
+Get all campaigns
 
-Get information about all available campaigns.
+Get a list of all campaigns in the CareCloud platform. A campaign is a planned sequence of activities that promotes a product or service. Campaigns group related campaign products and messages, and can target customers across multiple communication channels. Use the `name` filter for name-based lookup and `external_id` to retrieve campaigns linked to external systems. See [Campaigns](https://help.crmcarecloud.com/en/campaigns-and-segmentation/e-mailing/campaigns) for details.
 
 ### Example
 ```php
@@ -95,7 +95,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CampaignsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -116,7 +116,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 Create a campaign
 
-Add a new campaign.
+Create a new campaign. A campaign is a planned sequence of activities that promotes a product or service. After creating a campaign, use [POST /campaign-products](https://carecloud.readme.io/reference/postcampaignproduct) to attach discounted products to it. See [Campaigns](https://help.crmcarecloud.com/en/campaigns-and-segmentation/e-mailing/campaigns) for details.
 
 ### Example
 ```php

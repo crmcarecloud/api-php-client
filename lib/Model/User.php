@@ -467,7 +467,7 @@ class User implements ModelInterface, ArrayAccess
     /**
      * Sets last_login
      *
-     * @param string $last_login Date and time of the last user login. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_login Timestamp of the last user login. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

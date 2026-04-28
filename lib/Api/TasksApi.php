@@ -1406,7 +1406,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1428,7 +1428,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1556,7 +1556,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1581,7 +1581,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -1636,7 +1636,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2117,7 +2117,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2140,7 +2140,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2269,7 +2269,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2295,7 +2295,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -2351,7 +2351,7 @@ class TasksApi
      *
      * @param  string $task_id The unique ID of the task in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2817,7 +2817,7 @@ class TasksApi
      * Get all task states
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2838,7 +2838,7 @@ class TasksApi
      * Get all task states
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2965,7 +2965,7 @@ class TasksApi
      * Get all task states
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2989,7 +2989,7 @@ class TasksApi
      * Get all task states
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -3043,7 +3043,7 @@ class TasksApi
      * Create request for operation 'getTaskStates'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3490,7 +3490,7 @@ class TasksApi
      * Get all task types
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3511,7 +3511,7 @@ class TasksApi
      * Get all task types
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3638,7 +3638,7 @@ class TasksApi
      * Get all task types
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3662,7 +3662,7 @@ class TasksApi
      * Get all task types
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -3716,7 +3716,7 @@ class TasksApi
      * Create request for operation 'getTaskTypes'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3835,7 +3835,7 @@ class TasksApi
      * Get all tasks
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3843,7 +3843,7 @@ class TasksApi
      * @param  string $task_state_id Task state ID from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  int $priority The parameter filters tasks by their priority. *Possible values are: 1 - Critical / 2 - Major / 3 - Normal / 4 - Minor.* (optional)
-     * @param  string $due_date Date (ISO 8601) when the task due. *(YYYY-MM-DD)* (optional)
+     * @param  string $due_date Due date of the task in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $task_title Search record by the task summary or a part of the task summary. (optional)
      * @param  string $task_note Search record by the task note or a part of the task note. (optional)
      *
@@ -3863,7 +3863,7 @@ class TasksApi
      * Get all tasks
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3871,7 +3871,7 @@ class TasksApi
      * @param  string $task_state_id Task state ID from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  int $priority The parameter filters tasks by their priority. *Possible values are: 1 - Critical / 2 - Major / 3 - Normal / 4 - Minor.* (optional)
-     * @param  string $due_date Date (ISO 8601) when the task due. *(YYYY-MM-DD)* (optional)
+     * @param  string $due_date Due date of the task in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $task_title Search record by the task summary or a part of the task summary. (optional)
      * @param  string $task_note Search record by the task note or a part of the task note. (optional)
      *
@@ -3997,7 +3997,7 @@ class TasksApi
      * Get all tasks
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4005,7 +4005,7 @@ class TasksApi
      * @param  string $task_state_id Task state ID from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  int $priority The parameter filters tasks by their priority. *Possible values are: 1 - Critical / 2 - Major / 3 - Normal / 4 - Minor.* (optional)
-     * @param  string $due_date Date (ISO 8601) when the task due. *(YYYY-MM-DD)* (optional)
+     * @param  string $due_date Due date of the task in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $task_title Search record by the task summary or a part of the task summary. (optional)
      * @param  string $task_note Search record by the task note or a part of the task note. (optional)
      *
@@ -4028,7 +4028,7 @@ class TasksApi
      * Get all tasks
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -4036,7 +4036,7 @@ class TasksApi
      * @param  string|null $task_state_id Task state ID from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
      * @param  int|null $priority The parameter filters tasks by their priority. *Possible values are: 1 - Critical / 2 - Major / 3 - Normal / 4 - Minor.* (optional)
-     * @param  string|null $due_date Date (ISO 8601) when the task due. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $due_date Due date of the task in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string|null $task_title Search record by the task summary or a part of the task summary. (optional)
      * @param  string|null $task_note Search record by the task note or a part of the task note. (optional)
      *
@@ -4089,7 +4089,7 @@ class TasksApi
      * Create request for operation 'getTasks'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4097,7 +4097,7 @@ class TasksApi
      * @param  string $task_state_id Task state ID from the resource [task-states](#tag/Task-states). The parameter filters tasks by their state. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  int $priority The parameter filters tasks by their priority. *Possible values are: 1 - Critical / 2 - Major / 3 - Normal / 4 - Minor.* (optional)
-     * @param  string $due_date Date (ISO 8601) when the task due. *(YYYY-MM-DD)* (optional)
+     * @param  string $due_date Due date of the task in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $task_title Search record by the task summary or a part of the task summary. (optional)
      * @param  string $task_note Search record by the task note or a part of the task note. (optional)
      *

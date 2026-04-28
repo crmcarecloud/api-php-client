@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getPoint**](PointsApi.md#getpoint) | **GET** /points/{point_id} | Get a point record
 [**getPoints**](PointsApi.md#getpoints) | **GET** /points | Get all point records
-[**getSubPointPurchases**](PointsApi.md#getsubpointpurchases) | **GET** /points/{point_id}/purchases | Get a collection of purchases
-[**postPointsAssign**](PointsApi.md#postpointsassign) | **POST** /points/actions/assign-points | Assign of points
+[**getSubPointPurchases**](PointsApi.md#getsubpointpurchases) | **GET** /points/{point_id}/purchases | Get all purchases by a point record
+[**postPointsAssign**](PointsApi.md#postpointsassign) | **POST** /points/actions/assign-points | Assign points
 [**postPointsRedemption**](PointsApi.md#postpointsredemption) | **POST** /points/actions/reduce-points | Points redemption
 [**postPointsSynchronize**](PointsApi.md#postpointssynchronize) | **POST** /points/actions/synchronize-points | Synchronize customer&#x27;s points
 [**postPointsTransfer**](PointsApi.md#postpointstransfer) | **POST** /points/actions/transfer-points | Transfer points
@@ -99,14 +99,14 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PointsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $point_type_id = "point_type_id_example"; // string | The unique ID of a point type.
-$create_point_time_from = "create_point_time_from_example"; // string | Date and time from of the create point record. *(YYYY-MM-DD HH:MM:SS)*
-$create_point_time_to = "create_point_time_to_example"; // string | Date and time to of the create point record. *(YYYY-MM-DD HH:MM:SS)*
+$create_point_time_from = "create_point_time_from_example"; // string | Start of the time interval for filtering point records by creation time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
+$create_point_time_to = "create_point_time_to_example"; // string | End of the time interval for filtering point records by creation time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
 
 try {
     $result = $apiInstance->getPoints($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $point_type_id, $create_point_time_from, $create_point_time_to);
@@ -122,14 +122,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
  **point_type_id** | **string**| The unique ID of a point type. | [optional]
- **create_point_time_from** | **string**| Date and time from of the create point record. *(YYYY-MM-DD HH:MM:SS)* | [optional]
- **create_point_time_to** | **string**| Date and time to of the create point record. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **create_point_time_from** | **string**| Start of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
+ **create_point_time_to** | **string**| End of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
 
 ### Return type
 
@@ -149,9 +149,9 @@ Name | Type | Description  | Notes
 # **getSubPointPurchases**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubPointPurchases200Response getSubPointPurchases($point_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension, $external_purchase_id)
 
-Get a collection of purchases
+Get all purchases by a point record
 
-Get information about all purchases by points resource.
+Get information about all purchases linked to a point record.
 
 ### Example
 ```php
@@ -174,15 +174,15 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\PointsApi(
 );
 $point_id = "point_id_example"; // string | The unique ID of the point record.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $type_id = "type_id_example"; // string | Purchase type
-$payment_time_from = "payment_time_from_example"; // string | Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)*
-$payment_time_to = "payment_time_to_example"; // string | Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)*
+$payment_time_from = "payment_time_from_example"; // string | Start of the time interval for filtering purchases by payment time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
+$payment_time_to = "payment_time_to_example"; // string | End of the time interval for filtering purchases by payment time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
 $purchase_items_extension = false; // bool | If true, resource returns extended response with purchase items. If false, the resource won't be extended. If the parameter is not set, the default value is false.
 $external_purchase_id = "external_purchase_id_example"; // string | ID of the purchase from external (e-shop, POS) system. This ID should have unique value.
 
@@ -201,15 +201,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **point_id** | **string**| The unique ID of the point record. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
  **type_id** | **string**| Purchase type | [optional]
- **payment_time_from** | **string**| Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* | [optional]
- **payment_time_to** | **string**| Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **payment_time_from** | **string**| Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
+ **payment_time_to** | **string**| End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
  **purchase_items_extension** | **bool**| If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. | [optional] [default to false]
  **external_purchase_id** | **string**| ID of the purchase from external (e-shop, POS) system. This ID should have unique value. | [optional]
 
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 # **postPointsAssign**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\PostPointsAssign201Response postPointsAssign($body, $accept_language)
 
-Assign of points
+Assign points
 
 Creates a new point collection record with the corresponding value. ⚠️ Action methods are available only in Enterprise interface.
 
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 Synchronize customer's points
 
-Synchronize the amount of points for the customer's account. Set the value, that will represent how many points the customer carries currently.
+Synchronize the amount of points for the customer's account. Set the value that will represent how many points the customer carries currently.
 
 ### Example
 ```php

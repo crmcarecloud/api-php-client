@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **discount** | **int** | The basic loyalty discount. | 
 **overall_discount_on_discounted_purchase_items** | **bool** | If true, overall discounts can be applied on already discounted purchase items in purchase checkout process. | [optional] 
 **text_id** | **string** | Text identification of the status. | [optional] 
-**last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
+**last_change** | **string** | Timestamp of the last change. Format: &#x60;YYYY-MM-DD HH:MM:SS&#x60;. All times are in the local timezone. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

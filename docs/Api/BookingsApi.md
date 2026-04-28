@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Delete a booking
 
-Delete selected booking.
+Delete a specific booking and all its associated booking items.
 
 ### Example
 ```php
@@ -75,7 +75,7 @@ void (empty response body)
 
 Get a booking
 
-Get information about a specific booking.
+Get information about a specific booking, including the customer, status, booking items, and any additional data.
 
 ### Example
 ```php
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 Get all bookings
 
-Get information about all bookings.
+Get a list of all bookings. A booking is a customer reservation for one or more service time slots - for example, an appointment, an event registration, or a table reservation. Use filters such as `customer_id` and `booking_status` to narrow results. Set `add_booking_items` to include the individual time slot reservations in the response.
 
 ### Example
 ```php
@@ -157,7 +157,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\BookingsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -180,7 +180,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 Create a new booking
 
-Add a new booking.
+Create a new booking for a customer. A booking is a reservation for one or more service time slots - for example, an appointment, an event registration, or a table reservation. Each booking item references a time slot from a booking ticket ([GET /booking-tickets](https://carecloud.readme.io/reference/getbookingtickets)). If no `booking_status` is provided, the default booking status is applied.
 
 ### Example
 ```php
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 Get information about booking busy times
 
-The action method provides data on the busiest times of bookings in a period. The period can change depending on the parameters set up. The chart contains time intervals on the X axis and Percentage information about reserved time slots (70% of slots for the time is reserved) on the Y axis.
+Returns booking occupancy data for a specified date and time period. The action method provides data on the busiest times of bookings in a period. The period can change depending on the parameters set up. The chart contains time intervals on the X axis and Percentage information about reserved time slots (70% of slots for the time is reserved) on the Y axis. Filter by booking ticket or ticket property to narrow the scope of the data.
 
 ### Example
 ```php
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 Update a booking
 
-Update a specific booking.
+Update a specific booking. Use this endpoint to change the booking status or reassign the booking to a different customer.
 
 ### Example
 ```php

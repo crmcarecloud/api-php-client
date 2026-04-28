@@ -5,14 +5,14 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCurrencies**](CurrenciesApi.md#getcurrencies) | **GET** /currencies | Get all currencies
-[**getCurrency**](CurrenciesApi.md#getcurrency) | **GET** /currencies/{currency_id} | Detail of a currency
+[**getCurrency**](CurrenciesApi.md#getcurrency) | **GET** /currencies/{currency_id} | Get a currency
 
 # **getCurrencies**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetCurrencies200Response getCurrencies($accept_language, $count, $offset, $sort_field, $sort_direction, $currency_name, $currency_code)
 
 Get all currencies
 
-Get a list of currencies accepted in CRM CareCloud.
+Get a list of currencies accepted in the CareCloud platform.  Currencies represent the ISO currency codes configured for use in a project. They are used to denominate credit amounts and purchase values. Each project has one default currency; others can be specified explicitly when depositing or reducing credits.  Use this endpoint to retrieve valid currency IDs for use in credit operations. Filter by `currency_name` or `currency_code` to locate a specific currency.  Related: [POST /credits/actions/deposit](https://carecloud.readme.io/reference/postcreditdeposit) (enterprise interface only), [POST /credits/actions/reduce](https://carecloud.readme.io/reference/postcreditreduction) (enterprise interface only)
 
 ### Example
 ```php
@@ -34,7 +34,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CurrenciesApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -55,7 +55,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -80,9 +80,9 @@ Name | Type | Description  | Notes
 # **getCurrency**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetCurrency200Response getCurrency($currency_id, $accept_language)
 
-Detail of a currency
+Get a currency
 
-Get information about a specific currency.
+Get information about a specific currency.  Returns the full detail of a single currency record, including its ISO code and name. Currencies are used to denominate credit amounts and purchase values in the CareCloud platform.  To retrieve the full list of accepted currencies, use [GET /currencies](https://carecloud.readme.io/reference/getcurrencies).
 
 ### Example
 ```php

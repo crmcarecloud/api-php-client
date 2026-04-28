@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **stamper_card_id** | **string** | The unique ID of the stamper card. | [optional] 
 **stamp_order** | **int** | An order of the stamp in the card. If null, the stamp is not assign to any stamper card. | [optional] 
 **stamper_condition_id** | **string** | The unique ID of the stamper condition. An information about condition is available at the stamper campaign that stamp is part of. | [optional] 
-**created_at** | **string** | Date and time when the customer collected the stamp. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
+**created_at** | **string** | Timestamp when the customer collected the stamp. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times must be in the local timezone. | [optional] 
 **last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the stamp. *Possible values are: 0 - deleted / 1 - active* | [optional] 
 

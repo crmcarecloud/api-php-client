@@ -343,7 +343,7 @@ self::STATE_2,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -367,7 +367,7 @@ self::STATE_2,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique ID of the store where voucher was applied.
+     * @param string $store_id The unique ID of the store where the voucher was applied. [GET /stores](https://carecloud.readme.io/reference/getstores)
      *
      * @return $this
      */
@@ -439,7 +439,7 @@ self::STATE_2,        ];
     /**
      * Sets applied_date
      *
-     * @param string $applied_date Voucher application date. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $applied_date Timestamp of the voucher application. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -463,7 +463,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_from
      *
-     * @param string $valid_from Date from the voucher is valid. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_from Timestamp from which the voucher is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -487,7 +487,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Date to the voucher is valid. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_to Timestamp until which the voucher is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -583,7 +583,7 @@ self::STATE_2,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date of the voucher creation. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Timestamp of the voucher creation. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -607,7 +607,7 @@ self::STATE_2,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

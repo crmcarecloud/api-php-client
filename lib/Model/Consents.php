@@ -313,7 +313,7 @@ self::CONSENT_VALUE_2,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change of the record. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change of the record. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

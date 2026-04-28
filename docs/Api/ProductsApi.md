@@ -4,15 +4,15 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getProduct**](ProductsApi.md#getproduct) | **GET** /products/{product_id} | Detail of a product
-[**getProducts**](ProductsApi.md#getproducts) | **GET** /products | Collection of available products
+[**getProduct**](ProductsApi.md#getproduct) | **GET** /products/{product_id} | Get a product
+[**getProducts**](ProductsApi.md#getproducts) | **GET** /products | Get all products
 [**getSubProductTags**](ProductsApi.md#getsubproducttags) | **GET** /products/tags | Get all tags for resource products
 [**postBulkProducts**](ProductsApi.md#postbulkproducts) | **POST** /products/batch | Create a batch of products
 
 # **getProduct**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetProduct200Response getProduct($product_id, $accept_language)
 
-Detail of a product
+Get a product
 
 Get information about a specific product.
 
@@ -70,9 +70,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProducts**
-> \CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids)
+> \CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids, $partner_id)
 
-Collection of available products
+Get all products
 
 Get information about all available products.
 
@@ -96,7 +96,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -104,10 +104,11 @@ $name = "name_example"; // string | Search record by name or a part of the name.
 $code = "code_example"; // string | Code of the product.
 $external_id = "external_id_example"; // string | The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn't need to be necessary unique. Usage of other parameter could be required to return more specific results.
 $external_type_code = "external_type_code_example"; // string | Every product can have more than one external ID depends of the business requirements. This parameter allows to pick from witch list of external IDs you want to choose. For the list of external type codes please contact you account manager. If the parameter is not set, API uses as a default value GLOBAL.
-$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values. <br/> In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
+$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
+$partner_id = "partner_id_example"; // string | Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners).
 
 try {
-    $result = $apiInstance->getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids);
+    $result = $apiInstance->getProducts($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids, $partner_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductsApi->getProducts: ', $e->getMessage(), PHP_EOL;
@@ -120,7 +121,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -128,7 +129,8 @@ Name | Type | Description  | Notes
  **code** | **string**| Code of the product. | [optional]
  **external_id** | **string**| The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. | [optional]
  **external_type_code** | **string**| Every product can have more than one external ID depends of the business requirements. This parameter allows to pick from witch list of external IDs you want to choose. For the list of external type codes please contact you account manager. If the parameter is not set, API uses as a default value GLOBAL. | [optional]
- **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
+ **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
+ **partner_id** | **string**| Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). | [optional]
 
 ### Return type
 
@@ -150,7 +152,7 @@ Name | Type | Description  | Notes
 
 Get all tags for resource products
 
-Get information as a list of all tags of resource products. Tags from the list could be use for product filtering.
+Get a list of all tags for products. Tags from the list can be used for product filtering.
 
 ### Example
 ```php
@@ -172,7 +174,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -193,7 +195,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]

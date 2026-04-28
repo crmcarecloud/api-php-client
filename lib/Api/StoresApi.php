@@ -730,13 +730,13 @@ class StoresApi
      * Get all stores
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  int $visible_for_customer State of the visibility of the customer. *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* (optional)
      * @param  string $property_id Store property ID from resource [store-properties](#tag/Store-properties). The parameter determines property, which is used to filter stores by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
-     * @param  string $property_value Store property record value from resource [/stores/{store_id}/property-records](#operation/getSubStoreProperties) or [store-properties](#tag/Store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
+     * @param  string $property_value Store property record value from resource [GET /stores/{store_id}/property-records](https://carecloud.readme.io/reference/getsubstoreproperties) or [store-properties](https://carecloud.readme.io/reference/store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. For a list of stores, see [GET /stores](https://carecloud.readme.io/reference/getstores). (optional)
      * @param  string $system_id The unique ID of the store in external system (e-shop, POS, etc.) (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -755,13 +755,13 @@ class StoresApi
      * Get all stores
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  int $visible_for_customer State of the visibility of the customer. *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* (optional)
      * @param  string $property_id Store property ID from resource [store-properties](#tag/Store-properties). The parameter determines property, which is used to filter stores by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
-     * @param  string $property_value Store property record value from resource [/stores/{store_id}/property-records](#operation/getSubStoreProperties) or [store-properties](#tag/Store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
+     * @param  string $property_value Store property record value from resource [GET /stores/{store_id}/property-records](https://carecloud.readme.io/reference/getsubstoreproperties) or [store-properties](https://carecloud.readme.io/reference/store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. For a list of stores, see [GET /stores](https://carecloud.readme.io/reference/getstores). (optional)
      * @param  string $system_id The unique ID of the store in external system (e-shop, POS, etc.) (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -886,13 +886,13 @@ class StoresApi
      * Get all stores
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  int $visible_for_customer State of the visibility of the customer. *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* (optional)
      * @param  string $property_id Store property ID from resource [store-properties](#tag/Store-properties). The parameter determines property, which is used to filter stores by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
-     * @param  string $property_value Store property record value from resource [/stores/{store_id}/property-records](#operation/getSubStoreProperties) or [store-properties](#tag/Store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
+     * @param  string $property_value Store property record value from resource [GET /stores/{store_id}/property-records](https://carecloud.readme.io/reference/getsubstoreproperties) or [store-properties](https://carecloud.readme.io/reference/store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. For a list of stores, see [GET /stores](https://carecloud.readme.io/reference/getstores). (optional)
      * @param  string $system_id The unique ID of the store in external system (e-shop, POS, etc.) (optional)
      *
      * @throws \InvalidArgumentException
@@ -914,13 +914,13 @@ class StoresApi
      * Get all stores
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  int|null $visible_for_customer State of the visibility of the customer. *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* (optional)
      * @param  string|null $property_id Store property ID from resource [store-properties](#tag/Store-properties). The parameter determines property, which is used to filter stores by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
-     * @param  string|null $property_value Store property record value from resource [/stores/{store_id}/property-records](#operation/getSubStoreProperties) or [store-properties](#tag/Store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
+     * @param  string|null $property_value Store property record value from resource [GET /stores/{store_id}/property-records](https://carecloud.readme.io/reference/getsubstoreproperties) or [store-properties](https://carecloud.readme.io/reference/store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. For a list of stores, see [GET /stores](https://carecloud.readme.io/reference/getstores). (optional)
      * @param  string|null $system_id The unique ID of the store in external system (e-shop, POS, etc.) (optional)
      *
      * @throws \InvalidArgumentException
@@ -972,13 +972,13 @@ class StoresApi
      * Create request for operation 'getStores'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  int $visible_for_customer State of the visibility of the customer. *Possible values are: 0 - invisible / 1- visible. If query string is not used, return both.* (optional)
      * @param  string $property_id Store property ID from resource [store-properties](#tag/Store-properties). The parameter determines property, which is used to filter stores by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
-     * @param  string $property_value Store property record value from resource [/stores/{store_id}/property-records](#operation/getSubStoreProperties) or [store-properties](#tag/Store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
+     * @param  string $property_value Store property record value from resource [GET /stores/{store_id}/property-records](https://carecloud.readme.io/reference/getsubstoreproperties) or [store-properties](https://carecloud.readme.io/reference/store-properties) in case of datatype with multiple values. Parameter filters stores depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. For a list of stores, see [GET /stores](https://carecloud.readme.io/reference/getstores). (optional)
      * @param  string $system_id The unique ID of the store in external system (e-shop, POS, etc.) (optional)
      *
      * @throws \InvalidArgumentException

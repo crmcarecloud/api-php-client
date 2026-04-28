@@ -220,7 +220,7 @@ class GetSubCustomerPartners200ResponseData implements ModelInterface, ArrayAcce
     /**
      * Sets partner_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[] $partner_records Collection of all customer  partner records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[] $partner_records Collection of all customer partner records.
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class GetSubCustomerPartners200ResponseData implements ModelInterface, ArrayAcce
     /**
      * Sets total_items
      *
-     * @param int $total_items The number of all found customer  partners.
+     * @param int $total_items The number of all found customer partners.
      *
      * @return $this
      */

@@ -304,7 +304,7 @@ class GetWalletPoints200ResponseData implements ModelInterface, ArrayAccess
     /**
      * Sets available_points_money_value
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[] $available_points_money_value Parameter shows money representation of the 'available_points' parameter. CareCloud calculates money value for every system currency. The calculation is available only if the customer  status allows a point payment. This setup is possible in CareCloud administration.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\MoneyValue[] $available_points_money_value Parameter shows money representation of the 'available_points' parameter. CareCloud calculates money value for every system currency. The calculation is available only if the customer status allows a point payment. This setup is possible in CareCloud administration.
      *
      * @return $this
      */

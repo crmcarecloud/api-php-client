@@ -325,7 +325,7 @@ self::STATE_2,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -397,7 +397,7 @@ self::STATE_2,        ];
     /**
      * Sets point_type_id
      *
-     * @param string $point_type_id Type of the point record.
+     * @param string $point_type_id The unique ID of the point type. [GET /point-types](https://carecloud.readme.io/reference/getpointtypes)
      *
      * @return $this
      */
@@ -421,7 +421,7 @@ self::STATE_2,        ];
     /**
      * Sets partner_id
      *
-     * @param string $partner_id The unique ID of the partner company.
+     * @param string $partner_id The unique ID of the partner company. [GET /partners](https://carecloud.readme.io/reference/getpartners)
      *
      * @return $this
      */
@@ -445,7 +445,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Date and time of the point record validity to. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_to Timestamp until which the point record is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -502,7 +502,7 @@ self::STATE_2,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time of point record creation. *Possible value: 2016-06-30T15:51:49+02:00*
+     * @param string $created_at Timestamp of the point record creation. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */

@@ -431,7 +431,7 @@ class PointHistoryRecord implements ModelInterface, ArrayAccess
     /**
      * Sets point_history_record_time
      *
-     * @param string $point_history_record_time Date and time of the point record from the point history. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $point_history_record_time Timestamp of the point record in the point history. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

@@ -420,12 +420,12 @@ class UsersApi
      * Get all users
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
-     * @param  string $phone Phone number with international prefix (420000000). (optional)
+     * @param  string $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string $login Search by login. (optional)
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
@@ -447,12 +447,12 @@ class UsersApi
      * Get all users
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
-     * @param  string $phone Phone number with international prefix (420000000). (optional)
+     * @param  string $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string $login Search by login. (optional)
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
@@ -580,12 +580,12 @@ class UsersApi
      * Get all users
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
-     * @param  string $phone Phone number with international prefix (420000000). (optional)
+     * @param  string $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string $login Search by login. (optional)
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
@@ -610,12 +610,12 @@ class UsersApi
      * Get all users
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $email Search by email. (optional)
-     * @param  string|null $phone Phone number with international prefix (420000000). (optional)
+     * @param  string|null $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string|null $login Search by login. (optional)
      * @param  string|null $first_name Search by first name. (optional)
      * @param  string|null $last_name Search by last name. (optional)
@@ -670,12 +670,12 @@ class UsersApi
      * Create request for operation 'getUsers'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
-     * @param  string $phone Phone number with international prefix (420000000). (optional)
+     * @param  string $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string $login Search by login. (optional)
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
@@ -895,6 +895,14 @@ class UsersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserLogin200Response',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\CrmCareCloud\Webservice\RestApi\Client\Model\PostUserLogin200Response',
@@ -1493,14 +1501,6 @@ class UsersApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse400',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **card_type_id** | **string** | The unique ID of the card type. | [optional] 
+**text_id** | **string** | The unique text identifier of the card type. | [optional] 
 **name** | **string** | Name of the card type. | 
 **prefix** | **string** | Prefix of the specific card type cards. | 
 

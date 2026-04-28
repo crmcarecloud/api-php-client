@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 Get all entrances
 
-Get a list of entrances in CRM CareCloud.
+Get a list of entrances in the CareCloud platform.
 
 ### Example
 ```php
@@ -97,7 +97,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ChargedEntrancesAp
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -113,8 +113,8 @@ $state = 56; // int | State of the entrance. *Possible values are: canceled entr
 $external_entrance_id = "external_entrance_id_example"; // string | External ID of the entrance. Structure can be different depends of POS system, that created entrance.
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
 $is_cancelled = true; // bool | Filter for canceled entrances. *Possible values: true - all cancelled entrances / false - all non cancelled entrances / no value - all entrances*
-$valid_from = "valid_from_example"; // string | Date from when is record already valid. *(YYYY-MM-DD)*
-$valid_to = "valid_to_example"; // string | Date to when is record still valid. *(YYYY-MM-DD)*
+$valid_from = "valid_from_example"; // string | Start of the validity period for filtering in ISO-8601 format (`YYYY-MM-DD`).
+$valid_to = "valid_to_example"; // string | End of the validity period for filtering in ISO-8601 format (`YYYY-MM-DD`).
 $product_id = "product_id_example"; // string | ID of the product.
 $external_turnstile_permission_id = "external_turnstile_permission_id_example"; // string | External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission.
 $order_item_id = "order_item_id_example"; // string | ID of an item from e-shop order.
@@ -133,7 +133,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -149,8 +149,8 @@ Name | Type | Description  | Notes
  **external_entrance_id** | **string**| External ID of the entrance. Structure can be different depends of POS system, that created entrance. | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
  **is_cancelled** | **bool**| Filter for canceled entrances. *Possible values: true - all cancelled entrances / false - all non cancelled entrances / no value - all entrances* | [optional]
- **valid_from** | **string**| Date from when is record already valid. *(YYYY-MM-DD)* | [optional]
- **valid_to** | **string**| Date to when is record still valid. *(YYYY-MM-DD)* | [optional]
+ **valid_from** | **string**| Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
+ **valid_to** | **string**| End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
  **product_id** | **string**| ID of the product. | [optional]
  **external_turnstile_permission_id** | **string**| External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. | [optional]
  **order_item_id** | **string**| ID of an item from e-shop order. | [optional]
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 Get a customer entrances usage stats
 
-Get an information about how a customer used the entrances (usage, gamification, etc.)
+Get information about how a customer used the entrances (usage, gamification, etc.)
 
 ### Example
 ```php
@@ -257,8 +257,8 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ChargedEntrancesAp
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$valid_from = "valid_from_example"; // string | Date from when is record already valid. *(YYYY-MM-DD)*
-$valid_to = "valid_to_example"; // string | Date to when is record still valid. *(YYYY-MM-DD)*
+$valid_from = "valid_from_example"; // string | Start of the validity period for filtering in ISO-8601 format (`YYYY-MM-DD`).
+$valid_to = "valid_to_example"; // string | End of the validity period for filtering in ISO-8601 format (`YYYY-MM-DD`).
 $pos_id = 56; // int | ID of POS system for tickets. Required with path parameter entrance ID. *Possible values are: EPOS - 3 / skidata - 6 / axess - 9 / base - 11*
 
 try {
@@ -275,8 +275,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **valid_from** | **string**| Date from when is record already valid. *(YYYY-MM-DD)* | [optional]
- **valid_to** | **string**| Date to when is record still valid. *(YYYY-MM-DD)* | [optional]
+ **valid_from** | **string**| Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
+ **valid_to** | **string**| End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
  **pos_id** | **int**| ID of POS system for tickets. Required with path parameter entrance ID. *Possible values are: EPOS - 3 / skidata - 6 / axess - 9 / base - 11* | [optional]
 
 ### Return type
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 Update an entrance
 
-This method updates a specific entrance resource.
+Update a specific entrance.
 
 ### Example
 ```php

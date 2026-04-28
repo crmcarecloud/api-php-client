@@ -1039,7 +1039,7 @@ class VouchersApi
      * Get all vouchers
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1050,14 +1050,15 @@ class VouchersApi
      * @param  bool $is_applied Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string $reward_id The unique ID of the reward in CareCloud. In case you want to filter multiple options use array syntax : &#x60;reward_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reward_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  bool $include_service_vouchers If true, the response includes service vouchers alongside standard vouchers. Service vouchers are internal records used for history tracking (for example, vouchers with codes beginning with &#x60;canceled_&#x60; or &#x60;initial_&#x60;). If false or not set, service vouchers are excluded from the response. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetVouchers200Response
      */
-    public function getVouchers($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null)
+    public function getVouchers($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null, $include_service_vouchers = null)
     {
-        list($response) = $this->getVouchersWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id);
+        list($response) = $this->getVouchersWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id, $include_service_vouchers);
         return $response;
     }
 
@@ -1067,7 +1068,7 @@ class VouchersApi
      * Get all vouchers
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1078,15 +1079,16 @@ class VouchersApi
      * @param  bool $is_applied Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string $reward_id The unique ID of the reward in CareCloud. In case you want to filter multiple options use array syntax : &#x60;reward_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reward_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  bool $include_service_vouchers If true, the response includes service vouchers alongside standard vouchers. Service vouchers are internal records used for history tracking (for example, vouchers with codes beginning with &#x60;canceled_&#x60; or &#x60;initial_&#x60;). If false or not set, service vouchers are excluded from the response. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetVouchers200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getVouchersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null)
+    public function getVouchersWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null, $include_service_vouchers = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetVouchers200Response';
-        $request = $this->getVouchersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id);
+        $request = $this->getVouchersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id, $include_service_vouchers);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1201,7 +1203,7 @@ class VouchersApi
      * Get all vouchers
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1212,13 +1214,14 @@ class VouchersApi
      * @param  bool $is_applied Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string $reward_id The unique ID of the reward in CareCloud. In case you want to filter multiple options use array syntax : &#x60;reward_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reward_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  bool $include_service_vouchers If true, the response includes service vouchers alongside standard vouchers. Service vouchers are internal records used for history tracking (for example, vouchers with codes beginning with &#x60;canceled_&#x60; or &#x60;initial_&#x60;). If false or not set, service vouchers are excluded from the response. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getVouchersAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null)
+    public function getVouchersAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null, $include_service_vouchers = null)
     {
-        return $this->getVouchersAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id)
+        return $this->getVouchersAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id, $include_service_vouchers)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1232,7 +1235,7 @@ class VouchersApi
      * Get all vouchers
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -1243,14 +1246,15 @@ class VouchersApi
      * @param  bool|null $is_applied Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* (optional)
      * @param  bool|null $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string|null $reward_id The unique ID of the reward in CareCloud. In case you want to filter multiple options use array syntax : &#x60;reward_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reward_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  bool|null $include_service_vouchers If true, the response includes service vouchers alongside standard vouchers. Service vouchers are internal records used for history tracking (for example, vouchers with codes beginning with &#x60;canceled_&#x60; or &#x60;initial_&#x60;). If false or not set, service vouchers are excluded from the response. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getVouchersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null)
+    public function getVouchersAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null, $include_service_vouchers = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetVouchers200Response';
-        $request = $this->getVouchersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id);
+        $request = $this->getVouchersRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $code, $store_id, $is_valid, $is_applied, $without_stores, $reward_id, $include_service_vouchers);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1293,7 +1297,7 @@ class VouchersApi
      * Create request for operation 'getVouchers'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1304,11 +1308,12 @@ class VouchersApi
      * @param  bool $is_applied Filter by voucher application and reservation. *Possible values: true - all applied or reserved vouchers / false - all vouchers that have not been applied yet or that are not reserved actually / no value - all vouchers* (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string $reward_id The unique ID of the reward in CareCloud. In case you want to filter multiple options use array syntax : &#x60;reward_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;reward_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  bool $include_service_vouchers If true, the response includes service vouchers alongside standard vouchers. Service vouchers are internal records used for history tracking (for example, vouchers with codes beginning with &#x60;canceled_&#x60; or &#x60;initial_&#x60;). If false or not set, service vouchers are excluded from the response. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getVouchersRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null)
+    protected function getVouchersRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $customer_id = null, $code = null, $store_id = null, $is_valid = null, $is_applied = null, $without_stores = null, $reward_id = null, $include_service_vouchers = null)
     {
 
         $resourcePath = '/vouchers';
@@ -1361,6 +1366,10 @@ class VouchersApi
         // query params
         if ($reward_id !== null) {
             $queryParams['reward_id'] = ObjectSerializer::toQueryValue($reward_id, null);
+        }
+        // query params
+        if ($include_service_vouchers !== null) {
+            $queryParams['include_service_vouchers'] = ObjectSerializer::toQueryValue($include_service_vouchers, null);
         }
         // header params
         if ($accept_language !== null) {

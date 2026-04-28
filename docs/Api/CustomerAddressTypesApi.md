@@ -4,15 +4,15 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerAddressType**](CustomerAddressTypesApi.md#getcustomeraddresstype) | **GET** /customer-address-types/{customer_address_type_id} | Detail of a customer address type
+[**getCustomerAddressType**](CustomerAddressTypesApi.md#getcustomeraddresstype) | **GET** /customer-address-types/{customer_address_type_id} | Get a customer address type
 [**getCustomerAddressTypes**](CustomerAddressTypesApi.md#getcustomeraddresstypes) | **GET** /customer-address-types | Get all customer address types
 
 # **getCustomerAddressType**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerAddressType200Response getCustomerAddressType($customer_address_type_id, $accept_language)
 
-Detail of a customer address type
+Get a customer address type
 
-Get information about a specific customer address type.
+Get information about a specific customer address type.  Returns the detail of a single address type record. To list all available address types, use [GET /customer-address-types](https://carecloud.readme.io/reference/getcustomeraddresstypes).
 
 ### Example
 ```php
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 Get all customer address types
 
-Get a list of customer address types accepted in CRM CareCloud.
+Get a list of customer address types accepted in the CareCloud platform.  Address types categorise the additional addresses stored on a customer account - for example, delivery, billing, or work address. Use the returned IDs when creating or updating additional customer address records.  Related: [GET /customers/{customer_id}/addresses](https://carecloud.readme.io/reference/getsubcustomeraddresses)
 
 ### Example
 ```php
@@ -94,7 +94,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomerAddressTyp
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -113,7 +113,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]

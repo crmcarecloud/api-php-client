@@ -89,10 +89,10 @@ class TokensApi
     /**
      * Operation getTokenAuthentication
      *
-     * Get authentication token
+     * Get authentication token that allows customer to log in or verified in other applications.
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
+     * @param  string $external_application_id ID of the destination external application. Please provide the destination external application ID, not the token-issuing external application ID. Need a destination external application ID? Please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
@@ -109,10 +109,10 @@ class TokensApi
     /**
      * Operation getTokenAuthenticationWithHttpInfo
      *
-     * Get authentication token
+     * Get authentication token that allows customer to log in or verified in other applications.
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
+     * @param  string $external_application_id ID of the destination external application. Please provide the destination external application ID, not the token-issuing external application ID. Need a destination external application ID? Please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
@@ -235,10 +235,10 @@ class TokensApi
     /**
      * Operation getTokenAuthenticationAsync
      *
-     * Get authentication token
+     * Get authentication token that allows customer to log in or verified in other applications.
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
+     * @param  string $external_application_id ID of the destination external application. Please provide the destination external application ID, not the token-issuing external application ID. Need a destination external application ID? Please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
@@ -258,10 +258,10 @@ class TokensApi
     /**
      * Operation getTokenAuthenticationAsyncWithHttpInfo
      *
-     * Get authentication token
+     * Get authentication token that allows customer to log in or verified in other applications.
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
+     * @param  string $external_application_id ID of the destination external application. Please provide the destination external application ID, not the token-issuing external application ID. Need a destination external application ID? Please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
@@ -314,7 +314,7 @@ class TokensApi
      * Create request for operation 'getTokenAuthentication'
      *
      * @param  string $token_id A client application token. (required)
-     * @param  string $external_application_id ID of an external application. This is an application that you want to login a customer with an authentication token. For ID of an external application, please contact your CareCloud administrator. (required)
+     * @param  string $external_application_id ID of the destination external application. Please provide the destination external application ID, not the token-issuing external application ID. Need a destination external application ID? Please contact your CareCloud administrator. (required)
      * @param  int $token_type Parameter set witch token type should be generated. *Possible values: 1- alphanumeric, 2- numeric* (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
      *
@@ -541,14 +541,6 @@ class TokensApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -735,14 +727,6 @@ class TokensApi
             }
         }
 
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
 
         $defaultHeaders = [];
         if ($this->getConfig()->getUserAgent()) {

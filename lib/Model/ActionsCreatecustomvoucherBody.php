@@ -57,7 +57,7 @@ class ActionsCreatecustomvoucherBody implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'customer_id' => 'string',
-        'value' => 'float',
+        'value' => 'int',
         'code' => 'string',
         'note' => 'string'
     ];
@@ -69,7 +69,7 @@ class ActionsCreatecustomvoucherBody implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'customer_id' => null,
-        'value' => 'float',
+        'value' => null,
         'code' => null,
         'note' => null
     ];
@@ -252,7 +252,7 @@ class ActionsCreatecustomvoucherBody implements ModelInterface, ArrayAccess
     /**
      * Gets value
      *
-     * @return float
+     * @return int
      */
     public function getValue()
     {
@@ -262,7 +262,7 @@ class ActionsCreatecustomvoucherBody implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param float $value Parameter represents money value of the voucher.
+     * @param int $value Parameter represents money value of the voucher.
      *
      * @return $this
      */

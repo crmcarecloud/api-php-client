@@ -4,13 +4,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **reward_id** | **string** | The unique ID of the simple reward. | [optional] 
-**code** | **string** | Unique code of the simple reward.&lt;br/&gt; &lt;i&gt;The unique code serves as an identifier for specific rewards, allowing for easy recognition and application during transactions. For instance, a customer might enter the code BIRTHDAY20 to receive a 20% discount in celebration of their birthday. This system simplifies the process of tracking and redeeming rewards, ensuring that customers can easily access their benefits while businesses can efficiently manage promotional offers.&lt;/i&gt; | 
+**code** | **string** | Unique code of the simple reward. The unique code serves as an identifier for specific rewards, allowing for easy recognition and application during transactions.  For instance, a customer might enter the code BIRTHDAY20 to receive a 20% discount in celebration of their birthday. This system simplifies the process of tracking and redeeming rewards, ensuring that customers can easily access their benefits while businesses can efficiently manage promotional offers. ⚠️ The special characters &#x60;|&#x60; and &#x60;-&#x60; are not allowed in the code. | 
 **names** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TextTranslation[]**](TextTranslation.md) | List of reward name translations. | 
 **notes** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TextTranslation[]**](TextTranslation.md) | List of note translations. | [optional] 
 **subtitles** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\TextTranslation[]**](TextTranslation.md) | List of reward subtitle translations. | [optional] 
 **points_cost** | **float** | Specifies the number of loyalty points required for voucher redemption. | [optional] 
-**valid_date_from** | **string** | Indicates the date when the reward&#x27;s validity period begins *(YYYY-MM-DD)*. | [optional] 
-**valid_date_to** | **string** | Indicates the date when the reward&#x27;s validity period ends *(YYYY-MM-DD)*. | [optional] 
+**valid_date_from** | **string** | Start date of the reward&#x27;s validity period in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional] 
+**valid_date_to** | **string** | End date of the reward&#x27;s validity period in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional] 
 **reward_type_id** | **string** | Indicates the unique ID for the reward type, defining its behavior. Current supported types: *Product with fixed discount / Product with a discount in percentages / Product for discounted price*. See the [GET/reward−types](https://carecloud.readme.io/reference/getrewardtypes) endpoint for additional information. | 
 **reward_type_value** | **float** | Represents the discount amount, which can be either a percentage, a fixed currency value, or the final price after applying the reward. | 
 **maximum_discount_value** | **float** | Represents the maximum discount possible if &#x60;Product with a discount in percentages&#x60; reward type is selected. If not set, the maximum is not limited. | [optional] 

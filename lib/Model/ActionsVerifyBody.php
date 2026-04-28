@@ -259,7 +259,7 @@ class ActionsVerifyBody implements ModelInterface, ArrayAccess
     /**
      * Sets request_id
      *
-     * @param string $request_id The parameter specifies the request that caused the OTP to be created. Request ID was created in the action method [/one-time-password/actions/send](#operation/postSendOtp).
+     * @param string $request_id The parameter specifies the request that caused the OTP to be created. The request ID is returned by [POST /one-time-password/actions/send](https://carecloud.readme.io/reference/postsendotp).
      *
      * @return $this
      */
@@ -283,7 +283,7 @@ class ActionsVerifyBody implements ModelInterface, ArrayAccess
     /**
      * Sets external_application_id
      *
-     * @param string $external_application_id ID of the external application that requested one time password. If you dont have external application id, guide how to get it is available [here](#section/Authentication).
+     * @param string $external_application_id The unique ID of the external application that requested the one-time password. If you do not have an external application ID, see the [authentication documentation](https://carecloud.readme.io/reference/authentication#external-applications).
      *
      * @return $this
      */

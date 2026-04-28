@@ -214,7 +214,7 @@ class PostCustomerValidateCustomerData200ResponseData implements ModelInterface,
     /**
      * Sets is_valid
      *
-     * @param bool $is_valid Result of the CareCloud validation. *Possible results are: false - The parameter has not valid value by CareCloud standard / true - The parameter has value value by CareCloud standard *
+     * @param bool $is_valid Result of the CareCloud validation. *Possible results are: false - The parameter does not have a valid value by CareCloud standard / true - The parameter has a valid value by CareCloud standard*
      *
      * @return $this
      */

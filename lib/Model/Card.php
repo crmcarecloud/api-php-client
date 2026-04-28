@@ -323,7 +323,7 @@ self::STATE_1,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the card holder.
+     * @param string $customer_id The unique ID of the card holder. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -347,7 +347,7 @@ self::STATE_1,        ];
     /**
      * Sets card_type_id
      *
-     * @param string $card_type_id The unique ID of the card type.
+     * @param string $card_type_id The unique ID of the card type. [GET /card-types](https://carecloud.readme.io/reference/getcardtypes)
      *
      * @return $this
      */
@@ -395,7 +395,7 @@ self::STATE_1,        ];
     /**
      * Sets secondary_card_number
      *
-     * @param string $secondary_card_number Secondary card number represents alternative card number of the card.
+     * @param string $secondary_card_number Alternative card number for this card.
      *
      * @return $this
      */
@@ -419,7 +419,7 @@ self::STATE_1,        ];
     /**
      * Sets valid_from
      *
-     * @param string $valid_from Card validity from. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_from Timestamp from which the card is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -443,7 +443,7 @@ self::STATE_1,        ];
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Card validity to. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_to Timestamp until which the card is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -467,7 +467,7 @@ self::STATE_1,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique ID of the store, where the card was assigned to a customer.
+     * @param string $store_id The unique ID of the store where the card was assigned to a customer. [GET /stores](https://carecloud.readme.io/reference/getstores)
      *
      * @return $this
      */

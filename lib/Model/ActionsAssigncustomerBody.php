@@ -286,7 +286,7 @@ class ActionsAssigncustomerBody implements ModelInterface, ArrayAccess
     /**
      * Sets card_number
      *
-     * @param string $card_number Number of the customer  card. Parameter is mandatory only if customer_id is not set.
+     * @param string $card_number Number of the customer card. Parameter is mandatory only if customer_id is not set.
      *
      * @return $this
      */

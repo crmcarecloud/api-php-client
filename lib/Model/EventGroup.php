@@ -259,7 +259,7 @@ self::STATE_2,        ];
     /**
      * Sets event_group_id
      *
-     * @param string $event_group_id The unique ID of the event.
+     * @param string $event_group_id The unique ID of the event group.
      *
      * @return $this
      */
@@ -283,7 +283,7 @@ self::STATE_2,        ];
     /**
      * Sets name
      *
-     * @param string $name The unique ID of the event type.
+     * @param string $name Name of the event group.
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ self::STATE_2,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the event type. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
+     * @param int $state State of the event group. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
      *
      * @return $this
      */

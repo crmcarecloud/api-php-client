@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **name** | **string** | Name of the reward. | 
 **note** | **string** | Additional text. | [optional] 
 **subtitle** | **string** | Text of subtitle. | [optional] 
-**points_cost** | **float** | Number of points, that will be spent by the voucher redemption. | [optional] 
-**valid_time_from** | **string** | Time the reward is valid from. *(HH:MM:SS)* | [optional] 
-**valid_time_to** | **string** | Time the reward is valid to. *(HH:MM:SS)* | [optional] 
+**points_cost** | **float** | Number of points that will be spent by the voucher redemption. | [optional] 
+**valid_time_from** | **string** | Time from which the reward is valid in ISO-8601 format (&#x60;HH:MM:SS&#x60;). All times are in the local timezone. | [optional] 
+**valid_time_to** | **string** | Time until which the reward is valid in ISO-8601 format (&#x60;HH:MM:SS&#x60;). All times are in the local timezone. | [optional] 
 **reward_group** | **int** | The unique ID of the reward group. *Possible values: 0 - party time voucher / 1 - catalog voucher / 2 - campaign voucher/ 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* | 
-**reward_type_id** | **string** | The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. | [optional] 
+**reward_type_id** | **string** | The unique ID of the reward type. The reward type describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. [GET /reward-types](https://carecloud.readme.io/reference/getrewardtypes) | [optional] 
 **store_list** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Store[]**](Store.md) | List of the stores where the reward can be redeemed. | 
 **additional_properties** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]**](PropertyRecord.md) | Additional properties. | [optional] 
 **priority** | **int** | Priority of the reward. *1 is the highest priority* | [optional] 
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **has_brand_bonus** | **bool** | Parameter says, if there is brand bonus on reward. | [optional] 
 **reward_product_relation_conditions** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RewardProductRelationCondition[]**](RewardProductRelationCondition.md) | Conditions between reward and product. | [optional] 
 **reward_product_relation_bonuses** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\RewardProductRelationBonus[]**](RewardProductRelationBonus.md) | Bonuses between reward and product. | [optional] 
-**is_automated** | **bool** | Parameter says, if reward is automated or not. If reward is automated, means it&#x27;s applied by rules of the reward. Otherwise have to be applied manually. | [optional] 
+**is_automated** | **bool** | Parameter says, if reward is automated or not. If the reward is automated, it means it is applied by the rules of the reward. Otherwise, it has to be applied manually. | [optional] 
 **tags** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]**](Tag.md) | List of the tags assigned to the reward. | [optional] 
 **last_change** | **string** | Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)* | [optional] 
 **state** | **int** | State of the reward *Possible values are: 0 - deleted / 1 - active / 2 - non active* | [optional] 

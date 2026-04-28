@@ -89,7 +89,7 @@ class CampaignProductsApi
     /**
      * Operation getCampaignProduct
      *
-     * Detail of a specific campaign product
+     * Get a campaign product
      *
      * @param  string $campaign_product_id The unique ID of the campaign product in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -107,7 +107,7 @@ class CampaignProductsApi
     /**
      * Operation getCampaignProductWithHttpInfo
      *
-     * Detail of a specific campaign product
+     * Get a campaign product
      *
      * @param  string $campaign_product_id The unique ID of the campaign product in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -231,7 +231,7 @@ class CampaignProductsApi
     /**
      * Operation getCampaignProductAsync
      *
-     * Detail of a specific campaign product
+     * Get a campaign product
      *
      * @param  string $campaign_product_id The unique ID of the campaign product in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -252,7 +252,7 @@ class CampaignProductsApi
     /**
      * Operation getCampaignProductAsyncWithHttpInfo
      *
-     * Detail of a specific campaign product
+     * Get a campaign product
      *
      * @param  string $campaign_product_id The unique ID of the campaign product in CareCloud. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -421,7 +421,7 @@ class CampaignProductsApi
      *
      * @param  string $campaign_product_id The unique ID of the campaign product in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -443,7 +443,7 @@ class CampaignProductsApi
      *
      * @param  string $campaign_product_id The unique ID of the campaign product in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -571,7 +571,7 @@ class CampaignProductsApi
      *
      * @param  string $campaign_product_id The unique ID of the campaign product in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -596,7 +596,7 @@ class CampaignProductsApi
      *
      * @param  string $campaign_product_id The unique ID of the campaign product in CareCloud. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -651,7 +651,7 @@ class CampaignProductsApi
      *
      * @param  string $campaign_product_id The unique ID of the campaign product in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -781,10 +781,10 @@ class CampaignProductsApi
     /**
      * Operation getCampaignProducts
      *
-     * Collection of campaign products
+     * Get all campaign products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -795,8 +795,8 @@ class CampaignProductsApi
      * @param  string $store_id Parameter filters all campaign products from [store](#tag/Stores) by store ID. (optional)
      * @param  int $value_type_id Type of value (1 - percentage discount value, 2 - final price). (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $campaign_id The unique ID of the campaign in CareCloud. The list of campaigns is available in [GET /campaigns](https://carecloud.readme.io/reference/getcampaigns). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      *
@@ -813,10 +813,10 @@ class CampaignProductsApi
     /**
      * Operation getCampaignProductsWithHttpInfo
      *
-     * Collection of campaign products
+     * Get all campaign products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -827,8 +827,8 @@ class CampaignProductsApi
      * @param  string $store_id Parameter filters all campaign products from [store](#tag/Stores) by store ID. (optional)
      * @param  int $value_type_id Type of value (1 - percentage discount value, 2 - final price). (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $campaign_id The unique ID of the campaign in CareCloud. The list of campaigns is available in [GET /campaigns](https://carecloud.readme.io/reference/getcampaigns). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      *
@@ -951,10 +951,10 @@ class CampaignProductsApi
     /**
      * Operation getCampaignProductsAsync
      *
-     * Collection of campaign products
+     * Get all campaign products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -965,8 +965,8 @@ class CampaignProductsApi
      * @param  string $store_id Parameter filters all campaign products from [store](#tag/Stores) by store ID. (optional)
      * @param  int $value_type_id Type of value (1 - percentage discount value, 2 - final price). (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $campaign_id The unique ID of the campaign in CareCloud. The list of campaigns is available in [GET /campaigns](https://carecloud.readme.io/reference/getcampaigns). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      *
@@ -986,10 +986,10 @@ class CampaignProductsApi
     /**
      * Operation getCampaignProductsAsyncWithHttpInfo
      *
-     * Collection of campaign products
+     * Get all campaign products
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -1000,8 +1000,8 @@ class CampaignProductsApi
      * @param  string|null $store_id Parameter filters all campaign products from [store](#tag/Stores) by store ID. (optional)
      * @param  int|null $value_type_id Type of value (1 - percentage discount value, 2 - final price). (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string|null $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string|null $campaign_id The unique ID of the campaign in CareCloud. The list of campaigns is available in [GET /campaigns](https://carecloud.readme.io/reference/getcampaigns). (optional)
      * @param  bool|null $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      *
@@ -1054,7 +1054,7 @@ class CampaignProductsApi
      * Create request for operation 'getCampaignProducts'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -1065,8 +1065,8 @@ class CampaignProductsApi
      * @param  string $store_id Parameter filters all campaign products from [store](#tag/Stores) by store ID. (optional)
      * @param  int $value_type_id Type of value (1 - percentage discount value, 2 - final price). (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $campaign_id The unique ID of the campaign in CareCloud. The list of campaigns is available in [GET /campaigns](https://carecloud.readme.io/reference/getcampaigns). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      *

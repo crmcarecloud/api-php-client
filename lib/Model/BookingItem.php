@@ -334,7 +334,7 @@ self::STATE_2,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -478,7 +478,7 @@ self::STATE_2,        ];
     /**
      * Sets booking_item_status
      *
-     * @param string $booking_item_status Current status of the booking item from resource [booking-statuses](#tag/Booking-statuses). If not set, CareCloud uses default booking status.
+     * @param string $booking_item_status The current status of the booking item. If not set, CareCloud uses the default booking status. [GET /booking-statuses](https://carecloud.readme.io/reference/getbookingstatuses)
      *
      * @return $this
      */
@@ -526,7 +526,7 @@ self::STATE_2,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time of the booking item. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Timestamp of the booking item. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -583,7 +583,7 @@ self::STATE_2,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

@@ -482,7 +482,7 @@ self::GENDER_5,        ];
     /**
      * Sets birthdate
      *
-     * @param \DateTime $birthdate Customer's date of birth. *(YYYY-MM-DD)*
+     * @param \DateTime $birthdate Customer's date of birth in ISO-8601 format (`YYYY-MM-DD`).
      *
      * @return $this
      */
@@ -506,7 +506,7 @@ self::GENDER_5,        ];
     /**
      * Sets email
      *
-     * @param string $email Email of the customer. If you enter the email we are validating his format and validity of the domain.  Here is the general regular expression that is used for validation: `^[-a-z0-9!#$%&\\'*+\\/=?^_`{|}~]+(\\\\.[-a-z0-9!#$%&\\'*+\\/=?^_`{|}~]+)*@([a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\\\\.)+[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])$`
+     * @param string $email Email of the customer. If you provide an email address, CareCloud validates its format and the validity of the domain. Here is the general regular expression that is used for validation: `^[-a-z0-9!#$%&'*+\\/=?^_`{|}~]+(\\\\.[-a-z0-9!#$%&'*+\\/=?^_`{|}~]+)*@([a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\\\\.)+[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])$`
      *
      * @return $this
      */
@@ -578,7 +578,7 @@ self::GENDER_5,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique ID of the original customer account store of registration. In case of the customer update, the request cant delete the parameter's value. Only updated.
+     * @param string $store_id The unique ID of the original customer account store of registration. In case of customer update, the value can only be updated, not removed. When provided during customer registration and the project is configured for store-based partner assignment, the system derives the partner from the store and creates a single customer-partner relation. [GET /stores](https://carecloud.readme.io/reference/getstores)
      *
      * @return $this
      */
@@ -674,7 +674,7 @@ self::GENDER_5,        ];
     /**
      * Sets consents
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Consents[] $consents The list of all customer consents. The list of consents is available in the [Consents resource](https://carecloud.readme.io/reference/getconsents) This parameter replacing parameter `agreement`. If both parameters are set (`agreement` and `consents`), the `consents` has priority while creating or updating the record.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Consents[] $consents The list of all customer consents. The list of consents is available in the [Consents resource](https://carecloud.readme.io/reference/getconsents). This parameter replaces the deprecated `agreement` parameter. If both parameters are provided, `consents` takes effect and `agreement` is ignored entirely.
      *
      * @return $this
      */

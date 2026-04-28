@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 Recommend the best rewards for the customer
 
-The endpoint recommends and orders the best rewards for the customer depending on the query parameters setup. This endpoint uses a machine learning-based CareCloud Recommendation Engine. The CareCloud Recommendation Engine requires additional setup and training of AI models. If the recommendation models are not trained for your project, The endpoint returns a list of all rewards filtered by query parameters.     <p class=\"warning\">⚠️ There is the logical AND between query parameters `is_valid`, `valid_from` and `valid to`.</p>
+The endpoint recommends and orders the best rewards for the customer depending on the query parameters setup. This endpoint uses a machine learning-based CareCloud Recommendation Engine. The CareCloud Recommendation Engine requires additional setup and training of AI models. If the recommendation models are not trained for your project, The endpoint returns a list of all rewards filtered by query parameters.  ⚠️ There is the logical AND between query parameters `is_valid`, `valid_from` and `valid to`.
 
 ### Example
 ```php
@@ -106,19 +106,19 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RewardsApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $name = "name_example"; // string | Search record by name or a part of the name.
 $store_id = "store_id_example"; // string | The unique ID of the store where customer can apply the reward.
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
-$valid_from = "valid_from_example"; // string | Date from when is record already valid. *(YYYY-MM-DD)*
-$valid_to = "valid_to_example"; // string | Date to when is record still valid. *(YYYY-MM-DD)*
+$valid_from = "valid_from_example"; // string | Start of the validity period for filtering in ISO-8601 format (`YYYY-MM-DD`).
+$valid_to = "valid_to_example"; // string | End of the validity period for filtering in ISO-8601 format (`YYYY-MM-DD`).
 $code = "code_example"; // string | Code of the reward.
 $is_automated = true; // bool | Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)*
 $reward_group = 56; // int | The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)*
 $customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values.
 $without_stores = true; // bool | If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores.
-$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values. <br/> In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
+$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
 $partner_id = "partner_id_example"; // string | Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners).
 $reward_type_id = "reward_type_id_example"; // string | The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others.
 
@@ -137,19 +137,19 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **name** | **string**| Search record by name or a part of the name. | [optional]
  **store_id** | **string**| The unique ID of the store where customer can apply the reward. | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
- **valid_from** | **string**| Date from when is record already valid. *(YYYY-MM-DD)* | [optional]
- **valid_to** | **string**| Date to when is record still valid. *(YYYY-MM-DD)* | [optional]
+ **valid_from** | **string**| Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
+ **valid_to** | **string**| End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
  **code** | **string**| Code of the reward. | [optional]
  **is_automated** | **bool**| Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* | [optional]
  **reward_group** | **int**| The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* | [optional]
  **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. | [optional]
  **without_stores** | **bool**| If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. | [optional]
- **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
+ **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
  **partner_id** | **string**| Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). | [optional]
  **reward_type_id** | **string**| The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. | [optional]
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 Get all rewards
 
-Get information about rewards as a list of all rewards.  <p class=\"warning\">⚠️ There is the logical AND between query parameters `is_valid`, `valid_from` and `valid to`.</p>
+Get information about all rewards.  > ⚠️ There is a logical AND between the query parameters `is_valid`, `valid_from`, and `valid_to`.
 
 ### Example
 ```php
@@ -195,21 +195,21 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RewardsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $name = "name_example"; // string | Search record by name or a part of the name.
 $store_id = "store_id_example"; // string | The unique ID of the store where customer can apply the reward.
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
-$valid_from = "valid_from_example"; // string | Date from when is record already valid. *(YYYY-MM-DD)*
-$valid_to = "valid_to_example"; // string | Date to when is record still valid. *(YYYY-MM-DD)*
+$valid_from = "valid_from_example"; // string | Start of the validity period for filtering in ISO-8601 format (`YYYY-MM-DD`).
+$valid_to = "valid_to_example"; // string | End of the validity period for filtering in ISO-8601 format (`YYYY-MM-DD`).
 $code = "code_example"; // string | Code of the reward.
 $is_automated = true; // bool | Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)*
 $reward_group = 56; // int | The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)*
 $customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values.
 $without_stores = true; // bool | If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores.
-$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values. <br/> In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
+$tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
 $partner_id = "partner_id_example"; // string | Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners).
 $reward_type_id = "reward_type_id_example"; // string | The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others.
 
@@ -227,21 +227,21 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **name** | **string**| Search record by name or a part of the name. | [optional]
  **store_id** | **string**| The unique ID of the store where customer can apply the reward. | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
- **valid_from** | **string**| Date from when is record already valid. *(YYYY-MM-DD)* | [optional]
- **valid_to** | **string**| Date to when is record still valid. *(YYYY-MM-DD)* | [optional]
+ **valid_from** | **string**| Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
+ **valid_to** | **string**| End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). | [optional]
  **code** | **string**| Code of the reward. | [optional]
  **is_automated** | **bool**| Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* | [optional]
  **reward_group** | **int**| The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* | [optional]
  **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. | [optional]
  **without_stores** | **bool**| If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. | [optional]
- **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
+ **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
  **partner_id** | **string**| Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). | [optional]
  **reward_type_id** | **string**| The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. | [optional]
 
@@ -288,7 +288,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RewardsApi(
 );
 $reward_id = "reward_id_example"; // string | The unique ID of the reward.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reward_id** | **string**| The unique ID of the reward. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -358,7 +358,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RewardsApi(
 );
 $reward_id = "reward_id_example"; // string | The unique ID of the reward.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reward_id** | **string**| The unique ID of the reward. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -428,7 +428,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RewardsApi(
 );
 $reward_id = "reward_id_example"; // string | The unique ID of the reward.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reward_id** | **string**| The unique ID of the reward. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -498,7 +498,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RewardsApi(
 );
 $reward_id = "reward_id_example"; // string | The unique ID of the reward.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reward_id** | **string**| The unique ID of the reward. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -567,7 +567,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RewardsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -588,7 +588,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -638,7 +638,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\RewardsApi(
 );
 $reward_id = "reward_id_example"; // string | The unique ID of the reward.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -660,7 +660,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reward_id** | **string**| The unique ID of the reward. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -749,7 +749,7 @@ Name | Type | Description  | Notes
 
 Create a Simple reward
 
-Create a new simple reward.<br/> ⚠️ Action methods are available only in Enterprise interface.
+Create a new simple reward. ⚠️ Action methods are available only in Enterprise interface.
 
 ### Example
 ```php
@@ -809,7 +809,7 @@ Name | Type | Description  | Notes
 
 Create a new voucher
 
-Create a new voucher for a specific customer based on a reward features definition.<br/> ⚠️Only Coupons & Catalogue reward or Simple reward could be use here.
+Create a new voucher for a specific customer based on a reward features definition.  ⚠️ Only Coupons & Catalogue reward or Simple reward can be used here.
 
 ### Example
 ```php
@@ -871,7 +871,7 @@ Name | Type | Description  | Notes
 
 Set all products that reward can be applied to
 
-Batch process helps to set all products in one request. Request needs to contain all the products, because previous products will be erased.<br/>  ⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+Batch process helps to set all products in one request. Request needs to contain all the products, because previous products will be erased. ⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php

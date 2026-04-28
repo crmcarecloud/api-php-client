@@ -519,7 +519,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Sets payment_time
      *
-     * @param string $payment_time Date and time of bill creation *Possible value: 2016-06-30T15:51:49+02:00*
+     * @param string $payment_time Timestamp of the payment. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */

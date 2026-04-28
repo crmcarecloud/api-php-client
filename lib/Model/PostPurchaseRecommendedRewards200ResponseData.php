@@ -220,7 +220,7 @@ class PostPurchaseRecommendedRewards200ResponseData implements ModelInterface, A
     /**
      * Sets recommended_best_rewards
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedReward[] $recommended_best_rewards List of the best rewards for POS.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\RecommendedReward[] $recommended_best_rewards List of the best rewards for a specific client application (e-commerce, POS, etc.).
      *
      * @return $this
      */

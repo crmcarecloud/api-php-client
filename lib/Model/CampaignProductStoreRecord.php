@@ -257,7 +257,7 @@ class CampaignProductStoreRecord implements ModelInterface, ArrayAccess
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique ID of the store.
+     * @param string $store_id The unique ID of the store. [GET /stores](https://carecloud.readme.io/reference/getstores)
      *
      * @return $this
      */
@@ -281,7 +281,7 @@ class CampaignProductStoreRecord implements ModelInterface, ArrayAccess
     /**
      * Sets campaign_product_id
      *
-     * @param string $campaign_product_id The unique ID of the campaign product.
+     * @param string $campaign_product_id The unique ID of the campaign product. [GET /campaign-products](https://carecloud.readme.io/reference/getcampaignproducts)
      *
      * @return $this
      */

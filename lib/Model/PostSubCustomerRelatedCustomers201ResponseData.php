@@ -214,7 +214,7 @@ class PostSubCustomerRelatedCustomers201ResponseData implements ModelInterface, 
     /**
      * Sets customer_relation_id
      *
-     * @param string $customer_relation_id The unique ID of the customer  relation.
+     * @param string $customer_relation_id The unique ID of the customer relation.
      *
      * @return $this
      */

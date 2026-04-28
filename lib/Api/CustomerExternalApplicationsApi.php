@@ -89,7 +89,7 @@ class CustomerExternalApplicationsApi
     /**
      * Operation getCustomerExternalApp
      *
-     * Detail of a customer external application
+     * Get a customer external application
      *
      * @param  string $customer_external_application_id The unique ID of a customer external application in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -107,7 +107,7 @@ class CustomerExternalApplicationsApi
     /**
      * Operation getCustomerExternalAppWithHttpInfo
      *
-     * Detail of a customer external application
+     * Get a customer external application
      *
      * @param  string $customer_external_application_id The unique ID of a customer external application in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -183,14 +183,6 @@ class CustomerExternalApplicationsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -231,7 +223,7 @@ class CustomerExternalApplicationsApi
     /**
      * Operation getCustomerExternalAppAsync
      *
-     * Detail of a customer external application
+     * Get a customer external application
      *
      * @param  string $customer_external_application_id The unique ID of a customer external application in CareCloud. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -252,7 +244,7 @@ class CustomerExternalApplicationsApi
     /**
      * Operation getCustomerExternalAppAsyncWithHttpInfo
      *
-     * Detail of a customer external application
+     * Get a customer external application
      *
      * @param  string $customer_external_application_id The unique ID of a customer external application in CareCloud. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -385,14 +377,6 @@ class CustomerExternalApplicationsApi
             }
         }
 
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
 
         $defaultHeaders = [];
         if ($this->getConfig()->getUserAgent()) {
@@ -420,18 +404,19 @@ class CustomerExternalApplicationsApi
      * Get all customer external applications
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string $text_id Filter by one value or a list of external application text IDs. The list of values is available at [GET /customer-external-applications](https://carecloud.readme.io/reference/getcustomerexternalapps). In case you want to filter multiple options use array syntax: &#x60;text_id[]&#x3D;sandbox_app&amp;text_id[]&#x3D;other_app&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerExternalApps200Response
      */
-    public function getCustomerExternalApps($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function getCustomerExternalApps($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
-        list($response) = $this->getCustomerExternalAppsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction);
+        list($response) = $this->getCustomerExternalAppsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id);
         return $response;
     }
 
@@ -441,19 +426,20 @@ class CustomerExternalApplicationsApi
      * Get all customer external applications
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string $text_id Filter by one value or a list of external application text IDs. The list of values is available at [GET /customer-external-applications](https://carecloud.readme.io/reference/getcustomerexternalapps). In case you want to filter multiple options use array syntax: &#x60;text_id[]&#x3D;sandbox_app&amp;text_id[]&#x3D;other_app&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerExternalApps200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerExternalAppsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function getCustomerExternalAppsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerExternalApps200Response';
-        $request = $this->getCustomerExternalAppsRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
+        $request = $this->getCustomerExternalAppsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -517,14 +503,6 @@ class CustomerExternalApplicationsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -568,17 +546,18 @@ class CustomerExternalApplicationsApi
      * Get all customer external applications
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string $text_id Filter by one value or a list of external application text IDs. The list of values is available at [GET /customer-external-applications](https://carecloud.readme.io/reference/getcustomerexternalapps). In case you want to filter multiple options use array syntax: &#x60;text_id[]&#x3D;sandbox_app&amp;text_id[]&#x3D;other_app&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerExternalAppsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function getCustomerExternalAppsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
-        return $this->getCustomerExternalAppsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction)
+        return $this->getCustomerExternalAppsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -592,18 +571,19 @@ class CustomerExternalApplicationsApi
      * Get all customer external applications
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
+     * @param  string|null $text_id Filter by one value or a list of external application text IDs. The list of values is available at [GET /customer-external-applications](https://carecloud.readme.io/reference/getcustomerexternalapps). In case you want to filter multiple options use array syntax: &#x60;text_id[]&#x3D;sandbox_app&amp;text_id[]&#x3D;other_app&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerExternalAppsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    public function getCustomerExternalAppsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerExternalApps200Response';
-        $request = $this->getCustomerExternalAppsRequest($accept_language, $count, $offset, $sort_field, $sort_direction);
+        $request = $this->getCustomerExternalAppsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $text_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -646,15 +626,16 @@ class CustomerExternalApplicationsApi
      * Create request for operation 'getCustomerExternalApps'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
+     * @param  string $text_id Filter by one value or a list of external application text IDs. The list of values is available at [GET /customer-external-applications](https://carecloud.readme.io/reference/getcustomerexternalapps). In case you want to filter multiple options use array syntax: &#x60;text_id[]&#x3D;sandbox_app&amp;text_id[]&#x3D;other_app&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCustomerExternalAppsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null)
+    protected function getCustomerExternalAppsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $text_id = null)
     {
 
         $resourcePath = '/customer-external-applications';
@@ -679,6 +660,10 @@ class CustomerExternalApplicationsApi
         // query params
         if ($sort_direction !== null) {
             $queryParams['sort_direction'] = ObjectSerializer::toQueryValue($sort_direction, null);
+        }
+        // query params
+        if ($text_id !== null) {
+            $queryParams['text_id'] = ObjectSerializer::toQueryValue($text_id, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -730,14 +715,6 @@ class CustomerExternalApplicationsApi
             }
         }
 
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
 
         $defaultHeaders = [];
         if ($this->getConfig()->getUserAgent()) {

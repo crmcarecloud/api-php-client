@@ -214,7 +214,7 @@ class PostOTPSend200ResponseData implements ModelInterface, ArrayAccess
     /**
      * Sets request_id
      *
-     * @param string $request_id The parameter specifies the request that caused the OTP to be created. Request ID will be used as one of the parameter in method [/one-time-password/actions/verify](#operation/postVerifyOtp).
+     * @param string $request_id The parameter specifies the request that caused the OTP to be created. The request ID is used as a parameter in [POST /one-time-password/actions/verify](https://carecloud.readme.io/reference/postverifyotp).
      *
      * @return $this
      */

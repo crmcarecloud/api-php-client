@@ -35,7 +35,7 @@ use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
  * ProductReservation Class Doc Comment
  *
  * @category Class
- * @description Product reservation resource.  &lt;p class&#x3D;\&quot;warning\&quot;&gt;⚠️Structure has to contain reservation codes or product reservation items&lt;/p&gt;
+ * @description Product reservation resource.  &gt; ⚠️ Structure has to contain reservation codes or product reservation items.
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -412,7 +412,7 @@ self::STATE_2,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer, owner of the product reservation.
+     * @param string $customer_id The unique ID of the customer, owner of the product reservation. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -556,7 +556,7 @@ self::STATE_2,        ];
     /**
      * Sets pickup_date
      *
-     * @param string $pickup_date Date of the reservation pickup in the tied store. *(YYYY-MM-DD)*
+     * @param string $pickup_date Date of the reservation pickup in the tied store in ISO-8601 format (`YYYY-MM-DD`).
      *
      * @return $this
      */
@@ -628,7 +628,7 @@ self::STATE_2,        ];
     /**
      * Sets currency_id
      *
-     * @param string $currency_id ID of the currency. If total_price is set, then currency_id is mandatory.
+     * @param string $currency_id The unique ID of the currency. If total_price is set, then currency_id is mandatory. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies)
      *
      * @return $this
      */
@@ -805,7 +805,7 @@ self::STATE_2,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

@@ -250,7 +250,7 @@ class ActionsSetpartnersBody implements ModelInterface, ArrayAccess
     /**
      * Sets partner_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[] $partner_records Collection of all customer  partner records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PartnerRecord[] $partner_records Collection of all customer partner records.
      *
      * @return $this
      */

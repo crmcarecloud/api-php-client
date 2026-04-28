@@ -279,7 +279,7 @@ self::REWARD_LIST_TYPE_A,        ];
     /**
      * Sets store_id
      *
-     * @param string $store_id ID of the store.
+     * @param string $store_id The store ID identifies the store or business unit that will close the purchase for the customer. The list of all stores is available at the endpoint [GET /stores](https://carecloud.readme.io/reference/getstores)
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ self::REWARD_LIST_TYPE_A,        ];
     /**
      * Sets cashdesk_number
      *
-     * @param int $cashdesk_number Number of the cash-desk in the store.
+     * @param int $cashdesk_number Number of the cash desk in the store. Used to identify a specific cash desk when multiple are available.
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ self::REWARD_LIST_TYPE_A,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id ID of the customer that made the purchase. You can search customers by plenty parameter in the resource customers.
+     * @param string $customer_id ID of the customer who is closing the purchase. You can search for customers by various parameters in the [GET /customers](https://carecloud.readme.io/reference/getcustomers) endpoint.
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ self::REWARD_LIST_TYPE_A,        ];
     /**
      * Sets reward_list_type
      *
-     * @param string $reward_list_type Type of the rewards. *Possible values: F - full (all manual rewards available and valid of the specific POS)/ C -condensed (only manual rewards corresponding to items on the bill - maxCount not equals zero)/ A - all rewards list including automatic apply this is only for the DATA CUBE*
+     * @param string $reward_list_type Specifies the type of rewards to be listed in the response. Possible values:  - F (full) - All manual rewards that are valid in the defined store  - C (condensed) -  Returns manual rewards that are related to the items from provided purchase. If application is not possible, the reward is not returned.  - A (all) -  List of all available rewards on the project (including automatic rewards). Extended information about rewards is available at the endpoint [GET /rewards](https://carecloud.readme.io/reference/getrewards)
      *
      * @return $this
      */

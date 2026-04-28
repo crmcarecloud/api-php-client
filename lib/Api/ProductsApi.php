@@ -89,7 +89,7 @@ class ProductsApi
     /**
      * Operation getProduct
      *
-     * Detail of a product
+     * Get a product
      *
      * @param  string $product_id The unique ID of the product. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -107,7 +107,7 @@ class ProductsApi
     /**
      * Operation getProductWithHttpInfo
      *
-     * Detail of a product
+     * Get a product
      *
      * @param  string $product_id The unique ID of the product. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -231,7 +231,7 @@ class ProductsApi
     /**
      * Operation getProductAsync
      *
-     * Detail of a product
+     * Get a product
      *
      * @param  string $product_id The unique ID of the product. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -252,7 +252,7 @@ class ProductsApi
     /**
      * Operation getProductAsyncWithHttpInfo
      *
-     * Detail of a product
+     * Get a product
      *
      * @param  string $product_id The unique ID of the product. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -417,10 +417,10 @@ class ProductsApi
     /**
      * Operation getProducts
      *
-     * Collection of available products
+     * Get all products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -428,25 +428,26 @@ class ProductsApi
      * @param  string $code Code of the product. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string $external_type_code Every product can have more than one external ID depends of the business requirements. This parameter allows to pick from witch list of external IDs you want to choose. For the list of external type codes please contact you account manager. If the parameter is not set, API uses as a default value GLOBAL. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response
      */
-    public function getProducts($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null)
+    public function getProducts($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null, $partner_id = null)
     {
-        list($response) = $this->getProductsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids);
+        list($response) = $this->getProductsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids, $partner_id);
         return $response;
     }
 
     /**
      * Operation getProductsWithHttpInfo
      *
-     * Collection of available products
+     * Get all products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -454,16 +455,17 @@ class ProductsApi
      * @param  string $code Code of the product. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string $external_type_code Every product can have more than one external ID depends of the business requirements. This parameter allows to pick from witch list of external IDs you want to choose. For the list of external type codes please contact you account manager. If the parameter is not set, API uses as a default value GLOBAL. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null)
+    public function getProductsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null, $partner_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response';
-        $request = $this->getProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids);
+        $request = $this->getProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids, $partner_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -575,10 +577,10 @@ class ProductsApi
     /**
      * Operation getProductsAsync
      *
-     * Collection of available products
+     * Get all products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -586,14 +588,15 @@ class ProductsApi
      * @param  string $code Code of the product. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string $external_type_code Every product can have more than one external ID depends of the business requirements. This parameter allows to pick from witch list of external IDs you want to choose. For the list of external type codes please contact you account manager. If the parameter is not set, API uses as a default value GLOBAL. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null)
+    public function getProductsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null, $partner_id = null)
     {
-        return $this->getProductsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids)
+        return $this->getProductsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids, $partner_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -604,10 +607,10 @@ class ProductsApi
     /**
      * Operation getProductsAsyncWithHttpInfo
      *
-     * Collection of available products
+     * Get all products
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -615,15 +618,16 @@ class ProductsApi
      * @param  string|null $code Code of the product. (optional)
      * @param  string|null $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string|null $external_type_code Every product can have more than one external ID depends of the business requirements. This parameter allows to pick from witch list of external IDs you want to choose. For the list of external type codes please contact you account manager. If the parameter is not set, API uses as a default value GLOBAL. (optional)
-     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string|null $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null)
+    public function getProductsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null, $partner_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProducts200Response';
-        $request = $this->getProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids);
+        $request = $this->getProductsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $code, $external_id, $external_type_code, $tag_ids, $partner_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -666,7 +670,7 @@ class ProductsApi
      * Create request for operation 'getProducts'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -674,12 +678,13 @@ class ProductsApi
      * @param  string $code Code of the product. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string $external_type_code Every product can have more than one external ID depends of the business requirements. This parameter allows to pick from witch list of external IDs you want to choose. For the list of external type codes please contact you account manager. If the parameter is not set, API uses as a default value GLOBAL. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null)
+    protected function getProductsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $code = null, $external_id = null, $external_type_code = null, $tag_ids = null, $partner_id = null)
     {
 
         $resourcePath = '/products';
@@ -728,6 +733,10 @@ class ProductsApi
             if ($tag_ids !== null) {
                 $queryParams['tag_ids'] = ObjectSerializer::toQueryValue($tag_ids, null);
             }
+        }
+        // query params
+        if ($partner_id !== null) {
+            $queryParams['partner_id'] = ObjectSerializer::toQueryValue($partner_id, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -814,7 +823,7 @@ class ProductsApi
      * Get all tags for resource products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -837,7 +846,7 @@ class ProductsApi
      * Get all tags for resource products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -966,7 +975,7 @@ class ProductsApi
      * Get all tags for resource products
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -992,7 +1001,7 @@ class ProductsApi
      * Get all tags for resource products
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -1048,7 +1057,7 @@ class ProductsApi
      * Create request for operation 'getSubProductTags'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)

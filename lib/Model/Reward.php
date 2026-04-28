@@ -586,7 +586,7 @@ self::STATE_2,        ];
     /**
      * Sets points_cost
      *
-     * @param float $points_cost Number of points, that will be spent by the voucher redemption.
+     * @param float $points_cost Number of points that will be spent by the voucher redemption.
      *
      * @return $this
      */
@@ -610,7 +610,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_time_from
      *
-     * @param string $valid_time_from Time the reward is valid from. *(HH:MM:SS)*
+     * @param string $valid_time_from Time from which the reward is valid in ISO-8601 format (`HH:MM:SS`). All times are in the local timezone.
      *
      * @return $this
      */
@@ -634,7 +634,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_time_to
      *
-     * @param string $valid_time_to Time the reward is valid to. *(HH:MM:SS)*
+     * @param string $valid_time_to Time until which the reward is valid in ISO-8601 format (`HH:MM:SS`). All times are in the local timezone.
      *
      * @return $this
      */
@@ -691,7 +691,7 @@ self::STATE_2,        ];
     /**
      * Sets reward_type_id
      *
-     * @param string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others.
+     * @param string $reward_type_id The unique ID of the reward type. The reward type describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. [GET /reward-types](https://carecloud.readme.io/reference/getrewardtypes)
      *
      * @return $this
      */
@@ -1036,7 +1036,7 @@ self::STATE_2,        ];
     /**
      * Sets is_automated
      *
-     * @param bool $is_automated Parameter says, if reward is automated or not. If reward is automated, means it's applied by rules of the reward. Otherwise have to be applied manually.
+     * @param bool $is_automated Parameter says, if reward is automated or not. If the reward is automated, it means it is applied by the rules of the reward. Otherwise, it has to be applied manually.
      *
      * @return $this
      */

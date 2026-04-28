@@ -275,7 +275,7 @@ class ProductReservationProgress implements ModelInterface, ArrayAccess
     /**
      * Sets reservation_progress_time
      *
-     * @param string $reservation_progress_time Date and time of the change of the product reservation progress. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $reservation_progress_time Timestamp of the product reservation progress change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

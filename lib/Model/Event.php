@@ -313,7 +313,7 @@ self::STATE_2,        ];
     /**
      * Sets event_type_id
      *
-     * @param string $event_type_id The unique ID of the event type.
+     * @param string $event_type_id The unique ID of the event type. [GET /event-types](https://carecloud.readme.io/reference/geteventtypes)
      *
      * @return $this
      */
@@ -337,7 +337,7 @@ self::STATE_2,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the card holder.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -409,7 +409,7 @@ self::STATE_2,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time of the event. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Timestamp of the event. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -433,7 +433,7 @@ self::STATE_2,        ];
     /**
      * Sets secondary_external_id
      *
-     * @param string $secondary_external_id Additional external ID of the event. It's used in case, when differentiation of external_id needed.
+     * @param string $secondary_external_id Additional external ID of the event. Used when differentiation of external_id is needed.
      *
      * @return $this
      */
@@ -457,7 +457,7 @@ self::STATE_2,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the event type. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
+     * @param int $state State of the event. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
      *
      * @return $this
      */

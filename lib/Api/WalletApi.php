@@ -93,9 +93,9 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -114,9 +114,9 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -241,9 +241,9 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -265,9 +265,9 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string|null $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string|null $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string|null $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string|null $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -319,9 +319,9 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -768,8 +768,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -788,8 +788,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -914,8 +914,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -937,8 +937,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string|null $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string|null $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -990,8 +990,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1434,8 +1434,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1454,8 +1454,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1580,8 +1580,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1603,8 +1603,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string|null $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string|null $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1656,8 +1656,8 @@ class WalletApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $date_from Date (ISO 8601) start of the time interval. *(YYYY-MM-DD)* (optional)
-     * @param  string $date_to Date (ISO 8601) end of the time interval. *(YYYY-MM-DD)* (optional)
+     * @param  string $date_from Start of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $date_to End of the time interval in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

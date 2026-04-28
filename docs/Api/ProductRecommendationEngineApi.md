@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 Order products for the best recommendation for a shopping cart
 
-The method returns the algorithm ordered products from the initial list (best first). Results depend on the customer  shopping cart and his previous shopping behavior. If needed, the initial parameter might define the number of results.
+The method returns the algorithm ordered products from the initial list (best first). Results depend on the customer shopping cart and his previous shopping behavior. If needed, the initial parameter might define the number of results.
 
 ### Example
 ```php

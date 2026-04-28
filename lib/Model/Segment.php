@@ -296,7 +296,7 @@ class Segment implements ModelInterface, ArrayAccess
     /**
      * Sets segment_group_id
      *
-     * @param string $segment_group_id Segment group ID from the resource [GET /segment-groups](#tag/SegmentGroups).
+     * @param string $segment_group_id The unique ID of the segment group. [GET /segment-groups](https://carecloud.readme.io/reference/getsegmentgroups)
      *
      * @return $this
      */
@@ -368,7 +368,7 @@ class Segment implements ModelInterface, ArrayAccess
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

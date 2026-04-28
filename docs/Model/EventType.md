@@ -4,7 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event_type_id** | **string** | The unique ID of the event type. | 
-**event_group_id** | **string** | ID of the event type group. | 
+**event_group_id** | **string** | The unique ID of the event group. [GET /event-groups](https://carecloud.readme.io/reference/geteventgroups) | 
+**event_group_text_id** | **string** | Text identification of the event group. | [optional] 
 **name** | **string** | Name of the event type. | [optional] 
 **text_id** | **string** | Text identification of the event type. | [optional] 
 **icon_name** | **string** | Icon name from [Google Fonts Icons](https://fonts.google.com/icons). | [optional] 

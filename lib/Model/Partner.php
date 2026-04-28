@@ -451,7 +451,7 @@ self::STATE_2,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the partner. *Possible values are: 0 - deleted / 1- active *
+     * @param int $state State of the partner. *Possible values are: 0 - deleted / 1 - active*
      *
      * @return $this
      */

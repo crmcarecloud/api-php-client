@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_external_application_id** | **string** | ID of an external application where user wants to be logged in from resource [user-external-application](#tag/Customer-external-applications). | [optional] 
+**user_external_application_id** | **string** | ID of an external application where user wants to be logged in from resource [customer-external-applications](https://carecloud.readme.io/reference/customer-external-applications). | [optional] 
 **login** | **string** | Login name of user in CareCloud. | [optional] 
 **password** | **string** | The CareCloud user password. | [optional] 
 

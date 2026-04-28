@@ -323,7 +323,7 @@ self::STATE_1,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time when ticket was created. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Timestamp of the ticket creation. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -347,7 +347,7 @@ self::STATE_1,        ];
     /**
      * Sets valid_from
      *
-     * @param string $valid_from Date and time from when is ticket valid already. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_from Timestamp from which the ticket is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -371,7 +371,7 @@ self::STATE_1,        ];
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Date and time to when is ticket still valid. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_to Timestamp until which the ticket is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */

@@ -358,7 +358,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_from
      *
-     * @param string $valid_from Date and time of the record valid from. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_from Timestamp from which the status record is valid. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Date and time of the record valid to. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_to Timestamp until which the status record is valid. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -430,7 +430,7 @@ self::STATE_2,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

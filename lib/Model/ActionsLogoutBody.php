@@ -226,7 +226,7 @@ class ActionsLogoutBody implements ModelInterface, ArrayAccess
     /**
      * Sets user_external_application_id
      *
-     * @param string $user_external_application_id ID of an external application where user wants to be logged in from resource [user-external-application](#tag/Customer-external-applications).
+     * @param string $user_external_application_id ID of an external application where user wants to be logged in from resource [customer-external-applications](https://carecloud.readme.io/reference/customer-external-applications).
      *
      * @return $this
      */

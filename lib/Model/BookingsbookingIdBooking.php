@@ -250,7 +250,7 @@ class BookingsbookingIdBooking implements ModelInterface, ArrayAccess
     /**
      * Sets booking_status
      *
-     * @param string $booking_status Current status of the booking. *Possible values are available in [booking-statuses](#tag/Booking-statuses)*
+     * @param string $booking_status Current status of the booking. *Possible values are available in [booking-statuses](https://carecloud.readme.io/reference/getbookingstatuses)*
      *
      * @return $this
      */

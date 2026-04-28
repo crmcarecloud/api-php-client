@@ -226,7 +226,7 @@ class PostUserSsoLogin200ResponseData implements ModelInterface, ArrayAccess
     /**
      * Sets bearer_token
      *
-     * @param string $bearer_token Authentication bearer token for an user. Token can be used for authentication in REST API with Bearer Authentication (more information about it [here](#section/Authorization/bearerAuth))
+     * @param string $bearer_token Authentication bearer token for an user. Token can be used for authentication in REST API with Bearer Authentication (more information about it [here](https://carecloud.readme.io/reference/authorization#bearerauth))
      *
      * @return $this
      */

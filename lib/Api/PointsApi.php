@@ -420,14 +420,14 @@ class PointsApi
      * Get all point records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $point_type_id The unique ID of a point type. (optional)
-     * @param  string $create_point_time_from Date and time from of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $create_point_time_to Date and time to of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $create_point_time_from Start of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $create_point_time_to End of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -445,14 +445,14 @@ class PointsApi
      * Get all point records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $point_type_id The unique ID of a point type. (optional)
-     * @param  string $create_point_time_from Date and time from of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $create_point_time_to Date and time to of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $create_point_time_from Start of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $create_point_time_to End of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -576,14 +576,14 @@ class PointsApi
      * Get all point records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $point_type_id The unique ID of a point type. (optional)
-     * @param  string $create_point_time_from Date and time from of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $create_point_time_to Date and time to of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $create_point_time_from Start of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $create_point_time_to End of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -604,14 +604,14 @@ class PointsApi
      * Get all point records
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
      * @param  string|null $point_type_id The unique ID of a point type. (optional)
-     * @param  string|null $create_point_time_from Date and time from of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $create_point_time_to Date and time to of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $create_point_time_from Start of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $create_point_time_to End of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -662,14 +662,14 @@ class PointsApi
      * Create request for operation 'getPoints'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $point_type_id The unique ID of a point type. (optional)
-     * @param  string $create_point_time_from Date and time from of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $create_point_time_to Date and time to of the create point record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $create_point_time_from Start of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $create_point_time_to End of the time interval for filtering point records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -798,19 +798,19 @@ class PointsApi
     /**
      * Operation getSubPointPurchases
      *
-     * Get a collection of purchases
+     * Get all purchases by a point record
      *
      * @param  string $point_id The unique ID of the point record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -827,19 +827,19 @@ class PointsApi
     /**
      * Operation getSubPointPurchasesWithHttpInfo
      *
-     * Get a collection of purchases
+     * Get all purchases by a point record
      *
      * @param  string $point_id The unique ID of the point record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -962,19 +962,19 @@ class PointsApi
     /**
      * Operation getSubPointPurchasesAsync
      *
-     * Get a collection of purchases
+     * Get all purchases by a point record
      *
      * @param  string $point_id The unique ID of the point record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -994,19 +994,19 @@ class PointsApi
     /**
      * Operation getSubPointPurchasesAsyncWithHttpInfo
      *
-     * Get a collection of purchases
+     * Get all purchases by a point record
      *
      * @param  string $point_id The unique ID of the point record. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
      * @param  string|null $type_id Purchase type (optional)
-     * @param  string|null $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool|null $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string|null $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -1060,15 +1060,15 @@ class PointsApi
      *
      * @param  string $point_id The unique ID of the point record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -1225,7 +1225,7 @@ class PointsApi
     /**
      * Operation postPointsAssign
      *
-     * Assign of points
+     * Assign points
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignpointsBody $body body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -1243,7 +1243,7 @@ class PointsApi
     /**
      * Operation postPointsAssignWithHttpInfo
      *
-     * Assign of points
+     * Assign points
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignpointsBody $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -1367,7 +1367,7 @@ class PointsApi
     /**
      * Operation postPointsAssignAsync
      *
-     * Assign of points
+     * Assign points
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignpointsBody $body (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
@@ -1388,7 +1388,7 @@ class PointsApi
     /**
      * Operation postPointsAssignAsyncWithHttpInfo
      *
-     * Assign of points
+     * Assign points
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\ActionsAssignpointsBody $body (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)

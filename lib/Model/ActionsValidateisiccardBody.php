@@ -280,7 +280,7 @@ class ActionsValidateisiccardBody implements ModelInterface, ArrayAccess
     /**
      * Sets check_usage
      *
-     * @param bool $check_usage If true, check if the card can be used in CareCloud, or if the ISIC  with this number already exists. If not set, this check is ignored.
+     * @param bool $check_usage If true, checks whether the card can be used in CareCloud, or whether an ISIC card with this number already exists. If not set, this check is ignored.
      *
      * @return $this
      */

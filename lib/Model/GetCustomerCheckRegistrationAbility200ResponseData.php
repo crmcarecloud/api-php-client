@@ -214,7 +214,7 @@ class GetCustomerCheckRegistrationAbility200ResponseData implements ModelInterfa
     /**
      * Sets registration_ability
      *
-     * @param bool $registration_ability Result of the possibility to register a customer with his identifier. *Possible results are: false - The identifier cannot be use for the registration / true - Identifier can be use for the registration *
+     * @param bool $registration_ability Result of the possibility to register a customer with his identifier. *Possible results are: false - The identifier cannot be used for registration / true - The identifier can be used for registration*
      *
      * @return $this
      */

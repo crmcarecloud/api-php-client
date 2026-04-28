@@ -420,7 +420,7 @@ class ProductGroupsApi
      * Get all product groups
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -428,14 +428,15 @@ class ProductGroupsApi
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $code Code of the product group. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroups200Response
      */
-    public function getProductGroups($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
+    public function getProductGroups($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null, $partner_id = null)
     {
-        list($response) = $this->getProductGroupsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id);
+        list($response) = $this->getProductGroupsWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id, $partner_id);
         return $response;
     }
 
@@ -445,7 +446,7 @@ class ProductGroupsApi
      * Get all product groups
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -453,15 +454,16 @@ class ProductGroupsApi
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $code Code of the product group. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroups200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductGroupsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
+    public function getProductGroupsWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null, $partner_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroups200Response';
-        $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id);
+        $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id, $partner_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -576,7 +578,7 @@ class ProductGroupsApi
      * Get all product groups
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -584,13 +586,14 @@ class ProductGroupsApi
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $code Code of the product group. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductGroupsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
+    public function getProductGroupsAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null, $partner_id = null)
     {
-        return $this->getProductGroupsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id)
+        return $this->getProductGroupsAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id, $partner_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -604,7 +607,7 @@ class ProductGroupsApi
      * Get all product groups
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -612,14 +615,15 @@ class ProductGroupsApi
      * @param  string|null $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string|null $code Code of the product group. (optional)
      * @param  string|null $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string|null $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductGroupsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
+    public function getProductGroupsAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null, $partner_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetProductGroups200Response';
-        $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id);
+        $request = $this->getProductGroupsRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $store_id, $code, $external_id, $partner_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -662,7 +666,7 @@ class ProductGroupsApi
      * Create request for operation 'getProductGroups'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -670,11 +674,12 @@ class ProductGroupsApi
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $code Code of the product group. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductGroupsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null)
+    protected function getProductGroupsRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $store_id = null, $code = null, $external_id = null, $partner_id = null)
     {
 
         $resourcePath = '/product-groups';
@@ -715,6 +720,10 @@ class ProductGroupsApi
         // query params
         if ($external_id !== null) {
             $queryParams['external_id'] = ObjectSerializer::toQueryValue($external_id, null);
+        }
+        // query params
+        if ($partner_id !== null) {
+            $queryParams['partner_id'] = ObjectSerializer::toQueryValue($partner_id, null);
         }
         // header params
         if ($accept_language !== null) {

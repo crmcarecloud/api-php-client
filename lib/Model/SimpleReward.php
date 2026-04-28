@@ -486,7 +486,7 @@ self::STATE_2,        ];
     /**
      * Sets code
      *
-     * @param string $code Unique code of the simple reward.<br/> <i>The unique code serves as an identifier for specific rewards, allowing for easy recognition and application during transactions. For instance, a customer might enter the code BIRTHDAY20 to receive a 20% discount in celebration of their birthday. This system simplifies the process of tracking and redeeming rewards, ensuring that customers can easily access their benefits while businesses can efficiently manage promotional offers.</i>
+     * @param string $code Unique code of the simple reward. The unique code serves as an identifier for specific rewards, allowing for easy recognition and application during transactions.  For instance, a customer might enter the code BIRTHDAY20 to receive a 20% discount in celebration of their birthday. This system simplifies the process of tracking and redeeming rewards, ensuring that customers can easily access their benefits while businesses can efficiently manage promotional offers. ⚠️ The special characters `|` and `-` are not allowed in the code.
      *
      * @return $this
      */
@@ -606,7 +606,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_date_from
      *
-     * @param string $valid_date_from Indicates the date when the reward's validity period begins *(YYYY-MM-DD)*.
+     * @param string $valid_date_from Start date of the reward's validity period in ISO-8601 format (`YYYY-MM-DD`).
      *
      * @return $this
      */
@@ -630,7 +630,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_date_to
      *
-     * @param string $valid_date_to Indicates the date when the reward's validity period ends *(YYYY-MM-DD)*.
+     * @param string $valid_date_to End date of the reward's validity period in ISO-8601 format (`YYYY-MM-DD`).
      *
      * @return $this
      */

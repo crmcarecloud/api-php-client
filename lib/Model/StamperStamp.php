@@ -428,7 +428,7 @@ self::STATE_1,        ];
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time when the customer collected the stamp. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Timestamp when the customer collected the stamp. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */

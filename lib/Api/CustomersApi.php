@@ -1019,7 +1019,7 @@ class CustomersApi
     /**
      * Operation deleteSubCustomerRelatedCustomer
      *
-     * Delete the customer  relation
+     * Delete the customer relation
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $customer_relation_id The unique ID of relation between two customers in CareCloud. (required)
@@ -1037,7 +1037,7 @@ class CustomersApi
     /**
      * Operation deleteSubCustomerRelatedCustomerWithHttpInfo
      *
-     * Delete the customer  relation
+     * Delete the customer relation
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $customer_relation_id The unique ID of relation between two customers in CareCloud. (required)
@@ -1140,7 +1140,7 @@ class CustomersApi
     /**
      * Operation deleteSubCustomerRelatedCustomerAsync
      *
-     * Delete the customer  relation
+     * Delete the customer relation
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $customer_relation_id The unique ID of relation between two customers in CareCloud. (required)
@@ -1162,7 +1162,7 @@ class CustomersApi
     /**
      * Operation deleteSubCustomerRelatedCustomerAsyncWithHttpInfo
      *
-     * Delete the customer  relation
+     * Delete the customer relation
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $customer_relation_id The unique ID of relation between two customers in CareCloud. (required)
@@ -1669,18 +1669,18 @@ class CustomersApi
      * Get all customers
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
-     * @param  string $phone Phone number with international prefix (420000000). (optional)
+     * @param  string $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
-     * @param  string $birthdate Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* (optional)
+     * @param  string $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
      * @param  string[] $email_list List of the email addresses of the customers. (optional)
-     * @param  string[] $customer_ids List of the customer IDs. (optional)
+     * @param  string[] $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -1699,18 +1699,18 @@ class CustomersApi
      * Get all customers
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
-     * @param  string $phone Phone number with international prefix (420000000). (optional)
+     * @param  string $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
-     * @param  string $birthdate Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* (optional)
+     * @param  string $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
      * @param  string[] $email_list List of the email addresses of the customers. (optional)
-     * @param  string[] $customer_ids List of the customer IDs. (optional)
+     * @param  string[] $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -1835,18 +1835,18 @@ class CustomersApi
      * Get all customers
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
-     * @param  string $phone Phone number with international prefix (420000000). (optional)
+     * @param  string $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
-     * @param  string $birthdate Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* (optional)
+     * @param  string $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
      * @param  string[] $email_list List of the email addresses of the customers. (optional)
-     * @param  string[] $customer_ids List of the customer IDs. (optional)
+     * @param  string[] $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1868,18 +1868,18 @@ class CustomersApi
      * Get all customers
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $email Search by email. (optional)
-     * @param  string|null $phone Phone number with international prefix (420000000). (optional)
+     * @param  string|null $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string|null $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
      * @param  string|null $first_name Search by first name. (optional)
      * @param  string|null $last_name Search by last name. (optional)
-     * @param  string|null $birthdate Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* (optional)
+     * @param  string|null $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
      * @param  string[]|null $email_list List of the email addresses of the customers. (optional)
-     * @param  string[]|null $customer_ids List of the customer IDs. (optional)
+     * @param  string[]|null $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool|null $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1931,18 +1931,18 @@ class CustomersApi
      * Create request for operation 'getCustomers'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $email Search by email. (optional)
-     * @param  string $phone Phone number with international prefix (420000000). (optional)
+     * @param  string $phone Phone number of the customer with international prefix (420000000000). (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
-     * @param  string $birthdate Customer&#x27;s date of birth. *Possible values are: YYYY-MM-DD / DD.MM.YYYY* (optional)
+     * @param  string $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
      * @param  string[] $email_list List of the email addresses of the customers. (optional)
-     * @param  string[] $customer_ids List of the customer IDs. (optional)
+     * @param  string[] $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
      * @throws \InvalidArgumentException
@@ -2451,7 +2451,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2474,7 +2474,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2603,7 +2603,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2629,7 +2629,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -2685,7 +2685,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2824,7 +2824,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2850,7 +2850,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -2982,7 +2982,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3011,7 +3011,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -3070,7 +3070,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3224,11 +3224,11 @@ class CustomersApi
     /**
      * Operation getSubCustomerEvents
      *
-     * Get information about all customer  events
+     * Get information about all customer events
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3236,8 +3236,8 @@ class CustomersApi
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
-     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3252,11 +3252,11 @@ class CustomersApi
     /**
      * Operation getSubCustomerEventsWithHttpInfo
      *
-     * Get information about all customer  events
+     * Get information about all customer events
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3264,8 +3264,8 @@ class CustomersApi
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
-     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3386,11 +3386,11 @@ class CustomersApi
     /**
      * Operation getSubCustomerEventsAsync
      *
-     * Get information about all customer  events
+     * Get information about all customer events
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3398,8 +3398,8 @@ class CustomersApi
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
-     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3417,11 +3417,11 @@ class CustomersApi
     /**
      * Operation getSubCustomerEventsAsyncWithHttpInfo
      *
-     * Get information about all customer  events
+     * Get information about all customer events
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -3429,8 +3429,8 @@ class CustomersApi
      * @param  string|null $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[]|null $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool|null $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
-     * @param  string|null $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3482,7 +3482,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3490,8 +3490,8 @@ class CustomersApi
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
      * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
-     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3650,7 +3650,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3673,7 +3673,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3802,7 +3802,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -3828,7 +3828,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -3884,7 +3884,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4347,11 +4347,11 @@ class CustomersApi
     /**
      * Operation getSubCustomerPartners
      *
-     * Get information about all customer  partners
+     * Get information about all customer partners
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4369,11 +4369,11 @@ class CustomersApi
     /**
      * Operation getSubCustomerPartnersWithHttpInfo
      *
-     * Get information about all customer  partners
+     * Get information about all customer partners
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4497,11 +4497,11 @@ class CustomersApi
     /**
      * Operation getSubCustomerPartnersAsync
      *
-     * Get information about all customer  partners
+     * Get information about all customer partners
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4522,11 +4522,11 @@ class CustomersApi
     /**
      * Operation getSubCustomerPartnersAsyncWithHttpInfo
      *
-     * Get information about all customer  partners
+     * Get information about all customer partners
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -4581,7 +4581,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4715,7 +4715,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4738,7 +4738,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4867,7 +4867,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -4893,7 +4893,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -4949,7 +4949,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -5088,7 +5088,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -5110,7 +5110,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -5238,7 +5238,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -5263,7 +5263,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -5318,7 +5318,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -5452,14 +5452,14 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -5480,14 +5480,14 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -5614,14 +5614,14 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -5645,14 +5645,14 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string|null $type_id Purchase type (optional)
-     * @param  string|null $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool|null $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string|null $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -5706,14 +5706,14 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      * @param  string $external_purchase_id ID of the purchase from external (e-shop, POS) system. This ID should have unique value. (optional)
      *
@@ -6217,7 +6217,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -6242,7 +6242,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -6373,7 +6373,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -6401,7 +6401,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -6459,7 +6459,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -6608,21 +6608,21 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6641,21 +6641,21 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6780,21 +6780,21 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6816,21 +6816,21 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $name Search record by name or a part of the name. (optional)
      * @param  string|null $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string|null $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string|null $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string|null $code Code of the reward. (optional)
      * @param  bool|null $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int|null $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool|null $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6882,21 +6882,21 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7079,19 +7079,19 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
@@ -7112,19 +7112,19 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
@@ -7251,19 +7251,19 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
@@ -7287,19 +7287,19 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $name Search record by name or a part of the name. (optional)
      * @param  string|null $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string|null $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string|null $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string|null $code Code of the reward. (optional)
      * @param  bool|null $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int|null $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool|null $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string|null $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      * @param  string|null $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
@@ -7353,19 +7353,19 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $store_id The unique ID of the store where customer can apply the reward. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
      * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
-     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
      * @param  string $reward_type_id The type of reward describes the reward behavior. For example, a Percentage discount, Buy one + get one discounted product, and others. (optional)
      *
@@ -7891,13 +7891,13 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[] $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[] $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7916,13 +7916,13 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[] $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[] $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8047,13 +8047,13 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[] $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[] $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8075,13 +8075,13 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
-     * @param  string|null $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string|null $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string|null $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[]|null $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[]|null $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8133,13 +8133,13 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string $external_id The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). (optional)
+     * @param  string $external_id The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. (optional)
      * @param  string $customer_source_id The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. (optional)
-     * @param  string[] $external_ids The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
+     * @param  string[] $external_ids Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8286,7 +8286,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -8309,7 +8309,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -8438,7 +8438,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -8464,7 +8464,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -8520,7 +8520,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -8659,7 +8659,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -8687,7 +8687,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -8821,7 +8821,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -8852,7 +8852,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -8913,7 +8913,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -11051,7 +11051,7 @@ class CustomersApi
     /**
      * Operation postSubCustomerRelatedCustomers
      *
-     * Create the customer  relation
+     * Create the customer relation
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody $body body (required)
      * @param  string $customer_id The unique ID of the customer. (required)
@@ -11070,7 +11070,7 @@ class CustomersApi
     /**
      * Operation postSubCustomerRelatedCustomersWithHttpInfo
      *
-     * Create the customer  relation
+     * Create the customer relation
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody $body (required)
      * @param  string $customer_id The unique ID of the customer. (required)
@@ -11195,7 +11195,7 @@ class CustomersApi
     /**
      * Operation postSubCustomerRelatedCustomersAsync
      *
-     * Create the customer  relation
+     * Create the customer relation
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody $body (required)
      * @param  string $customer_id The unique ID of the customer. (required)
@@ -11217,7 +11217,7 @@ class CustomersApi
     /**
      * Operation postSubCustomerRelatedCustomersAsyncWithHttpInfo
      *
-     * Create the customer  relation
+     * Create the customer relation
      *
      * @param  \CrmCareCloud\Webservice\RestApi\Client\Model\CustomerIdRelatedcustomersBody $body (required)
      * @param  string $customer_id The unique ID of the customer. (required)

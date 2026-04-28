@@ -420,14 +420,14 @@ class CreditsApi
      * Get all credit records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
-     * @param  string $create_credit_time_from Date and time from of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $create_credit_time_to Date and time to of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $create_credit_time_from Start of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $create_credit_time_to End of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -445,14 +445,14 @@ class CreditsApi
      * Get all credit records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
-     * @param  string $create_credit_time_from Date and time from of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $create_credit_time_to Date and time to of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $create_credit_time_from Start of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $create_credit_time_to End of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -576,14 +576,14 @@ class CreditsApi
      * Get all credit records
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
-     * @param  string $create_credit_time_from Date and time from of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $create_credit_time_to Date and time to of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $create_credit_time_from Start of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $create_credit_time_to End of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -604,14 +604,14 @@ class CreditsApi
      * Get all credit records
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
-     * @param  string|null $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
-     * @param  string|null $create_credit_time_from Date and time from of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $create_credit_time_to Date and time to of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string|null $create_credit_time_from Start of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $create_credit_time_to End of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -662,14 +662,14 @@ class CreditsApi
      * Create request for operation 'getCredits'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
-     * @param  string $create_credit_time_from Date and time from of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $create_credit_time_to Date and time to of the create credit record. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $credit_type_id The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
+     * @param  string $create_credit_time_from Start of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $create_credit_time_to End of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -798,19 +798,19 @@ class CreditsApi
     /**
      * Operation getSubCreditPurchases
      *
-     * Get a collection of purchases
+     * Get all purchases for a credit
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -826,19 +826,19 @@ class CreditsApi
     /**
      * Operation getSubCreditPurchasesWithHttpInfo
      *
-     * Get a collection of purchases
+     * Get all purchases for a credit
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -960,19 +960,19 @@ class CreditsApi
     /**
      * Operation getSubCreditPurchasesAsync
      *
-     * Get a collection of purchases
+     * Get all purchases for a credit
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -991,19 +991,19 @@ class CreditsApi
     /**
      * Operation getSubCreditPurchasesAsyncWithHttpInfo
      *
-     * Get a collection of purchases
+     * Get all purchases for a credit
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
      * @param  string|null $type_id Purchase type (optional)
-     * @param  string|null $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool|null $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -1056,15 +1056,15 @@ class CreditsApi
      *
      * @param  string $credit_id The unique ID of the credit record. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $store_id The unique ID of the store in CareCloud. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $type_id Purchase type (optional)
-     * @param  string $payment_time_from Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $payment_time_to Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $payment_time_from Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $payment_time_to End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $purchase_items_extension If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. (optional, default to false)
      *
      * @throws \InvalidArgumentException

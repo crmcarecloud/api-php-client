@@ -368,7 +368,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer, owner of the order.
+     * @param string $customer_id The unique ID of the customer, owner of the order. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -392,7 +392,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets currency_id
      *
-     * @param string $currency_id ID of the currency.
+     * @param string $currency_id The unique ID of the currency. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies)
      *
      * @return $this
      */
@@ -584,7 +584,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_date
      *
-     * @param string $shipping_date Date of the order shipping. If the date is in future, order should be shipped in this date.
+     * @param string $shipping_date Timestamp of the order shipping. If the date is in the future, the order will be shipped on that date. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -680,7 +680,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

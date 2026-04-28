@@ -254,7 +254,7 @@ class OrderInvoicing implements ModelInterface, ArrayAccess
     /**
      * Sets paid_date
      *
-     * @param string $paid_date Date and time of the order payment. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $paid_date Timestamp of the order payment. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */

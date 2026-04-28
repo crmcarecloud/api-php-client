@@ -35,7 +35,6 @@ use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
  * CustomerType Class Doc Comment
  *
  * @category Class
- * @description Customer type structure.
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -57,9 +56,6 @@ class CustomerType implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'type_id' => 'string',
-        'name' => 'string',
-        'last_change' => 'string'
     ];
 
     /**
@@ -68,9 +64,6 @@ class CustomerType implements ModelInterface, ArrayAccess
       * @var array<string,string|null>
       */
     protected static $swaggerFormats = [
-        'type_id' => null,
-        'name' => null,
-        'last_change' => null
     ];
 
     /**
@@ -100,9 +93,6 @@ class CustomerType implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type_id' => 'type_id',
-        'name' => 'name',
-        'last_change' => 'last_change'
     ];
 
     /**
@@ -111,9 +101,6 @@ class CustomerType implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type_id' => 'setTypeId',
-        'name' => 'setName',
-        'last_change' => 'setLastChange'
     ];
 
     /**
@@ -122,9 +109,6 @@ class CustomerType implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type_id' => 'getTypeId',
-        'name' => 'getName',
-        'last_change' => 'getLastChange'
     ];
 
     /**
@@ -185,9 +169,6 @@ class CustomerType implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type_id'] = isset($data['type_id']) ? $data['type_id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
     }
 
     /**
@@ -213,78 +194,6 @@ class CustomerType implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type_id
-     *
-     * @return string
-     */
-    public function getTypeId()
-    {
-        return $this->container['type_id'];
-    }
-
-    /**
-     * Sets type_id
-     *
-     * @param string $type_id The unique ID of the customer type.
-     *
-     * @return $this
-     */
-    public function setTypeId($type_id)
-    {
-        $this->container['type_id'] = $type_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Name of the customer type.
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_change
-     *
-     * @return string
-     */
-    public function getLastChange()
-    {
-        return $this->container['last_change'];
-    }
-
-    /**
-     * Sets last_change
-     *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
-     *
-     * @return $this
-     */
-    public function setLastChange($last_change)
-    {
-        $this->container['last_change'] = $last_change;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *

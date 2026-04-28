@@ -420,7 +420,7 @@ class ChargedEntrancesApi
      * Get all entrances
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -436,8 +436,8 @@ class ChargedEntrancesApi
      * @param  string $external_entrance_id External ID of the entrance. Structure can be different depends of POS system, that created entrance. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  bool $is_cancelled Filter for canceled entrances. *Possible values: true - all cancelled entrances / false - all non cancelled entrances / no value - all entrances* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $product_id ID of the product. (optional)
      * @param  string $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
      * @param  string $order_item_id ID of an item from e-shop order. (optional)
@@ -458,7 +458,7 @@ class ChargedEntrancesApi
      * Get all entrances
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -474,8 +474,8 @@ class ChargedEntrancesApi
      * @param  string $external_entrance_id External ID of the entrance. Structure can be different depends of POS system, that created entrance. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  bool $is_cancelled Filter for canceled entrances. *Possible values: true - all cancelled entrances / false - all non cancelled entrances / no value - all entrances* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $product_id ID of the product. (optional)
      * @param  string $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
      * @param  string $order_item_id ID of an item from e-shop order. (optional)
@@ -602,7 +602,7 @@ class ChargedEntrancesApi
      * Get all entrances
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -618,8 +618,8 @@ class ChargedEntrancesApi
      * @param  string $external_entrance_id External ID of the entrance. Structure can be different depends of POS system, that created entrance. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  bool $is_cancelled Filter for canceled entrances. *Possible values: true - all cancelled entrances / false - all non cancelled entrances / no value - all entrances* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $product_id ID of the product. (optional)
      * @param  string $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
      * @param  string $order_item_id ID of an item from e-shop order. (optional)
@@ -643,7 +643,7 @@ class ChargedEntrancesApi
      * Get all entrances
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -659,8 +659,8 @@ class ChargedEntrancesApi
      * @param  string|null $external_entrance_id External ID of the entrance. Structure can be different depends of POS system, that created entrance. (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  bool|null $is_cancelled Filter for canceled entrances. *Possible values: true - all cancelled entrances / false - all non cancelled entrances / no value - all entrances* (optional)
-     * @param  string|null $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string|null $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string|null $product_id ID of the product. (optional)
      * @param  string|null $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
      * @param  string|null $order_item_id ID of an item from e-shop order. (optional)
@@ -714,7 +714,7 @@ class ChargedEntrancesApi
      * Create request for operation 'getEntrances'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -730,8 +730,8 @@ class ChargedEntrancesApi
      * @param  string $external_entrance_id External ID of the entrance. Structure can be different depends of POS system, that created entrance. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
      * @param  bool $is_cancelled Filter for canceled entrances. *Possible values: true - all cancelled entrances / false - all non cancelled entrances / no value - all entrances* (optional)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  string $product_id ID of the product. (optional)
      * @param  string $external_turnstile_permission_id External ID of the turnstile permission. Structure can be different depends of the POS system, that created the permission. (optional)
      * @param  string $order_item_id ID of an item from e-shop order. (optional)
@@ -1242,8 +1242,8 @@ class ChargedEntrancesApi
      * Get entrances overview
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  int $pos_id ID of POS system for tickets. Required with path parameter entrance ID. *Possible values are: EPOS - 3 / skidata - 6 / axess - 9 / base - 11* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -1262,8 +1262,8 @@ class ChargedEntrancesApi
      * Get entrances overview
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  int $pos_id ID of POS system for tickets. Required with path parameter entrance ID. *Possible values are: EPOS - 3 / skidata - 6 / axess - 9 / base - 11* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -1388,8 +1388,8 @@ class ChargedEntrancesApi
      * Get entrances overview
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  int $pos_id ID of POS system for tickets. Required with path parameter entrance ID. *Possible values are: EPOS - 3 / skidata - 6 / axess - 9 / base - 11* (optional)
      *
      * @throws \InvalidArgumentException
@@ -1411,8 +1411,8 @@ class ChargedEntrancesApi
      * Get entrances overview
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string|null $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string|null $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string|null $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string|null $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  int|null $pos_id ID of POS system for tickets. Required with path parameter entrance ID. *Possible values are: EPOS - 3 / skidata - 6 / axess - 9 / base - 11* (optional)
      *
      * @throws \InvalidArgumentException
@@ -1464,8 +1464,8 @@ class ChargedEntrancesApi
      * Create request for operation 'getEntrancesOverview'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string $valid_from Date from when is record already valid. *(YYYY-MM-DD)* (optional)
-     * @param  string $valid_to Date to when is record still valid. *(YYYY-MM-DD)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
+     * @param  string $valid_to End of the validity period for filtering in ISO-8601 format (&#x60;YYYY-MM-DD&#x60;). (optional)
      * @param  int $pos_id ID of POS system for tickets. Required with path parameter entrance ID. *Possible values are: EPOS - 3 / skidata - 6 / axess - 9 / base - 11* (optional)
      *
      * @throws \InvalidArgumentException

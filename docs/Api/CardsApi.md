@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 Get a card
 
-Get information about a specific customer card.
+Get information about a specific customer card, including its number, type, validity period, state, and the customer it is assigned to. See [Cards](https://help.crmcarecloud.com/en/loyalty-engine/cards) for details.
 
 ### Example
 ```php
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 Get all cards
 
-Get information about all customer cards.
+Get a list of all customer cards. Cards are the primary customer identification mechanism in CareCloud. Each card carries a unique number regardless of its format - plastic, electronic, virtual, or membership. A customer can hold multiple cards of different types. Use filters such as `customer_id`, `card_type_id`, and `card_state` to narrow results. See [Cards](https://help.crmcarecloud.com/en/loyalty-engine/cards) for details.
 
 ### Example
 ```php
@@ -102,7 +102,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CardsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -128,7 +128,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 Assign free card
 
-Assign a free card in order to the customer. The method is currently limited. You can assign one card of a certain type to one customer. In case of your project allows customers with multiple cards of one type, please use [PUT /cards](https://carecloud.readme.io/reference/putcard)
+Assign a free card to a customer. This action is limited to one card per card type per customer. If your project allows customers to have multiple cards of one type, use [PUT /cards/{card_id}](https://carecloud.readme.io/reference/putcard) instead. See [Assign card to customer](https://help.crmcarecloud.com/en/marketing-automation/actions/assign-card-to-customer) for details.
 
 ### Example
 ```php
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 Create a batch of cards
 
-Batch process helps to add multiple cards in one request.<br/> ⚠️ Adjust batch sizes based on processing times. We recommended use maximum amount of 1000 records and adjust the batch size based on processing time.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+Create multiple customer cards in a single request. Use this endpoint to import a large number of cards efficiently. ⚠️ Adjust batch sizes based on processing times. We recommend using a maximum of 1000 records and adjusting the batch size based on processing time. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php
@@ -279,7 +279,7 @@ void (empty response body)
 
 Create a card
 
-Add a new customer card.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+Add a new customer card. For bulk creation, use [POST /cards/batch](https://carecloud.readme.io/reference/postbatchcards) instead. To assign an existing free card from a pre-imported pool, use [POST /cards/actions/assign-free-card](https://carecloud.readme.io/reference/postassigncard) instead. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 Generate virtual card file
 
-Generate file with virtual card. File can be generated as a PNG file (QR code or Barcode) or file for Apple Wallet.
+Generate a virtual card file. The file can be a PNG image (barcode or QR code) or a pass package for Apple Wallet. Use the returned URL to display or distribute the digital card in a mobile application or by email.
 
 ### Example
 ```php
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 
 Get a PassMachine digital card
 
-Generate a link for a PassMachine digital card. This endpoint generate PassMachine from an existing customer card. If the card is missing, the PassMachine link can't be generated.
+Generate a PassMachine link for a customer's digital card. The customer must have an existing card; if no card exists, the link cannot be generated.
 
 ### Example
 ```php
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 Validate free card
 
-Method validates if a card is free to use(it is not blocked, used by somebody else or even not exists).
+Validates whether a card is free to use — meaning it is not blocked, not assigned to another customer, and exists in the system.
 
 ### Example
 ```php
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 
 Validate ISIC card
 
-Method validates if a card is valid ISIC card and there is a possibility to check if the card is already present in CareCloud database.
+Validates whether a card is a valid ISIC card. Optionally checks whether the card is already present in the CareCloud database.
 
 ### Example
 ```php
@@ -579,7 +579,7 @@ Name | Type | Description  | Notes
 
 Update a card
 
-Update a specific customer card.
+Update a specific customer card. Use this endpoint to change the card's validity period, state, or assigned customer.
 
 ### Example
 ```php

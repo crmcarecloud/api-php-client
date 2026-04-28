@@ -344,7 +344,7 @@ class Purchase implements ModelInterface, ArrayAccess
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -368,7 +368,7 @@ class Purchase implements ModelInterface, ArrayAccess
     /**
      * Sets store_id
      *
-     * @param string $store_id The unique ID of the store in CareCloud.
+     * @param string $store_id The unique ID of the store. [GET /stores](https://carecloud.readme.io/reference/getstores)
      *
      * @return $this
      */
@@ -416,7 +416,7 @@ class Purchase implements ModelInterface, ArrayAccess
     /**
      * Sets payment_time
      *
-     * @param string $payment_time Date and time of the purchase payment. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $payment_time Timestamp of the purchase payment. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -536,7 +536,7 @@ class Purchase implements ModelInterface, ArrayAccess
     /**
      * Sets currency_id
      *
-     * @param string $currency_id The unique ID of the currency.
+     * @param string $currency_id The unique ID of the currency. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies)
      *
      * @return $this
      */
@@ -608,7 +608,7 @@ class Purchase implements ModelInterface, ArrayAccess
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

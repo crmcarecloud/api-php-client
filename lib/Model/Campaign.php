@@ -349,7 +349,7 @@ self::STATE_2,        ];
     /**
      * Sets parent_id
      *
-     * @param string $parent_id ID of the parent campaign.
+     * @param string $parent_id The unique ID of the parent campaign.
      *
      * @return $this
      */
@@ -397,7 +397,7 @@ self::STATE_2,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

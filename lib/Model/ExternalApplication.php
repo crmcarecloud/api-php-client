@@ -58,6 +58,7 @@ class ExternalApplication implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'external_application_id' => 'string',
+        'text_id' => 'string',
         'name' => 'string',
         'last_change' => 'string',
         'state' => 'int'
@@ -70,6 +71,7 @@ class ExternalApplication implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'external_application_id' => null,
+        'text_id' => null,
         'name' => null,
         'last_change' => null,
         'state' => null
@@ -103,6 +105,7 @@ class ExternalApplication implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'external_application_id' => 'external_application_id',
+        'text_id' => 'text_id',
         'name' => 'name',
         'last_change' => 'last_change',
         'state' => 'state'
@@ -115,6 +118,7 @@ class ExternalApplication implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'external_application_id' => 'setExternalApplicationId',
+        'text_id' => 'setTextId',
         'name' => 'setName',
         'last_change' => 'setLastChange',
         'state' => 'setState'
@@ -127,6 +131,7 @@ class ExternalApplication implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'external_application_id' => 'getExternalApplicationId',
+        'text_id' => 'getTextId',
         'name' => 'getName',
         'last_change' => 'getLastChange',
         'state' => 'getState'
@@ -206,6 +211,7 @@ self::STATE_2,        ];
     public function __construct(array $data = null)
     {
         $this->container['external_application_id'] = isset($data['external_application_id']) ? $data['external_application_id'] : null;
+        $this->container['text_id'] = isset($data['text_id']) ? $data['text_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['last_change'] = isset($data['last_change']) ? $data['last_change'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
@@ -269,6 +275,30 @@ self::STATE_2,        ];
     public function setExternalApplicationId($external_application_id)
     {
         $this->container['external_application_id'] = $external_application_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets text_id
+     *
+     * @return string
+     */
+    public function getTextId()
+    {
+        return $this->container['text_id'];
+    }
+
+    /**
+     * Sets text_id
+     *
+     * @param string $text_id The unique text identifier of the external application.
+     *
+     * @return $this
+     */
+    public function setTextId($text_id)
+    {
+        $this->container['text_id'] = $text_id;
 
         return $this;
     }

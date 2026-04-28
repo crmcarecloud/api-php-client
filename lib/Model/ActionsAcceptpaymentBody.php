@@ -347,7 +347,7 @@ self::PAYMENT_TYPE_D,        ];
     /**
      * Sets card_number
      *
-     * @param string $card_number The customer  card number.
+     * @param string $card_number The customer card number.
      *
      * @return $this
      */

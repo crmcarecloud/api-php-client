@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 Get customer source records
 
-Get information about all customer source records.
+Get all customer source records.  Customer source records link customer accounts to the external systems that created or track them. Each record includes the source ID and one or more external IDs from that system. This endpoint returns source records across all customers. To retrieve source records for a specific customer, use [GET /customers/{customer_id}/sources](https://carecloud.readme.io/reference/getsubcustomersource).  When both the `external_ids` and `external_id` filter parameters are provided, `external_ids` takes priority and `external_id` is ignored.
 
 ### Example
 ```php
@@ -33,14 +33,14 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomerSourceReco
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
-$external_id = "external_id_example"; // string | The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems).
+$external_id = "external_id_example"; // string | The external ID of the customer in the external system. Deprecated - use `external_ids` instead. To filter by external ID within a specific customer source, combine `external_ids` with the `customer_source_id` parameter.
 $customer_source_id = "customer_source_id_example"; // string | The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created.
-$external_ids = array("external_ids_example"); // string[] | The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don't need to be necessary unique. Usage of other parameter could be required to return more specific results.
+$external_ids = array("external_ids_example"); // string[] | Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with `customer_source_id` to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: `external_ids[]=ACSDOIDF23&external_ids[]=BXTE123456`
 
 try {
     $result = $apiInstance->getCustomerSourceRecords($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $external_id, $customer_source_id, $external_ids);
@@ -56,14 +56,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
- **external_id** | **string**| The parameter contains a unique ID from an external system (POS, webshop,  mobile app, ERP, and others ). ID should be unique within a customer source for better identification (For example, the process of customer synchronization between systems). | [optional]
+ **external_id** | **string**| The external ID of the customer in the external system. Deprecated - use &#x60;external_ids&#x60; instead. To filter by external ID within a specific customer source, combine &#x60;external_ids&#x60; with the &#x60;customer_source_id&#x60; parameter. | [optional]
  **customer_source_id** | **string**| The unique ID of the customer source. It identifies the system where the customer belongs or the customer account was created. | [optional]
- **external_ids** | [**string[]**](../Model/string.md)| The list of IDs from other system than CareCloud. It is usually used for the synchronization or identification of the records in between CareCloud and other system. The IDs don&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. | [optional]
+ **external_ids** | [**string[]**](../Model/string.md)| Filter records by one or more external IDs. Returns records where any stored external ID matches any of the provided values. Use together with &#x60;customer_source_id&#x60; to scope the filter to a specific customer source.  To filter by multiple values, use array syntax: &#x60;external_ids[]&#x3D;ACSDOIDF23&amp;external_ids[]&#x3D;BXTE123456&#x60; | [optional]
 
 ### Return type
 

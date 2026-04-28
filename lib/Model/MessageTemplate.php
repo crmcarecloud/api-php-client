@@ -62,6 +62,8 @@ class MessageTemplate implements ModelInterface, ArrayAccess
         'subject' => 'string',
         'sender' => 'string',
         'name' => 'string',
+        'preview_url' => 'string',
+        'icon_url' => 'string',
         'message_template_group_id' => 'int',
         'communication_channel_id' => 'int',
         'template_data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Parameter[]',
@@ -79,6 +81,8 @@ class MessageTemplate implements ModelInterface, ArrayAccess
         'subject' => null,
         'sender' => null,
         'name' => null,
+        'preview_url' => null,
+        'icon_url' => null,
         'message_template_group_id' => null,
         'communication_channel_id' => null,
         'template_data' => null,
@@ -117,6 +121,8 @@ class MessageTemplate implements ModelInterface, ArrayAccess
         'subject' => 'subject',
         'sender' => 'sender',
         'name' => 'name',
+        'preview_url' => 'preview_url',
+        'icon_url' => 'icon_url',
         'message_template_group_id' => 'message_template_group_id',
         'communication_channel_id' => 'communication_channel_id',
         'template_data' => 'template_data',
@@ -134,6 +140,8 @@ class MessageTemplate implements ModelInterface, ArrayAccess
         'subject' => 'setSubject',
         'sender' => 'setSender',
         'name' => 'setName',
+        'preview_url' => 'setPreviewUrl',
+        'icon_url' => 'setIconUrl',
         'message_template_group_id' => 'setMessageTemplateGroupId',
         'communication_channel_id' => 'setCommunicationChannelId',
         'template_data' => 'setTemplateData',
@@ -151,6 +159,8 @@ class MessageTemplate implements ModelInterface, ArrayAccess
         'subject' => 'getSubject',
         'sender' => 'getSender',
         'name' => 'getName',
+        'preview_url' => 'getPreviewUrl',
+        'icon_url' => 'getIconUrl',
         'message_template_group_id' => 'getMessageTemplateGroupId',
         'communication_channel_id' => 'getCommunicationChannelId',
         'template_data' => 'getTemplateData',
@@ -254,6 +264,8 @@ self::COMMUNICATION_CHANNEL_ID_9,        ];
         $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
         $this->container['sender'] = isset($data['sender']) ? $data['sender'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['preview_url'] = isset($data['preview_url']) ? $data['preview_url'] : null;
+        $this->container['icon_url'] = isset($data['icon_url']) ? $data['icon_url'] : null;
         $this->container['message_template_group_id'] = isset($data['message_template_group_id']) ? $data['message_template_group_id'] : null;
         $this->container['communication_channel_id'] = isset($data['communication_channel_id']) ? $data['communication_channel_id'] : null;
         $this->container['template_data'] = isset($data['template_data']) ? $data['template_data'] : null;
@@ -328,7 +340,7 @@ self::COMMUNICATION_CHANNEL_ID_9,        ];
     /**
      * Sets message_template_id
      *
-     * @param string $message_template_id The unique ID of the message_template.
+     * @param string $message_template_id The unique ID of the message template.
      *
      * @return $this
      */
@@ -436,6 +448,54 @@ self::COMMUNICATION_CHANNEL_ID_9,        ];
     }
 
     /**
+     * Gets preview_url
+     *
+     * @return string
+     */
+    public function getPreviewUrl()
+    {
+        return $this->container['preview_url'];
+    }
+
+    /**
+     * Sets preview_url
+     *
+     * @param string $preview_url URL of the full-size preview image of the message template. May be null if no visual preview is available for this template type.
+     *
+     * @return $this
+     */
+    public function setPreviewUrl($preview_url)
+    {
+        $this->container['preview_url'] = $preview_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets icon_url
+     *
+     * @return string
+     */
+    public function getIconUrl()
+    {
+        return $this->container['icon_url'];
+    }
+
+    /**
+     * Sets icon_url
+     *
+     * @param string $icon_url URL of the icon image of the message template. May be null if no visual preview is available for this template type.
+     *
+     * @return $this
+     */
+    public function setIconUrl($icon_url)
+    {
+        $this->container['icon_url'] = $icon_url;
+
+        return $this;
+    }
+
+    /**
      * Gets message_template_group_id
      *
      * @return int
@@ -538,7 +598,7 @@ self::COMMUNICATION_CHANNEL_ID_9,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

@@ -5,7 +5,7 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getEvent**](EventsApi.md#getevent) | **GET** /events/{event_id} | Get an event
-[**getEvents**](EventsApi.md#getevents) | **GET** /events | Get information about all events
+[**getEvents**](EventsApi.md#getevents) | **GET** /events | Get all events
 [**getSubEventProperties**](EventsApi.md#getsubeventproperties) | **GET** /events/{event_id}/property-records | Get a collection of event properties records
 [**postEvent**](EventsApi.md#postevent) | **POST** /events | Create a new event
 
@@ -72,9 +72,9 @@ Name | Type | Description  | Notes
 # **getEvents**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetEvents200Response getEvents($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records, $time_from, $time_to)
 
-Get information about all events
+Get all events
 
-Get a list of events in CRM CareCloud.
+Get a list of events in the CareCloud platform.
 
 ### Example
 ```php
@@ -96,7 +96,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\EventsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -105,8 +105,8 @@ $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $external_id = "external_id_example"; // string | The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn't need to be necessary unique. Usage of other parameter could be required to return more specific results.
 $event_type_ids = array("event_type_ids_example"); // string[] | List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes).
 $include_property_records = true; // bool | If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won't be included, and parameter will return null value
-$time_from = "time_from_example"; // string | Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)*
-$time_to = "time_to_example"; // string | Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)*
+$time_from = "time_from_example"; // string | Start of the time interval for filtering. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
+$time_to = "time_to_example"; // string | End of the time interval for filtering. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
 
 try {
     $result = $apiInstance->getEvents($accept_language, $count, $offset, $sort_field, $sort_direction, $event_type_id, $customer_id, $external_id, $event_type_ids, $include_property_records, $time_from, $time_to);
@@ -122,7 +122,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -131,8 +131,8 @@ Name | Type | Description  | Notes
  **external_id** | **string**| The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. | [optional]
  **event_type_ids** | [**string[]**](../Model/string.md)| List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). | [optional]
  **include_property_records** | **bool**| If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value | [optional]
- **time_from** | **string**| Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
- **time_to** | **string**| Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **time_from** | **string**| Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
+ **time_to** | **string**| End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
 
 ### Return type
 

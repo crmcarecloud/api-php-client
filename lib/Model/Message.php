@@ -382,7 +382,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets status
      *
-     * @param int $status The status ID of the message. *Possible values are: 0 - message was not send / 1 - message was send successfully / -1 - message was not received (it was returned) / -2 - message was not received (soft bounce) / 2 - an error occurred while sending / 4 - customer has no agreements (GDPR) / 5 -Scheduled for retry (the message was not delivered because of an error and will be sent repeatedly. If not successful, the status won't change.)*
+     * @param int $status The status ID of the message. *Possible values are: 0 - message was not sent / 1 - message was sent successfully / -1 - message was not received (it was returned) / -2 - message was not received (soft bounce) / 2 - an error occurred while sending / 4 - customer has no agreements (GDPR) / 5 - Scheduled for retry (the message was not delivered because of an error and will be sent repeatedly. If not successful, the status will change to error.)*
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets message_template_id
      *
-     * @param string $message_template_id The unique ID of the message_template.
+     * @param string $message_template_id The unique ID of the message template. [GET /message-templates](https://carecloud.readme.io/reference/getmessagetemplates)
      *
      * @return $this
      */
@@ -439,7 +439,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the card holder.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -511,7 +511,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets send_time
      *
-     * @param string $send_time Date and time when message was send from server to recipient. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $send_time Timestamp when the message was sent from the server to the recipient. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -535,7 +535,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets opened_time
      *
-     * @param string $opened_time Date and time when message was opened by recipient. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $opened_time Timestamp when the message was opened by the recipient. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -688,7 +688,7 @@ self::COMMUNICATION_CHANNEL_ID_5,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

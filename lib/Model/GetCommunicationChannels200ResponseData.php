@@ -220,7 +220,7 @@ class GetCommunicationChannels200ResponseData implements ModelInterface, ArrayAc
     /**
      * Sets communication_channels
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[] $communication_channels Structure of the communication channel.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\CommunicationChannel[] $communication_channels List of communication channels.
      *
      * @return $this
      */

@@ -314,7 +314,7 @@ class CustomerSourceRecord implements ModelInterface, ArrayAccess
     /**
      * Sets external_id
      *
-     * @param string $external_id The unique external ID of the customer. It may be ID from the other system.
+     * @param string $external_id The external ID of the customer in the external system.
      *
      * @return $this
      */
@@ -338,7 +338,7 @@ class CustomerSourceRecord implements ModelInterface, ArrayAccess
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. (YYYY-MM-DD HH:MM:SS)
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

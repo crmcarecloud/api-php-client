@@ -4,7 +4,7 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getProductReservation**](ProductReservationsApi.md#getproductreservation) | **GET** /product-reservations/{product_reservation_id} | Get a product-reservation
+[**getProductReservation**](ProductReservationsApi.md#getproductreservation) | **GET** /product-reservations/{product_reservation_id} | Get a product reservation
 [**getProductReservations**](ProductReservationsApi.md#getproductreservations) | **GET** /product-reservations | Get all product reservations
 [**postProductReservation**](ProductReservationsApi.md#postproductreservation) | **POST** /product-reservations | Create a reservation
 [**postProductReservationCancel**](ProductReservationsApi.md#postproductreservationcancel) | **POST** /product-reservations/{product_reservation_id}/actions/cancel-reservation | Cancel reservation
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 # **getProductReservation**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetProductReservation200Response getProductReservation($product_reservation_id, $accept_language)
 
-Get a product-reservation
+Get a product reservation
 
-Get information about a specific product-reservation.
+Get information about a specific product reservation.
 
 ### Example
 ```php
@@ -98,7 +98,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\ProductReservation
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -123,7 +123,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 Create a reservation
 
-Create a new product reservation in CRM CareCloud.
+Create a new product reservation in the CareCloud platform.
 
 ### Example
 ```php
@@ -334,7 +334,7 @@ void (empty response body)
 
 Set one or multiple external reservation codes of different types to the product reservation
 
-Set one or multiple external reservation codes of different types to the product reservation.<br/> The method will set all the reservation codes from the request.<br/> If a reservation code type already exists in the reservation, it will be replaced with a new value from the request. If the request does not contain the reservation code type already in the reservation, CareCloud will make no changes to the reservation code.
+Set one or multiple external reservation codes of different types to the product reservation. The method will set all the reservation codes from the request. If a reservation code type already exists in the reservation, it will be replaced with a new value from the request. If the request does not contain the reservation code type already in the reservation, CareCloud will make no changes to the reservation code.
 
 ### Example
 ```php

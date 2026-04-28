@@ -35,7 +35,7 @@ use \CrmCareCloud\Webservice\RestApi\Client\ObjectSerializer;
  * PointType Class Doc Comment
  *
  * @category Class
- * @description Points reservation resource.
+ * @description Point type resource.
  * @package  CrmCareCloud\Webservice\RestApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -275,7 +275,7 @@ class PointType implements ModelInterface, ArrayAccess
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

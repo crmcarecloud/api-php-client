@@ -226,7 +226,7 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Message with a setup password link will be delivered to this email address. <br/> ⚠️This parameter is deprecated and will be removed in the future versions of CareCloud API.If possible do not use it.
+     * @param string $email Message with a setup password link will be delivered to this email address.  ⚠️This parameter is deprecated and will be removed in the future versions of CareCloud API.If possible do not use it.
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class ActionsSendpasswordsetupemailBody implements ModelInterface, ArrayAccess
     /**
      * Sets communication_channel_id
      *
-     * @param string $communication_channel_id ID of communication channels that will be used for password setup. Parameter is required if `email` parameter is not set.The list of all available channels is provided here: [GET /communication-channels](https://carecloud.readme.io/reference/getcommunicationchannels) <br/> The possibility of a password setup message from a channel may vary depending on the project setup. For more information, please contact the CareCloud administrator.
+     * @param string $communication_channel_id ID of communication channels that will be used for password setup. Parameter is required if `email` parameter is not set.The list of all available channels is provided here: [GET /communication-channels](https://carecloud.readme.io/reference/getcommunicationchannels)  The possibility of a password setup message from a channel may vary depending on the project setup. For more information, please contact the CareCloud administrator.
      *
      * @return $this
      */

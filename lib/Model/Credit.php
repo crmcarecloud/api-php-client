@@ -319,7 +319,7 @@ self::STATE_2,        ];
     /**
      * Sets customer_id
      *
-     * @param string $customer_id The unique ID of the customer.
+     * @param string $customer_id The unique ID of the customer. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -391,7 +391,7 @@ self::STATE_2,        ];
     /**
      * Sets credit_type_id
      *
-     * @param string $credit_type_id Type of the credit record.
+     * @param string $credit_type_id The unique ID of the credit type. [GET /credit-types](https://carecloud.readme.io/reference/getcredittypes)
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ self::STATE_2,        ];
     /**
      * Sets partner_id
      *
-     * @param string $partner_id The unique ID of the partner company.
+     * @param string $partner_id The unique ID of the partner company. [GET /partners](https://carecloud.readme.io/reference/getpartners)
      *
      * @return $this
      */
@@ -439,7 +439,7 @@ self::STATE_2,        ];
     /**
      * Sets valid_to
      *
-     * @param string $valid_to Date and time of the credit record validity to. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $valid_to Timestamp until which the credit record is valid. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */
@@ -463,7 +463,7 @@ self::STATE_2,        ];
     /**
      * Sets currency_id
      *
-     * @param string $currency_id The unique ID of the currency.
+     * @param string $currency_id The unique ID of the currency. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies)
      *
      * @return $this
      */

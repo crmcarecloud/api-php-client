@@ -373,7 +373,7 @@ class CustomersBody implements ModelInterface, ArrayAccess
     /**
      * Sets property_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of an customer property records.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of customer property records.
      *
      * @return $this
      */

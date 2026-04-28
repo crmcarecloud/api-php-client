@@ -249,7 +249,7 @@ self::FILE_TYPE_QR_PNG,        ];
     /**
      * Sets card_id
      *
-     * @param string $card_id ID of the card. It will generates file from this card.
+     * @param string $card_id The unique ID of the card for which the file is generated.
      *
      * @return $this
      */

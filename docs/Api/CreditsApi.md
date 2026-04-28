@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCredit**](CreditsApi.md#getcredit) | **GET** /credits/{credit_id} | Get a credit record
 [**getCredits**](CreditsApi.md#getcredits) | **GET** /credits | Get all credit records
-[**getSubCreditPurchases**](CreditsApi.md#getsubcreditpurchases) | **GET** /credits/{credit_id}/purchases | Get a collection of purchases
+[**getSubCreditPurchases**](CreditsApi.md#getsubcreditpurchases) | **GET** /credits/{credit_id}/purchases | Get all purchases for a credit
 [**postCreditDeposit**](CreditsApi.md#postcreditdeposit) | **POST** /credits/actions/deposit-credits | Deposit of credits
 [**postCreditReduction**](CreditsApi.md#postcreditreduction) | **POST** /credits/actions/reduce-credits | Credit reduction
 [**postCreditTransfer**](CreditsApi.md#postcredittransfer) | **POST** /credits/actions/transfer-credits | Transfer credits
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Get a credit record
 
-Get information about a specific credit transaction.
+Get information about a specific credit transaction.  Returns the full detail of a single credit record, including its amount, credit type, currency, associated customer and partner, creation timestamp, and note.  To query all credits for a customer, use [GET /credits](https://carecloud.readme.io/reference/getcredits). To see the full history of operations on a customer's credits, use [GET /credit-history](https://carecloud.readme.io/reference/getcredithistory).
 
 ### Example
 ```php
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 Get all credit records
 
-Get a list of all credit transactions and their current values.
+Get a list of all credit transactions and their current values.  Credits are the monetary loyalty currency stored in a customer's wallet alongside reward points. Each credit record captures the amount, credit type, currency, customer, partner, creation timestamp, and an optional note.  Use the `customer_id` filter to retrieve credits for a specific customer, `credit_type_id` to narrow results to a specific loyalty program or promotional category, and the `create_credit_time_from`/`create_credit_time_to` parameters to filter by creation date.  Related: [GET /credit-types](https://carecloud.readme.io/reference/getcredittypes), [GET /credit-history](https://carecloud.readme.io/reference/getcredithistory)
 
 ### Example
 ```php
@@ -98,14 +98,14 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CreditsApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
-$credit_type_id = "credit_type_id_example"; // string | The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. <br/> In case you want to filter multiple options use array syntax : `credit_type_id[]=8bc8ca16f9c5039951021700a2&credit_type_id[]=82c06812c0756528660784fef`
-$create_credit_time_from = "create_credit_time_from_example"; // string | Date and time from of the create credit record. *(YYYY-MM-DD HH:MM:SS)*
-$create_credit_time_to = "create_credit_time_to_example"; // string | Date and time to of the create credit record. *(YYYY-MM-DD HH:MM:SS)*
+$credit_type_id = "credit_type_id_example"; // string | The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : `credit_type_id[]=8bc8ca16f9c5039951021700a2&credit_type_id[]=82c06812c0756528660784fef`
+$create_credit_time_from = "create_credit_time_from_example"; // string | Start of the time interval for filtering credit records by creation time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
+$create_credit_time_to = "create_credit_time_to_example"; // string | End of the time interval for filtering credit records by creation time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
 
 try {
     $result = $apiInstance->getCredits($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $credit_type_id, $create_credit_time_from, $create_credit_time_to);
@@ -121,14 +121,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
- **credit_type_id** | **string**| The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type. &lt;br/&gt; In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
- **create_credit_time_from** | **string**| Date and time from of the create credit record. *(YYYY-MM-DD HH:MM:SS)* | [optional]
- **create_credit_time_to** | **string**| Date and time to of the create credit record. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **credit_type_id** | **string**| The unique ID of a credit type. The filter reduces data in the response related only to the selected credit type.  In case you want to filter multiple options use array syntax : &#x60;credit_type_id[]&#x3D;8bc8ca16f9c5039951021700a2&amp;credit_type_id[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
+ **create_credit_time_from** | **string**| Start of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
+ **create_credit_time_to** | **string**| End of the time interval for filtering credit records by creation time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
 
 ### Return type
 
@@ -148,9 +148,9 @@ Name | Type | Description  | Notes
 # **getSubCreditPurchases**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCreditPurchases200Response getSubCreditPurchases($credit_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $store_id, $customer_id, $type_id, $payment_time_from, $payment_time_to, $purchase_items_extension)
 
-Get a collection of purchases
+Get all purchases for a credit
 
-Get information about all purchases by credit resource.
+Get all purchases associated with a specific credit record.  Credits can be earned through customer purchases. This endpoint returns the purchases linked to a specific credit record, allowing you to trace which purchase transaction originated the credit. Supports filtering by store, customer, purchase type, and payment date range.  Use the `purchase_items_extension` parameter to include individual line items in the response. To retrieve all purchases for a customer, use [GET /customers/{customer_id}/purchases](https://carecloud.readme.io/reference/getsubcustomerpurchases).
 
 ### Example
 ```php
@@ -173,15 +173,15 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CreditsApi(
 );
 $credit_id = "credit_id_example"; // string | The unique ID of the credit record.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $store_id = "store_id_example"; // string | The unique ID of the store in CareCloud.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $type_id = "type_id_example"; // string | Purchase type
-$payment_time_from = "payment_time_from_example"; // string | Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)*
-$payment_time_to = "payment_time_to_example"; // string | Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)*
+$payment_time_from = "payment_time_from_example"; // string | Start of the time interval for filtering purchases by payment time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
+$payment_time_to = "payment_time_to_example"; // string | End of the time interval for filtering purchases by payment time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
 $purchase_items_extension = false; // bool | If true, resource returns extended response with purchase items. If false, the resource won't be extended. If the parameter is not set, the default value is false.
 
 try {
@@ -199,15 +199,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_id** | **string**| The unique ID of the credit record. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **store_id** | **string**| The unique ID of the store in CareCloud. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
  **type_id** | **string**| Purchase type | [optional]
- **payment_time_from** | **string**| Date and time from of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* | [optional]
- **payment_time_to** | **string**| Date and time to of the purchase payment. *(YYYY-MM-DD HH:MM:SS)* | [optional]
+ **payment_time_from** | **string**| Start of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
+ **payment_time_to** | **string**| End of the time interval for filtering purchases by payment time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
  **purchase_items_extension** | **bool**| If true, resource returns extended response with purchase items. If false, the resource won&#x27;t be extended. If the parameter is not set, the default value is false. | [optional] [default to false]
 
 ### Return type
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 Deposit of credits
 
-Creates a new credit record with the corresponding value. ⚠️ This action method is disabled by default. Please contact the CareCloud administrator to allow usage of this method.  ⚠️ Action methods are available only in Enterprise interface.
+Creates a new credit record with the corresponding value.  A deposit adds a positive credit record to the customer account, increasing the wallet balance. The response returns the ID of the newly created credit record.  If `credit_type_id` is not provided, the project-default credit type is assigned. If `currency_id` is not provided, the project-default currency is used. The `note` field is optional and is recorded in the credit history audit log, visible via [GET /credit-history](https://carecloud.readme.io/reference/getcredithistory).  ⚠️ This action method is disabled by default. Please contact the CareCloud administrator to allow usage of this method. ⚠️ Action methods are available only in Enterprise interface.
 
 ### Example
 ```php
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 Credit reduction
 
-Endpoint for reducing credits on the customer's account.  ⚠️ This action method is disabled by default. Please contact the CareCloud administrator to allow usage of this method.  ⚠️ Action methods are available only in the Enterprise interface.
+Endpoint for reducing credits on the customer's account.  A credit reduction creates a negative credit record, decreasing the customer's wallet balance. Use this endpoint to apply a credit spend, expiration, or manual correction. The response returns the ID of the newly created reduction record.  If `credit_type_id` is not provided, the project-default credit type is used. The `note` field is optional and is recorded in the credit history audit log, visible via [GET /credit-history](https://carecloud.readme.io/reference/getcredithistory).  ⚠️ This action method is disabled by default. Please contact the CareCloud administrator to allow usage of this method. ⚠️ Action methods are available only in the Enterprise interface.
 
 ### Example
 ```php
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 Transfer credits
 
-Transfers credits from one customer to another. ⚠️ This action method is disabled by default. Please contact the CareCloud administrator to allow usage of this method.  ⚠️ Action methods are available only in the Enterprise interface.
+Transfers credits from one customer to another.  A credit transfer moves a specified amount from one customer's wallet to another. This is typically used when merging duplicate customer accounts or redistributing loyalty balances. Both the deduction from the original customer and the addition to the new customer are recorded in the credit history.  The `credit_type_id` parameter is required. If `currency_id` is not provided, the project-default currency is used. Returns HTTP 204 on success.  Related: [GET /credit-history](https://carecloud.readme.io/reference/getcredithistory), [GET /customers](https://carecloud.readme.io/reference/getcustomers)  ⚠️ This action method is disabled by default. Please contact the CareCloud administrator to allow usage of this method. ⚠️ Action methods are available only in the Enterprise interface.
 
 ### Example
 ```php

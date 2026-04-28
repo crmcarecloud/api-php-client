@@ -59,6 +59,7 @@ class EventType implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'event_type_id' => 'string',
         'event_group_id' => 'string',
+        'event_group_text_id' => 'string',
         'name' => 'string',
         'text_id' => 'string',
         'icon_name' => 'string',
@@ -73,6 +74,7 @@ class EventType implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'event_type_id' => null,
         'event_group_id' => null,
+        'event_group_text_id' => null,
         'name' => null,
         'text_id' => null,
         'icon_name' => null,
@@ -108,6 +110,7 @@ class EventType implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'event_type_id' => 'event_type_id',
         'event_group_id' => 'event_group_id',
+        'event_group_text_id' => 'event_group_text_id',
         'name' => 'name',
         'text_id' => 'text_id',
         'icon_name' => 'icon_name',
@@ -122,6 +125,7 @@ class EventType implements ModelInterface, ArrayAccess
     protected static $setters = [
         'event_type_id' => 'setEventTypeId',
         'event_group_id' => 'setEventGroupId',
+        'event_group_text_id' => 'setEventGroupTextId',
         'name' => 'setName',
         'text_id' => 'setTextId',
         'icon_name' => 'setIconName',
@@ -136,6 +140,7 @@ class EventType implements ModelInterface, ArrayAccess
     protected static $getters = [
         'event_type_id' => 'getEventTypeId',
         'event_group_id' => 'getEventGroupId',
+        'event_group_text_id' => 'getEventGroupTextId',
         'name' => 'getName',
         'text_id' => 'getTextId',
         'icon_name' => 'getIconName',
@@ -217,6 +222,7 @@ self::STATE_2,        ];
     {
         $this->container['event_type_id'] = isset($data['event_type_id']) ? $data['event_type_id'] : null;
         $this->container['event_group_id'] = isset($data['event_group_id']) ? $data['event_group_id'] : null;
+        $this->container['event_group_text_id'] = isset($data['event_group_text_id']) ? $data['event_group_text_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['text_id'] = isset($data['text_id']) ? $data['text_id'] : null;
         $this->container['icon_name'] = isset($data['icon_name']) ? $data['icon_name'] : null;
@@ -298,13 +304,37 @@ self::STATE_2,        ];
     /**
      * Sets event_group_id
      *
-     * @param string $event_group_id ID of the event type group.
+     * @param string $event_group_id The unique ID of the event group. [GET /event-groups](https://carecloud.readme.io/reference/geteventgroups)
      *
      * @return $this
      */
     public function setEventGroupId($event_group_id)
     {
         $this->container['event_group_id'] = $event_group_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets event_group_text_id
+     *
+     * @return string
+     */
+    public function getEventGroupTextId()
+    {
+        return $this->container['event_group_text_id'];
+    }
+
+    /**
+     * Sets event_group_text_id
+     *
+     * @param string $event_group_text_id Text identification of the event group.
+     *
+     * @return $this
+     */
+    public function setEventGroupTextId($event_group_text_id)
+    {
+        $this->container['event_group_text_id'] = $event_group_text_id;
 
         return $this;
     }

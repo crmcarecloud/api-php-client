@@ -4,15 +4,15 @@ All URIs are relative to *https://{project_url}/webservice/rest-api/{api_interfa
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerType**](CustomerTypesApi.md#getcustomertype) | **GET** /customer-types/{customer_type_id} | Detail of a customer type
+[**getCustomerType**](CustomerTypesApi.md#getcustomertype) | **GET** /customer-types/{customer_type_id} | Get a customer type
 [**getCustomerTypes**](CustomerTypesApi.md#getcustomertypes) | **GET** /customer-types | Get all customer types
 
 # **getCustomerType**
 > \CrmCareCloud\Webservice\RestApi\Client\Model\GetCustomerType200Response getCustomerType($customer_type_id, $accept_language)
 
-Detail of a customer type
+Get a customer type
 
-Get information about a specific customer type.
+Get information about a specific customer type.  Returns the detail of a single customer type record, including its name. To list all available customer types, use [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes).
 
 ### Example
 ```php
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 Get all customer types
 
-Get a list of customer types accepted in CRM CareCloud.
+Get a list of customer types accepted in the CareCloud platform.  Customer types categorise customer accounts by their role or origin - for example, a standard loyalty member, a staff account, or a B2B contact. The customer type is assigned when the account is created and can be used to filter or segment customers.  Use this endpoint to retrieve the available customer type IDs for use when creating or updating customer accounts.
 
 ### Example
 ```php
@@ -94,7 +94,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomerTypesApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
@@ -113,7 +113,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]

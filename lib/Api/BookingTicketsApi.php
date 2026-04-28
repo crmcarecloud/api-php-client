@@ -420,13 +420,13 @@ class BookingTicketsApi
      * Get all booking tickets
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      * @param  string $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
@@ -447,13 +447,13 @@ class BookingTicketsApi
      * Get all booking tickets
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      * @param  string $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
@@ -580,13 +580,13 @@ class BookingTicketsApi
      * Get all booking tickets
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      * @param  string $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
@@ -610,13 +610,13 @@ class BookingTicketsApi
      * Get all booking tickets
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
-     * @param  string|null $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool|null $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      * @param  string|null $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string|null $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
@@ -670,13 +670,13 @@ class BookingTicketsApi
      * Create request for operation 'getBookingTickets'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
-     * @param  string $valid_from Date and time from when is record already valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $valid_to Date and time to when is record still valid. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $valid_from Start of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $valid_to End of the validity period for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  bool $valid_only Time validity of the resource records. *Possible values are: true - returns only records valid in current moment / false - returns all records of the resource without time validation* (optional)
      * @param  string $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
@@ -816,17 +816,17 @@ class BookingTicketsApi
     /**
      * Operation getSubBookingTicketsTimeSlots
      *
-     * Get a collection time slots depends on booking ticket
+     * Get all time slots for a booking ticket
      *
      * @param  string $booking_ticket_id The unique ID of the booking ticket. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  bool $free_only Parameter defines what kind of time slots is going to be return depends on the capacity. *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
-     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -844,17 +844,17 @@ class BookingTicketsApi
     /**
      * Operation getSubBookingTicketsTimeSlotsWithHttpInfo
      *
-     * Get a collection time slots depends on booking ticket
+     * Get all time slots for a booking ticket
      *
      * @param  string $booking_ticket_id The unique ID of the booking ticket. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  bool $free_only Parameter defines what kind of time slots is going to be return depends on the capacity. *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
-     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -978,17 +978,17 @@ class BookingTicketsApi
     /**
      * Operation getSubBookingTicketsTimeSlotsAsync
      *
-     * Get a collection time slots depends on booking ticket
+     * Get all time slots for a booking ticket
      *
      * @param  string $booking_ticket_id The unique ID of the booking ticket. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  bool $free_only Parameter defines what kind of time slots is going to be return depends on the capacity. *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
-     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
@@ -1009,17 +1009,17 @@ class BookingTicketsApi
     /**
      * Operation getSubBookingTicketsTimeSlotsAsyncWithHttpInfo
      *
-     * Get a collection time slots depends on booking ticket
+     * Get all time slots for a booking ticket
      *
      * @param  string $booking_ticket_id The unique ID of the booking ticket. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  bool|null $free_only Parameter defines what kind of time slots is going to be return depends on the capacity. *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
-     * @param  string|null $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string|null $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string|null $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string|null $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string|null $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string|null $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
@@ -1074,13 +1074,13 @@ class BookingTicketsApi
      *
      * @param  string $booking_ticket_id The unique ID of the booking ticket. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  bool $free_only Parameter defines what kind of time slots is going to be return depends on the capacity. *Possible values: true - returns all time slots with free capacity. / false - returns all occupied time slots. / no value - all time slots are returned (filter is not applied)* (optional)
-     * @param  string $time_from Filter results on the start of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
-     * @param  string $time_to Filter results on the end of the time interval. *(YYYY-MM-DD HH:MM:SS)* (optional)
+     * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
+     * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $booking_ticket_property_id Booking ticket property ID from resource [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties). The parameter determines property, which is used to filter resources by their properties. The parameter must be used in combination with property_value otherwise is ignored in the request. (optional)
      * @param  string $booking_ticket_property_value Booking ticket property record value from [booking-ticket-properties](https://carecloud.readme.io/reference/getbookingticketproperties) in case of datatype with multiple values. Parameter filters resources depends of store property record value. The parameter must be used in combination with property_id otherwise is ignored in the request. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)

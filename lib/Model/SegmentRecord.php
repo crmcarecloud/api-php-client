@@ -290,7 +290,7 @@ class SegmentRecord implements ModelInterface, ArrayAccess
     /**
      * Sets created_at
      *
-     * @param string $created_at Date and time when was the segment record created. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $created_at Timestamp of the segment record creation. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */
@@ -314,7 +314,7 @@ class SegmentRecord implements ModelInterface, ArrayAccess
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

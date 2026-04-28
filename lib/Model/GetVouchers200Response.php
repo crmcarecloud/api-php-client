@@ -56,7 +56,7 @@ class GetVouchers200Response implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerVouchers200ResponseData'
+        'data' => '\CrmCareCloud\Webservice\RestApi\Client\Model\GetVouchers200ResponseData'
     ];
 
     /**
@@ -204,7 +204,7 @@ class GetVouchers200Response implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerVouchers200ResponseData
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetVouchers200ResponseData
      */
     public function getData()
     {
@@ -214,7 +214,7 @@ class GetVouchers200Response implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\GetSubCustomerVouchers200ResponseData $data data
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\GetVouchers200ResponseData $data data
      *
      * @return $this
      */

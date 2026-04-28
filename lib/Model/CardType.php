@@ -58,6 +58,7 @@ class CardType implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'card_type_id' => 'string',
+        'text_id' => 'string',
         'name' => 'string',
         'prefix' => 'string'
     ];
@@ -69,6 +70,7 @@ class CardType implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'card_type_id' => null,
+        'text_id' => null,
         'name' => null,
         'prefix' => null
     ];
@@ -101,6 +103,7 @@ class CardType implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'card_type_id' => 'card_type_id',
+        'text_id' => 'text_id',
         'name' => 'name',
         'prefix' => 'prefix'
     ];
@@ -112,6 +115,7 @@ class CardType implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'card_type_id' => 'setCardTypeId',
+        'text_id' => 'setTextId',
         'name' => 'setName',
         'prefix' => 'setPrefix'
     ];
@@ -123,6 +127,7 @@ class CardType implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'card_type_id' => 'getCardTypeId',
+        'text_id' => 'getTextId',
         'name' => 'getName',
         'prefix' => 'getPrefix'
     ];
@@ -186,6 +191,7 @@ class CardType implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['card_type_id'] = isset($data['card_type_id']) ? $data['card_type_id'] : null;
+        $this->container['text_id'] = isset($data['text_id']) ? $data['text_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
     }
@@ -240,6 +246,30 @@ class CardType implements ModelInterface, ArrayAccess
     public function setCardTypeId($card_type_id)
     {
         $this->container['card_type_id'] = $card_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets text_id
+     *
+     * @return string
+     */
+    public function getTextId()
+    {
+        return $this->container['text_id'];
+    }
+
+    /**
+     * Sets text_id
+     *
+     * @param string $text_id The unique text identifier of the card type.
+     *
+     * @return $this
+     */
+    public function setTextId($text_id)
+    {
+        $this->container['text_id'] = $text_id;
 
         return $this;
     }

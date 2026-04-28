@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\GetWalletPointsExpiration200ResponseData**](GetWalletPointsExpiration200ResponseData.md) |  | [optional] 
+**data** | [**\CrmCareCloud\Webservice\RestApi\Client\Model\GetWalletCreditsExpiration200ResponseData**](GetWalletCreditsExpiration200ResponseData.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

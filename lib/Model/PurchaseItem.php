@@ -398,7 +398,7 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     /**
      * Sets product_group_name
      *
-     * @param string $product_group_name The unique ID of the product group.
+     * @param string $product_group_name The name of the product group.
      *
      * @return $this
      */
@@ -446,7 +446,7 @@ class PurchaseItem implements ModelInterface, ArrayAccess
     /**
      * Sets product_brand_name
      *
-     * @param string $product_brand_name The unique ID of the product brand.
+     * @param string $product_brand_name The name of the product brand.
      *
      * @return $this
      */

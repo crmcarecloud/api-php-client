@@ -280,7 +280,7 @@ class GetEntrancesCustomerStats200ResponseData implements ModelInterface, ArrayA
     /**
      * Sets skier_days
      *
-     * @param int $skier_days Number of days in the date range that a customer used his entrance ticket
+     * @param int $skier_days Number of days in the date range that a customer used their entrance ticket.
      *
      * @return $this
      */

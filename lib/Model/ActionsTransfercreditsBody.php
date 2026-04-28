@@ -256,7 +256,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
     /**
      * Sets original_customer_id
      *
-     * @param string $original_customer_id ID of the original credit holder.
+     * @param string $original_customer_id The unique ID of the original credit holder. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -280,7 +280,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
     /**
      * Sets new_customer_id
      *
-     * @param string $new_customer_id ID of the new credit holder.
+     * @param string $new_customer_id The unique ID of the new credit holder. [GET /customers](https://carecloud.readme.io/reference/getcustomers)
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
     /**
      * Sets credit_type_id
      *
-     * @param string $credit_type_id Type of the transferred credits.
+     * @param string $credit_type_id The unique ID of the credit type for the transferred credits. [GET /credit-types](https://carecloud.readme.io/reference/getcredittypes)
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class ActionsTransfercreditsBody implements ModelInterface, ArrayAccess
     /**
      * Sets currency_id
      *
-     * @param string $currency_id ID of the currency from resource [currencies](#tag/Currencies). If not set, the default currency of the project is used.
+     * @param string $currency_id The unique ID of the currency. If not set, the default currency of the project is used. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies)
      *
      * @return $this
      */

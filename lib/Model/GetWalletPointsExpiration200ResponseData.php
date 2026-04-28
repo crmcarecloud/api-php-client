@@ -68,7 +68,7 @@ class GetWalletPointsExpiration200ResponseData implements ModelInterface, ArrayA
       */
     protected static $swaggerFormats = [
         'next_amount' => 'float',
-        'next_date' => null,
+        'next_date' => 'YYYY-MM-DD',
         'current_month_amount' => 'float'
     ];
 
@@ -226,7 +226,7 @@ class GetWalletPointsExpiration200ResponseData implements ModelInterface, ArrayA
     /**
      * Sets next_amount
      *
-     * @param float $next_amount Date (ISO 8601) when first points will expire.
+     * @param float $next_amount The amount of customer's points that will expire in the closest future. The exact date of expiration is in the related parameter.
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class GetWalletPointsExpiration200ResponseData implements ModelInterface, ArrayA
     /**
      * Sets next_date
      *
-     * @param string $next_date Amount of redeemed points in time interval. *(YYYY-MM-DD)*
+     * @param string $next_date Exact date in local time zone when the customer's points will expire. The date format follows ISO-8601. *YYYY-MM-DD*
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class GetWalletPointsExpiration200ResponseData implements ModelInterface, ArrayA
     /**
      * Sets current_month_amount
      *
-     * @param float $current_month_amount Amount of points that will expire in current month.
+     * @param float $current_month_amount The amount of customer's points that will expire in current month.
      *
      * @return $this
      */

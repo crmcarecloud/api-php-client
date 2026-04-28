@@ -185,14 +185,6 @@ class LanguagesApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\CrmCareCloud\Webservice\RestApi\Client\Model\InlineResponse401',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -384,14 +376,6 @@ class LanguagesApi
             }
         }
 
-        // this endpoint requires HTTP basic authentication
-        if ($this->getConfig()->getBasicAuth() && ($this->getConfig()->getUsername() !== null || $this->getConfig()->getPassword() !== null)) {
-            $headers['Authorization'] = 'Basic ' . base64_encode($this->getConfig()->getUsername() . ":" . $this->getConfig()->getPassword());
-        }
-        // this endpoint requires Bearer token
-        if ($this->getConfig()->getBearerAuth() && ($this->getConfig()->getAccessToken() !== null)) {
-            $headers['Authorization'] = 'Bearer ' . $this->getConfig()->getAccessToken();
-        }
 
         $defaultHeaders = [];
         if ($this->getConfig()->getUserAgent()) {

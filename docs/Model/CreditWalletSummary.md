@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**currency_id** | **string** | The unique ID of the currency from the API resource [GET /currencies](#tag/Currencies). | [optional] 
+**currency_id** | **string** | The unique ID of the currency. [GET /currencies](https://carecloud.readme.io/reference/getcurrencies) | [optional] 
 **earned_credits** | **float** | Amount of earned credits in time interval. | [optional] 
 **redeemed_credits** | **float** | Amount of redeemed credits in time interval. | [optional] 
 **available_credits** | **float** | Amount of available credits in the moment. Time interval has no influence to the result. | [optional] 

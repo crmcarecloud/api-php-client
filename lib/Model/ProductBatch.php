@@ -66,6 +66,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_id' => 'string',
         'product_brand_external_id' => 'string',
         'store_id' => 'string',
+        'partner_id' => 'string',
         'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]',
         'prices' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Price[]',
         'tags' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Tag[]',
@@ -87,6 +88,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_id' => null,
         'product_brand_external_id' => null,
         'store_id' => null,
+        'partner_id' => null,
         'property_records' => null,
         'prices' => null,
         'tags' => null,
@@ -129,6 +131,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_id' => 'product_brand_id',
         'product_brand_external_id' => 'product_brand_external_id',
         'store_id' => 'store_id',
+        'partner_id' => 'partner_id',
         'property_records' => 'property_records',
         'prices' => 'prices',
         'tags' => 'tags',
@@ -150,6 +153,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_id' => 'setProductBrandId',
         'product_brand_external_id' => 'setProductBrandExternalId',
         'store_id' => 'setStoreId',
+        'partner_id' => 'setPartnerId',
         'property_records' => 'setPropertyRecords',
         'prices' => 'setPrices',
         'tags' => 'setTags',
@@ -171,6 +175,7 @@ class ProductBatch implements ModelInterface, ArrayAccess
         'product_brand_id' => 'getProductBrandId',
         'product_brand_external_id' => 'getProductBrandExternalId',
         'store_id' => 'getStoreId',
+        'partner_id' => 'getPartnerId',
         'property_records' => 'getPropertyRecords',
         'prices' => 'getPrices',
         'tags' => 'getTags',
@@ -257,6 +262,7 @@ self::STATE_1,        ];
         $this->container['product_brand_id'] = isset($data['product_brand_id']) ? $data['product_brand_id'] : null;
         $this->container['product_brand_external_id'] = isset($data['product_brand_external_id']) ? $data['product_brand_external_id'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['partner_id'] = isset($data['partner_id']) ? $data['partner_id'] : null;
         $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
         $this->container['prices'] = isset($data['prices']) ? $data['prices'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -518,6 +524,30 @@ self::STATE_1,        ];
     }
 
     /**
+     * Gets partner_id
+     *
+     * @return string
+     */
+    public function getPartnerId()
+    {
+        return $this->container['partner_id'];
+    }
+
+    /**
+     * Sets partner_id
+     *
+     * @param string $partner_id The unique ID of the partner.  If the partner is not set, the partner is selected from the logged in user.
+     *
+     * @return $this
+     */
+    public function setPartnerId($partner_id)
+    {
+        $this->container['partner_id'] = $partner_id;
+
+        return $this;
+    }
+
+    /**
      * Gets property_records
      *
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
@@ -530,7 +560,7 @@ self::STATE_1,        ];
     /**
      * Sets property_records
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of an additional properties.
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of additional properties.
      *
      * @return $this
      */

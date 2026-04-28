@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **vat_id** | **string** | VAT registration number. Value Added Tax unique ID of the company. | [optional] 
 **email** | **string** | Email of the company. | [optional] 
 **phone** | **string** | Phone number of the company with international prefix (420000000). | [optional] 
-**state** | **int** | State of the partner. *Possible values are: 0 - deleted / 1- active * | [optional] 
+**state** | **int** | State of the partner. *Possible values are: 0 - deleted / 1 - active* | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

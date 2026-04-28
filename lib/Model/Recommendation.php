@@ -313,7 +313,7 @@ self::STATE_2,        ];
     /**
      * Sets name
      *
-     * @param string $name Name of a the recommendation.
+     * @param string $name Name of the recommendation.
      *
      * @return $this
      */
@@ -457,7 +457,7 @@ self::STATE_2,        ];
     /**
      * Sets last_change
      *
-     * @param string $last_change Date and time of the last change. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $last_change Timestamp of the last change. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

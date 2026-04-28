@@ -235,7 +235,7 @@ class ActionsVerifyauthtokenBody implements ModelInterface, ArrayAccess
     /**
      * Sets application_id
      *
-     * @param string $application_id ID of the original external application.The ID represents the external application where the token was created.
+     * @param string $application_id ID of the destination external application where the customer is being verified. Provide the destination external application ID, not the token-issuing external application ID. Need a destination external application ID? Please contact your CareCloud administrator.
      *
      * @return $this
      */

@@ -245,7 +245,7 @@ class ProductReservationComment implements ModelInterface, ArrayAccess
     /**
      * Sets comment_time
      *
-     * @param string $comment_time Date and time of the product reservation comment. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $comment_time Timestamp of the product reservation comment. Format: `YYYY-MM-DD HH:MM:SS`. All times are in the local timezone.
      *
      * @return $this
      */

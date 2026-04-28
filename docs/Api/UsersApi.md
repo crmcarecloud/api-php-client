@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Get information about a user
 
-Get information about a specific user.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+Get information about a specific user. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 Get all users
 
-Get a list of all users in CareCloud.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/> ⚠️ This endpoint is disabled by default. Please contact the CareCloud administrator to allow usage of this method.
+Get a list of all users in CareCloud. ⚠️ Endpoint is available only in the Enterprise interface. ⚠️ This endpoint is disabled by default. Please contact the CareCloud administrator to allow usage of this method.
 
 ### Example
 ```php
@@ -98,12 +98,12 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\UsersApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $email = "email_example"; // string | Search by email.
-$phone = "phone_example"; // string | Phone number with international prefix (420000000).
+$phone = "phone_example"; // string | Phone number of the customer with international prefix (420000000000).
 $login = "login_example"; // string | Search by login.
 $first_name = "first_name_example"; // string | Search by first name.
 $last_name = "last_name_example"; // string | Search by last name.
@@ -123,12 +123,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **email** | **string**| Search by email. | [optional]
- **phone** | **string**| Phone number with international prefix (420000000). | [optional]
+ **phone** | **string**| Phone number of the customer with international prefix (420000000000). | [optional]
  **login** | **string**| Search by login. | [optional]
  **first_name** | **string**| Search by first name. | [optional]
  **last_name** | **string**| Search by last name. | [optional]
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 User login
 
-User login to external application.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+User login to external application. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php
@@ -205,7 +205,7 @@ No authorization required
 
 User logout
 
-User logout from external application.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+User logout from external application. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php
@@ -264,7 +264,7 @@ void (empty response body)
 
 User SSO login
 
-User Signe sign-on login to external application. In this case it is necessary cary SSO token from CareCloud to login user.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+User Signe sign-on login to external application. In this case it is necessary cary SSO token from CareCloud to login user. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php
@@ -315,7 +315,7 @@ No authorization required
 
 Verify user auth token
 
-Verification of the user auth token.<br/> ⚠️ Endpoint is available only in the Enterprise interface.<br/>
+Verification of the user auth token. ⚠️ Endpoint is available only in the Enterprise interface.
 
 ### Example
 ```php

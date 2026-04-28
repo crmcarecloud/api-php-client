@@ -373,7 +373,7 @@ self::STATE_2,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the point record. *Possible values are: 0 - deleted / 1 - active / 2 - non active(expired)*
+     * @param int $state State of the point reservation. *Possible values are: 0 - deleted / 1 - active / 2 - non active(expired)*
      *
      * @return $this
      */
@@ -406,7 +406,7 @@ self::STATE_2,        ];
     /**
      * Sets expiration
      *
-     * @param string $expiration Date and time of the point reservation expiration. *(YYYY-MM-DD HH:MM:SS)*
+     * @param string $expiration Timestamp of the point reservation expiration. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times must be in the local timezone.
      *
      * @return $this
      */

@@ -56,7 +56,7 @@ class EventsBody implements ModelInterface, ArrayAccess
       * @var array<string,string>
       */
     protected static $swaggerTypes = [
-        'event' => '\CrmCareCloud\Webservice\RestApi\Client\Model\Event',
+        'event' => '\CrmCareCloud\Webservice\RestApi\Client\Model\EventPost',
         'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]'
     ];
 
@@ -213,7 +213,7 @@ class EventsBody implements ModelInterface, ArrayAccess
     /**
      * Gets event
      *
-     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\Event
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\EventPost
      */
     public function getEvent()
     {
@@ -223,7 +223,7 @@ class EventsBody implements ModelInterface, ArrayAccess
     /**
      * Sets event
      *
-     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\Event $event event
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\EventPost $event event
      *
      * @return $this
      */

@@ -96,15 +96,15 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\MessagesApi(
     $config
 );
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$count = 100; // int | The number of records to return in API response. <br/>⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
+$count = 100; // int | The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if `count` parameter is not set.
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $contact = "contact_example"; // string | Email of phone number that was used as a contact in message.
 $communication_channel_id = "communication_channel_id_example"; // string | The unique ID of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels).
-$send_time_from = "send_time_from_example"; // string | Start date and time of the time interval. *YYYY-MM-DD HH:MM:SS*
-$send_time_to = "send_time_to_example"; // string | End date and time of the time interval. *YYYY-MM-DD HH:MM:SS*
+$send_time_from = "send_time_from_example"; // string | Start of the time interval for filtering by send time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
+$send_time_to = "send_time_to_example"; // string | End of the time interval for filtering by send time. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
 
 try {
     $result = $apiInstance->getMessages($accept_language, $count, $offset, $sort_field, $sort_direction, $customer_id, $contact, $communication_channel_id, $send_time_from, $send_time_to);
@@ -120,15 +120,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **count** | **int**| The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
+ **count** | **int**| The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. | [optional] [default to 100]
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
  **contact** | **string**| Email of phone number that was used as a contact in message. | [optional]
  **communication_channel_id** | **string**| The unique ID of the communication channel. List of values is available in resource [GET /communication-channels](/#tag/Communication-channels). | [optional]
- **send_time_from** | **string**| Start date and time of the time interval. *YYYY-MM-DD HH:MM:SS* | [optional]
- **send_time_to** | **string**| End date and time of the time interval. *YYYY-MM-DD HH:MM:SS* | [optional]
+ **send_time_from** | **string**| Start of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
+ **send_time_to** | **string**| End of the time interval for filtering by send time. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
 
 ### Return type
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 Send message
 
-Send message (email, SMS or PUSH notification) to customer. ⚠️ Action methods are available only in theEnterprise interface.
+Send message (email, SMS or PUSH notification) to customer. ⚠️ Action methods are available only in the Enterprise interface.
 
 ### Example
 ```php

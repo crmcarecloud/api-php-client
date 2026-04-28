@@ -298,7 +298,7 @@ self::STATE_2,        ];
     /**
      * Sets state
      *
-     * @param int $state State of the country. *Possible values are: 0 - deleted / 1- active / 2 - non active*
+     * @param int $state State of the country. *Possible values are: 0 - deleted / 1 - active / 2 - non active*
      *
      * @return $this
      */

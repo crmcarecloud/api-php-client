@@ -420,20 +420,21 @@ class EventTypesApi
      * Get all event types
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $text_id You can filter resource results depending on his text ID. (optional)
+     * @param  string $event_group_text_id Select by one value or list of event group text IDs from event-groups resource. The list of values is available at [GET /event-groups](https://carecloud.readme.io/reference/geteventgroups). In case you want to filter multiple options use array syntax : &#x60;event_group_text_id[]&#x3D;shopping&amp;event_group_text_id[]&#x3D;customers&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CrmCareCloud\Webservice\RestApi\Client\Model\GetEventTypes200Response
      */
-    public function getEventTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
+    public function getEventTypes($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null, $event_group_text_id = null)
     {
-        list($response) = $this->getEventTypesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
+        list($response) = $this->getEventTypesWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id, $event_group_text_id);
         return $response;
     }
 
@@ -443,21 +444,22 @@ class EventTypesApi
      * Get all event types
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $text_id You can filter resource results depending on his text ID. (optional)
+     * @param  string $event_group_text_id Select by one value or list of event group text IDs from event-groups resource. The list of values is available at [GET /event-groups](https://carecloud.readme.io/reference/geteventgroups). In case you want to filter multiple options use array syntax : &#x60;event_group_text_id[]&#x3D;shopping&amp;event_group_text_id[]&#x3D;customers&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CrmCareCloud\Webservice\RestApi\Client\Model\GetEventTypes200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getEventTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
+    public function getEventTypesWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null, $event_group_text_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetEventTypes200Response';
-        $request = $this->getEventTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
+        $request = $this->getEventTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id, $event_group_text_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -572,19 +574,20 @@ class EventTypesApi
      * Get all event types
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $text_id You can filter resource results depending on his text ID. (optional)
+     * @param  string $event_group_text_id Select by one value or list of event group text IDs from event-groups resource. The list of values is available at [GET /event-groups](https://carecloud.readme.io/reference/geteventgroups). In case you want to filter multiple options use array syntax : &#x60;event_group_text_id[]&#x3D;shopping&amp;event_group_text_id[]&#x3D;customers&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEventTypesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
+    public function getEventTypesAsync($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null, $event_group_text_id = null)
     {
-        return $this->getEventTypesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id)
+        return $this->getEventTypesAsyncWithHttpInfo($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id, $event_group_text_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -598,20 +601,21 @@ class EventTypesApi
      * Get all event types
      *
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $name Search record by name or a part of the name. (optional)
      * @param  string|null $text_id You can filter resource results depending on his text ID. (optional)
+     * @param  string|null $event_group_text_id Select by one value or list of event group text IDs from event-groups resource. The list of values is available at [GET /event-groups](https://carecloud.readme.io/reference/geteventgroups). In case you want to filter multiple options use array syntax : &#x60;event_group_text_id[]&#x3D;shopping&amp;event_group_text_id[]&#x3D;customers&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEventTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
+    public function getEventTypesAsyncWithHttpInfo($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null, $event_group_text_id = null)
     {
         $returnType = '\CrmCareCloud\Webservice\RestApi\Client\Model\GetEventTypes200Response';
-        $request = $this->getEventTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id);
+        $request = $this->getEventTypesRequest($accept_language, $count, $offset, $sort_field, $sort_direction, $name, $text_id, $event_group_text_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -654,17 +658,18 @@ class EventTypesApi
      * Create request for operation 'getEventTypes'
      *
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $name Search record by name or a part of the name. (optional)
      * @param  string $text_id You can filter resource results depending on his text ID. (optional)
+     * @param  string $event_group_text_id Select by one value or list of event group text IDs from event-groups resource. The list of values is available at [GET /event-groups](https://carecloud.readme.io/reference/geteventgroups). In case you want to filter multiple options use array syntax : &#x60;event_group_text_id[]&#x3D;shopping&amp;event_group_text_id[]&#x3D;customers&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getEventTypesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null)
+    protected function getEventTypesRequest($accept_language = 'cs, en-gb;q=0.8', $count = '100', $offset = '0', $sort_field = null, $sort_direction = null, $name = null, $text_id = null, $event_group_text_id = null)
     {
 
         $resourcePath = '/event-types';
@@ -697,6 +702,10 @@ class EventTypesApi
         // query params
         if ($text_id !== null) {
             $queryParams['text_id'] = ObjectSerializer::toQueryValue($text_id, null);
+        }
+        // query params
+        if ($event_group_text_id !== null) {
+            $queryParams['event_group_text_id'] = ObjectSerializer::toQueryValue($event_group_text_id, null);
         }
         // header params
         if ($accept_language !== null) {
@@ -784,7 +793,7 @@ class EventTypesApi
      *
      * @param  string $event_type_id The unique ID of the event type. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -806,7 +815,7 @@ class EventTypesApi
      *
      * @param  string $event_type_id The unique ID of the event type. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -934,7 +943,7 @@ class EventTypesApi
      *
      * @param  string $event_type_id The unique ID of the event type. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
@@ -959,7 +968,7 @@ class EventTypesApi
      *
      * @param  string $event_type_id The unique ID of the event type. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int|null $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int|null $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
@@ -1014,7 +1023,7 @@ class EventTypesApi
      *
      * @param  string $event_type_id The unique ID of the event type. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  int $count The number of records to return in API response. &lt;br/&gt;⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
+     * @param  int $count The number of records to return in API response.  ⚠️ We recommended adjust the batch size based on processing time. Depending on the response time of the request. Default value of 100 records is used if &#x60;count&#x60; parameter is not set. (optional, default to 100)
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
