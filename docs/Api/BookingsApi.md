@@ -163,7 +163,7 @@ $sort_field = "sort_field_example"; // string | Name of the sorting parameter. Y
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $booking_status = "booking_status_example"; // string | This query parameter is deprecated, please use parameter `booking_statuses`.
-$booking_statuses = array("booking_statuses_example"); // string[] | List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses).
+$booking_statuses = array("booking_statuses_example"); // string[] | List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). In case you want to filter multiple options use array syntax : `booking_statuses[]=a820c6a820c62c79b2c79b&booking_statuses[]=b930d7b930d73d80c3d80c` Logic OR is used between values.
 $add_booking_items = "none"; // string | Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items*
 
 try {
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **customer_id** | **string**| The unique ID of the customer. | [optional]
  **booking_status** | **string**| This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. | [optional]
- **booking_statuses** | [**string[]**](../Model/string.md)| List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). | [optional]
+ **booking_statuses** | [**string[]**](../Model/string.md)| List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). In case you want to filter multiple options use array syntax : &#x60;booking_statuses[]&#x3D;a820c6a820c62c79b2c79b&amp;booking_statuses[]&#x3D;b930d7b930d73d80c3d80c&#x60; Logic OR is used between values. | [optional]
  **add_booking_items** | **string**| Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* | [optional] [default to none]
 
 ### Return type

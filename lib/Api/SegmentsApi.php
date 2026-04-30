@@ -1115,7 +1115,7 @@ class SegmentsApi
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1137,7 +1137,7 @@ class SegmentsApi
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1265,7 +1265,7 @@ class SegmentsApi
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1290,7 +1290,7 @@ class SegmentsApi
      * @param  int|null $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string|null $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
-     * @param  string[]|null $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[]|null $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1345,7 +1345,7 @@ class SegmentsApi
      * @param  int $offset The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. (optional, default to 0)
      * @param  string $sort_field Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* (optional)
      * @param  string $sort_direction Direction of sorting the response list. (optional)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1470,7 +1470,7 @@ class SegmentsApi
      *
      * @param  string $segment_id The unique ID of the segment. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1489,7 +1489,7 @@ class SegmentsApi
      *
      * @param  string $segment_id The unique ID of the segment. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1614,7 +1614,7 @@ class SegmentsApi
      *
      * @param  string $segment_id The unique ID of the segment. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1636,7 +1636,7 @@ class SegmentsApi
      *
      * @param  string $segment_id The unique ID of the segment. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[]|null $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[]|null $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1688,7 +1688,7 @@ class SegmentsApi
      *
      * @param  string $segment_id The unique ID of the segment. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

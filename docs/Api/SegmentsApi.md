@@ -234,7 +234,7 @@ $count = 100; // int | The number of records to return in API response.  ⚠️ 
 $offset = 0; // int | The number of records from a collection to skip. Default value of 0 is used when parameter `offset` is not set.
 $sort_field = "sort_field_example"; // string | Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.*
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
-$segment_group_ids = array("segment_group_ids_example"); // string[] | List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups).
+$segment_group_ids = array("segment_group_ids_example"); // string[] | List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : `segment_group_ids[]=8bed991c68a470e7aaeffbf048&segment_group_ids[]=9cfe0a2d79b581f8bb5ffc059` Logic OR is used between values.
 
 try {
     $result = $apiInstance->getSegments($accept_language, $count, $offset, $sort_field, $sort_direction, $segment_group_ids);
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
  **offset** | **int**| The number of records from a collection to skip. Default value of 0 is used when parameter &#x60;offset&#x60; is not set. | [optional] [default to 0]
  **sort_field** | **string**| Name of the sorting parameter. You can sort by any of the first level parameters from the resource response. *Response is sorted by the specified field.* | [optional]
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
- **segment_group_ids** | [**string[]**](../Model/string.md)| List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). | [optional]
+ **segment_group_ids** | [**string[]**](../Model/string.md)| List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. | [optional]
 
 ### Return type
 
@@ -299,7 +299,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\SegmentsApi(
 );
 $segment_id = "segment_id_example"; // string | The unique ID of the segment.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$segment_group_ids = array("segment_group_ids_example"); // string[] | List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups).
+$segment_group_ids = array("segment_group_ids_example"); // string[] | List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : `segment_group_ids[]=8bed991c68a470e7aaeffbf048&segment_group_ids[]=9cfe0a2d79b581f8bb5ffc059` Logic OR is used between values.
 
 try {
     $result = $apiInstance->getSubSegmentRecords($segment_id, $accept_language, $segment_group_ids);
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **segment_id** | **string**| The unique ID of the segment. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **segment_group_ids** | [**string[]**](../Model/string.md)| List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). | [optional]
+ **segment_group_ids** | [**string[]**](../Model/string.md)| List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. | [optional]
 
 ### Return type
 

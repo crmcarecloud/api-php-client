@@ -172,7 +172,7 @@ $sort_direction = "sort_direction_example"; // string | Direction of sorting the
 $name = "name_example"; // string | Search record by name or a part of the name.
 $code = "code_example"; // string | Code of the product.
 $display_in = "display_in_example"; // string | Place to display campaign product.
-$type_id = array("type_id_example"); // string[] | Type of the customer for a campaign product. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes).
+$type_id = array("type_id_example"); // string[] | Type of the customer for a campaign product. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : `type_id[]=86e05affc7a7abefcd513ab400&type_id[]=82c06812c0756528660784fef` Logic OR is used between values.
 $store_id = "store_id_example"; // string | Parameter filters all campaign products from [store](#tag/Stores) by store ID.
 $value_type_id = 56; // int | Type of value (1 - percentage discount value, 2 - final price).
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
  **name** | **string**| Search record by name or a part of the name. | [optional]
  **code** | **string**| Code of the product. | [optional]
  **display_in** | **string**| Place to display campaign product. | [optional]
- **type_id** | [**string[]**](../Model/string.md)| Type of the customer for a campaign product. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). | [optional]
+ **type_id** | [**string[]**](../Model/string.md)| Type of the customer for a campaign product. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. | [optional]
  **store_id** | **string**| Parameter filters all campaign products from [store](#tag/Stores) by store ID. | [optional]
  **value_type_id** | **int**| Type of value (1 - percentage discount value, 2 - final price). | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]

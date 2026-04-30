@@ -384,7 +384,7 @@ $customer_source_id = "customer_source_id_example"; // string | The unique ID of
 $first_name = "first_name_example"; // string | Search by first name.
 $last_name = "last_name_example"; // string | Search by last name.
 $birthdate = "birthdate_example"; // string | Customer's date of birth. Accepts the format `YYYY-MM-DD` or `DD.MM.YYYY`.
-$email_list = array("email_list_example"); // string[] | List of the email addresses of the customers.
+$email_list = array("email_list_example"); // string[] | List of the email addresses of the customers. In case you want to filter multiple options use array syntax : `email_list[]=happy_customer@crmcarecloud.com&email_list[]=another_customer@crmcarecloud.com` Logic OR is used between values.
 $customer_ids = array("customer_ids_example"); // string[] | List of the customer IDs. In case you want to filter multiple options use array syntax : `customer_ids[]=8ea2591121e636086a4a9c0992&customer_ids[]=8bed991c68a470e7aaeffbf048`     Logic OR is used between values.
 $customer_short_salutation = true; // bool | If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response.
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
  **first_name** | **string**| Search by first name. | [optional]
  **last_name** | **string**| Search by last name. | [optional]
  **birthdate** | **string**| Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. | [optional]
- **email_list** | [**string[]**](../Model/string.md)| List of the email addresses of the customers. | [optional]
+ **email_list** | [**string[]**](../Model/string.md)| List of the email addresses of the customers. In case you want to filter multiple options use array syntax : &#x60;email_list[]&#x3D;happy_customer@crmcarecloud.com&amp;email_list[]&#x3D;another_customer@crmcarecloud.com&#x60; Logic OR is used between values. | [optional]
  **customer_ids** | [**string[]**](../Model/string.md)| List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. | [optional]
  **customer_short_salutation** | **bool**| If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. | [optional]
 
@@ -598,7 +598,7 @@ $sort_direction = "sort_direction_example"; // string | Direction of sorting the
 $card_number = "card_number_example"; // string | Number of the customer card.
 $card_type_id = "card_type_id_example"; // string | The unique ID of the card type.
 $is_valid = true; // bool | *in validity range - true / before or after validity range - false / no value - all*
-$card_number_list = array("card_number_list_example"); // string[] | List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud.
+$card_number_list = array("card_number_list_example"); // string[] | List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : `card_number_list[]=1000000000016&card_number_list[]=2000000000025` Logic OR is used between values.
 
 try {
     $result = $apiInstance->getSubCustomerCards($customer_id, $accept_language, $count, $offset, $sort_field, $sort_direction, $card_number, $card_type_id, $is_valid, $card_number_list);
@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
  **card_number** | **string**| Number of the customer card. | [optional]
  **card_type_id** | **string**| The unique ID of the card type. | [optional]
  **is_valid** | **bool**| *in validity range - true / before or after validity range - false / no value - all* | [optional]
- **card_number_list** | [**string[]**](../Model/string.md)| List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. | [optional]
+ **card_number_list** | [**string[]**](../Model/string.md)| List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. | [optional]
 
 ### Return type
 
@@ -673,7 +673,7 @@ $sort_field = "sort_field_example"; // string | Name of the sorting parameter. Y
 $sort_direction = "sort_direction_example"; // string | Direction of sorting the response list.
 $event_type_id = "event_type_id_example"; // string | The unique ID of the event type.
 $external_id = "external_id_example"; // string | The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn't need to be necessary unique. Usage of other parameter could be required to return more specific results.
-$event_type_ids = array("event_type_ids_example"); // string[] | List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes).
+$event_type_ids = array("event_type_ids_example"); // string[] | List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). In case you want to filter multiple options use array syntax : `event_type_ids[]=8bda8a4854394325e2748a5005&event_type_ids[]=9ceb9b5965405436f3859b6116` Logic OR is used between values.
 $include_property_records = true; // bool | If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won't be included, and parameter will return null value
 $time_from = "time_from_example"; // string | Start of the time interval for filtering. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
 $time_to = "time_to_example"; // string | End of the time interval for filtering. Accepts the format `YYYY-MM-DD HH:MM:SS` or ISO-8601 format (`YYYY-MM-DDTHH:MM:SS`). All times are in the local timezone.
@@ -699,7 +699,7 @@ Name | Type | Description  | Notes
  **sort_direction** | **string**| Direction of sorting the response list. | [optional]
  **event_type_id** | **string**| The unique ID of the event type. | [optional]
  **external_id** | **string**| The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. | [optional]
- **event_type_ids** | [**string[]**](../Model/string.md)| List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). | [optional]
+ **event_type_ids** | [**string[]**](../Model/string.md)| List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). In case you want to filter multiple options use array syntax : &#x60;event_type_ids[]&#x3D;8bda8a4854394325e2748a5005&amp;event_type_ids[]&#x3D;9ceb9b5965405436f3859b6116&#x60; Logic OR is used between values. | [optional]
  **include_property_records** | **bool**| If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value | [optional]
  **time_from** | **string**| Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
  **time_to** | **string**| End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. | [optional]
@@ -1311,7 +1311,7 @@ $valid_to = "valid_to_example"; // string | End of the validity period for filte
 $code = "code_example"; // string | Code of the reward.
 $is_automated = true; // bool | Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)*
 $reward_group = 56; // int | The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)*
-$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values.
+$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : `customer_type_id[]=86e05affc7a7abefcd513ab400&customer_type_id[]=82c06812c0756528660784fef` Logic OR is used between values.
 $without_stores = true; // bool | If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores.
 $tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
 
@@ -1342,7 +1342,7 @@ Name | Type | Description  | Notes
  **code** | **string**| Code of the reward. | [optional]
  **is_automated** | **bool**| Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* | [optional]
  **reward_group** | **int**| The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* | [optional]
- **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. | [optional]
+ **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. | [optional]
  **without_stores** | **bool**| If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. | [optional]
  **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
 
@@ -1399,7 +1399,7 @@ $valid_to = "valid_to_example"; // string | End of the validity period for filte
 $code = "code_example"; // string | Code of the reward.
 $is_automated = true; // bool | Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)*
 $reward_group = 56; // int | The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)*
-$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values.
+$customer_type_id = array("customer_type_id_example"); // string[] | Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : `customer_type_id[]=86e05affc7a7abefcd513ab400&customer_type_id[]=82c06812c0756528660784fef` Logic OR is used between values.
 $without_stores = true; // bool | If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores.
 $tag_ids = array("tag_ids_example"); // string[] | Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : `tag_ids[]=8bc8ca16f9c5039951021700a2&tag_ids[]=82c06812c0756528660784fef`
 $partner_id = "partner_id_example"; // string | Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners).
@@ -1430,7 +1430,7 @@ Name | Type | Description  | Notes
  **code** | **string**| Code of the reward. | [optional]
  **is_automated** | **bool**| Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* | [optional]
  **reward_group** | **int**| The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* | [optional]
- **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. | [optional]
+ **customer_type_id** | [**string[]**](../Model/string.md)| Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. | [optional]
  **without_stores** | **bool**| If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. | [optional]
  **tag_ids** | [**string[]**](../Model/string.md)| Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; | [optional]
  **partner_id** | **string**| Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). | [optional]
@@ -1479,7 +1479,7 @@ $apiInstance = new CrmCareCloud\Webservice\RestApi\Client\Api\CustomersApi(
 );
 $customer_id = "customer_id_example"; // string | The unique ID of the customer.
 $accept_language = "cs, en-gb;q=0.8"; // string | The unique ID of the language code by ISO 639-1.
-$segment_group_ids = array("segment_group_ids_example"); // string[] | List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups).
+$segment_group_ids = array("segment_group_ids_example"); // string[] | List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : `segment_group_ids[]=8bed991c68a470e7aaeffbf048&segment_group_ids[]=9cfe0a2d79b581f8bb5ffc059` Logic OR is used between values.
 
 try {
     $result = $apiInstance->getSubCustomerSegments($customer_id, $accept_language, $segment_group_ids);
@@ -1496,7 +1496,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **string**| The unique ID of the customer. |
  **accept_language** | **string**| The unique ID of the language code by ISO 639-1. | [optional] [default to cs, en-gb;q&#x3D;0.8]
- **segment_group_ids** | [**string[]**](../Model/string.md)| List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). | [optional]
+ **segment_group_ids** | [**string[]**](../Model/string.md)| List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. | [optional]
 
 ### Return type
 

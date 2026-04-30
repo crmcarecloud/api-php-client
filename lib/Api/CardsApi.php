@@ -429,7 +429,7 @@ class CardsApi
      * @param  string $card_type_id The unique ID of the card type. (optional)
      * @param  int $state State of the card. *Possible values are: 0 - blocked / 1 - active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      * @param  bool $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -457,7 +457,7 @@ class CardsApi
      * @param  string $card_type_id The unique ID of the card type. (optional)
      * @param  int $state State of the card. *Possible values are: 0 - blocked / 1 - active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      * @param  bool $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -591,7 +591,7 @@ class CardsApi
      * @param  string $card_type_id The unique ID of the card type. (optional)
      * @param  int $state State of the card. *Possible values are: 0 - blocked / 1 - active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      * @param  bool $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \InvalidArgumentException
@@ -622,7 +622,7 @@ class CardsApi
      * @param  string|null $card_type_id The unique ID of the card type. (optional)
      * @param  int|null $state State of the card. *Possible values are: 0 - blocked / 1 - active* (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[]|null $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[]|null $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      * @param  bool|null $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \InvalidArgumentException
@@ -683,7 +683,7 @@ class CardsApi
      * @param  string $card_type_id The unique ID of the card type. (optional)
      * @param  int $state State of the card. *Possible values are: 0 - blocked / 1 - active* (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      * @param  bool $search_secondary_card_number Include secondary card numbers in search for filters &#x60;card_number&#x60; and &#x60;card_number_list&#x60;. *Possible values: true - CareCloud API search only secondary card numbers / false - CareCloud API search only card numbers / default behavior without parameter - CareCloud API search only card numbers* (optional)
      *
      * @throws \InvalidArgumentException

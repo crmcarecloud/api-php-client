@@ -64,7 +64,8 @@ class Event implements ModelInterface, ArrayAccess
         'data' => 'mixed',
         'created_at' => 'string',
         'secondary_external_id' => 'string',
-        'state' => 'int'
+        'state' => 'int',
+        'property_records' => '\CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]'
     ];
 
     /**
@@ -80,7 +81,8 @@ class Event implements ModelInterface, ArrayAccess
         'data' => null,
         'created_at' => null,
         'secondary_external_id' => null,
-        'state' => null
+        'state' => null,
+        'property_records' => null
     ];
 
     /**
@@ -117,7 +119,8 @@ class Event implements ModelInterface, ArrayAccess
         'data' => 'data',
         'created_at' => 'created_at',
         'secondary_external_id' => 'secondary_external_id',
-        'state' => 'state'
+        'state' => 'state',
+        'property_records' => 'property_records'
     ];
 
     /**
@@ -133,7 +136,8 @@ class Event implements ModelInterface, ArrayAccess
         'data' => 'setData',
         'created_at' => 'setCreatedAt',
         'secondary_external_id' => 'setSecondaryExternalId',
-        'state' => 'setState'
+        'state' => 'setState',
+        'property_records' => 'setPropertyRecords'
     ];
 
     /**
@@ -149,7 +153,8 @@ class Event implements ModelInterface, ArrayAccess
         'data' => 'getData',
         'created_at' => 'getCreatedAt',
         'secondary_external_id' => 'getSecondaryExternalId',
-        'state' => 'getState'
+        'state' => 'getState',
+        'property_records' => 'getPropertyRecords'
     ];
 
     /**
@@ -233,6 +238,7 @@ self::STATE_2,        ];
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['secondary_external_id'] = isset($data['secondary_external_id']) ? $data['secondary_external_id'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['property_records'] = isset($data['property_records']) ? $data['property_records'] : null;
     }
 
     /**
@@ -473,6 +479,30 @@ self::STATE_2,        ];
             );
         }
         $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets property_records
+     *
+     * @return \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[]
+     */
+    public function getPropertyRecords()
+    {
+        return $this->container['property_records'];
+    }
+
+    /**
+     * Sets property_records
+     *
+     * @param \CrmCareCloud\Webservice\RestApi\Client\Model\PropertyRecord[] $property_records List of event property records. The field is populated only when the `include_property_records` query parameter is set to `true` on [GET /events](https://carecloud.readme.io/reference/getevents). Otherwise the value is `null`.
+     *
+     * @return $this
+     */
+    public function setPropertyRecords($property_records)
+    {
+        $this->container['property_records'] = $property_records;
 
         return $this;
     }

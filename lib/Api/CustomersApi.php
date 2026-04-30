@@ -1679,7 +1679,7 @@ class CustomersApi
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
      * @param  string $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
-     * @param  string[] $email_list List of the email addresses of the customers. (optional)
+     * @param  string[] $email_list List of the email addresses of the customers. In case you want to filter multiple options use array syntax : &#x60;email_list[]&#x3D;happy_customer@crmcarecloud.com&amp;email_list[]&#x3D;another_customer@crmcarecloud.com&#x60; Logic OR is used between values. (optional)
      * @param  string[] $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
@@ -1709,7 +1709,7 @@ class CustomersApi
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
      * @param  string $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
-     * @param  string[] $email_list List of the email addresses of the customers. (optional)
+     * @param  string[] $email_list List of the email addresses of the customers. In case you want to filter multiple options use array syntax : &#x60;email_list[]&#x3D;happy_customer@crmcarecloud.com&amp;email_list[]&#x3D;another_customer@crmcarecloud.com&#x60; Logic OR is used between values. (optional)
      * @param  string[] $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
@@ -1845,7 +1845,7 @@ class CustomersApi
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
      * @param  string $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
-     * @param  string[] $email_list List of the email addresses of the customers. (optional)
+     * @param  string[] $email_list List of the email addresses of the customers. In case you want to filter multiple options use array syntax : &#x60;email_list[]&#x3D;happy_customer@crmcarecloud.com&amp;email_list[]&#x3D;another_customer@crmcarecloud.com&#x60; Logic OR is used between values. (optional)
      * @param  string[] $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
@@ -1878,7 +1878,7 @@ class CustomersApi
      * @param  string|null $first_name Search by first name. (optional)
      * @param  string|null $last_name Search by last name. (optional)
      * @param  string|null $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
-     * @param  string[]|null $email_list List of the email addresses of the customers. (optional)
+     * @param  string[]|null $email_list List of the email addresses of the customers. In case you want to filter multiple options use array syntax : &#x60;email_list[]&#x3D;happy_customer@crmcarecloud.com&amp;email_list[]&#x3D;another_customer@crmcarecloud.com&#x60; Logic OR is used between values. (optional)
      * @param  string[]|null $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool|null $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
@@ -1941,7 +1941,7 @@ class CustomersApi
      * @param  string $first_name Search by first name. (optional)
      * @param  string $last_name Search by last name. (optional)
      * @param  string $birthdate Customer&#x27;s date of birth. Accepts the format &#x60;YYYY-MM-DD&#x60; or &#x60;DD.MM.YYYY&#x60;. (optional)
-     * @param  string[] $email_list List of the email addresses of the customers. (optional)
+     * @param  string[] $email_list List of the email addresses of the customers. In case you want to filter multiple options use array syntax : &#x60;email_list[]&#x3D;happy_customer@crmcarecloud.com&amp;email_list[]&#x3D;another_customer@crmcarecloud.com&#x60; Logic OR is used between values. (optional)
      * @param  string[] $customer_ids List of the customer IDs. In case you want to filter multiple options use array syntax : &#x60;customer_ids[]&#x3D;8ea2591121e636086a4a9c0992&amp;customer_ids[]&#x3D;8bed991c68a470e7aaeffbf048&#x60;     Logic OR is used between values. (optional)
      * @param  bool $customer_short_salutation If true, the response will set a short salutation instead of a long one. Short salutations contain the first name of the customer only. If the parameter has a value false or not set, the full salutation is returned in response. (optional)
      *
@@ -2831,7 +2831,7 @@ class CustomersApi
      * @param  string $card_number Number of the customer card. (optional)
      * @param  string $card_type_id The unique ID of the card type. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2857,7 +2857,7 @@ class CustomersApi
      * @param  string $card_number Number of the customer card. (optional)
      * @param  string $card_type_id The unique ID of the card type. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2989,7 +2989,7 @@ class CustomersApi
      * @param  string $card_number Number of the customer card. (optional)
      * @param  string $card_type_id The unique ID of the card type. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3018,7 +3018,7 @@ class CustomersApi
      * @param  string|null $card_number Number of the customer card. (optional)
      * @param  string|null $card_type_id The unique ID of the card type. (optional)
      * @param  bool|null $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[]|null $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[]|null $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3077,7 +3077,7 @@ class CustomersApi
      * @param  string $card_number Number of the customer card. (optional)
      * @param  string $card_type_id The unique ID of the card type. (optional)
      * @param  bool $is_valid *in validity range - true / before or after validity range - false / no value - all* (optional)
-     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. (optional)
+     * @param  string[] $card_number_list List of the card numbers. If used, a list of cards will be returned if matching card numbers in CareCloud. In case you want to filter multiple options use array syntax : &#x60;card_number_list[]&#x3D;1000000000016&amp;card_number_list[]&#x3D;2000000000025&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3234,7 +3234,7 @@ class CustomersApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $event_type_id The unique ID of the event type. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
-     * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
+     * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). In case you want to filter multiple options use array syntax : &#x60;event_type_ids[]&#x3D;8bda8a4854394325e2748a5005&amp;event_type_ids[]&#x3D;9ceb9b5965405436f3859b6116&#x60; Logic OR is used between values. (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
@@ -3262,7 +3262,7 @@ class CustomersApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $event_type_id The unique ID of the event type. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
-     * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
+     * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). In case you want to filter multiple options use array syntax : &#x60;event_type_ids[]&#x3D;8bda8a4854394325e2748a5005&amp;event_type_ids[]&#x3D;9ceb9b5965405436f3859b6116&#x60; Logic OR is used between values. (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
@@ -3396,7 +3396,7 @@ class CustomersApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $event_type_id The unique ID of the event type. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
-     * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
+     * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). In case you want to filter multiple options use array syntax : &#x60;event_type_ids[]&#x3D;8bda8a4854394325e2748a5005&amp;event_type_ids[]&#x3D;9ceb9b5965405436f3859b6116&#x60; Logic OR is used between values. (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
@@ -3427,7 +3427,7 @@ class CustomersApi
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $event_type_id The unique ID of the event type. (optional)
      * @param  string|null $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
-     * @param  string[]|null $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
+     * @param  string[]|null $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). In case you want to filter multiple options use array syntax : &#x60;event_type_ids[]&#x3D;8bda8a4854394325e2748a5005&amp;event_type_ids[]&#x3D;9ceb9b5965405436f3859b6116&#x60; Logic OR is used between values. (optional)
      * @param  bool|null $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      * @param  string|null $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string|null $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
@@ -3488,7 +3488,7 @@ class CustomersApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $event_type_id The unique ID of the event type. (optional)
      * @param  string $external_id The ID from other system than CareCloud. It is usually used for the synchronization or identification of the record in between CareCloud and other system. The ID doesn&#x27;t need to be necessary unique. Usage of other parameter could be required to return more specific results. (optional)
-     * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). (optional)
+     * @param  string[] $event_type_ids List of the event type IDs from the resource [GET /event-types](https://carecloud.readme.io/reference/geteventtypes). In case you want to filter multiple options use array syntax : &#x60;event_type_ids[]&#x3D;8bda8a4854394325e2748a5005&amp;event_type_ids[]&#x3D;9ceb9b5965405436f3859b6116&#x60; Logic OR is used between values. (optional)
      * @param  bool $include_property_records If true, the property record structure will be included in the response. Possible values: true - property records structure will be included / false or not set - property records structure won&#x27;t be included, and parameter will return null value (optional)
      * @param  string $time_from Start of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
      * @param  string $time_to End of the time interval for filtering. Accepts the format &#x60;YYYY-MM-DD HH:MM:SS&#x60; or ISO-8601 format (&#x60;YYYY-MM-DDTHH:MM:SS&#x60;). All times are in the local timezone. (optional)
@@ -6620,7 +6620,7 @@ class CustomersApi
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
@@ -6653,7 +6653,7 @@ class CustomersApi
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
@@ -6792,7 +6792,7 @@ class CustomersApi
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
@@ -6828,7 +6828,7 @@ class CustomersApi
      * @param  string|null $code Code of the reward. (optional)
      * @param  bool|null $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int|null $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool|null $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
@@ -6894,7 +6894,7 @@ class CustomersApi
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      *
@@ -7089,7 +7089,7 @@ class CustomersApi
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
@@ -7122,7 +7122,7 @@ class CustomersApi
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
@@ -7261,7 +7261,7 @@ class CustomersApi
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
@@ -7297,7 +7297,7 @@ class CustomersApi
      * @param  string|null $code Code of the reward. (optional)
      * @param  bool|null $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int|null $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[]|null $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool|null $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[]|null $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string|null $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
@@ -7363,7 +7363,7 @@ class CustomersApi
      * @param  string $code Code of the reward. (optional)
      * @param  bool $is_automated Filter of the automated rewards. *Possible values: true - returns all automated rewards / false - returns all non automated rewards / no value - all rewards(filter is not applied)* (optional)
      * @param  int $reward_group The unique ID of the reward group. *Possible values: 0 - cash desk reward (party time reward) / 1 - catalog reward / 2 - campaign reward / 4 - simple reward / 5 - gift reward (Multi Purpose Reward)* (optional)
-     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). Logic OR is used between values. (optional)
+     * @param  string[] $customer_type_id Select by list of customer types from customer-types resource. The list of values is available at [GET /customer-types](https://carecloud.readme.io/reference/getcustomertypes). In case you want to filter multiple options use array syntax : &#x60;customer_type_id[]&#x3D;86e05affc7a7abefcd513ab400&amp;customer_type_id[]&#x3D;82c06812c0756528660784fef&#x60; Logic OR is used between values. (optional)
      * @param  bool $without_stores If true or not set, the data will not contain information about business units (stores). If false resource returns full structure with stores. (optional)
      * @param  string[] $tag_ids Parameter filters values by a list of tag IDs. Logic OR is used between values.  In case you want to filter multiple options use array syntax : &#x60;tag_ids[]&#x3D;8bc8ca16f9c5039951021700a2&amp;tag_ids[]&#x3D;82c06812c0756528660784fef&#x60; (optional)
      * @param  string $partner_id Unique ID of the partner from the resource [GET /partners](https://carecloud.readme.io/reference/getpartners). (optional)
@@ -7550,7 +7550,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7569,7 +7569,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7694,7 +7694,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7716,7 +7716,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string|null $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[]|null $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[]|null $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7768,7 +7768,7 @@ class CustomersApi
      *
      * @param  string $customer_id The unique ID of the customer. (required)
      * @param  string $accept_language The unique ID of the language code by ISO 639-1. (optional, default to cs, en-gb;q=0.8)
-     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). (optional)
+     * @param  string[] $segment_group_ids List of the segment group IDs from the resource [GET /segment-groups](#tag/Segments/operation/getSegmentGroups). In case you want to filter multiple options use array syntax : &#x60;segment_group_ids[]&#x3D;8bed991c68a470e7aaeffbf048&amp;segment_group_ids[]&#x3D;9cfe0a2d79b581f8bb5ffc059&#x60; Logic OR is used between values. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

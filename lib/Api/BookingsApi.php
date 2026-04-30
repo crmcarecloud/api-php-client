@@ -717,7 +717,7 @@ class BookingsApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
-     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). In case you want to filter multiple options use array syntax : &#x60;booking_statuses[]&#x3D;a820c6a820c62c79b2c79b&amp;booking_statuses[]&#x3D;b930d7b930d73d80c3d80c&#x60; Logic OR is used between values. (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -742,7 +742,7 @@ class BookingsApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
-     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). In case you want to filter multiple options use array syntax : &#x60;booking_statuses[]&#x3D;a820c6a820c62c79b2c79b&amp;booking_statuses[]&#x3D;b930d7b930d73d80c3d80c&#x60; Logic OR is used between values. (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \CrmCareCloud\Webservice\RestApi\Client\ApiException on non-2xx response
@@ -873,7 +873,7 @@ class BookingsApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
-     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). In case you want to filter multiple options use array syntax : &#x60;booking_statuses[]&#x3D;a820c6a820c62c79b2c79b&amp;booking_statuses[]&#x3D;b930d7b930d73d80c3d80c&#x60; Logic OR is used between values. (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
@@ -901,7 +901,7 @@ class BookingsApi
      * @param  string|null $sort_direction Direction of sorting the response list. (optional)
      * @param  string|null $customer_id The unique ID of the customer. (optional)
      * @param  string|null $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
-     * @param  string[]|null $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string[]|null $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). In case you want to filter multiple options use array syntax : &#x60;booking_statuses[]&#x3D;a820c6a820c62c79b2c79b&amp;booking_statuses[]&#x3D;b930d7b930d73d80c3d80c&#x60; Logic OR is used between values. (optional)
      * @param  string|null $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
@@ -959,7 +959,7 @@ class BookingsApi
      * @param  string $sort_direction Direction of sorting the response list. (optional)
      * @param  string $customer_id The unique ID of the customer. (optional)
      * @param  string $booking_status This query parameter is deprecated, please use parameter &#x60;booking_statuses&#x60;. (optional)
-     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). (optional)
+     * @param  string[] $booking_statuses List of current statuses of the bookings from resource [booking-statuses](#tag/Booking-statuses). In case you want to filter multiple options use array syntax : &#x60;booking_statuses[]&#x3D;a820c6a820c62c79b2c79b&amp;booking_statuses[]&#x3D;b930d7b930d73d80c3d80c&#x60; Logic OR is used between values. (optional)
      * @param  string $add_booking_items Booking items are going to be return depends on the parameter value. *Possible values: full - returns all booking items with their additional properties. / items-only - returns all booking items without additional properties. / none or no value - return no booking items* (optional, default to none)
      *
      * @throws \InvalidArgumentException
